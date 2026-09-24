@@ -39,7 +39,8 @@ function renderHead() {
     const pages = [...new Set(srcs.map((s) => s.page_url).filter(Boolean))];
     head.append(el('p', { class: 'meta' }, ['出典：', ...srcs.flatMap((s, i) => [
       i ? '、' : null,
-      s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: pdfLabel(s) }) : s.path,
+      s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: pdfLabel(s) })
+        : el('span', { text: (s.round_ids || []).length ? pdfLabel(s) + '（PDF の公開 URL なし）' : s.path }),
     ]), ...pages.flatMap((p) => ['（', el('a', { href: p, target: '_blank', rel: 'noopener', text: '大会ページ' }), '）'])]));
   }
 }
