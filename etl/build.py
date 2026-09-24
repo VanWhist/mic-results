@@ -8,7 +8,7 @@ contexts in the shared shape (see normalize.py). Verification and publication ar
 """
 import argparse, collections, datetime, hashlib, importlib, json, os, sys
 
-from . import config, normalize, verify
+from . import config, normalize, verify, layer5_saj
 
 BUILD_VERSION = '2026-09-25-1'
 
@@ -121,10 +121,15 @@ def main(argv=None):
     findings += verify.layer4(all_runs, all_rounds)
 
     layer5_status = 'skipped'
-    layer5_cache = load_json(config.LAYER5_CACHE, {})
+    layer5_cache = load_json(config.LAYER5_CACHE, {})  # moguls-results から引き継いだ FIS 公式 Web との照合結果
+    l5f, l5_saj = layer5_saj.cross_check(rounds_ctx, events_by_id)  # SAJ 競技データバンクの順位表との照合（キャッシュがある分だけ）
+    findings += l5f
+    n_l5 = sum(1 for v in l5_saj.values() if v != 'skipped')
+    if n_l5 or layer5_cache:
+        layer5_status = 'partial' if any(v == 'skipped' for v in l5_saj.values()) or len(l5_saj) + len(layer5_cache) < len(rounds_ctx) else 'ok'
 
     runs_by_id = {r['run_id']: r for r in all_runs}
-    gf, n_golden = verify.golden(config.GOLDEN_DIR, runs_by_id, strict=not dev)
+    gf, n_golden, golden_rounds = verify.golden(config.GOLDEN_DIR, runs_by_id, strict=not dev)
     findings += gf
 
     # ---------------- publication gate
@@ -148,9 +153,9 @@ def main(argv=None):
             errs = [x for x in errors_by_round.get(rid, []) if x.layer == layer]
             v[layer] = 'error' if errs else ('skipped' if layer == 'layer5' else 'ok')
         if v.get('layer5') == 'skipped':
-            v['layer5'] = layer5_cache.get(rid, 'skipped')
-        if n_golden == 0 and v.get('golden') == 'ok':
-            v['golden'] = 'skipped'
+            v['layer5'] = l5_saj.get(rid) or layer5_cache.get(rid, 'skipped')
+        if v.get('golden') == 'ok' and rid not in golden_rounds:
+            v['golden'] = 'skipped'  # このラウンドには正解データが無い
         ctx['round']['verification'] = v
 
     for ctx in rounds_ctx:
@@ -234,9 +239,16 @@ def display_name(names):
     return (ja or names).most_common(1)[0][0]
 
 
-def mic_status(roster, athlete_id, name):
+def _name_key(name):
+    return ''.join((name or '').split())
+
+
+def mic_status(roster, athlete_id, name, aliases=()):
+    """名簿は athlete_id か氏名（空白を無視、別名も含む）で照合する。"""
+    keys = {_name_key(name)} | {_name_key(a) for a in aliases}
+    keys.discard('')
     for m in roster.get('members', []):
-        if m.get('athlete_id') == athlete_id or (name and m.get('name') == name):
+        if (m.get('athlete_id') and m.get('athlete_id') == athlete_id) or _name_key(m.get('name')) in keys:
             return {'from': m.get('from'), 'to': m.get('to')}
     return None
 
@@ -319,7 +331,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
                          # 所属は FIS 様式には印字されないので、最後に印字があった大会の値を使う
                          'affiliation': next((x['affiliation'] for x in reversed(rs_sorted) if x.get('affiliation')), None),
                          'club': next((x['club'] for x in reversed(rs_sorted) if x.get('club')), None),
-                         'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name),
+                         'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name, [a for a in alias_list if a]),
                          'n_results': sum(1 for x in rs if x['counting']), 'seasons': sorted({x['season'] for x in rs}),
                          'series': sorted({x['series'] for x in rs}),
                          'best': {'run_score': best['run_score'], 'run_id': best['run_id']} if best else None})

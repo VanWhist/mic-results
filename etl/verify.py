@@ -330,8 +330,9 @@ def layer4(all_runs, rounds):
 def golden(golden_dir, runs_by_id, strict=True):
     f = []
     rounds_present = {r['round_id'] for r in runs_by_id.values()}
+    covered = set()  # 正解データが1本でもあるラウンド（無いラウンドは golden を「未実施」にする）
     if not os.path.isdir(golden_dir):
-        return f, 0
+        return f, 0, covered
     n = 0
     for fn in sorted(os.listdir(golden_dir)):
         if not fn.endswith('.json'):
@@ -355,6 +356,7 @@ def golden(golden_dir, runs_by_id, strict=True):
                 n -= 1
                 continue
             round_ref = item.get('round_id') or item['run_id'].rsplit('-', 1)[0]
+            covered.add(run['round_id'] if run else round_ref)
             if run is None:
                 f.append(Finding('error', round_ref, 'golden', f"{ident}: 正解データのランが出力に無い ({fn})"))
                 continue
@@ -375,4 +377,4 @@ def golden(golden_dir, runs_by_id, strict=True):
                     same = v == actual
                 if not same:
                     f.append(Finding('error', round_ref, 'golden', f"{ident} {k}: 正解 {v} / 出力 {actual} ({fn})"))
-    return f, n
+    return f, n, covered

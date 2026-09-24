@@ -1,0 +1,794 @@
+{
+ "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
+ "generated_at": "2026-09-25T08:31:26",
+ "events": [
+  {
+   "event_id": "2011-12-saj_b-2051-0001",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第12回埼玉県松之山温泉モーグル競技会",
+   "date": "2012-01-08",
+   "saj_comp": "2051",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2051_0001_M_MO.pdf",
+     "sha256": "fd4ce0ae5b5d00e1c976ee36ee2fed3b242fd628ffb5093a8b380a00826a8c82",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120001.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0001/result",
+     "gender": "M",
+     "codex": "0001",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120001.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2051_5001_W_MO.pdf",
+     "sha256": "e1e76ed7e2e36c0ad1fae54d6952d8c43fce63b39e26f5a9cc4a7e7356e909ea",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125001.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5001/result",
+     "gender": "W",
+     "codex": "5001",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125001.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2051-0001",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2052-0003",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第20回東京都モーグル競技会（Ｂ級公認）",
+   "date": "2012-01-08",
+   "saj_comp": "2052",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2052_0003_M_MO.pdf",
+     "sha256": "5cf57e6dc25f7770d4750ee8b5b0af0be21cb56647c6d8402c1bf0f70a880824",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120003.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0003/result",
+     "gender": "M",
+     "codex": "0003",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120003.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2052_5003_W_MO.pdf",
+     "sha256": "20957068f9e313e7e36fac3dff81c6d77aa00f858ffefd5f0c5a327de1c92f94",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125003.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5003/result",
+     "gender": "W",
+     "codex": "5003",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125003.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2052-0003",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2051-0002",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第12回埼玉県松之山温泉モーグル競技会",
+   "date": "2012-01-09",
+   "saj_comp": "2051",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2051_0002_M_MO.pdf",
+     "sha256": "fe048a536abc8c180a44246d38e0d25eed1c365b3ede522609b4315327f287cb",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120002.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0002/result",
+     "gender": "M",
+     "codex": "0002",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120002.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2051_5002_W_MO.pdf",
+     "sha256": "e2033e2b459cc5e7855e4303ff9f44b0b447c428e7d5719a78a3d5f0f1dd40e6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125002.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5002/result",
+     "gender": "W",
+     "codex": "5002",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125002.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2051-0002",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2053-0004",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第20回東京都モーグル競技会Tokyo-to Mogul Competiton",
+   "date": "2012-01-09",
+   "saj_comp": "2053",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2053_0004_M_MO.pdf",
+     "sha256": "c5695a074701dead7920c756993a9cdad67e4c7a4531c89fca2d486603f6fd41",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120004.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0004/result",
+     "gender": "M",
+     "codex": "0004",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120004.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2053_5004_W_MO.pdf",
+     "sha256": "0b2934c5e6cce6f3c19fa52df077be732280d2a2086626e9fef25988b3af16a6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125004.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5004/result",
+     "gender": "W",
+     "codex": "5004",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125004.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2053-0004",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2054-0005",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第９回千葉県松之山温泉モーグル競技会",
+   "date": "2012-01-14",
+   "saj_comp": "2054",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2054_0005_M_MO.pdf",
+     "sha256": "92cc76d3f22728543669f76877537194bf7af08370707999426012f86439b322",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120005.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0005/result",
+     "gender": "M",
+     "codex": "0005",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120005.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2054_5005_W_MO.pdf",
+     "sha256": "b42929d3cc31fe0db8075fc8312a0b7c44ad961d709ad2a9cc40b9f510587748",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125005.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5005/result",
+     "gender": "W",
+     "codex": "5005",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125005.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2054-0005",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2054-0006",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第９回千葉県松之山温泉モーグル競技会",
+   "date": "2012-01-15",
+   "saj_comp": "2054",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2054_0006_M_MO.pdf",
+     "sha256": "6cf2b74094eef84e9579fc9abb0b2cba97045f10974f9b873b02be531d809329",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120006.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0006/result",
+     "gender": "M",
+     "codex": "0006",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120006.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2054_5006_W_MO.pdf",
+     "sha256": "5c1373ad5fd2b2f8e0fb324227c805009ebe587952710f57c226d2b73dddfc8e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125006.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5006/result",
+     "gender": "W",
+     "codex": "5006",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125006.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_a-2054-0006",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2055-0007",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2012白馬さのさかモーグル大会 第1戦、第2戦",
+   "date": "2012-01-21",
+   "saj_comp": "2055",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2055_0007_M_MO.pdf",
+     "sha256": "de4a385f8d0195387ef2244cd2c979e74d2ade958dbc80944391b1821ea545d2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0007/result",
+     "gender": "M",
+     "codex": "0007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120007.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2055_5007_W_MO.pdf",
+     "sha256": "d8f0594fd01a9b79a1abfa010b3daf76d85d8d1701238db5dc997ccb3a6eccce",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5007/result",
+     "gender": "W",
+     "codex": "5007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125007.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2055-0007",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2055-0008",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2012白馬さのさかモーグル大会 第1戦、第2戦",
+   "date": "2012-01-22",
+   "saj_comp": "2055",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2055_0008_M_MO.pdf",
+     "sha256": "372ed6cc5d7d832c6bce92e6ac792270ff9c0ca6102d4b3e359e99baf139c6ea",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120008.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0008/result",
+     "gender": "M",
+     "codex": "0008",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120008.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2055_5008_W_MO.pdf",
+     "sha256": "aeb92a0d86ecdce222cf841c3148c213e3b7bcabb3c371303f0d1f52c345293b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125008.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5008/result",
+     "gender": "W",
+     "codex": "5008",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125008.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2055-0008",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2056-0009",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2012フリースタイルスキーふくしま大会 ＃１ 2012 FreestyleSki Fukushima Competition #1",
+   "date": "2012-01-28",
+   "saj_comp": "2056",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2056_0009_M_MO.pdf",
+     "sha256": "2834d7bb5a1d07b9ef8102bc770027f616aff22ae16457eaa1724f7e01576bcf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120009.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0009/result",
+     "gender": "M",
+     "codex": "0009",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120009.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2056_5009_W_MO.pdf",
+     "sha256": "9f05cfc3d16593c24a4d99d5b91d48ab212ba066e775e7afc995b8255ccf5fda",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125009.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5009/result",
+     "gender": "W",
+     "codex": "5009",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125009.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2056-0009",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2058-0011",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第12回札幌スキー連盟ばんけいモーグル競技会",
+   "date": "2012-01-28",
+   "saj_comp": "2058",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2058_0011_M_MO.pdf",
+     "sha256": "be587e13b9f2a1095745799c38a4139a70569e60c3279c22d4de573e92b6a965",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120011.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0011/result",
+     "gender": "M",
+     "codex": "0011",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120011.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2058_5011_W_MO.pdf",
+     "sha256": "b89df490398f37759ac9ff5738a33a23001f8608f21323573374196364849b8d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125011.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5011/result",
+     "gender": "W",
+     "codex": "5011",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125011.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2058-0011",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2057-0010",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第31回東京都フリースタイルスキー選手権大会FS Tokyo-to Championships",
+   "date": "2012-01-29",
+   "saj_comp": "2057",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2057_0010_M_MO.pdf",
+     "sha256": "52d0491d53b49bce910ac359968d1f2c9c3a0a7e02f5e389c9b0463e94ca7743",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0010/result",
+     "gender": "M",
+     "codex": "0010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120010.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2057_5010_W_MO.pdf",
+     "sha256": "a1805cf641ec57c983eda6dbdb942ddff65cfdb71f3b05b204dfbfcd49583382",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5010/result",
+     "gender": "W",
+     "codex": "5010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125010.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2057-0010",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2058-0012",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第12回札幌スキー連盟ばんけいモーグル競技会",
+   "date": "2012-01-29",
+   "saj_comp": "2058",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2058_0012_M_MO.pdf",
+     "sha256": "82170756968708378990d233a5d1a6f056604a9833321e2ff5a7821215445487",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0012/result",
+     "gender": "M",
+     "codex": "0012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120012.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2058_5012_W_MO.pdf",
+     "sha256": "9604081756f0ceacbd3b1b7506760a896edee08dd00390e1c581e8421effc51e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5012/result",
+     "gender": "W",
+     "codex": "5012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125012.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2058-0012",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2059-0013",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "２０１２全日本A級モーグル競技会愛知県大会",
+   "date": "2012-02-04",
+   "saj_comp": "2059",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2059_0013_M_MO.pdf",
+     "sha256": "69da3289b833f66fc60bb05927fac9cf222639795e1ddd95fd84888b8dcb75d2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0013/result",
+     "gender": "M",
+     "codex": "0013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120013.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2059_5013_W_MO.pdf",
+     "sha256": "52d5ea2db8e1d29159c518c1e97d479712c948e5a5fa92ee27dad9f1e02d13f7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5013/result",
+     "gender": "W",
+     "codex": "5013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125013.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_a-2059-0013",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2062-0016",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第30回長野県フリースタイルスキー選手権大会",
+   "date": "2012-02-18",
+   "saj_comp": "2062",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2062_0016_M_MO.pdf",
+     "sha256": "eb83d2dbfa1f5cbaa9c7c90a569fd3aceb29e9570a3c040e3f140e206fa71006",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0016/result",
+     "gender": "M",
+     "codex": "0016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120016.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2062_5016_W_MO.pdf",
+     "sha256": "fc63871c34027e7627460c6a9ebd4a46b35bbd959e9cd4d6688627b444d3aab6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5016/result",
+     "gender": "W",
+     "codex": "5016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125016.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2062-0016",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2064-0018",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第6回埼玉県白馬４７モーグル選手権大会2012 The 6th Saitama Mogle Competition in Hakuba 47",
+   "date": "2012-02-19",
+   "saj_comp": "2064",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2064_0018_M_MO.pdf",
+     "sha256": "ff6e89622c46f4cc824fae2b284cbd50b075bbf19eb3d8cd590eda764ca85d1e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120018.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2064_5018_W_MO.pdf",
+     "sha256": "5ffe8c4af894815d70cffaddd138a3807dbd71fdcad3a5e5b7c870dede14cb59",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125018.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2064-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2066-0021",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第21回フリースタイルスキー札幌モーグル競技会",
+   "date": "2012-02-25",
+   "saj_comp": "2066",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2066_0021_M_MO.pdf",
+     "sha256": "f64f26c223108c6b7e4120320fb0d0c674f084f249ca60b900082225a9a2484c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120021.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0021/result",
+     "gender": "M",
+     "codex": "0021",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120021.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2066_5021_W_MO.pdf",
+     "sha256": "2b15d37bb1a42d297f3f17338e2fdf5c029f5334a76e9efddebea1f38e3dd45e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125021.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5021/result",
+     "gender": "W",
+     "codex": "5021",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125021.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_a-2066-0021",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2065-0019",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第83回宮様スキー大会国際競技会 フリースタイル競技The 83rd International Miyasama Ski Games",
+   "date": "2012-02-26",
+   "saj_comp": "2065",
+   "saj_category": "FIS MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2065_5019_W_MO.pdf",
+     "sha256": "75909e8f336f7bf0f62e6d3db253dc22c7ff10fc800f35c791521561164a876a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125019.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5019/result",
+     "gender": "W",
+     "codex": "5019",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125019.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2065-0019",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2067-0022",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第５回ホワイトピアたかす東海北陸モーグル競技会",
+   "date": "2012-02-26",
+   "saj_comp": "2067",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2067_0022_M_MO.pdf",
+     "sha256": "a275018284f030db3fb444e87d1967e34acf14168485b9af365f16f453fbf0cd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120022.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0022/result",
+     "gender": "M",
+     "codex": "0022",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120022.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2067_5022_W_MO.pdf",
+     "sha256": "2df01ef99c680f6ab4d6cdf261c321ab62629e8bee136f1031d281c0af81d448",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125022.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5022/result",
+     "gender": "W",
+     "codex": "5022",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125022.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2067-0022",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2068-0023",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2012ハチ北CUPモーグル大会 兼第５回西日本スキー選手権大会フリースタイル競技モーグル種目",
+   "date": "2012-03-03",
+   "saj_comp": "2068",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2068_0023_M_MO.pdf",
+     "sha256": "f529860d67c8308053173ce9a1ef9325e0142af409ea410a6ed004c3ce44b44a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120023.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0023/result",
+     "gender": "M",
+     "codex": "0023",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120023.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2068_5023_W_MO.pdf",
+     "sha256": "eaddcf9abd1e63805f28e77dbd0e02b62c97d90753f521a8df2bf29c5dbfb7f9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125023.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5023/result",
+     "gender": "W",
+     "codex": "5023",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125023.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_a-2068-0023",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  }
+ ]
+}

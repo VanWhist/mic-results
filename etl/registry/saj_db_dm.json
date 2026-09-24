@@ -1,0 +1,80 @@
+{
+ "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
+ "generated_at": "2026-09-25T08:31:26",
+ "events": [
+  {
+   "event_id": "2011-12-saj_a-2059-0014",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "２０１２全日本A級モーグル競技会愛知県大会",
+   "date": "2012-02-05",
+   "saj_comp": "2059",
+   "saj_category": "SAJ A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2059_0014_M_DM.pdf",
+     "sha256": "20739c766def1d19a2d8223045a051e2b8020192f2e70e4aa936a7e8ce1f1036",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0014/result",
+     "gender": "M",
+     "codex": "0014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120014.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2059_5014_W_DM.pdf",
+     "sha256": "eb2dc4d036f476e332e2a85f06d94d392fb7d6ca648bbc315010da7cacec2255",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5014/result",
+     "gender": "W",
+     "codex": "5014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125014.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2011-12-saj_a-2059-0014",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2069-0024",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第31回北海道スキー選手権大会フリースタイル競技 種目：デュアルモーグル・モーグル",
+   "date": "2012-03-03",
+   "saj_comp": "2069",
+   "saj_category": "SAJ A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2069_0024_M_DM.pdf",
+     "sha256": "b603b687a7f879552320609f86a53e3c1adc8f1beadc66c9743d1bc8b5e31453",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120024.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0024/result",
+     "gender": "M",
+     "codex": "0024",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120024.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2011-12-saj_a-2069-0024",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  }
+ ]
+}

@@ -1,5 +1,19 @@
 {
- "_comment": "MIC 選手カルテの名簿シートのスナップショット。athlete_id（FIS コード／saj-番号）と氏名で選手を結びつける。在籍期間はシーズン表記。Van さんが保守する。",
- "snapshot_at": null,
- "members": []
+ "_comment": "MIC の選手名簿。出典: https://mogul-mic.com/ の選手紹介（Van さんの指示 2026-09-25: 選手紹介に載っている 12 名）。athlete_id は記録が見つかった時点で入れる（氏名だけでも空白を無視して照合する）。在籍期間（from/to、シーズン表記）は未記入＝現役として扱う。Van さんが保守する。",
+ "snapshot_at": "2026-09-25",
+ "source": "https://mogul-mic.com/#athletes",
+ "members": [
+  {"name": "勝田有美", "athlete_id": null, "from": null, "to": null},
+  {"name": "藤原朋己", "athlete_id": null, "from": null, "to": null},
+  {"name": "鈴木佳英", "athlete_id": null, "from": null, "to": null},
+  {"name": "見瀬クレア", "athlete_id": null, "from": null, "to": null},
+  {"name": "鈴木伶菜", "athlete_id": null, "from": null, "to": null},
+  {"name": "有賀睦人", "athlete_id": null, "from": null, "to": null},
+  {"name": "馬路晴世", "athlete_id": null, "from": null, "to": null},
+  {"name": "七海快成", "athlete_id": null, "from": null, "to": null},
+  {"name": "浜田匠真", "athlete_id": null, "from": null, "to": null},
+  {"name": "浜田誠真", "athlete_id": null, "from": null, "to": null},
+  {"name": "松村聡美", "athlete_id": null, "from": null, "to": null},
+  {"name": "林遼真", "athlete_id": null, "from": null, "to": null}
+ ]
 }

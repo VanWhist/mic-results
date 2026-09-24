@@ -210,9 +210,11 @@ def match_b_round(rounds_b, gender_ja, n):
 def load_event(ev, imported_at, log=print):
     """registry の 1 大会 → [ctx]。ctx = {cls, meta, records, findings, ab_compared, rules}"""
     rules_by_n, raw_rules = load_event_rules(ev['rules'])
-    year = int(ev['rules'].split('_')[-1])
-    overrides = raw_rules.get('pace_by_sheet', {})
-    exceptions = raw_rules.get('recompute_exceptions', [])
+    # sheet 名（pace_by_sheet / recompute_exceptions のキー）: 全日本は "<年>_<Q|F|SF>-<m|w>"、汎用規則の大会は "<event_id>_…"
+    sheet_prefix = ev.get('sheet_prefix') or str(raw_rules.get('year'))
+    overrides = dict(raw_rules.get('pace_by_sheet', {}))
+    overrides.update(ev.get('pace_by_sheet', {}))
+    exceptions = list(raw_rules.get('recompute_exceptions', [])) + list(ev.get('recompute_exceptions', []))
     ctxs = []
     for pdf in ev['pdfs']:
         path = os.path.join(config.PDF_ROOT, pdf['path'])
@@ -234,13 +236,14 @@ def load_event(ev, imported_at, log=print):
             nturn = s.get('nturn', 5)
             rules = rules_by_n.get(nturn)
             code = SAJ_CODE[s['saj_code']]
-            sheet = f"{year}_{s['saj_code']}-{'m' if g == 'M' else 'w'}"
+            sheet = f"{sheet_prefix}_{s['saj_code']}-{'m' if g == 'M' else 'w'}"
             cls = {
                 'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
                 'discipline': ev.get('discipline', 'MO'), 'gender': g, 'round': code, 'round_text': s['round'],
                 'codex': meta.get('codex'), 'tier': ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
-                'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'), 'page_url': pdf.get('page_url'),
+                'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'),
+                'page_url': (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
                 'pages': s['pages'], 'name_ja': ev.get('name_ja'), 'format': ev.get('format'), 'rules_version': ev['rules'],
                 'sheet': sheet,
             }
@@ -266,6 +269,11 @@ def load_event(ev, imported_at, log=print):
                 rec['exceptions'] = exc
             findings = []
             round_id = f"{cls['event_id']}-{g}-{code}"
+            if cls['tier'] != 'detail':
+                # 得点のみの段階: 行の読み取り（A）だけを使い、印字の合計をそのまま持つ（第1・2層は対象外）
+                ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': False,
+                             'rules': rules or {}})
+                continue
             if rules is None:
                 findings.append(Finding('error', round_id, 'layer2', f"ターン {nturn} 人の規則が {ev['rules']} に無い"))
             if b_round is None:

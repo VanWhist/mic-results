@@ -96,6 +96,25 @@ data/                      公開データ（内容ハッシュ付き JSON ＋ m
 docs/検証レポート.md       ETL が毎回生成
 ```
 
+### FIS 様式の PDF（国内 FIS レース・ANC・WJC・EC・NAC・アジアカップ）
+
+`etl/registry/<系列>.json` に `adapter: "fis_pdf"` で登録する。`pdfs[]` は 1 件＝1 ラウンドで、`round`（Q/Q1/Q2/F1/F2）・`gender`（M/W）・`codex` を持つ。
+`rules` は `etl/rules/rulesets.json` の版名（例 `"2025-26"`）。審判ごとの点が無い古い PDF は `tier: "score"` にする。
+読み取りは moguls-results と同じ 2 方式（`parser_a`＝座標帯、`parser_b`＝行）で、第 1 層で全項目を突き合わせる。
+動作確認: `python -m etl.tests.test_fis_adapter`（W杯 2025-26 Nanto-Toyama 男子 3 ラウンドで全層緑）。
+
+### SAJ 競技データバンクの PDF（A級・B級・全日本ジュニア・国内 FIS レースの SAJ 様式）
+
+`inventory/saj_pdf_plan.json`（棚卸しから作った「元 URL → 保存先」の計画）どおりに `その他大会のリザルト\<系列>\<シーズン>\` へ保存したら、
+
+```bash
+python -m etl.adapters.saj_aj.gen_registry
+```
+
+で `etl/registry/saj_db.json`（MO、adapter saj_aj）と `etl/registry/saj_db_dm.json`（DM、adapter saj_dm）が生成される。
+規則は季節ごとの汎用ファイル `etl/rules/events/規則_SAJ_<シーズン>.json`。大会固有の例外（ペースタイムの根拠、印字を正とする行）は
+registry の該当大会に `pace_by_sheet` / `recompute_exceptions` を書く（sheet 名は `<event_id>_<Q|F|SF>-<m|w>`）。再生成しても手で書いた項目は保持される。
+
 ### W杯・世界選手権・五輪（moguls-results から流用）
 
 ナショナルチーム用 `moguls-results` が審判点まで照合して公開しているデータを、得点までの段階（`score`）で写す。
