@@ -1,0 +1,4 @@
+{
+ "_comment": "同一人物の統合と表記の対応。キーは athlete_id。{\"merge_into\": <別の athlete_id>, \"basis\": 根拠} で統合、{\"kana\": ..., \"latin\": ...} で別名。自動では統合しない。",
+ "athletes": {}
+}

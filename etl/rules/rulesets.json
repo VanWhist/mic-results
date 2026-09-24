@@ -1,0 +1,81 @@
+{
+  "_comment": "規則版。大会日（season）・大会種別（series）・フォーマットで選ぶ。値の根拠: ICR 2026春版 4008/4206/4207/4203.2、ジャッジハンドブック 2025年11月版 6203/6204、DD表 2023年11月版。26/27 は改定後に版を追加する。",
+  "versions": {
+    "2021-22": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": null,
+      "source": "Beijing 2022 rules (values identical to current ICR for scoring)"
+    },
+    "2022-23": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": null,
+      "source": "ICR / JH (pre Nov-2023 DD table not on file; DD read from PDF)"
+    },
+    "2023-24": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": "dd_2023-11",
+      "source": "ICR spring 2026 / JH Nov 2025 / DD table Nov 2023"
+    },
+    "2024-25": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": "dd_2023-11",
+      "source": "ICR spring 2026 / JH Nov 2025 / DD table Nov 2023"
+    },
+    "2025-26": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": "dd_2023-11",
+      "source": "ICR spring 2026 / JH Nov 2025 / DD table Nov 2023"
+    },
+    "2026-27": {
+      "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
+      "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
+      "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
+      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
+      "dd_table": "dd_2023-11",
+      "source": "2025-26 と同じ値（MAG 2026-09-10 で今季の採点ルール変更なし）。DD 表の誤り修正版が FIS から公開されたら dd_ ファイルを追加して差し替える"
+    }
+  },
+  "formats": {
+    "wc_traditional": {
+      "label": "W杯（通常形式）", "rounds": ["Q", "F1", "F2"],
+      "advance": {"Q": {"to": "F1", "n": 16}, "F1": {"to": "F2", "n": 6}},
+      "source": "ICR 4203.2"
+    },
+    "wc_phased": {
+      "label": "W杯（Phased Finals）", "rounds": ["Q1", "Q2", "F1", "F2"],
+      "advance": {"Q1": {"to": "F1", "n": 8, "direct": true}, "Q2": {"to": "F1", "n": 8, "best_of": ["Q1", "Q2"], "eligible_ranks": [9, 32]}, "F1": {"to": "F2", "n": 6}},
+      "source": "ICR 4203.2"
+    },
+    "championship": {
+      "label": "選手権形式（WSC・OWG）", "rounds": ["Q1", "Q2", "F1", "F2"],
+      "advance": {"Q1": {"to": "F1", "n": 10, "direct": true}, "Q2": {"to": "F1", "n": 10, "best_of": ["Q1", "Q2"]}, "F1": {"to": "F2", "n": 8}},
+      "source": "ICR 4203.2 (Championship Format)"
+    },
+    "owg_2022": {
+      "label": "北京2022形式", "rounds": ["Q1", "Q2", "F1", "F2", "F3"],
+      "advance": {"Q1": {"to": "F1", "n": 10, "direct": true}, "Q2": {"to": "F1", "n": 10, "best_of": ["Q1", "Q2"]}, "F1": {"to": "F2", "n": 12}, "F2": {"to": "F3", "n": 6}},
+      "source": "Beijing 2022 result PDFs (Q1 30 → 10 direct; Q2 20 → 10; F1 20 → 12; F2 12 → 6)"
+    }
+  }
+}

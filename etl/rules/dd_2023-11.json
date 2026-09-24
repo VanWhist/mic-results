@@ -1,0 +1,24 @@
+{
+  "_comment": "FIS Mogul Basic Degree of Difficulty, version 2023 updated Nov 2023 (print date 04.11.23). Codes as printed on FIS result PDFs. Composite codes (e.g. 'TST', 'bpp', multi-rotation with grabs) are computed by the ETL only when explicitly listed here; otherwise the DD printed on the PDF is trusted and checked for within-season consistency.",
+  "version": "dd_2023-11",
+  "M": {
+    "S": 0.38, "T": 0.38, "D": 0.41, "X": 0.41, "Y": 0.41, "M": 0.41, "K": 0.41, "Z": 0.40,
+    "3": 0.68, "3p": 0.71, "3G": 0.82, "7": 0.85, "7p": 0.88, "7G": 1.01, "10": 1.02, "10p": 1.05, "10G": 1.20,
+    "3op": 0.71, "3oG": 0.82, "7op": 0.88, "7oG": 1.01, "10op": 1.05, "10oG": 1.20, "14op": 1.22, "14oG": 1.39,
+    "bP": 0.68, "bT": 0.68, "bL": 0.71, "bp": 0.71, "bG": 0.82, "bF": 0.88, "bdF": 1.05, "btF": 1.22,
+    "fT": 0.68, "fP": 0.68, "fp": 0.71, "fG": 0.82, "fF": 0.88,
+    "l": 0.68, "lp": 0.71, "lG": 0.82, "lF": 0.85, "lpF": 0.88, "lGF": 1.01
+  },
+  "W": {
+    "S": 0.48, "T": 0.48, "D": 0.51, "X": 0.51, "Y": 0.51, "M": 0.51, "K": 0.51, "Z": 0.50,
+    "3": 0.78, "3p": 0.81, "3G": 0.92, "7": 0.95, "7p": 0.98, "7G": 1.11, "10": 1.12, "10p": 1.15, "10G": 1.30,
+    "3op": 0.81, "3oG": 0.92, "7op": 0.98, "7oG": 1.11, "10op": 1.15, "10oG": 1.30, "14op": 1.32, "14oG": 1.49,
+    "bP": 0.78, "bT": 0.78, "bL": 0.81, "bp": 0.81, "bG": 0.92, "bF": 0.98, "bdF": 1.15, "btF": 1.32,
+    "fT": 0.78, "fP": 0.78, "fp": 0.81, "fG": 0.92, "fF": 0.98,
+    "l": 0.78, "lp": 0.81, "lG": 0.92, "lF": 0.95, "lpF": 0.98, "lGF": 1.11
+  },
+  "notes": [
+    "Straight jumps: Single/Double/Triple/Quad/Quint base 0.40/0.53/0.65/0.76/0.86 (M) and +0.10 (W); upright modifiers T -0.02, S -0.02, D/X/Y/M/K +0.01, Z 0 — printed codes like 'TST' are sums that this table does not enumerate.",
+    "Every additional rotation beyond the base manoeuvre +0.17; additional grab per extra full rotation +0.02; layout position in full-twisting flips +0.03; additional upright manoeuvres +0.13/0.12/0.11/0.10."
+  ]
+}

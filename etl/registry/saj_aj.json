@@ -1,0 +1,465 @@
+{
+ "_comment": "全日本選手権 MO 2017〜2026。出典・SHA-256 は 西沢岳人/全日本ジャッジ明細/出典一覧.md と同じ。",
+ "events": [
+  {
+   "event_id": "2016-17-saj_aj-2017",
+   "season": "2016-17",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第37回全日本スキー選手権大会フリースタイルスキー競技",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2017/全日本2017_MO_男子.pdf",
+     "sha256": "fdec6ddf3dc46e8118497883f6cfee05739ea870f76de8feeeb48566cb8b4c73",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20170039.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0039/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2017",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-saj_aj-2018",
+   "season": "2017-18",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第38回全日本スキー選手権大会フリースタイル競技モーグル種目",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2018/全日本2018_MO_男子.pdf",
+     "sha256": "0b75c16392b2f7e855e7f52de62643c6260772867c0aff79ae81d072a11d8326",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20180035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0035/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2018",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-saj_aj-2019",
+   "season": "2018-19",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第39回全日本スキー選手権大会 フリースタイル競技 モーグル種目",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2019/全日本2019_MO.pdf",
+     "sha256": "48fe11567977171a822465fef8b9a26987fa8893a048061166cc6d162b6641fe",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20190031.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0031/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2019",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-saj_aj-2020",
+   "season": "2019-20",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第40回全日本スキー選手権 秋田たざわ湖大会 MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2020/全日本2020_MO.pdf",
+     "sha256": "247202ee248abe1e57f363dc7d5aace036b105452c2304ac47a53cd72d05da52",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2020/FS/%E5%85%A8%E6%97%A5%E6%9C%AC%E9%81%B8%E6%89%8B%E6%A8%A9%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88_gliZwRL.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2020/competition/0018/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2020",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2020-21-saj_aj-2021",
+   "season": "2020-21",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第41回全日本スキー選手権大会・フリースタイル競技 MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2021/全日本2021_MO_男子.pdf",
+     "sha256": "742a2bd53c1d21e0aac1f90675fd15bf05f2b44c807ef1835cc062a2bfe2d467",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2021/FS/%E2%98%85%E5%85%A8%E6%97%A5%E6%9C%ACMO_0320_%E7%94%B7%E5%AD%90%E7%B7%8F%E5%90%88%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2021/competition/0458/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2021",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-saj_aj-2022",
+   "season": "2021-22",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第42回全日本スキー選手権大会・フリースタイル競技 MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2022/全日本2022_MO.pdf",
+     "sha256": "fc2223c73116c7030dcaf62d37e64ffc34e0a19986ef10d58c940c9cbd35e85d",
+     "url": "https://www.age.ne.jp/x/sas/all_japan_fs_mo_results20220321.pdf",
+     "page_url": "https://www.age.ne.jp/x/sas/freestyle_results_2022.html",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2022",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_aj-2023",
+   "season": "2022-23",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第43回全日本スキー選手権大会・フリースタイル競技 MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2023/全日本2023_MO.pdf",
+     "sha256": "e44a9951d5e042720590d626b76b5ac1c45ceabb6e10646ff3862a97c16701bd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/MO%E7%94%B7%E5%AD%90%E6%B1%BA%E5%8B%9D%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0459/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2023",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_aj-2024",
+   "season": "2023-24",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第44回全日本スキー選手権大会・フリースタイル競技",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2024/全日本2024_MO.pdf",
+     "sha256": "571b810eb5709aeae900a3d120660d1ddb3f43294741d421178345e3ef270a09",
+     "url": "https://www.age.ne.jp/x/sas/alljapan_fs_mo_lm_results20240324.pdf",
+     "page_url": "https://www.age.ne.jp/x/sas/freestyle_kyogikekka2024.html",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2024",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_aj-2025",
+   "season": "2024-25",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第45回全日本スキー選手権大会フリースタイル競技 種目：MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2025/全日本2025_MO_男子.pdf",
+     "sha256": "1dd3e0b26eafbdbc244b881a591bec7ad31f945f4ac6e1f979753856823d7e27",
+     "url": "https://www.age.ne.jp/x/sas/alljapan_fsmo_m_results20250330.pdf",
+     "page_url": "https://www.age.ne.jp/x/sas/freestyle_results2025.html",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2025",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_aj-2026",
+   "season": "2025-26",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第46回全日本スキー選手権大会フリースタイル競技 種目：MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2026/全日本2026_MO.pdf",
+     "sha256": "611babc71955994d3a7910a148c5010d72b3181255ea9d1f2d4fb56649a34ebc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/%E7%94%B7%E5%AD%90%E3%83%AA%E3%82%B6%E3%83%AB%E3%83%88%E5%85%A8%E9%83%A8%E5%85%A5v01.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0443/result",
+     "saved_at": "2026-09-17"
+    }
+   ],
+   "rules": "規則_2026",
+   "format": {
+    "label": "全日本（予選→決勝→スーパーファイナル）",
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    }
+   },
+   "notes": ""
+  }
+ ]
+}

@@ -1,0 +1,3160 @@
+{
+ "_comment": "全日本 2017〜2026 の目視正解データ（西沢岳人/全日本ジャッジ明細/検証/golden_YYYY.json を run 単位に変換）。round_id と bib で run を特定する。減点は負の数。",
+ "runs": [
+  {
+   "round_id": "2016-17-saj_aj-2017-M-F2",
+   "bib": 12,
+   "note": "西沢選手（SF 5位）",
+   "source": "golden_2017.json 2017_SF-m_12_*.png",
+   "rank": 5,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.4,
+    15.1,
+    16.0,
+    16.2,
+    15.5
+   ],
+   "ded": [
+    -1.6,
+    -1.0,
+    -1.3,
+    -0.5,
+    -1.2
+   ],
+   "air": [
+    {
+     "J6": 5.9,
+     "J7": 6.0,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 6.3,
+     "J7": 6.5,
+     "jump": "7opA",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 43.4,
+   "air_total": 10.43,
+   "seconds": 23.21,
+   "time_points": 14.73,
+   "run_score": 68.56
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-F1",
+   "bib": 12,
+   "note": "西沢選手（決勝 4位）",
+   "source": "golden_2017.json 2017_F-m_12_*.png",
+   "rank": 4,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.7,
+    15.6,
+    16.4,
+    16.4,
+    15.2
+   ],
+   "ded": [
+    -0.5,
+    -1.7,
+    -0.9,
+    -0.5,
+    -1.0
+   ],
+   "air": [
+    {
+     "J6": 6.3,
+     "J7": 5.4,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 6.7,
+     "J7": 6.7,
+     "jump": "7opA",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 45.3,
+   "air_total": 10.61,
+   "seconds": 23.95,
+   "time_points": 13.67,
+   "run_score": 69.58
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 12,
+   "note": "西沢選手（予選 5位）",
+   "source": "golden_2017.json 2017_Q-m_12_*.png",
+   "rank": 5,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    14.1,
+    13.9,
+    16.1,
+    16.3,
+    14.8
+   ],
+   "ded": [
+    -0.7,
+    -1.5,
+    -0.9,
+    -0.6,
+    -0.6
+   ],
+   "air": [
+    {
+     "J6": 4.9,
+     "J7": 3.3,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 5.6,
+     "J7": 6.5,
+     "jump": "7opA",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 42.8,
+   "air_total": 8.59,
+   "seconds": 23.99,
+   "time_points": 13.62,
+   "run_score": 65.01
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-F2",
+   "bib": 5,
+   "note": "SF 1位＝優勝ラインの基準行",
+   "source": "golden_2017.json 2017_SF-m_5_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5000462",
+   "fis_code": "2527253",
+   "base": [
+    16.8,
+    15.5,
+    16.5,
+    16.2,
+    16.4
+   ],
+   "ded": [
+    -0.5,
+    -1.0,
+    -0.6,
+    -1.0,
+    -0.6
+   ],
+   "air": [
+    {
+     "J6": 7.8,
+     "J7": 6.8,
+     "jump": "7opA",
+     "dd": 0.86
+    },
+    {
+     "J6": 7.5,
+     "J7": 7.0,
+     "jump": "10opA",
+     "dd": 1.02
+    }
+   ],
+   "turns_total": 46.9,
+   "air_total": 13.66,
+   "seconds": 23.39,
+   "time_points": 14.48,
+   "run_score": 75.04
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 56,
+   "note": "p3 最終行（ページ境界の直前）",
+   "source": "golden_2017.json 2017_Q-m_56_*.png",
+   "rank": 30,
+   "status": "OK",
+   "saj_no": "5000487",
+   "fis_code": "2440203",
+   "base": [
+    10.0,
+    10.7,
+    10.8,
+    12.4,
+    11.0
+   ],
+   "ded": [
+    -2.5,
+    -1.8,
+    -1.8,
+    -3.0,
+    -1.8
+   ],
+   "air": [
+    {
+     "J6": 3.7,
+     "J7": 3.7,
+     "jump": "YK",
+     "dd": 0.56
+    },
+    {
+     "J6": 1.8,
+     "J7": 2.1,
+     "jump": "bL",
+     "dd": 0.72
+    }
+   ],
+   "turns_total": 26.4,
+   "air_total": 3.47,
+   "seconds": 32.2,
+   "time_points": 1.85,
+   "run_score": 31.72
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 41,
+   "note": "p4 先頭行（ページ境界の直後）",
+   "source": "golden_2017.json 2017_Q-m_41_*.png",
+   "rank": 31,
+   "status": "OK",
+   "saj_no": "5001080",
+   "fis_code": "2530671",
+   "base": [
+    9.8,
+    11.4,
+    11.2,
+    10.5,
+    10.6
+   ],
+   "ded": [
+    -2.4,
+    -1.9,
+    -2.0,
+    -1.9,
+    -0.7
+   ],
+   "air": [
+    {
+     "J6": 3.7,
+     "J7": 3.8,
+     "jump": "S",
+     "dd": 0.41
+    },
+    {
+     "J6": 5.6,
+     "J7": 4.8,
+     "jump": "TT",
+     "dd": 0.5
+    }
+   ],
+   "turns_total": 26.5,
+   "air_total": 4.13,
+   "seconds": 32.75,
+   "time_points": 1.06,
+   "run_score": 31.69
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 33,
+   "note": "*NJ・ターン下限 0.3",
+   "source": "golden_2017.json 2017_Q-m_33_*.png",
+   "rank": 50,
+   "status": "OK",
+   "saj_no": "5000279",
+   "fis_code": "2527260",
+   "base": [
+    11.6,
+    10.1,
+    11.2,
+    10.2,
+    11.0
+   ],
+   "ded": [
+    -11.6,
+    -12.8,
+    -11.0,
+    -12.6,
+    -11.6
+   ],
+   "air": [
+    {
+     "J6": 3.2,
+     "J7": 3.0,
+     "jump": "TS",
+     "dd": 0.53
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 1.64,
+   "seconds": 31.78,
+   "time_points": 2.45,
+   "run_score": 4.39
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 6,
+   "note": "再計算の例外行（印字のエア合計 2.89、規則_2017.md 例外1）。印字どおり入っていることを守る",
+   "source": "golden_2017.json Q-m_6_白鳥_左.png / Q-m_6_白鳥_右.png（scale 8）",
+   "rank": 14,
+   "status": "OK",
+   "saj_no": "5001006",
+   "fis_code": "2530645",
+   "base": [
+    14.2,
+    14.3,
+    14.3,
+    15.6,
+    13.8
+   ],
+   "ded": [
+    -1.3,
+    -2.8,
+    -2.3,
+    -2.4,
+    -1.2
+   ],
+   "air": [
+    {
+     "J6": 6.7,
+     "J7": 5.8,
+     "jump": "bF",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 36.8,
+   "air_total": 2.89,
+   "seconds": 25.13,
+   "time_points": 11.98,
+   "run_score": 51.67
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 14,
+   "note": "DNF",
+   "source": "golden_2017.json 2017_Q-m_14_*.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001101",
+   "fis_code": "2530672"
+  },
+  {
+   "round_id": "2016-17-saj_aj-2017-M-Q",
+   "bib": 43,
+   "note": "最終ページの最終行（DNS）",
+   "source": "golden_2017.json 2017_Q-m_43_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5001217",
+   "fis_code": "2532778"
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-F1",
+   "bib": 12,
+   "note": "西沢選手（決勝 12位）",
+   "source": "golden_2018.json 2018_F-m_12_*.png",
+   "rank": 12,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    17.3,
+    16.7,
+    16.7,
+    14.5,
+    16.2
+   ],
+   "ded": [
+    -2.9,
+    -2.9,
+    -2.6,
+    -6.4,
+    -4.0
+   ],
+   "air": [
+    {
+     "J6": 8.0,
+     "J7": 8.3,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 4.3,
+     "J7": 4.6,
+     "jump": "7oGA",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 39.8,
+   "air_total": 11.02,
+   "seconds": 24.63,
+   "time_points": 13.44,
+   "run_score": 64.26
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 12,
+   "note": "西沢選手（予選 9位）",
+   "source": "golden_2018.json 2018_Q-m_12_*.png",
+   "rank": 9,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.2,
+    15.8,
+    16.2,
+    15.0,
+    16.4
+   ],
+   "ded": [
+    -1.4,
+    -0.4,
+    -1.0,
+    -0.8,
+    -0.9
+   ],
+   "air": [
+    {
+     "J6": 5.9,
+     "J7": 6.1,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 6.3,
+     "J7": 6.5,
+     "jump": "7opA",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 45.5,
+   "air_total": 10.47,
+   "seconds": 25.39,
+   "time_points": 12.38,
+   "run_score": 68.35
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-F2",
+   "bib": 1,
+   "note": "SF 1位＝優勝ラインの基準行",
+   "source": "golden_2018.json 2018_SF-m_1_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5000776",
+   "fis_code": "2529645",
+   "base": [
+    18.6,
+    18.1,
+    18.8,
+    19.0,
+    18.6
+   ],
+   "ded": [
+    -0.3,
+    -0.0,
+    -0.3,
+    -0.2,
+    -0.0
+   ],
+   "air": [
+    {
+     "J6": 8.7,
+     "J7": 8.5,
+     "jump": "10opA",
+     "dd": 1.02
+    },
+    {
+     "J6": 8.0,
+     "J7": 7.8,
+     "jump": "7oGA",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 55.5,
+   "air_total": 16.35,
+   "seconds": 22.14,
+   "time_points": 16.93,
+   "run_score": 88.78
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 8,
+   "note": "同点 T1（61.93、15位 BIB 21 と同点）",
+   "source": "golden_2018.json 2018_Q-m_8_*.png",
+   "rank": 14,
+   "status": "OK",
+   "saj_no": "5001118",
+   "fis_code": "2530684",
+   "base": [
+    16.2,
+    15.6,
+    14.8,
+    13.0,
+    14.0
+   ],
+   "ded": [
+    -0.8,
+    -0.3,
+    -1.4,
+    -1.0,
+    -1.3
+   ],
+   "air": [
+    {
+     "J6": 6.3,
+     "J7": 5.8,
+     "jump": "bF",
+     "dd": 0.83
+    },
+    {
+     "J6": 2.8,
+     "J7": 3.8,
+     "jump": "bL",
+     "dd": 0.72
+    }
+   ],
+   "turns_total": 41.3,
+   "air_total": 7.38,
+   "seconds": 24.77,
+   "time_points": 13.25,
+   "run_score": 61.93,
+   "tie": "T1"
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 51,
+   "note": "p3 最終行（ページ境界の直前）",
+   "source": "golden_2018.json 2018_Q-m_51_*.png",
+   "rank": 40,
+   "status": "OK",
+   "saj_no": "5000268",
+   "fis_code": "2484472",
+   "base": [
+    10.6,
+    9.0,
+    9.5,
+    10.4,
+    9.6
+   ],
+   "ded": [
+    -2.5,
+    -1.3,
+    -3.4,
+    -2.6,
+    -1.7
+   ],
+   "air": [
+    {
+     "J6": 4.2,
+     "J7": 5.1,
+     "jump": "SXS",
+     "dd": 0.7
+    },
+    {
+     "J6": 2.8,
+     "J7": 4.3,
+     "jump": "bL",
+     "dd": 0.72
+    }
+   ],
+   "turns_total": 22.7,
+   "air_total": 5.8,
+   "seconds": 32.42,
+   "time_points": 2.51,
+   "run_score": 31.01
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 25,
+   "note": "p4 先頭行（ページ境界の直後）、*NJ",
+   "source": "golden_2018.json 2018_Q-m_25_*.png",
+   "rank": 41,
+   "status": "OK",
+   "saj_no": "5001410",
+   "fis_code": "2532177",
+   "base": [
+    8.2,
+    10.6,
+    10.5,
+    10.0,
+    10.6
+   ],
+   "ded": [
+    -7.1,
+    -6.4,
+    -8.5,
+    -5.2,
+    -9.0
+   ],
+   "air": [
+    {
+     "J6": 5.3,
+     "J7": 5.5,
+     "jump": "bPp",
+     "dd": 0.73
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 9.1,
+   "air_total": 3.93,
+   "seconds": 23.3,
+   "time_points": 15.31,
+   "run_score": 28.34
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 40,
+   "note": "再計算の例外行（印字のターン合計 0.2、規則_2018.md）。印字どおり入っていることを守る",
+   "source": "golden_2018.json 2018_Q-m_40_例外_左.png / _右.png（scale 10）",
+   "rank": 47,
+   "status": "OK",
+   "saj_no": "5001586",
+   "fis_code": "2533069",
+   "base": [
+    10.7,
+    6.5,
+    9.0,
+    9.0,
+    10.8
+   ],
+   "ded": [
+    -10.6,
+    -7.8,
+    -7.9,
+    -10.0,
+    -11.0
+   ],
+   "air": [
+    {
+     "J6": 4.4,
+     "J7": 3.8,
+     "jump": "3",
+     "dd": 0.7
+    },
+    {
+     "J6": 4.1,
+     "J7": 3.5,
+     "jump": "bPp",
+     "dd": 0.73
+    }
+   ],
+   "turns_total": 0.2,
+   "air_total": 5.64,
+   "seconds": 26.57,
+   "time_points": 10.72,
+   "run_score": 16.56
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 46,
+   "note": "DNF",
+   "source": "golden_2018.json 2018_Q-m_46_*.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001377",
+   "fis_code": "2533029"
+  },
+  {
+   "round_id": "2017-18-saj_aj-2018-M-Q",
+   "bib": 43,
+   "note": "最終ページの最終行（DNS）",
+   "source": "golden_2018.json 2018_Q-m_43_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5000894",
+   "fis_code": "2528785"
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-F2",
+   "bib": 8,
+   "note": "西沢選手（SF 6位）。男子SF表の最終行＝同ページの最終表の最終行。ペース印字が女子の値だけの表",
+   "source": "golden_2019.json 2019_SF-m_8_*.png",
+   "rank": 6,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.3,
+    16.0,
+    16.5,
+    16.3,
+    15.9
+   ],
+   "ded": [
+    -3.4,
+    -4.1,
+    -3.7,
+    -3.9,
+    -3.2
+   ],
+   "air": [
+    {
+     "J6": 6.0,
+     "J7": 7.3,
+     "jump": "bPp",
+     "dd": 0.73
+    },
+    {
+     "J6": 3.5,
+     "J7": 3.9,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 37.6,
+   "air_total": 8.03,
+   "seconds": 21.93,
+   "time_points": 11.84,
+   "run_score": 57.47
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-F1",
+   "bib": 8,
+   "note": "西沢選手（決勝 2位）",
+   "source": "golden_2019.json 2019_F-m_8_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.0,
+    15.4,
+    16.2,
+    15.2,
+    15.8
+   ],
+   "ded": [
+    -0.8,
+    -0.7,
+    -0.3,
+    -1.5,
+    -0.4
+   ],
+   "air": [
+    {
+     "J6": 6.4,
+     "J7": 6.4,
+     "jump": "bPp",
+     "dd": 0.73
+    },
+    {
+     "J6": 6.7,
+     "J7": 6.7,
+     "jump": "7o",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 44.5,
+   "air_total": 10.23,
+   "seconds": 21.81,
+   "time_points": 12.04,
+   "run_score": 66.77
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-Q",
+   "bib": 8,
+   "note": "西沢選手（予選 3位）",
+   "source": "golden_2019.json 2019_Q-m_8_*.png",
+   "rank": 3,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.3,
+    14.8,
+    15.5,
+    14.2,
+    13.4
+   ],
+   "ded": [
+    -0.6,
+    -0.2,
+    -0.2,
+    -0.7,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 6.4,
+     "J7": 7.2,
+     "jump": "bPp",
+     "dd": 0.73
+    },
+    {
+     "J6": 6.4,
+     "J7": 7.4,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 42.8,
+   "air_total": 10.89,
+   "seconds": 22.16,
+   "time_points": 11.46,
+   "run_score": 65.15
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-F2",
+   "bib": 6,
+   "note": "男子SF 1位＝優勝ラインの基準行。【男子】表の先頭。規則ファイルのペース 19.41 を使う表",
+   "source": "golden_2019.json 2019_SF-m_6_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001091",
+   "fis_code": "2531671",
+   "base": [
+    16.6,
+    16.4,
+    16.2,
+    16.1,
+    16.6
+   ],
+   "ded": [
+    -0.0,
+    -0.0,
+    -0.3,
+    -0.5,
+    -0.0
+   ],
+   "air": [
+    {
+     "J6": 6.6,
+     "J7": 7.1,
+     "jump": "bPp",
+     "dd": 0.73
+    },
+    {
+     "J6": 8.2,
+     "J7": 8.0,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 48.9,
+   "air_total": 12.77,
+   "seconds": 21.96,
+   "time_points": 11.79,
+   "run_score": 73.46
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-W-F2",
+   "bib": 8,
+   "note": "【女子】表の最終行（同ページの【男子】表の直前）。予選がPDFにない女子で記号 SF になること。技コードが数字の '3'",
+   "source": "golden_2019.json 2019_SF-w_8_*.png",
+   "rank": 6,
+   "status": "OK",
+   "saj_no": "5001162",
+   "fis_code": "2534852",
+   "base": [
+    14.5,
+    14.0,
+    15.4,
+    13.0,
+    14.6
+   ],
+   "ded": [
+    -9.5,
+    -12.9,
+    -12.6,
+    -11.0,
+    -15.6
+   ],
+   "air": [
+    {
+     "J6": 3.5,
+     "J7": 3.7,
+     "jump": "3",
+     "dd": 0.75
+    },
+    {
+     "J6": 7.6,
+     "J7": 7.9,
+     "jump": "bPp",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 6.6,
+   "air_total": 9.12,
+   "seconds": 30.94,
+   "time_points": 4.42,
+   "run_score": 20.14
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-Q",
+   "bib": 43,
+   "note": "p3 最終行（ページ境界の直前）",
+   "source": "golden_2019.json 2019_Q-m_43_*.png",
+   "rank": 30,
+   "status": "OK",
+   "saj_no": "5001598",
+   "fis_code": "2397582",
+   "base": [
+    12.3,
+    12.1,
+    10.4,
+    10.0,
+    10.5
+   ],
+   "ded": [
+    -5.3,
+    -3.9,
+    -4.6,
+    -5.5,
+    -2.8
+   ],
+   "air": [
+    {
+     "J6": 3.8,
+     "J7": 3.8,
+     "jump": "3",
+     "dd": 0.65
+    },
+    {
+     "J6": 5.7,
+     "J7": 5.0,
+     "jump": "TTS",
+     "dd": 0.61
+    }
+   ],
+   "turns_total": 19.2,
+   "air_total": 5.73,
+   "seconds": 27.07,
+   "time_points": 3.37,
+   "run_score": 28.3
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-Q",
+   "bib": 56,
+   "note": "p4 先頭行（ページ境界の直後）",
+   "source": "golden_2019.json 2019_Q-m_56_*.png",
+   "rank": 31,
+   "status": "OK",
+   "saj_no": "5000432",
+   "fis_code": "2293011",
+   "base": [
+    11.0,
+    11.0,
+    11.2,
+    10.0,
+    11.1
+   ],
+   "ded": [
+    -3.8,
+    -5.5,
+    -5.6,
+    -4.0,
+    -4.4
+   ],
+   "air": [
+    {
+     "J6": 4.4,
+     "J7": 5.3,
+     "jump": "TT",
+     "dd": 0.5
+    },
+    {
+     "J6": 2.4,
+     "J7": 3.6,
+     "jump": "TTS",
+     "dd": 0.61
+    }
+   ],
+   "turns_total": 19.2,
+   "air_total": 4.25,
+   "seconds": 26.32,
+   "time_points": 4.6,
+   "run_score": 28.05
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-F1",
+   "bib": 2,
+   "note": "決勝の DNF（順位 14 の印字あり）",
+   "source": "golden_2019.json 2019_F-m_2_*.png",
+   "rank": 14,
+   "status": "DNF",
+   "saj_no": "5000947",
+   "fis_code": "2529652"
+  },
+  {
+   "round_id": "2018-19-saj_aj-2019-M-Q",
+   "bib": 25,
+   "note": "最終ページの最終行（DNF）",
+   "source": "golden_2019.json 2019_Q-m_25_*.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5000818",
+   "fis_code": "2529481"
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-F2",
+   "bib": 59,
+   "note": "西沢選手（SF 4位）。規則ファイルのペース 23.30 を使う表",
+   "source": "golden_2020.json 2020_SF-m_59_*.png",
+   "rank": 4,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.4,
+    16.0,
+    16.2,
+    16.7,
+    16.3
+   ],
+   "ded": [
+    -0.7,
+    -0.6,
+    -0.3,
+    -0.6,
+    -0.4
+   ],
+   "air": [
+    {
+     "J6": 7.3,
+     "J7": 7.0,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 7.6,
+     "J7": 7.5,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 47.3,
+   "air_total": 13.53,
+   "seconds": 25.01,
+   "time_points": 13.65,
+   "run_score": 74.48
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-F1",
+   "bib": 59,
+   "note": "西沢選手（決勝 5位）",
+   "source": "golden_2020.json 2020_F-m_59_*.png",
+   "rank": 5,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.4,
+    16.7,
+    16.1,
+    16.8,
+    16.2
+   ],
+   "ded": [
+    -0.9,
+    -0.5,
+    -0.4,
+    -0.3,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 6.1,
+     "J7": 6.6,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 6.5,
+     "J7": 7.0,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 47.6,
+   "air_total": 11.38,
+   "seconds": 24.81,
+   "time_points": 13.92,
+   "run_score": 72.9
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 59,
+   "note": "西沢選手（予選 4位）",
+   "source": "golden_2020.json 2020_Q-m_59_*.png",
+   "rank": 4,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.3,
+    16.4,
+    15.8,
+    16.8,
+    16.2
+   ],
+   "ded": [
+    -1.2,
+    -1.0,
+    -0.6,
+    -0.7,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 8.2,
+     "J7": 8.4,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 6.4,
+     "J7": 6.7,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 46.4,
+   "air_total": 12.93,
+   "seconds": 25.8,
+   "time_points": 12.56,
+   "run_score": 71.89
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-F2",
+   "bib": 51,
+   "note": "男子SF 1位＝優勝ラインの基準行",
+   "source": "golden_2020.json 2020_SF-m_51_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5000776",
+   "fis_code": "2529645",
+   "base": [
+    17.7,
+    17.8,
+    17.8,
+    17.4,
+    17.3
+   ],
+   "ded": [
+    -0.0,
+    -0.4,
+    -0.2,
+    -0.3,
+    -0.2
+   ],
+   "air": [
+    {
+     "J6": 8.7,
+     "J7": 9.2,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.5,
+     "J7": 8.5,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 52.2,
+   "air_total": 15.18,
+   "seconds": 23.4,
+   "time_points": 15.86,
+   "run_score": 83.24
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-W-Q",
+   "bib": 13,
+   "note": "SAJ番号欄が空欄の外国籍（修正前パーサではエラーなしで行ごと欠落）",
+   "source": "golden_2020.json 2020_Q-w_13_*.png",
+   "rank": 27,
+   "status": "OK",
+   "fis_code": "2530095",
+   "base": [
+    11.7,
+    12.4,
+    12.1,
+    12.5,
+    13.5
+   ],
+   "ded": [
+    -7.2,
+    -5.4,
+    -5.7,
+    -4.9,
+    -6.0
+   ],
+   "air": [
+    {
+     "J6": 6.2,
+     "J7": 6.8,
+     "jump": "S",
+     "dd": 0.48
+    },
+    {
+     "J6": 2.4,
+     "J7": 2.1,
+     "jump": "bp",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 19.9,
+   "air_total": 4.98,
+   "seconds": 31.34,
+   "time_points": 11.22,
+   "run_score": 36.1
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-W-Q",
+   "bib": 34,
+   "note": "女子予選の最終行。SAJ番号欄空欄の外国籍。ターン下限 0.3。タイム点 0.00",
+   "source": "golden_2020.json 2020_Q-w_34_*.png",
+   "rank": 34,
+   "status": "OK",
+   "fis_code": "2537261",
+   "base": [
+    7.3,
+    7.8,
+    9.3,
+    8.0,
+    7.6
+   ],
+   "ded": [
+    -11.1,
+    -9.0,
+    -11.1,
+    -11.6,
+    -11.6
+   ],
+   "air": [
+    {
+     "J6": 2.2,
+     "J7": 2.8,
+     "jump": "S",
+     "dd": 0.48
+    },
+    {
+     "J6": 3.3,
+     "J7": 3.7,
+     "jump": "bL",
+     "dd": 0.82
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 4.06,
+   "seconds": 47.57,
+   "time_points": 0.0,
+   "run_score": 4.36
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 107,
+   "note": "SAJ番号欄空欄の外国籍（男子）",
+   "source": "golden_2020.json 2020_Q-m_107_*.png",
+   "rank": 37,
+   "status": "OK",
+   "fis_code": "2537258",
+   "base": [
+    12.1,
+    12.0,
+    11.9,
+    10.4,
+    12.7
+   ],
+   "ded": [
+    -0.7,
+    -1.5,
+    -1.8,
+    -0.8,
+    -1.6
+   ],
+   "air": [
+    {
+     "J6": 4.2,
+     "J7": 5.0,
+     "jump": "S",
+     "dd": 0.38
+    },
+    {
+     "J6": 3.5,
+     "J7": 2.9,
+     "jump": "bL",
+     "dd": 0.72
+    }
+   ],
+   "turns_total": 32.1,
+   "air_total": 4.04,
+   "seconds": 30.41,
+   "time_points": 6.23,
+   "run_score": 42.37
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 108,
+   "note": "SAJ番号欄も順位もない外国籍の DNF（修正で読めるようにした型）",
+   "source": "golden_2020.json 2020_Q-m_108_*.png",
+   "rank": null,
+   "status": "DNF",
+   "fis_code": "2537440"
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 77,
+   "note": "p2 最終行（ページ境界の直前）",
+   "source": "golden_2020.json 2020_Q-m_77_*.png",
+   "rank": 30,
+   "status": "OK",
+   "saj_no": "5001414",
+   "fis_code": "2534825",
+   "base": [
+    12.6,
+    12.9,
+    13.4,
+    11.7,
+    12.0
+   ],
+   "ded": [
+    -1.7,
+    -1.6,
+    -1.1,
+    -1.3,
+    -1.6
+   ],
+   "air": [
+    {
+     "J6": 5.0,
+     "J7": 5.8,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 5.6,
+     "J7": 6.1,
+     "jump": "3oG",
+     "dd": 0.84
+    }
+   ],
+   "turns_total": 33.0,
+   "air_total": 9.66,
+   "seconds": 28.05,
+   "time_points": 9.47,
+   "run_score": 52.13
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 84,
+   "note": "p3 先頭行（ページ境界の直後）",
+   "source": "golden_2020.json 2020_Q-m_84_*.png",
+   "rank": 31,
+   "status": "OK",
+   "saj_no": "5001627",
+   "fis_code": "2535042",
+   "base": [
+    11.1,
+    12.8,
+    13.4,
+    11.6,
+    11.2
+   ],
+   "ded": [
+    -2.3,
+    -1.7,
+    -1.7,
+    -1.9,
+    -2.0
+   ],
+   "air": [
+    {
+     "J6": 4.9,
+     "J7": 5.2,
+     "jump": "bp",
+     "dd": 0.73
+    },
+    {
+     "J6": 4.7,
+     "J7": 4.4,
+     "jump": "7o",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 30.0,
+   "air_total": 7.45,
+   "seconds": 27.36,
+   "time_points": 10.42,
+   "run_score": 47.87
+  },
+  {
+   "round_id": "2019-20-saj_aj-2020-M-Q",
+   "bib": 70,
+   "note": "男子予選の最終行（DNS）",
+   "source": "golden_2020.json 2020_Q-m_70_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5001060",
+   "fis_code": "2529709"
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-F2",
+   "bib": 3,
+   "note": "西沢選手（SF 3位）",
+   "source": "golden_2021.json 2021_SF-m_3_*.png",
+   "rank": 3,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.0,
+    15.4,
+    15.7,
+    16.6,
+    16.7
+   ],
+   "ded": [
+    -0.3,
+    -1.0,
+    -0.8,
+    -0.3,
+    -0.5
+   ],
+   "air": [
+    {
+     "J6": 7.8,
+     "J7": 7.4,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.5,
+     "J7": 8.2,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 46.7,
+   "air_total": 14.7,
+   "seconds": 25.0,
+   "time_points": 12.17,
+   "run_score": 73.57
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-F1",
+   "bib": 3,
+   "note": "西沢選手（決勝 1位＝決勝の優勝ラインでもある）",
+   "source": "golden_2021.json 2021_F-m_3_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.4,
+    15.2,
+    16.4,
+    16.0,
+    16.0
+   ],
+   "ded": [
+    -0.8,
+    -0.2,
+    -0.4,
+    -0.0,
+    -0.2
+   ],
+   "air": [
+    {
+     "J6": 6.9,
+     "J7": 7.8,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.2,
+     "J7": 8.5,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 46.6,
+   "air_total": 14.48,
+   "seconds": 25.19,
+   "time_points": 11.9,
+   "run_score": 72.98
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-Q",
+   "bib": 3,
+   "note": "西沢選手（予選 2位）",
+   "source": "golden_2021.json 2021_Q-m_3_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.3,
+    14.6,
+    15.4,
+    15.2,
+    15.5
+   ],
+   "ded": [
+    -0.7,
+    -0.9,
+    -0.6,
+    -0.0,
+    -0.5
+   ],
+   "air": [
+    {
+     "J6": 6.8,
+     "J7": 7.0,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 7.1,
+     "J7": 7.6,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 44.1,
+   "air_total": 13.12,
+   "seconds": 25.43,
+   "time_points": 11.55,
+   "run_score": 68.77
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-F2",
+   "bib": 2,
+   "note": "SF 1位＝優勝ラインの基準行",
+   "source": "golden_2021.json 2021_SF-m_2_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001091",
+   "fis_code": "2531671",
+   "base": [
+    15.8,
+    16.2,
+    16.2,
+    16.2,
+    16.0
+   ],
+   "ded": [
+    -1.6,
+    -0.2,
+    -0.6,
+    -0.3,
+    -0.5
+   ],
+   "air": [
+    {
+     "J6": 6.7,
+     "J7": 7.6,
+     "jump": "7op",
+     "dd": 0.86
+    },
+    {
+     "J6": 8.3,
+     "J7": 8.6,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 47.0,
+   "air_total": 14.25,
+   "seconds": 24.0,
+   "time_points": 13.6,
+   "run_score": 74.85
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-Q",
+   "bib": 39,
+   "note": "p3 最終行（ページ境界の直前）",
+   "source": "golden_2021.json 2021_Q-m_39_*.png",
+   "rank": 25,
+   "status": "OK",
+   "saj_no": "5000279",
+   "fis_code": "2527260",
+   "base": [
+    9.1,
+    9.8,
+    10.9,
+    10.4,
+    10.5
+   ],
+   "ded": [
+    -2.0,
+    -1.3,
+    -1.7,
+    -0.4,
+    -0.9
+   ],
+   "air": [
+    {
+     "J6": 4.2,
+     "J7": 4.8,
+     "jump": "TS",
+     "dd": 0.5
+    },
+    {
+     "J6": 4.9,
+     "J7": 5.2,
+     "jump": "TTS",
+     "dd": 0.61
+    }
+   ],
+   "turns_total": 26.8,
+   "air_total": 5.32,
+   "seconds": 29.69,
+   "time_points": 5.45,
+   "run_score": 37.57
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-Q",
+   "bib": 46,
+   "note": "p4 先頭行（ページ境界の直後）",
+   "source": "golden_2021.json 2021_Q-m_46_*.png",
+   "rank": 26,
+   "status": "OK",
+   "saj_no": "5001644",
+   "fis_code": "2535159",
+   "base": [
+    10.2,
+    10.5,
+    10.2,
+    10.7,
+    10.5
+   ],
+   "ded": [
+    -3.2,
+    -2.7,
+    -4.6,
+    -4.6,
+    -3.0
+   ],
+   "air": [
+    {
+     "J6": 4.4,
+     "J7": 4.2,
+     "jump": "S",
+     "dd": 0.38
+    },
+    {
+     "J6": 6.3,
+     "J7": 6.2,
+     "jump": "7o",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 20.4,
+   "air_total": 6.81,
+   "seconds": 29.58,
+   "time_points": 5.61,
+   "run_score": 32.82
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-Q",
+   "bib": 7,
+   "note": "DNF",
+   "source": "golden_2021.json 2021_Q-m_7_*.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001410",
+   "fis_code": "2532177"
+  },
+  {
+   "round_id": "2020-21-saj_aj-2021-M-Q",
+   "bib": 45,
+   "note": "最終ページの最終行（DNS）",
+   "source": "golden_2021.json 2021_Q-m_45_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5001781",
+   "fis_code": "2535742"
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-F1",
+   "bib": 33,
+   "note": "西沢選手（決勝 2位）",
+   "source": "golden_2022.json 2022_F-m_33_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.3,
+    16.3,
+    16.5,
+    16.5,
+    16.2
+   ],
+   "ded": [
+    -1.1,
+    -1.8,
+    -0.4,
+    -2.0,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 8.1,
+     "J7": 8.5,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 6.3,
+     "J7": 7.3,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 45.4,
+   "air_total": 13.82,
+   "seconds": 22.34,
+   "time_points": 17.93,
+   "run_score": 77.15
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-Q",
+   "bib": 33,
+   "note": "西沢選手（予選 2位）",
+   "source": "golden_2022.json 2022_Q-m_33_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.8,
+    15.9,
+    16.8,
+    15.2,
+    15.7
+   ],
+   "ded": [
+    -0.7,
+    -0.5,
+    -0.4,
+    -1.0,
+    -0.2
+   ],
+   "air": [
+    {
+     "J6": 7.5,
+     "J7": 8.0,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.2,
+     "J7": 7.1,
+     "jump": "7oG",
+     "dd": 0.96
+    }
+   ],
+   "turns_total": 45.8,
+   "air_total": 14.16,
+   "seconds": 23.71,
+   "time_points": 16.09,
+   "run_score": 76.05
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-F1",
+   "bib": 38,
+   "note": "男子決勝 1位＝この年の優勝ラインの基準行",
+   "source": "golden_2022.json 2022_F-m_38_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001101",
+   "fis_code": "2530672",
+   "base": [
+    16.7,
+    16.5,
+    16.2,
+    16.4,
+    16.4
+   ],
+   "ded": [
+    -0.6,
+    -0.7,
+    -1.0,
+    -2.1,
+    -0.9
+   ],
+   "air": [
+    {
+     "J6": 8.0,
+     "J7": 8.0,
+     "jump": "10op",
+     "dd": 1.02
+    },
+    {
+     "J6": 8.9,
+     "J7": 7.4,
+     "jump": "7op",
+     "dd": 0.86
+    }
+   ],
+   "turns_total": 46.7,
+   "air_total": 15.16,
+   "seconds": 23.17,
+   "time_points": 16.82,
+   "run_score": 78.68
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-F1",
+   "bib": 32,
+   "note": "決勝の *NJ・ターン下限 0.3",
+   "source": "golden_2022.json 2022_F-m_32_*.png",
+   "rank": 15,
+   "status": "OK",
+   "saj_no": "5001091",
+   "fis_code": "2531671",
+   "base": [
+    16.0,
+    13.6,
+    14.0,
+    10.0,
+    14.0
+   ],
+   "ded": [
+    -19.4,
+    -20.4,
+    -20.4,
+    -17.6,
+    -20.4
+   ],
+   "air": [
+    {
+     "J6": 7.4,
+     "J7": 7.3,
+     "jump": "7oG",
+     "dd": 0.96
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 7.05,
+   "seconds": 30.07,
+   "time_points": 7.53,
+   "run_score": 14.88
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-W-Q",
+   "bib": 21,
+   "note": "再計算の例外行（印字のエア合計 9.03、規則_2022.md）。印字どおり入っていることを守る",
+   "source": "golden_2022.json 2022_Q-w_21_例外_左.png / _右.png（scale 10）",
+   "rank": 20,
+   "status": "OK",
+   "saj_no": "5001494",
+   "fis_code": "2537041",
+   "base": [
+    12.8,
+    12.4,
+    12.8,
+    12.2,
+    11.7
+   ],
+   "ded": [
+    -3.9,
+    -4.6,
+    -5.4,
+    -4.6,
+    -4.6
+   ],
+   "air": [
+    {
+     "J6": 3.8,
+     "J7": 3.0,
+     "jump": "7op",
+     "dd": 1.0
+    },
+    {
+     "J6": 6.4,
+     "J7": 7.1,
+     "jump": "bp",
+     "dd": 0.83
+    }
+   ],
+   "turns_total": 23.6,
+   "air_total": 9.03,
+   "seconds": 28.25,
+   "time_points": 15.52,
+   "run_score": 48.15
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-F1",
+   "bib": 55,
+   "note": "決勝の最終行（DNF、順位 16 の印字あり）",
+   "source": "golden_2022.json 2022_F-m_55_*.png",
+   "rank": 16,
+   "status": "DNF",
+   "saj_no": "5001372",
+   "fis_code": "2532168"
+  },
+  {
+   "round_id": "2021-22-saj_aj-2022-M-Q",
+   "bib": 58,
+   "note": "最終ページの最終行（DNS）",
+   "source": "golden_2022.json 2022_Q-m_58_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5001533",
+   "fis_code": "2537149"
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-F1",
+   "bib": 5,
+   "note": "西沢選手（決勝 3位）",
+   "source": "golden_2023.json 2023_F-m_5_*.png",
+   "rank": 3,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.4,
+    15.3,
+    15.1,
+    15.6,
+    16.0
+   ],
+   "ded": [
+    -0.2,
+    -0.6,
+    -0.9,
+    -0.4,
+    -1.2
+   ],
+   "air": [
+    {
+     "J6": 8.0,
+     "J7": 8.4,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.3,
+     "J7": 8.3,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 45.0,
+   "air_total": 15.59,
+   "seconds": 21.55,
+   "time_points": 16.42,
+   "run_score": 77.01
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-Q",
+   "bib": 5,
+   "note": "西沢選手（予選 2位）",
+   "source": "golden_2023.json 2023_Q-m_5_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    15.4,
+    15.0,
+    14.2,
+    14.9,
+    14.2
+   ],
+   "ded": [
+    -0.2,
+    -0.7,
+    -0.6,
+    -0.5,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 8.1,
+     "J7": 8.2,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.0,
+     "J7": 8.0,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 42.3,
+   "air_total": 15.24,
+   "seconds": 22.66,
+   "time_points": 14.79,
+   "run_score": 72.33
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-F1",
+   "bib": 3,
+   "note": "男子決勝 1位＝この年の優勝ラインの基準行。同ページの【男子】表の先頭",
+   "source": "golden_2023.json 2023_F-m_3_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001101",
+   "fis_code": "2530672",
+   "base": [
+    15.7,
+    16.4,
+    16.3,
+    16.2,
+    16.2
+   ],
+   "ded": [
+    -0.5,
+    -0.4,
+    -0.7,
+    -0.3,
+    -0.4
+   ],
+   "air": [
+    {
+     "J6": 8.3,
+     "J7": 8.5,
+     "jump": "7oG",
+     "dd": 1.01
+    },
+    {
+     "J6": 8.2,
+     "J7": 8.4,
+     "jump": "7op",
+     "dd": 0.88
+    }
+   ],
+   "turns_total": 47.4,
+   "air_total": 15.78,
+   "seconds": 20.8,
+   "time_points": 17.52,
+   "run_score": 80.7
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-W-F1",
+   "bib": 20,
+   "note": "【女子】表の最終行（同ページの【男子】表の直前）。女子は決勝だけの年で記号 F",
+   "source": "golden_2023.json 2023_F-w_20_*.png",
+   "rank": 12,
+   "status": "OK",
+   "saj_no": "5001732",
+   "fis_code": "2539098",
+   "base": [
+    12.8,
+    12.5,
+    12.2,
+    11.8,
+    11.2
+   ],
+   "ded": [
+    -10.5,
+    -10.5,
+    -9.2,
+    -10.4,
+    -11.0
+   ],
+   "air": [
+    {
+     "J6": 4.3,
+     "J7": 4.7,
+     "jump": "S",
+     "dd": 0.48
+    },
+    {
+     "J6": 5.2,
+     "J7": 5.2,
+     "jump": "bp",
+     "dd": 0.81
+    }
+   ],
+   "turns_total": 5.1,
+   "air_total": 6.36,
+   "seconds": 29.16,
+   "time_points": 11.49,
+   "run_score": 22.95
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-F1",
+   "bib": 4,
+   "note": "決勝の *NJ",
+   "source": "golden_2023.json 2023_F-m_4_*.png",
+   "rank": 14,
+   "status": "OK",
+   "saj_no": "5001491",
+   "fis_code": "2533771",
+   "base": [
+    13.5,
+    14.0,
+    12.2,
+    14.0,
+    13.5
+   ],
+   "ded": [
+    -13.0,
+    -13.6,
+    -12.0,
+    -14.0,
+    -13.4
+   ],
+   "air": [
+    {
+     "J6": 8.1,
+     "J7": 7.9,
+     "jump": "7op",
+     "dd": 0.88
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 1.0,
+   "air_total": 7.03,
+   "seconds": 25.2,
+   "time_points": 11.07,
+   "run_score": 19.1
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-F1",
+   "bib": 21,
+   "note": "決勝の最終行（DNF、順位 16 の印字あり）",
+   "source": "golden_2023.json 2023_F-m_21_*.png",
+   "rank": 16,
+   "status": "DNF",
+   "saj_no": "5001586",
+   "fis_code": "2533069"
+  },
+  {
+   "round_id": "2022-23-saj_aj-2023-M-Q",
+   "bib": 23,
+   "note": "最終ページの最終行。ターン下限 0.3",
+   "source": "golden_2023.json 2023_Q-m_23_*.png",
+   "rank": 35,
+   "status": "OK",
+   "saj_no": "5001372",
+   "fis_code": "2532168",
+   "base": [
+    10.0,
+    11.6,
+    10.5,
+    10.0,
+    12.7
+   ],
+   "ded": [
+    -14.2,
+    -14.6,
+    -11.6,
+    -16.6,
+    -15.2
+   ],
+   "air": [
+    {
+     "J6": 4.5,
+     "J7": 4.2,
+     "jump": "K",
+     "dd": 0.41
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 5.31,
+   "seconds": 27.36,
+   "time_points": 7.91,
+   "run_score": 13.52
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-F2",
+   "bib": 36,
+   "note": "西沢選手（SF 2位）",
+   "source": "golden_2024.json SF-m_36_西沢_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    17.0,
+    16.0,
+    16.6,
+    16.7,
+    16.2
+   ],
+   "ded": [
+    -0.2,
+    -0.8,
+    -0.5,
+    -0.2,
+    -0.5
+   ],
+   "air": [
+    {
+     "J6": 8.3,
+     "J7": 8.5,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.6,
+     "J7": 8.3,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 48.3,
+   "air_total": 15.92,
+   "seconds": 23.98,
+   "time_points": 15.06,
+   "run_score": 79.28
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-F1",
+   "bib": 36,
+   "note": "西沢選手（決勝 4位）",
+   "source": "golden_2024.json F-m_36_西沢_*.png",
+   "rank": 4,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.7,
+    16.5,
+    16.8,
+    16.2,
+    16.4
+   ],
+   "ded": [
+    -0.4,
+    -1.7,
+    -0.2,
+    -0.8,
+    -0.9
+   ],
+   "air": [
+    {
+     "J6": 7.5,
+     "J7": 7.5,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 7.1,
+     "J7": 7.2,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 47.5,
+   "air_total": 13.82,
+   "seconds": 24.48,
+   "time_points": 14.37,
+   "run_score": 75.69
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-Q",
+   "bib": 36,
+   "note": "西沢選手（予選 2位）",
+   "source": "golden_2024.json Q-m_36_西沢_*.png",
+   "rank": 2,
+   "status": "OK",
+   "saj_no": "5000915",
+   "fis_code": "2531352",
+   "base": [
+    16.6,
+    15.5,
+    17.2,
+    15.0,
+    16.2
+   ],
+   "ded": [
+    -0.1,
+    -0.2,
+    -0.3,
+    -0.2,
+    -0.3
+   ],
+   "air": [
+    {
+     "J6": 7.3,
+     "J7": 8.1,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 7.8,
+     "J7": 7.4,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 47.6,
+   "air_total": 14.44,
+   "seconds": 24.13,
+   "time_points": 14.86,
+   "run_score": 76.9
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-F2",
+   "bib": 31,
+   "note": "男子SF 1位＝優勝ラインの基準行。【男子】表の先頭（【女子】表の直後）。ペースタイム印字が怪しい表",
+   "source": "golden_2024.json SF-m_31_堀島_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5000776",
+   "fis_code": "2529645",
+   "base": [
+    17.5,
+    17.8,
+    17.2,
+    17.8,
+    17.2
+   ],
+   "ded": [
+    -0.2,
+    -0.2,
+    -0.8,
+    -0.0,
+    -0.2
+   ],
+   "air": [
+    {
+     "J6": 9.2,
+     "J7": 9.2,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 9.5,
+     "J7": 9.1,
+     "jump": "10op",
+     "dd": 1.05
+    }
+   ],
+   "turns_total": 51.9,
+   "air_total": 17.85,
+   "seconds": 23.85,
+   "time_points": 15.24,
+   "run_score": 84.99
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-W-F2",
+   "bib": 1,
+   "note": "女子SF 1位。ペースタイムの印字がない表",
+   "source": "golden_2024.json SF-w_1_冨髙_*.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001034",
+   "fis_code": "2532031",
+   "base": [
+    16.1,
+    15.4,
+    16.4,
+    16.6,
+    16.2
+   ],
+   "ded": [
+    -0.2,
+    -0.8,
+    -0.7,
+    -1.0,
+    -0.6
+   ],
+   "air": [
+    {
+     "J6": 7.5,
+     "J7": 7.6,
+     "jump": "bG",
+     "dd": 0.92
+    },
+    {
+     "J6": 6.0,
+     "J7": 5.9,
+     "jump": "7op",
+     "dd": 0.98
+    }
+   ],
+   "turns_total": 46.6,
+   "air_total": 12.77,
+   "seconds": 28.95,
+   "time_points": 13.25,
+   "run_score": 72.62
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-W-F2",
+   "bib": 10,
+   "note": "【女子】表の最終行（同じページの【男子】表の直前。表の境目で行が混ざらないか）",
+   "source": "golden_2024.json SF-w_10_梶原久紗子_*.png",
+   "rank": 6,
+   "status": "OK",
+   "saj_no": "5001494",
+   "fis_code": "2537041",
+   "base": [
+    13.9,
+    14.2,
+    14.2,
+    14.0,
+    14.6
+   ],
+   "ded": [
+    -1.8,
+    -3.6,
+    -2.0,
+    -1.8,
+    -1.9
+   ],
+   "air": [
+    {
+     "J6": 4.0,
+     "J7": 4.2,
+     "jump": "7oG",
+     "dd": 1.11
+    }
+   ],
+   "turns_total": 36.7,
+   "air_total": 10.98,
+   "seconds": 28.86,
+   "time_points": 13.35,
+   "run_score": 61.03
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-F1",
+   "bib": 56,
+   "note": "DSQ（決勝の最終行、順位 16 の印字あり）",
+   "source": "golden_2024.json F-m_56_小山DSQ_*.png",
+   "rank": 16,
+   "status": "DSQ",
+   "saj_no": "5001476",
+   "fis_code": "2534079"
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-Q",
+   "bib": 57,
+   "note": "p4 の最終行（ページ境界の直前）",
+   "source": "golden_2024.json Q-m_57_植松_p4最終_*.png",
+   "rank": 25,
+   "status": "OK",
+   "saj_no": "5001256",
+   "fis_code": "2532183",
+   "base": [
+    12.0,
+    12.3,
+    12.8,
+    12.7,
+    11.7
+   ],
+   "ded": [
+    -1.8,
+    -2.8,
+    -1.8,
+    -2.0,
+    -2.6
+   ],
+   "air": [
+    {
+     "J6": 2.8,
+     "J7": 2.9,
+     "jump": "7op",
+     "dd": 0.88
+    }
+   ],
+   "turns_total": 30.6,
+   "air_total": 7.95,
+   "seconds": 28.33,
+   "time_points": 9.09,
+   "run_score": 47.64
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-M-Q",
+   "bib": 43,
+   "note": "p5 の先頭行（ページ境界の直後。見瀬xlsx では別シート '男子予選(2)' に分かれていた位置）",
+   "source": "golden_2024.json Q-m_43_千田_p5先頭_*.png",
+   "rank": 26,
+   "status": "OK",
+   "saj_no": "5001463",
+   "fis_code": "2535158",
+   "base": [
+    10.3,
+    12.2,
+    13.2,
+    13.3,
+    12.9
+   ],
+   "ded": [
+    -4.5,
+    -3.7,
+    -5.0,
+    -3.2,
+    -3.1
+   ],
+   "air": [
+    {
+     "J6": 4.4,
+     "J7": 4.8,
+     "jump": "7op",
+     "dd": 0.88
+    },
+    {
+     "J6": 3.8,
+     "J7": 3.9,
+     "jump": "bG",
+     "dd": 0.82
+    }
+   ],
+   "turns_total": 26.9,
+   "air_total": 7.19,
+   "seconds": 26.87,
+   "time_points": 11.09,
+   "run_score": 45.18
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-W-Q",
+   "bib": 16,
+   "note": "外国籍（SAJ番号欄に FIS番号と同じ 2539733）。2本目 *NJ。ターン合計が下限 0.3（下限の確定に使った走）",
+   "source": "golden_2024.json Q-w_16_MOON_*.png",
+   "rank": 27,
+   "status": "OK",
+   "saj_no": "2539733",
+   "fis_code": "2539733",
+   "base": [
+    7.8,
+    8.9,
+    10.5,
+    8.5,
+    10.0
+   ],
+   "ded": [
+    -15.2,
+    -17.2,
+    -20.2,
+    -13.5,
+    -15.1
+   ],
+   "air": [
+    {
+     "J6": 3.8,
+     "J7": 4.0,
+     "jump": "bG",
+     "dd": 0.92
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 3.58,
+   "seconds": 39.45,
+   "time_points": 0.64,
+   "run_score": 4.52
+  },
+  {
+   "round_id": "2023-24-saj_aj-2024-W-Q",
+   "bib": 2,
+   "note": "最終ページの最終行（DNS）",
+   "source": "golden_2024.json Q-w_2_梶原有希_最終_*.png",
+   "rank": null,
+   "status": "DNS",
+   "saj_no": "5001322",
+   "fis_code": "2533769"
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-F1",
+   "bib": 36,
+   "note": "決勝1位＝優勝ラインの基準行。取り消し線の除外点を含む",
+   "source": "golden_2025.json p1_決勝_1位.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001208",
+   "fis_code": "2531908",
+   "base": [
+    16.4,
+    16.3,
+    16.0,
+    15.9,
+    16.9
+   ],
+   "ded": [
+    -0.3,
+    -0.3,
+    -0.5,
+    -1.1,
+    -0.4
+   ],
+   "air": [
+    {
+     "J6": 8.3,
+     "J7": 8.8,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 8.0,
+     "J7": 8.4,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 47.5,
+   "air_total": 15.8,
+   "seconds": 22.6,
+   "time_points": 16.96,
+   "run_score": 80.26
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-F1",
+   "bib": 49,
+   "note": "減点が大きくターン合計が小さい行（15位 3.4）",
+   "source": "golden_2025.json p1_決勝_15-16位.png",
+   "rank": 15,
+   "status": "OK",
+   "saj_no": "5001856",
+   "fis_code": "2539055",
+   "base": [
+    13.5,
+    12.8,
+    13.0,
+    13.0,
+    14.0
+   ],
+   "ded": [
+    -13.4,
+    -11.8,
+    -11.9,
+    -12.4,
+    -10.2
+   ],
+   "air": [
+    {
+     "J6": 6.9,
+     "J7": 6.0,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 4.1,
+     "J7": 4.3,
+     "jump": "7op",
+     "dd": 0.88
+    }
+   ],
+   "turns_total": 3.4,
+   "air_total": 9.36,
+   "seconds": 27.57,
+   "time_points": 10.13,
+   "run_score": 22.89
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-F1",
+   "bib": 42,
+   "note": "DNS（決勝の最終行、順位は印字あり 16）",
+   "source": "golden_2025.json p1_決勝_15-16位.png",
+   "rank": 16,
+   "status": "DNS",
+   "saj_no": "5001027",
+   "fis_code": "2530522"
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 46,
+   "note": "英字氏名の選手（KIM RIHU）",
+   "source": "golden_2025.json p2_予選_6-8位.png",
+   "rank": 6,
+   "status": "OK",
+   "saj_no": "5002174",
+   "fis_code": "2540060",
+   "base": [
+    15.7,
+    15.2,
+    15.6,
+    15.8,
+    14.9
+   ],
+   "ded": [
+    -0.3,
+    -0.4,
+    -1.2,
+    -2.0,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 7.0,
+     "J7": 7.6,
+     "jump": "7oG",
+     "dd": 1.01
+    },
+    {
+     "J6": 7.0,
+     "J7": 6.8,
+     "jump": "bp",
+     "dd": 0.71
+    }
+   ],
+   "turns_total": 44.1,
+   "air_total": 12.26,
+   "seconds": 23.34,
+   "time_points": 15.94,
+   "run_score": 72.3
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 31,
+   "note": "同点（71.08）で T1。修正前はこの行が DNF・点なし・名前に所属と技コードが混入",
+   "source": "golden_2025.json p2_予選_6-8位.png",
+   "rank": 7,
+   "status": "OK",
+   "saj_no": "5001101",
+   "fis_code": "2530672",
+   "base": [
+    16.5,
+    16.1,
+    16.5,
+    16.5,
+    16.8
+   ],
+   "ded": [
+    -1.7,
+    -1.0,
+    -1.0,
+    -1.5,
+    -1.3
+   ],
+   "air": [
+    {
+     "J6": 7.0,
+     "J7": 7.0,
+     "jump": "7op",
+     "dd": 0.88
+    },
+    {
+     "J6": 5.0,
+     "J7": 5.9,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 45.7,
+   "air_total": 11.66,
+   "seconds": 24.96,
+   "time_points": 13.72,
+   "run_score": 71.08,
+   "tie": "T1"
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 35,
+   "note": "同点（71.08）で T2。修正前は上と同じ壊れ方",
+   "source": "golden_2025.json p2_予選_6-8位.png",
+   "rank": 8,
+   "status": "OK",
+   "saj_no": "5001818",
+   "fis_code": "2539132",
+   "base": [
+    16.0,
+    15.7,
+    15.9,
+    15.1,
+    15.5
+   ],
+   "ded": [
+    -1.3,
+    -0.8,
+    -0.6,
+    -1.5,
+    -0.8
+   ],
+   "air": [
+    {
+     "J6": 6.9,
+     "J7": 6.9,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 7.5,
+     "J7": 7.1,
+     "jump": "7op",
+     "dd": 0.88
+    }
+   ],
+   "turns_total": 44.2,
+   "air_total": 12.49,
+   "seconds": 24.47,
+   "time_points": 14.39,
+   "run_score": 71.08,
+   "tie": "T2"
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 41,
+   "note": "p2 の最終行（ページ境界の直前）",
+   "source": "golden_2025.json p2_予選_最終行.png",
+   "rank": 25,
+   "status": "OK",
+   "saj_no": "5001790",
+   "fis_code": "2537674",
+   "base": [
+    14.6,
+    15.0,
+    15.5,
+    15.7,
+    14.9
+   ],
+   "ded": [
+    -4.0,
+    -4.4,
+    -4.4,
+    -2.8,
+    -3.2
+   ],
+   "air": [
+    {
+     "J6": 5.5,
+     "J7": 5.3,
+     "jump": "10op",
+     "dd": 1.05
+    },
+    {
+     "J6": 4.0,
+     "J7": 3.8,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 33.8,
+   "air_total": 9.6,
+   "seconds": 24.39,
+   "time_points": 14.5,
+   "run_score": 57.9
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 58,
+   "note": "p3 の先頭行（ページ境界の直後、【男子】見出しの下）",
+   "source": "golden_2025.json p3_予選_先頭.png",
+   "rank": 26,
+   "status": "OK",
+   "saj_no": "5001462",
+   "fis_code": "2537021",
+   "base": [
+    12.4,
+    13.5,
+    13.3,
+    12.8,
+    13.9
+   ],
+   "ded": [
+    -0.9,
+    -1.6,
+    -1.2,
+    -1.5,
+    -2.0
+   ],
+   "air": [
+    {
+     "J6": 5.6,
+     "J7": 6.6,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 4.0,
+     "J7": 5.7,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 35.3,
+   "air_total": 10.25,
+   "seconds": 26.2,
+   "time_points": 12.01,
+   "run_score": 57.56
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 62,
+   "note": "ジャッジ単位で減点がベース点を上回る（J1・J5）。ターン合計 0.8",
+   "source": "golden_2025.json p3_予選_最終行.png",
+   "rank": 35,
+   "status": "OK",
+   "saj_no": "5001877",
+   "fis_code": "2539054",
+   "base": [
+    12.8,
+    11.6,
+    12.0,
+    11.8,
+    12.0
+   ],
+   "ded": [
+    -14.0,
+    -10.8,
+    -10.4,
+    -8.4,
+    -13.8
+   ],
+   "air": [
+    {
+     "J6": 6.5,
+     "J7": 7.0,
+     "jump": "7op",
+     "dd": 0.88
+    },
+    {
+     "J6": 2.0,
+     "J7": 2.8,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 0.8,
+   "air_total": 8.36,
+   "seconds": 33.13,
+   "time_points": 2.49,
+   "run_score": 11.65
+  },
+  {
+   "round_id": "2024-25-saj_aj-2025-M-Q",
+   "bib": 69,
+   "note": "最終ページの最終行（DNF）",
+   "source": "golden_2025.json p3_予選_最終行.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001963",
+   "fis_code": "2539952"
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-F2",
+   "bib": 53,
+   "note": "決勝(SF-m)1位＝優勝ラインの基準行。p1 先頭",
+   "source": "golden_2026.json p1_決勝_上位.png",
+   "rank": 1,
+   "status": "OK",
+   "saj_no": "5001784",
+   "fis_code": "2538302",
+   "base": [
+    16.2,
+    16.8,
+    16.6
+   ],
+   "ded": [
+    -0.8,
+    -0.8,
+    -0.7
+   ],
+   "air": [
+    {
+     "J6": 9.3,
+     "J7": 8.7,
+     "jump": "10op",
+     "dd": 1.05
+    },
+    {
+     "J6": 9.1,
+     "J7": 8.7,
+     "jump": "7oG",
+     "dd": 1.01
+    }
+   ],
+   "turns_total": 47.3,
+   "air_total": 18.43,
+   "seconds": 23.42,
+   "time_points": 16.48,
+   "run_score": 82.21
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 75,
+   "note": "SAJ番号が英数字の外国籍選手（修正前はこの行が丸ごと欠落）。タイム点 0.00。2本目の技コードが 'DD'",
+   "source": "golden_2026.json p3_予選_28-30位.png",
+   "rank": 28,
+   "status": "OK",
+   "saj_no": "500KOR2",
+   "fis_code": "2541952",
+   "base": [
+    8.3,
+    8.0,
+    8.0
+   ],
+   "ded": [
+    -3.6,
+    -2.8,
+    -2.9
+   ],
+   "air": [
+    {
+     "J6": 2.9,
+     "J7": 2.1,
+     "jump": "S",
+     "dd": 0.38
+    },
+    {
+     "J6": 3.0,
+     "J7": 2.2,
+     "jump": "DD",
+     "dd": 0.55
+    }
+   ],
+   "turns_total": 15.0,
+   "air_total": 2.37,
+   "seconds": 43.93,
+   "time_points": 0.0,
+   "run_score": 17.37
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 68,
+   "note": "p3 の最終行（ページ境界の直前）。外国籍。減点が基準点を上回りターン合計が下限 0.3",
+   "source": "golden_2026.json p3_予選_28-30位.png / p3_予選_最終行付近.png",
+   "rank": 30,
+   "status": "OK",
+   "saj_no": "500KOR1",
+   "fis_code": "2541069",
+   "base": [
+    10.5,
+    12.5,
+    11.8
+   ],
+   "ded": [
+    -21.8,
+    -21.4,
+    -23.1
+   ],
+   "air": [
+    {
+     "J6": 2.9,
+     "J7": 3.0,
+     "jump": "bF",
+     "dd": 0.88
+    },
+    {
+     "J6": 3.0,
+     "J7": 2.6,
+     "jump": "bp",
+     "dd": 0.71
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 4.58,
+   "seconds": 34.01,
+   "time_points": 2.23,
+   "run_score": 7.11
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 80,
+   "note": "p4 の先頭行（ページ境界の直後）。タイム点 0.00。ターン下限 0.3",
+   "source": "golden_2026.json p4_予選_続き.png",
+   "rank": 31,
+   "status": "OK",
+   "saj_no": "5002316",
+   "fis_code": "2540860",
+   "base": [
+    11.0,
+    11.5,
+    10.8
+   ],
+   "ded": [
+    -14.5,
+    -14.7,
+    -14.7
+   ],
+   "air": [
+    {
+     "J6": 3.0,
+     "J7": 2.8,
+     "jump": "bG",
+     "dd": 0.82
+    },
+    {
+     "J6": 5.0,
+     "J7": 4.5,
+     "jump": "bp",
+     "dd": 0.71
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 5.74,
+   "seconds": 38.67,
+   "time_points": 0.0,
+   "run_score": 6.04
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 85,
+   "note": "2本目が *NJ（DD 0.000・エア 0.0）",
+   "source": "golden_2026.json p4_予選_続き.png",
+   "rank": 32,
+   "status": "OK",
+   "saj_no": "5001966",
+   "fis_code": "2540686",
+   "base": [
+    10.0,
+    11.0,
+    11.0
+   ],
+   "ded": [
+    -16.9,
+    -19.4,
+    -19.4
+   ],
+   "air": [
+    {
+     "J6": 5.8,
+     "J7": 5.2,
+     "jump": "bG",
+     "dd": 0.82
+    },
+    {
+     "J6": 0.0,
+     "J7": 0.0,
+     "jump": "*NJ",
+     "dd": 0.0
+    }
+   ],
+   "turns_total": 0.3,
+   "air_total": 4.5,
+   "seconds": 44.9,
+   "time_points": 0.0,
+   "run_score": 4.8
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 67,
+   "note": "DNF（順位なし・得点欄なし）",
+   "source": "golden_2026.json p4_予選_続き.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001463",
+   "fis_code": "2535158"
+  },
+  {
+   "round_id": "2025-26-saj_aj-2026-M-Q",
+   "bib": 69,
+   "note": "最終ページの最終行（DNF）",
+   "source": "golden_2026.json p4_予選_続き.png",
+   "rank": null,
+   "status": "DNF",
+   "saj_no": "5001926",
+   "fis_code": "2539961"
+  }
+ ]
+}
