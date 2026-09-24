@@ -10,6 +10,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
 PDF_ROOT = os.environ.get('MIC_PDF_ROOT', os.path.join(os.path.dirname(REPO), 'その他大会のリザルト'))
 MOGULS_RESULTS_REPO = os.environ.get('MOGULS_RESULTS_REPO', os.path.join(os.path.dirname(REPO), 'moguls-results'))
+# moguls-results の元 PDF（W杯・世界選手権・五輪）。得点段階で流用するときに SHA-256 だけ照合する
+MOGULS_PDF_ROOT = os.environ.get('MOGULS_PDF_ROOT', os.path.join(os.path.dirname(REPO), '全試合のリザルト'))
+MOGULS_RESULTS_SITE = 'https://vanwhist.github.io/moguls-results/'
 DATA_DIR = os.path.join(REPO, 'data')
 DOCS_DIR = os.path.join(REPO, 'docs')
 GOLDEN_DIR = os.path.join(REPO, 'golden')

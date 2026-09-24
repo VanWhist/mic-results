@@ -30,11 +30,17 @@ function renderHead() {
   head.append(kv);
   const srcs = (event.sources || []);
   if (srcs.length) {
+    // ラウンドごとに PDF がある大会（FIS 様式）は「男子 予選」のようにラベルを付け、同じ大会ページは1回だけ出す
+    const roundsById = new Map((event.rounds || []).map((r) => [r.round_id, r]));
+    const pdfLabel = (s) => {
+      const rs = (s.round_ids || []).map((id) => roundsById.get(id)).filter(Boolean);
+      return rs.length ? rs.map((r) => genderLabel(r.gender) + ' ' + roundLabel(r)).join('・') : '公式リザルト PDF';
+    };
+    const pages = [...new Set(srcs.map((s) => s.page_url).filter(Boolean))];
     head.append(el('p', { class: 'meta' }, ['出典：', ...srcs.flatMap((s, i) => [
       i ? '、' : null,
-      s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: '公式リザルト PDF' }) : s.path,
-      s.page_url ? el('span', {}, ['（', el('a', { href: s.page_url, target: '_blank', rel: 'noopener', text: '大会ページ' }), '）']) : null,
-    ])]));
+      s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: pdfLabel(s) }) : s.path,
+    ]), ...pages.flatMap((p) => ['（', el('a', { href: p, target: '_blank', rel: 'noopener', text: '大会ページ' }), '）'])]));
   }
 }
 
@@ -63,6 +69,11 @@ function verificationBlock(r) {
     '　', reportLink({ round_id: r.round_id, dataVersion: manifest.dataVersion, pdf: src.pdf }),
   ]));
   details.push(el('div', { class: 'meta', text: tierHelp(r.tier) }));
+  if (src.upstream && src.upstream.url) {
+    details.push(el('div', { class: 'meta' }, [
+      'このラウンドは、ナショナルチーム用サイトで審判ごとの点まで照合済みのデータを得点までの段階で写したものです。審判点は ',
+      el('a', { href: src.upstream.url, target: '_blank', rel: 'noopener', text: 'モーグル リザルトデータベース' }), ' で見られます。']));
+  }
   return noteLayers(badge.text, details);
 }
 

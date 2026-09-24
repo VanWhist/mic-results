@@ -82,6 +82,8 @@ http://localhost:8790/ を開いて確認したら、`git add -A && git commit &
 etl/build.py               registry → アダプタ → 多層照合 → data/*.json
 etl/adapters/saj_aj/       SAJ 様式（全日本・A級・B級・ジュニア共通）。parse_sajmo（行）＋ verify_nc（座標）の2方式
 etl/adapters/fis_pdf/      FIS 様式（moguls-results の parser_a / parser_b の複製。取り込みは Step 2 で接続）
+etl/adapters/moguls_results/ W杯・世界選手権・五輪を moguls-results の公開データから得点段階で流用。
+                           registry・正解データ・第5層の結果は sync_registry.py が生成する（下記）
 etl/registry/*.json        大会の登録簿（出典 URL・SHA-256・規則・進出人数）
 etl/rules/events/          大会ごとの規則（印字からの全件再計算で確定）
 etl/expected_rounds.json   ラウンドごとの人数の基準（--accept-rounds で登録）
@@ -93,6 +95,20 @@ inventory/                 棚卸し（FIS カレンダー 1990-91〜、SAJ デ�
 data/                      公開データ（内容ハッシュ付き JSON ＋ manifest.json）
 docs/検証レポート.md       ETL が毎回生成
 ```
+
+### W杯・世界選手権・五輪（moguls-results から流用）
+
+ナショナルチーム用 `moguls-results` が審判点まで照合して公開しているデータを、得点までの段階（`score`）で写す。
+moguls-results 側でビルドし直したら、こちらで次を実行してから `python -m etl.build` を回す。
+
+```bash
+cd D:\Claude\ジャッジ分析\mic-results
+python -m etl.adapters.moguls_results.sync_registry
+```
+
+`etl/registry/moguls_results.json`・`golden/golden_moguls_results.json`・`etl/layer5_status.json`（FIS 公式 Web との照合結果）・
+`etl/athlete_aliases.json`（確認済みの読み・漢字）が更新される。event_id と round_id は moguls-results と同じにしてあり、
+大会ページから moguls-results の同じラウンド（審判点あり）へリンクする。元 PDF は `全試合のリザルト\` を読み、SHA-256 だけ照合する。
 
 ## 4. 選手の ID
 

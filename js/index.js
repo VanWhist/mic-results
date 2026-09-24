@@ -38,7 +38,8 @@ function meetCard(ev) {
     el('div', { class: 'meet-date', text: eventDates(ev) }),
     el('div', { class: 'meet-name', text: (ev.series_label || seriesLabel(ev.series)) + (micEvents.has(ev.event_id) ? '　★MIC出場' : '') }),
     el('div', { class: 'meet-sub', text: ev.name_ja || ev.venue || '' }),
-    el('div', { class: 'meet-sub', text: [ev.venue, genders, tiers].filter(Boolean).join('　') }),
+    // 大会名が無い（W杯など会場名で呼ぶ）大会は、会場を2度出さない
+    el('div', { class: 'meet-sub', text: [ev.name_ja ? ev.venue : null, genders, tiers].filter(Boolean).join('　') }),
   ]);
 }
 

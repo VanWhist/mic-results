@@ -228,6 +228,12 @@ def cut_label(advance, round_code):
     return {'rank': adv['n'], 'to': adv['to'], 'label': f"{adv['to']} 進出ライン（{adv['n']}位）"}
 
 
+def display_name(names):
+    """表示名: 日本語表記（SAJ 様式の印字）があればそれを優先し、無ければ最も多い表記。他の表記は別名になる。"""
+    ja = collections.Counter({n: c for n, c in names.items() if verify.is_cjk(n)})
+    return (ja or names).most_common(1)[0][0]
+
+
 def mic_status(roster, athlete_id, name):
     for m in roster.get('members', []):
         if m.get('athlete_id') == athlete_id or (name and m.get('name') == name):
@@ -252,7 +258,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
             'series_group': config.SERIES_GROUP.get(ev['series'], '国内'),
             'grade': ev.get('grade'), 'discipline': ev.get('discipline', 'MO'), 'name_ja': ev.get('name_ja'),
             'format': ev.get('format'), 'format_label': (ev.get('format') or {}).get('label'),
-            'venue': r['venue'], 'nation': 'JPN' if ev['series'].startswith('SAJ') else None,
+            'venue': r['venue'], 'nation': ev.get('nation') or ('JPN' if ev['series'].startswith('SAJ') else None),
             'rules_version': ev.get('rules'), 'sources': ev.get('pdfs', []), 'rounds': []})
         e['rounds'].append({k: v for k, v in r.items()})
     for e in ev_out.values():
@@ -293,10 +299,12 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     for aid, rs in by_id.items():
         rs_sorted = sorted(rs, key=lambda x: x['date'] or '')
         names = collections.Counter(x['name'] for x in rs)
-        name = names.most_common(1)[0][0]
+        name = display_name(names)
         aff_hist = []
         for x in rs_sorted:
             key = (x.get('affiliation'), x.get('club'))
+            if key == (None, None):  # FIS 様式には所属の印字がないので履歴の途切れとしては扱わない
+                continue
             if not aff_hist or (aff_hist[-1]['affiliation'], aff_hist[-1]['club']) != key:
                 aff_hist.append({'affiliation': key[0], 'club': key[1], 'from': x['season'], 'to': x['season']})
             else:
@@ -307,8 +315,10 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         fis = next((x['fis_code'] for x in rs_sorted if x.get('fis_code')), None)
         saj = next((x['saj_no'] for x in rs_sorted if x.get('saj_no')), None)
         athletes.append({'athlete_id': aid, 'fis_code': fis, 'saj_no': saj, 'name': name, 'aliases': [a for a in alias_list if a],
-                         'noc': rs_sorted[-1].get('noc'), 'yb': rs_sorted[-1].get('yb'),
-                         'affiliation': rs_sorted[-1].get('affiliation'), 'club': rs_sorted[-1].get('club'),
+                         'noc': rs_sorted[-1].get('noc'), 'yb': next((x['yb'] for x in reversed(rs_sorted) if x.get('yb')), None),
+                         # 所属は FIS 様式には印字されないので、最後に印字があった大会の値を使う
+                         'affiliation': next((x['affiliation'] for x in reversed(rs_sorted) if x.get('affiliation')), None),
+                         'club': next((x['club'] for x in reversed(rs_sorted) if x.get('club')), None),
                          'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name),
                          'n_results': sum(1 for x in rs if x['counting']), 'seasons': sorted({x['season'] for x in rs}),
                          'series': sorted({x['series'] for x in rs}),

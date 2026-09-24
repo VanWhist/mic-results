@@ -31,6 +31,11 @@ def _num_eq(a, b, tol=Decimal('0.005')):
     return abs(Decimal(str(a)) - Decimal(str(b))) <= tol
 
 
+def is_cjk(name):
+    """氏名が日本語表記（漢字・かな）かどうか。"""
+    return any(ord(ch) >= 0x2E80 for ch in (name or ''))
+
+
 # ---------------------------------------------------------------- layer 0: completeness
 def layer0(rounds_ctx, expected, accept_rounds, check_missing=True):
     """rounds_ctx: list of dicts {round, runs, records_a, cls}. expected: dict round_id -> n athletes."""
@@ -286,8 +291,11 @@ def layer4(all_runs, rounds):
         if len(ybs) > 1:
             f.append(Finding('error', 'global', 'layer4', f"選手 {aid} の生年が複数 {sorted(ybs)}: {sorted({r['name'] for r in rs})}"))
         names = {r['name'] for r in rs}
-        if len(names) > 1:
-            f.append(Finding('warning', 'global', 'layer4', f"選手 {aid} の氏名表記が複数 {sorted(names)}（別名として扱う）"))
+        # 日本語表記（SAJ 様式）とローマ字表記（FIS 様式）が両方あるのは当然なので、同じ文字種の中で表記が割れたときだけ警告する
+        for script in ('ja', 'latin'):
+            same = {n for n in names if (script == 'ja') == is_cjk(n)}
+            if len(same) > 1:
+                f.append(Finding('warning', 'global', 'layer4', f"選手 {aid} の氏名表記が複数 {sorted(same)}（別名として扱う）"))
         nocs = {r['noc'] for r in rs if r['noc']}
         if len(nocs) > 1:
             f.append(Finding('warning', 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の国が複数 {sorted(nocs)}（履歴として扱う）"))

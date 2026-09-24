@@ -66,7 +66,9 @@ def make_round(cls, meta, records, rules, imported_at):
         'source': {'pdf': cls['rel'], 'pdf_sha256': cls.get('pdf_sha256') or sha256_file(cls['path']), 'url': cls.get('url'),
                    'page_url': cls.get('page_url'), 'pages': cls.get('pages'), 'fis_url': cls.get('fis_url'),
                    'report_created': meta.get('report_created'), 'imported_at': imported_at,
-                   'parser_version': meta.get('parser_version'), 'rules_version': cls.get('rules_version')},
+                   'parser_version': meta.get('parser_version'), 'rules_version': cls.get('rules_version'),
+                   # 別サイト（moguls-results）で審判点まで照合済みのデータを流用したとき、その参照先
+                   'upstream': cls.get('upstream')},
         'verification': {},
     }
     runs = [make_run(rec, rnd, rules) for rec in records]

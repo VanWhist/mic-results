@@ -1,1 +1,166 @@
-{"_comment": "FIS コード → 別名。moguls-results の athlete_aliases.json と同じ形式。"}
+{
+ "_comment": "FIS コード → 別名。moguls-results の athlete_aliases.json と同じ形式。",
+ "2529645": {
+  "kana": "ほりしま いくま",
+  "kanji": [
+   "堀島行真"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2534852": {
+  "kana": "かわむら あんり",
+  "kanji": [
+   "川村あんり"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2531352": {
+  "kana": "にしざわ たけと",
+  "kanji": [
+   "西沢岳人"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2528069": {
+  "kana": "すぎもと こうすけ",
+  "kanji": [
+   "杉本幸祐"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2531671": {
+  "kana": "まつだ そう",
+  "kanji": [
+   "松田颯"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2529670": {
+  "kana": "ふじき ごうしん",
+  "kanji": [
+   "藤木豪心"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2533039": {
+  "kana": "ふじき ひな",
+  "kanji": [
+   "藤木日菜"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2529652": {
+  "kana": "はら だいち",
+  "kanji": [
+   "原大智"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2485108": {
+  "kana": "ほしの じゅんこ",
+  "kanji": [
+   "星野純子"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2531368": {
+  "kana": "いはら はるか",
+  "kanji": [
+   "伊原遥香"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2532040": {
+  "kana": "やなぎもと りの",
+  "kanji": [
+   "柳本理乃"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2532204": {
+  "kana": "すみよし きさら",
+  "kanji": [
+   "住吉輝紗良"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2532031": {
+  "kana": "とみたか ひなこ",
+  "kanji": [
+   "冨高日向子"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2533488": {
+  "kana": "なかお はるか",
+  "kanji": [
+   "中尾春香"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2531908": {
+  "kana": "ひらやま しょうた",
+  "kanji": [
+   "平山翔太"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2530672": {
+  "kana": "しまかわ たくや",
+  "kanji": [
+   "島川拓也"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2530684": {
+  "kana": "むらた ゆうたろう",
+  "kanji": [
+   "村田優太郎"
+  ],
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2533769": {
+  "kana": "かじわら ゆき",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2537041": {
+  "kana": "かじわら ひさこ",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2533771": {
+  "kana": "かわおか しま",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2534167": {
+  "kana": "もとの ひびき",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2532177": {
+  "kana": "かんの しゅうご",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2534377": {
+  "kana": "あさの しおり",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2534824": {
+  "kana": "いとう まりん",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2538302": {
+  "kana": "ふじむら いっけい",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2539132": {
+  "kana": "なかはら おうすけ",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2539131": {
+  "kana": "たに みお",
+  "source": "moguls-results athlete_aliases.json"
+ },
+ "2537043": {
+  "kana": "たぐち ゆうま",
+  "source": "moguls-results athlete_aliases.json"
+ }
+}
