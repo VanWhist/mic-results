@@ -1,144 +1,5 @@
 [
 {
-"athlete_id":"2526178",
-"fis_code":"2526178",
-"saj_no":"5000347",
-"name":"",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"山口",
-"club":"卓也 長野",
-"affiliation_history":[
-{
-"affiliation":"山口",
-"club":"卓也 長野県",
-"from":"2011-12",
-"to":"2011-12"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野県 白馬村SC",
-"from":"2011-12",
-"to":"2011-12"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野",
-"from":"2011-12",
-"to":"2014-15"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野 白馬村SC",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野 白馬村SC",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"山口",
-"club":"卓也 長野",
-"from":"2015-16",
-"to":"2015-16"
-}
-],
-"mic":null,
-"n_results":20,
-"seasons":[
-"2011-12",
-"2013-14",
-"2014-15",
-"2015-16"
-],
-"series":[
-"FIS",
-"SAJ_A"
-],
-"best":{
-"run_score":79.89,
-"run_id":"2014-15-fis-1990-0042-M-F2-2526178"
-}
-},
-{
-"athlete_id":"2527310",
-"fis_code":"2527310",
-"saj_no":"5000024",
-"name":"",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"千葉",
-"club":"大誉 学連",
-"affiliation_history":[
-{
-"affiliation":"千葉",
-"club":"大誉 北海道",
-"from":"2011-12",
-"to":"2013-14"
-},
-{
-"affiliation":"千葉",
-"club":"大誉 学連",
-"from":"2014-15",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":11,
-"seasons":[
-"2011-12",
-"2013-14",
-"2014-15"
-],
-"series":[
-"FIS",
-"SAJ_A"
-],
-"best":{
-"run_score":67.78,
-"run_id":"2014-15-saj_a-1965-0005-M-Q-2527310"
-}
-},
-{
-"athlete_id":"saj-5000248",
-"fis_code":null,
-"saj_no":"5000248",
-"name":"",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"福島",
-"club":"稔明 東京 ﾁｰﾑ ｼﾞｮｯｸｽ",
-"affiliation_history":[
-{
-"affiliation":"福島",
-"club":"稔明 東京 ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2014-15",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2014-15"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
-},
-{
 "athlete_id":"2533687",
 "fis_code":"2533687",
 "saj_no":null,
@@ -920,7 +781,7 @@
 "athlete_id":"2534234",
 "fis_code":"2534234",
 "saj_no":null,
-"name":"CHALIFOUX Louis- David",
+"name":"CHALIFOUX Louis-David",
 "aliases":[],
 "noc":"CAN",
 "yb":2002,
@@ -2700,21 +2561,15 @@
 "athlete_id":"2530631",
 "fis_code":"2530631",
 "saj_no":"5999901",
-"name":"Jin-Won Jun韓国",
+"name":"Jun Jin-Won",
 "aliases":[
-"Jun Jin-Won"
+"Jin-Won Jun"
 ],
 "noc":null,
 "yb":null,
 "affiliation":"韓国",
 "club":"ソウル大学",
 "affiliation_history":[
-{
-"affiliation":"ソウル大学",
-"club":"",
-"from":"2022-23",
-"to":"2022-23"
-},
 {
 "affiliation":"韓国",
 "club":"ソウル大学",
@@ -6357,24 +6212,16 @@
 "fis_code":null,
 "saj_no":"5002307",
 "name":"キンビッグ 恵茉",
-"aliases":[
-"キンビッグ 恵茉北海道"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TEAM",
-"club":"BUMPS",
+"affiliation":"北海道",
+"club":"TEAM BUMPS",
 "affiliation_history":[
 {
 "affiliation":"北海道",
 "club":"TEAM BUMPS",
 "from":"2024-25",
-"to":"2025-26"
-},
-{
-"affiliation":"TEAM",
-"club":"BUMPS",
-"from":"2025-26",
 "to":"2025-26"
 }
 ],
@@ -6829,9 +6676,7 @@
 "fis_code":null,
 "saj_no":"5001213",
 "name":"三宅 利英",
-"aliases":[
-"三宅 利英 岡山 ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"岡山",
@@ -6841,28 +6686,15 @@
 "affiliation":"岡山",
 "club":"ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ",
 "from":"2013-14",
-"to":"2016-17"
-},
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"岡山",
-"club":"ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2013-14",
 "2014-15",
 "2016-17",
-"2017-18",
 "2018-19"
 ],
 "series":[
@@ -7113,26 +6945,13 @@
 "affiliation":"埼玉",
 "club":"FG PRO SC",
 "from":"2013-14",
-"to":"2013-14"
-},
-{
-"affiliation":"埼玉",
-"club":"",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"埼玉",
-"club":"FG PRO SC",
-"from":"2016-17",
 "to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2013-14",
-"2014-15",
 "2016-17"
 ],
 "series":[
@@ -7413,12 +7232,10 @@
 "fis_code":null,
 "saj_no":"5001212",
 "name":"上田 康喜",
-"aliases":[
-"上田 康喜 岡山 ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ T"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"岡山",
 "club":"ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ",
 "affiliation_history":[
 {
@@ -7426,21 +7243,14 @@
 "club":"ﾁｰﾑ ﾄﾞｶﾞﾝｽﾗｰ",
 "from":"2013-14",
 "to":"2016-17"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2013-14",
 "2014-15",
-"2016-17",
-"2017-18"
+"2016-17"
 ],
 "series":[
 "SAJ_A",
@@ -7500,34 +7310,6 @@
 "run_score":29.78,
 "run_id":"2014-15-fis-1973-0020-M-Q-2528663"
 }
-},
-{
-"athlete_id":"saj-5001655",
-"fis_code":null,
-"saj_no":"5001655",
-"name":"上貝 一文 広島 庄原SC T",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"3g",
-"club":null,
-"affiliation_history":[
-{
-"affiliation":"3g",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2017-18"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
 },
 {
 "athlete_id":"saj-5000960",
@@ -7718,18 +7500,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"愛知",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
 "affiliation":"学連",
 "club":"愛知工業大学",
 "from":"2016-17",
@@ -7737,7 +7507,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":23,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -7892,39 +7662,30 @@
 "fis_code":"2534374",
 "saj_no":"5001503",
 "name":"中右 海斗",
-"aliases":[
-"中右 海斗 兵庫 D-RIDE TS"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TT",
+"affiliation":"兵庫",
 "club":"D-RIDE",
 "affiliation_history":[
 {
 "affiliation":"兵庫",
 "club":"D-RIDE",
 "from":"2016-17",
-"to":"2017-18"
-},
-{
-"affiliation":"TT",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
+"to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":3,
 "seasons":[
-"2016-17",
-"2017-18"
+"2016-17"
 ],
 "series":[
 "SAJ_B"
 ],
 "best":{
-"run_score":42.4,
-"run_id":"2017-18-saj_b-1882-0018-M-F1-2534374"
+"run_score":28.67,
+"run_id":"2016-17-saj_b-1928-0036-M-Q-2534374"
 }
 },
 {
@@ -8012,40 +7773,6 @@
 }
 },
 {
-"athlete_id":"saj-5001456",
-"fis_code":null,
-"saj_no":"5001456",
-"name":"中尾 信貴",
-"aliases":[
-"中尾信貴"
-],
-"noc":null,
-"yb":null,
-"affiliation":"石川",
-"club":"ﾏｯﾄﾞﾊｳｽMST",
-"affiliation_history":[
-{
-"affiliation":"石川",
-"club":"ﾏｯﾄﾞﾊｳｽMST",
-"from":"2014-15",
-"to":"2017-18"
-}
-],
-"mic":null,
-"n_results":3,
-"seasons":[
-"2014-15",
-"2017-18"
-],
-"series":[
-"SAJ_B"
-],
-"best":{
-"run_score":30.79,
-"run_id":"2017-18-saj_b-1875-0007-M-Q-saj-5001456"
-}
-},
-{
 "athlete_id":"2537513",
 "fis_code":"2537513",
 "saj_no":"5001576",
@@ -8124,7 +7851,7 @@
 }
 ],
 "mic":null,
-"n_results":109,
+"n_results":108,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -8212,6 +7939,40 @@
 "best":{
 "run_score":56.63,
 "run_id":"2023-24-saj_aj-2024-W-F1-2539809"
+}
+},
+{
+"athlete_id":"saj-5001456",
+"fis_code":null,
+"saj_no":"5001456",
+"name":"中尾信貴",
+"aliases":[
+"中尾 信貴"
+],
+"noc":null,
+"yb":null,
+"affiliation":"石川",
+"club":"ﾏｯﾄﾞﾊｳｽMST",
+"affiliation_history":[
+{
+"affiliation":"石川",
+"club":"ﾏｯﾄﾞﾊｳｽMST",
+"from":"2014-15",
+"to":"2017-18"
+}
+],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2014-15",
+"2017-18"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":30.79,
+"run_id":"2017-18-saj_b-1875-0007-M-Q-saj-5001456"
 }
 },
 {
@@ -8625,13 +8386,12 @@
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2014-15"
 ],
 "series":[
-"FIS",
-"SAJ_B"
+"FIS"
 ],
 "best":{
 "run_score":2.34,
@@ -9145,40 +8905,6 @@
 }
 },
 {
-"athlete_id":"saj-5000951",
-"fis_code":null,
-"saj_no":"5000951",
-"name":"中谷 慎吾",
-"aliases":[
-"中谷慎吾"
-],
-"noc":null,
-"yb":null,
-"affiliation":"石川",
-"club":"ﾏｯﾄﾞﾊｳｽMST",
-"affiliation_history":[
-{
-"affiliation":"石川",
-"club":"ﾏｯﾄﾞﾊｳｽMST",
-"from":"2014-15",
-"to":"2017-18"
-}
-],
-"mic":null,
-"n_results":3,
-"seasons":[
-"2014-15",
-"2017-18"
-],
-"series":[
-"SAJ_B"
-],
-"best":{
-"run_score":35.55,
-"run_id":"2017-18-saj_b-1875-0007-M-Q-saj-5000951"
-}
-},
-{
 "athlete_id":"2539812",
 "fis_code":"2539812",
 "saj_no":"5001774",
@@ -9227,6 +8953,40 @@
 "best":{
 "run_score":52.71,
 "run_id":"2025-26-saj_b-4057-0231-W-F1-2539812"
+}
+},
+{
+"athlete_id":"saj-5000951",
+"fis_code":null,
+"saj_no":"5000951",
+"name":"中谷慎吾",
+"aliases":[
+"中谷 慎吾"
+],
+"noc":null,
+"yb":null,
+"affiliation":"石川",
+"club":"ﾏｯﾄﾞﾊｳｽMST",
+"affiliation_history":[
+{
+"affiliation":"石川",
+"club":"ﾏｯﾄﾞﾊｳｽMST",
+"from":"2014-15",
+"to":"2017-18"
+}
+],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2014-15",
+"2017-18"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":35.55,
+"run_id":"2017-18-saj_b-1875-0007-M-Q-saj-5000951"
 }
 },
 {
@@ -9386,14 +9146,13 @@
 {
 "affiliation":"富山",
 "club":"富山FSC",
-"from":"2014-15",
+"from":"2017-18",
 "to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
-"2014-15",
 "2017-18"
 ],
 "series":[
@@ -9751,9 +9510,7 @@
 "fis_code":"2531559",
 "saj_no":"5001393",
 "name":"乾 貴王",
-"aliases":[
-"乾 貴王 長野 白馬村SC bPp"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"長野",
@@ -9772,30 +9529,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"大阪",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"興国高校",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"白馬村SC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"7opA",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"長野",
 "club":"白馬村SC",
 "from":"2017-18",
@@ -9809,7 +9542,7 @@
 }
 ],
 "mic":null,
-"n_results":77,
+"n_results":74,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -10208,9 +9941,7 @@
 "fis_code":null,
 "saj_no":"5001695",
 "name":"今井 大介",
-"aliases":[
-"今井 大介 愛媛 ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"愛媛",
@@ -10220,18 +9951,6 @@
 "affiliation":"愛媛",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
 "from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛媛",
-"club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
-"from":"2019-20",
 "to":"2021-22"
 },
 {
@@ -10242,7 +9961,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":10,
 "seasons":[
 "2017-18",
 "2019-20",
@@ -10257,34 +9976,6 @@
 "run_score":46.01,
 "run_id":"2017-18-saj_b-1875-0007-M-F1-saj-5001695"
 }
-},
-{
-"athlete_id":"saj-5001137",
-"fis_code":null,
-"saj_no":"5001137",
-"name":"今川 明俊",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"愛知",
-"club":"豊川市ｽｷｰ協会",
-"affiliation_history":[
-{
-"affiliation":"愛知",
-"club":"豊川市ｽｷｰ協会",
-"from":"2014-15",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2014-15"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
 },
 {
 "athlete_id":"2541553",
@@ -10565,7 +10256,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -10721,7 +10412,7 @@
 }
 ],
 "mic":null,
-"n_results":102,
+"n_results":101,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -11050,9 +10741,7 @@
 "fis_code":"2537013",
 "saj_no":"5001264",
 "name":"伊藤 隆平",
-"aliases":[
-"伊藤 隆平 京都 ｽｷｰﾁｰﾑｾﾞﾛ S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"京都",
@@ -11062,23 +10751,11 @@
 "affiliation":"京都",
 "club":"ｽｷｰﾁｰﾑｾﾞﾛ",
 "from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"STS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"京都",
-"club":"ｽｷｰﾁｰﾑｾﾞﾛ",
-"from":"2018-19",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":48,
+"n_results":47,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -11400,7 +11077,7 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -11672,18 +11349,6 @@
 "affiliation":"北海道",
 "club":"北翔大学",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"北翔大学",
-"from":"2016-17",
 "to":"2017-18"
 },
 {
@@ -11700,7 +11365,7 @@
 }
 ],
 "mic":null,
-"n_results":78,
+"n_results":77,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -12071,25 +11736,13 @@
 },
 {
 "affiliation":"愛知",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "from":"2016-17",
 "to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -12250,7 +11903,7 @@
 "noc":null,
 "yb":null,
 "affiliation":"北海道",
-"club":"( 1)",
+"club":"TEAM BANKEI",
 "affiliation_history":[
 {
 "affiliation":"北海道",
@@ -12278,19 +11931,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -12445,12 +12092,11 @@
 "saj_no":"5000653",
 "name":"佐藤 明日香",
 "aliases":[
-"佐藤明日香",
-"佐藤 明日香 埼玉 ｴｸｽﾃｯｸさいたま S"
+"佐藤明日香"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "affiliation_history":[
 {
@@ -12458,16 +12104,10 @@
 "club":"ｴｸｽﾃｯｸさいたま",
 "from":"2011-12",
 "to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -12699,9 +12339,7 @@
 "fis_code":null,
 "saj_no":"5000941",
 "name":"佐藤 直和",
-"aliases":[
-"佐藤 直和 宮城 (株)忍建設ｽｷｰ部 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"宮城",
@@ -12717,28 +12355,15 @@
 "affiliation":"宮城",
 "club":"(株)忍建設ｽｷｰ部",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"宮城",
-"club":"(株)忍建設ｽｷｰ部",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":7,
 "seasons":[
 "2011-12",
 "2014-15",
 "2015-16",
-"2017-18",
 "2018-19"
 ],
 "series":[
@@ -12911,7 +12536,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":25,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -13097,7 +12722,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":34,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -13245,7 +12870,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":45,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -13301,7 +12926,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -13410,7 +13035,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":16,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -13441,21 +13066,14 @@
 "affiliation_history":[
 {
 "affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "from":"2016-17",
 "to":"2022-23"
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":11,
 "seasons":[
-"2014-15",
 "2016-17",
 "2017-18",
 "2018-19",
@@ -13637,7 +13255,7 @@
 }
 ],
 "mic":null,
-"n_results":136,
+"n_results":135,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -14255,7 +13873,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -14443,8 +14061,7 @@
 "saj_no":"5000874",
 "name":"北冨 龍一",
 "aliases":[
-"北冨龍一",
-"北冨 龍一 広島 ﾋﾟｽﾃSC S"
+"北冨龍一"
 ],
 "noc":null,
 "yb":null,
@@ -14455,27 +14072,14 @@
 "affiliation":"広島",
 "club":"ﾋﾟｽﾃSC",
 "from":"2012-13",
-"to":"2014-15"
-},
-{
-"affiliation":"DTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"広島",
-"club":"ﾋﾟｽﾃSC",
-"from":"2019-20",
 "to":"2019-20"
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2012-13",
 "2014-15",
-"2017-18",
 "2019-20"
 ],
 "series":[
@@ -14491,9 +14095,9 @@
 "athlete_id":"2532986",
 "fis_code":"2532986",
 "saj_no":"5000884",
-"name":"北村 拓基",
+"name":"北村拓基",
 "aliases":[
-"北村拓基"
+"北村 拓基"
 ],
 "noc":null,
 "yb":null,
@@ -14508,7 +14112,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2012-13",
 "2014-15"
@@ -14630,8 +14234,7 @@
 "saj_no":"5000094",
 "name":"千田 健介",
 "aliases":[
-"千田健介",
-"千田 健介 秋田"
+"千田健介"
 ],
 "noc":null,
 "yb":null,
@@ -14648,18 +14251,6 @@
 "affiliation":"秋田",
 "club":"ﾁｰﾑ・ﾎｯﾄﾄﾞｯｸ!",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"ﾁｰﾑ・ﾎｯﾄﾄﾞｯｸ!",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"秋田",
-"club":"ﾁｰﾑ・ﾎｯﾄﾄﾞｯｸ!",
-"from":"2017-18",
 "to":"2018-19"
 },
 {
@@ -14670,7 +14261,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":23,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -14728,7 +14319,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":71,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -14760,9 +14351,7 @@
 "fis_code":"2534444",
 "saj_no":"5001427",
 "name":"千田 翔大",
-"aliases":[
-"千田 翔大 富山 富山FSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"富山",
@@ -14772,23 +14361,11 @@
 "affiliation":"富山",
 "club":"富山FSC",
 "from":"2014-15",
-"to":"2016-17"
-},
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -14804,6 +14381,52 @@
 "best":{
 "run_score":46.45,
 "run_id":"2017-18-saj_b-1886-0022-M-F1-2534444"
+}
+},
+{
+"athlete_id":"2527310",
+"fis_code":"2527310",
+"saj_no":"5000024",
+"name":"千葉 大誉",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"学連",
+"club":"東海大学",
+"affiliation_history":[
+{
+"affiliation":"北海道",
+"club":"東海大学",
+"from":"2011-12",
+"to":"2011-12"
+},
+{
+"affiliation":"北海道",
+"club":"東海大学札幌SC",
+"from":"2013-14",
+"to":"2013-14"
+},
+{
+"affiliation":"学連",
+"club":"東海大学",
+"from":"2014-15",
+"to":"2014-15"
+}
+],
+"mic":null,
+"n_results":11,
+"seasons":[
+"2011-12",
+"2013-14",
+"2014-15"
+],
+"series":[
+"FIS",
+"SAJ_A"
+],
+"best":{
+"run_score":67.78,
+"run_id":"2014-15-saj_a-1965-0005-M-Q-2527310"
 }
 },
 {
@@ -15412,8 +15035,7 @@
 "saj_no":"5000638",
 "name":"原田 育子",
 "aliases":[
-"原田育子",
-"原田 育子 栃木 宇都宮SC S"
+"原田育子"
 ],
 "noc":null,
 "yb":null,
@@ -15439,12 +15061,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"栃木",
 "club":"宇都宮SC",
 "from":"2017-18",
@@ -15452,7 +15068,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -15558,7 +15174,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -15993,34 +15609,6 @@
 }
 },
 {
-"athlete_id":"saj-5000431",
-"fis_code":null,
-"saj_no":"5000431",
-"name":"吉田 光輝",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"福井",
-"club":"福井MSC",
-"affiliation_history":[
-{
-"affiliation":"福井",
-"club":"福井MSC",
-"from":"2014-15",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2014-15"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
-},
-{
 "athlete_id":"saj-5000899",
 "fis_code":null,
 "saj_no":"5000899",
@@ -16057,8 +15645,7 @@
 "saj_no":"5000072",
 "name":"吉田 昌紀",
 "aliases":[
-"吉田昌紀",
-"吉田 昌紀 青森 八甲田山FSSC S"
+"吉田昌紀"
 ],
 "noc":null,
 "yb":null,
@@ -16075,29 +15662,16 @@
 "affiliation":"青森",
 "club":"八甲田山FSSC",
 "from":"2012-13",
-"to":"2015-16"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"青森",
-"club":"八甲田山FSSC",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2012-13",
 "2014-15",
 "2015-16",
-"2017-18",
 "2018-19"
 ],
 "series":[
@@ -16179,7 +15753,7 @@
 }
 ],
 "mic":null,
-"n_results":23,
+"n_results":22,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -16212,12 +15786,6 @@
 "affiliation_history":[
 {
 "affiliation":"岐阜",
-"club":"育生小学校",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"岐阜",
 "club":"橋南中学校",
 "from":"2017-18",
 "to":"2017-18"
@@ -16230,9 +15798,8 @@
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
-"2014-15",
 "2017-18",
 "2019-20",
 "2020-21",
@@ -16292,8 +15859,7 @@
 "saj_no":"5000575",
 "name":"和田 亮二",
 "aliases":[
-"和田亮二",
-"和田 亮二 愛媛 ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛 S"
+"和田亮二"
 ],
 "noc":null,
 "yb":null,
@@ -16310,23 +15876,11 @@
 "affiliation":"愛媛",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
 "from":"2016-17",
-"to":"2017-18"
-},
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛媛",
-"club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -16347,8 +15901,7 @@
 "saj_no":"5000968",
 "name":"和田 泰生",
 "aliases":[
-"和田泰生",
-"和田 泰生 愛媛 ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛 S"
+"和田泰生"
 ],
 "noc":null,
 "yb":null,
@@ -16365,23 +15918,11 @@
 "affiliation":"愛媛",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
 "from":"2016-17",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛媛",
-"club":"ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -16681,23 +16222,11 @@
 "affiliation":"北海道",
 "club":"TEAM BUMPS",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"TEAM BUMPS",
-"from":"2016-17",
 "to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2015-16",
@@ -16954,7 +16483,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -17275,7 +16804,7 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":5,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -17567,7 +17096,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":23,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -17593,9 +17122,7 @@
 "fis_code":"2527950",
 "saj_no":"5000729",
 "name":"堀 幸",
-"aliases":[
-"堀 幸 愛知 東海ﾌﾘｰｽﾀｲﾙSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
@@ -17617,23 +17144,11 @@
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "from":"2016-17",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2018-19",
 "to":"2024-25"
 }
 ],
 "mic":null,
-"n_results":37,
+"n_results":35,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -17813,7 +17328,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":38,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -17917,9 +17432,7 @@
 "fis_code":"2527934",
 "saj_no":"5000446",
 "name":"堀康之",
-"aliases":[
-"堀 康之"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
@@ -17933,7 +17446,7 @@
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2014-15"
 ],
@@ -18098,7 +17611,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2014-15",
 "2015-16"
@@ -18234,7 +17747,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2014-15"
 ],
@@ -18545,7 +18058,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":11,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -18809,23 +18322,11 @@
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"東京",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"東京",
-"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2015-16",
 "to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":16,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -18919,7 +18420,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -19157,9 +18658,7 @@
 "fis_code":null,
 "saj_no":"5001614",
 "name":"大坪 和裕",
-"aliases":[
-"大坪 和裕 岐阜 岐阜ﾌﾘｰｽﾀｲﾙ S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"岐阜",
@@ -19168,26 +18667,13 @@
 {
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"岐阜",
-"club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "from":"2019-20",
 "to":"2024-25"
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":9,
 "seasons":[
-"2017-18",
 "2019-20",
 "2020-21",
 "2021-22",
@@ -19393,7 +18879,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -19765,42 +19251,6 @@
 }
 },
 {
-"athlete_id":"2531369",
-"fis_code":"2531369",
-"saj_no":"5001069",
-"name":"大村 実紀",
-"aliases":[
-"大村実紀"
-],
-"noc":null,
-"yb":null,
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"affiliation_history":[
-{
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2012-13",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":7,
-"seasons":[
-"2012-13",
-"2014-15"
-],
-"series":[
-"SAJ_A",
-"SAJ_AJJR",
-"SAJ_B"
-],
-"best":{
-"run_score":57.9,
-"run_id":"2014-15-saj_b-1991-0043-W-F1-2531369"
-}
-},
-{
 "athlete_id":"2534166",
 "fis_code":"2534166",
 "saj_no":"5000196",
@@ -19827,7 +19277,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -19853,6 +19303,42 @@
 }
 },
 {
+"athlete_id":"2531369",
+"fis_code":"2531369",
+"saj_no":"5001069",
+"name":"大村実紀",
+"aliases":[
+"大村 実紀"
+],
+"noc":null,
+"yb":null,
+"affiliation":"愛知",
+"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
+"affiliation_history":[
+{
+"affiliation":"愛知",
+"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
+"from":"2012-13",
+"to":"2014-15"
+}
+],
+"mic":null,
+"n_results":6,
+"seasons":[
+"2012-13",
+"2014-15"
+],
+"series":[
+"SAJ_A",
+"SAJ_AJJR",
+"SAJ_B"
+],
+"best":{
+"run_score":57.9,
+"run_id":"2014-15-saj_b-1991-0043-W-F1-2531369"
+}
+},
+{
 "athlete_id":"saj-5001423",
 "fis_code":null,
 "saj_no":"5001423",
@@ -19871,7 +19357,7 @@
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2014-15"
 ],
@@ -20142,37 +19628,28 @@
 "saj_no":"5000471",
 "name":"大津弘樹",
 "aliases":[
-"大津 弘樹",
-"大津 弘樹 岐阜"
+"大津 弘樹"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"club":"Head Judge: Chief of Scoring:",
+"affiliation":"岐阜",
+"club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
 {
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "from":"2011-12",
 "to":"2013-14"
-},
-{
-"affiliation":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"club":"Head Judge: Chief of Scoring:",
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2011-12",
-"2013-14",
-"2017-18"
+"2013-14"
 ],
 "series":[
-"FIS",
-"SAJ_B"
+"FIS"
 ],
 "best":{
 "run_score":1.76,
@@ -20269,18 +19746,6 @@
 "affiliation":"群馬",
 "club":"伊勢崎工業高校",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"群馬",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"群馬",
-"club":"伊勢崎工業高校",
-"from":"2015-16",
 "to":"2017-18"
 },
 {
@@ -20291,7 +19756,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":20,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -20317,8 +19782,7 @@
 "saj_no":"5001484",
 "name":"大西 智美",
 "aliases":[
-"大西智美",
-"大西 智美 大阪 ﾁｰﾑ3110 *NJ"
+"大西智美"
 ],
 "noc":null,
 "yb":null,
@@ -20329,23 +19793,11 @@
 "affiliation":"大阪",
 "club":"ﾁｰﾑ3110",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"大阪",
-"club":"ﾁｰﾑ3110",
-"from":"2019-20",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":20,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -20406,12 +19858,10 @@
 "fis_code":null,
 "saj_no":"5000543",
 "name":"大谷 晋二",
-"aliases":[
-"大谷 晋二 島根"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"ﾋｷﾐｽﾉｰｸﾗﾌﾞ",
+"affiliation":"島根",
 "club":"ﾋｷﾐｽﾉｰｸﾗﾌﾞ",
 "affiliation_history":[
 {
@@ -20425,21 +19875,14 @@
 "club":"ﾋｷﾐｽﾉｰｸﾗﾌﾞ",
 "from":"2016-17",
 "to":"2016-17"
-},
-{
-"affiliation":"ﾋｷﾐｽﾉｰｸﾗﾌﾞ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":4,
 "seasons":[
 "2013-14",
 "2014-15",
-"2016-17",
-"2017-18"
+"2016-17"
 ],
 "series":[
 "SAJ_A",
@@ -20486,12 +19929,10 @@
 "fis_code":null,
 "saj_no":"5001940",
 "name":"大豆生田 竜世",
-"aliases":[
-"大豆生田 竜世岐阜"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"岐阜ﾌﾘｰｽﾀｲﾙ",
+"affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
 {
@@ -20503,24 +19944,6 @@
 {
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"club":"",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"岐阜",
-"club":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"club":"",
 "from":"2025-26",
 "to":"2025-26"
 }
@@ -20545,9 +19968,7 @@
 "fis_code":"2527327",
 "saj_no":"5000071",
 "name":"大越 健太郎",
-"aliases":[
-"大越 健太郎 青森 八甲田山FSSC MS"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"青森",
@@ -20563,23 +19984,11 @@
 "affiliation":"青森",
 "club":"八甲田山FSSC",
 "from":"2013-14",
-"to":"2017-18"
-},
-{
-"affiliation":"TTT",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"青森",
-"club":"八甲田山FSSC",
-"from":"2018-19",
 "to":"2024-25"
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -20789,30 +20198,6 @@
 "affiliation":"神奈川",
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"奈良",
-"club":"友人 神奈川",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"奈良",
-"club":"友人 神奈川 川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"奈良",
-"club":"友人 神奈川",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2016-17",
 "to":"2025-26"
 }
 ],
@@ -20972,14 +20357,13 @@
 {
 "affiliation":"大阪",
 "club":"ﾁｰﾑ3110",
-"from":"2014-15",
+"from":"2016-17",
 "to":"2022-23"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
-"2014-15",
 "2016-17",
 "2018-19",
 "2020-21",
@@ -21047,19 +20431,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"SON BAY CLUB",
 "from":"2018-19",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -21303,7 +20681,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":17,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -22149,18 +21527,6 @@
 "affiliation":"富山",
 "club":"富山FSC",
 "from":"2013-14",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -22171,7 +21537,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":68,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -22288,18 +21654,6 @@
 "affiliation":"長野",
 "club":"信州大学",
 "from":"2011-12",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"信州大学",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -22316,7 +21670,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2015-16",
@@ -23007,8 +22361,7 @@
 "saj_no":"5000166",
 "name":"小林 英樹",
 "aliases":[
-"小林英樹",
-"小林 英樹 栃木 宇都宮SC S"
+"小林英樹"
 ],
 "noc":null,
 "yb":null,
@@ -23031,18 +22384,6 @@
 "affiliation":"栃木",
 "club":"宇都宮SC",
 "from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
 "to":"2020-21"
 },
 {
@@ -23053,7 +22394,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":23,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -23632,7 +22973,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":46,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -23733,7 +23074,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":26,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -24213,6 +23554,47 @@
 }
 },
 {
+"athlete_id":"2526178",
+"fis_code":"2526178",
+"saj_no":"5000347",
+"name":"山口 卓也",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"長野",
+"club":"白馬村SC",
+"affiliation_history":[
+{
+"affiliation":"長野県",
+"club":"白馬村SC",
+"from":"2011-12",
+"to":"2011-12"
+},
+{
+"affiliation":"長野",
+"club":"白馬村SC",
+"from":"2011-12",
+"to":"2015-16"
+}
+],
+"mic":null,
+"n_results":20,
+"seasons":[
+"2011-12",
+"2013-14",
+"2014-15",
+"2015-16"
+],
+"series":[
+"FIS",
+"SAJ_A"
+],
+"best":{
+"run_score":79.89,
+"run_id":"2014-15-fis-1990-0042-M-F2-2526178"
+}
+},
+{
 "athlete_id":"saj-5002317",
 "fis_code":null,
 "saj_no":"5002317",
@@ -24426,18 +23808,6 @@
 "affiliation":"大阪",
 "club":"大阪学芸高校",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"大阪学芸高校",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -24448,7 +23818,7 @@
 }
 ],
 "mic":null,
-"n_results":37,
+"n_results":36,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -24725,7 +24095,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":49,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -25420,15 +24790,14 @@
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":7,
 "seasons":[
 "2011-12",
 "2014-15"
 ],
 "series":[
 "FIS",
-"SAJ_A",
-"SAJ_B"
+"SAJ_A"
 ],
 "best":{
 "run_score":49.21,
@@ -25720,8 +25089,7 @@
 "saj_no":"5000830",
 "name":"岩崎 一彦",
 "aliases":[
-"岩崎一彦",
-"岩崎 一彦 富山 富山FSC TS"
+"岩崎一彦"
 ],
 "noc":null,
 "yb":null,
@@ -25738,30 +25106,17 @@
 "affiliation":"富山",
 "club":"富山FSC",
 "from":"2011-12",
-"to":"2017-18"
-},
-{
-"affiliation":"DTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2021-22",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":20,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2013-14",
 "2014-15",
 "2015-16",
 "2016-17",
-"2017-18",
 "2021-22",
 "2022-23",
 "2024-25",
@@ -25797,7 +25152,7 @@
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
 "2014-15"
 ],
@@ -26001,12 +25356,10 @@
 "fis_code":null,
 "saj_no":"5000785",
 "name":"岩田 徹",
-"aliases":[
-"岩田 徹 広島 ﾋﾟｽﾃSC K"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"*NJ",
+"affiliation":"広島",
 "club":"ﾋﾟｽﾃSC",
 "affiliation_history":[
 {
@@ -26014,16 +25367,10 @@
 "club":"ﾋﾟｽﾃSC",
 "from":"2013-14",
 "to":"2017-18"
-},
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":4,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -26181,12 +25528,6 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
@@ -26211,7 +25552,7 @@
 }
 ],
 "mic":null,
-"n_results":126,
+"n_results":125,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -26484,18 +25825,6 @@
 "affiliation":"北海道",
 "club":"ｽﾉｰﾄﾞﾙﾌｨﾝ ｽｷｰｸﾗﾌﾞ",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1) ｽﾉｰﾄﾞﾙﾌｨﾝ ｽｷｰｸﾗﾌﾞ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"ｽﾉｰﾄﾞﾙﾌｨﾝ ｽｷｰｸﾗﾌﾞ",
-"from":"2015-16",
 "to":"2020-21"
 },
 {
@@ -26512,7 +25841,7 @@
 }
 ],
 "mic":null,
-"n_results":99,
+"n_results":98,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -26857,7 +26186,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -27041,7 +26370,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2012-13",
 "2014-15"
@@ -27364,18 +26693,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"京都",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"京都",
-"club":"福知山成美高校",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
 "affiliation":"兵庫",
 "club":"PAPASU SKI CLUB",
 "from":"2017-18",
@@ -27395,7 +26712,7 @@
 }
 ],
 "mic":null,
-"n_results":126,
+"n_results":125,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -27586,9 +26903,7 @@
 "fis_code":null,
 "saj_no":"5000175",
 "name":"平田 真一",
-"aliases":[
-"平田 真一 群馬 前橋ｽｷｰ連盟 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"群馬",
@@ -27598,26 +26913,13 @@
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2018-19",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":11,
 "seasons":[
 "2014-15",
-"2017-18",
 "2018-19",
 "2020-21",
 "2024-25",
@@ -27700,7 +27002,7 @@
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
 "2014-15"
 ],
@@ -28365,18 +27667,6 @@
 "affiliation":"富山",
 "club":"射水市立大門中学校",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"射水市立大門中学校",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -28399,7 +27689,7 @@
 }
 ],
 "mic":null,
-"n_results":58,
+"n_results":56,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -28853,7 +28143,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":29,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29039,14 +28329,13 @@
 "affiliation":"埼玉",
 "club":"ｱﾐｨSC",
 "from":"2013-14",
-"to":"2014-15"
+"to":"2013-14"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
-"2013-14",
-"2014-15"
+"2013-14"
 ],
 "series":[
 "SAJ_B"
@@ -29155,18 +28444,6 @@
 },
 {
 "affiliation":"大阪",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"大阪中学校ｼﾞｭﾆｱｽｷｰｸﾗﾌﾞ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
 "club":"同志社香里高校",
 "from":"2016-17",
 "to":"2018-19"
@@ -29185,7 +28462,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":51,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -29311,23 +28588,11 @@
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "from":"2011-12",
-"to":"2015-16"
-},
-{
-"affiliation":"埼玉",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"埼玉",
-"club":"ｴｸｽﾃｯｸさいたま",
-"from":"2015-16",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":71,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -29936,8 +29201,7 @@
 "saj_no":"5000656",
 "name":"有野 智子",
 "aliases":[
-"有野智子",
-"有野 智子 埼玉 ｴｸｽﾃｯｸさいたま K"
+"有野智子"
 ],
 "noc":null,
 "yb":null,
@@ -29954,23 +29218,11 @@
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "from":"2011-12",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"埼玉",
-"club":"ｴｸｽﾃｯｸさいたま",
-"from":"2018-19",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":67,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30003,9 +29255,7 @@
 "fis_code":"2440120",
 "saj_no":"5000220",
 "name":"服部 純一",
-"aliases":[
-"服部 純一 埼玉 朝霞市ｽｷｰ連盟 K"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"埼玉",
@@ -30021,27 +29271,14 @@
 "affiliation":"埼玉",
 "club":"朝霞市ｽｷｰ連盟",
 "from":"2015-16",
-"to":"2017-18"
-},
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"埼玉",
-"club":"朝霞市ｽｷｰ連盟",
-"from":"2018-19",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":4,
 "seasons":[
 "2011-12",
 "2015-16",
-"2017-18",
 "2018-19"
 ],
 "series":[
@@ -30049,8 +29286,8 @@
 "SAJ_B"
 ],
 "best":{
-"run_score":32.6,
-"run_id":"2017-18-saj_b-1882-0018-M-F1-2440120"
+"run_score":23.74,
+"run_id":"2018-19-saj_b-1844-0002-M-Q-2440120"
 }
 },
 {
@@ -30086,7 +29323,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":8,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -30159,8 +29396,7 @@
 "saj_no":"5000169",
 "name":"木下 桂一",
 "aliases":[
-"木下桂一",
-"木下 桂一 群馬 水上SC TS"
+"木下桂一"
 ],
 "noc":null,
 "yb":null,
@@ -30171,18 +29407,6 @@
 "affiliation":"群馬",
 "club":"水上SC",
 "from":"2012-13",
-"to":"2014-15"
-},
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"群馬",
-"club":"水上SC",
-"from":"2017-18",
 "to":"2017-18"
 },
 {
@@ -30193,7 +29417,7 @@
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":12,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -30229,7 +29453,7 @@
 }
 ],
 "mic":null,
-"n_results":20,
+"n_results":19,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -30311,18 +29535,6 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"TEAM BANKEI",
 "from":"2016-17",
 "to":"2018-19"
@@ -30341,7 +29553,7 @@
 }
 ],
 "mic":null,
-"n_results":88,
+"n_results":87,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -30511,12 +29723,6 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
@@ -30529,7 +29735,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":25,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -30570,19 +29776,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"SONBAYCLUB",
 "from":"2020-21",
 "to":"2021-22"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -30691,8 +29891,7 @@
 "saj_no":"5001179",
 "name":"木村 隆太郎",
 "aliases":[
-"木村隆太郎",
-"木村 隆太郎 大阪 ﾁｰﾑ3110 S"
+"木村隆太郎"
 ],
 "noc":null,
 "yb":null,
@@ -30715,23 +29914,11 @@
 "affiliation":"大阪",
 "club":"ﾁｰﾑ3110",
 "from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"TT",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"大阪",
-"club":"ﾁｰﾑ3110",
-"from":"2018-19",
 "to":"2024-25"
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":14,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -30757,9 +29944,7 @@
 "fis_code":null,
 "saj_no":"5001403",
 "name":"木藤 文三",
-"aliases":[
-"木藤 文三 大分 ﾐﾗｸﾙ九州 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"大分",
@@ -30775,18 +29960,6 @@
 "affiliation":"大分",
 "club":"ﾐﾗｸﾙ九州",
 "from":"2016-17",
-"to":"2016-17"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"大分",
-"club":"ﾐﾗｸﾙ九州",
-"from":"2020-21",
 "to":"2020-21"
 },
 {
@@ -30797,12 +29970,11 @@
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":7,
 "seasons":[
 "2013-14",
 "2014-15",
 "2016-17",
-"2017-18",
 "2020-21",
 "2025-26"
 ],
@@ -30906,12 +30078,10 @@
 "fis_code":null,
 "saj_no":"5001570",
 "name":"末本 幸宏",
-"aliases":[
-"末本 幸宏 福井 福井MSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"福井",
 "club":"福井MSC",
 "affiliation_history":[
 {
@@ -30919,16 +30089,10 @@
 "club":"福井MSC",
 "from":"2017-18",
 "to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
 "2017-18"
 ],
@@ -31201,18 +30365,6 @@
 "affiliation":"学連",
 "club":"松本大学",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"学連",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"学連",
-"club":"松本大学",
-"from":"2016-17",
 "to":"2016-17"
 },
 {
@@ -31223,7 +30375,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":62,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -31256,9 +30408,7 @@
 "fis_code":null,
 "saj_no":"5001445",
 "name":"杉本 英範",
-"aliases":[
-"杉本 英範 青森 八甲田山FSSC TS"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"青森",
@@ -31268,18 +30418,6 @@
 "affiliation":"青森",
 "club":"八甲田山FSSC",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"K",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"青森",
-"club":"八甲田山FSSC",
-"from":"2017-18",
 "to":"2020-21"
 },
 {
@@ -31290,7 +30428,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":6,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -31311,9 +30449,9 @@
 "athlete_id":"saj-5000967",
 "fis_code":null,
 "saj_no":"5000967",
-"name":"杉江 良和",
+"name":"杉江良和",
 "aliases":[
-"杉江良和"
+"杉江 良和"
 ],
 "noc":null,
 "yb":null,
@@ -31324,7 +30462,7 @@
 "affiliation":"愛知",
 "club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
 "from":"2012-13",
-"to":"2014-15"
+"to":"2012-13"
 },
 {
 "affiliation":"愛知",
@@ -31334,10 +30472,9 @@
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2012-13",
-"2014-15",
 "2017-18"
 ],
 "series":[
@@ -31375,7 +30512,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -31657,9 +30794,7 @@
 "fis_code":null,
 "saj_no":"5001115",
 "name":"村上雅樹",
-"aliases":[
-"村上 雅樹"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
@@ -31669,14 +30804,13 @@
 "affiliation":"愛知",
 "club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
 "from":"2012-13",
-"to":"2014-15"
+"to":"2012-13"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
-"2012-13",
-"2014-15"
+"2012-13"
 ],
 "series":[
 "SAJ_B"
@@ -31787,12 +30921,6 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
@@ -31823,7 +30951,7 @@
 }
 ],
 "mic":null,
-"n_results":88,
+"n_results":87,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -32358,7 +31486,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":49,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -33160,18 +32288,6 @@
 "affiliation":"長野",
 "club":"白馬高校",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"白馬高校",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -33194,7 +32310,7 @@
 }
 ],
 "mic":null,
-"n_results":82,
+"n_results":81,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33284,15 +32400,14 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2014-15",
 "2015-16"
 ],
 "series":[
 "FIS",
-"SAJ_A",
-"SAJ_B"
+"SAJ_A"
 ],
 "best":{
 "run_score":33.08,
@@ -33778,7 +32893,7 @@
 }
 ],
 "mic":null,
-"n_results":128,
+"n_results":127,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33999,9 +33114,7 @@
 "fis_code":"2534445",
 "saj_no":"5001421",
 "name":"栄 穂乃花",
-"aliases":[
-"栄 穂乃花 富山 富山FSC TS"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"富山",
@@ -34020,18 +33133,6 @@
 "to":"2017-18"
 },
 {
-"affiliation":"l",
-"club":"Head Judge: Chief of Scoring:",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"富山",
 "club":"富山第一高校",
 "from":"2018-19",
@@ -34039,7 +33140,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":22,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -34083,7 +33184,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -34375,7 +33476,7 @@
 "affiliation":"高知",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽﾃﾝ高知",
 "from":"2012-13",
-"to":"2014-15"
+"to":"2013-14"
 },
 {
 "affiliation":"高知",
@@ -34385,11 +33486,10 @@
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":4,
 "seasons":[
 "2012-13",
 "2013-14",
-"2014-15",
 "2016-17"
 ],
 "series":[
@@ -34458,7 +33558,7 @@
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":21,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -34655,7 +33755,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":51,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34737,7 +33837,7 @@
 }
 ],
 "mic":null,
-"n_results":83,
+"n_results":82,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -35054,23 +34154,11 @@
 "affiliation":"北海道",
 "club":"TEAM BANKEI",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"TEAM BANKEI",
-"from":"2017-18",
 "to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":24,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -35126,7 +34214,7 @@
 }
 ],
 "mic":null,
-"n_results":68,
+"n_results":67,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -35234,7 +34322,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":20,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -35436,18 +34524,6 @@
 "affiliation":"富山",
 "club":"富山工業高専",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"富山工業高専",
-"from":"2015-16",
 "to":"2017-18"
 },
 {
@@ -35464,7 +34540,7 @@
 }
 ],
 "mic":null,
-"n_results":57,
+"n_results":56,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -35786,7 +34862,7 @@
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":21,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35922,7 +34998,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -36444,7 +35520,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":20,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36599,18 +35675,6 @@
 "affiliation":"長野",
 "club":"茅野市ｽｷｰ協会",
 "from":"2013-14",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"茅野市ｽｷｰ協会",
-"from":"2015-16",
 "to":"2021-22"
 },
 {
@@ -36621,7 +35685,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":52,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -37203,20 +36267,12 @@
 "fis_code":null,
 "saj_no":"5001595",
 "name":"江崎 誠",
-"aliases":[
-"江崎 誠 栃木 宇都宮SC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"栃木",
 "club":"宇都宮ｽｷｰｸﾗﾌﾞ",
 "affiliation_history":[
-{
-"affiliation":"DD",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"栃木",
 "club":"宇都宮SC",
@@ -37231,7 +36287,7 @@
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":12,
 "seasons":[
 "2017-18",
 "2019-20",
@@ -37252,8 +36308,7 @@
 "saj_no":"5000675",
 "name":"江川 佳南枝",
 "aliases":[
-"江川佳南枝",
-"江川 佳南枝 静岡 静岡ｽｷｰ技術研究会 S"
+"江川佳南枝"
 ],
 "noc":null,
 "yb":null,
@@ -37270,18 +36325,6 @@
 "affiliation":"静岡",
 "club":"静岡ｽｷｰ技術研究会",
 "from":"2011-12",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"静岡",
-"club":"静岡ｽｷｰ技術研究会",
-"from":"2018-19",
 "to":"2022-23"
 },
 {
@@ -37292,7 +36335,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":40,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -37321,9 +36364,7 @@
 "fis_code":"2538182",
 "saj_no":"5001556",
 "name":"江村 希実",
-"aliases":[
-"江村 希実 新潟 ｴｷｯﾌﾟFSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"学連",
@@ -37334,12 +36375,6 @@
 "club":"ｴｷｯﾌﾟFSC",
 "from":"2015-16",
 "to":"2015-16"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 },
 {
 "affiliation":"新潟",
@@ -37361,10 +36396,9 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":26,
 "seasons":[
 "2015-16",
-"2017-18",
 "2020-21",
 "2021-22",
 "2022-23",
@@ -37598,23 +36632,17 @@
 "noc":null,
 "yb":null,
 "affiliation":"北海道",
-"club":"( 1)",
+"club":null,
 "affiliation_history":[
 {
 "affiliation":"北海道",
 "club":"",
 "from":"2011-12",
 "to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -38111,7 +37139,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":51,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -38780,18 +37808,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"大阪",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"関西大学北陽高校",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
 "affiliation":"学連",
 "club":"龍谷大学",
 "from":"2017-18",
@@ -38799,7 +37815,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38969,25 +37985,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"TEAM BANKEI",
 "from":"2016-17",
 "to":"2023-24"
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":50,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -39423,9 +38427,7 @@
 "fis_code":null,
 "saj_no":"5002165",
 "name":"濱口 龍梧",
-"aliases":[
-"濱口 龍梧 東京"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"東京",
@@ -39435,18 +38437,6 @@
 "affiliation":"東京",
 "club":"Dragon to the sky",
 "from":"2024-25",
-"to":"2024-25"
-},
-{
-"affiliation":"#N/A",
-"club":"Dragon to the sky #N/A",
-"from":"2024-25",
-"to":"2024-25"
-},
-{
-"affiliation":"東京",
-"club":"Dragon to the sky",
-"from":"2025-26",
 "to":"2025-26"
 },
 {
@@ -39517,8 +38507,7 @@
 "saj_no":"5000432",
 "name":"濱田 耕輔",
 "aliases":[
-"濱田耕輔",
-"濱田 耕輔 福井 福井MSC K"
+"濱田耕輔"
 ],
 "noc":null,
 "yb":null,
@@ -39541,23 +38530,11 @@
 "affiliation":"福井",
 "club":"福井MSC",
 "from":"2013-14",
-"to":"2017-18"
-},
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"福井",
-"club":"福井MSC",
-"from":"2018-19",
 "to":"2021-22"
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":24,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -39904,7 +38881,7 @@
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":12,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -40295,20 +39272,12 @@
 "fis_code":null,
 "saj_no":"5001691",
 "name":"王 楓",
-"aliases":[
-"王 楓 新潟 ｴｷｯﾌﾟFSC *NJ"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟ",
 "affiliation_history":[
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
@@ -40323,7 +39292,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2017-18",
 "2020-21",
@@ -40746,12 +39715,6 @@
 "affiliation_history":[
 {
 "affiliation":"滋賀",
-"club":"坂田小学校",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"滋賀",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "from":"2016-17",
 "to":"2018-19"
@@ -40770,9 +39733,8 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
-"2014-15",
 "2016-17",
 "2018-19",
 "2020-21",
@@ -41135,12 +40097,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"学連",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "from":"2021-22",
@@ -41148,7 +40104,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -41233,25 +40189,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"Fu's",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"Fu's snow area ｽｷｰｸﾗﾌﾞ",
 "from":"2016-17",
 "to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41400,40 +40344,30 @@
 "fis_code":null,
 "saj_no":"5001633",
 "name":"町田 このか",
-"aliases":[
-"町田 このか 群馬 前橋ｽｷｰ連盟 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "affiliation_history":[
 {
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "from":"2016-17",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
+"to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":1,
 "seasons":[
-"2016-17",
-"2017-18"
+"2016-17"
 ],
 "series":[
-"SAJ_A",
-"SAJ_B"
+"SAJ_A"
 ],
 "best":{
-"run_score":35.39,
-"run_id":"2017-18-saj_b-1882-0018-W-F1-saj-5001633"
+"run_score":20.23,
+"run_id":"2016-17-saj_a-1929-0047-W-Q-saj-5001633"
 }
 },
 {
@@ -41525,8 +40459,7 @@
 "saj_no":"5000735",
 "name":"畑田 繭",
 "aliases":[
-"畑田繭",
-"畑田 繭 学連 武庫川女子大学 S"
+"畑田繭"
 ],
 "noc":null,
 "yb":null,
@@ -41561,13 +40494,7 @@
 "affiliation":"学連",
 "club":"武庫川女子大学",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
+"to":"2016-17"
 },
 {
 "affiliation":"兵庫",
@@ -41589,7 +40516,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41597,7 +40524,6 @@
 "2014-15",
 "2015-16",
 "2016-17",
-"2017-18",
 "2018-19",
 "2019-20",
 "2020-21",
@@ -41653,7 +40579,7 @@
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41708,9 +40634,7 @@
 "fis_code":"2535873",
 "saj_no":"5001590",
 "name":"白井 寛",
-"aliases":[
-"白井 寛 山梨 E組 K"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"山梨",
@@ -41720,23 +40644,11 @@
 "affiliation":"山梨",
 "club":"E組",
 "from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"DD",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"山梨",
-"club":"E組",
-"from":"2017-18",
 "to":"2019-20"
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":6,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -41747,8 +40659,8 @@
 "SAJ_B"
 ],
 "best":{
-"run_score":30.52,
-"run_id":"2017-18-saj_b-1882-0018-M-F1-2535873"
+"run_score":29.3,
+"run_id":"2018-19-saj_b-1844-0001-M-Q-2535873"
 }
 },
 {
@@ -41756,32 +40668,23 @@
 "fis_code":null,
 "saj_no":"5000391",
 "name":"白井 敬介",
-"aliases":[
-"白井 敬介 新潟 ｴｷｯﾌﾟFSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "affiliation_history":[
 {
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "from":"2015-16",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
+"to":"2015-16"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":1,
 "seasons":[
-"2015-16",
-"2017-18"
+"2015-16"
 ],
 "series":[
 "SAJ_B"
@@ -42582,8 +41485,7 @@
 "saj_no":"5000836",
 "name":"石井 沙知",
 "aliases":[
-"石井沙知",
-"石井 沙知 学連 筑波大学 S"
+"石井沙知"
 ],
 "noc":null,
 "yb":null,
@@ -42600,23 +41502,11 @@
 "affiliation":"学連",
 "club":"筑波大学",
 "from":"2015-16",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"学連",
-"club":"筑波大学",
-"from":"2017-18",
 "to":"2018-19"
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":22,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42643,21 +41533,13 @@
 "athlete_id":"saj-5001650",
 "fis_code":null,
 "saj_no":"5001650",
-"name":"石井 淳一 千葉 ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ TS",
-"aliases":[
-"石井 淳一"
-],
+"name":"石井 淳一",
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "affiliation_history":[
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
@@ -42666,9 +41548,8 @@
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
-"2017-18",
 "2024-25"
 ],
 "series":[
@@ -42684,9 +41565,7 @@
 "fis_code":null,
 "saj_no":"5000835",
 "name":"石井 真也",
-"aliases":[
-"石井 真也 兵庫 D-RIDE S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"兵庫",
@@ -42696,23 +41575,11 @@
 "affiliation":"兵庫",
 "club":"D-RIDE",
 "from":"2013-14",
-"to":"2016-17"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"兵庫",
-"club":"D-RIDE",
-"from":"2017-18",
 "to":"2024-25"
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -42835,8 +41702,7 @@
 "saj_no":"5001471",
 "name":"石原 未来",
 "aliases":[
-"石原未来",
-"石原 未来 山梨 E組 S"
+"石原未来"
 ],
 "noc":null,
 "yb":null,
@@ -42847,18 +41713,6 @@
 "affiliation":"山梨",
 "club":"E組",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"山梨",
-"club":"E組",
-"from":"2017-18",
 "to":"2019-20"
 },
 {
@@ -42875,7 +41729,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":45,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -43046,20 +41900,8 @@
 "to":"2014-15"
 },
 {
-"affiliation":"石川",
-"club":"千愛 岐阜",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"石川",
-"club":"千愛 岐阜 西山小学校",
-"from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"石川",
-"club":"千愛 愛知",
+"affiliation":"愛知",
+"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
 "from":"2015-16",
 "to":"2015-16"
 },
@@ -43077,7 +41919,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":16,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -43545,11 +42387,13 @@
 "fis_code":null,
 "saj_no":"5000499",
 "name":"福井宜紀",
-"aliases":[],
+"aliases":[
+"福井 宜紀"
+],
 "noc":null,
 "yb":null,
-"affiliation":"福井",
-"club":"宜紀 大阪",
+"affiliation":"大阪",
+"club":"TSSC",
 "affiliation_history":[
 {
 "affiliation":"大阪",
@@ -43558,8 +42402,8 @@
 "to":"2014-15"
 },
 {
-"affiliation":"福井",
-"club":"宜紀 大阪",
+"affiliation":"大阪",
+"club":"",
 "from":"2014-15",
 "to":"2014-15"
 }
@@ -43578,6 +42422,34 @@
 "run_score":32.13,
 "run_id":"2014-15-saj_b-1967-0010-M-Q-saj-5000499"
 }
+},
+{
+"athlete_id":"saj-5000248",
+"fis_code":null,
+"saj_no":"5000248",
+"name":"福島 稔明",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"東京",
+"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
+"affiliation_history":[
+{
+"affiliation":"東京",
+"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
+"from":"2014-15",
+"to":"2014-15"
+}
+],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2014-15"
+],
+"series":[
+"SAJ_B"
+],
+"best":null
 },
 {
 "athlete_id":"2531670",
@@ -43608,23 +42480,11 @@
 "affiliation":"長野",
 "club":"白馬村SC",
 "from":"2011-12",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"悪天候のため、キャンセルとなりました。",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"長野",
-"club":"白馬村SC",
-"from":"2015-16",
 "to":"2023-24"
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":60,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43656,9 +42516,7 @@
 "fis_code":null,
 "saj_no":"5000974",
 "name":"福田 充",
-"aliases":[
-"福田 充 福井 福井MSC S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"福井",
@@ -43668,28 +42526,15 @@
 "affiliation":"福井",
 "club":"福井MSC",
 "from":"2013-14",
-"to":"2016-17"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"福井",
-"club":"福井MSC",
-"from":"2018-19",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2013-14",
 "2014-15",
 "2016-17",
-"2017-18",
 "2018-19",
 "2019-20",
 "2020-21",
@@ -43776,7 +42621,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43875,12 +42720,10 @@
 "fis_code":null,
 "saj_no":"5000795",
 "name":"竹中 治樹",
-"aliases":[
-"竹中 治樹 東京 ﾁｰﾑ ｼﾞｮｯｸｽ *NJ"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"S",
+"affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
 "affiliation_history":[
 {
@@ -43894,20 +42737,13 @@
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
 "from":"2014-15",
 "to":"2014-15"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":5,
 "seasons":[
 "2011-12",
-"2014-15",
-"2017-18"
+"2014-15"
 ],
 "series":[
 "SAJ_B"
@@ -43938,7 +42774,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":8,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -43993,34 +42829,6 @@
 "run_score":33.6,
 "run_id":"2020-21-saj_b-2759-0302-M-Q-2537664"
 }
-},
-{
-"athlete_id":"saj-5001465",
-"fis_code":null,
-"saj_no":"5001465",
-"name":"竹林 剣玖",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"富山",
-"club":"針原小学校",
-"affiliation_history":[
-{
-"affiliation":"富山",
-"club":"針原小学校",
-"from":"2014-15",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2014-15"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
 },
 {
 "athlete_id":"2484831",
@@ -44464,12 +43272,11 @@
 "saj_no":"5001404",
 "name":"篠原 誠",
 "aliases":[
-"篠原誠",
-"篠原 誠 福島 ﾁｰﾑﾘｽﾃﾙ S"
+"篠原誠"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"bL",
+"affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
 "affiliation_history":[
 {
@@ -44495,20 +43302,13 @@
 "club":"ﾁｰﾑﾘｽﾃﾙ",
 "from":"2015-16",
 "to":"2015-16"
-},
-{
-"affiliation":"bL",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2014-15",
-"2015-16",
-"2017-18"
+"2015-16"
 ],
 "series":[
 "FIS",
@@ -44842,7 +43642,7 @@
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -44910,72 +43710,16 @@
 "fis_code":"2540711",
 "saj_no":"5002078",
 "name":"結城 さくら子",
-"aliases":[
-"結城 さくら子北海道"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
-"affiliation":"NISEKO",
-"club":"B&J",
+"affiliation":"北海道",
+"club":"NISEKO B&J",
 "affiliation_history":[
 {
 "affiliation":"北海道",
 "club":"NISEKO B&J",
 "from":"2022-23",
-"to":"2023-24"
-},
-{
-"affiliation":"NISEKO",
-"club":"B&J",
-"from":"2023-24",
-"to":"2023-24"
-},
-{
-"affiliation":"北海道",
-"club":"NISEKO B&J",
-"from":"2023-24",
-"to":"2024-25"
-},
-{
-"affiliation":"NISEKO",
-"club":"B&J",
-"from":"2024-25",
-"to":"2024-25"
-},
-{
-"affiliation":"北海道",
-"club":"NISEKO B&J",
-"from":"2024-25",
-"to":"2024-25"
-},
-{
-"affiliation":"NISEKO",
-"club":"B&J",
-"from":"2024-25",
-"to":"2024-25"
-},
-{
-"affiliation":"北海道",
-"club":"NISEKO B&J",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"NISEKO",
-"club":"B&J",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"北海道",
-"club":"NISEKO B&J",
-"from":"2025-26",
-"to":"2025-26"
-},
-{
-"affiliation":"NISEKO",
-"club":"B&J",
-"from":"2025-26",
 "to":"2025-26"
 }
 ],
@@ -45029,62 +43773,6 @@
 "run_score":26.9,
 "run_id":"2020-21-saj_b-2756-0286-W-Q-saj-5001700"
 }
-},
-{
-"athlete_id":"saj-5000650",
-"fis_code":null,
-"saj_no":"5000650",
-"name":"綿貫 郁子 群馬 前橋ｽｷｰ連盟 S",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"TS",
-"club":null,
-"affiliation_history":[
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2017-18"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
-},
-{
-"athlete_id":"saj-5000186",
-"fis_code":null,
-"saj_no":"5000186",
-"name":"綿貫 雄高 群馬",
-"aliases":[],
-"noc":null,
-"yb":null,
-"affiliation":"前橋ｽｷｰ連盟",
-"club":null,
-"affiliation_history":[
-{
-"affiliation":"前橋ｽｷｰ連盟",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-}
-],
-"mic":null,
-"n_results":1,
-"seasons":[
-"2017-18"
-],
-"series":[
-"SAJ_B"
-],
-"best":null
 },
 {
 "athlete_id":"2527932",
@@ -45204,12 +43892,6 @@
 },
 {
 "affiliation":"埼玉",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"埼玉",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
@@ -45222,7 +43904,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -45260,7 +43942,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2014-15"
 ],
@@ -45335,7 +44017,7 @@
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":60,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45404,7 +44086,7 @@
 }
 ],
 "mic":null,
-"n_results":67,
+"n_results":66,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45978,18 +44660,6 @@
 "affiliation":"学連",
 "club":"松本大学",
 "from":"2014-15",
-"to":"2015-16"
-},
-{
-"affiliation":"学連",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"学連",
-"club":"松本大学",
-"from":"2015-16",
 "to":"2017-18"
 },
 {
@@ -46000,7 +44670,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":38,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46276,34 +44946,26 @@
 "saj_no":"5000467",
 "name":"藤岡 昌也",
 "aliases":[
-"藤岡昌也",
-"藤岡 昌也 岐阜 岐阜ﾌﾘｰｽﾀｲﾙ S"
+"藤岡昌也"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"TS",
+"affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
 {
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
+"to":"2016-17"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
-"2016-17",
-"2017-18"
+"2016-17"
 ],
 "series":[
 "SAJ_A",
@@ -46356,7 +45018,7 @@
 }
 ],
 "mic":null,
-"n_results":119,
+"n_results":117,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -46427,18 +45089,6 @@
 "to":"2015-16"
 },
 {
-"affiliation":"大阪",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"大阪",
-"club":"桃山学院高等学校",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
 "affiliation":"学連",
 "club":"立命館大学",
 "from":"2016-17",
@@ -46458,7 +45108,7 @@
 }
 ],
 "mic":null,
-"n_results":92,
+"n_results":91,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46630,22 +45280,10 @@
 "club":"北海学園札幌高校",
 "from":"2013-14",
 "to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"北海学園札幌高校",
-"from":"2015-16",
-"to":"2015-16"
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":12,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47361,23 +45999,11 @@
 "affiliation":"北海道",
 "club":"ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
 "from":"2011-12",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
-"from":"2017-18",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":35,
+"n_results":34,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -47438,9 +46064,7 @@
 "fis_code":null,
 "saj_no":"5001134",
 "name":"西森太一",
-"aliases":[
-"西森 太一"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"高知",
@@ -47450,14 +46074,13 @@
 "affiliation":"高知",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽﾃﾝ高知",
 "from":"2012-13",
-"to":"2014-15"
+"to":"2012-13"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
-"2012-13",
-"2014-15"
+"2012-13"
 ],
 "series":[
 "SAJ_B"
@@ -47674,7 +46297,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":10,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -47697,8 +46320,7 @@
 "saj_no":"5001257",
 "name":"西田 武徳",
 "aliases":[
-"西田武徳",
-"西田 武徳 京都 ｽｷｰﾁｰﾑｾﾞﾛ S"
+"西田武徳"
 ],
 "noc":null,
 "yb":null,
@@ -47721,35 +46343,11 @@
 "affiliation":"京都",
 "club":"ｽｷｰﾁｰﾑｾﾞﾛ",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"京都",
-"club":"( 1) ｽｷｰﾁｰﾑｾﾞﾛ",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"京都",
-"club":"ｽｷｰﾁｰﾑｾﾞﾛ",
-"from":"2015-16",
-"to":"2017-18"
-},
-{
-"affiliation":"l",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"京都",
-"club":"ｽｷｰﾁｰﾑｾﾞﾛ",
-"from":"2018-19",
 "to":"2020-21"
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":25,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -47815,48 +46413,6 @@
 }
 },
 {
-"athlete_id":"saj-5000865",
-"fis_code":null,
-"saj_no":"5000865",
-"name":"西谷 大輔",
-"aliases":[
-"西谷大輔"
-],
-"noc":null,
-"yb":null,
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"affiliation_history":[
-{
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2012-13",
-"to":"2014-15"
-},
-{
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2019-20"
-}
-],
-"mic":null,
-"n_results":5,
-"seasons":[
-"2012-13",
-"2014-15",
-"2017-18",
-"2019-20"
-],
-"series":[
-"SAJ_B"
-],
-"best":{
-"run_score":10.35,
-"run_id":"2012-13-saj_b-2029-0012-M-Q-saj-5000865"
-}
-},
-{
 "athlete_id":"saj-5000977",
 "fis_code":null,
 "saj_no":"5000977",
@@ -47885,6 +46441,48 @@
 "best":{
 "run_score":2.45,
 "run_id":"2013-14-saj_b-2013-0027-M-Q-saj-5000977"
+}
+},
+{
+"athlete_id":"saj-5000865",
+"fis_code":null,
+"saj_no":"5000865",
+"name":"西谷大輔",
+"aliases":[
+"西谷 大輔"
+],
+"noc":null,
+"yb":null,
+"affiliation":"愛知",
+"club":"東海ﾌﾘｰｽﾀｲﾙSC",
+"affiliation_history":[
+{
+"affiliation":"愛知",
+"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
+"from":"2012-13",
+"to":"2014-15"
+},
+{
+"affiliation":"愛知",
+"club":"東海ﾌﾘｰｽﾀｲﾙSC",
+"from":"2017-18",
+"to":"2019-20"
+}
+],
+"mic":null,
+"n_results":4,
+"seasons":[
+"2012-13",
+"2014-15",
+"2017-18",
+"2019-20"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":10.35,
+"run_id":"2012-13-saj_b-2029-0012-M-Q-saj-5000865"
 }
 },
 {
@@ -48208,7 +46806,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":59,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48276,7 +46874,7 @@
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
+"club":"MARAGA",
 "affiliation_history":[
 {
 "affiliation":"愛知県",
@@ -48289,24 +46887,16 @@
 "club":"MARAGA",
 "from":"2011-12",
 "to":"2011-12"
-},
-{
-"affiliation":"愛知",
-"club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
-"from":"2014-15",
-"to":"2014-15"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
-"2011-12",
-"2014-15"
+"2011-12"
 ],
 "series":[
 "FIS",
-"SAJ_A",
-"SAJ_B"
+"SAJ_A"
 ],
 "best":{
 "run_score":2.12,
@@ -48774,8 +47364,7 @@
 "saj_no":"5001159",
 "name":"辻角 茂樹",
 "aliases":[
-"辻角茂樹",
-"辻角 茂樹 千葉 ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ S"
+"辻角茂樹"
 ],
 "noc":null,
 "yb":null,
@@ -48801,12 +47390,6 @@
 "to":"2014-15"
 },
 {
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "from":"2017-18",
@@ -48814,7 +47397,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49073,20 +47656,12 @@
 "fis_code":null,
 "saj_no":"5001694",
 "name":"郷原 博幸",
-"aliases":[
-"郷原 博幸 山梨 E組 S"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"山梨",
 "club":"E組",
 "affiliation_history":[
-{
-"affiliation":"*NJ",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"山梨",
 "club":"E組",
@@ -49095,9 +47670,8 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":10,
 "seasons":[
-"2017-18",
 "2018-19",
 "2020-21",
 "2022-23",
@@ -49167,12 +47741,11 @@
 "saj_no":"5000477",
 "name":"都竹 拓",
 "aliases":[
-"都竹拓",
-"都竹 拓 岐阜 岐阜ﾌﾘｰｽﾀｲﾙ TT"
+"都竹拓"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"S",
+"affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
 {
@@ -49186,22 +47759,15 @@
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "from":"2011-12",
 "to":"2014-15"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":6,
 "seasons":[
 "2011-12",
 "2012-13",
 "2013-14",
-"2014-15",
-"2017-18"
+"2014-15"
 ],
 "series":[
 "FIS",
@@ -49338,29 +47904,21 @@
 "fis_code":null,
 "saj_no":"5001117",
 "name":"酒井圭一",
-"aliases":[
-"酒井 圭一"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
-"club":"ﾊﾟﾄﾞﾙｸﾗﾌﾞ",
+"club":"ﾊﾟﾄﾞﾙｸﾗﾌﾞNGY",
 "affiliation_history":[
 {
 "affiliation":"愛知",
 "club":"ﾊﾟﾄﾞﾙｸﾗﾌﾞNGY",
 "from":"2014-15",
 "to":"2014-15"
-},
-{
-"affiliation":"愛知",
-"club":"ﾊﾟﾄﾞﾙｸﾗﾌﾞ",
-"from":"2014-15",
-"to":"2014-15"
 }
 ],
 "mic":null,
-"n_results":2,
+"n_results":1,
 "seasons":[
 "2014-15"
 ],
@@ -50195,23 +48753,11 @@
 "affiliation":"京都",
 "club":"ｽｷｰﾁｰﾑｾﾞﾛ",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"京都",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"京都",
-"club":"ｽｷｰﾁｰﾑｾﾞﾛ",
-"from":"2015-16",
 "to":"2021-22"
 }
 ],
 "mic":null,
-"n_results":48,
+"n_results":47,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -50368,7 +48914,7 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":5,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -50459,8 +49005,7 @@
 "saj_no":"5000295",
 "name":"鈴木 富夫",
 "aliases":[
-"鈴木富夫",
-"鈴木 富夫 神奈川 川崎ﾌﾘｰｽﾀｲﾙSC TS"
+"鈴木富夫"
 ],
 "noc":null,
 "yb":null,
@@ -50478,22 +49023,10 @@
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "from":"2011-12",
 "to":"2017-18"
-},
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -50734,8 +49267,7 @@
 "saj_no":"5000678",
 "name":"鈴木 裕子",
 "aliases":[
-"鈴木裕子",
-"鈴木 裕子 神奈川 川崎ﾌﾘｰｽﾀｲﾙSC TS"
+"鈴木裕子"
 ],
 "noc":null,
 "yb":null,
@@ -50753,22 +49285,10 @@
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "from":"2011-12",
 "to":"2017-18"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -51338,23 +49858,11 @@
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
 "from":"2013-14",
-"to":"2015-16"
-},
-{
-"affiliation":"東京",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"東京",
-"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2015-16",
 "to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -51511,7 +50019,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":3,
 "seasons":[
 "2012-13",
 "2014-15"
@@ -51696,7 +50204,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":59,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -51796,9 +50304,7 @@
 "fis_code":null,
 "saj_no":"5001337",
 "name":"阿部 広文",
-"aliases":[
-"阿部 広文 新潟 ｴｷｯﾌﾟFSC TT"
-],
+"aliases":[],
 "noc":null,
 "yb":null,
 "affiliation":"新潟",
@@ -51808,23 +50314,11 @@
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "from":"2014-15",
-"to":"2014-15"
-},
-{
-"affiliation":"TTS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"新潟",
-"club":"ｴｷｯﾌﾟFSC",
-"from":"2017-18",
 "to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":4,
 "seasons":[
 "2014-15",
 "2017-18"
@@ -51993,25 +50487,13 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"Fu's",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"Fu's snow area ｽｷｰｸﾗﾌﾞ",
 "from":"2016-17",
 "to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":15,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -52096,12 +50578,14 @@
 "athlete_id":"2484866",
 "fis_code":"2484866",
 "saj_no":"5000058",
-"name":"香川満亮",
-"aliases":[],
+"name":"香川 満亮",
+"aliases":[
+"香川満亮"
+],
 "noc":null,
 "yb":null,
-"affiliation":"香川",
-"club":"満亮 北海道",
+"affiliation":"北海道",
+"club":"NISEKOB&J",
 "affiliation_history":[
 {
 "affiliation":"北海道",
@@ -52110,8 +50594,8 @@
 "to":"2011-12"
 },
 {
-"affiliation":"香川",
-"club":"満亮 北海道",
+"affiliation":"北海道",
+"club":"",
 "from":"2011-12",
 "to":"2014-15"
 }
@@ -52298,7 +50782,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":68,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -52414,8 +50898,7 @@
 "aliases":[
 "髙橋 一仁",
 "髙橋一仁",
-"高橋一仁",
-"高橋 一仁 東京 ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ DD"
+"高橋一仁"
 ],
 "noc":null,
 "yb":null,
@@ -52426,23 +50909,11 @@
 "affiliation":"東京",
 "club":"ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ",
 "from":"2011-12",
-"to":"2017-18"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"東京",
-"club":"ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ",
-"from":"2017-18",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":38,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -52520,12 +50991,6 @@
 },
 {
 "affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"北海道",
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
@@ -52538,7 +51003,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":30,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -52594,7 +51059,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":35,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -52662,7 +51127,7 @@
 "noc":null,
 "yb":null,
 "affiliation":"北海道",
-"club":"( 1)",
+"club":"TEAM BANKEI",
 "affiliation_history":[
 {
 "affiliation":"北海道",
@@ -52693,16 +51158,10 @@
 "club":"",
 "from":"2015-16",
 "to":"2015-16"
-},
-{
-"affiliation":"北海道",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52930,12 +51389,11 @@
 "saj_no":"5000925",
 "name":"髙山 夏菜",
 "aliases":[
-"髙山夏菜",
-"髙山 夏菜 長野 白馬村SC TS"
+"髙山夏菜"
 ],
 "noc":null,
 "yb":null,
-"affiliation":"S",
+"affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
 {
@@ -52961,16 +51419,10 @@
 "club":"白馬村SC",
 "from":"2014-15",
 "to":"2017-18"
-},
-{
-"affiliation":"S",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
 }
 ],
 "mic":null,
-"n_results":23,
+"n_results":21,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -53026,18 +51478,6 @@
 "affiliation":"富山",
 "club":"富山第一高等学校",
 "from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"( 1)",
-"from":"2015-16",
-"to":"2015-16"
-},
-{
-"affiliation":"富山",
-"club":"富山第一高等学校",
-"from":"2015-16",
 "to":"2016-17"
 },
 {
@@ -53060,7 +51500,7 @@
 }
 ],
 "mic":null,
-"n_results":87,
+"n_results":86,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -53238,8 +51678,7 @@
 "saj_no":"5000574",
 "name":"髙橋 平",
 "aliases":[
-"髙橋平",
-"髙橋 平 愛媛 ﾌﾘｰﾊﾞﾝﾌﾟｽＴＥＮ愛媛 S"
+"髙橋平"
 ],
 "noc":null,
 "yb":null,
@@ -53259,12 +51698,6 @@
 "to":"2017-18"
 },
 {
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"愛媛",
 "club":"ﾌﾘｰﾊﾞﾝﾌﾟｽTEN愛媛",
 "from":"2022-23",
@@ -53272,7 +51705,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":11,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -53296,8 +51729,7 @@
 "saj_no":"5001032",
 "name":"髙橋 忠",
 "aliases":[
-"髙橋忠",
-"髙橋 忠 山梨 E組 S"
+"髙橋忠"
 ],
 "noc":null,
 "yb":null,
@@ -53314,23 +51746,11 @@
 "affiliation":"山梨",
 "club":"E組",
 "from":"2014-15",
-"to":"2017-18"
-},
-{
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"山梨",
-"club":"E組",
-"from":"2017-18",
 "to":"2025-26"
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":23,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -53458,7 +51878,6 @@
 "saj_no":"5001692",
 "name":"髙見 健二",
 "aliases":[
-"高見 健二 新潟 ｴｷｯﾌﾟFSC S",
 "高見 健二"
 ],
 "noc":null,
@@ -53467,12 +51886,6 @@
 "club":"ｴｷｯﾌﾟFSC",
 "affiliation_history":[
 {
-"affiliation":"TS",
-"club":null,
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "from":"2017-18",
@@ -53480,7 +51893,7 @@
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":4,
 "seasons":[
 "2017-18",
 "2020-21",
@@ -53828,9 +52241,9 @@
 "athlete_id":"saj-5001406",
 "fis_code":null,
 "saj_no":"5001406",
-"name":"齊藤 義明",
+"name":"齊藤義明",
 "aliases":[
-"齊藤義明"
+"齊藤 義明"
 ],
 "noc":null,
 "yb":null,
@@ -53845,7 +52258,7 @@
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":2,
 "seasons":[
 "2014-15"
 ],

@@ -115,6 +115,8 @@ def parse_line1(tokens, nturn=5):
     partial = []
     for t in rest:
         (partial if is_num(t) else namepart).append(t)
+    # 表計算の '#N/A' が印字された行がある（2024-25 B級 3809-0470 予選 BIB 55）。氏名・所属には含めない
+    namepart = [t for t in namepart if t != '#N/A']
     trail_status = namepart[-1] if namepart and namepart[-1] in STATUS else None
     if trail_status:
         namepart = namepart[:-1]
@@ -130,6 +132,7 @@ def parse_line2(tokens, nturn=5):
     """FISNO クラブ... D1-Dn Jump2 DD2 Ja Jb  （FISNOなし・2ndエアなしの場合あり）"""
     fisno = None
     i = 0
+    tokens = [t for t in tokens if t != '#N/A']  # 表計算の '#N/A' はクラブ名にも値にもしない
     if tokens and re.match(r'^\d{7}$', tokens[0]):
         fisno = tokens[0]; i = 1
     rest = tokens[i:]

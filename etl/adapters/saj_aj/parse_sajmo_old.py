@@ -71,7 +71,8 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
         k += 1
     head = [t for t in rest[:k] if not is_num(t) and t not in STATUS]  # 完走していない行の '0.00 DNF' は名前・クラブに含めない
     nums_tail = [x for x in rest[k:] if is_num(x)]
-    pi = next((j for j, t in enumerate(head) if t in PREFS), None)
+    # 所属は 2 語目以降から探す（姓が県名と同じ選手がいる: '山口 卓也 長野県'）。'長野県' '大阪府' のような表記も県名とみなす
+    pi = next((j for j in range(1, len(head)) if head[j] in PREFS or re.sub(r'[都府県]$', '', head[j]) in PREFS), None)
     if pi is None:
         name, pref, club = ' '.join(head[:2]) if len(head) >= 2 else ' '.join(head), (head[2] if len(head) > 2 else ''), ' '.join(head[3:])
         # 所属が県名一覧に無いとき: 「姓 名 所属 クラブ…」と仮定
@@ -108,7 +109,8 @@ def parse_pdf(path, force=False):
     with pdfplumber.open(path) as pdf:
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
-            lines = [l.strip() for l in (page.extract_text() or '').split('\n') if l.strip()]
+            # 区切りのタブが '(cid:9)' として出て数値にくっつく PDF がある（'(cid:9)(cid:9)29.77'）
+            lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', page.extract_text() or '').split('\n') if l.strip()]
             for li, line in enumerate(lines):
                 m = SEC.search(line)
                 if m and 'リザルト' in line and len(line) < 30 and li < 12:

@@ -10,6 +10,7 @@ import os, re
 import pdfplumber
 from ... import config
 from ...verify import Finding
+from ..saj_aj.parse_sajmo_old import PREFS
 
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
 STAGE = re.compile(r'^(BIG FINAL|SMALL FINAL|Quarter Final|Eight Final|Round of \d+|1/\d+ Final)\s*$', re.I)
@@ -56,6 +57,11 @@ def parse_pdf(path):
                     head = line[:mp.start()].split() if mp else toks
                     prog = line[mp.start():].strip() if mp else ''
                     rest = head[3:]
+                    # 名と所属の間の空白が無い PDF がある（'キンビッグ 恵茉北海道 TEAM BUMPS'）。名の末尾の県名を所属として切り離す
+                    if len(rest) >= 2 and not (len(rest) >= 3 and rest[2] in PREFS):
+                        glued = next((p for p in sorted(PREFS, key=len, reverse=True) if rest[1].endswith(p) and len(rest[1]) > len(p)), None)
+                        if glued:
+                            rest = rest[:1] + [rest[1][:-len(glued)], glued] + rest[2:]
                     # 氏名は「姓 名」の 2 語が基本。所属（県名など）とクラブ名が続く。
                     if len(rest) >= 3:
                         name, pref, club = ' '.join(rest[:2]), rest[2], ' '.join(rest[3:])

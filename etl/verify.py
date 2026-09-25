@@ -61,6 +61,16 @@ def layer0(rounds_ctx, expected, accept_rounds, check_missing=True):
             if run['run_id'] in seen_ids:
                 f.append(Finding('error', key, 'layer0', f"run_id 重複: {run['run_id']}"))
             seen_ids.add(run['run_id'])
+            # 独立検算（etl/tests/verify_published.py）で見つかった「エラーを出さずに壊れる」型を止める
+            if not (run.get('name') or '').strip():
+                f.append(Finding('error', key, 'layer0', f"氏名が空欄（BIB {run.get('bib')}）"))
+            parts = [run.get(k) for k in ('time_points', 'air_total', 'turns_total', 'run_score')]
+            if run.get('status') == 'OK' and None not in parts:
+                tp, at, tt, sc = (Decimal(str(x)) for x in parts)
+                if tp + at + tt != sc:
+                    f.append(Finding('error', key, 'layer0', f"{run.get('name')}: タイム点 {tp} + エア {at} + ターン {tt} ≠ スコア {sc}（列の読み違い）"))
+        if r['tier'] in ('detail', 'score') and ctx['runs'] and not any(x.get('run_score') is not None for x in ctx['runs']):
+            f.append(Finding('error', key, 'layer0', f"得点のある選手が 0 名（{len(ctx['runs'])} 名すべて得点なし。様式を読めていない）"))
         if r['tier'] == 'detail':
             if r['pace_time'] is None:
                 f.append(Finding('error', key, 'layer0', 'ペースタイムが読めない'))

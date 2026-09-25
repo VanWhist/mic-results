@@ -2844,7 +2844,7 @@
 "run":{
 "run_id":"2023-24-8310-F1-2534234",
 "athlete_id":"2534234",
-"name":"CHALIFOUX Louis- David",
+"name":"CHALIFOUX Louis-David",
 "noc":"CAN",
 "rank":6,
 "run_score":75.61,
@@ -8324,7 +8324,7 @@
 "winner":{
 "run_id":"2011-12-saj_a-2054-0006-M-Q-2526178",
 "athlete_id":"2526178",
-"name":"",
+"name":"山口 卓也",
 "noc":null,
 "rank":1,
 "run_score":23.36,
@@ -9364,7 +9364,7 @@
 "winner":{
 "run_id":"2013-14-saj_a-1996-0007-M-Q-2527310",
 "athlete_id":"2527310",
-"name":"",
+"name":"千葉 大誉",
 "noc":null,
 "rank":1,
 "run_score":21.75,
@@ -9384,7 +9384,7 @@
 "winner":{
 "run_id":"2013-14-saj_a-1996-0007-M-F1-2527310",
 "athlete_id":"2527310",
-"name":"",
+"name":"千葉 大誉",
 "noc":null,
 "rank":1,
 "run_score":22.04,
@@ -9824,7 +9824,7 @@
 "winner":{
 "run_id":"2013-14-fis-2020-0038-M-F2-2526178",
 "athlete_id":"2526178",
-"name":"",
+"name":"山口 卓也",
 "noc":null,
 "rank":1,
 "run_score":22.8,
@@ -10824,7 +10824,7 @@
 "winner":{
 "run_id":"2014-15-fis-1973-0020-M-F2-2526178",
 "athlete_id":"2526178",
-"name":"",
+"name":"山口 卓也",
 "noc":null,
 "rank":1,
 "run_score":65.43,
@@ -10844,7 +10844,7 @@
 "winner":{
 "run_id":"2014-15-fis-1973-0020-M-F1-2526178",
 "athlete_id":"2526178",
-"name":"",
+"name":"山口 卓也",
 "noc":null,
 "rank":1,
 "run_score":64.37,
@@ -10864,7 +10864,7 @@
 "winner":{
 "run_id":"2014-15-fis-1973-0020-M-Q-2526178",
 "athlete_id":"2526178",
-"name":"",
+"name":"山口 卓也",
 "noc":null,
 "rank":1,
 "run_score":64.87,
@@ -13860,68 +13860,6 @@
 },
 "cut":null,
 "n_ok":25
-},
-{
-"round_id":"2017-18-saj_b-1882-0018-M-F1",
-"winner":{
-"run_id":"2017-18-saj_b-1882-0018-M-F1-2531559",
-"athlete_id":"2531559",
-"name":"乾 貴王",
-"noc":null,
-"rank":1,
-"run_score":61.4,
-"time_points":11.91,
-"seconds":21.89,
-"air_total":11.59,
-"turns_total":37.9,
-"base_total":37.9,
-"ded_total":0.0,
-"air":[
-{
-"jump":"bPp",
-"dd":0.73,
-"jump_score":4.89
-},
-{
-"jump":"7opA",
-"dd":0.86,
-"jump_score":6.705
-}
-]
-},
-"cut":null,
-"n_ok":12
-},
-{
-"round_id":"2017-18-saj_b-1882-0018-W-F1",
-"winner":{
-"run_id":"2017-18-saj_b-1882-0018-W-F1-2535060",
-"athlete_id":"2535060",
-"name":"石原 未来",
-"noc":null,
-"rank":1,
-"run_score":52.28,
-"time_points":13.15,
-"seconds":24.74,
-"air_total":7.83,
-"turns_total":31.3,
-"base_total":31.3,
-"ded_total":0.0,
-"air":[
-{
-"jump":"S",
-"dd":0.51,
-"jump_score":3.21
-},
-{
-"jump":"TTS",
-"dd":0.74,
-"jump_score":4.625
-}
-]
-},
-"cut":null,
-"n_ok":8
 },
 {
 "round_id":"2017-18-saj_b-1886-0022-M-F1",
