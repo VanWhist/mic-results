@@ -14,6 +14,17 @@ let lines = new Map();
 let athleteMap = new Map();
 let current = null;   // 表示中の round
 
+// 結果表の見た目（ナショナルチーム用の moguls-results と同じ）。'fis' = 公式 PDF と同じ3行ブロック（既定）、
+// 'table' = 1ラン1行の表。localStorage が使えない環境でも既定で表示できるように try/catch で包む。
+const VIEW_KEY = 'mic-results.view';
+let view = 'fis';
+function loadView() {
+  try { return localStorage.getItem(VIEW_KEY) === 'table' ? 'table' : 'fis'; } catch (e) { return 'fis'; }
+}
+function saveView(v) {
+  try { localStorage.setItem(VIEW_KEY, v); } catch (e) { /* 覚えられなくても表示は切り替える */ }
+}
+
 function roundKey(r) { return r.round_id; }
 
 function renderHead() {
@@ -95,9 +106,300 @@ function renderRound() {
   head.append(el('p', { class: 'meta', text: kv.join('　／　') }));
   head.append(verificationBlock(r));
   const box = clear(document.getElementById('results'));
+  // 審判点・得点のある段階だけ FIS 形式にできる。順位のみ・デュアルモーグルは従来の表
+  const fisCapable = r.tier !== 'rank' && !runs.some((x) => x.components && x.components.progression);
+  document.getElementById('view-toggle').hidden = !fisCapable || isNarrow();
   if (!runs.length) { box.append(el('p', { class: 'meta', text: 'この記録はまだありません。' })); return; }
-  if (isNarrow()) box.append(renderCards(r, runs));
-  else box.append(renderTable(r, runs));
+  if (!fisCapable) box.append(isNarrow() ? renderCards(r, runs) : renderTable(r, runs));
+  else if (isNarrow()) box.append(renderFisCards(r, orderedRuns(runs)));
+  else box.append(view === 'table' ? renderTable(r, runs) : renderFis(r, orderedRuns(runs)));
+}
+
+// ---- FIS 公式リザルト PDF と同じ並びの表（moguls-results の index.js と同じ形） -------------
+// 1選手 = 3行。1行目: 順位〜所属・タイム・エア1・B: ベース点・Run Score、
+// 2行目: エア2・D: 減点、3行目: タイム点・エア合計・ターン合計（罫線の下に太字）。
+// 審判の人数は大会ごと（ターン 3 名 / 5 名、エア審判の番号）なので round.panel から列を作る。
+// 得点までの段階（score）はブロックの中身が合計だけなので、1選手1行にする。
+// Q2 の PDF（q_block のある WC など）は選手ごとに Q2 → Q1 の走りを積む。DNF/DNS/DSQ は識別列と状態のみ。
+
+const isQ1Block = (r) => r.q_block === 'Q1';
+
+// 表示順に並べる。Q2 のあるラウンドは選手ごとに Q2 → Q1参考 の2段
+function orderedRuns(runs) {
+  const byRank = (a, b) => {
+    const an = a.rank === null || a.rank === undefined, bn = b.rank === null || b.rank === undefined;
+    if (an && bn) return (a.bib || 0) - (b.bib || 0);
+    if (an) return 1;
+    if (bn) return -1;
+    return a.rank - b.rank || (a.bib || 0) - (b.bib || 0);
+  };
+  if (!runs.some((r) => r.q_block)) return runs.slice().sort(byRank).map((r) => ({ run: r, role: null, pairTop: false }));
+  const groups = new Map();
+  for (const r of runs) {
+    if (!groups.has(r.athlete_id)) groups.set(r.athlete_id, []);
+    groups.get(r.athlete_id).push(r);
+  }
+  const heads = [...groups.values()].map((g) => g.find((r) => r.q_block === 'Q2') || g[0]).sort(byRank);
+  const out = [];
+  for (const h of heads) {
+    const g = groups.get(h.athlete_id);
+    const q2 = g.find((r) => r.q_block === 'Q2');
+    const q1 = g.find((r) => isQ1Block(r));
+    if (q2) out.push({ run: q2, role: 'Q2', pairTop: !!q1 });
+    if (q1) out.push({ run: q1, role: q2 ? 'Q1ref' : 'Q1', pairTop: false });
+  }
+  return out;
+}
+
+// orderedRuns の並び（Q2 → Q1参考）を選手単位にまとめる
+function fisBlocks(items) {
+  const out = [];
+  for (let i = 0; i < items.length; i++) {
+    const it = items[i];
+    const next = items[i + 1];
+    if (it.pairTop && next && next.role === 'Q1ref') {
+      out.push([it, next]);
+      i++;
+    } else {
+      out.push([it]);
+    }
+  }
+  return out;
+}
+
+// ラウンドの列構成。FIS の大会（NOC・生年のある行）は FIS Code / NSA Code / YB、国内大会は 所属 / クラブ
+function fisLayout(r, items) {
+  const rows = items.map((it) => it.run);
+  const intl = rows.some((x) => x.noc);
+  return {
+    detail: r.tier === 'detail',
+    nT: (r.panel && r.panel.turns) || 5,
+    airNos: (r.panel && r.panel.air_judge_nos) || [6, 7],
+    qLayout: items.some((it) => !!it.role),
+    intl,
+    showClub: !intl && rows.some((x) => x.club),
+  };
+}
+
+const fisBlanks = (n) => Array.from({ length: n }, () => el('td'));
+
+function fisNum(v, digits, cls = '') {
+  const text = num(v, digits);
+  return el('td', { class: ('num ' + cls).trim(), text: text === null ? '' : text });
+}
+
+function fisJudgeCells(values, discard, n) {
+  const out = [];
+  for (let i = 0; i < n; i++) {
+    const dropped = (discard || []).includes(i);
+    out.push(el('td', {
+      class: 'num' + (dropped ? ' discard' : ''),
+      title: dropped ? '最高・最低のため除外' : null,
+      text: num(values && values[i], 1) ?? '',
+    }));
+  }
+  return out;
+}
+
+function fisAirCells(air, idx) {
+  const a = (air || [])[idx] || {};
+  return [fisNum(a.J6, 1), fisNum(a.J7, 1), el('td', { class: 'jump', text: a.jump || '' }), fisNum(a.dd, 2)];
+}
+
+function turnsText(r) {
+  return (num(r.turns_total, 1) ?? '') + (r.turns_floor_applied ? '*' : '');
+}
+
+function idCount(L) { return (L.intl ? 6 : 4 + (L.showClub ? 1 : 0)) + (L.qLayout ? 1 : 0); }
+
+// 識別列。Q1 参考ブロックはラベルだけ出す
+function fisIdentityCells(item, L) {
+  const r = item.run;
+  const head = item.role !== 'Q1ref';
+  const a = athleteMap.get(r.athlete_id);
+  const cells = [
+    el('td', { class: 'num bold', text: head ? (r.rank ?? '') : '' }),
+    el('td', { class: 'num', text: head ? (r.bib ?? '') : '' }),
+  ];
+  if (L.intl) cells.push(el('td', { class: 'num', text: head ? (r.fis_code || '') : '' }));
+  cells.push(el('td', { class: 'name' }, head ? [el('a', { href: athleteHref(r.athlete_id), text: r.name }), ' ', micBadge(a)] : []));
+  cells.push(el('td', { text: head ? (L.intl ? (r.noc || '') : (r.affiliation || '')) : '' }));
+  if (L.intl) cells.push(el('td', { class: 'num', text: head ? (r.yb ?? '') : '' }));
+  else if (L.showClub) cells.push(el('td', { class: 'club', text: head ? (r.club || '') : '' }));
+  if (L.qLayout) cells.push(el('td', { class: 'qlab', text: item.role === 'Q1ref' ? 'Q1' : (item.role || '') }));
+  return cells;
+}
+
+// Run Score・Best Score・Tie（1行目のみ）。PDF は RES を Tie の位置に印字する
+function fisScoreCells(item, L) {
+  const r = item.run;
+  const dnf = r.status && r.status !== 'OK';
+  const score = el('td', { class: 'num bold score', text: dnf ? r.status : (num(r.run_score, 2) ?? '') });
+  const best = L.qLayout ? [fisNum(item.role === 'Q1ref' ? null : r.best_score, 2, 'bold')] : [];
+  const tie = el('td', { class: 'num tie' }, [
+    r.tie ?? '',
+    r.reserve_judge ? el('span', { class: 'fis-res', text: 'RES', title: 'リザーブジャッジが採点したラン（PDF の RES 印）' }) : null,
+  ]);
+  return [score, ...best, tie];
+}
+
+function fisRows(item, L) {
+  const r = item.run;
+  const scoreCount = 2 + (L.qLayout ? 1 : 0);
+  const sub = item.role === 'Q1ref' ? ' fis-sub' : '';
+  const nMid = L.detail ? 2 + 5 + (L.nT + 2) : 4;
+  if (r.status && r.status !== 'OK' && r.seconds == null && r.air_total == null && r.turns_total == null) {
+    return [el('tr', { class: 'fis-l1 fis-status' + sub }, [
+      ...fisIdentityCells(item, L), ...fisBlanks(nMid), ...fisScoreCells(item, L),
+    ])];
+  }
+  if (!L.detail) {
+    return [el('tr', { class: 'fis-l1' + sub }, [
+      ...fisIdentityCells(item, L),
+      fisNum(r.seconds, 2), fisNum(r.time_points, 2, 'bold'), fisNum(r.air_total, 2, 'bold'),
+      el('td', { class: 'num bold', title: r.turns_floor_applied ? 'ターン下限 0.3 を適用' : null, text: turnsText(r) }),
+      ...fisScoreCells(item, L),
+    ])];
+  }
+  const line1 = el('tr', { class: 'fis-l1' + sub }, [
+    ...fisIdentityCells(item, L),
+    fisNum(r.seconds, 2), fisNum(r.time_points, 2),
+    ...fisAirCells(r.air, 0), el('td'),
+    el('td', { class: 'bd', text: 'B:' }), ...fisJudgeCells(r.base, r.base_discard, L.nT), fisNum(r.base_total, 1),
+    ...fisScoreCells(item, L),
+  ]);
+  const line2 = el('tr', { class: 'fis-l2' }, [
+    ...fisBlanks(idCount(L) + 2),
+    ...fisAirCells(r.air, 1), el('td'),
+    el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(r.ded_total, 1),
+    ...fisBlanks(scoreCount),
+  ]);
+  const line3 = el('tr', { class: 'fis-l3' }, [
+    ...fisBlanks(idCount(L) + 1),
+    fisNum(r.time_points, 2, 'bold rule'),
+    ...fisBlanks(4), fisNum(r.air_total, 2, 'bold rule'),
+    ...fisBlanks(L.nT + 1),
+    el('td', { class: 'num bold rule', title: r.turns_floor_applied ? 'ターン下限 0.3 を適用' : null, text: turnsText(r) }),
+    ...fisBlanks(scoreCount),
+  ]);
+  return [line1, line2, line3];
+}
+
+function renderFis(r, items) {
+  const L = fisLayout(r, items);
+  const th = (text, attrs = {}) => el('th', { class: 'no-sort ' + (attrs.class || ''), rowspan: attrs.rowspan, colspan: attrs.colspan, text });
+  const ids = [th('Rank', { rowspan: 2 }), th('Bib', { rowspan: 2 })];
+  if (L.intl) ids.push(th('FIS Code', { rowspan: 2 }));
+  ids.push(th('Name', { rowspan: 2, class: 'name' }), th(L.intl ? 'NSA Code' : '所属', { rowspan: 2 }));
+  if (L.intl) ids.push(th('YB', { rowspan: 2 }));
+  else if (L.showClub) ids.push(th('クラブ', { rowspan: 2 }));
+  if (L.qLayout) ids.push(th('', { rowspan: 2 }));
+  const tail = [th('Run Score', { rowspan: 2 }), L.qLayout ? th('Best Score', { rowspan: 2 }) : null, th('Tie', { rowspan: 2 })];
+  let head1, head2;
+  if (L.detail) {
+    head1 = el('tr', {}, [...ids, th('Time', { colspan: 2, class: 'grp' }), th('Air', { colspan: 5, class: 'grp' }),
+      th('Turns', { colspan: L.nT + 2, class: 'grp' }), ...tail]);
+    const judges = [];
+    for (let i = 1; i <= L.nT; i++) judges.push(th('J' + i));
+    head2 = el('tr', {}, [
+      th('Seconds', { class: 'gl' }), th('Time Points', { class: 'gr' }),
+      th('J' + L.airNos[0], { class: 'gl' }), th('J' + L.airNos[1]), th('Jump'), th('DD'), th('Total', { class: 'gr' }),
+      th('B D', { class: 'gl' }), ...judges, th('Total', { class: 'gr' }),
+    ]);
+  } else {
+    head1 = el('tr', {}, [...ids, th('Time', { colspan: 2, class: 'grp' }), th('Air', { rowspan: 2 }), th('Turns', { rowspan: 2 }), ...tail]);
+    head2 = el('tr', {}, [th('Seconds', { class: 'gl' }), th('Time Points', { class: 'gr' })]);
+  }
+  const bodies = fisBlocks(items).map((block) => el('tbody', { class: 'fis-block' }, block.flatMap((item) => fisRows(item, L))));
+  const legend = el('p', { class: 'meta', text: L.detail
+    ? 'B: ベース点、D: 減点。' + (L.nT >= 5 ? '取り消し線の薄い数字は最高・最低のため除外された審判点（合計に入らない）。' : '3人制は除外なしで合計。')
+      + '3行目の太字はタイム点・エア合計・ターン合計。ターンの下限は 0.3（* 印）。'
+    : 'この段階は合計点まで照合済み（審判ごとの点は持っていません）。ターンの下限は 0.3（* 印）。' });
+  return el('div', {}, [el('div', { class: 'table-wrap' }, el('table', { class: 'fis' }, [el('thead', {}, [head1, head2]), ...bodies])), legend]);
+}
+
+// ---- 狭い画面（スマホ）：1選手＝1カード（moguls-results と同じ形） --------------------------
+// 見出し行（順位・名前・所属・Run Score）の下に、PDF と同じ並びのブロックを識別列抜きで置く。
+
+const isDnf = (r) => !!(r.status && r.status !== 'OK');
+
+function resMark(r) {
+  return r.reserve_judge ? el('span', { class: 'fis-res', text: 'RES', title: 'リザーブジャッジが採点したラン（PDF の RES 印）' }) : null;
+}
+
+function scoreNode(r, value, cls) {
+  if (value === null || value === undefined) {
+    return isDnf(r) ? el('span', { class: cls + ' fis-status', text: r.status }) : el('span', { class: cls, text: '—' });
+  }
+  return el('span', { class: cls }, [num(value, 2), resMark(r)]);
+}
+
+// 上段：秒・タイム点（太字）｜エア2本（J J ジャンプ DD）｜エア計（太字）
+// 下段：B: 審判点 計 ／ D: 審判点 計 ／ ターン計（太字）。得点までの段階は下段を合計だけにする
+function miniBlock(r, L) {
+  const jumpRow = (idx) => {
+    const a = (r.air || [])[idx] || {};
+    return el('tr', {}, [fisNum(a.J6, 1), fisNum(a.J7, 1), el('td', { class: 'jump', text: a.jump || '' }), fisNum(a.dd, 2)]);
+  };
+  const sec = num(r.seconds, 2);
+  const timeAir = el('div', { class: 'fm-sec fm-timeair' }, [
+    el('div', { class: 'fm-time' }, [
+      el('span', { class: 'fm-sec-val', text: sec === null ? '' : sec + ' s' }),
+      el('b', { text: num(r.time_points, 2) ?? '' }),
+    ]),
+    L.detail ? el('table', { class: 'fis fis-mini fm-air' }, el('tbody', {}, [jumpRow(0), jumpRow(1)])) : null,
+    el('div', { class: 'fm-total' }, [el('span', { class: 'fm-lbl', text: 'エア' }), el('b', { text: num(r.air_total, 2) ?? '' })]),
+  ]);
+  const turnsRow = el('tr', { class: 'fis-l3' }, [
+    el('td', { class: 'bd lbl rule', text: 'ターン' }),
+    el('td', { class: 'num bold rule', colspan: L.detail ? L.nT + 1 : 1,
+      title: r.turns_floor_applied ? 'ターン下限 0.3 を適用' : null, text: turnsText(r) }),
+  ]);
+  const rows = L.detail ? [
+    el('tr', {}, [el('td', { class: 'bd', text: 'B:' }), ...fisJudgeCells(r.base, r.base_discard, L.nT), fisNum(r.base_total, 1, 'tot')]),
+    el('tr', {}, [el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(r.ded_total, 1, 'tot')]),
+    turnsRow,
+  ] : [turnsRow];
+  return el('div', { class: 'fis-mini-block' }, [timeAir, el('table', { class: 'fis fis-mini fm-turns' }, el('tbody', {}, rows))]);
+}
+
+function hasMarks(r) {
+  return [r.seconds, r.time_points, r.air_total, r.base_total, r.ded_total, r.turns_total]
+    .some((v) => v !== null && v !== undefined) || (r.air || []).length > 0;
+}
+
+function renderFisCards(r, items) {
+  const L = fisLayout(r, items);
+  const cards = fisBlocks(items).map((block) => {
+    const head = block[0].run;
+    const headScore = L.qLayout ? (head.best_score ?? head.run_score) : head.run_score;
+    const org = L.intl ? head.noc : [head.affiliation, head.club].filter(Boolean).join(' ');
+    const parts = [
+      el('div', { class: 'fis-card-head' }, [
+        el('span', { class: 'fis-rank', text: head.rank ?? '' }),
+        el('span', { class: 'fis-name' }, [el('a', { href: athleteHref(head.athlete_id), text: head.name }), ' ', micBadge(athleteMap.get(head.athlete_id))]),
+        el('span', { class: 'fis-noc', text: org || '' }),
+        scoreNode(head, headScore, 'fis-score'),
+      ]),
+    ];
+    for (const item of block) {
+      const run = item.run;
+      if (L.qLayout) {
+        parts.push(el('div', { class: 'fis-sub-head' + (run.counting ? ' counting' : '') }, [
+          el('span', { text: item.role === 'Q1ref' ? 'Q1' : (item.role || '') }),
+          run.counting ? el('span', { class: 'badge official', text: '採用' }) : null,
+          scoreNode(run, run.run_score, 'fis-sub-score'),
+        ]));
+      }
+      if (!isDnf(run) || hasMarks(run)) parts.push(miniBlock(run, L));
+    }
+    return el('article', { class: 'rec fis-card' }, parts);
+  });
+  const legend = L.detail
+    ? '上段：秒・タイム点（太字）｜エア2本の審判点・ジャンプ・DD｜エア計。下段：B: ベース点 ／ D: 減点 ／ ターン計。'
+      + (L.nT >= 5 ? '取り消し線は最高・最低で除外された点。' : '')
+    : '上段：秒・タイム点（太字）｜エア計。下段：ターン計。この段階は合計点まで照合済み。';
+  return el('div', {}, [el('p', { class: 'meta small fis-legend', text: legend }), el('div', { class: 'card-list' }, cards)]);
 }
 
 function nameCell(run) {
@@ -197,6 +499,20 @@ async function main() {
   }
   document.title = eventName(event) + ' | MIC モーグル リザルト';
   renderHead();
+  // 表示形式（FIS形式／表形式）
+  view = loadView();
+  const viewButtons = [...document.querySelectorAll('#view-toggle button[data-view]')];
+  const syncView = () => { for (const b of viewButtons) b.setAttribute('aria-pressed', String(b.dataset.view === view)); };
+  for (const b of viewButtons) {
+    b.addEventListener('click', () => {
+      if (view === b.dataset.view) return;
+      view = b.dataset.view;
+      saveView(view);
+      syncView();
+      renderRound();
+    });
+  }
+  syncView();
   const want = decodeURIComponent(location.hash.slice(1));
   current = event.rounds.find((r) => r.round_id === want) || event.rounds.find((r) => r.round === 'F2') || event.rounds[event.rounds.length - 1];
   renderChips();
