@@ -21,6 +21,9 @@
       <input type="search" id="q" autocomplete="off" placeholder="選手名・大会名を検索　例：藤村、全日本、ばんけい">
     </label>
     <div id="suggest" class="suggest" hidden></div>
+    <!-- よく使う絞り込みは常に出す（詳しい絞り込みの select と同期する） -->
+    <div class="quick-row" id="quick-main" role="group" aria-label="よく使う絞り込み"></div>
+    <div class="quick-row" id="quick-group" role="group" aria-label="大会の区分"></div>
     <div class="hero-actions">
       <button class="chip" id="toggle-filters" aria-expanded="false">詳しく絞り込む ▼</button>
       <button class="chip" id="reset" hidden>条件をクリア</button>

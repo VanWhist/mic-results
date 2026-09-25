@@ -189,7 +189,14 @@ export function navbar(active) {
       el('a', { href, class: href === active ? 'active' : '', text: label }))),
   ]);
 }
-export function mountNav(active) { document.body.prepend(navbar(active)); }
+export function mountNav(active) {
+  const header = navbar(active);
+  document.body.prepend(header);
+  // 固定ヘッダの高さを CSS 変数に入れる（大会ページのラウンド切替をその直下に固定するため）
+  const sync = () => document.documentElement.style.setProperty('--nav-h', header.offsetHeight + 'px');
+  sync();
+  window.addEventListener('resize', sync);
+}
 
 export function errorBox(message) {
   return el('div', { class: 'notice', text: 'データを読めませんでした：' + message });

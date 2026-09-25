@@ -552,3 +552,44 @@ svg.chart .line { fill: none; stroke: #9db4d8; stroke-width: 1.5; }
 
 /* デュアルモーグルの対戦経過は長いので折り返す */
 td.prog { white-space: normal; font-size: 0.85em; max-width: 28em; }
+
+/* ---- スマホの見やすさ・操作性（2026-09-26。ChatGPT との相談をもとに Phase 1） ---------------- */
+/* 大会ページ：大会情報は 2 行、進行・出典は折りたたみ */
+.ev-line { margin: 2px 0; font-size: 14px; }
+details.ev-more { margin: 4px 0 8px; }
+details.ev-more > summary { cursor: pointer; color: var(--accent); font-size: 13px; }
+/* トップ：よく使う絞り込みを常に出す（横に並べ、はみ出したら横スクロール） */
+.quick-row { display: flex; gap: 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 8px 0 0; scrollbar-width: none; }
+.quick-row::-webkit-scrollbar { display: none; }
+.quick-row button.chip { flex: 0 0 auto; white-space: nowrap; }
+.quick-row:empty { display: none; }
+/* 一覧の正式大会名は 1 行に省略。grid の子は既定で中身の幅まで広がるので、カードを列幅に収める */
+.meet-grid > * { min-width: 0; }
+.meet-official { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* ラウンド切替に戻ったとき、固定したチップの下に見出しが隠れないように */
+#round-head { scroll-margin-top: calc(var(--nav-h, 0px) + 64px); }
+
+@media (max-width: 700px) {
+  /* ラウンド切替：折り返さず横スクロール、ヘッダの直下に固定 */
+  #round-chips {
+    flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+    position: sticky; top: var(--nav-h, 0px); z-index: 10; background: var(--panel);
+    margin: 6px -10px 8px; padding: 6px 10px; border-bottom: 1px solid var(--line);
+  }
+  #round-chips::-webkit-scrollbar { display: none; }
+  #round-chips button.chip { flex: 0 0 auto; white-space: nowrap; display: inline-flex; flex-direction: row; }
+  /* タップしやすく：戻るリンク・折りたたみの見出しも 44px */
+  .card > p.meta > a, details.ev-more > summary { display: inline-flex; align-items: center; min-height: 44px; }
+  /* 結果カード：氏名・順位は 16px、得点は大きく */
+  .fis-card-head { font-size: 16px; }
+  .fis-card-head .fis-score { font-size: 19px; }
+  .fis-card-head .fis-noc { font-size: 12.5px; }
+  .meet-name { font-size: 16px; }
+  .ev-line { font-size: 14px; }
+}
+details.fis-legend > summary { cursor: pointer; color: var(--accent); }
+@media (max-width: 700px) {
+  details.fis-legend > summary { min-height: 36px; display: flex; align-items: center; }
+  /* 戻るリンクの上の余白を詰める */
+  #results-card > p.meta:first-child { margin-top: 0; }
+}

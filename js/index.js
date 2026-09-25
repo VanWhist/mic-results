@@ -37,10 +37,39 @@ function meetCard(ev) {
   return el('a', { class: 'meet-card', href: eventHref(ev.event_id) }, [
     el('div', { class: 'meet-date', text: eventDates(ev) }),
     el('div', { class: 'meet-name', text: (ev.series_label || seriesLabel(ev.series)) + (micEvents.has(ev.event_id) ? '　★MIC出場' : '') }),
-    el('div', { class: 'meet-sub', text: ev.name_ja || ev.venue || '' }),
+    // 正式名は長いので一覧では 1 行に省略する（全文は大会ページ）
+    el('div', { class: 'meet-sub meet-official', text: ev.name_ja || ev.venue || '', title: ev.name_ja || null }),
     // 大会名が無い（W杯など会場名で呼ぶ）大会は、会場を2度出さない
     el('div', { class: 'meet-sub', text: [ev.name_ja ? ev.venue : null, genders, tiers].filter(Boolean).join('　') }),
   ]);
+}
+
+// ---- よく使う絞り込み（MIC のみ・シーズン・区分）。詳しい絞り込みの select / checkbox と同じ state を使う ----
+const GROUP_LABEL = { '国内': '国内', 'FIS系': 'FIS', 'W杯系': 'W杯・五輪' };
+
+function quickChip(label, pressed, onclick) {
+  return el('button', { class: 'chip', type: 'button', 'aria-pressed': String(pressed), text: label, onclick });
+}
+
+function renderQuick() {
+  const seasons = [...new Set(events.map((e) => e.season))].sort().reverse();
+  const main = clear(document.getElementById('quick-main'));
+  if (micEvents.size) main.append(quickChip('★ MIC のみ', state.mic, () => setFilter('mic', !state.mic)));
+  const seasonChoices = [[seasons[0], '今季 ' + seasons[0]], [seasons[1], '昨季'], ['', '全シーズン']].filter(([v]) => v !== undefined);
+  for (const [v, label] of seasonChoices) main.append(quickChip(label, state.season === v, () => setFilter('season', v)));
+  const groups = [...new Set(events.map((e) => e.series_group))].filter(Boolean);
+  const order = ['国内', 'FIS系', 'W杯系'];
+  groups.sort((a, b) => order.indexOf(a) - order.indexOf(b));
+  const grp = clear(document.getElementById('quick-group'));
+  grp.append(quickChip('すべての大会', !state.group, () => setFilter('group', '')));
+  for (const g of groups) grp.append(quickChip(GROUP_LABEL[g] || g, state.group === g, () => setFilter('group', g)));
+}
+
+function setFilter(key, value) {
+  state[key] = value;
+  if (key === 'mic') document.getElementById('f-mic').checked = value;
+  else document.getElementById({ season: 'f-season', group: 'f-group' }[key]).value = value;
+  renderQuick(); renderList(); updateReset();
 }
 
 function renderList() {
@@ -112,9 +141,9 @@ async function main() {
   q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; state.q = ''; renderSuggest(''); renderList(); } });
   document.addEventListener('click', (e) => { if (!e.target.closest('.hero-search') && !e.target.closest('#suggest')) document.getElementById('suggest').hidden = true; });
   for (const [id, key] of [['f-season', 'season'], ['f-group', 'group'], ['f-series', 'series'], ['f-gender', 'gender'], ['f-discipline', 'discipline']]) {
-    document.getElementById(id).addEventListener('change', (e) => { state[key] = e.target.value; renderList(); updateReset(); });
+    document.getElementById(id).addEventListener('change', (e) => { state[key] = e.target.value; renderQuick(); renderList(); updateReset(); });
   }
-  document.getElementById('f-mic').addEventListener('change', (e) => { state.mic = e.target.checked; renderList(); updateReset(); });
+  document.getElementById('f-mic').addEventListener('change', (e) => { state.mic = e.target.checked; renderQuick(); renderList(); updateReset(); });
   const filters = document.getElementById('filters');
   const toggle = document.getElementById('toggle-filters');
   toggle.addEventListener('click', () => {
@@ -127,10 +156,11 @@ async function main() {
     q.value = '';
     for (const id of ['f-season', 'f-group', 'f-series', 'f-gender', 'f-discipline']) document.getElementById(id).value = '';
     document.getElementById('f-mic').checked = false;
-    renderSuggest(''); renderList(); updateReset();
+    renderSuggest(''); renderQuick(); renderList(); updateReset();
   });
   document.getElementById('note-slot').append(el('p', { class: 'meta', text:
     'データ版 ' + manifest.dataVersion + '　大会 ' + manifest.counts.events + ' 件 / ラウンド ' + manifest.counts.rounds + ' 件 / 記録 ' + manifest.counts.runs + ' 本 / 選手 ' + manifest.counts.athletes + ' 名' }));
+  renderQuick();
   renderList();
 }
 

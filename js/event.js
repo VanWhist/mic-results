@@ -30,15 +30,17 @@ function roundKey(r) { return r.round_id; }
 function renderHead() {
   const head = clear(document.getElementById('event-head'));
   head.append(el('h2', { text: eventName(event) }));
-  const kv = el('div', { class: 'kv' });
-  const add = (k, v) => { if (v) kv.append(el('div', {}, [el('strong', { text: k + '：' }), v])); };
-  add('日付', eventDates(event));
-  add('会場', event.venue);
-  add('系列', (event.series_label || seriesLabel(event.series)) + (event.grade ? '（' + event.grade + '）' : ''));
-  add('種目', event.discipline === 'DM' ? 'デュアルモーグル' : 'モーグル');
-  add('進行', event.format_label);
-  add('記録の段階', el('span', {}, (event.tiers || []).map((t) => tierBadge(t))));
-  head.append(kv);
+  // スマホで結果までの距離を縮めるため、大会情報は 2 行に詰め、進行・出典は折りたたむ
+  head.append(el('p', { class: 'ev-line', text: [eventDates(event), event.venue].filter(Boolean).join('　') }));
+  head.append(el('p', { class: 'ev-line' }, [
+    // 「全日本選手権（全日本）」のように系列名に級が含まれるときは重ねない
+    (event.series_label || seriesLabel(event.series))
+      + (event.grade && !(event.series_label || '').includes(event.grade) ? '（' + event.grade + '）' : ''),
+    '　' + (event.discipline === 'DM' ? 'デュアルモーグル' : 'モーグル') + '　',
+    ...(event.tiers || []).map((t) => tierBadge(t)),
+  ]));
+  const more = [];
+  if (event.format_label) more.push(el('p', { class: 'meta', text: '進行：' + event.format_label }));
   const srcs = (event.sources || []);
   if (srcs.length) {
     // ラウンドごとに PDF がある大会（FIS 様式）は「男子 予選」のようにラベルを付け、同じ大会ページは1回だけ出す
@@ -48,12 +50,13 @@ function renderHead() {
       return rs.length ? rs.map((r) => genderLabel(r.gender) + ' ' + roundLabel(r)).join('・') : '公式リザルト PDF';
     };
     const pages = [...new Set(srcs.map((s) => s.page_url).filter(Boolean))];
-    head.append(el('p', { class: 'meta' }, ['出典：', ...srcs.flatMap((s, i) => [
+    more.push(el('p', { class: 'meta' }, ['出典：', ...srcs.flatMap((s, i) => [
       i ? '、' : null,
       s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: pdfLabel(s) })
         : el('span', { text: (s.round_ids || []).length ? pdfLabel(s) + '（PDF の公開 URL なし）' : s.path }),
     ]), ...pages.flatMap((p) => ['（', el('a', { href: p, target: '_blank', rel: 'noopener', text: '大会ページ' }), '）'])]));
   }
+  if (more.length) head.append(el('details', { class: 'ev-more' }, [el('summary', { text: '大会情報・出典を見る' }), ...more]));
 }
 
 function renderChips() {
@@ -62,17 +65,27 @@ function renderChips() {
   for (const r of rounds) {
     const b = el('button', { class: 'chip' + (current && current.round_id === r.round_id ? ' primary' : ''), type: 'button',
       text: genderLabel(r.gender) + ' ' + roundLabel(r) + '（' + (runsByRound.get(r.round_id) || []).length + '名）',
-      onclick: () => { current = r; history.replaceState(null, '', '#' + encodeURIComponent(r.round_id)); renderChips(); renderRound(); } });
+      onclick: () => {
+        current = r; history.replaceState(null, '', '#' + encodeURIComponent(r.round_id)); renderChips(); renderRound();
+        // スクロールの途中（チップが上に固定されている状態）で切り替えたら、新しいラウンドの頭へ戻す
+        const top = document.getElementById('round-head');
+        if (top.getBoundingClientRect().top < 0) top.scrollIntoView({ block: 'start' });
+      } });
     box.append(b);
   }
 }
 
 function verificationBlock(r) {
   const badge = verificationBadge(r);
-  const details = Object.entries(r.verification || {}).map(([k, v]) => {
+  const details = [];
+  const judges = [];
+  if (r.panel) judges.push('ターン ' + r.panel.turns + ' 名・エア ' + r.panel.air + ' 名');
+  if (r.judges && r.judges.length) judges.push(r.judges.map((j) => 'J' + j.no + ' ' + j.name + (j.noc ? '（' + j.noc + '）' : '')).join('、'));
+  if (judges.length) details.push(el('div', { class: 'meta', text: '審判：' + judges.join('　') }));
+  details.push(...Object.entries(r.verification || {}).map(([k, v]) => {
     const m = layerMark(v);
     return el('div', { class: 'verify-line ' + m.cls, text: m.mark + (LAYER_LABEL[k] || k) + '：' + layerStatusLabel(v) });
-  });
+  }));
   const src = r.source || {};
   details.push(el('div', { class: 'meta' }, [
     '元 PDF：', src.url ? el('a', { href: src.url, target: '_blank', rel: 'noopener', text: src.pdf }) : src.pdf,
@@ -99,11 +112,9 @@ function renderRound() {
   ]));
   const kv = [];
   if (r.pace_time) kv.push('ペースタイム ' + num(r.pace_time) + ' 秒');
-  if (r.panel) kv.push('審判 ターン ' + r.panel.turns + ' 名・エア ' + r.panel.air + ' 名');
-  if (r.judges && r.judges.length) kv.push(r.judges.map((j) => 'J' + j.no + ' ' + j.name + (j.noc ? '（' + j.noc + '）' : '')).join('、'));
   const line = lines.get(r.round_id);
   if (line && line.cut) kv.push(line.cut.label + '：' + line.cut.run.name + ' ' + num(line.cut.run.run_score) + ' 点');
-  head.append(el('p', { class: 'meta', text: kv.join('　／　') }));
+  if (kv.length) head.append(el('p', { class: 'meta', text: kv.join('　／　') }));
   head.append(verificationBlock(r));
   const box = clear(document.getElementById('results'));
   // 審判点・得点のある段階だけ FIS 形式にできる。順位のみ・デュアルモーグルは従来の表
@@ -399,7 +410,9 @@ function renderFisCards(r, items) {
     ? '上段：秒・タイム点（太字）｜エア2本の審判点・ジャンプ・DD｜エア計。下段：B: ベース点 ／ D: 減点 ／ ターン計。'
       + (L.nT >= 5 ? '取り消し線は最高・最低で除外された点。' : '')
     : '上段：秒・タイム点（太字）｜エア計。下段：ターン計。この段階は合計点まで照合済み。';
-  return el('div', {}, [el('p', { class: 'meta small fis-legend', text: legend }), el('div', { class: 'card-list' }, cards)]);
+  // 見方の説明は折りたたむ（毎回読むものではないので、結果の1位を上に出す）
+  return el('div', {}, [el('details', { class: 'meta small fis-legend' }, [el('summary', { text: 'カードの見方' }), legend]),
+    el('div', { class: 'card-list' }, cards)]);
 }
 
 function nameCell(run) {
