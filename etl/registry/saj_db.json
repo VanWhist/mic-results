@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-25T11:25:11",
+ "generated_at": "2026-09-25T12:50:29",
  "events": [
   {
    "event_id": "2011-12-saj_b-2051-0001",
@@ -42,7 +42,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2052-0003",
@@ -84,7 +85,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2051-0002",
@@ -126,7 +128,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2053-0004",
@@ -168,7 +171,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2054-0005",
@@ -210,7 +214,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_a-2054-0006",
@@ -252,7 +257,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2055-0007",
@@ -294,7 +300,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2055-0008",
@@ -336,7 +343,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2056-0009",
@@ -378,7 +386,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2058-0011",
@@ -420,7 +429,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2057-0010",
@@ -462,7 +472,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2058-0012",
@@ -504,7 +515,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_a-2059-0013",
@@ -546,7 +558,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2062-0016",
@@ -588,7 +601,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2064-0018",
@@ -630,7 +644,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_a-2066-0021",
@@ -672,7 +687,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2065-0019",
@@ -704,7 +720,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2067-0022",
@@ -746,7 +763,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_a-2068-0023",
@@ -788,7 +806,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_a-2069-0025",
@@ -830,7 +849,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2070-0026",
@@ -872,7 +892,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2071-0027",
@@ -914,7 +935,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_aj-2072-0028",
@@ -946,7 +968,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2075-0032",
@@ -988,7 +1011,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2075-0037",
@@ -1030,7 +1054,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2077-0034",
@@ -1072,7 +1097,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-saj_b-2078-0035",
@@ -1114,7 +1140,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2011-12-fis-2078-0036",
@@ -1156,7 +1183,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2023-0001",
@@ -1198,7 +1226,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2025-0003",
@@ -1240,7 +1269,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2024-0002",
@@ -1282,7 +1312,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2025-0004",
@@ -1324,7 +1355,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2026-0005",
@@ -1366,7 +1398,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2026-0006",
@@ -1408,7 +1441,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2027-0009",
@@ -1450,7 +1484,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2026-0007",
@@ -1492,7 +1527,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2026-0008",
@@ -1534,7 +1570,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2027-0010",
@@ -1576,7 +1613,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2028-0011",
@@ -1618,7 +1656,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2029-0012",
@@ -1660,7 +1699,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2029-0013",
@@ -1702,7 +1742,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2030-0014",
@@ -1744,7 +1785,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2031-0015",
@@ -1786,7 +1828,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2032-0017",
@@ -1828,7 +1871,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2033-0018",
@@ -1870,7 +1914,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2034-0020",
@@ -1912,7 +1957,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2037-0025",
@@ -1944,7 +1990,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2035-0021",
@@ -1986,7 +2033,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2036-0022",
@@ -2028,7 +2076,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2036-0023",
@@ -2060,7 +2109,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_a-2038-0026",
@@ -2102,7 +2152,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_aj-2046-0034",
@@ -2144,7 +2195,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_ajjr-2047-0036",
@@ -2186,7 +2238,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_ajjr-2047-0037",
@@ -2228,7 +2281,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2048-0038",
@@ -2270,7 +2324,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-saj_b-2049-0039",
@@ -2312,7 +2367,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2012-13-fis-2049-0040",
@@ -2354,7 +2410,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1993-0001",
@@ -2396,7 +2453,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1994-0002",
@@ -2438,7 +2496,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-1994-0003",
@@ -2480,7 +2539,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-1995-0004",
@@ -2522,7 +2582,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-1996-0005",
@@ -2564,7 +2625,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1996-0006",
@@ -2606,7 +2668,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-1996-0007",
@@ -2648,7 +2711,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1996-0008",
@@ -2690,7 +2754,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-1997-0009",
@@ -2732,7 +2797,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1998-0010",
@@ -2774,7 +2840,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-1998-0011",
@@ -2816,7 +2883,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-1999-0012",
@@ -2858,7 +2926,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-2000-0013",
@@ -2900,7 +2969,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-2000-0014",
@@ -2942,7 +3012,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2001-0015",
@@ -2984,7 +3055,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2002-0016",
@@ -3026,7 +3098,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-2003-0017",
@@ -3068,7 +3141,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2004-0019",
@@ -3110,7 +3184,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2008-0022",
@@ -3152,7 +3227,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2010-0025",
@@ -3194,7 +3270,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-2011-0026",
@@ -3236,7 +3313,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2009-0023",
@@ -3278,7 +3356,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2009-0024",
@@ -3310,7 +3389,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2013-0027",
@@ -3352,7 +3432,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_a-2016-0030",
@@ -3394,7 +3475,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_ajjr-2017-0032",
@@ -3436,7 +3518,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_ajjr-2017-0044",
@@ -3478,7 +3561,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_aj-2018-0033",
@@ -3520,7 +3604,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2020-0037",
@@ -3562,7 +3647,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2020-0038",
@@ -3604,7 +3690,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2021-0039",
@@ -3646,7 +3733,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2022-0040",
@@ -3688,7 +3776,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2022-0042",
@@ -3730,7 +3819,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-fis-2022-0041",
@@ -3772,7 +3862,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2013-14-saj_b-2022-0043",
@@ -3814,7 +3905,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1963-0001",
@@ -3856,7 +3948,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1963-0002",
@@ -3898,7 +3991,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1964-0003",
@@ -3940,7 +4034,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1965-0005",
@@ -3982,7 +4077,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1965-0006",
@@ -4024,7 +4120,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1964-0004",
@@ -4066,7 +4163,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1965-0007",
@@ -4108,7 +4206,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1965-0008",
@@ -4150,7 +4249,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1966-0009",
@@ -4192,7 +4292,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1967-0010",
@@ -4234,7 +4335,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1967-0011",
@@ -4276,7 +4378,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1968-0012",
@@ -4318,7 +4421,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1969-0013",
@@ -4360,7 +4464,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1969-0014",
@@ -4402,7 +4507,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1970-0015",
@@ -4444,7 +4550,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1971-0017",
@@ -4486,7 +4593,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1972-0019",
@@ -4528,7 +4636,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1973-0020",
@@ -4570,7 +4679,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1974-0021",
@@ -4612,7 +4722,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1978-0027",
@@ -4654,7 +4765,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1979-0028",
@@ -4696,7 +4808,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1977-0025",
@@ -4738,7 +4851,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1977-0026",
@@ -4770,7 +4884,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1980-0029",
@@ -4812,7 +4927,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1981-0030",
@@ -4854,7 +4970,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_aj-1987-0037",
@@ -4896,7 +5013,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1988-0038",
@@ -4938,7 +5056,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_a-1988-0045",
@@ -4980,7 +5099,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1989-0039",
@@ -5022,7 +5142,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1990-0041",
@@ -5064,7 +5185,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1989-0040",
@@ -5106,7 +5228,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-fis-1990-0042",
@@ -5148,7 +5271,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2014-15-saj_b-1991-0043",
@@ -5190,7 +5314,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1935-0001",
@@ -5232,7 +5357,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1935-0002",
@@ -5274,7 +5400,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1939-0007",
@@ -5316,7 +5443,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1939-0008",
@@ -5358,7 +5486,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1939-0009",
@@ -5400,7 +5529,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1939-0010",
@@ -5442,7 +5572,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1943-0015",
@@ -5484,7 +5615,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_aj-1944-0017",
@@ -5526,7 +5658,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-fis-1947-0022",
@@ -5568,7 +5701,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1950-0027",
@@ -5610,7 +5744,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1950-0028",
@@ -5652,7 +5787,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-fis-1949-0025",
@@ -5694,7 +5830,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-fis-1949-0026",
@@ -5726,7 +5863,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1958-0036",
@@ -5768,7 +5906,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1955-0033",
@@ -5810,7 +5949,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1960-0039",
@@ -5852,7 +5992,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1960-0044",
@@ -5894,7 +6035,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1960-0040",
@@ -5936,7 +6078,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_b-1960-0045",
@@ -5978,7 +6121,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1959-0037",
@@ -6020,7 +6164,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-saj_a-1959-0038",
@@ -6062,7 +6207,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-fis-1962-0042",
@@ -6104,7 +6250,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2015-16-fis-1962-0043",
@@ -6146,7 +6293,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layout": "old"
   },
   {
    "event_id": "2016-17-saj_b-1908-0004",

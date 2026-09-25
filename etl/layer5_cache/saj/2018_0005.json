@@ -1,0 +1,157 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0005/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "36",
+"code": "05001713",
+"name": "岡田 匠真",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "41.90",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "37",
+"code": "05001714",
+"name": "岡田 悠敬",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "36.75",
+"pts": "9.29"
+},
+{
+"rank": "3",
+"bib": "38",
+"code": "05001716",
+"name": "熊谷 慎之介",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "36.19",
+"pts": "8.58"
+},
+{
+"rank": "4",
+"bib": "30",
+"code": "05001489",
+"name": "大和田 諒",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "33.13",
+"pts": "7.87"
+},
+{
+"rank": "5",
+"bib": "28",
+"code": "05000068",
+"name": "木村 淳児",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "30.78",
+"pts": "7.16"
+},
+{
+"rank": "6",
+"bib": "40",
+"code": "05001720",
+"name": "木元 貴大",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "30.58",
+"pts": "6.45"
+},
+{
+"rank": "7",
+"bib": "29",
+"code": "05001540",
+"name": "諏訪 稜季",
+"club": "八甲田山FSSC",
+"pref": "青森",
+"score": "29.91",
+"pts": "5.74"
+},
+{
+"rank": "8",
+"bib": "39",
+"code": "05001717",
+"name": "栗原 草太",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "25.61",
+"pts": "5.03"
+},
+{
+"rank": "9",
+"bib": "31",
+"code": "05001447",
+"name": "盛 一瀬",
+"club": "八甲田山FSSC",
+"pref": "青森",
+"score": "23.52",
+"pts": "4.32"
+},
+{
+"rank": "10",
+"bib": "43",
+"code": "05001725",
+"name": "中村 隆仁",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "2.46",
+"pts": "3.61"
+},
+{
+"rank": "11",
+"bib": "34",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "1.74",
+"pts": "2.90"
+},
+{
+"rank": "12",
+"bib": "27",
+"code": "05000992",
+"name": "西村 佳則",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "DNF",
+"pts": "2.19"
+},
+{
+"rank": "13",
+"bib": "42",
+"code": "05001723",
+"name": "髙橋 小鉄",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "6.88",
+"pts": "1.48"
+},
+{
+"rank": "14",
+"bib": "33",
+"code": "05000560",
+"name": "持原 一公",
+"club": "ﾋﾟｽﾃSC",
+"pref": "広島",
+"score": "1.23",
+"pts": "0.77"
+},
+{
+"rank": "",
+"bib": "41",
+"code": "05001722",
+"name": "村上 那月",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

@@ -312,8 +312,8 @@ def layer4(all_runs, rounds):
         sajs = {r['saj_no'] for r in rs if r.get('saj_no')}
         if len(sajs) > 1:
             # 外国籍選手は SAJ 番号欄に FIS コードが印字される年がある（全日本2024 MOON SEOYOUNG）。その場合は警告に留める。
-            level = 'warning' if any(s == aid for s in sajs) else 'error'
-            f.append(Finding(level, 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の SAJ 番号が複数 {sorted(sajs)}"))
+            # 選手 ID は FIS コードで決まっているので、SAJ 番号のぶれ（印字誤り・再登録）は警告に留める
+            f.append(Finding('warning', 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の SAJ 番号が複数 {sorted(sajs)}"))
         fiss = {r['fis_code'] for r in rs if r.get('fis_code')}
         if len(fiss) > 1:
             f.append(Finding('error', 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の FIS コードが複数 {sorted(fiss)}"))

@@ -80,6 +80,10 @@ def main():
             'pdfs': pdfs, 'rules': ensure_rules(season) if disc == 'MO' else None, 'sheet_prefix': event_id,
             'format': {'label': None, 'advance': {}}, 'notes': '',
         }
+        if disc == 'MO' and season <= '2015-16':
+            # 2015-16 以前は審判ごとの列が現行と違う（DD を掛けた列など）ので、印字の合計だけを得点段階で持つ
+            ev['layout'] = 'old'
+            ev['tier'] = 'score'
         if 'KIDS' in first['category']:
             ev['skip'] = 'キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち'
         out[disc].append(ev)

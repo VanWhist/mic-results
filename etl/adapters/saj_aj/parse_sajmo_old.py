@@ -16,7 +16,7 @@ import pdfplumber
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
 STATUS = ('DNF', 'DNS', 'DSQ', 'DQ')
-SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル)?\s*(予選[・･]?決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
+SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル|高校生|中学生|小学生|[^\s]{1,4}の部)?\s*(予選[・･]?決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -26,10 +26,13 @@ def is_num(t):
     return bool(NUM.match(t))
 
 
-def is_old_header(line):
+def is_old_header(line, force=False):
     # 表頭が 2 行に割れる年（1 行目 '順位 SAJNO 氏 名 ターン エアー タイム'、2 行目 'SAC BIB FISNO … Pts …'）や
-    # 英語版（'Rk BIB FIS Code Name YB … Pts Score Tie'）もある
-    return 'Pts' in line and 'Total' in line and (line.startswith(('順位', 'SAC', 'Rk', 'Rank')) or 'BIB' in line)
+    # 英語版（'Rk BIB FIS Code Name YB … Pts Score Tie'）もある。force のときは 'Point' 表頭（2013〜2016 年の過渡期の様式）も
+    # 同じ「末尾 4 列＝エア計・タイム・タイム点・スコア」として読む
+    if not ('Total' in line and (line.startswith(('順位', 'SAC', 'Rk', 'Rank')) or 'BIB' in line)):
+        return False
+    return 'Pts' in line or (force and ('Point' in line or 'Score' in line or 'スコア' in line))
 
 
 def parse_row_old(tokens, nturn):
@@ -97,7 +100,7 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
     return rec
 
 
-def parse_pdf(path):
+def parse_pdf(path, force=False):
     """戻り値: (meta, sections)。sections の要素は parse_sajmo と同じ形（gender / round / code / pages / athletes / nturn）。
     旧様式の表頭が一つも無ければ sections は空。"""
     sections = []
@@ -129,7 +132,7 @@ def parse_pdf(path):
                     meta['judges'][mj.group(1)] = (role, mj.group(3).strip())
                 if cur is None:
                     continue
-                if is_old_header(line):
+                if is_old_header(line, force):
                     meta['old_layout'] = True
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
                     cur['nturn'] = len(jt) or 3
@@ -186,6 +189,15 @@ def parse_pdf(path):
                 by_no[a['sajno']] = s['gender']
     order = ['女子', '男子']
     for s in sections:
+        if s['gender'] == '' and by_no:
+            # 性別の無い見出し（'決勝リザルト' だけ）: 予選の表の SAJ 番号から性別を決める
+            votes = {}
+            for a in s['athletes']:
+                g = by_no.get(a['sajno'])
+                if g:
+                    votes[g] = votes.get(g, 0) + 1
+            if votes:
+                s['gender'] = max(votes, key=votes.get)
         if s.get('mixed'):
             votes = {}
             for a in s['athletes']:

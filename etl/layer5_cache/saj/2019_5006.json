@@ -1,0 +1,117 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5006/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "20",
+"code": "05001494",
+"name": "梶原 久紗子",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "49.95",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "18",
+"code": "05001408",
+"name": "田口 友麻",
+"club": "ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
+"pref": "千葉",
+"score": "42.30",
+"pts": "9.10"
+},
+{
+"rank": "3",
+"bib": "16",
+"code": "05001389",
+"name": "大塚 早智",
+"club": "自然学校ｷｯﾂ",
+"pref": "宮城",
+"score": "40.78",
+"pts": "8.20"
+},
+{
+"rank": "4",
+"bib": "21",
+"code": "05000651",
+"name": "新谷 奈津美",
+"club": "ｴｸｽﾃｯｸさいたま",
+"pref": "埼玉",
+"score": "39.26",
+"pts": "7.30"
+},
+{
+"rank": "5",
+"bib": "17",
+"code": "05001455",
+"name": "畑田 森夢",
+"club": "福知山成美高校",
+"pref": "京都",
+"score": "37.72",
+"pts": "6.40"
+},
+{
+"rank": "6",
+"bib": "19",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "33.44",
+"pts": "5.50"
+},
+{
+"rank": "7",
+"bib": "23",
+"code": "05001721",
+"name": "中條 理緒",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "29.74",
+"pts": "4.60"
+},
+{
+"rank": "8",
+"bib": "25",
+"code": "05001726",
+"name": "中村 美桜",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "DNF",
+"pts": "3.70"
+},
+{
+"rank": "9",
+"bib": "24",
+"code": "05001795",
+"name": "水沼 優希菜",
+"club": "TEAM BUMPS",
+"pref": "神奈川",
+"score": "23.02",
+"pts": "2.80"
+},
+{
+"rank": "10",
+"bib": "22",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "WESTERN BUMPS",
+"pref": "兵庫",
+"score": "18.32",
+"pts": "1.90"
+},
+{
+"rank": "11",
+"bib": "26",
+"code": "05000673",
+"name": "竹森 清香",
+"club": "ｴｷｯﾌﾟFSC",
+"pref": "新潟",
+"score": "2.00",
+"pts": "1.00"
+}
+],
+"fetched_at": "2026-09-25"
+}

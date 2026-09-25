@@ -1,0 +1,227 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0006/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "54",
+"code": "05001586",
+"name": "渡辺 銀河",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "60.65",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "62",
+"code": "05001533",
+"name": "小笹 海成",
+"club": "東海ﾌﾘｰｽﾀｲﾙSC",
+"pref": "愛知",
+"score": "42.35",
+"pts": "9.50"
+},
+{
+"rank": "3",
+"bib": "67",
+"code": "05001784",
+"name": "藤村 一慶",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "40.22",
+"pts": "9.00"
+},
+{
+"rank": "4",
+"bib": "63",
+"code": "05001184",
+"name": "木下 敬史",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "37.83",
+"pts": "8.50"
+},
+{
+"rank": "5",
+"bib": "56",
+"code": "05001725",
+"name": "中村 隆仁",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "34.02",
+"pts": "8.00"
+},
+{
+"rank": "6",
+"bib": "48",
+"code": "05001790",
+"name": "中村 拓斗",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "33.46",
+"pts": "7.50"
+},
+{
+"rank": "7",
+"bib": "59",
+"code": "05001714",
+"name": "岡田 悠敬",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "31.20",
+"pts": "7.00"
+},
+{
+"rank": "8",
+"bib": "58",
+"code": "05001717",
+"name": "栗原 草太",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "9.90",
+"pts": "6.50"
+},
+{
+"rank": "9",
+"bib": "51",
+"code": "05001654",
+"name": "林 遼真",
+"club": "朝霞市ｽｷｰ連盟",
+"pref": "埼玉",
+"score": "25.86",
+"pts": "6.00"
+},
+{
+"rank": "10",
+"bib": "55",
+"code": "05001723",
+"name": "髙橋 小鉄",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "23.80",
+"pts": "5.50"
+},
+{
+"rank": "11",
+"bib": "52",
+"code": "05001791",
+"name": "三好 諒征",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "23.22",
+"pts": "5.00"
+},
+{
+"rank": "12",
+"bib": "61",
+"code": "05001683",
+"name": "田口 瑛大",
+"club": "ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
+"pref": "千葉",
+"score": "21.78",
+"pts": "4.50"
+},
+{
+"rank": "13",
+"bib": "49",
+"code": "05000196",
+"name": "大村 真一郎",
+"club": "朝霞市ｽｷｰ連盟",
+"pref": "埼玉",
+"score": "19.60",
+"pts": "4.00"
+},
+{
+"rank": "14",
+"bib": "70",
+"code": "05001787",
+"name": "寺田 浩一郎",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "16.50",
+"pts": "3.50"
+},
+{
+"rank": "15",
+"bib": "50",
+"code": "05001792",
+"name": "矢崎 稜真",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "14.62",
+"pts": "3.00"
+},
+{
+"rank": "16",
+"bib": "65",
+"code": "05001493",
+"name": "東 尚輝",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "14.16",
+"pts": "2.50"
+},
+{
+"rank": "17",
+"bib": "68",
+"code": "05001794",
+"name": "野村 龍久馬",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "3.59",
+"pts": "2.00"
+},
+{
+"rank": "18",
+"bib": "60",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "2.57",
+"pts": "1.50"
+},
+{
+"rank": "19",
+"bib": "64",
+"code": "05001480",
+"name": "中島 貴宏",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "1.96",
+"pts": "1.00"
+},
+{
+"rank": "20",
+"bib": "57",
+"code": "05001788",
+"name": "佐藤 青葉",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "1.90",
+"pts": "0.50"
+},
+{
+"rank": "",
+"bib": "66",
+"code": "05001096",
+"name": "柳田 啓二郎",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "69",
+"code": "05001789",
+"name": "澤井 亜連",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

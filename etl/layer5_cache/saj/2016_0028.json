@@ -1,0 +1,197 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/0028/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "49",
+"code": "05001224",
+"name": "高橋 誉志樹",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "55.77",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "47",
+"code": "05000032",
+"name": "木谷 隆史",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "41.10",
+"pts": "9.38"
+},
+{
+"rank": "3",
+"bib": "40",
+"code": "05000007",
+"name": "赤平 謙次",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "38.66",
+"pts": "8.76"
+},
+{
+"rank": "4",
+"bib": "41",
+"code": "05001586",
+"name": "渡辺 銀河",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "35.68",
+"pts": "8.14"
+},
+{
+"rank": "5",
+"bib": "33",
+"code": "05001257",
+"name": "西田 武徳",
+"club": "ｽｷｰﾁｰﾑｾﾞﾛ",
+"pref": "京都",
+"score": "32.81",
+"pts": "7.52"
+},
+{
+"rank": "6",
+"bib": "42",
+"code": "05001217",
+"name": "青木 龍弥",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "19.37",
+"pts": "6.90"
+},
+{
+"rank": "7",
+"bib": "53",
+"code": "05001462",
+"name": "関口 豊萌",
+"club": "富山FSC",
+"pref": "富山",
+"score": "18.96",
+"pts": "6.28"
+},
+{
+"rank": "8",
+"bib": "54",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "9.85",
+"pts": "5.66"
+},
+{
+"rank": "9",
+"bib": "51",
+"code": "05001489",
+"name": "大和田 諒",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "8.91",
+"pts": "5.04"
+},
+{
+"rank": "10",
+"bib": "52",
+"code": "05001454",
+"name": "森岡 賢一",
+"club": "ｲﾏﾄｸﾒﾃﾞｨｯｸ",
+"pref": "愛知",
+"score": "8.88",
+"pts": "4.42"
+},
+{
+"rank": "11",
+"bib": "39",
+"code": "05000992",
+"name": "西村 佳則",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "8.65",
+"pts": "3.80"
+},
+{
+"rank": "12",
+"bib": "44",
+"code": "05001095",
+"name": "河西 敏彦",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "7.77",
+"pts": "3.18"
+},
+{
+"rank": "13",
+"bib": "50",
+"code": "05001420",
+"name": "阿部 裕輝",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "2.38",
+"pts": "2.56"
+},
+{
+"rank": "14",
+"bib": "48",
+"code": "05001225",
+"name": "田村 斗亜",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "1.95",
+"pts": "1.94"
+},
+{
+"rank": "15",
+"bib": "55",
+"code": "05001493",
+"name": "東 尚輝",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.48",
+"pts": "1.32"
+},
+{
+"rank": "16",
+"bib": "43",
+"code": "05000048",
+"name": "赤平 慎也",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "0.99",
+"pts": "0.70"
+},
+{
+"rank": "",
+"bib": "46",
+"code": "05001511",
+"name": "大城 敦史",
+"club": "南中山中学校",
+"pref": "宮城",
+"score": "DNF",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "56",
+"code": "05001189",
+"name": "水野 茂",
+"club": "ｽﾎﾟｰﾂｱﾙﾍﾟﾝ･ｽｷｰｸﾗﾌﾞ",
+"pref": "愛知",
+"score": "DNF",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "45",
+"code": "05001316",
+"name": "木村 真之",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

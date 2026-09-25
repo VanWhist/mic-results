@@ -1,0 +1,197 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2021/competition/0127/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "",
+"code": "05001905",
+"name": "村上 伊織",
+"club": "Ｆｕｓsnowareaｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "44.20",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "",
+"code": "05000992",
+"name": "西村 佳則",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "36.26",
+"pts": "9.48"
+},
+{
+"rank": "3",
+"bib": "",
+"code": "05001788",
+"name": "佐藤 青葉",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "34.07",
+"pts": "8.96"
+},
+{
+"rank": "4",
+"bib": "",
+"code": "05000068",
+"name": "木村 淳児",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "32.88",
+"pts": "8.44"
+},
+{
+"rank": "5",
+"bib": "",
+"code": "05001856",
+"name": "平岡 芭偉論",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "31.91",
+"pts": "7.92"
+},
+{
+"rank": "6",
+"bib": "",
+"code": "05001794",
+"name": "野村 龍久馬",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "29.22",
+"pts": "7.40"
+},
+{
+"rank": "7",
+"bib": "",
+"code": "05001779",
+"name": "上原 吏玖",
+"club": "(株) 忍建設スキー部",
+"pref": "宮城",
+"score": "DNF",
+"pts": "6.88"
+},
+{
+"rank": "7",
+"bib": "",
+"code": "05001096",
+"name": "柳田 啓二郎",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "DNF",
+"pts": "6.88"
+},
+{
+"rank": "9",
+"bib": "",
+"code": "05001898",
+"name": "奥村 太陽",
+"club": "チーム3110",
+"pref": "大阪",
+"score": "20.26",
+"pts": "5.84"
+},
+{
+"rank": "10",
+"bib": "",
+"code": "05001845",
+"name": "武居 伸明",
+"club": "札幌モーグル研究会",
+"pref": "北海道",
+"score": "19.35",
+"pts": "5.32"
+},
+{
+"rank": "11",
+"bib": "",
+"code": "05001902",
+"name": "細谷 琉惺",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "19.03",
+"pts": "4.80"
+},
+{
+"rank": "12",
+"bib": "",
+"code": "05001595",
+"name": "江崎 誠",
+"club": "宇都宮SC",
+"pref": "栃木",
+"score": "17.58",
+"pts": "4.28"
+},
+{
+"rank": "13",
+"bib": "",
+"code": "05001926",
+"name": "米田 真那人",
+"club": "NISEKO B&j",
+"pref": "北海道",
+"score": "17.02",
+"pts": "3.76"
+},
+{
+"rank": "14",
+"bib": "",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "14.85",
+"pts": "3.24"
+},
+{
+"rank": "15",
+"bib": "",
+"code": "05001939",
+"name": "藤原 蓮",
+"club": "ジュニアスキークラブ",
+"pref": "大阪",
+"score": "12.96",
+"pts": "2.72"
+},
+{
+"rank": "16",
+"bib": "",
+"code": "05001841",
+"name": "押部 健生",
+"club": "金山中学校",
+"pref": "福島",
+"score": "6.75",
+"pts": "2.20"
+},
+{
+"rank": "17",
+"bib": "",
+"code": "05001901",
+"name": "小林 昊椰",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "3.34",
+"pts": "1.68"
+},
+{
+"rank": "18",
+"bib": "",
+"code": "05001722",
+"name": "村上 那月",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "2.02",
+"pts": "1.16"
+},
+{
+"rank": "19",
+"bib": "",
+"code": "05001858",
+"name": "大木 晋",
+"club": "札幌モーグル研究会",
+"pref": "北海道",
+"score": "1.16",
+"pts": "0.64"
+}
+],
+"fetched_at": "2026-09-25"
+}

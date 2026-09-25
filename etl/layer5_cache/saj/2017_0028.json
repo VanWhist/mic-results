@@ -1,0 +1,117 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0028/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "87",
+"code": "05001100",
+"name": "田中 雄大",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "45.10",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "86",
+"code": "05001489",
+"name": "大和田 諒",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "36.69",
+"pts": "8.89"
+},
+{
+"rank": "3",
+"bib": "94",
+"code": "05001540",
+"name": "諏訪 稜季",
+"club": "八甲田山FSSC",
+"pref": "青森",
+"score": "35.89",
+"pts": "7.78"
+},
+{
+"rank": "4",
+"bib": "85",
+"code": "05000063",
+"name": "斎藤 直樹",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "34.84",
+"pts": "6.67"
+},
+{
+"rank": "5",
+"bib": "81",
+"code": "05000008",
+"name": "神原 淳一",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "33.91",
+"pts": "5.56"
+},
+{
+"rank": "6",
+"bib": "88",
+"code": "05000048",
+"name": "赤平 慎也",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "31.07",
+"pts": "4.45"
+},
+{
+"rank": "7",
+"bib": "89",
+"code": "05000032",
+"name": "木谷 隆史",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "22.92",
+"pts": "3.34"
+},
+{
+"rank": "8",
+"bib": "83",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "1.80",
+"pts": "2.23"
+},
+{
+"rank": "9",
+"bib": "92",
+"code": "05001095",
+"name": "河西 敏彦",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "12.75",
+"pts": "1.12"
+},
+{
+"rank": "",
+"bib": "84",
+"code": "05001316",
+"name": "木村 真之",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "90",
+"code": "05001480",
+"name": "中島 貴宏",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

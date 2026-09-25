@@ -1,0 +1,127 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5004/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "20",
+"code": "05001494",
+"name": "梶原 久紗子",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "51.72",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "18",
+"code": "05001408",
+"name": "田口 友麻",
+"club": "ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
+"pref": "千葉",
+"score": "40.40",
+"pts": "9.17"
+},
+{
+"rank": "3",
+"bib": "16",
+"code": "05001389",
+"name": "大塚 早智",
+"club": "自然学校ｷｯﾂ",
+"pref": "宮城",
+"score": "36.20",
+"pts": "8.34"
+},
+{
+"rank": "4",
+"bib": "17",
+"code": "05001455",
+"name": "畑田 森夢",
+"club": "福知山成美高校",
+"pref": "京都",
+"score": "32.07",
+"pts": "7.51"
+},
+{
+"rank": "5",
+"bib": "22",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "WESTERN BUMPS",
+"pref": "兵庫",
+"score": "25.33",
+"pts": "6.68"
+},
+{
+"rank": "6",
+"bib": "24",
+"code": "05001795",
+"name": "水沼 優希菜",
+"club": "TEAM BUMPS",
+"pref": "神奈川",
+"score": "19.57",
+"pts": "5.85"
+},
+{
+"rank": "7",
+"bib": "21",
+"code": "05000651",
+"name": "新谷 奈津美",
+"club": "ｴｸｽﾃｯｸさいたま",
+"pref": "埼玉",
+"score": "2.05",
+"pts": "5.02"
+},
+{
+"rank": "8",
+"bib": "15",
+"code": "05001464",
+"name": "高岸 優衣",
+"club": "富山FSC",
+"pref": "富山",
+"score": "1.88",
+"pts": "4.19"
+},
+{
+"rank": "9",
+"bib": "25",
+"code": "05001726",
+"name": "中村 美桜",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "21.45",
+"pts": "3.36"
+},
+{
+"rank": "10",
+"bib": "23",
+"code": "05001721",
+"name": "中條 理緒",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "20.26",
+"pts": "2.53"
+},
+{
+"rank": "11",
+"bib": "19",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "14.36",
+"pts": "1.70"
+},
+{
+"rank": "12",
+"bib": "26",
+"code": "05000673",
+"name": "竹森 清香",
+"club": "ｴｷｯﾌﾟFSC",
+"pref": "新潟",
+"score": "1.20",
+"pts": "0.87"
+}
+],
+"fetched_at": "2026-09-25"
+}

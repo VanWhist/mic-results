@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-25T11:25:11",
+ "generated_at": "2026-09-25T12:50:30",
  "events": [
   {
    "event_id": "2011-12-saj_a-2059-0014",

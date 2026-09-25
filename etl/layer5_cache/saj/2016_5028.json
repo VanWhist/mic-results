@@ -1,0 +1,97 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/5028/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "85",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "49.57",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "83",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "北星学園大学附属高校",
+"pref": "北海道",
+"score": "46.60",
+"pts": "8.75"
+},
+{
+"rank": "3",
+"bib": "82",
+"code": "05001216",
+"name": "元野 里音",
+"club": "魚津西部中学校",
+"pref": "富山",
+"score": "41.89",
+"pts": "7.50"
+},
+{
+"rank": "4",
+"bib": "90",
+"code": "05001323",
+"name": "加藤 美月",
+"club": "Fu's snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "40.31",
+"pts": "6.25"
+},
+{
+"rank": "5",
+"bib": "87",
+"code": "05001494",
+"name": "梶原 久紗子",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "35.09",
+"pts": "5.00"
+},
+{
+"rank": "6",
+"bib": "86",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "武庫川女子大学",
+"pref": "学連",
+"score": "26.11",
+"pts": "3.75"
+},
+{
+"rank": "7",
+"bib": "89",
+"code": "05000635",
+"name": "秋山 美樹",
+"club": "ﾁｰﾑﾘｽﾃﾙ",
+"pref": "福島",
+"score": "9.18",
+"pts": "2.50"
+},
+{
+"rank": "8",
+"bib": "84",
+"code": "05001510",
+"name": "中尾 春香",
+"club": "大阪中学校ｼﾞｭﾆｱｽｷｰｸﾗﾌﾞ",
+"pref": "大阪",
+"score": "DNF",
+"pts": "1.25"
+},
+{
+"rank": "",
+"bib": "88",
+"code": "05001421",
+"name": "栄 穂乃花",
+"club": "富山FSC",
+"pref": "富山",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

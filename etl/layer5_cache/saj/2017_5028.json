@@ -1,0 +1,67 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5028/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "32",
+"code": "05001494",
+"name": "梶原 久紗子",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "44.30",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "34",
+"code": "05000618",
+"name": "藤谷 明日香",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "36.39",
+"pts": "8.00"
+},
+{
+"rank": "3",
+"bib": "35",
+"code": "05001446",
+"name": "諏訪 登志子",
+"club": "八甲田山FSSC",
+"pref": "青森",
+"score": "23.56",
+"pts": "6.00"
+},
+{
+"rank": "4",
+"bib": "31",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "北星学園大学附属高校",
+"pref": "北海道",
+"score": "9.91",
+"pts": "4.00"
+},
+{
+"rank": "5",
+"bib": "36",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "武庫川女子大学",
+"pref": "学連",
+"score": "0.00",
+"pts": "2.00"
+},
+{
+"rank": "",
+"bib": "33",
+"code": "05001234",
+"name": "上野 真奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

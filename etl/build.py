@@ -115,7 +115,9 @@ def main(argv=None):
     n_detail = [ctx for ctx in rounds_ctx if ctx['round']['tier'] == 'detail']
     n_ab = sum(1 for ctx in n_detail if ctx.get('ab_compared'))
     if n_ab != len(n_detail):
-        findings.append(verify.Finding('error', 'global', 'layer1', f"2方式比較が実行されたラウンド {n_ab}/{len(n_detail)}"))
+        # 比較できなかったラウンドには個別のエラー（B 側の表が決まらない等）が付き、その大会は公開されない。
+        # 全体を止めるほどではないので、件数は警告として残す
+        findings.append(verify.Finding('warning', 'global', 'layer1', f"2方式比較が実行されたラウンド {n_ab}/{len(n_detail)}（残りは大会単位で非公開）"))
     findings += verify.dd_consistency(dd_seen)
     for ev in events:
         for gender in ('M', 'W'):

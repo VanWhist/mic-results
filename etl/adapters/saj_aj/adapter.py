@@ -324,12 +324,15 @@ def load_event(ev, imported_at, log=print):
     ctxs = []
     for pdf in ev['pdfs']:
         path = os.path.join(config.PDF_ROOT, pdf['path'])
-        meta, sections = parse_sajmo.parse_pdf(path)
         old_layout = False
-        meta_old, sections_old = parse_sajmo_old.parse_pdf(path)
-        if meta_old.get('old_layout'):
-            # 旧様式（表頭が "Pts"）: 審判点からの再計算はできないので、印字の合計を得点段階で持つ
-            meta, sections, old_layout = meta_old, sections_old, True
+        if ev.get('layout') == 'old':
+            # 旧様式（2015-16 以前。registry の layout）: 審判点からの再計算はできないので、印字の合計を得点段階で持つ
+            meta, sections = parse_sajmo_old.parse_pdf(path, force=True)
+            old_layout = bool(meta.get('old_layout'))
+            if not old_layout:
+                meta, sections = parse_sajmo.parse_pdf(path)
+        else:
+            meta, sections = parse_sajmo.parse_pdf(path)
         problems = section_codes(sections)
         overall_notes = collapse_overall(sections) + mark_overall_groups(sections)
         problems += check_round_counts(sections)
