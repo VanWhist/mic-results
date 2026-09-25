@@ -16,7 +16,7 @@ import pdfplumber
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
 STATUS = ('DNF', 'DNS', 'DSQ', 'DQ')
-SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル)?\s*(予選決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
+SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル)?\s*(予選[・･]?決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -45,10 +45,20 @@ def parse_row_old(tokens, nturn):
         rank = int(tokens[0]); i = 1
     elif tokens[0].isdigit() and len(tokens) > 1 and SAJNO.match(tokens[1]):
         i = 0
+    elif tokens[0].isdigit() and len(tokens) > 3 and tokens[1].isdigit() and len(tokens[1]) <= 3 and not is_num(tokens[2])             and any(is_num(t) for t in tokens[3:]):
+        # SAJ 番号の無い外国籍選手（'41 55 William MAR海外 ｵｰｽﾄﾗﾘｱ …'）: 順位 BIB 氏名 …
+        rank = int(tokens[0]); i = 1
+        bib, sajno = int(tokens[1]), None
+        rest = tokens[2:]
+        return _finish_row(rank, st, bib, sajno, rest, nturn)
     if not (len(tokens) > i + 1 and tokens[i].isdigit() and SAJNO.match(tokens[i + 1])):
         return None
     bib, sajno = int(tokens[i]), tokens[i + 1]
     rest = tokens[i + 2:]
+    return _finish_row(rank, st, bib, sajno, rest, nturn)
+
+
+def _finish_row(rank, st, bib, sajno, rest, nturn):
     tie = None
     if rest and re.fullmatch(r'[A-Z]\d+', rest[-1]):
         tie = rest[-1]; rest = rest[:-1]

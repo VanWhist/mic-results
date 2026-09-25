@@ -1,0 +1,107 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/5006/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "12",
+"code": "05001234",
+"name": "上野 真奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "43.13",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "8",
+"code": "05001388",
+"name": "高橋 汐里",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "41.04",
+"pts": "8.75"
+},
+{
+"rank": "3",
+"bib": "10",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "30.80",
+"pts": "7.50"
+},
+{
+"rank": "4",
+"bib": "16",
+"code": "05001481",
+"name": "藤木 日菜",
+"club": "貝掛中学校",
+"pref": "大阪",
+"score": "25.08",
+"pts": "6.25"
+},
+{
+"rank": "5",
+"bib": "15",
+"code": "05001494",
+"name": "梶原 久紗子",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "11.29",
+"pts": "5.00"
+},
+{
+"rank": "6",
+"bib": "11",
+"code": "05001323",
+"name": "加藤 美月",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "7.52",
+"pts": "3.75"
+},
+{
+"rank": "7",
+"bib": "14",
+"code": "05001510",
+"name": "中尾 春香",
+"club": "大阪中学校ｼﾞｭﾆｱSC",
+"pref": "大阪",
+"score": "5.03",
+"pts": "2.50"
+},
+{
+"rank": "8",
+"bib": "17",
+"code": "05001495",
+"name": "澤田 こゆき",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.85",
+"pts": "1.25"
+},
+{
+"rank": "",
+"bib": "9",
+"code": "05001321",
+"name": "江良 香奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "13",
+"code": "05001105",
+"name": "浅野 文那",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

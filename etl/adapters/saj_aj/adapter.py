@@ -70,7 +70,7 @@ def section_codes(sections):
                 s['saj_code'] = 'F'
             elif r == '決勝':
                 s['saj_code'] = 'SF' if '準決勝' in heads else 'F'
-            elif r == '予選決勝':
+            elif r.startswith('予選') and r.endswith('決勝'):
                 # 1 本で順位が決まる小規模大会。左上の印字記号（Q-w / F-w）があればそれに従う
                 pc = (s.get('code') or 'Q').split('-')[0]
                 s['saj_code'] = pc if pc in ('Q', 'F', 'SF') else 'Q'

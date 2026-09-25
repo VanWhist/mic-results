@@ -1,0 +1,127 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5008/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "1",
+"code": "05000732",
+"name": "伊藤 さつき",
+"club": "立命館大学",
+"pref": "学連",
+"score": "19.83",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "2",
+"code": "05001230",
+"name": "住吉 輝紗良",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "18.74",
+"pts": "13.13"
+},
+{
+"rank": "3",
+"bib": "8",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "17.93",
+"pts": "11.26"
+},
+{
+"rank": "4",
+"bib": "3",
+"code": "05000841",
+"name": "横尾 わなか",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "17.18",
+"pts": "9.39"
+},
+{
+"rank": "5",
+"bib": "6",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "16.27",
+"pts": "7.52"
+},
+{
+"rank": "6",
+"bib": "10",
+"code": "05000616",
+"name": "篠原 舞",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "15.50",
+"pts": "5.65"
+},
+{
+"rank": "7",
+"bib": "4",
+"code": "05001108",
+"name": "森池 ましろ",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "15.02",
+"pts": "3.78"
+},
+{
+"rank": "8",
+"bib": "9",
+"code": "05001231",
+"name": "住吉 桃華",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "13.60",
+"pts": "1.91"
+},
+{
+"rank": "9",
+"bib": "12",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "12.89",
+"pts": ""
+},
+{
+"rank": "10",
+"bib": "5",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "京都共栄学園高校",
+"pref": "京都",
+"score": "8.94",
+"pts": ""
+},
+{
+"rank": "11",
+"bib": "11",
+"code": "05000844",
+"name": "目黒 沙弥",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.28",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "7",
+"code": "05001234",
+"name": "上野 真奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

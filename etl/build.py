@@ -77,6 +77,7 @@ def main(argv=None):
     rounds_ctx = []
     dd_seen = collections.defaultdict(set)
     events_by_id = {ev['event_id']: ev for ev in events}
+    loaded = []  # (ev, ctx) を全部読んでから正規化する（SAJ 番号→FIS コードの対応を大会横断で使うため）
     for ev in events:
         mod = importlib.import_module(f"etl.adapters.{ev['adapter']}.adapter")
         try:
@@ -88,6 +89,10 @@ def main(argv=None):
             if c.get('error_only'):
                 findings.append(verify.Finding('error', c['event_id'], 'layer0', c['message']))
                 continue
+            loaded.append((ev, c))
+    unify_athlete_ids(loaded)
+    for ev, c in loaded:
+        if True:
             # verify the PDF hash recorded in the registry
             cls = c['cls']
             if cls.get('pdf_sha256'):
@@ -198,6 +203,25 @@ def main(argv=None):
                           'runs_hash': content_hash([strip_private(r) for r in ctx['runs']])}
     dump_json(config.PUBLISHED_HASHES, published)
     return 0 if n_err == 0 else 1
+
+
+def unify_athlete_ids(loaded):
+    """SAJ 様式は予選に FIS コードが無く決勝にだけ印字される年がある。同じ SAJ 番号にどこかで FIS コードが印字されていれば、
+    その選手の athlete_id を FIS コードに揃える（根拠は印字。同姓同名の推測はしない）。"""
+    saj_to_fis = {}
+    for _, c in loaded:
+        for rec in c['records']:
+            if rec.get('saj_no') and rec.get('fis_code'):
+                saj_to_fis.setdefault(str(rec['saj_no']), str(rec['fis_code']))
+    n = 0
+    for _, c in loaded:
+        for rec in c['records']:
+            if rec.get('saj_no') and not rec.get('fis_code') and str(rec['saj_no']) in saj_to_fis:
+                rec['fis_code'] = saj_to_fis[str(rec['saj_no'])]
+                rec['athlete_id'] = rec['fis_code']
+                n += 1
+    if n:
+        print(f"  SAJ 番号→FIS コードで athlete_id を揃えた記録: {n}")
 
 
 def strip_private(run):

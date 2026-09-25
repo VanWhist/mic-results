@@ -1,0 +1,77 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/5007/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "1",
+"code": "05001230",
+"name": "住吉 輝紗良",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "66.96",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "2",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "66.82",
+"pts": "12.86"
+},
+{
+"rank": "3",
+"bib": "3",
+"code": "05001322",
+"name": "梶原 有希",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "64.79",
+"pts": "10.72"
+},
+{
+"rank": "4",
+"bib": "4",
+"code": "05001324",
+"name": "森池 あおい",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "53.64",
+"pts": "8.58"
+},
+{
+"rank": "5",
+"bib": "7",
+"code": "05001231",
+"name": "住吉 桃華",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "51.22",
+"pts": "6.44"
+},
+{
+"rank": "6",
+"bib": "5",
+"code": "05001109",
+"name": "横尾 かえで",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "49.85",
+"pts": "4.30"
+},
+{
+"rank": "7",
+"bib": "6",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "北星学園大学附属高校",
+"pref": "北海道",
+"score": "28.08",
+"pts": "2.16"
+}
+],
+"fetched_at": "2026-09-25"
+}

@@ -37,7 +37,8 @@ def overall_from_rounds(rounds_by_code):
     """{athlete_id: {'overall', 'round', 'round_rank', 'score', 'saj_no', 'name'}}。決勝から順に、未配置の選手を順位順に並べる。"""
     out = {}
     placed = 0
-    for code in [c for c in ROUND_ORDER_DESC if c in rounds_by_code]:
+    order = [c for c in ROUND_ORDER_DESC if c in rounds_by_code]
+    for code in order:
         rnd, runs = rounds_by_code[code]
         items = []
         for r in runs:
@@ -45,11 +46,23 @@ def overall_from_rounds(rounds_by_code):
                 continue
             items.append((r['rank'] if r['rank'] else 10 ** 6, r))
         items.sort(key=lambda x: x[0])
-        for rank_in_round, r in items:
-            ranked = rank_in_round < 10 ** 6
-            placed += 1 if ranked else 0
-            out[r['athlete_id']] = {'overall': placed if ranked else None, 'round': code, 'round_rank': rank_in_round if ranked else None,
+        ranked_items = [(rk, r) for rk, r in items if rk < 10 ** 6]
+        unranked = [r for rk, r in items if rk >= 10 ** 6]
+        for rank_in_round, r in ranked_items:
+            placed += 1
+            out[r['athlete_id']] = {'overall': placed, 'round': code, 'round_rank': rank_in_round,
                                     'score': r['run_score'], 'saj_no': r.get('saj_no'), 'name': r['name'], 'status': r['status']}
+        # 決勝で DNF/DNS になった選手は、SAJ の順位表では決勝ブロックの末尾に同順位で載る（予選落ちの選手より上）
+        if unranked and code != order[-1]:
+            shared = placed + 1
+            for r in unranked:
+                out[r['athlete_id']] = {'overall': shared, 'round': code, 'round_rank': None,
+                                        'score': r['run_score'], 'saj_no': r.get('saj_no'), 'name': r['name'], 'status': r['status']}
+            placed += len(unranked)
+        else:
+            for r in unranked:
+                out[r['athlete_id']] = {'overall': None, 'round': code, 'round_rank': None,
+                                        'score': r['run_score'], 'saj_no': r.get('saj_no'), 'name': r['name'], 'status': r['status']}
     return out
 
 
@@ -60,6 +73,14 @@ def _norm_no(s):
 
 def _norm_name(s):
     return ''.join((s or '').split())
+
+
+def _dec(s):
+    """順位表の得点欄 → Decimal。空欄・'-'・'DNF' などは None"""
+    try:
+        return Decimal(str(s).strip())
+    except Exception:  # noqa
+        return None
 
 
 def compare(event_id, gender, rounds_by_code, cache):
@@ -89,7 +110,7 @@ def compare(event_id, gender, rounds_by_code, cache):
     for row, aid in matched:
         o = ours[aid]
         html_rank = int(row['rank']) if str(row.get('rank') or '').strip().isdigit() else None
-        html_score = Decimal(str(row['score'])) if str(row.get('score') or '').strip() not in ('', '-') else None
+        html_score = _dec(row.get('score'))
         our_rank = rerank.get(id(o))
         if html_rank != our_rank:
             note = f"（順位表に無い選手を除いた順位。PDF の総合 {o['overall']}位、{o['round']} {o['round_rank']}位）" if our_rank != o['overall'] else f"（{o['round']} {o['round_rank']}位）"

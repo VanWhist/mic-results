@@ -147,17 +147,27 @@ def read_pdf(path):
                                    if abs(w['top'] - head_w['top']) < 2)
             pace = page_pace(words)
             marks = sorted([w for w in words if re.fullmatch(r'【(男子|女子)】', w['text'])], key=lambda w: w['top'])
-            heads = sorted([w for w in words if w['text'] == '順位'], key=lambda w: w['top'])
+            heads = sorted([w for w in words if w['text'].startswith('順位')], key=lambda w: w['top'])  # '順位BIB' と癒着する年がある
             codex = sorted(w['top'] for w in words if w['text'] == 'CODEX')
             info = dict(page=pno, tables=0, stray=[])
+            # 男女合同ページで 2 つ目の表に見出し行が無い年（2022 HSC）: CODEX 行の後に選手行が続いていれば、
+            # 直前の見出し行を使ってもう 1 つの表として扱う
+            segments = []
             for k, hdr in enumerate(heads):
                 nxt = heads[k + 1]['top'] if k + 1 < len(heads) else page.height
-                end = min([t for t in codex if t > hdr['top']] + [nxt, page.height])
-                mark = [m for m in marks if m['top'] < hdr['top']]
+                ends = sorted([t for t in codex if hdr['top'] < t < nxt]) + [nxt]
+                start = hdr['top']
+                for j, end in enumerate(ends):
+                    segments.append((hdr, start, min(end, nxt), k + j))
+                    start = end + 2
+            for hdr, seg_start, end, k in segments:
+                if seg_start != hdr['top'] and not any(seg_start < w['top'] < end - 1 and w['text'].isdigit() for w in words):
+                    continue  # CODEX 行の後に何も無い（普通の表）
+                mark = [m for m in marks if m['top'] < max(hdr['top'], seg_start + 20)]  # 【男子】は CODEX 行の直後に来ることがある
                 if mark:
                     gender = mark[-1]['text'].strip('【】')
                 else:
-                    gender = next((g for g in GENDER_CODE if heading and heading.startswith(g)), None)
+                    gender = next((g for g in GENDER_CODE if heading and g in heading), None)  # '中学生の部 男子決勝リザルト' も可
                 if gender is None and heading and heading.startswith('男女'):
                     # 男女合同ページ: 左上の記号（F-w/m = 女子→男子）の順に表が並ぶ
                     order = mixed_order(code)
@@ -166,8 +176,9 @@ def read_pdf(path):
                 # 隣り合う断片をつないでから列を決める。
                 hrow = merge_fragments(sorted([w for w in words if abs(w['top'] - hdr['top']) < 2], key=lambda w: w['x0']))
                 nturn, columns = column_map(hrow, [w for w in words if hdr['top'] - 10 <= w['top'] < hdr['top'] - 1])
-                bibx = next(w['x0'] for w in hrow if w['text'] == 'BIB')
-                lines = _lines([w for w in words if hdr['top'] + 5 < w['top'] < end - 1
+                bib_w = next((w for w in hrow if w['text'] == 'BIB'), None)
+                bibx = bib_w['x0'] if bib_w else next(w['x1'] for w in hrow if w['text'].startswith('順位')) - 14
+                lines = _lines([w for w in words if seg_start + 5 < w['top'] < end - 1
                                 and not re.fullmatch(r'【(男子|女子)】', w['text'])])
 
                 def bib_word(line):

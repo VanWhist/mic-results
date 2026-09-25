@@ -1,0 +1,77 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5005/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "1",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "17.41",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "5",
+"code": "05000841",
+"name": "横尾 わなか",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "13.69",
+"pts": "12.86"
+},
+{
+"rank": "3",
+"bib": "6",
+"code": "05001056",
+"name": "岡村 理子",
+"club": "富山FSC",
+"pref": "富山",
+"score": "12.08",
+"pts": "10.72"
+},
+{
+"rank": "4",
+"bib": "4",
+"code": "05000680",
+"name": "高森 美帆",
+"club": "ｱﾐｨSC",
+"pref": "埼玉",
+"score": "8.61",
+"pts": "8.58"
+},
+{
+"rank": "5",
+"bib": "2",
+"code": "05001230",
+"name": "住吉 輝紗良",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "6.24",
+"pts": "6.44"
+},
+{
+"rank": "6",
+"bib": "3",
+"code": "05000613",
+"name": "原田 琴音",
+"club": "北翔大学",
+"pref": "北海道",
+"score": "5.10",
+"pts": "4.30"
+},
+{
+"rank": "7",
+"bib": "7",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "DNS",
+"pts": "2.16"
+}
+],
+"fetched_at": "2026-09-25"
+}

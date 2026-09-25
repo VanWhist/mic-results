@@ -1,0 +1,117 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5006/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "1",
+"code": "05000732",
+"name": "伊藤 さつき",
+"club": "立命館大学",
+"pref": "学連",
+"score": "19.04",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "2",
+"code": "05001230",
+"name": "住吉 輝紗良",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "18.03",
+"pts": "13.13"
+},
+{
+"rank": "3",
+"bib": "3",
+"code": "05000841",
+"name": "横尾 わなか",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "14.16",
+"pts": "11.26"
+},
+{
+"rank": "4",
+"bib": "6",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "13.78",
+"pts": "9.39"
+},
+{
+"rank": "5",
+"bib": "9",
+"code": "05001231",
+"name": "住吉 桃華",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "13.13",
+"pts": "7.52"
+},
+{
+"rank": "6",
+"bib": "11",
+"code": "05000844",
+"name": "目黒 沙弥",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "13.04",
+"pts": "5.65"
+},
+{
+"rank": "7",
+"bib": "4",
+"code": "05001108",
+"name": "森池 ましろ",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "12.47",
+"pts": "3.78"
+},
+{
+"rank": "8",
+"bib": "10",
+"code": "05000616",
+"name": "篠原 舞",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "5.69",
+"pts": "1.91"
+},
+{
+"rank": "9",
+"bib": "12",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "11.80",
+"pts": ""
+},
+{
+"rank": "10",
+"bib": "5",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "京都共栄学園高校",
+"pref": "京都",
+"score": "6.60",
+"pts": ""
+},
+{
+"rank": "11",
+"bib": "8",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "5.15",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

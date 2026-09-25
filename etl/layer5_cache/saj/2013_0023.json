@@ -1,0 +1,127 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0023/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "39",
+"code": "05000954",
+"name": "渡辺 大晴",
+"club": "高倉中学校",
+"pref": "大阪",
+"score": "19.77",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "54",
+"code": "05000396",
+"name": "西川 琳太朗",
+"club": "慶応義塾大学",
+"pref": "学連",
+"score": "19.11",
+"pts": "13.13"
+},
+{
+"rank": "3",
+"bib": "32",
+"code": "05000325",
+"name": "藤井 昌織",
+"club": "白馬高校",
+"pref": "長野",
+"score": "DNF",
+"pts": "11.26"
+},
+{
+"rank": "4",
+"bib": "56",
+"code": "05000843",
+"name": "後藤 萌希",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "16.99",
+"pts": "9.39"
+},
+{
+"rank": "5",
+"bib": "71",
+"code": "05000033",
+"name": "原田 泰河",
+"club": "Fu's snow area sc",
+"pref": "北海道",
+"score": "15.63",
+"pts": "7.52"
+},
+{
+"rank": "6",
+"bib": "41",
+"code": "05001001",
+"name": "吉川 大地",
+"club": "ｼﾞｬﾊﾟｰﾅｽｷｰﾁｰﾑ",
+"pref": "愛知",
+"score": "15.51",
+"pts": "5.65"
+},
+{
+"rank": "7",
+"bib": "72",
+"code": "05000988",
+"name": "小山 貴史",
+"club": "Club ACLs",
+"pref": "富山",
+"score": "14.90",
+"pts": "3.78"
+},
+{
+"rank": "8",
+"bib": "61",
+"code": "05001060",
+"name": "尾登 可南太",
+"club": "竹園高校",
+"pref": "茨城",
+"score": "12.02",
+"pts": "1.91"
+},
+{
+"rank": "9",
+"bib": "59",
+"code": "05000990",
+"name": "坂田 天来",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "5.73",
+"pts": ""
+},
+{
+"rank": "10",
+"bib": "73",
+"code": "05001118",
+"name": "村田 優太郎",
+"club": "北九州市立洞北中学校",
+"pref": "福岡",
+"score": "2.29",
+"pts": ""
+},
+{
+"rank": "11",
+"bib": "38",
+"code": "05000818",
+"name": "佐々木 流星",
+"club": "盛岡南高校",
+"pref": "岩手",
+"score": "DNF",
+"pts": ""
+},
+{
+"rank": "12",
+"bib": "70",
+"code": "05001101",
+"name": "島川 拓也",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

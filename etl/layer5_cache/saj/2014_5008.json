@@ -1,0 +1,107 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5008/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "12",
+"code": "05001322",
+"name": "梶原 有希",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "15.49",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "10",
+"code": "05001324",
+"name": "森池 あおい",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "14.80",
+"pts": "9.00"
+},
+{
+"rank": "3",
+"bib": "11",
+"code": "05001109",
+"name": "横尾 かえで",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "13.79",
+"pts": "8.00"
+},
+{
+"rank": "4",
+"bib": "18",
+"code": "05001388",
+"name": "高橋 汐里",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "13.24",
+"pts": "7.00"
+},
+{
+"rank": "5",
+"bib": "9",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "12.94",
+"pts": "6.00"
+},
+{
+"rank": "6",
+"bib": "13",
+"code": "05001321",
+"name": "江良 香奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "7.95",
+"pts": "5.00"
+},
+{
+"rank": "7",
+"bib": "16",
+"code": "05001323",
+"name": "加藤 美月",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "7.88",
+"pts": "4.00"
+},
+{
+"rank": "8",
+"bib": "14",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "2.19",
+"pts": "3.00"
+},
+{
+"rank": "9",
+"bib": "17",
+"code": "05001381",
+"name": "松原 琴音",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "6.25",
+"pts": "2.00"
+},
+{
+"rank": "10",
+"bib": "15",
+"code": "05001233",
+"name": "蓑島 杏衣",
+"club": "ｽﾎﾟｰﾂｲﾝｼﾞｬﾊﾟﾝ",
+"pref": "北海道",
+"score": "5.01",
+"pts": "1.00"
+}
+],
+"fetched_at": "2026-09-25"
+}

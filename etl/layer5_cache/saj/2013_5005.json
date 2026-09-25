@@ -1,0 +1,157 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5005/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "8",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "16.75",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "9",
+"code": "05001231",
+"name": "住吉 桃華",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "13.19",
+"pts": "9.10"
+},
+{
+"rank": "3",
+"bib": "6",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "12.23",
+"pts": "8.20"
+},
+{
+"rank": "4",
+"bib": "12",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "11.50",
+"pts": "7.30"
+},
+{
+"rank": "5",
+"bib": "11",
+"code": "05000844",
+"name": "目黒 沙弥",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "11.48",
+"pts": "6.40"
+},
+{
+"rank": "6",
+"bib": "19",
+"code": "05001324",
+"name": "森池 あおい",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "10.15",
+"pts": "5.50"
+},
+{
+"rank": "7",
+"bib": "5",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "京都共栄学園高校",
+"pref": "京都",
+"score": "8.33",
+"pts": "4.60"
+},
+{
+"rank": "8",
+"bib": "17",
+"code": "05001321",
+"name": "江良 香奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "3.26",
+"pts": "3.70"
+},
+{
+"rank": "9",
+"bib": "18",
+"code": "05001322",
+"name": "梶原 有希",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "7.45",
+"pts": "2.80"
+},
+{
+"rank": "10",
+"bib": "13",
+"code": "05001105",
+"name": "浅野 文那",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "7.32",
+"pts": "1.90"
+},
+{
+"rank": "11",
+"bib": "16",
+"code": "05001260",
+"name": "鴻野 蒼",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "6.21",
+"pts": "1.00"
+},
+{
+"rank": "12",
+"bib": "10",
+"code": "05000616",
+"name": "篠原 舞",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.79",
+"pts": ""
+},
+{
+"rank": "13",
+"bib": "14",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area sc",
+"pref": "北海道",
+"score": "1.47",
+"pts": ""
+},
+{
+"rank": "14",
+"bib": "15",
+"code": "05001233",
+"name": "蓑島 杏衣",
+"club": "ｽﾎﾟｰﾂ ｲﾝ ｼﾞｬﾊﾟﾝ",
+"pref": "北海道",
+"score": "0.30",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "7",
+"code": "05001234",
+"name": "上野 真奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "DNF",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

@@ -1,0 +1,227 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/0006/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "20",
+"code": "05001224",
+"name": "高橋 誉志樹",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "53.09",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "21",
+"code": "05001372",
+"name": "佐々木 白馬",
+"club": "ﾌﾘｰｽﾀｲﾙSC",
+"pref": "岩手",
+"score": "44.83",
+"pts": "9.48"
+},
+{
+"rank": "3",
+"bib": "18",
+"code": "05000068",
+"name": "木村 淳児",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "39.56",
+"pts": "8.96"
+},
+{
+"rank": "4",
+"bib": "38",
+"code": "05001490",
+"name": "金子 空陸",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "37.04",
+"pts": "8.44"
+},
+{
+"rank": "5",
+"bib": "26",
+"code": "05001391",
+"name": "長井 優剛",
+"club": "神楽中学校",
+"pref": "北海道",
+"score": "36.87",
+"pts": "7.92"
+},
+{
+"rank": "6",
+"bib": "23",
+"code": "05001220",
+"name": "加藤 凌太",
+"club": "札幌藻岩高校",
+"pref": "北海道",
+"score": "33.90",
+"pts": "7.40"
+},
+{
+"rank": "7",
+"bib": "16",
+"code": "05001100",
+"name": "田中 雄大",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "33.56",
+"pts": "6.88"
+},
+{
+"rank": "8",
+"bib": "17",
+"code": "05000007",
+"name": "赤平 謙次",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "33.33",
+"pts": "6.36"
+},
+{
+"rank": "9",
+"bib": "33",
+"code": "05000021",
+"name": "高越 聡",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "29.90",
+"pts": "5.84"
+},
+{
+"rank": "10",
+"bib": "24",
+"code": "05000048",
+"name": "赤平 慎也",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "26.93",
+"pts": "5.32"
+},
+{
+"rank": "11",
+"bib": "37",
+"code": "05001491",
+"name": "川岡 士真",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "25.21",
+"pts": "4.80"
+},
+{
+"rank": "12",
+"bib": "22",
+"code": "05000992",
+"name": "西村 佳則",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "DNF",
+"pts": "4.28"
+},
+{
+"rank": "13",
+"bib": "29",
+"code": "05001095",
+"name": "河西 敏彦",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "18.12",
+"pts": "3.76"
+},
+{
+"rank": "14",
+"bib": "35",
+"code": "05001420",
+"name": "阿部 裕輝",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "17.58",
+"pts": "3.24"
+},
+{
+"rank": "15",
+"bib": "39",
+"code": "05001480",
+"name": "中島 貴宏",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "14.07",
+"pts": "2.72"
+},
+{
+"rank": "16",
+"bib": "28",
+"code": "05001318",
+"name": "坂本 惇",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "7.33",
+"pts": "2.20"
+},
+{
+"rank": "17",
+"bib": "19",
+"code": "05001217",
+"name": "青木 龍弥",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "3.76",
+"pts": "1.68"
+},
+{
+"rank": "18",
+"bib": "34",
+"code": "05001493",
+"name": "東 尚輝",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.75",
+"pts": "1.16"
+},
+{
+"rank": "19",
+"bib": "15",
+"code": "05001225",
+"name": "田村 斗亜",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "1.00",
+"pts": "0.64"
+},
+{
+"rank": "",
+"bib": "25",
+"code": "05000033",
+"name": "原田 泰河",
+"club": "藻岩高校",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "30",
+"code": "05001316",
+"name": "木村 真之",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "31",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

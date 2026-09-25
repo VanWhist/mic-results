@@ -1,0 +1,157 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5007/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "8",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "16.77",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "6",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "14.32",
+"pts": "9.17"
+},
+{
+"rank": "3",
+"bib": "12",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "14.06",
+"pts": "8.34"
+},
+{
+"rank": "4",
+"bib": "9",
+"code": "05001231",
+"name": "住吉 桃華",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "13.73",
+"pts": "7.51"
+},
+{
+"rank": "5",
+"bib": "10",
+"code": "05000616",
+"name": "篠原 舞",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "13.30",
+"pts": "6.68"
+},
+{
+"rank": "6",
+"bib": "7",
+"code": "05001234",
+"name": "上野 真奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "13.20",
+"pts": "5.85"
+},
+{
+"rank": "7",
+"bib": "11",
+"code": "05000844",
+"name": "目黒 沙弥",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "12.64",
+"pts": "5.02"
+},
+{
+"rank": "8",
+"bib": "19",
+"code": "05001324",
+"name": "森池 あおい",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "12.56",
+"pts": "4.19"
+},
+{
+"rank": "9",
+"bib": "18",
+"code": "05001322",
+"name": "梶原 有希",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "11.05",
+"pts": "3.36"
+},
+{
+"rank": "10",
+"bib": "5",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "京都共栄学園高校",
+"pref": "京都",
+"score": "9.83",
+"pts": "2.53"
+},
+{
+"rank": "11",
+"bib": "17",
+"code": "05001321",
+"name": "江良 香奈",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "9.65",
+"pts": "1.70"
+},
+{
+"rank": "12",
+"bib": "13",
+"code": "05001105",
+"name": "浅野 文那",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "7.30",
+"pts": "0.87"
+},
+{
+"rank": "13",
+"bib": "15",
+"code": "05001233",
+"name": "蓑島 杏衣",
+"club": "ｽﾎﾟｰﾂ ｲﾝ ｼﾞｬﾊﾟﾝ",
+"pref": "北海道",
+"score": "4.27",
+"pts": ""
+},
+{
+"rank": "14",
+"bib": "14",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area sc",
+"pref": "北海道",
+"score": "2.99",
+"pts": ""
+},
+{
+"rank": "15",
+"bib": "16",
+"code": "05001260",
+"name": "鴻野 蒼",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "1.05",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

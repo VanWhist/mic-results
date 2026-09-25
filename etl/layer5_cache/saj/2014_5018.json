@@ -1,0 +1,177 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5018/result",
+"status": 200,
+"rows": [
+{
+"rank": "1",
+"bib": "8",
+"code": "05001230",
+"name": "住吉 輝紗良",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "",
+"pts": "15.00"
+},
+{
+"rank": "2",
+"bib": "1",
+"code": "05001104",
+"name": "梶原 千裕",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "",
+"pts": "14.07"
+},
+{
+"rank": "3",
+"bib": "2",
+"code": "05000613",
+"name": "原田 琴音",
+"club": "北翔大学",
+"pref": "北海道",
+"score": "",
+"pts": "13.14"
+},
+{
+"rank": "4",
+"bib": "3",
+"code": "05000680",
+"name": "高森 美帆",
+"club": "ｱﾐｨSC",
+"pref": "埼玉",
+"score": "",
+"pts": "12.21"
+},
+{
+"rank": "5",
+"bib": "9",
+"code": "05001322",
+"name": "梶原 有希",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "",
+"pts": "11.28"
+},
+{
+"rank": "6",
+"bib": "11",
+"code": "05000985",
+"name": "鈴木 那音",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "",
+"pts": "10.35"
+},
+{
+"rank": "7",
+"bib": "5",
+"code": "05000841",
+"name": "横尾 わなか",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "",
+"pts": "9.42"
+},
+{
+"rank": "8",
+"bib": "6",
+"code": "05001324",
+"name": "森池 あおい",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "",
+"pts": "8.49"
+},
+{
+"rank": "9",
+"bib": "7",
+"code": "05001109",
+"name": "横尾 かえで",
+"club": "札幌国際情報高校",
+"pref": "北海道",
+"score": "",
+"pts": "7.56"
+},
+{
+"rank": "10",
+"bib": "4",
+"code": "05000699",
+"name": "荻原 京",
+"club": "野沢北高校",
+"pref": "長野",
+"score": "",
+"pts": "6.63"
+},
+{
+"rank": "11",
+"bib": "13",
+"code": "05000986",
+"name": "今野 衣純",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝSC",
+"pref": "北海道",
+"score": "",
+"pts": "5.70"
+},
+{
+"rank": "12",
+"bib": "10",
+"code": "05001388",
+"name": "高橋 汐里",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "",
+"pts": "4.77"
+},
+{
+"rank": "13",
+"bib": "16",
+"code": "05001232",
+"name": "堀 佳純",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "",
+"pts": "3.84"
+},
+{
+"rank": "14",
+"bib": "12",
+"code": "05001323",
+"name": "加藤 美月",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "",
+"pts": "2.91"
+},
+{
+"rank": "15",
+"bib": "15",
+"code": "05001381",
+"name": "松原 琴音",
+"club": "Fu's snow area SC",
+"pref": "北海道",
+"score": "",
+"pts": "1.98"
+},
+{
+"rank": "16",
+"bib": "17",
+"code": "05001105",
+"name": "浅野 文那",
+"club": "TEAM　BUMPS",
+"pref": "北海道",
+"score": "",
+"pts": "1.05"
+},
+{
+"rank": "",
+"bib": "14",
+"code": "05000779",
+"name": "吉田 果蓮",
+"club": "徳風高校",
+"pref": "岐阜",
+"score": "DNS",
+"pts": ""
+}
+],
+"fetched_at": "2026-09-25"
+}

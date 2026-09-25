@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-25T10:09:02",
+ "generated_at": "2026-09-25T11:25:11",
  "events": [
   {
    "event_id": "2011-12-saj_a-2059-0014",
@@ -206,6 +206,930 @@
    ],
    "rules": null,
    "sheet_prefix": "2012-13-saj_a-2034-0019",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_aj-2046-0035",
+   "season": "2012-13",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "DM",
+   "name_ja": "第33回全日本ｽｷｰ選手権大会・ﾌﾘｰｽﾀｲﾙｽｷｰ競技・種目:ﾓｰｸﾞﾙ・ﾃﾞｭｱﾙﾓｰｸﾞﾙ The33rd All Japan Ski Champions",
+   "date": "2013-03-31",
+   "saj_comp": "2046",
+   "saj_category": "FIS NC DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2012-13/SAJ2013_2046_0035_M_DM.pdf",
+     "sha256": "314e38836d558e50644d17e6bda4a761c39ff9db79e8a29c54b7e4682b3bdf9b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0035/result",
+     "gender": "M",
+     "codex": "0035",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130035.pdf"
+    },
+    {
+     "path": "SAJ_AJ/2012-13/SAJ2013_2046_5035_W_DM.pdf",
+     "sha256": "800280e134ee9abe4ad3f1a3368b99939e7ea9cb2e246f72395a06482b25f03c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5035/result",
+     "gender": "W",
+     "codex": "5035",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135035.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2012-13-saj_aj-2046-0035",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2013-14-saj_a-2003-0018",
+   "season": "2013-14",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第33回北海道ｽｷｰ選手権大会 ﾌﾘｰｽﾀｲﾙ競技 種目:ﾓｰｸﾞﾙ･ﾃﾞｭｱﾙﾓｰｸﾞﾙ",
+   "date": "2014-02-23",
+   "saj_comp": "2003",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2013-14/SAJ2014_2003_0018_M_DM.pdf",
+     "sha256": "1079eb5fcc0ea28ba06a02fa04ba206675c68e9badc489264ddd81f9e203a90e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20140018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20140018.pdf"
+    },
+    {
+     "path": "SAJ_A/2013-14/SAJ2014_2003_5018_W_DM.pdf",
+     "sha256": "415fcb43e98e8361ec822f6be97030ba1f47e91c633da0fee170f8d36751cc84",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20145018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20145018.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2013-14-saj_a-2003-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2013-14-saj_a-2016-0031",
+   "season": "2013-14",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2014 ﾌﾘｰｽﾀｲﾙｽｷｰ秋田・田沢湖ﾓｰｸﾞﾙ競技会",
+   "date": "2014-03-16",
+   "saj_comp": "2016",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2013-14/SAJ2014_2016_0031_M_DM.pdf",
+     "sha256": "a6bb3531a76a8f31a229e03566462670c6db26901d08d32d8de492483a69e2e9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20140031.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/0031/result",
+     "gender": "M",
+     "codex": "0031",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20140031.pdf"
+    },
+    {
+     "path": "SAJ_A/2013-14/SAJ2014_2016_5031_W_DM.pdf",
+     "sha256": "ca6e1435461e34a20a9602836d385f5f64185bcb665c82c04a2bb2a747f027fe",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20145031.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5031/result",
+     "gender": "W",
+     "codex": "5031",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20145031.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2013-14-saj_a-2016-0031",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2013-14-saj_aj-2018-0034",
+   "season": "2013-14",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "DM",
+   "name_ja": "第34回全日本ｽｷｰ選手権大会 ﾌﾘｰｽﾀｲﾙｽｷｰ競技 種目:ﾓｰｸﾞﾙ･ﾃﾞｭｱﾙﾓｰｸﾞﾙ",
+   "date": "2014-03-28",
+   "saj_comp": "2018",
+   "saj_category": "NC DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2013-14/SAJ2014_2018_0034_M_DM.pdf",
+     "sha256": "a4c30ad1fa853bde8f2021e36f1dc5669e3106869aefbcc750bbcbd19f8dfe29",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20140034.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/0034/result",
+     "gender": "M",
+     "codex": "0034",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20140034.pdf"
+    },
+    {
+     "path": "SAJ_AJ/2013-14/SAJ2014_2018_5034_W_DM.pdf",
+     "sha256": "5d86c295949a7580ef4a1fde10b0d7a0f228e97156d97cc083a47a16492d3234",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20145034.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5034/result",
+     "gender": "W",
+     "codex": "5034",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20145034.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2013-14-saj_aj-2018-0034",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2014-15-saj_a-1970-0016",
+   "season": "2014-15",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2015ﾌﾘｰｽﾀｲﾙｽｷｰ秋田・田沢湖ﾓｰｸﾞﾙ競技会",
+   "date": "2015-02-08",
+   "saj_comp": "1970",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2014-15/SAJ2015_1970_0016_M_DM.pdf",
+     "sha256": "f783f9536784edb78b510b05126b424dc5e22fcaba083cf5d687a081b83fefbd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2015/FS/FSRE20150016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/0016/result",
+     "gender": "M",
+     "codex": "0016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20150016.pdf"
+    },
+    {
+     "path": "SAJ_A/2014-15/SAJ2015_1970_5016_W_DM.pdf",
+     "sha256": "61a6dd5efde3d7f11109c88d2c6281822adb6c2680ceb00966d21ca8a414c619",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2015/FS/FSRE20155016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/5016/result",
+     "gender": "W",
+     "codex": "5016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20155016.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2014-15-saj_a-1970-0016",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2014-15-saj_aj-1987-0036",
+   "season": "2014-15",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "DM",
+   "name_ja": "第35回全日本ｽｷｰ選手権大会・ﾌﾘｰｽﾀｲﾙｽｷｰ競技・種目:ﾓｰｸﾞﾙ･ﾃﾞｭｱﾙﾓｰｸﾞﾙ",
+   "date": "2015-03-22",
+   "saj_comp": "1987",
+   "saj_category": "NC DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2014-15/SAJ2015_1987_0036_M_DM.pdf",
+     "sha256": "1942bd4bd9e431bc6cd66be3dc1fd5a42021c4f4598432166307521732c1fa3a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2015/FS/FSRE20150036.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/0036/result",
+     "gender": "M",
+     "codex": "0036",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20150036.pdf"
+    },
+    {
+     "path": "SAJ_AJ/2014-15/SAJ2015_1987_5036_W_DM.pdf",
+     "sha256": "75a54ae6bd0c8a4c08d131e9ce527097f8fd22bbdfb5c0ba2db38cbb49b10042",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2015/FS/FSRE20155036.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2015/competition/5036/result",
+     "gender": "W",
+     "codex": "5036",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20155036.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2014-15-saj_aj-1987-0036",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-saj_a-1943-0016",
+   "season": "2015-16",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2016フリースタイルスキー秋田・田沢湖モーグル競技会",
+   "date": "2016-02-07",
+   "saj_comp": "1943",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
+     "sha256": "1dbacf1ee95ca2228cdd06a75538ea1a81ebdd74234864c5437dfffd532201fc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20160016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/0016/result",
+     "gender": "M",
+     "codex": "0016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20160016.pdf"
+    },
+    {
+     "path": "SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
+     "sha256": "bcc41efaca68a446a5982b2b106ef88f3dc397cb0a58b4dbfd1b572eef0899b7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20165016.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/5016/result",
+     "gender": "W",
+     "codex": "5016",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20165016.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2015-16-saj_a-1943-0016",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-saj_aj-1944-0018",
+   "season": "2015-16",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "DM",
+   "name_ja": "第36回全日本スキー選手権大会フリースタイルスキー競技 種目:モーグル・デュアルモーグル The 36th All Japan Ski Championship",
+   "date": "2016-02-14",
+   "saj_comp": "1944",
+   "saj_category": "NC DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2015-16/SAJ2016_1944_0018_M_DM.pdf",
+     "sha256": "bb765022c7e3351e55bc8f58693aaf732eff9cd56896c62c0a050f4a0d84e518",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20160018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20160018.pdf"
+    },
+    {
+     "path": "SAJ_AJ/2015-16/SAJ2016_1944_5018_W_DM.pdf",
+     "sha256": "9704a08824c35be149e3fd7e6ea1eb34f9d6166e589cb43857e5b846e74bbb63",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20165018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20165018.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2015-16-saj_aj-1944-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-fis-1947-0021",
+   "season": "2015-16",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第35回北海道スキー選手権大会フリースタイル競技 種目：モーグル・デュアルモーグル 35th HOKKAIDO Ski Championship Freesty",
+   "date": "2016-02-27",
+   "saj_comp": "1947",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2015-16/SAJ2016_1947_0021_M_DM.pdf",
+     "sha256": "038f17e7355fec89ae0bf489b2e6e438e22969f1f46b5bebab6921481bfa9bde",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20160021.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/0021/result",
+     "gender": "M",
+     "codex": "0021",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20160021.pdf"
+    },
+    {
+     "path": "FIS/2015-16/SAJ2016_1947_5021_W_DM.pdf",
+     "sha256": "5d9bca11fd9676c48d21b5d0f301dd1e37998ef738f391aae26686a84e9740ac",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2016/FS/FSRE20165021.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2016/competition/5021/result",
+     "gender": "W",
+     "codex": "5021",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20165021.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2015-16-fis-1947-0021",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-saj_a-1910-0007",
+   "season": "2016-17",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第17回ばんけいモーグル競技会",
+   "date": "2017-01-28",
+   "saj_comp": "1910",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2016-17/SAJ2017_1910_0007_M_DM.pdf",
+     "sha256": "8d0354ef393622ab0da286294527092d51e1826366ef2c681da20296bf2b1217",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20170007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0007/result",
+     "gender": "M",
+     "codex": "0007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20170007.pdf"
+    },
+    {
+     "path": "SAJ_A/2016-17/SAJ2017_1910_5007_W_DM.pdf",
+     "sha256": "71d8419b3a3dde2926d9088d7065c517ee67da1ec0ca0075b9bc3db9ea8b9066",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20175007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5007/result",
+     "gender": "W",
+     "codex": "5007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20175007.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2016-17-saj_a-1910-0007",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-saj_a-1911-0010",
+   "season": "2016-17",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2017 フリースタイルスキー 秋田・田沢湖モーグル競技会",
+   "date": "2017-02-05",
+   "saj_comp": "1911",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2016-17/SAJ2017_1911_0010_M_DM.pdf",
+     "sha256": "55ec808ad23cc983a9ac523f041708a6273666f37c5faff3c07766dacccbc349",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20170010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0010/result",
+     "gender": "M",
+     "codex": "0010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20170010.pdf"
+    },
+    {
+     "path": "SAJ_A/2016-17/SAJ2017_1911_5010_W_DM.pdf",
+     "sha256": "8a8482cf00dd54c15d6b0fe9f0a7cc9698630832f11e2413f7415f18ed8cfdc7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20175010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5010/result",
+     "gender": "W",
+     "codex": "5010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20175010.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2016-17-saj_a-1911-0010",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-fis-1918-0018",
+   "season": "2016-17",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第８回冬季アジア冬季競技大会（2017/札幌）8th Asian Winter Games Sapporo 2017",
+   "date": "2017-02-24",
+   "saj_comp": "1918",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2016-17/SAJ2017_1918_0018_M_DM.pdf",
+     "sha256": "048511235bab8333e81a41c8e383f81d164600423f3b16c78713339cc55daee8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20170018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20170018.pdf"
+    },
+    {
+     "path": "FIS/2016-17/SAJ2017_1918_5018_W_DM.pdf",
+     "sha256": "dd0a91a92c4b625aa3c90e1a12e79d8a09c15cfff8299e2e3f78ef9567a77565",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20175018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20175018.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2016-17-fis-1918-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-fis-1927-0033",
+   "season": "2016-17",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第36回北海道スキー選手権大会 フリースタイル競技 ＭＯ/ＤＭ種目The 36th Hokkaido Ski Championships Freestyle",
+   "date": "2017-03-11",
+   "saj_comp": "1927",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2016-17/SAJ2017_1927_0033_M_DM.pdf",
+     "sha256": "cec0d1f00b0be1896a2567bb3a0e9e33a3580afb277958008bc5c942c56a552f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20170033.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0033/result",
+     "gender": "M",
+     "codex": "0033",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20170033.pdf"
+    },
+    {
+     "path": "FIS/2016-17/SAJ2017_1927_5033_W_DM.pdf",
+     "sha256": "a15c92ae8cdf42c8e60abcf4e7eb6a3dd6e9f6a9d4d4e54d635686e4f83f0d81",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20175033.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5033/result",
+     "gender": "W",
+     "codex": "5033",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20175033.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2016-17-fis-1927-0033",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-saj_a-1878-0012",
+   "season": "2017-18",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2018フリースタイルスキー秋田・田沢湖モーグル競技会2018FREESTYLESKI AKITA･TAZAWAKO MOGUL COMPETITION",
+   "date": "2018-02-04",
+   "saj_comp": "1878",
+   "saj_category": "A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2017-18/SAJ2018_1878_0012_M_DM.pdf",
+     "sha256": "4f6e2399af49a715e48240faa0ce7b04258b35b68b835c47e1449168872f3942",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20180012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0012/result",
+     "gender": "M",
+     "codex": "0012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20180012.pdf"
+    },
+    {
+     "path": "SAJ_A/2017-18/SAJ2018_1878_5012_W_DM.pdf",
+     "sha256": "bd9da6f67376fe81fbdb391298c33facb730becfea5658c476da881da38c38f9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20185012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5012/result",
+     "gender": "W",
+     "codex": "5012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20185012.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2017-18-saj_a-1878-0012",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-fis-1880-0013",
+   "season": "2017-18",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第37回北海道スキー選手権大会 ﾌﾘｰｽﾀｲﾙ競技 37th All Hokkaido Ski Championships (Freestyle.DM/MO)",
+   "date": "2018-02-24",
+   "saj_comp": "1880",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2017-18/SAJ2018_1880_0013_M_DM.pdf",
+     "sha256": "d598d8c2aa96799cdcd16ef25a1d79e459f393bf742a8165d6ba428d494351ea",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20180013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0013/result",
+     "gender": "M",
+     "codex": "0013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20180013.pdf"
+    },
+    {
+     "path": "FIS/2017-18/SAJ2018_1880_5013_W_DM.pdf",
+     "sha256": "e0d07bef290a874ac2bd056ac0d3307c16a8d6955d18fa1acf7f841eba730ce5",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20185013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5013/result",
+     "gender": "W",
+     "codex": "5013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20185013.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2017-18-fis-1880-0013",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-fis-1890-0027",
+   "season": "2017-18",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第27回フリースタイル 札幌モーグル競技会27th FreestyleS SAPPORO MOGULS Competition",
+   "date": "2018-03-10",
+   "saj_comp": "1890",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2017-18/SAJ2018_1890_0027_M_DM.pdf",
+     "sha256": "af1a0508bd555c78c1aa4b69c15c539edb4d31a68e17a56fdeb5f3467f925cfd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20180027.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0027/result",
+     "gender": "M",
+     "codex": "0027",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20180027.pdf"
+    },
+    {
+     "path": "FIS/2017-18/SAJ2018_1890_5027_W_DM.pdf",
+     "sha256": "29962fe76fc5d876da331d5589948eb5bfa5d5b457d2fa4936e21425abe5f305",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20185027.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5027/result",
+     "gender": "W",
+     "codex": "5027",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20185027.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2017-18-fis-1890-0027",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-fis-1849-0012",
+   "season": "2018-19",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "2019フリースタイルスキー秋田・田沢湖モーグル競技会2019 FREESTYLESKI AKITA･TAZAWAKO MOGUL COMPETITION",
+   "date": "2019-02-03",
+   "saj_comp": "1849",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2018-19/SAJ2019_1849_0012_M_DM.pdf",
+     "sha256": "b9c9332e02b0007e7af75ce58a6ecd773170deb661ffb56c83172c7ea4c57173",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20190012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0012/result",
+     "gender": "M",
+     "codex": "0012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20190012.pdf"
+    },
+    {
+     "path": "FIS/2018-19/SAJ2019_1849_5012_W_DM.pdf",
+     "sha256": "59deae1ac85c36202f3eacea45355c53d0a790ec7da24b3d30aa4b9115dfc987",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20195012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5012/result",
+     "gender": "W",
+     "codex": "5012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20195012.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2018-19-fis-1849-0012",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-fis-1850-0014",
+   "season": "2018-19",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第38回北海道スキー選手権大会 フリースタイル競技 ＭＯ/ＤＭ種目The 38th Hokkaido Ski Championships Freestyle",
+   "date": "2019-02-16",
+   "saj_comp": "1850",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2018-19/SAJ2019_1850_0014_M_DM.pdf",
+     "sha256": "d7c4782ab6df8efeaf30cdfbcd59c80940b9c2852e2edeef155bff2a15c936ef",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20190014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0014/result",
+     "gender": "M",
+     "codex": "0014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20190014.pdf"
+    },
+    {
+     "path": "FIS/2018-19/SAJ2019_1850_5014_W_DM.pdf",
+     "sha256": "5a9d36bccfa4425c988138f6f6033f74e9b6ed7e67b7e87e9fa4871a4b82d57b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20195014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5014/result",
+     "gender": "W",
+     "codex": "5014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20195014.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2018-19-fis-1850-0014",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-saj_b-1852-0018",
+   "season": "2018-19",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "DM",
+   "name_ja": "第2回小海リエックス・スキーバレーモーグル競技会 The 2nd Koumi RE-EX･ski valley mogul competition",
+   "date": "2019-02-23",
+   "saj_comp": "1852",
+   "saj_category": "B DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2018-19/SAJ2019_1852_0018_M_DM.pdf",
+     "sha256": "5f0aecbb246d757e91989ab3a50189abaa19112daf4a7a1e2274f5c8c889c382",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20190018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20190018.pdf"
+    },
+    {
+     "path": "SAJ_B/2018-19/SAJ2019_1852_5018_W_DM.pdf",
+     "sha256": "7fba924ab63d94e47f2dead8546c5ab9649823e93aed6578606bb33543a4b5f4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20195018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20195018.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2018-19-saj_b-1852-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-fis-208-0009",
+   "season": "2019-20",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第３９回北海道スキー選手権大会 フリースタイル競技 ＭＯ/ＤＭ種目 The 39th Hokkaido Ski Championships Freestyle MO/DM",
+   "date": "2020-02-23",
+   "saj_comp": "208",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2019-20/SAJ2020_208_0009_M_DM.pdf",
+     "sha256": "63d429a35c53e0c861e663e59ab6f58427c753ab45cf13b5566fbc3212243764",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2020/FS/male_result.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2020/competition/0009/result",
+     "gender": "M",
+     "codex": "0009",
+     "saved_at": "2026-09-25",
+     "src_name": "male_result.pdf"
+    },
+    {
+     "path": "FIS/2019-20/SAJ2020_208_5009_W_DM.pdf",
+     "sha256": "d95f6c8088a350815fdca08d3f670d1baf0c3b28c13f307ea3cd3fae34f3d123",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2020/FS/female_result.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2020/competition/5009/result",
+     "gender": "W",
+     "codex": "5009",
+     "saved_at": "2026-09-25",
+     "src_name": "female_result.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2019-20-fis-208-0009",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2020-21-fis-2760-0362",
+   "season": "2020-21",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第４０回北海道スキー選手権大会 フリースタイル競技 DM/MO種目 40th HOKKAIDO Championships Freestyle DM/MO",
+   "date": "2021-02-27",
+   "saj_comp": "2760",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
+     "sha256": "0f139c8a048bb2acd8a9a3df6ebe88f8b49ecd07e98ccc47355ffd58e937f038",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2021/FS/男子DMリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2021/competition/0362/result",
+     "gender": "M",
+     "codex": "0362",
+     "saved_at": "2026-09-25",
+     "src_name": "男子DMリザルト.pdf"
+    },
+    {
+     "path": "FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
+     "sha256": "85008a0e58ecba63729058e524d550ccd7f2eb51dde88cf2ae3af1935953dc67",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2021/FS/女子DMリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2021/competition/5362/result",
+     "gender": "W",
+     "codex": "5362",
+     "saved_at": "2026-09-25",
+     "src_name": "女子DMリザルト.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2020-21-fis-2760-0362",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-fis-3016-0581",
+   "season": "2021-22",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "DM",
+   "name_ja": "第41回北海道スキー選手権大会フリースタイル競技DM/MO種目 The41st HOKKAIDO Ski Championship Freestyle DM/MO",
+   "date": "2022-02-26",
+   "saj_comp": "3016",
+   "saj_category": "FIS/A DM",
+   "tier": "rank",
+   "adapter": "saj_dm",
+   "pdfs": [
+    {
+     "path": "FIS/2021-22/SAJ2022_3016_0581_M_DM.pdf",
+     "sha256": "c7d11501d4a6378519ce28e729c59ce30dc2f1c57492e2926bc78b7bbb537614",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/DM男子リザルト0581.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0581/result",
+     "gender": "M",
+     "codex": "0581",
+     "saved_at": "2026-09-25",
+     "src_name": "DM男子リザルト0581.pdf"
+    },
+    {
+     "path": "FIS/2021-22/SAJ2022_3016_5581_W_DM.pdf",
+     "sha256": "a999cd84f37600746697fb8b5b0bfdf60dd8cea6da98bf82f5fd722f6503c34d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/DM女子リザルト5581.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5581/result",
+     "gender": "W",
+     "codex": "5581",
+     "saved_at": "2026-09-25",
+     "src_name": "DM女子リザルト5581.pdf"
+    }
+   ],
+   "rules": null,
+   "sheet_prefix": "2021-22-fis-3016-0581",
    "format": {
     "label": null,
     "advance": {}
