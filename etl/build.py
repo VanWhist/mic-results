@@ -37,6 +37,8 @@ def load_registry(adapter_filter=None, event_filter=None):
             continue
         reg = load_json(os.path.join(config.REGISTRY_DIR, fn), {})
         for ev in reg.get('events', []):
+            if ev.get('skip'):  # 対象外と決めた大会（理由は skip に書く）
+                continue
             if adapter_filter and ev['adapter'] != adapter_filter:
                 continue
             if event_filter and event_filter not in ev['event_id']:

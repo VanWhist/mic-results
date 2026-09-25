@@ -54,7 +54,7 @@ def parse_line1(tokens, nturn=5):
         tail = tail[:-1]
     # 同点で順位を決めた選手は同点欄に 'T1' 'T2' と印字される（全日本2025 予選7・8位）。
     # これを数値列の終わりと扱えないと、完走者がエラーなしで DNF になり、名前に所属と技コードが混ざる。
-    if tail and re.fullmatch(r'T\d+', tail[-1]):
+    if tail and re.fullmatch(r'[A-Z]\d+', tail[-1]):  # 同点欄: 全日本は T1/T2、公認大会では A1/A2 の印字もある
         tie = tail[-1]
         tail = tail[:-1]
     # 同点列は稀。末尾スコア直後の追加数値は同点順位とみなす（後続の整合検査で捕捉）
@@ -133,6 +133,21 @@ def parse_line2(tokens, nturn=5):
     if tokens and re.match(r'^\d{7}$', tokens[0]):
         fisno = tokens[0]; i = 1
     rest = tokens[i:]
+    # DD は小数 3 桁（0.710 / 1.050）で印字され、減点（1 桁）と区別できる。DD を錨にして
+    # 「クラブ名 [減点×n] 技コード DD Ja Jb」と読む。減点欄の無い様式（B級の一部）でも壊れない。
+    dd_idx = [k for k, t in enumerate(rest) if re.fullmatch(r'\d\.\d{3}', t)]
+    if len(dd_idx) == 1 and dd_idx[0] >= 1 and len(rest) == dd_idx[0] + 3 and is_num(rest[-1]) and is_num(rest[-2]):
+        k = dd_idx[0]
+        jump2 = rest[k - 1]
+        pre = rest[:k - 1]
+        pnums = []
+        m = len(pre) - 1
+        while m >= 0 and is_num(pre[m]):
+            pnums.append(pre[m]); m -= 1
+        pnums.reverse()
+        ded = [float(x) for x in pnums[-nturn:]] if len(pnums) >= nturn else None
+        club = ' '.join(pre[:len(pre) - len(pnums)])
+        return dict(fisno=fisno, club=club, ded=ded, jump2=jump2, dd2=float(rest[k]), j6_2=float(rest[k + 1]), j7_2=float(rest[k + 2]))
     nums_from_end = []
     j = len(rest) - 1
     while j >= 0 and is_num(rest[j]):
@@ -170,11 +185,19 @@ def parse_line2(tokens, nturn=5):
     return dict(fisno=fisno, club=club, ded=None, jump2=None, dd2=None, j6_2=None, j7_2=None)
 
 # 「準決勝」を「決勝」より先に置く。逆だと '男子準決勝リザルト' が性別なしの '決勝' に化ける。
-SEC = re.compile(r'(男女|女子|男子)?\s*(予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
+SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル)?\s*(予選決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')  # 2012 年ごろは '男子モーグル予選リザルト'  # 予選決勝＝1本で順位が決まる小規模大会
 # ページ左上のラウンド記号（SF-m / F-w/m / Q-m 等）。日本語見出しとの対応が年で違うので控えておく
 # （2026は SF-m=「決勝」、F-m=「準決勝」）。
 ROUNDCODE = re.compile(r'^(?:MO\s+)?((?:SF|F|Q)-[a-z/]+)$')
 GENDER_MARK = re.compile(r'^【(男子|女子)】$')
+
+
+def mixed_order(code):
+    """'F-w/m' → ['女子', '男子']。記号が無ければ女子→男子（SAJ 様式の男女合同ページの既定）。"""
+    m = re.match(r'^(?:SF|F|Q)-([a-z/]+)$', code or '')
+    if m and '/' in m.group(1):
+        return [{'w': '女子', 'm': '男子'}.get(x, '?') for x in m.group(1).split('/')]
+    return ['女子', '男子']
 
 def parse_pdf(path):
     sections = []
@@ -230,6 +253,19 @@ def parse_pdf(path):
                 if cur is None:
                     continue
                 if line.startswith('順位') and 'Total' in line:
+                    if cur['gender'] == '男女' or cur.get('mixed'):
+                        # 「男女 決勝リザルト」は1セクションに女子表・男子表が並ぶ（順位ヘッダ行が表ごとに出る）。
+                        # 表の順序は左上の記号（F-w/m = 女子→男子）で決め、表ごとにセクションを分ける。
+                        order = mixed_order(cur.get('code'))
+                        k = cur.get('mixed_k', 0)
+                        if cur['gender'] == '男女':
+                            cur['mixed'] = True
+                        else:
+                            cur = dict(gender=None, round=cur['round'], code=cur['code'], heading=cur['heading'],
+                                       pages=[pno], athletes=[], mixed=True)
+                            sections.append(cur)
+                        cur['gender'] = order[k] if k < len(order) else '?'
+                        cur['mixed_k'] = k + 1
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
                     if jt:
                         cur['nturn'] = len(jt)
@@ -255,7 +291,15 @@ def parse_pdf(path):
                     l2 = parse_line2(tokens, nturn)
                     if l2 and (l2.get('ded') or l2.get('fisno') or l2.get('club')):
                         last.update(l2)
-    return meta, sections
+    # 同じ表が2回印字されている PDF（結合ミス）: 性別・ラウンド・BIB の集合が同じセクションは後の方を捨てる
+    seen, kept = set(), []
+    for sec in sections:
+        sig = (sec['gender'], sec['round'], sec.get('code'), tuple(sorted((a.get('bib'), a.get('sajno')) for a in sec['athletes'])))
+        if sig in seen:
+            continue
+        seen.add(sig)
+        kept.append(sec)
+    return meta, kept
 
 def check(meta, sections):
     """内部整合検査。返り値: (エラーリスト, 検査数)"""

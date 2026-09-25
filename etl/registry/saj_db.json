@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-25T08:31:26",
+ "generated_at": "2026-09-25T10:09:02",
  "events": [
   {
    "event_id": "2011-12-saj_b-2051-0001",
@@ -784,6 +784,5176 @@
    ],
    "rules": "規則_SAJ_2011-12",
    "sheet_prefix": "2011-12-saj_a-2068-0023",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_a-2069-0025",
+   "season": "2011-12",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第31回北海道スキー選手権大会フリースタイル競技 種目：デュアルモーグル・モーグル",
+   "date": "2012-03-04",
+   "saj_comp": "2069",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2069_0025_M_MO.pdf",
+     "sha256": "f51dc4493bf3176825e1a3d0541acfd1cef284b75ffed003c8bbf2cf3e4fc407",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120025.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0025/result",
+     "gender": "M",
+     "codex": "0025",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120025.pdf"
+    },
+    {
+     "path": "SAJ_A/2011-12/SAJ2012_2069_5025_W_MO.pdf",
+     "sha256": "3e2f6e8231448cf19dafb8ff7e42722641b7f9aa092c908c7f4b7cc85d578fcf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125025.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5025/result",
+     "gender": "W",
+     "codex": "5025",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125025.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_a-2069-0025",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2070-0026",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第16回埼玉県松之山温泉モーグル大会",
+   "date": "2012-03-04",
+   "saj_comp": "2070",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2070_0026_M_MO.pdf",
+     "sha256": "b6967744c2c2efd7fff4d1e87b49cb44dc4561837f50804c4366963bd6ab5d34",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120026.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0026/result",
+     "gender": "M",
+     "codex": "0026",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120026.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2070_5026_W_MO.pdf",
+     "sha256": "6a89a442b018290537b36d836536882529636d22b24df8aaa2f4e46e0fd0428b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125026.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5026/result",
+     "gender": "W",
+     "codex": "5026",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125026.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2070-0026",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2071-0027",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2012ハチ北CUPモーグル大会 兼第６回兵庫県選手権大会フリースタイル競技モーグル種目",
+   "date": "2012-03-04",
+   "saj_comp": "2071",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2071_0027_M_MO.pdf",
+     "sha256": "334116ef87524e005638ae9214ae5245d0453161a034a9c3d73269389da2bf80",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120027.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0027/result",
+     "gender": "M",
+     "codex": "0027",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120027.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2071_5027_W_MO.pdf",
+     "sha256": "748ff43569f753fecbe8af09e1bc7ffdbd40192b38db1385b68d6553e282406d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125027.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5027/result",
+     "gender": "W",
+     "codex": "5027",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125027.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2071-0027",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_aj-2072-0028",
+   "season": "2011-12",
+   "series": "SAJ_AJ",
+   "grade": "全日本",
+   "discipline": "MO",
+   "name_ja": "第32回全日本スキー選手権大会・フリースタイルスキー競技・種目:モーグル・デュアルモーグルThe 32nd All Japan Ski Championsh",
+   "date": "2012-03-10",
+   "saj_comp": "2072",
+   "saj_category": "NC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJ/2011-12/SAJ2012_2072_5028_W_MO.pdf",
+     "sha256": "1aa53dd7472df6c65acef27dddde69c88c069dc7342172a89161361778a5b35f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125028.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5028/result",
+     "gender": "W",
+     "codex": "5028",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125028.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_aj-2072-0028",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2075-0032",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ 第12回全国スキージュニア競技会 兼 2012全日本ジュニアスキー選手権大会 フリースタイル競技・種目：モーグル",
+   "date": "2012-03-20",
+   "saj_comp": "2075",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2075_0032_M_MO.pdf",
+     "sha256": "06313ea98a6a186b4d5a573c0db43451534aaced4ab5d1a6069962c70b54213b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120032.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0032/result",
+     "gender": "M",
+     "codex": "0032",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120032.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2075_5032_W_MO.pdf",
+     "sha256": "fb5243ffc2c5f6d274713bd0aed8792ea67dce567ffce10fdf3812d54df8b34a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125032.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5032/result",
+     "gender": "W",
+     "codex": "5032",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125032.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2075-0032",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2075-0037",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ 第12回全国スキージュニア競技会 兼 2012全日本ジュニアスキー選手権大会 フリースタイル競技・種目：モーグル",
+   "date": "2012-03-20",
+   "saj_comp": "2075",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2075_0037_M_MO.pdf",
+     "sha256": "b708435f78301481bb50a6cf2a9ad0223f5426f8cbbc94785b48d985a6ccd258",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120037.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0037/result",
+     "gender": "M",
+     "codex": "0037",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120037.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2075_5037_W_MO.pdf",
+     "sha256": "38c893a9c418b29c8e163921b64f002d7b16c5052ab0122a506348c59165d62e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125037.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5037/result",
+     "gender": "W",
+     "codex": "5037",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125037.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2075-0037",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2077-0034",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第10回松之山温泉国体記念モーグル競技会",
+   "date": "2012-04-01",
+   "saj_comp": "2077",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2077_0034_M_MO.pdf",
+     "sha256": "ee515ac4dd6ba8c8592e44978c1a19dfb9ce47f487cf296bb9ed0b13cba83517",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120034.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0034/result",
+     "gender": "M",
+     "codex": "0034",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120034.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2077_5034_W_MO.pdf",
+     "sha256": "ef5581711ddc8a5290e8e1ecaa75c9bb22735b2f7f80179fe24d8e39afdc2880",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125034.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5034/result",
+     "gender": "W",
+     "codex": "5034",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125034.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2077-0034",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-saj_b-2078-0035",
+   "season": "2011-12",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2012フリースタイルスキーふくしま大会 Ｂ級＆ ＃2 2012 FreestyleSki Fukushima Competition ＃2",
+   "date": "2012-04-07",
+   "saj_comp": "2078",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2078_0035_M_MO.pdf",
+     "sha256": "044d63da791a2403ad60855a2030873221b5340740834ede98e1cd8cf20709ee",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0035/result",
+     "gender": "M",
+     "codex": "0035",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120035.pdf"
+    },
+    {
+     "path": "SAJ_B/2011-12/SAJ2012_2078_5035_W_MO.pdf",
+     "sha256": "208688dbe1ad40f5c6440354953f276dab3166ba4952d2d3de03c3a26c21e491",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5035/result",
+     "gender": "W",
+     "codex": "5035",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125035.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-saj_b-2078-0035",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2011-12-fis-2078-0036",
+   "season": "2011-12",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2012フリースタイルスキーふくしま大会 Ｂ級＆ ＃2 2012 FreestyleSki Fukushima Competition ＃2",
+   "date": "2012-04-08",
+   "saj_comp": "2078",
+   "saj_category": "FIS MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2011-12/SAJ2012_2078_0036_M_MO.pdf",
+     "sha256": "c2c0e810e74e60f50ccb40b3ed2a4c5d47cba4923c441f17d4f21765e735532d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20120036.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/0036/result",
+     "gender": "M",
+     "codex": "0036",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20120036.pdf"
+    },
+    {
+     "path": "FIS/2011-12/SAJ2012_2078_5036_W_MO.pdf",
+     "sha256": "1cf698de352cbaa24470aa7b48f74e1bd9653a2bd31a97243c373f14746d1a61",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2012/FS/FSRE20125036.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2012/competition/5036/result",
+     "gender": "W",
+     "codex": "5036",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20125036.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2011-12",
+   "sheet_prefix": "2011-12-fis-2078-0036",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2023-0001",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第２１回東京都モーグル競技会(Ｂ級)",
+   "date": "2013-01-13",
+   "saj_comp": "2023",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2023_0001_M_MO.pdf",
+     "sha256": "5f90b909cf4ec23ef8fa78269be7660ab96390f129a9ac919b45a02df426b446",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130001.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0001/result",
+     "gender": "M",
+     "codex": "0001",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130001.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2023_5001_W_MO.pdf",
+     "sha256": "eb65a56c3f02e4982512f217f88cbaf2f09c8c21992a439cf35fe7f988ced838",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135001.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5001/result",
+     "gender": "W",
+     "codex": "5001",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135001.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2023-0001",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2025-0003",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第１３回埼玉県松之山温泉モーグル競技会",
+   "date": "2013-01-13",
+   "saj_comp": "2025",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2025_0003_M_MO.pdf",
+     "sha256": "abd206acf208a008aba7e3260ad4ebb47c798adaa1b9bdddb8af0710ef1f7083",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130003.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0003/result",
+     "gender": "M",
+     "codex": "0003",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130003.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2025_5003_W_MO.pdf",
+     "sha256": "f659fd4f06f34a52ca20340c05e7d277e451016f3d374c74a8956abf80e26156",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135003.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5003/result",
+     "gender": "W",
+     "codex": "5003",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135003.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2025-0003",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-fis-2024-0002",
+   "season": "2012-13",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第２１回東京都モーグル競技会(A級・FIS) Tokyo-to Mogul Competitions",
+   "date": "2013-01-14",
+   "saj_comp": "2024",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2012-13/SAJ2013_2024_0002_M_MO.pdf",
+     "sha256": "dbb7cf38a5075a9fd582d4248e3f3f5187d35e44f7687641f05805de9fec71f9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130002.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0002/result",
+     "gender": "M",
+     "codex": "0002",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130002.pdf"
+    },
+    {
+     "path": "FIS/2012-13/SAJ2013_2024_5002_W_MO.pdf",
+     "sha256": "c6240837dfef92942386b1bd8aca7a8e0b2347b47d52c2b4b11b437f3095b239",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135002.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5002/result",
+     "gender": "W",
+     "codex": "5002",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135002.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-fis-2024-0002",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2025-0004",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第１３回埼玉県松之山温泉モーグル競技会",
+   "date": "2013-01-14",
+   "saj_comp": "2025",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2025_0004_M_MO.pdf",
+     "sha256": "a7df53ba01672cb6c710cb110692428361a939f6a2d4e0902d29d983db01aee7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130004.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0004/result",
+     "gender": "M",
+     "codex": "0004",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130004.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2025_5004_W_MO.pdf",
+     "sha256": "7650c661a8dd07eed83c47257dd012b9901ea5fabc98c45b902a096fd6aba42d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135004.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5004/result",
+     "gender": "W",
+     "codex": "5004",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135004.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2025-0004",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2026-0005",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第１３回札幌モーグル競技会",
+   "date": "2013-01-19",
+   "saj_comp": "2026",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2026_0005_M_MO.pdf",
+     "sha256": "7096ba329784ef55b9ec511d6fafe34d8234b9720c94b50e355b1d39ef1e7e6c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130005.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0005/result",
+     "gender": "M",
+     "codex": "0005",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130005.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2026_5005_W_MO.pdf",
+     "sha256": "c29499277ba19a03048ff4e136842651feef273e83ced96be10f104ec8fe5a39",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135005.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5005/result",
+     "gender": "W",
+     "codex": "5005",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135005.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2026-0005",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2026-0006",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第１３回札幌モーグル競技会",
+   "date": "2013-01-19",
+   "saj_comp": "2026",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2026_0006_M_MO.pdf",
+     "sha256": "852926ec19efb0bc5f5fb0adb25b64006650bb0266ce74407313810b34511429",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130006.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0006/result",
+     "gender": "M",
+     "codex": "0006",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130006.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2026_5006_W_MO.pdf",
+     "sha256": "122c1620077d80b45c28598b8425b9b66e1e2170ae322d53b7dcdcc2f59d5ae3",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135006.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5006/result",
+     "gender": "W",
+     "codex": "5006",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135006.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2026-0006",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2027-0009",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第１０回千葉県松之山温泉モーグル競技会",
+   "date": "2013-01-19",
+   "saj_comp": "2027",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2027_0009_M_MO.pdf",
+     "sha256": "6ae6fb937b54363a3100a4bb69da84c9c039129bf7e885e3dfb9bd3e13786610",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130009.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0009/result",
+     "gender": "M",
+     "codex": "0009",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130009.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2027_5009_W_MO.pdf",
+     "sha256": "697f1f0fd5750e0f14760ae42a3334d1c81d4a0a5977a871a1c87e291418477f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135009.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5009/result",
+     "gender": "W",
+     "codex": "5009",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135009.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2027-0009",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2026-0007",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第１３回札幌モーグル競技会",
+   "date": "2013-01-20",
+   "saj_comp": "2026",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2026_0007_M_MO.pdf",
+     "sha256": "a8b97fa5e0fd67f6d306d8c65de1ab375e8ed9385389434ead8c2b6d69f1d7d0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0007/result",
+     "gender": "M",
+     "codex": "0007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130007.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2026_5007_W_MO.pdf",
+     "sha256": "0247ff923c01c1bc229f80de6ec7f0040907d634addb334b2807e8c2cfd28ce2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135007.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5007/result",
+     "gender": "W",
+     "codex": "5007",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135007.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2026-0007",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2026-0008",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第１３回札幌モーグル競技会",
+   "date": "2013-01-20",
+   "saj_comp": "2026",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2026_0008_M_MO.pdf",
+     "sha256": "1e5f09915f6c99491ea2abf7758ec5a166070d07adfaf7f6fb26370d7d31090f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130008.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0008/result",
+     "gender": "M",
+     "codex": "0008",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130008.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2026_5008_W_MO.pdf",
+     "sha256": "d03c73bf34806084f7c8bd01084f5b0ad586672be3edd1bf9b359c8e3b4d6001",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135008.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5008/result",
+     "gender": "W",
+     "codex": "5008",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135008.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2026-0008",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2027-0010",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第１０回千葉県松之山温泉モーグル競技会",
+   "date": "2013-01-20",
+   "saj_comp": "2027",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2027_0010_M_MO.pdf",
+     "sha256": "91f79d1f8a738250ea5e5ae379962548897a67f619ff5a8442c246ba0ef65128",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0010/result",
+     "gender": "M",
+     "codex": "0010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130010.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2027_5010_W_MO.pdf",
+     "sha256": "0cea1531c5aa86f4f91ecc76ac150814f01475c425b9ff6764f412a1996ca72e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135010.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5010/result",
+     "gender": "W",
+     "codex": "5010",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135010.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2027-0010",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-fis-2028-0011",
+   "season": "2012-13",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2013ﾌﾘｰｽﾀｲﾙｽｷｰふくしま大会#1 2013 FreestyleSki Fukushima Competitions #1",
+   "date": "2013-01-26",
+   "saj_comp": "2028",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2012-13/SAJ2013_2028_0011_M_MO.pdf",
+     "sha256": "719129045123583513e89767544910fe3e91bc50355211ab520e1bbc738fb21d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130011.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0011/result",
+     "gender": "M",
+     "codex": "0011",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130011.pdf"
+    },
+    {
+     "path": "FIS/2012-13/SAJ2013_2028_5011_W_MO.pdf",
+     "sha256": "eb0e7da9b1a0eaebfda0777991838d804f7ef707321d06f0fe3cafa14b533c00",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135011.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5011/result",
+     "gender": "W",
+     "codex": "5011",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135011.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-fis-2028-0011",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2029-0012",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "白馬さのさかモーグル大会 第1戦、第2戦",
+   "date": "2013-01-26",
+   "saj_comp": "2029",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2029_0012_M_MO.pdf",
+     "sha256": "21b0078e12bd06ffd7671947392aec7d7a9514fe57947841498a96d4d1ec3619",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0012/result",
+     "gender": "M",
+     "codex": "0012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130012.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2029_5012_W_MO.pdf",
+     "sha256": "a0a258bc678edd239c773768e39bc9c55b14b3d806e28a3ffb957b91a3cbe97e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135012.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5012/result",
+     "gender": "W",
+     "codex": "5012",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135012.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2029-0012",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_b-2029-0013",
+   "season": "2012-13",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "白馬さのさかモーグル大会 第1戦、第2戦",
+   "date": "2013-01-27",
+   "saj_comp": "2029",
+   "saj_category": "SAJ B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2029_0013_M_MO.pdf",
+     "sha256": "a89c64452b8cd1a7b8921c701b6eadad1a6cb6c994b8a4769d025c37b90e7c56",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0013/result",
+     "gender": "M",
+     "codex": "0013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130013.pdf"
+    },
+    {
+     "path": "SAJ_B/2012-13/SAJ2013_2029_5013_W_MO.pdf",
+     "sha256": "8b8e06ceee70fbaf413a181aa3accec4bbceebd5ffa124a8b12cec661cab9ffa",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135013.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5013/result",
+     "gender": "W",
+     "codex": "5013",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135013.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_b-2029-0013",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-fis-2030-0014",
+   "season": "2012-13",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第32回東京都ﾌﾘｰｽﾀｲﾙｽｷｰ選手権大会(A級・FIS) FS Tokyo-to Championships",
+   "date": "2013-01-27",
+   "saj_comp": "2030",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2012-13/SAJ2013_2030_0014_M_MO.pdf",
+     "sha256": "d39c6166fcf980915160c4a5494a7a31befc5bf2e1a507e185fd47a979722924",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0014/result",
+     "gender": "M",
+     "codex": "0014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130014.pdf"
+    },
+    {
+     "path": "FIS/2012-13/SAJ2013_2030_5014_W_MO.pdf",
+     "sha256": "8d8ae4f9e412326c3e2330c826ca274d0ea48c75409b7e468f4438ae7f57a0a8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135014.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5014/result",
+     "gender": "W",
+     "codex": "5014",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135014.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-fis-2030-0014",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2031-0015",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "２０１３全日本A級公認東海北陸ブロックモーグル競技会愛知県大会",
+   "date": "2013-02-02",
+   "saj_comp": "2031",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2031_0015_M_MO.pdf",
+     "sha256": "79712411082027715b9a107e3bb320ccd7312eb27bf63e1b889844306439a378",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130015.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0015/result",
+     "gender": "M",
+     "codex": "0015",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130015.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2031_5015_W_MO.pdf",
+     "sha256": "15af65fe2b1d4ec04c34fc02a1450efd041fc722f7edfcf299b23c397adfbddf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135015.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5015/result",
+     "gender": "W",
+     "codex": "5015",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135015.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2031-0015",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-fis-2032-0017",
+   "season": "2012-13",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第31回長野県ﾌﾘｰｽﾀｲﾙｽｷｰ選手権大会 The 31st Nagano Freestyleski Championships",
+   "date": "2013-02-16",
+   "saj_comp": "2032",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2012-13/SAJ2013_2032_0017_M_MO.pdf",
+     "sha256": "b7a5f85168886051e01534a323eb96fe3064a5fa09a4dc5b4ba06d537a11c563",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130017.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0017/result",
+     "gender": "M",
+     "codex": "0017",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130017.pdf"
+    },
+    {
+     "path": "FIS/2012-13/SAJ2013_2032_5017_W_MO.pdf",
+     "sha256": "6f5031ae74d52dfb96c976f45b4f363872edb70f78e07bb6e9b21ab6fdc846cc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135017.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5017/result",
+     "gender": "W",
+     "codex": "5017",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135017.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-fis-2032-0017",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-fis-2033-0018",
+   "season": "2012-13",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第7回埼玉県白馬47ﾓｰｸﾞﾙ選手権大会 2013 The 7th Saitama Mogle Competitions in Hakuba 47",
+   "date": "2013-02-17",
+   "saj_comp": "2033",
+   "saj_category": "FIS/SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2012-13/SAJ2013_2033_0018_M_MO.pdf",
+     "sha256": "cbebba97aefb62e2168f9f3b3d3cd6d250ef3b0e1c7acc3a306d7cb9dc0601c0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0018/result",
+     "gender": "M",
+     "codex": "0018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130018.pdf"
+    },
+    {
+     "path": "FIS/2012-13/SAJ2013_2033_5018_W_MO.pdf",
+     "sha256": "3f7ba45b818645346100d542d9f4b7e7a98d78a07f7379013a7cc43ed9016785",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135018.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5018/result",
+     "gender": "W",
+     "codex": "5018",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135018.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-fis-2033-0018",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2012-13-saj_a-2034-0020",
+   "season": "2012-13",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第32回北海道ｽｷｰ選手権大会 ﾌﾘｰｽﾀｲﾙ競技 種目：ﾃﾞｭｱﾙﾓｰｸﾞﾙ・ﾓｰｸﾞﾙ",
+   "date": "2013-02-24",
+   "saj_comp": "2034",
+   "saj_category": "SAJ A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2034_0020_M_MO.pdf",
+     "sha256": "3b1c4bc047126a833d0a83c054c24304575e00b8c0700cbf25ac96a3f451ab42",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20130020.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/0020/result",
+     "gender": "M",
+     "codex": "0020",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20130020.pdf"
+    },
+    {
+     "path": "SAJ_A/2012-13/SAJ2013_2034_5020_W_MO.pdf",
+     "sha256": "b1660bac6b1f9aea52f34d82a6382aa16fc18bcc9349988e061d552af2a49e9a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2013/FS/FSRE20135020.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2013/competition/5020/result",
+     "gender": "W",
+     "codex": "5020",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20135020.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2012-13",
+   "sheet_prefix": "2012-13-saj_a-2034-0020",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-saj_b-3017-0355",
+   "season": "2021-22",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2022大阪府はくのりモーグル大会 2022 Osaka Hakunori Mogul Comp",
+   "date": "2022-02-26",
+   "saj_comp": "3017",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3017_5355_W_MO.pdf",
+     "sha256": "9ade6c73dceffc3f5a9d16583c3d80b24473610b593e06e30180e34ee22fd34f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/データバンク用第１戦女子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5355/result",
+     "gender": "W",
+     "codex": "5355",
+     "saved_at": "2026-09-25",
+     "src_name": "データバンク用第１戦女子.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-saj_b-3017-0355",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-saj_b-3017-0356",
+   "season": "2021-22",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2022大阪府はくのりモーグル大会 2022 Osaka Hakunori Mogul Comp",
+   "date": "2022-02-27",
+   "saj_comp": "3017",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3017_0356_M_MO.pdf",
+     "sha256": "14c2af4443babff7f38eb593f05d2f86e72b54b8f0333ef9341dbd463c586fac",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/データバンク用第２戦男子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0356/result",
+     "gender": "M",
+     "codex": "0356",
+     "saved_at": "2026-09-25",
+     "src_name": "データバンク用第２戦男子.pdf"
+    },
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3017_5356_W_MO.pdf",
+     "sha256": "8404aabe3496b4588141372c659a221c8285a5fa8f895f869eb3c59fd6f97285",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/データバンク用第２戦女子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5356/result",
+     "gender": "W",
+     "codex": "5356",
+     "saved_at": "2026-09-25",
+     "src_name": "データバンク用第２戦女子.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-saj_b-3017-0356",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-fis-3021-0418",
+   "season": "2021-22",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第31回フリースタイルスキー札幌モーグル競技会 31st Freestyle Ski Sapporo Moguls Competition",
+   "date": "2022-03-05",
+   "saj_comp": "3021",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2021-22/SAJ2022_3021_0418_M_MO.pdf",
+     "sha256": "26c68615e988922d8d19e68037c8c615782e6c393e86203ec99e8ba0ef5a331c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/札幌モーグル_男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0418/result",
+     "gender": "M",
+     "codex": "0418",
+     "saved_at": "2026-09-25",
+     "src_name": "札幌モーグル_男子リザルト.pdf"
+    },
+    {
+     "path": "FIS/2021-22/SAJ2022_3021_5418_W_MO.pdf",
+     "sha256": "b631f5fe30606b9170fb697d683f75b0ae02353974bb54b3bc63ff67d0b19d93",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/札幌モーグル_女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5418/result",
+     "gender": "W",
+     "codex": "5418",
+     "saved_at": "2026-09-25",
+     "src_name": "札幌モーグル_女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-fis-3021-0418",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-fis-3019-0379",
+   "season": "2021-22",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第93回宮様スキー大会国際競技会 The 93rd International MIYASAMA Ski Games",
+   "date": "2022-03-06",
+   "saj_comp": "3019",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2021-22/SAJ2022_3019_0379_M_MO.pdf",
+     "sha256": "3ed4e556aecda28bc947b4c8bca1728645f4c1d818c218c8b2ffdef598001439",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/宮様_男子リザルト2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0379/result",
+     "gender": "M",
+     "codex": "0379",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様_男子リザルト2.pdf"
+    },
+    {
+     "path": "FIS/2021-22/SAJ2022_3019_5379_W_MO.pdf",
+     "sha256": "72480299bb84506781f64eecd97b09cfd85d26c55e3aac79de2e690c8a4e853a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/宮様_女子リザルト2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5379/result",
+     "gender": "W",
+     "codex": "5379",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様_女子リザルト2.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-fis-3019-0379",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-saj_ajjr-3022-0455",
+   "season": "2021-22",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2022全日本ジュニアスキー選手権大会・フリースタイル競技・種目モーグル",
+   "date": "2022-03-12",
+   "saj_comp": "3022",
+   "saj_category": "JROR MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2021-22/SAJ2022_3022_0455_M_MO.pdf",
+     "sha256": "8bf42f8b795f0151972a5330a5ced326672bfd7463464b368c74a9ae851a2c0a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/高校男子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0455/result",
+     "gender": "M",
+     "codex": "0455",
+     "saved_at": "2026-09-25",
+     "src_name": "高校男子.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2021-22/SAJ2022_3022_5455_W_MO.pdf",
+     "sha256": "2986eabe78bac8bf480e419ae2ee17ef453980909784d49381bdf6348ae568b4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/高校女子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5455/result",
+     "gender": "W",
+     "codex": "5455",
+     "saved_at": "2026-09-25",
+     "src_name": "高校女子.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-saj_ajjr-3022-0455",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-saj_ajjr-3022-0630",
+   "season": "2021-22",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2022全日本ジュニアスキー選手権大会・フリースタイル競技・種目モーグル",
+   "date": "2022-03-12",
+   "saj_comp": "3022",
+   "saj_category": "JROR MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2021-22/SAJ2022_3022_0630_M_MO.pdf",
+     "sha256": "4fa939a56477a5a21b7261d388831090437f4d51c945bc186297133f9ca43b9f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/中学男子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0630/result",
+     "gender": "M",
+     "codex": "0630",
+     "saved_at": "2026-09-25",
+     "src_name": "中学男子.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2021-22/SAJ2022_3022_5630_W_MO.pdf",
+     "sha256": "0e5dbfc5c524e4adcb05dc489c8556e39b94a83f6bb26de3722061d97cb64c80",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/中学女子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5630/result",
+     "gender": "W",
+     "codex": "5630",
+     "saved_at": "2026-09-25",
+     "src_name": "中学女子.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-saj_ajjr-3022-0630",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3269-0169",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第23回埼玉県松之山温泉モーグル競技会",
+   "date": "2023-01-28",
+   "saj_comp": "3269",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3269_0169_M_MO.pdf",
+     "sha256": "d98cf56c466e974fe5ffa2e6ea30249325a3818d6e11ff0756ea39920c6f483c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/男子Q.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0169/result",
+     "gender": "M",
+     "codex": "0169",
+     "saved_at": "2026-09-25",
+     "src_name": "男子Q.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3269_5169_W_MO.pdf",
+     "sha256": "0807f3aba3ffd9260f3e68ab0ab6599782c410a4710d9ea0d1f6a11d7bf5d151",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/女子Q.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5169/result",
+     "gender": "W",
+     "codex": "5169",
+     "saved_at": "2026-09-25",
+     "src_name": "女子Q.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3269-0169",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3270-0181",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第23回ばんけいモーグル競技会",
+   "date": "2023-01-28",
+   "saj_comp": "3270",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3270_0181_M_MO.pdf",
+     "sha256": "8b47c6ca7035baa395999e21dfdd7ed683a02da06f35531587de1e09d12e7698",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女決勝28A級_予選-決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0181/result",
+     "gender": "M",
+     "codex": "0181",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女決勝28A級_予選-決勝.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3270_5181_W_MO.pdf",
+     "sha256": "5b8cf6f73acc3fb400c6c939b1c6f11b764a6fccc08a70e111c8b609371392eb",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト女子28A級_予選-決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5181/result",
+     "gender": "W",
+     "codex": "5181",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト女子28A級_予選-決勝.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3270-0181",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3270-0542",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第23回ばんけいモーグル競技会",
+   "date": "2023-01-28",
+   "saj_comp": "3270",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3270_0542_M_MO.pdf",
+     "sha256": "72342052a0acb3c122ab1666d27246cbd70004fdec7b2e35e5c1c58c4e09e9f0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女決勝28B級_予選-決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0542/result",
+     "gender": "M",
+     "codex": "0542",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女決勝28B級_予選-決勝.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3270_5542_W_MO.pdf",
+     "sha256": "a6ea7ed86b8b06094f7b2748a343610607e3f0a0a93a4cbea79d0bb98de5d645",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト女子28B級_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5542/result",
+     "gender": "W",
+     "codex": "5542",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト女子28B級_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3270-0542",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3270-0182",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第23回ばんけいモーグル競技会",
+   "date": "2023-01-29",
+   "saj_comp": "3270",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3270_0182_M_MO.pdf",
+     "sha256": "c1a89a9642da2e088a5c24b021114e3b9602d5b4fdb5f98086e8804b40b93ab2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女予選決勝29A級.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0182/result",
+     "gender": "M",
+     "codex": "0182",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女予選決勝29A級.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3270_5182_W_MO.pdf",
+     "sha256": "c1a89a9642da2e088a5c24b021114e3b9602d5b4fdb5f98086e8804b40b93ab2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女予選決勝29A級_8rP3Bxe.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5182/result",
+     "gender": "W",
+     "codex": "5182",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女予選決勝29A級_8rP3Bxe.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3270-0182",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3270-0543",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第23回ばんけいモーグル競技会",
+   "date": "2023-01-29",
+   "saj_comp": "3270",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3270_0543_M_MO.pdf",
+     "sha256": "2a3260b5624361e85169cfe24457f24bb62e77e8c8e52d0a12b4f6428149b178",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女予選決勝29B級.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0543/result",
+     "gender": "M",
+     "codex": "0543",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女予選決勝29B級.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3270_5543_W_MO.pdf",
+     "sha256": "2a3260b5624361e85169cfe24457f24bb62e77e8c8e52d0a12b4f6428149b178",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/リザルト男女予選決勝29B級_JGcH67s.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5543/result",
+     "gender": "W",
+     "codex": "5543",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男女予選決勝29B級_JGcH67s.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3270-0543",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3271-0175",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "令和4年度新潟県スキー選手権大会兼第21回国体記念松之山温泉モーグル競技会",
+   "date": "2023-01-29",
+   "saj_comp": "3271",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3271_0175_M_MO.pdf",
+     "sha256": "28d5cb0e58a4b002b2a9b18d8921cdb8d7adfc4d09462b05073be8462a02bc24",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/新潟男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0175/result",
+     "gender": "M",
+     "codex": "0175",
+     "saved_at": "2026-09-25",
+     "src_name": "新潟男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3271_5175_W_MO.pdf",
+     "sha256": "7ddbdc4c5fbd03d110d43a57ccf0115c56dc7722f2661267d53e853121c1993e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/新潟女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5175/result",
+     "gender": "W",
+     "codex": "5175",
+     "saved_at": "2026-09-25",
+     "src_name": "新潟女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3271-0175",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3279-0260",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023 サンガリア白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2023-02-11",
+   "saj_comp": "3279",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3279_0260_M_MO.pdf",
+     "sha256": "9a0c58e35c6f3758c035ca1abd1812adf140e53e32cfb0800785682ba76ee8d7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/1戦男子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0260/result",
+     "gender": "M",
+     "codex": "0260",
+     "saved_at": "2026-09-25",
+     "src_name": "1戦男子SAJ.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3279_5260_W_MO.pdf",
+     "sha256": "d25d66723fe4f35094edadc372a025c894ef60a191a95f6f9850e5d45355f81b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/1戦女子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5260/result",
+     "gender": "W",
+     "codex": "5260",
+     "saved_at": "2026-09-25",
+     "src_name": "1戦女子SAJ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3279-0260",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3279-0261",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023 サンガリア白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2023-02-12",
+   "saj_comp": "3279",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3279_0261_M_MO.pdf",
+     "sha256": "9ed18f89cf27fa95a0456344e2a8198ff5bc484fd0bc58f1ae50fc3ca6e600dd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/第２戦男子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0261/result",
+     "gender": "M",
+     "codex": "0261",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦男子SAJ.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3279_5261_W_MO.pdf",
+     "sha256": "80033f9fd3028422e22183718fd34f206bca8199034838d9c42b4fea17e67d6b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/第２戦女子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5261/result",
+     "gender": "W",
+     "codex": "5261",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦女子SAJ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3279-0261",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3280-0284",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023 フリースタイルスキー秋田・田沢湖モーグル競技会 2023 FREESTYLE SKI AKITA TAZAWAKO MOGUL COMPETITION",
+   "date": "2023-02-18",
+   "saj_comp": "3280",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3280_0284_M_MO.pdf",
+     "sha256": "5fbcc4916e349d63b534570abcf2c2820323a851b91452dc56979492c470b741",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/A級総合男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0284/result",
+     "gender": "M",
+     "codex": "0284",
+     "saved_at": "2026-09-25",
+     "src_name": "A級総合男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3280_5284_W_MO.pdf",
+     "sha256": "84117181efc60c70d14b7aacd560e0addb228141cc62fc877f879db2257fa49d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/A級総合女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5284/result",
+     "gender": "W",
+     "codex": "5284",
+     "saved_at": "2026-09-25",
+     "src_name": "A級総合女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3280-0284",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3280-0647",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023 フリースタイルスキー秋田・田沢湖モーグル競技会 2023 FREESTYLE SKI AKITA TAZAWAKO MOGUL COMPETITION",
+   "date": "2023-02-18",
+   "saj_comp": "3280",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3280_0647_M_MO.pdf",
+     "sha256": "db7c0df0409059ea1e0b63462de194af95797241284ea283d90c0030430b9b7c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/B級総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0647/result",
+     "gender": "M",
+     "codex": "0647",
+     "saved_at": "2026-09-25",
+     "src_name": "B級総合リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3280_5647_W_MO.pdf",
+     "sha256": "4d6e51c2df413bd760dc5afba96081926d7ad488aa966494383a8f77b6599688",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/B級総合女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5647/result",
+     "gender": "W",
+     "codex": "5647",
+     "saved_at": "2026-09-25",
+     "src_name": "B級総合女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3280-0647",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3281-0286",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023きはしクリニック東海北陸ブロックモーグル競技会",
+   "date": "2023-02-18",
+   "saj_comp": "3281",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3281_0286_M_MO.pdf",
+     "sha256": "b3c0cf0f1844515f7041d7d5125890346a486f389cf1659a4396664bbb0f6dd4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/0286 男子予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0286/result",
+     "gender": "M",
+     "codex": "0286",
+     "saved_at": "2026-09-25",
+     "src_name": "0286 男子予選.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3281_5286_W_MO.pdf",
+     "sha256": "ebaa709e5721c84ee602856054f3b05950618f76e672c3c8483da8e92e96a666",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/2月18日グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5286/result",
+     "gender": "W",
+     "codex": "5286",
+     "saved_at": "2026-09-25",
+     "src_name": "2月18日グランドリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3281-0286",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3281-0287",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023きはしクリニック東海北陸ブロックモーグル競技会",
+   "date": "2023-02-19",
+   "saj_comp": "3281",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3281_0287_M_MO.pdf",
+     "sha256": "f9eee3184acd4a73aa28236287c3a60bd7faefc4d369992a6587ec6f437f0206",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/男子予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0287/result",
+     "gender": "M",
+     "codex": "0287",
+     "saved_at": "2026-09-25",
+     "src_name": "男子予選.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3281_5287_W_MO.pdf",
+     "sha256": "3f56c89528a977192d4b309c2f1ff84c847cde9ff2c88d8b1c385e0372fe90cf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/女子予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5287/result",
+     "gender": "W",
+     "codex": "5287",
+     "saved_at": "2026-09-25",
+     "src_name": "女子予選.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3281-0287",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3283-0555",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023大阪府はくのりモーグル大会",
+   "date": "2023-02-25",
+   "saj_comp": "3283",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3283_0555_M_MO.pdf",
+     "sha256": "dcbf2f5614c4746ca8af67669b48ccfe837d24b9fed0ada546c5847fc54c0814",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/1戦男子SAJ_CrKGxFX.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0555/result",
+     "gender": "M",
+     "codex": "0555",
+     "saved_at": "2026-09-25",
+     "src_name": "1戦男子SAJ_CrKGxFX.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3283_5555_W_MO.pdf",
+     "sha256": "4502a98c325fb7ae4ca666758efc0c5a2fbe9a152be61993af573b27da484418",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/1戦女子SAJ_BNWA607.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5555/result",
+     "gender": "W",
+     "codex": "5555",
+     "saved_at": "2026-09-25",
+     "src_name": "1戦女子SAJ_BNWA607.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3283-0555",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-fis-3282-0361",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第42回北海道スキー選手権大会フリースタイル競技DM/MO種目 42nd HOKKAIDO Ski Championship Freestyle DM/MO",
+   "date": "2023-02-26",
+   "saj_comp": "3282",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/SAJ2023_3282_0361_M_MO.pdf",
+     "sha256": "e68df539349d1c7c8b3a9517f9b2d34223835cbd1a1fe80bf1122466ec182dfe",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0361/result",
+     "gender": "M",
+     "codex": "0361",
+     "saved_at": "2026-09-25",
+     "src_name": "男子リザルト.pdf"
+    },
+    {
+     "path": "FIS/2022-23/SAJ2023_3282_5361_W_MO.pdf",
+     "sha256": "4b761b28b8d88fbf5c9529b70a151a4851be3f3c33adafb1af7f364e4fa1d3a4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5361/result",
+     "gender": "W",
+     "codex": "5361",
+     "saved_at": "2026-09-25",
+     "src_name": "女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-fis-3282-0361",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3283-0556",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023大阪府はくのりモーグル大会",
+   "date": "2023-02-26",
+   "saj_comp": "3283",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3283_0556_M_MO.pdf",
+     "sha256": "2cdfc98ec040b8bc6f11757124f2b3da88599e07b4cf76e1d93a994a25148f6d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/再掲載２戦男子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0556/result",
+     "gender": "M",
+     "codex": "0556",
+     "saved_at": "2026-09-25",
+     "src_name": "再掲載２戦男子SAJ.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3283_5556_W_MO.pdf",
+     "sha256": "451f1a71c839320f49cd83772f992ecc6dc151f1f0cc079a8e7c7b931acd62b4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/再掲載２戦女子ＳＡＪ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5556/result",
+     "gender": "W",
+     "codex": "5556",
+     "saved_at": "2026-09-25",
+     "src_name": "再掲載２戦女子ＳＡＪ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3283-0556",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-ac-3285-0404",
+   "season": "2022-23",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第32回フリースタイルスキー札幌モーグル競技会 Asia Cup The32nd Sapporo Moguls Competition 2023",
+   "date": "2023-03-04",
+   "saj_comp": "3285",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2022-23/SAJ2023_3285_0404_M_MO.pdf",
+     "sha256": "cbef75c1031c5c337bad979f732a6b1dd0896ee8b5b64cdb8c5a29ca3a51c8ca",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/アジア大会 リザルト 女子-男子 決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0404/result",
+     "gender": "M",
+     "codex": "0404",
+     "saved_at": "2026-09-25",
+     "src_name": "アジア大会 リザルト 女子-男子 決勝.pdf"
+    },
+    {
+     "path": "AC/2022-23/SAJ2023_3285_5404_W_MO.pdf",
+     "sha256": "3ee157c947dcd647861d7df132cd71d1c2c5d4cf3e096599fb5caa6cc8e7609f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/アジア大会 女子-男子 決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5404/result",
+     "gender": "W",
+     "codex": "5404",
+     "saved_at": "2026-09-25",
+     "src_name": "アジア大会 女子-男子 決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-ac-3285-0404",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3286-0521",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023イマトクCUPハチ北モーグル大会",
+   "date": "2023-03-04",
+   "saj_comp": "3286",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3286_0521_M_MO.pdf",
+     "sha256": "32ffa937a0f1972262dc2052d4a4140d2c944cf8553dc8c38a44665770ed194e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/4日A級男子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0521/result",
+     "gender": "M",
+     "codex": "0521",
+     "saved_at": "2026-09-25",
+     "src_name": "4日A級男子決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3286_5521_W_MO.pdf",
+     "sha256": "1cfc15ce1be5f373ccd8b5c4ef5ff06288e4432c039cf583280efb6039352f47",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/4日A級女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5521/result",
+     "gender": "W",
+     "codex": "5521",
+     "saved_at": "2026-09-25",
+     "src_name": "4日A級女子決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3286-0521",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3286-0522",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023イマトクCUPハチ北モーグル大会",
+   "date": "2023-03-04",
+   "saj_comp": "3286",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3286_0522_M_MO.pdf",
+     "sha256": "567e969e4b5b171f842c82db30a596be97a6495e24506a14cc9e660f7728dfab",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/4日B級男子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0522/result",
+     "gender": "M",
+     "codex": "0522",
+     "saved_at": "2026-09-25",
+     "src_name": "4日B級男子決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3286_5522_W_MO.pdf",
+     "sha256": "b549b1bbf798930e696cd519886539ff3ed32beb0af2d4c56fba049e873e5750",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/4日B級女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5522/result",
+     "gender": "W",
+     "codex": "5522",
+     "saved_at": "2026-09-25",
+     "src_name": "4日B級女子決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3286-0522",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-fis-3284-0387",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第94回宮様スキー大会国際競技会 The 94th International MIYASAMA Ski Games",
+   "date": "2023-03-05",
+   "saj_comp": "3284",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/SAJ2023_3284_0387_M_MO.pdf",
+     "sha256": "0905fb8e369f40bb2f237d71f0addfb577db958d34e299c2a545e891d4d53c4e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/宮様 リザルト 男子決勝 訂正.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0387/result",
+     "gender": "M",
+     "codex": "0387",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様 リザルト 男子決勝 訂正.pdf"
+    },
+    {
+     "path": "FIS/2022-23/SAJ2023_3284_5387_W_MO.pdf",
+     "sha256": "2f63ddfd594828df44f63f3a9ea698d41478a77600df882c80f0e9c146d99b3f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/宮様 リザルト 女子決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5387/result",
+     "gender": "W",
+     "codex": "5387",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様 リザルト 女子決勝.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-fis-3284-0387",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_a-3286-0523",
+   "season": "2022-23",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023イマトクCUPハチ北モーグル大会",
+   "date": "2023-03-05",
+   "saj_comp": "3286",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3286_0523_M_MO.pdf",
+     "sha256": "9bee854d1cfcfa8fa1c9caa7cfc35b7defe8000a24ae89f57a0354b889a1976f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/5日A級男子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0523/result",
+     "gender": "M",
+     "codex": "0523",
+     "saved_at": "2026-09-25",
+     "src_name": "5日A級男子決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2022-23/SAJ2023_3286_5523_W_MO.pdf",
+     "sha256": "dead40ae4f0ccc8aa0125539ccda6b11e414011028ef54eacef664648ecbc7e8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/5日A級女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5523/result",
+     "gender": "W",
+     "codex": "5523",
+     "saved_at": "2026-09-25",
+     "src_name": "5日A級女子決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_a-3286-0523",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_b-3286-0524",
+   "season": "2022-23",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2023イマトクCUPハチ北モーグル大会",
+   "date": "2023-03-05",
+   "saj_comp": "3286",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3286_0524_M_MO.pdf",
+     "sha256": "13d6131650c775ef0f7f7c93d0827d821568c1100b4360fa76b948b7ba04acc6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/5日B級男子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0524/result",
+     "gender": "M",
+     "codex": "0524",
+     "saved_at": "2026-09-25",
+     "src_name": "5日B級男子決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2022-23/SAJ2023_3286_5524_W_MO.pdf",
+     "sha256": "6b8a99fcab89905ac3439392899ec85fd4b2fb021d47163b6146c1613793c2bf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/5日B級女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5524/result",
+     "gender": "W",
+     "codex": "5524",
+     "saved_at": "2026-09-25",
+     "src_name": "5日B級女子決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_b-3286-0524",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_ajjr-3287-0443",
+   "season": "2022-23",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2023全日本ジュニアスキー選手権大会フリースタイル競技・種目モーグル",
+   "date": "2023-03-12",
+   "saj_comp": "3287",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2022-23/SAJ2023_3287_0443_M_MO.pdf",
+     "sha256": "c72a8f22d0e5307fccdfd133214f4ed6330189e0e1170bec1ac72fc2ddb3cc50",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/中学男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0443/result",
+     "gender": "M",
+     "codex": "0443",
+     "saved_at": "2026-09-25",
+     "src_name": "中学男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2022-23/SAJ2023_3287_5443_W_MO.pdf",
+     "sha256": "a0f0a8d597cd662649d35c702dc76f1a8c620b0c69aec024f6946382759168aa",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/中学女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5443/result",
+     "gender": "W",
+     "codex": "5443",
+     "saved_at": "2026-09-25",
+     "src_name": "中学女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_ajjr-3287-0443",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-saj_ajjr-3287-0444",
+   "season": "2022-23",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2023全日本ジュニアスキー選手権大会フリースタイル競技・種目モーグル",
+   "date": "2023-03-12",
+   "saj_comp": "3287",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2022-23/SAJ2023_3287_0444_M_MO.pdf",
+     "sha256": "3ba32ec8885938573d9a4802ed59613442a791dd4d3d57b31e148f96568bbd62",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/高校男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0444/result",
+     "gender": "M",
+     "codex": "0444",
+     "saved_at": "2026-09-25",
+     "src_name": "高校男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2022-23/SAJ2023_3287_5444_W_MO.pdf",
+     "sha256": "ca746378f3281ee99a3c69355e005672f2aee4a3d550d2fb1a84731086fb1208",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/高校女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5444/result",
+     "gender": "W",
+     "codex": "5444",
+     "saved_at": "2026-09-25",
+     "src_name": "高校女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-saj_ajjr-3287-0444",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-ac-3346-0651",
+   "season": "2022-23",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2023アジアカップたいらモーグル競技会 Asia Cup TAIRA Moguls Competition 2023",
+   "date": "2023-03-21",
+   "saj_comp": "3346",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2022-23/SAJ2023_3346_0651_M_MO.pdf",
+     "sha256": "cf959783906ea841fa45ffd357bfc833e0fd1ee28924d1bb6118d8e753848229",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/男子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0651/result",
+     "gender": "M",
+     "codex": "0651",
+     "saved_at": "2026-09-25",
+     "src_name": "男子決勝リザルト.pdf"
+    },
+    {
+     "path": "AC/2022-23/SAJ2023_3346_5651_W_MO.pdf",
+     "sha256": "745e41ef2a7c8312680ed27f4dc02c50d1efe8102e2d785304f081c20ac9698f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5651/result",
+     "gender": "W",
+     "codex": "5651",
+     "saved_at": "2026-09-25",
+     "src_name": "女子決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2022-23",
+   "sheet_prefix": "2022-23-ac-3346-0651",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_a-3528-0148",
+   "season": "2023-24",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第24回ばんけいモーグル競技会",
+   "date": "2024-01-27",
+   "saj_comp": "3528",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3528_0148_M_MO.pdf",
+     "sha256": "1df1884b03a953f344721f9f2c113f47bb8e573b4a87772bb17e222346b2b9c2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/A級男子 リザルト決勝-予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0148/result",
+     "gender": "M",
+     "codex": "0148",
+     "saved_at": "2026-09-25",
+     "src_name": "A級男子 リザルト決勝-予選.pdf"
+    },
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3528_5148_W_MO.pdf",
+     "sha256": "a3aa7fe4336db50c7b4daae7bdc988d647f7951f4a50c67ccf9a3dd008db0bc6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/A級女子 リザルト決勝-予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5148/result",
+     "gender": "W",
+     "codex": "5148",
+     "saved_at": "2026-09-25",
+     "src_name": "A級女子 リザルト決勝-予選.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_a-3528-0148",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_b-3528-0149",
+   "season": "2023-24",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第24回ばんけいモーグル競技会",
+   "date": "2024-01-27",
+   "saj_comp": "3528",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3528_0149_M_MO.pdf",
+     "sha256": "df146ae95371097cf590ce1d495016b0547931e16dce8d9c956af5bf4406d995",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/B級男子 リザルト決勝-予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0149/result",
+     "gender": "M",
+     "codex": "0149",
+     "saved_at": "2026-09-25",
+     "src_name": "B級男子 リザルト決勝-予選.pdf"
+    },
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3528_5149_W_MO.pdf",
+     "sha256": "a4d31251acd8c8737d477b225d67cd22315ae7168ad3471f7eaca73d96fadde5",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/B級女子 リザルト決勝-予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5149/result",
+     "gender": "W",
+     "codex": "5149",
+     "saved_at": "2026-09-25",
+     "src_name": "B級女子 リザルト決勝-予選.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_b-3528-0149",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_a-3528-0150",
+   "season": "2023-24",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第24回ばんけいモーグル競技会",
+   "date": "2024-01-28",
+   "saj_comp": "3528",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3528_0150_M_MO.pdf",
+     "sha256": "739c98305ddb6978a213dd57bfff1d82a09f3a58f269e31ad43f5469292d0ff1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/240128 A級 男子 決勝ー予選リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0150/result",
+     "gender": "M",
+     "codex": "0150",
+     "saved_at": "2026-09-25",
+     "src_name": "240128 A級 男子 決勝ー予選リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3528_5150_W_MO.pdf",
+     "sha256": "607b55f5176bed9f16f666e92e6787a0aad4d09b064b8da54a5bccc60f05575f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/240128 A級 女子 決勝ー予選リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5150/result",
+     "gender": "W",
+     "codex": "5150",
+     "saved_at": "2026-09-25",
+     "src_name": "240128 A級 女子 決勝ー予選リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_a-3528-0150",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_b-3528-0151",
+   "season": "2023-24",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第24回ばんけいモーグル競技会",
+   "date": "2024-01-28",
+   "saj_comp": "3528",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3528_0151_M_MO.pdf",
+     "sha256": "acfeeb1cda9a25e8ec145f2df2c0b30c11fb27c8dce003290006e2ab0edfee0f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/240128 B級 男子 決勝ー予選リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0151/result",
+     "gender": "M",
+     "codex": "0151",
+     "saved_at": "2026-09-25",
+     "src_name": "240128 B級 男子 決勝ー予選リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3528_5151_W_MO.pdf",
+     "sha256": "07d12cf82559cb8cad48b7f27471d5663bca844eb92aa62923043c51e6415755",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/240128 B級 女子 決勝ー予選リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5151/result",
+     "gender": "W",
+     "codex": "5151",
+     "saved_at": "2026-09-25",
+     "src_name": "240128 B級 女子 決勝ー予選リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_b-3528-0151",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_a-3536-0230",
+   "season": "2023-24",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2024白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2024-02-11",
+   "saj_comp": "3536",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3536_0230_M_MO.pdf",
+     "sha256": "bb23b1690176c1406d5da1affccf1249be09382f92115b5e8161dd826e44443d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/男子SAJリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0230/result",
+     "gender": "M",
+     "codex": "0230",
+     "saved_at": "2026-09-25",
+     "src_name": "男子SAJリザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3536_5230_W_MO.pdf",
+     "sha256": "391a6edd52a31ed25587178544958f3c595cede0803efd88c56ca3a5604fc0cc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/女子SAJリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5230/result",
+     "gender": "W",
+     "codex": "5230",
+     "saved_at": "2026-09-25",
+     "src_name": "女子SAJリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_a-3536-0230",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_a-3536-0231",
+   "season": "2023-24",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2024白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2024-02-12",
+   "saj_comp": "3536",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3536_0231_M_MO.pdf",
+     "sha256": "125bc75e675618f3cc11661873a9a1f4191ce5bbf23d320d66abf3d5f8d7025c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ男子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0231/result",
+     "gender": "M",
+     "codex": "0231",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ男子.pdf"
+    },
+    {
+     "path": "SAJ_A/2023-24/SAJ2024_3536_5231_W_MO.pdf",
+     "sha256": "c1fbe4cbdd4ced9a5b65fe60349ecf638982a40ee4f79415b34ff87b0fdad119",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ女子.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5231/result",
+     "gender": "W",
+     "codex": "5231",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ女子.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_a-3536-0231",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-fis-3601-0608",
+   "season": "2023-24",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2024 世界遺産五箇山フリースタイルスキー選手権大会/2024 FIS A級 たいら モーグル競技会 2024 World Heritage Gokayama Freestyle Ski Championships / 2024 FIS Class A Taira Moguls Competition",
+   "date": "2024-02-17",
+   "saj_comp": "3601",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2023-24/SAJ2024_3601_0608_M_MO.pdf",
+     "sha256": "f0371d8a98e0100bd8f00df7901d0372f4e45f4ce7251976a5af3bb28624005d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/男子最終リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0608/result",
+     "gender": "M",
+     "codex": "0608",
+     "saved_at": "2026-09-25",
+     "src_name": "男子最終リザルト.pdf"
+    },
+    {
+     "path": "FIS/2023-24/SAJ2024_3601_5608_W_MO.pdf",
+     "sha256": "5e0d777235cdf71606838ff3f229ca5187bb439936c0defe9312dd3d438c50d1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/女子最終リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5608/result",
+     "gender": "W",
+     "codex": "5608",
+     "saved_at": "2026-09-25",
+     "src_name": "女子最終リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-fis-3601-0608",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-ac-3602-0609",
+   "season": "2023-24",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2024 世界遺産五箇山フリースタイルスキー選手権大会/2024 アジアカップ たいら モーグル競技会 2024 World Heritage Gokayama Freestyle Ski Championships / 2024 Asian Cup Taira Moguls Competition",
+   "date": "2024-02-18",
+   "saj_comp": "3602",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2023-24/SAJ2024_3602_0609_M_MO.pdf",
+     "sha256": "1d2ee45246598d783b238d905628f8b4093ae00f733717487369bac4024fb124",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/GroundResultMale.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0609/result",
+     "gender": "M",
+     "codex": "0609",
+     "saved_at": "2026-09-25",
+     "src_name": "GroundResultMale.pdf"
+    },
+    {
+     "path": "AC/2023-24/SAJ2024_3602_5609_W_MO.pdf",
+     "sha256": "310372407eac2768d01dfcbe4d243a90f874b7bc96dfad32c7b4b695df5a9440",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/GroundResultFemale.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5609/result",
+     "gender": "W",
+     "codex": "5609",
+     "saved_at": "2026-09-25",
+     "src_name": "GroundResultFemale.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-ac-3602-0609",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_b-3540-0328",
+   "season": "2023-24",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2024森下仁丹 大阪府はくのりモーグル大会",
+   "date": "2024-02-24",
+   "saj_comp": "3540",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3540_0328_M_MO.pdf",
+     "sha256": "9a2912e49103020e3f3a697978902d0a4a79eeece16ff9ce9e9a17bed2c0fcb9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/男子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0328/result",
+     "gender": "M",
+     "codex": "0328",
+     "saved_at": "2026-09-25",
+     "src_name": "男子SAJ.pdf"
+    },
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3540_5328_W_MO.pdf",
+     "sha256": "9f762d6436aefd84db44d545da2f681b51d11c63c0a1ec0ae8b7eb62cd4076ce",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ女子_oeSYR2Y.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5328/result",
+     "gender": "W",
+     "codex": "5328",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ女子_oeSYR2Y.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_b-3540-0328",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-fis-3539-0333",
+   "season": "2023-24",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第43回北海道スキー選手権大会フリースタイル競技DM/MO種目 43rd HOKKAIDO Ski Championship Freestyle DM/MO",
+   "date": "2024-02-25",
+   "saj_comp": "3539",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2023-24/SAJ2024_3539_0333_M_MO.pdf",
+     "sha256": "4ba78f06b178287a48d04ced78a5e2cf67523787e4622025767011cc238b197d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/25日 男子 MOリザルトALL 2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0333/result",
+     "gender": "M",
+     "codex": "0333",
+     "saved_at": "2026-09-25",
+     "src_name": "25日 男子 MOリザルトALL 2.pdf"
+    },
+    {
+     "path": "FIS/2023-24/SAJ2024_3539_5333_W_MO.pdf",
+     "sha256": "9b82e275690bc0b1dcdb4cd3e258271cfdb8814f334b965c73378e06065738a5",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/25日 女子 MOリザルトALL2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5333/result",
+     "gender": "W",
+     "codex": "5333",
+     "saved_at": "2026-09-25",
+     "src_name": "25日 女子 MOリザルトALL2.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-fis-3539-0333",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_b-3540-0329",
+   "season": "2023-24",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2024森下仁丹 大阪府はくのりモーグル大会",
+   "date": "2024-02-25",
+   "saj_comp": "3540",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3540_0329_M_MO.pdf",
+     "sha256": "6248acc5a18accda4c0d9b5ba3bbec99027582b7b091867b9391bef30f7f1d0b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ男子_1pcrCRb.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0329/result",
+     "gender": "M",
+     "codex": "0329",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ男子_1pcrCRb.pdf"
+    },
+    {
+     "path": "SAJ_B/2023-24/SAJ2024_3540_5329_W_MO.pdf",
+     "sha256": "cacb09524c3de4244e8cbe9d5ec7f1108614afc732a5d5454ac50b7912cfb5eb",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ女子_3wolfr2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5329/result",
+     "gender": "W",
+     "codex": "5329",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ女子_3wolfr2.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_b-3540-0329",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-ac-3543-0378",
+   "season": "2023-24",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "アジアカップ 第33回札幌モーグル競技会 Asia Cup 33rd SAPPORO Moguls Competition 2024",
+   "date": "2024-03-02",
+   "saj_comp": "3543",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2023-24/SAJ2024_3543_0378_M_MO.pdf",
+     "sha256": "6fbc78c9a80e6fd7536f0453ffa87e84f1f0da9ca804bdd1a0a2856f71a9b49d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/アジア大会 男子 海外勢を抜いた SAJ リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0378/result",
+     "gender": "M",
+     "codex": "0378",
+     "saved_at": "2026-09-25",
+     "src_name": "アジア大会 男子 海外勢を抜いた SAJ リザルト.pdf"
+    },
+    {
+     "path": "AC/2023-24/SAJ2024_3543_5378_W_MO.pdf",
+     "sha256": "a19e6f16a257552c7b6bafb48a2a1faa3897f4fab0fc4ec9332bca03009ea58c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/アジア大会 女子予選リザルト 海外勢を抜いた.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5378/result",
+     "gender": "W",
+     "codex": "5378",
+     "saved_at": "2026-09-25",
+     "src_name": "アジア大会 女子予選リザルト 海外勢を抜いた.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-ac-3543-0378",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-fis-3541-0363",
+   "season": "2023-24",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第95回宮様スキー大会国際競技会 The 95th International MIYASAMA Ski Games",
+   "date": "2024-03-03",
+   "saj_comp": "3541",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2023-24/SAJ2024_3541_0363_M_MO.pdf",
+     "sha256": "45d812a2fbbca99a984706722118d2cf9c259cd0d3f7f1c92ca3aef79de11759",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/宮様 95回 男子 リザルト SAJ2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0363/result",
+     "gender": "M",
+     "codex": "0363",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様 95回 男子 リザルト SAJ2.pdf"
+    },
+    {
+     "path": "FIS/2023-24/SAJ2024_3541_5363_W_MO.pdf",
+     "sha256": "98389cb2ee8a82c44710638560fd8b5e3d34bf0bce6890dc7a3d304d56924e4b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/宮様 95回 女子リザルト 予選決勝 SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5363/result",
+     "gender": "W",
+     "codex": "5363",
+     "saved_at": "2026-09-25",
+     "src_name": "宮様 95回 女子リザルト 予選決勝 SAJ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-fis-3541-0363",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_ajjr-3527-0125",
+   "season": "2023-24",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "2024森下仁丹 大阪府ジュニアモーグル大会",
+   "date": "2024-03-09",
+   "saj_comp": "3527",
+   "saj_category": "Jr MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3527_0125_M_MO.pdf",
+     "sha256": "70d5d1745e9172551050ba252b2385542f7d92206ef075dc19b3566e29b03804",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ男子_FbkJd5e.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0125/result",
+     "gender": "M",
+     "codex": "0125",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ男子_FbkJd5e.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3527_5125_W_MO.pdf",
+     "sha256": "c7e2b9646daf8a6db31002b394b0c65100f3189b8e354f612b06fa9e1f4e99a1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/SAJ女子_Exz1u3x.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5125/result",
+     "gender": "W",
+     "codex": "5125",
+     "saved_at": "2026-09-25",
+     "src_name": "SAJ女子_Exz1u3x.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_ajjr-3527-0125",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_ajjr-3527-0126",
+   "season": "2023-24",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "2024森下仁丹 大阪府ジュニアモーグル大会",
+   "date": "2024-03-10",
+   "saj_comp": "3527",
+   "saj_category": "Jr MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3527_0126_M_MO.pdf",
+     "sha256": "b40e9945ac3ea35c0bb2fbf63c6154960400f03feec9876d2493422358ca9964",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/男子SAJ_CmJFp3k.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0126/result",
+     "gender": "M",
+     "codex": "0126",
+     "saved_at": "2026-09-25",
+     "src_name": "男子SAJ_CmJFp3k.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3527_5126_W_MO.pdf",
+     "sha256": "a6177ca874b78ce8a0e3d12f46ecf8c9fa55b35743e87bba57524841c19b6532",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/女子SAJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5126/result",
+     "gender": "W",
+     "codex": "5126",
+     "saved_at": "2026-09-25",
+     "src_name": "女子SAJ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_ajjr-3527-0126",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_ajjr-3546-0430",
+   "season": "2023-24",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2024全日本ジュニアスキー選手権大会フリースタイル競技・種目モーグル",
+   "date": "2024-03-16",
+   "saj_comp": "3546",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3546_0430_M_MO.pdf",
+     "sha256": "c78da58691a797d2ed9f848930b1959357d78fb9d98e7bcea11fc021697cebf2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0430/result",
+     "gender": "M",
+     "codex": "0430",
+     "saved_at": "2026-09-25",
+     "src_name": "総合リザルト.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3546_5430_W_MO.pdf",
+     "sha256": "c78da58691a797d2ed9f848930b1959357d78fb9d98e7bcea11fc021697cebf2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/総合リザルト_S3D3bBU.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5430/result",
+     "gender": "W",
+     "codex": "5430",
+     "saved_at": "2026-09-25",
+     "src_name": "総合リザルト_S3D3bBU.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_ajjr-3546-0430",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-saj_ajjr-3546-0431",
+   "season": "2023-24",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2024全日本ジュニアスキー選手権大会フリースタイル競技・種目モーグル",
+   "date": "2024-03-16",
+   "saj_comp": "3546",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3546_0431_M_MO.pdf",
+     "sha256": "c78da58691a797d2ed9f848930b1959357d78fb9d98e7bcea11fc021697cebf2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/総合リザルト_JcEggVt.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0431/result",
+     "gender": "M",
+     "codex": "0431",
+     "saved_at": "2026-09-25",
+     "src_name": "総合リザルト_JcEggVt.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2023-24/SAJ2024_3546_5431_W_MO.pdf",
+     "sha256": "c78da58691a797d2ed9f848930b1959357d78fb9d98e7bcea11fc021697cebf2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2024/FS/総合リザルト_z4E1b42.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5431/result",
+     "gender": "W",
+     "codex": "5431",
+     "saved_at": "2026-09-25",
+     "src_name": "総合リザルト_z4E1b42.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2023-24",
+   "sheet_prefix": "2023-24-saj_ajjr-3546-0431",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_ajjr-3783-0465",
+   "season": "2024-25",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府キッズモーグル大会",
+   "date": "2025-01-18",
+   "saj_comp": "3783",
+   "saj_category": "Jr MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3783_0465_M_MO.pdf",
+     "sha256": "c7ed0b368f806d267a43ec0421168ddc7e294298e7454192bfbd27dd485c194b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0465/result",
+     "gender": "M",
+     "codex": "0465",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3783_5465_W_MO.pdf",
+     "sha256": "9c4f177834f830db3001036671e1add7afd894b91371b2496af4da0a7c8e55f8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/1戦女子予選決勝.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5465/result",
+     "gender": "W",
+     "codex": "5465",
+     "saved_at": "2026-09-25",
+     "src_name": "1戦女子予選決勝.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_ajjr-3783-0465",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_ajjr-3783-0466",
+   "season": "2024-25",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府キッズモーグル大会",
+   "date": "2025-01-19",
+   "saj_comp": "3783",
+   "saj_category": "Jr MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3783_0466_M_MO.pdf",
+     "sha256": "27877a8942b49bcdffc6b0b2eaa5f29269a5138d6057d1941d96e9bd6194c10b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0466/result",
+     "gender": "M",
+     "codex": "0466",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3783_5466_W_MO.pdf",
+     "sha256": "a206974912915011925e1f829c69b9750f2bad94ad981d141e4f16034b1f6384",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5466/result",
+     "gender": "W",
+     "codex": "5466",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_ajjr-3783-0466",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3784-0448",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第25回ばんけいモーグル競技会",
+   "date": "2025-01-25",
+   "saj_comp": "3784",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3784_0448_M_MO.pdf",
+     "sha256": "5d855bd0ab5b2ff87bf4cbc3f83b570e76781ccdf4e903189ce8034de891cc83",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0448/result",
+     "gender": "M",
+     "codex": "0448",
+     "saved_at": "2026-09-25",
+     "src_name": "男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3784_5448_W_MO.pdf",
+     "sha256": "f3cc12eed379d107a6da5c42f3432d8a0ecaaaf9ef6599c2976bdc207affb43a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5448/result",
+     "gender": "W",
+     "codex": "5448",
+     "saved_at": "2026-09-25",
+     "src_name": "女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3784-0448",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3784-0450",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第25回ばんけいモーグル競技会",
+   "date": "2025-01-26",
+   "saj_comp": "3784",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3784_0450_M_MO.pdf",
+     "sha256": "6a2f3bea4bd565f9557db6777ed96eedcd9c3c9623cb481cff91d8bec91a47a9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/file03-1男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0450/result",
+     "gender": "M",
+     "codex": "0450",
+     "saved_at": "2026-09-25",
+     "src_name": "file03-1男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3784_5450_W_MO.pdf",
+     "sha256": "17ed6a87634050235e768f4639dab5f96665aa9fafb08f0b55706a1e2b8238db",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/file03-2女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5450/result",
+     "gender": "W",
+     "codex": "5450",
+     "saved_at": "2026-09-25",
+     "src_name": "file03-2女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3784-0450",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_a-3784-0447",
+   "season": "2024-25",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第25回ばんけいモーグル競技会",
+   "date": "2025-02-01",
+   "saj_comp": "3784",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3784_0447_M_MO.pdf",
+     "sha256": "7c98bca785c4ba558c5640d927a32a4587a3830e9e5788e02d771b9978351d07",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/男子予選決勝リザルト_CWfDiwb.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0447/result",
+     "gender": "M",
+     "codex": "0447",
+     "saved_at": "2026-09-25",
+     "src_name": "男子予選決勝リザルト_CWfDiwb.pdf"
+    },
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3784_5447_W_MO.pdf",
+     "sha256": "f92117a4313c9746e613cb70af541e5da742beb40c7735307c8b8dbb57097d9c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/女子予選決勝リザルト_vQMZmFJ.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5447/result",
+     "gender": "W",
+     "codex": "5447",
+     "saved_at": "2026-09-25",
+     "src_name": "女子予選決勝リザルト_vQMZmFJ.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_a-3784-0447",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3785-0495",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025HSCフリースタイルスキー選手権大会 B級モーグル大会 第１戦、第２戦",
+   "date": "2025-02-01",
+   "saj_comp": "3785",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3785_0495_M_MO.pdf",
+     "sha256": "7bb5b249a4d9cce7b7c95b99ce58d94e9f02cf874ad07ad87018187d80b19445",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0495/result",
+     "gender": "M",
+     "codex": "0495",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3785_5495_W_MO.pdf",
+     "sha256": "aaaa94e14385b1fdf882667f789607fa84aee6c5058d9d7660c7c03cfa238c57",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5495/result",
+     "gender": "W",
+     "codex": "5495",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3785-0495",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_a-3784-0449",
+   "season": "2024-25",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第25回ばんけいモーグル競技会",
+   "date": "2025-02-02",
+   "saj_comp": "3784",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3784_0449_M_MO.pdf",
+     "sha256": "8627eace866484bf0d8d0f0cbb99c725c5eefe42fcb0a36fcb0ca20725d049b6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/file03-2第二戦男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0449/result",
+     "gender": "M",
+     "codex": "0449",
+     "saved_at": "2026-09-25",
+     "src_name": "file03-2第二戦男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3784_5449_W_MO.pdf",
+     "sha256": "49ea75db26e3188c74804d601f7061f0e8bfb457755536eb72e5fa9146bf56f7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/file03-1第二戦女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5449/result",
+     "gender": "W",
+     "codex": "5449",
+     "saved_at": "2026-09-25",
+     "src_name": "file03-1第二戦女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_a-3784-0449",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3785-0496",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025HSCフリースタイルスキー選手権大会 B級モーグル大会 第１戦、第２戦",
+   "date": "2025-02-02",
+   "saj_comp": "3785",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3785_0496_M_MO.pdf",
+     "sha256": "88e7becebfcba903cab69f3b5609f4494716bfb22ba1c9c8bb546eb714425e85",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0496/result",
+     "gender": "M",
+     "codex": "0496",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3785_5496_W_MO.pdf",
+     "sha256": "26eb02ed85eee9f00e357998a89c32d7f22498deb9b60325cca77d9b09c22f6c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5496/result",
+     "gender": "W",
+     "codex": "5496",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3785-0496",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-fis-3786-0456",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第43回長野県フリースタイルスキー選手権大会 モーグル競技 The43rd Nagano Freestyleski Championship Moguls",
+   "date": "2025-02-04",
+   "saj_comp": "3786",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2024-25/SAJ2025_3786_0456_M_MO.pdf",
+     "sha256": "e61e3b388d264f7ae3a06514e4ef638450b3f8386a63b40943f08817a674fbfa",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/さのさかA級第1戦‗男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0456/result",
+     "gender": "M",
+     "codex": "0456",
+     "saved_at": "2026-09-25",
+     "src_name": "さのさかA級第1戦‗男子リザルト.pdf"
+    },
+    {
+     "path": "FIS/2024-25/SAJ2025_3786_5456_W_MO.pdf",
+     "sha256": "67b4e1996f08ce0b6aa62cf6f847beaa789be353eff4e40650bcfdd65b395bcb",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/さのさかA級第1戦‗女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5456/result",
+     "gender": "W",
+     "codex": "5456",
+     "saved_at": "2026-09-25",
+     "src_name": "さのさかA級第1戦‗女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-fis-3786-0456",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-fis-3787-0457",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025HSCフリースタイルスキー選手権大会 モーグル大会 2025HSC Freestyleski Championship Moguls",
+   "date": "2025-02-05",
+   "saj_comp": "3787",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2024-25/SAJ2025_3787_0457_M_MO.pdf",
+     "sha256": "089ec4a7ee9dbf544e7624a228405df4ac6bb7d92ff72a27ef1f6c59bfdf84ec",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/さのさかA級第2戦‗男子グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0457/result",
+     "gender": "M",
+     "codex": "0457",
+     "saved_at": "2026-09-25",
+     "src_name": "さのさかA級第2戦‗男子グランドリザルト.pdf"
+    },
+    {
+     "path": "FIS/2024-25/SAJ2025_3787_5457_W_MO.pdf",
+     "sha256": "a7be9dde4b2c57c4676900353bdc4d0d455a757fedb5f54bfcf2a743a9a17d2c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/さのさかA級第2戦‗女子グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5457/result",
+     "gender": "W",
+     "codex": "5457",
+     "saved_at": "2026-09-25",
+     "src_name": "さのさかA級第2戦‗女子グランドリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-fis-3787-0457",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3788-0468",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府はくのりモーグル大会",
+   "date": "2025-02-08",
+   "saj_comp": "3788",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3788_0468_M_MO.pdf",
+     "sha256": "e685050e3784f9ed2a830680a429cdd294dfb751bbd0054c2e13ef6db52e3c9f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦男子リザルト２.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0468/result",
+     "gender": "M",
+     "codex": "0468",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦男子リザルト２.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3788_5468_W_MO.pdf",
+     "sha256": "69cb877811cc0fcecb85dd7de926401bc885f9168b4fb7d19adfd917fa090f14",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦女子リザルト_3jd4Y7O.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5468/result",
+     "gender": "W",
+     "codex": "5468",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦女子リザルト_3jd4Y7O.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3788-0468",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_a-3789-0471",
+   "season": "2024-25",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025フリースタイルスキー秋田・田沢湖モーグル競技会 2025 FREESTYLE SKI AKITA TAZAWAKO MOGUL COMPETITION",
+   "date": "2025-02-08",
+   "saj_comp": "3789",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3789_0471_M_MO.pdf",
+     "sha256": "bc3d25de64b948160bc0d930247bfa897a4955e0a40e833356b6b58305384767",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/田沢湖MOA_男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0471/result",
+     "gender": "M",
+     "codex": "0471",
+     "saved_at": "2026-09-25",
+     "src_name": "田沢湖MOA_男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3789_5471_W_MO.pdf",
+     "sha256": "fa330b983b4522fb4dc838c194f590b7cecc72e8777f9eaa08d5fbfec16d369c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/田沢湖MOA_女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5471/result",
+     "gender": "W",
+     "codex": "5471",
+     "saved_at": "2026-09-25",
+     "src_name": "田沢湖MOA_女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_a-3789-0471",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3789-0472",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025フリースタイルスキー秋田・田沢湖モーグル競技会 2025 FREESTYLE SKI AKITA TAZAWAKO MOGUL COMPETITION",
+   "date": "2025-02-08",
+   "saj_comp": "3789",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3789_0472_M_MO.pdf",
+     "sha256": "59b08d75cfd4c9f2b0730c78e7ec2f4de49e1cc8b2b244a8e22815d85ee8b1d5",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/田沢湖MOB_男子リザルト_改2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0472/result",
+     "gender": "M",
+     "codex": "0472",
+     "saved_at": "2026-09-25",
+     "src_name": "田沢湖MOB_男子リザルト_改2.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3789_5472_W_MO.pdf",
+     "sha256": "df30e5bdeaca05ebe8387c7fa66bae5a26deb5181bb67b2eed315f407c269829",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/田沢湖MOA_女子リザルト_改.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5472/result",
+     "gender": "W",
+     "codex": "5472",
+     "saved_at": "2026-09-25",
+     "src_name": "田沢湖MOA_女子リザルト_改.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3789-0472",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3788-0469",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府はくのりモーグル大会",
+   "date": "2025-02-09",
+   "saj_comp": "3788",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3788_0469_M_MO.pdf",
+     "sha256": "f019e61827c34641063161d653d9dcb9e76c7e284a6b597ea4218dc48dd00769",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦男子リザルト_OdksdFE.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0469/result",
+     "gender": "M",
+     "codex": "0469",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦男子リザルト_OdksdFE.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3788_5469_W_MO.pdf",
+     "sha256": "2613bb2339d5c9f594d61734f5e127aca3c8cdd89db7d01a7757219b1fd0598e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦女子リザルト_nqnfsUX.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5469/result",
+     "gender": "W",
+     "codex": "5469",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦女子リザルト_nqnfsUX.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3788-0469",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3790-0454",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025きはしクリニック東海北陸ブロックモーグル競技会",
+   "date": "2025-02-15",
+   "saj_comp": "3790",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3790_0454_M_MO.pdf",
+     "sha256": "e308ded2c04de2c14188edd961d453135eab195dbe3162fc2514ea357b6c49a5",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/リザルト男子グランド.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0454/result",
+     "gender": "M",
+     "codex": "0454",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男子グランド.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3790_5454_W_MO.pdf",
+     "sha256": "d038111cde39be972a18139d2f5f71d7aa97fa9065f1ffcb9aff97e7a5b182d1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/リザルト女子グランド.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5454/result",
+     "gender": "W",
+     "codex": "5454",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト女子グランド.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3790-0454",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_a-3791-0476",
+   "season": "2024-25",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025 白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2025-02-15",
+   "saj_comp": "3791",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3791_0476_M_MO.pdf",
+     "sha256": "287c44949c9c1cb20e6834b9dab07883a8350005b637e4f14382a94a64ec8e4b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦男子リザルト_DU8IyX3.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0476/result",
+     "gender": "M",
+     "codex": "0476",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦男子リザルト_DU8IyX3.pdf"
+    },
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3791_5476_W_MO.pdf",
+     "sha256": "a2eff0b3c6c55ad67384bff68cc33c8b7b5d56170eb99876ae881788d3ca8d0c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦女子リザルト_0aGmNc6.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5476/result",
+     "gender": "W",
+     "codex": "5476",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦女子リザルト_0aGmNc6.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_a-3791-0476",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3790-0455",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025きはしクリニック東海北陸ブロックモーグル競技会",
+   "date": "2025-02-16",
+   "saj_comp": "3790",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3790_0455_M_MO.pdf",
+     "sha256": "7f1559cabe767af258dcf6aee278a134a21173b967d3a6fea0119dc758de1ba1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/リザルト男子グランド第二戦.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0455/result",
+     "gender": "M",
+     "codex": "0455",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト男子グランド第二戦.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3790_5455_W_MO.pdf",
+     "sha256": "e9b3cb6648f6dfe9d8e4479922aa7983069d766b6bb01cf5d62ffeb4b158e68c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/リザルト女子グランド第二戦.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5455/result",
+     "gender": "W",
+     "codex": "5455",
+     "saved_at": "2026-09-25",
+     "src_name": "リザルト女子グランド第二戦.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3790-0455",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_a-3791-0477",
+   "season": "2024-25",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025 白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2025-02-16",
+   "saj_comp": "3791",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3791_0477_M_MO.pdf",
+     "sha256": "b7641ed4ef4b5c91d9907d530d2b4af786b56eb5de0acb53b53c37c2f9007c7a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦男子ザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0477/result",
+     "gender": "M",
+     "codex": "0477",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦男子ザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2024-25/SAJ2025_3791_5477_W_MO.pdf",
+     "sha256": "f4920ea03a248aa041c48134d35ddabe7888b03c0331957b615cf4c0bb7826b8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/2戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5477/result",
+     "gender": "W",
+     "codex": "5477",
+     "saved_at": "2026-09-25",
+     "src_name": "2戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_a-3791-0477",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-fis-3794-0452",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第44回北海道スキー選手権大会フリースタイル競技DM/MO種目 44th HOKKAIDO Ski Championship Freestyle DM/MO",
+   "date": "2025-02-24",
+   "saj_comp": "3794",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2024-25/SAJ2025_3794_5452_W_MO.pdf",
+     "sha256": "a144e75ba42a26bffcf08b5ac7e3724f9ed2407ad95a41650b30c52bf7b7544d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/3女子リザルト(予選-決勝-スーパーファイナル).pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5452/result",
+     "gender": "W",
+     "codex": "5452",
+     "saved_at": "2026-09-25",
+     "src_name": "3女子リザルト(予選-決勝-スーパーファイナル).pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-fis-3794-0452",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-fis-3795-0478",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第96回宮様スキー大会国際競技会 The 96th International MIYASAMA Ski Games",
+   "date": "2025-03-01",
+   "saj_comp": "3795",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2024-25/SAJ2025_3795_0478_M_MO.pdf",
+     "sha256": "969e294e9fcaee184265c6b06fe9f2475e80d296f3c3f290c95b0522ae2545ff",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/3宮様男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0478/result",
+     "gender": "M",
+     "codex": "0478",
+     "saved_at": "2026-09-25",
+     "src_name": "3宮様男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "FIS/2024-25/SAJ2025_3795_5478_W_MO.pdf",
+     "sha256": "e80c878aaa5bb2adf40f221b324a1f08d4900b5d9bcdc9386dfedd65985bdb78",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/3宮様女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5478/result",
+     "gender": "W",
+     "codex": "5478",
+     "saved_at": "2026-09-25",
+     "src_name": "3宮様女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-fis-3795-0478",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-ac-3798-0479",
+   "season": "2024-25",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "アジアカップ 第34回札幌モーグル競技会 Asia Cup 34th SAPPORO Moguls Competition 2025",
+   "date": "2025-03-02",
+   "saj_comp": "3798",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2024-25/SAJ2025_3798_0479_M_MO.pdf",
+     "sha256": "d4992ebfaa1cb0e7783e3c665398da26a593363b0e65a2e997eeecf45075909c",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/3-アジア男子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0479/result",
+     "gender": "M",
+     "codex": "0479",
+     "saved_at": "2026-09-25",
+     "src_name": "3-アジア男子予選決勝リザルト.pdf"
+    },
+    {
+     "path": "AC/2024-25/SAJ2025_3798_5479_W_MO.pdf",
+     "sha256": "cc85ea508ffed494a4317a1903a9049231740d8760192538f85ca93bcd6b3f76",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/3-アジア女子予選決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5479/result",
+     "gender": "W",
+     "codex": "5479",
+     "saved_at": "2026-09-25",
+     "src_name": "3-アジア女子予選決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-ac-3798-0479",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-ac-3799-0441",
+   "season": "2024-25",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025 アジアカップ たいら モーグル競技会/2025 世界遺産五箇山フリースタイルスキー選手権大会/第1戦/第2戦 2025 Asian Cup Taira Moguls Competition/2025 World Heritage Gokayama Freestyle Ski Championships / Round1/Round2",
+   "date": "2025-03-08",
+   "saj_comp": "3799",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2024-25/SAJ2025_3799_0441_M_MO.pdf",
+     "sha256": "25c881dbe0fa21113d69a70922789380a32db9e545f9a762cee5c43a778dad55",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/第一戦_男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0441/result",
+     "gender": "M",
+     "codex": "0441",
+     "saved_at": "2026-09-25",
+     "src_name": "第一戦_男子リザルト.pdf"
+    },
+    {
+     "path": "AC/2024-25/SAJ2025_3799_5441_W_MO.pdf",
+     "sha256": "2bb1395a90329748972f929fe7712b2e8dd2d51e0b97eee43c201d29f1571543",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/第一戦_女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5441/result",
+     "gender": "W",
+     "codex": "5441",
+     "saved_at": "2026-09-25",
+     "src_name": "第一戦_女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-ac-3799-0441",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-ac-3799-0442",
+   "season": "2024-25",
+   "series": "AC",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2025 アジアカップ たいら モーグル競技会/2025 世界遺産五箇山フリースタイルスキー選手権大会/第1戦/第2戦 2025 Asian Cup Taira Moguls Competition/2025 World Heritage Gokayama Freestyle Ski Championships / Round1/Round2",
+   "date": "2025-03-09",
+   "saj_comp": "3799",
+   "saj_category": "FIS ASIA/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "AC/2024-25/SAJ2025_3799_0442_M_MO.pdf",
+     "sha256": "aeb1d703baf43e106324b27ade621cdfe790f57bfe1cf6d9cb906273203d2f02",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/第二戦男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0442/result",
+     "gender": "M",
+     "codex": "0442",
+     "saved_at": "2026-09-25",
+     "src_name": "第二戦男子リザルト.pdf"
+    },
+    {
+     "path": "AC/2024-25/SAJ2025_3799_5442_W_MO.pdf",
+     "sha256": "bee1fc2307aa2101cdf9b038c33c920cc8867df226423e3f6f3aca1d2ac4eb45",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/第二戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5442/result",
+     "gender": "W",
+     "codex": "5442",
+     "saved_at": "2026-09-25",
+     "src_name": "第二戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-ac-3799-0442",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_ajjr-3802-0435",
+   "season": "2024-25",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2025全日本ジュニアスキー選手権大会フリースタイル競技デュアルモーグル・モーグル種目",
+   "date": "2025-03-15",
+   "saj_comp": "3802",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3802_0435_M_MO.pdf",
+     "sha256": "84776979949b7ba88c492f17b65f6e447c67460e1dc4752f091fb22f1e93c0cd",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO中学_男子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0435/result",
+     "gender": "M",
+     "codex": "0435",
+     "saved_at": "2026-09-25",
+     "src_name": "MO中学_男子リザルト_merged.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3802_5435_W_MO.pdf",
+     "sha256": "694c1c4753c1c2e2fba263a5526609bc098520fa496615fce41ddc1536e1aece",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO中学_女子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5435/result",
+     "gender": "W",
+     "codex": "5435",
+     "saved_at": "2026-09-25",
+     "src_name": "MO中学_女子リザルト_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_ajjr-3802-0435",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_ajjr-3802-0436",
+   "season": "2024-25",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2025全日本ジュニアスキー選手権大会フリースタイル競技デュアルモーグル・モーグル種目",
+   "date": "2025-03-15",
+   "saj_comp": "3802",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3802_0436_M_MO.pdf",
+     "sha256": "6890f4e1e5429b134277f8d277cbb16e2e306f14bef32677c8c361642cb4f425",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO高校_男子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0436/result",
+     "gender": "M",
+     "codex": "0436",
+     "saved_at": "2026-09-25",
+     "src_name": "MO高校_男子リザルト_merged.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2024-25/SAJ2025_3802_5436_W_MO.pdf",
+     "sha256": "581e576c3bcd04a5606adaefe31007405920c5995ba73cdd71e7846be87a67b4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO高校_女子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5436/result",
+     "gender": "W",
+     "codex": "5436",
+     "saved_at": "2026-09-25",
+     "src_name": "MO高校_女子リザルト_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_ajjr-3802-0436",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3803-0463",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府はくのりモーグル大会",
+   "date": "2025-03-22",
+   "saj_comp": "3803",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3803_0463_M_MO.pdf",
+     "sha256": "a3388dfa7bb5a25cbf1434d37f6e6981b08598a3a8b9474b76e38c5b3d4313d9",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦男子リザルト_8m0bHUu.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0463/result",
+     "gender": "M",
+     "codex": "0463",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦男子リザルト_8m0bHUu.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3803_5463_W_MO.pdf",
+     "sha256": "758a6a7d1640aca429c8b92636651775b75515c22b090d09f12a32047328e530",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/１戦女子リザルト_gy7I49l.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5463/result",
+     "gender": "W",
+     "codex": "5463",
+     "saved_at": "2026-09-25",
+     "src_name": "１戦女子リザルト_gy7I49l.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3803-0463",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3803-0464",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2025大阪府はくのりモーグル大会",
+   "date": "2025-03-23",
+   "saj_comp": "3803",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3803_0464_M_MO.pdf",
+     "sha256": "c946c56d9bfc6ada42efa4dff4ba9d7410bb3a21bf6371bc5b2f489f21b7a8b4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦男子リザルト_GxCL3eg.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0464/result",
+     "gender": "M",
+     "codex": "0464",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦男子リザルト_GxCL3eg.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3803_5464_W_MO.pdf",
+     "sha256": "04f361d3b6aa3f3e2db910340c1aeeea4a238d53774bbfbb4e94281615ea5b42",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/２戦女子リザルト_FQ7tIex.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5464/result",
+     "gender": "W",
+     "codex": "5464",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦女子リザルト_FQ7tIex.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3803-0464",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3808-0467",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2025フリースタイルふくしま大会",
+   "date": "2025-04-05",
+   "saj_comp": "3808",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3808_0467_M_MO.pdf",
+     "sha256": "fb275d80f024bf89f50ca1b024617717460b253a5ff668c785c4094888cc422d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/ふくしま_男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0467/result",
+     "gender": "M",
+     "codex": "0467",
+     "saved_at": "2026-09-25",
+     "src_name": "ふくしま_男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3808_5467_W_MO.pdf",
+     "sha256": "12e00a978a7669e007d27aa8c0ef0334e9e528b3b5999817f3c476e9ad60376f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/ふくしま_女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5467/result",
+     "gender": "W",
+     "codex": "5467",
+     "saved_at": "2026-09-25",
+     "src_name": "ふくしま_女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3808-0467",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-saj_b-3809-0470",
+   "season": "2024-25",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第２６回東京都モーグル競技会",
+   "date": "2025-04-06",
+   "saj_comp": "3809",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3809_0470_M_MO.pdf",
+     "sha256": "6e144265e90d96daa697f85989e8f3f89abe23ccae8ce4b52d4f1c1c59dff3d2",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/東京都大会男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0470/result",
+     "gender": "M",
+     "codex": "0470",
+     "saved_at": "2026-09-25",
+     "src_name": "東京都大会男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2024-25/SAJ2025_3809_5470_W_MO.pdf",
+     "sha256": "6719e9978c0371b7e89432508e564dd5d60385f273f9a87bb0f000393b7835f0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/東京都大会女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5470/result",
+     "gender": "W",
+     "codex": "5470",
+     "saved_at": "2026-09-25",
+     "src_name": "東京都大会女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2024-25",
+   "sheet_prefix": "2024-25-saj_b-3809-0470",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4045-0092",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "unknown",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府キッズモーグル大会",
+   "date": "2026-01-17",
+   "saj_comp": "4045",
+   "saj_category": "KIDS MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4045_0092_M_MO.pdf",
+     "sha256": "9480dd3b5bf563170081111f7fa3cb94c5ad39ecff8fbcf584c3a00213557977",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦dannsiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0092/result",
+     "gender": "M",
+     "codex": "0092",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦dannsiリザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4045_5092_W_MO.pdf",
+     "sha256": "5f60f0fed4cf164970ad6f49dfdfbdc2a4cb8f83450d69ff427bc4112965e372",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦josiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5092/result",
+     "gender": "W",
+     "codex": "5092",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦josiリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4045-0092",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "skip": "キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち"
+  },
+  {
+   "event_id": "2025-26-saj_b-4045-0093",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "unknown",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府キッズモーグル大会",
+   "date": "2026-01-18",
+   "saj_comp": "4045",
+   "saj_category": "KIDS MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4045_0093_M_MO.pdf",
+     "sha256": "0ce646defdd2873e88067c287305f32ec1b951d7bd5d86b7599d3f8b5c68ac8a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦danshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0093/result",
+     "gender": "M",
+     "codex": "0093",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦danshiリザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4045_5093_W_MO.pdf",
+     "sha256": "0adab8795d8e05774e3c9900cf63cc0058940d414817501463fb490ab2d22a92",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦joshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5093/result",
+     "gender": "W",
+     "codex": "5093",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦joshiリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4045-0093",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "skip": "キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち"
+  },
+  {
+   "event_id": "2025-26-saj_a-4046-0127",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第26回A級ばんけいモーグル競技会",
+   "date": "2026-01-24",
+   "saj_comp": "4046",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4046_0127_M_MO.pdf",
+     "sha256": "a6558d6b5a8125d35edd3d000dd7e4cd7a9e92e08544c99ba5f9350abfbf6921",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/2026年ばんけいモーグル第1戦-男子総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0127/result",
+     "gender": "M",
+     "codex": "0127",
+     "saved_at": "2026-09-25",
+     "src_name": "2026年ばんけいモーグル第1戦-男子総合リザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4046_5127_W_MO.pdf",
+     "sha256": "0663163a691d1d346f48a380f91777a4edb1a25a1ee4067fa9306acd06fd5bd8",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/2026年ばんけいモーグル第1戦-女子総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5127/result",
+     "gender": "W",
+     "codex": "5127",
+     "saved_at": "2026-09-25",
+     "src_name": "2026年ばんけいモーグル第1戦-女子総合リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4046-0127",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4047-0496",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第1回戸狩温泉モーグル競技会",
+   "date": "2026-01-24",
+   "saj_comp": "4047",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4047_0496_M_MO.pdf",
+     "sha256": "aace425c97aeb54dca42a7147a0d30d7a16e60f1db576441444e7868341ef6dc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/戸狩B1_男女総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0496/result",
+     "gender": "M",
+     "codex": "0496",
+     "saved_at": "2026-09-25",
+     "src_name": "戸狩B1_男女総合リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4047_5496_W_MO.pdf",
+     "sha256": "aace425c97aeb54dca42a7147a0d30d7a16e60f1db576441444e7868341ef6dc",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/戸狩B1_男女総合リザルト_I95LFKw.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5496/result",
+     "gender": "W",
+     "codex": "5496",
+     "saved_at": "2026-09-25",
+     "src_name": "戸狩B1_男女総合リザルト_I95LFKw.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4047-0496",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_a-4046-0128",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第26回A級ばんけいモーグル競技会",
+   "date": "2026-01-25",
+   "saj_comp": "4046",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4046_0128_M_MO.pdf",
+     "sha256": "794a9a7a17dcbd20bc86f83280845b3bb1082e389e7d134e4bc152e8e69dcaf0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/男子決勝総合リザルトv01.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0128/result",
+     "gender": "M",
+     "codex": "0128",
+     "saved_at": "2026-09-25",
+     "src_name": "男子決勝総合リザルトv01.pdf"
+    },
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4046_5128_W_MO.pdf",
+     "sha256": "d94278510435aefb37e90abf16dfa7486f16b8e060f87fae5d2be19c7ec7eb8f",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/女子決勝総合リザルトv01.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5128/result",
+     "gender": "W",
+     "codex": "5128",
+     "saved_at": "2026-09-25",
+     "src_name": "女子決勝総合リザルトv01.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4046-0128",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4049-0164",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第26回B級ばんけいモーグル競技会",
+   "date": "2026-01-31",
+   "saj_comp": "4049",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4049_0164_M_MO.pdf",
+     "sha256": "69e97cd420456cede6fb82c0f6a49eea10974c4eddb6a83a46c11339e9184d1d",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/男子リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0164/result",
+     "gender": "M",
+     "codex": "0164",
+     "saved_at": "2026-09-25",
+     "src_name": "男子リザルトv01_merged.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4049_5164_W_MO.pdf",
+     "sha256": "cb2a66975657b02e685ba8397b33f67a18db05f6199257778258c284dbbde9e3",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/女子リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5164/result",
+     "gender": "W",
+     "codex": "5164",
+     "saved_at": "2026-09-25",
+     "src_name": "女子リザルトv01_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4049-0164",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4049-0165",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "第26回B級ばんけいモーグル競技会",
+   "date": "2026-02-01",
+   "saj_comp": "4049",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4049_0165_M_MO.pdf",
+     "sha256": "b2e53dbc7a8cd5e521e066e116a8e8820f85033cc90871255307658a2ca0f946",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/ばんけいB第2戦男子決勝リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0165/result",
+     "gender": "M",
+     "codex": "0165",
+     "saved_at": "2026-09-25",
+     "src_name": "ばんけいB第2戦男子決勝リザルトv01_merged.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4049_5165_W_MO.pdf",
+     "sha256": "2cbd65c98637b9b252eb8991c8de2471fd101e90d05dfbd1f23fa48bcb67e80e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/ばんけいB第2戦女子決勝リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5165/result",
+     "gender": "W",
+     "codex": "5165",
+     "saved_at": "2026-09-25",
+     "src_name": "ばんけいB第2戦女子決勝リザルトv01_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4049-0165",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_a-4054-0204",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府はくのりモーグル大会",
+   "date": "2026-02-07",
+   "saj_comp": "4054",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4054_0204_M_MO.pdf",
+     "sha256": "40dd39d63bb3a914ef779e8ef6bb2f4a576c5b3f3f7cc200969cac7f96f70529",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/1sendanshi.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0204/result",
+     "gender": "M",
+     "codex": "0204",
+     "saved_at": "2026-09-25",
+     "src_name": "1sendanshi.pdf"
+    },
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4054_5204_W_MO.pdf",
+     "sha256": "11e8840dfd47746938f815cc5f901e1260ba5bc7d71131e4a8b831e9b7967532",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/1senjoshi.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5204/result",
+     "gender": "W",
+     "codex": "5204",
+     "saved_at": "2026-09-25",
+     "src_name": "1senjoshi.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4054-0204",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_a-4054-0205",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府はくのりモーグル大会",
+   "date": "2026-02-08",
+   "saj_comp": "4054",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4054_0205_M_MO.pdf",
+     "sha256": "1d3e71e5352e69357698b4dcf6c8be6ec7fdd14697bec492f11200fd4d944cd3",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/２戦danshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0205/result",
+     "gender": "M",
+     "codex": "0205",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦danshiリザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4054_5205_W_MO.pdf",
+     "sha256": "433df5bc4ed81e2b15c0d673727d9bdec08b5bcc2d7076ba8f733e2b8cc7cfce",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/２戦joshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5205/result",
+     "gender": "W",
+     "codex": "5205",
+     "saved_at": "2026-09-25",
+     "src_name": "２戦joshiリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4054-0205",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4057-0231",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2026 白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2026-02-14",
+   "saj_comp": "4057",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4057_0231_M_MO.pdf",
+     "sha256": "55208025297fdc3d98aa264cd1cd18ae6332f305243db12aff3c7944123ce491",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦danshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0231/result",
+     "gender": "M",
+     "codex": "0231",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦danshiリザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4057_5231_W_MO.pdf",
+     "sha256": "836bebc421a18880ba43dd2cc0487d44cb3badbe7894f641776d80d24e609c6a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦joshiリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5231/result",
+     "gender": "W",
+     "codex": "5231",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦joshiリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4057-0231",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-4056-0236",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第45回北海道スキー選手権大会フリースタイル競技DM/MO種目 45th Hokkaido Ski Championship Freestyle DM/MO",
+   "date": "2026-02-15",
+   "saj_comp": "4056",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/SAJ2026_4056_0236_M_MO.pdf",
+     "sha256": "6b015b5cc6375a187e1e186766d66e1317e5b9e169cf35587cfa06acf278aadf",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-男子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0236/result",
+     "gender": "M",
+     "codex": "0236",
+     "saved_at": "2026-09-25",
+     "src_name": "03-男子リザルト_merged.pdf"
+    },
+    {
+     "path": "FIS/2025-26/SAJ2026_4056_5236_W_MO.pdf",
+     "sha256": "d3ecb78c64333c89d5aeead604eb92a41754c53ba34c435a42e1163dbd5fdd4b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-女子リザルト_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5236/result",
+     "gender": "W",
+     "codex": "5236",
+     "saved_at": "2026-09-25",
+     "src_name": "03-女子リザルト_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-fis-4056-0236",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4057-0232",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2026 白馬乗鞍埼玉県モーグル選手権大会",
+   "date": "2026-02-15",
+   "saj_comp": "4057",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4057_0232_M_MO.pdf",
+     "sha256": "0dd6514b6d149d34f535b04850a585ee7307fa6225af44c681be123631396588",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0232/result",
+     "gender": "M",
+     "codex": "0232",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4057_5232_W_MO.pdf",
+     "sha256": "2de9a86008e84ad9c9441e3603c36b4e627a1f2fffeb1e42dc66e3a5065880c6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5232/result",
+     "gender": "W",
+     "codex": "5232",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4057-0232",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-4059-0341",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第35回札幌モーグル競技会 35th SAPPORO Moguls Competition 2026",
+   "date": "2026-02-28",
+   "saj_comp": "4059",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/SAJ2026_4059_0341_M_MO.pdf",
+     "sha256": "5648e37c609a239a325d24c81eb9c51c8161490eb8a3cab0b7857048e5f9784a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-男子全リザルトv01_merged-2.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0341/result",
+     "gender": "M",
+     "codex": "0341",
+     "saved_at": "2026-09-25",
+     "src_name": "03-男子全リザルトv01_merged-2.pdf"
+    },
+    {
+     "path": "FIS/2025-26/SAJ2026_4059_5341_W_MO.pdf",
+     "sha256": "a7c151d888431831f8ed6217e56292d8489a1f4a75c916ad5bfbfe1d74c3e29b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-女子全リザルトv01_merged-1.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5341/result",
+     "gender": "W",
+     "codex": "5341",
+     "saved_at": "2026-09-25",
+     "src_name": "03-女子全リザルトv01_merged-1.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-fis-4059-0341",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4061-0591",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "令和7年度新潟県スキー選手権大会 種目：モーグル",
+   "date": "2026-02-28",
+   "saj_comp": "4061",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4061_0591_M_MO.pdf",
+     "sha256": "4bf6e8ca7f0020a70160c884cc366e5d13502dde3c72bf5646482166057a5ca4",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/男子MOリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0591/result",
+     "gender": "M",
+     "codex": "0591",
+     "saved_at": "2026-09-25",
+     "src_name": "男子MOリザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4061_5591_W_MO.pdf",
+     "sha256": "c11b430028511d8184170e80f9f435b67e17f3c266b576da34a5c585f768dfed",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/女子MOリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5591/result",
+     "gender": "W",
+     "codex": "5591",
+     "saved_at": "2026-09-25",
+     "src_name": "女子MOリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4061-0591",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-4058-0332",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "第97回宮様スキー大会国際競技会 The 97th International MIYASAMA Ski Games",
+   "date": "2026-03-01",
+   "saj_comp": "4058",
+   "saj_category": "FIS/A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/SAJ2026_4058_0332_M_MO.pdf",
+     "sha256": "d261754254d32c2bf7275e9510e5e39c4a76b7ef065acada76383a511499e363",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-男子リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0332/result",
+     "gender": "M",
+     "codex": "0332",
+     "saved_at": "2026-09-25",
+     "src_name": "03-男子リザルトv01_merged.pdf"
+    },
+    {
+     "path": "FIS/2025-26/SAJ2026_4058_5332_W_MO.pdf",
+     "sha256": "a7745756d7f8b7799c58258e535f35caf3ff5d5143eb45acdbb4b1aa3ea9c2b6",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/03-女子リザルトv01_merged.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5332/result",
+     "gender": "W",
+     "codex": "5332",
+     "saved_at": "2026-09-25",
+     "src_name": "03-女子リザルトv01_merged.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-fis-4058-0332",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_a-4063-0370",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2026イマトクCUPハチ北モーグル大会",
+   "date": "2026-03-07",
+   "saj_comp": "4063",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4063_5370_W_MO.pdf",
+     "sha256": "9defe757b289d381ffbd40b8824f162f15f3a19011b7ebff08c15021aaff0d02",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第一戦 A級女子 予選＆決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5370/result",
+     "gender": "W",
+     "codex": "5370",
+     "saved_at": "2026-09-25",
+     "src_name": "第一戦 A級女子 予選＆決勝リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4063-0370",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4064-0362",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府はくのりモーグル里見大会",
+   "date": "2026-03-07",
+   "saj_comp": "4064",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4064_0362_M_MO.pdf",
+     "sha256": "f5e97f991c063d4534dced4e2e2a26d22df8b166a0acd039bb33224fb2cbf16a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0362/result",
+     "gender": "M",
+     "codex": "0362",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦男子リザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4064_5362_W_MO.pdf",
+     "sha256": "44de400bd75c4b2bcede0e5d17926d2419fae913297bf38d2991e28259dac977",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第１戦女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5362/result",
+     "gender": "W",
+     "codex": "5362",
+     "saved_at": "2026-09-25",
+     "src_name": "第１戦女子リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4064-0362",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_a-4063-0372",
+   "season": "2025-26",
+   "series": "SAJ_A",
+   "grade": "A",
+   "discipline": "MO",
+   "name_ja": "2026イマトクCUPハチ北モーグル大会",
+   "date": "2026-03-08",
+   "saj_comp": "4063",
+   "saj_category": "A MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4063_0372_M_MO.pdf",
+     "sha256": "bd5fcf8bb60395689c58850751f935c5ba3464d540f95b6a656b19a71eeeb86e",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/3月8日 第二戦 A級 男子 グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0372/result",
+     "gender": "M",
+     "codex": "0372",
+     "saved_at": "2026-09-25",
+     "src_name": "3月8日 第二戦 A級 男子 グランドリザルト.pdf"
+    },
+    {
+     "path": "SAJ_A/2025-26/SAJ2026_4063_5372_W_MO.pdf",
+     "sha256": "c226456a0c208804742e5b01fbb93c214403255a6f3960db31b4c91ad41a7196",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/3月8日 第二戦 A級 女子グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5372/result",
+     "gender": "W",
+     "codex": "5372",
+     "saved_at": "2026-09-25",
+     "src_name": "3月8日 第二戦 A級 女子グランドリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_a-4063-0372",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4063-0373",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2026イマトクCUPハチ北モーグル大会",
+   "date": "2026-03-08",
+   "saj_comp": "4063",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4063_0373_M_MO.pdf",
+     "sha256": "5d6bb72d21b7ffd1eae3d867008e97a98f1785412399de40e632729560f63364",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/3月8日 第二戦 B級 男子グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0373/result",
+     "gender": "M",
+     "codex": "0373",
+     "saved_at": "2026-09-25",
+     "src_name": "3月8日 第二戦 B級 男子グランドリザルト.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4063_5373_W_MO.pdf",
+     "sha256": "508ae9e16b4d9df6508ea87241ed0148df6d4b64ecf8ce7971db4108740515fb",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/3月8日 第二戦 B級 女子グランドリザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5373/result",
+     "gender": "W",
+     "codex": "5373",
+     "saved_at": "2026-09-25",
+     "src_name": "3月8日 第二戦 B級 女子グランドリザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4063-0373",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_b-4064-0363",
+   "season": "2025-26",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "森下仁丹2026大阪府はくのりモーグル里見大会",
+   "date": "2026-03-08",
+   "saj_comp": "4064",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4064_0363_M_MO.pdf",
+     "sha256": "4d55dfe17bd70711e094c0a3b49b494d60705cc0140ada2dc6ca555b8316e41b",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦男子リザルト_sc8AFGX.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0363/result",
+     "gender": "M",
+     "codex": "0363",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦男子リザルト_sc8AFGX.pdf"
+    },
+    {
+     "path": "SAJ_B/2025-26/SAJ2026_4064_5363_W_MO.pdf",
+     "sha256": "1c6330b0657e4adff23ab624b2e530abaa3f8922f9567e697f6c33210c535c29",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/第２戦女子リザルト_5Y3Me7A.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5363/result",
+     "gender": "W",
+     "codex": "5363",
+     "saved_at": "2026-09-25",
+     "src_name": "第２戦女子リザルト_5Y3Me7A.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_b-4064-0363",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-saj_ajjr-4065-0405",
+   "season": "2025-26",
+   "series": "SAJ_AJJR",
+   "grade": "全日本ジュニア",
+   "discipline": "MO",
+   "name_ja": "JOCジュニアオリンピックカップ2026全日本ジュニアスキー選手権大会フリースタイル競技デュアルモーグル・モーグル種目",
+   "date": "2026-03-14",
+   "saj_comp": "4065",
+   "saj_category": "NJC MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_AJJR/2025-26/SAJ2026_4065_0405_M_MO.pdf",
+     "sha256": "3a27d5f386aca285135284dfd990532fba4527051b585c48be3a6c8c6b2869d1",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/全日本ジュニアMO男子決勝リザルト4S.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0405/result",
+     "gender": "M",
+     "codex": "0405",
+     "saved_at": "2026-09-25",
+     "src_name": "全日本ジュニアMO男子決勝リザルト4S.pdf"
+    },
+    {
+     "path": "SAJ_AJJR/2025-26/SAJ2026_4065_5405_W_MO.pdf",
+     "sha256": "7b8516fe845ad205125eead87a7c20cccb673490d4014c7dfbc5a96e5a9247e7",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/全日本ジュニアMO女子予選リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5405/result",
+     "gender": "W",
+     "codex": "5405",
+     "saved_at": "2026-09-25",
+     "src_name": "全日本ジュニアMO女子予選リザルト.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2025-26",
+   "sheet_prefix": "2025-26-saj_ajjr-4065-0405",
    "format": {
     "label": null,
     "advance": {}

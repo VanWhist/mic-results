@@ -111,7 +111,8 @@ docs/検証レポート.md       ETL が毎回生成
 python -m etl.adapters.saj_aj.gen_registry
 ```
 
-で `etl/registry/saj_db.json`（MO、adapter saj_aj）と `etl/registry/saj_db_dm.json`（DM、adapter saj_dm）が生成される。
+で `etl/registry/saj_db.json`（MO、adapter saj_aj）と `etl/registry/saj_db_dm.json`（DM、adapter saj_dm。順位のみ。
+最終成績表の順位・BIB・SAJ 番号・氏名・所属・対戦経過を読む）が生成される。キッズ大会は `skip` 付きで生成され、取り込まない。
 規則は季節ごとの汎用ファイル `etl/rules/events/規則_SAJ_<シーズン>.json`。大会固有の例外（ペースタイムの根拠、印字を正とする行）は
 registry の該当大会に `pace_by_sheet` / `recompute_exceptions` を書く（sheet 名は `<event_id>_<Q|F|SF>-<m|w>`）。再生成しても手で書いた項目は保持される。
 

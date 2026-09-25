@@ -92,6 +92,7 @@ def make_run(rec, rnd, rules):
         'ded': [], 'ded_discard': [], 'ded_total': None,
         'turns_total': None, 'turns_floor_applied': False, 'run_score': None, 'tie': rec.get('tie'),
         'q_block': rec.get('q_block'), 'counting': bool(rec.get('counting', True)), 'best_score': rec.get('best_score'),
+        'rank_group': rec.get('rank_group'),  # 総合順位ページ: 1=決勝の得点で並ぶ上位ブロック、2=予選の得点で並ぶ下位ブロック
         'components': None,
         'provenance': {'pdf': rnd['source']['pdf'], 'page': rec.get('page'),
                        'parser_version': rnd['source']['parser_version'], 'rules_version': rnd['source']['rules_version']},

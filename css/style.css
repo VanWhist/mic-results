@@ -549,3 +549,6 @@ svg.chart .axis { font-size: 11px; fill: var(--muted); }
 svg.chart .line { fill: none; stroke: #9db4d8; stroke-width: 1.5; }
 .round-title { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .round-title h3 { margin: 0; }
+
+/* デュアルモーグルの対戦経過は長いので折り返す */
+td.prog { white-space: normal; font-size: 0.85em; max-width: 28em; }

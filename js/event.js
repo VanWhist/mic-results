@@ -122,6 +122,8 @@ function renderTable(r, runs) {
   } else if (tier === 'score') {
     heads.push(th('タイム', 'num'), th('タイム点', 'num'), th('エア', 'num'), th('ターン', 'num'), th('スコア', 'num'));
   }
+  const hasProg = runs.some((x) => x.components && x.components.progression);  // デュアルモーグル: 最終段と対戦経過
+  if (hasProg) heads.push(th('最終段'), th('対戦経過'));
   const tbody = el('tbody');
   for (const run of runs) {
     const tds = [el('td', { class: 'num', text: run.rank ?? '—' }), el('td', { class: 'num', text: run.bib ?? '—' }), nameCell(run),
@@ -138,6 +140,10 @@ function renderTable(r, runs) {
       tds.push(cell(run.turns_total, 2, run.turns_floor_applied ? 'floor' : ''), cell(run.run_score), el('td', { text: run.tie || '' }));
     } else if (tier === 'score') {
       tds.push(cell(run.seconds), cell(run.time_points), cell(run.air_total), cell(run.turns_total), cell(run.run_score));
+    }
+    if (hasProg) {
+      const c = run.components || {};
+      tds.push(el('td', { text: c.stage || '' }), el('td', { class: 'prog', text: c.progression || '' }));
     }
     tbody.append(el('tr', {}, tds));
   }
@@ -158,6 +164,7 @@ function renderCards(r, runs) {
     ]);
     const sub = [run.affiliation, run.club].filter(Boolean).join(' ');
     const parts = [];
+    if (run.components && run.components.progression) parts.push((run.components.stage ? run.components.stage + '　' : '') + run.components.progression);
     if (r.tier !== 'rank' && run.status === 'OK') {
       parts.push('タイム ' + num(run.seconds) + '秒（' + num(run.time_points) + '）');
       parts.push('エア ' + num(run.air_total) + (run.air && run.air.length ? '（' + run.air.map((x) => x.jump).join('・') + '）' : ''));

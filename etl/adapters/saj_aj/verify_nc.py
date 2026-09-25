@@ -101,6 +101,13 @@ def column_map(hrow, above):
     return n_turn, sorted(cols)
 
 
+def mixed_order(code):
+    m = re.match(r'^(?:SF|F|Q)-([a-z/]+)$', code or '')
+    if m and '/' in m.group(1):
+        return [{'w': '女子', 'm': '男子'}.get(x, '?') for x in m.group(1).split('/')]
+    return ['女子', '男子']
+
+
 def page_pace(words):
     """{性別 or None: ペースタイム}。'23.78 秒' の行か、'ペースタイム' ラベルの直下の数値。
     男女が同じページに並ぶ年は '男子ペースタイム' のように性別つきで印字される。"""
@@ -133,7 +140,7 @@ def read_pdf(path):
                 y = next((re.match(r'(\d{4})年', w['text']) for w in words if re.match(r'\d{4}年', w['text'])), None)
                 year = y.group(1) if y else None
             code = next((w['text'] for w in words if w['top'] < 90 and ROUNDCODE.match(w['text'])), None)
-            head_w = next((w for w in words if w['text'].endswith('リザルト') and w['top'] < 170), None)
+            head_w = next((w for w in words if w['text'].endswith('リザルト') and w['top'] < 400), None)  # 題名が長い年は見出しが下がる
             heading = None
             if head_w:
                 heading = ' '.join(w['text'] for w in sorted(words, key=lambda w: w['x0'])
@@ -151,6 +158,10 @@ def read_pdf(path):
                     gender = mark[-1]['text'].strip('【】')
                 else:
                     gender = next((g for g in GENDER_CODE if heading and heading.startswith(g)), None)
+                if gender is None and heading and heading.startswith('男女'):
+                    # 男女合同ページ: 左上の記号（F-w/m = 女子→男子）の順に表が並ぶ
+                    order = mixed_order(code)
+                    gender = order[k] if k < len(order) else None
                 # 見出しの語が文字間隔で割れて印字される年がある（2017 は 'Time' が 'Tim' 'e'）。
                 # 隣り合う断片をつないでから列を決める。
                 hrow = merge_fragments(sorted([w for w in words if abs(w['top'] - hdr['top']) < 2], key=lambda w: w['x0']))
@@ -160,7 +171,8 @@ def read_pdf(path):
                                 and not re.fullmatch(r'【(男子|女子)】', w['text'])])
 
                 def bib_word(line):
-                    return next((w for w in line['words'] if bibx - 8 <= w['x0'] <= bibx + 10 and w['text'].isdigit()), None)
+                    # BIB は 3 桁まで。2 行目の 7 桁 FIS 番号が BIB 列の近くに印字される様式（ばんけい 2026）を選手行と取り違えない
+                    return next((w for w in line['words'] if bibx - 6 <= w['x0'] <= bibx + 16 and w['text'].isdigit() and len(w['text']) <= 3), None)
 
                 anchors = [i for i, l in enumerate(lines) if bib_word(l)]
                 if anchors and anchors[0]:
@@ -182,6 +194,10 @@ def group_rounds(tables):
     性別ごとに人数の多い順＝早いラウンドとしてラウンド記号を決める（印字の見出し語は使わない）。"""
     rounds = []
     for t in tables:
+        if t['heading'] is None and t['gender'] is None and rounds:
+            # 見出し語の無いページ（表が次ページに続くとき）: 直前の表の続きとみなす
+            t['heading'], t['code'], t['gender'] = rounds[-1]['heading'], rounds[-1]['printed_code'], rounds[-1]['gender']
+            t['pace'] = t['pace'] if t['pace'] is not None else rounds[-1]['tables'][0]['pace']
         key = (t['heading'], t['code'], t['gender'])
         if rounds and rounds[-1]['key'] == key:
             rounds[-1]['tables'].append(t)
@@ -194,6 +210,16 @@ def group_rounds(tables):
         r['pace'] = r['tables'][0]['pace']
         r['pages'] = sorted({t['page'] for t in r['tables']})
     problems = []
+    # 同じ表が2回印字されている PDF（結合ミス）: 性別・記号・BIB の集合が同じラウンドは後の方を捨てる
+    seen = set()
+    kept = []
+    for r in rounds:
+        sig = (r['gender'], r['printed_code'], tuple(sorted(b['bib'] for b in r['blocks'])))
+        if sig in seen:
+            continue
+        seen.add(sig)
+        kept.append(r)
+    rounds[:] = kept
     by_gender = collections.defaultdict(list)
     for r in rounds:
         by_gender[r['gender']].append(r)
@@ -201,6 +227,12 @@ def group_rounds(tables):
     full = CODES_BY_ROUNDS.get(most)
     for g, rs in by_gender.items():
         counts = [len(r['blocks']) for r in rs]
+        printed = [(r['printed_code'] or '').split('-')[0] for r in rs]
+        if g in GENDER_CODE and all(printed) and len(set(printed)) == len(printed) and set(printed) <= {'Q', 'F', 'SF'}:
+            # 左上の印字記号（Q-m / F-m / SF-m）が揃っていればそれを使う（人数が同じラウンドがある大会でも決まる）
+            for r, c in zip(rs, printed):
+                r['code'] = c
+            continue
         if full is None or g not in GENDER_CODE or len(set(counts)) != len(counts):
             problems.append('性別 %r のラウンドに記号を決められない（人数 %s）' % (g, counts))
             for r in rs:

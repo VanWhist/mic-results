@@ -80,6 +80,8 @@ def main():
             'pdfs': pdfs, 'rules': ensure_rules(season) if disc == 'MO' else None, 'sheet_prefix': event_id,
             'format': {'label': None, 'advance': {}}, 'notes': '',
         }
+        if 'KIDS' in first['category']:
+            ev['skip'] = 'キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち'
         out[disc].append(ev)
     for disc, fn in (('MO', 'saj_db.json'), ('DM', 'saj_db_dm.json')):
         path = os.path.join(config.REGISTRY_DIR, fn)

@@ -8,7 +8,7 @@ Layers apply per tier:
   score  : layer0, layer3 (rank order only), layer4, layer5, golden
   rank   : layer0, layer4, layer5, golden
 """
-import json, os, collections
+import json, os, re, collections
 from decimal import Decimal
 from . import scoring
 
@@ -162,7 +162,8 @@ def _athlete_items(runs):
         best = max(ok, key=lambda b: Decimal(str(b['run_score']))) if ok else None
         direct = all(b['q_block'] == 'Q1' for b in blocks) and any(b['q_block'] for b in blocks)
         items.append({'athlete_id': code, 'name': blocks[0]['name'], 'rank': blocks[0]['rank'], 'direct': direct,
-                      'best_run': best, 'blocks': blocks, 'best_score': blocks[0].get('best_score')})
+                      'best_run': best, 'blocks': blocks, 'best_score': blocks[0].get('best_score'),
+                      'rank_group': blocks[0].get('rank_group')})
     return items
 
 
@@ -170,14 +171,15 @@ def _rank_items(items, rules):
     recs = []
     for it in items:
         b = it['best_run']
+        tv = Decimal(str(b['tie'])) if b.get('tie') is not None and re.fullmatch(r'-?\d+(\.\d+)?', str(b['tie'])) else Decimal(0)
         if '_recomputed' in b:
             rc = b['_recomputed']
             recs.append({'item': it, 'run_score': rc['run_score'], 'turns_total': rc['turns_total'],
-                         'air_without_dd': rc['air_without_dd'], 'seconds': Decimal(str(b['seconds']))})
+                         'air_without_dd': rc['air_without_dd'], 'seconds': Decimal(str(b['seconds'])), 'tie_value': tv})
         else:  # score tier: only the printed score is available
             recs.append({'item': it, 'run_score': Decimal(str(b['run_score'])),
                          'turns_total': Decimal(str(b['turns_total'] or 0)), 'air_without_dd': Decimal(0),
-                         'seconds': Decimal(str(b['seconds'] or 0))})
+                         'seconds': Decimal(str(b['seconds'] or 0)), 'tie_value': tv})
     return scoring.rank_order(recs, rules)
 
 
@@ -192,15 +194,23 @@ def layer3_rank(round_id, runs, rules):
             best = Decimal(str(it['best_run']['run_score']))
             if it['best_score'] is None or not _num_eq(it['best_score'], best):
                 f.append(Finding('error', round_id, 'layer3', f"{it['name']} 採用点 {it['best_score']} がブロック最高点 {best} と違う"))
-    groups = [[it for it in items if it['direct']], [it for it in items if not it['direct']]] if q_layout else [items]
+    if q_layout:
+        groups = [[it for it in items if it['direct']], [it for it in items if not it['direct']]]
+    elif any(it.get('rank_group') for it in items):
+        # 総合順位ページ: 決勝を滑った上位ブロックと、予選の得点で並ぶ下位ブロックを別々に検算する
+        groups = [[it for it in items if it.get('rank_group') == 1], [it for it in items if it.get('rank_group') != 1]]
+    else:
+        groups = [items]
     # SAJ 国内大会: 同点欄（T1/T2）が印字されたラウンドだけタイブレークで順位を分け、それ以外は同点＝同順位。
     rules_eff = rules
-    if rules.get('tie_break_if_marked') and any(r.get('tie') for r in runs):
+    if rules.get('tie_break_if_marked') and any(r.get('tie') and not re.fullmatch(r'-?\d+(\.\d+)?', str(r['tie'])) for r in runs):
         rules_eff = dict(rules, tie_break=rules['tie_break_if_marked'])
     offset = 0
-    for grp in groups:
+    for gi, grp in enumerate(groups):
         if not grp:
             continue
+        if gi == 1 and any(it.get('rank_group') for it in items):
+            offset = min(it['rank'] for it in grp if it['rank']) - 1  # 下位ブロックは印字の最小順位から（決勝の DNF も上位ブロックに数える）
         for rec, rank in _rank_items(grp, rules_eff):
             it = rec['item']
             if it['rank'] != rank + offset:

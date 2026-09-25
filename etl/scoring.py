@@ -80,7 +80,16 @@ def recompute(rec, pace_time, rules):
     dt, d_disc = counting_total(rec['ded_scores'], rules)
     out['base_total'], out['base_discard'] = bt, b_disc
     out['ded_total'], out['ded_discard'] = dt, d_disc
-    tt, floored = turns_total(bt, dt, rules)
+    if rules.get('discard_high_low', True) and len(rec['base_scores']) >= 5:
+        tt, floored = turns_total(bt, dt, rules)
+    else:
+        # 最高・最低を除外しないパネル（3 審判）: 審判ごとに（ベース−減点）を取り、下限は審判ごとに 0.1。
+        # SAJ 公認大会の印字（例: 8.0/9.6/9.0 − 9.5/9.0/9.5 → 0.1+0.6+0.1 = 0.8）から確定。
+        mn = D(str(rules.get('turns_min_per_judge', 0.1)))
+        deds = rec['ded_scores'] or [0] * len(rec['base_scores'])
+        per = [D(str(b)) + D(str(d)) for b, d in zip(rec['base_scores'], deds)]
+        tt = sum((v if v > mn else mn for v in per), Decimal(0))
+        floored = any(v < mn for v in per)
     out['turns_total'], out['turns_floor_applied'] = tt, floored
     at, parts = air_total(rec['air_jumps'], rules)
     out['air_total'], out['air_parts'] = at, parts
@@ -107,6 +116,9 @@ def rank_order(records, rules):
                 k.append(-r['air_without_dd'])
             elif t == 'seconds_asc':
                 k.append(r['seconds'])
+            elif t == 'tie_value':
+                # 旧 SAJ 様式の「同点」欄: 勝った側 2.0・負けた側 1.0・決まらなければ 1.5 と印字される。大きい方が上位
+                k.append(-r.get('tie_value', Decimal(0)))
         return tuple(k)
     ordered = sorted(records, key=key)
     ranks = []
