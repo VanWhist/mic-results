@@ -7,7 +7,7 @@ JSON に写したもの（etl/layer5_cache/saj/<seasoncode>_<codex>.json、{'url
 
 注意: PDF も順位表も同じ SAJ の結果システム由来で、独立した第三者ソースではない。「自分が正しく転記したか」の確認として使う。
 """
-import collections, os, re, json
+import collections, os, re, json, unicodedata
 from decimal import Decimal
 from . import config
 from .verify import Finding, _num_eq
@@ -48,9 +48,12 @@ def overall_from_rounds(rounds_by_code):
         items.sort(key=lambda x: x[0])
         ranked_items = [(rk, r) for rk, r in items if rk < 10 ** 6]
         unranked = [r for rk, r in items if rk >= 10 ** 6]
+        # ラウンド内で同じ順位の選手（決勝の DNF 2 人に「11」と印字される等）は総合でも同順位にする
+        base = placed
         for rank_in_round, r in ranked_items:
             placed += 1
-            out[r['athlete_id']] = {'overall': placed, 'round': code, 'round_rank': rank_in_round,
+            overall = base + 1 + sum(1 for rk, _ in ranked_items if rk < rank_in_round)
+            out[r['athlete_id']] = {'overall': overall, 'round': code, 'round_rank': rank_in_round,
                                     'score': r['run_score'], 'saj_no': r.get('saj_no'), 'name': r['name'], 'status': r['status']}
         # 決勝で DNF/DNS になった選手は、SAJ の順位表では決勝ブロックの末尾に同順位で載る（予選落ちの選手より上）
         if unranked and code != order[-1]:
@@ -72,7 +75,8 @@ def _norm_no(s):
 
 
 def _norm_name(s):
-    return ''.join((s or '').split())
+    # 順位表は外国籍選手の名前を全角英字で載せることがある（'Ｂｒａｙｄｅｎ Ｋｕｒｏｄａ'）ので NFKC で揃える
+    return ''.join(unicodedata.normalize('NFKC', s or '').split()).lower()
 
 
 def _dec(s):
@@ -97,16 +101,17 @@ def compare(event_id, gender, rounds_by_code, cache):
     for row in rows:
         aid = by_no.get(_norm_no(row.get('code'))) or by_name.get(_norm_name(row.get('name')))
         if aid is None:
-            f.append(Finding('error', round_id, 'layer5', f"{gender} 順位表の {row.get('rank')}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
+            # 順位が空欄の行（棄権などで順位の付かない選手）は結果ではないので、PDF に居なくても警告にとどめる
+            level = 'error' if str(row.get('rank') or '').strip() else 'warning'
+            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
             continue
         matched.append((row, aid))
     seen = {aid for _, aid in matched}
     # SAJ の順位表は SAJ 登録選手だけを載せる（外国籍選手などは省かれ、後続の順位が詰まる）。
     # そこで順位表に居る選手だけで PDF 側の総合順位を付け直してから比べる。
-    present = sorted([ours[aid] for aid in seen if ours[aid]['overall'] is not None], key=lambda o: o['overall'])
-    rerank = {}
-    for i, o in enumerate(present, start=1):
-        rerank[id(o)] = i
+    present = [ours[aid] for aid in seen if ours[aid]['overall'] is not None]
+    # 同順位（決勝の DNF 2 人がともに 11 位など）は同順位のまま付け直す：自分より上の人数 + 1
+    rerank = {id(o): 1 + sum(1 for p in present if p['overall'] < o['overall']) for o in present}
     for row, aid in matched:
         o = ours[aid]
         html_rank = int(row['rank']) if str(row.get('rank') or '').strip().isdigit() else None

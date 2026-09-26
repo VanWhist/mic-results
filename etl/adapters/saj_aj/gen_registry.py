@@ -4,7 +4,7 @@
 
 - MO → etl/registry/saj_db.json（adapter saj_aj、tier detail）
 - DM → etl/registry/saj_db_dm.json（adapter saj_dm、tier rank）
-- 全日本（NC）のうち 2016-17〜2025-26 は etl/registry/saj_aj.json（札幌スキー連盟の PDF）に登録済みなので除外する。
+- 全日本（NC）のモーグルのうち 2016-17〜2025-26 は etl/registry/saj_aj.json に登録済みなので除外する（デュアルモーグルは除外しない）。
 - 1 大会 = SAJ の大会（competition）× レース（codex の下4桁。女子は男子＋5000）。同じ大会に第1戦・第2戦があれば別の event になる。
 - 規則は季節ごとの汎用ファイル etl/rules/events/規則_SAJ_<season>.json（無ければ作る）。大会固有の例外は registry の
   pace_by_sheet / recompute_exceptions に書く（sheet 名は "<event_id>_<Q|F|SF>-<m|w>"）。
@@ -55,7 +55,9 @@ def main():
         if not os.path.exists(path):
             n_missing += 1
             continue
-        if it['series'] == 'SAJ_AJ' and it['season'] in registered_aj:
+        # 全日本のモーグルは saj_aj.json（全日本用の PDF、女子が欠ける年は SAJ データバンクの女子 PDF を足してある）で取り込むので除く。
+        # デュアルモーグルは saj_aj.json に無いので、ここで取り込む（以前は年ごと除いていて、全日本の DM が 10 年分抜けていた）
+        if it['series'] == 'SAJ_AJ' and it['season'] in registered_aj and it['discipline'] == 'MO':
             continue
         race = int(it['codex']) % 5000
         key = (it['discipline'], it['series'], it['season'], it['comp'], race)
@@ -93,10 +95,10 @@ def main():
         for ev in out[disc]:
             o = old.get(ev['event_id'])
             if o:
-                for k in ('rules', 'format', 'pace_by_sheet', 'recompute_exceptions', 'notes', 'tier', 'grade', 'name_ja', 'skip'):
+                for k in ('rules', 'format', 'pace_by_sheet', 'recompute_exceptions', 'notes', 'tier', 'grade', 'name_ja', 'skip', 'tie_break'):
                     if k in o:
                         ev[k] = o[k]
-        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）',
+        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break は手で編集してよい（再生成しても保持される）',
                          'generated_at': datetime.datetime.now().isoformat(timespec='seconds'), 'events': out[disc]})
         print(f"{fn}: {len(out[disc])} 大会 / {sum(len(e['pdfs']) for e in out[disc])} PDF")
     print(f"未保存の PDF: {n_missing}")

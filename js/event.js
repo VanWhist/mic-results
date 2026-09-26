@@ -4,14 +4,13 @@ import * as data from './data.js';
 import {
   el, clear, cell, num, mountNav, errorBox, eventName, eventDates, seriesLabel, genderLabel, roundLabel, tierBadge,
   tierHelp, verificationBadge, layerMark, layerStatusLabel, LAYER_LABEL, statusBadge, reportLink, athleteHref, isNarrow,
-  onWidthChange, queryParam, micBadge, noteLayers,
+  onWidthChange, queryParam, noteLayers,
 } from './ui.js';
 
 let manifest = null;
 let event = null;
 let runsByRound = new Map();
 let lines = new Map();
-let athleteMap = new Map();
 let current = null;   // 表示中の round
 
 // 結果表の見た目（ナショナルチーム用の moguls-results と同じ）。'fis' = 公式 PDF と同じ3行ブロック（既定）、
@@ -227,13 +226,12 @@ function idCount(L) { return (L.intl ? 6 : 4 + (L.showClub ? 1 : 0)) + (L.qLayou
 function fisIdentityCells(item, L) {
   const r = item.run;
   const head = item.role !== 'Q1ref';
-  const a = athleteMap.get(r.athlete_id);
   const cells = [
     el('td', { class: 'num bold', text: head ? (r.rank ?? '') : '' }),
     el('td', { class: 'num', text: head ? (r.bib ?? '') : '' }),
   ];
   if (L.intl) cells.push(el('td', { class: 'num', text: head ? (r.fis_code || '') : '' }));
-  cells.push(el('td', { class: 'name' }, head ? [el('a', { href: athleteHref(r.athlete_id), text: r.name }), ' ', micBadge(a)] : []));
+  cells.push(el('td', { class: 'name' }, head ? [el('a', { href: athleteHref(r.athlete_id), text: r.name })] : []));
   cells.push(el('td', { text: head ? (L.intl ? (r.noc || '') : (r.affiliation || '')) : '' }));
   if (L.intl) cells.push(el('td', { class: 'num', text: head ? (r.yb ?? '') : '' }));
   else if (L.showClub) cells.push(el('td', { class: 'club', text: head ? (r.club || '') : '' }));
@@ -388,7 +386,7 @@ function renderFisCards(r, items) {
     const parts = [
       el('div', { class: 'fis-card-head' }, [
         el('span', { class: 'fis-rank', text: head.rank ?? '' }),
-        el('span', { class: 'fis-name' }, [el('a', { href: athleteHref(head.athlete_id), text: head.name }), ' ', micBadge(athleteMap.get(head.athlete_id))]),
+        el('span', { class: 'fis-name' }, [el('a', { href: athleteHref(head.athlete_id), text: head.name })]),
         el('span', { class: 'fis-noc', text: org || '' }),
         scoreNode(head, headScore, 'fis-score'),
       ]),
@@ -416,8 +414,7 @@ function renderFisCards(r, items) {
 }
 
 function nameCell(run) {
-  const a = athleteMap.get(run.athlete_id);
-  return el('td', {}, [el('a', { href: athleteHref(run.athlete_id), text: run.name }), ' ', micBadge(a), ...statusBadge(run)]);
+  return el('td', {}, [el('a', { href: athleteHref(run.athlete_id), text: run.name }), ...statusBadge(run)]);
 }
 
 function renderTable(r, runs) {
@@ -471,10 +468,9 @@ function renderTable(r, runs) {
 function renderCards(r, runs) {
   const box = el('div', { class: 'card-list' });
   for (const run of runs) {
-    const a = athleteMap.get(run.athlete_id);
     const head = el('div', { class: 'rec-head' }, [
       el('span', { class: 'rec-rank', text: run.rank ? run.rank + '位' : (run.status || '—') }),
-      el('a', { class: 'rec-name', href: athleteHref(run.athlete_id), text: run.name }), ' ', micBadge(a),
+      el('a', { class: 'rec-name', href: athleteHref(run.athlete_id), text: run.name }),
       el('span', { class: 'rec-total', text: run.run_score !== null && run.run_score !== undefined ? num(run.run_score) : '' }),
     ]);
     const sub = [run.affiliation, run.club].filter(Boolean).join(' ');
@@ -495,11 +491,10 @@ async function main() {
   const id = queryParam('id');
   try {
     manifest = await data.manifest();
-    const [events, lineList, athletes] = await Promise.all([data.events(), data.lines(), data.athletes()]);
+    const [events, lineList] = await Promise.all([data.events(), data.lines()]);
     event = events.find((e) => e.event_id === id);
     if (!event) throw new Error('大会 ' + id + ' がありません');
     lines = new Map(lineList.map((l) => [l.round_id, l]));
-    athleteMap = new Map(athletes.map((a) => [a.athlete_id, a]));
     const runs = await data.runs(event.season);
     for (const run of runs) {
       if (run.event_id !== event.event_id) continue;

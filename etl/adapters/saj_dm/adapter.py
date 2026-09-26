@@ -101,8 +101,10 @@ def load_event(ev, imported_at, log=print):
         if meta.get('gender') and pdf.get('gender') and meta['gender'] != pdf['gender']:
             findings.append(Finding('error', round_id, 'layer0', f"見出しの性別 {meta['gender']} が registry の {pdf['gender']} と違う"))
         ranks = [a['rank'] for a in athletes]
-        if ranks != sorted(ranks) or len(set(ranks)) != len(ranks):
-            findings.append(Finding('error', round_id, 'layer0', f"順位が昇順・一意でない {ranks[:10]}…"))
+        # 同順位はあり得る（1 回戦で DNF の 2 人がともに 25 位など。SAJ の順位表も同順位）。昇順であることだけを見る
+        if ranks != sorted(ranks):
+            bad = next(i for i in range(1, len(ranks)) if ranks[i] < ranks[i - 1])
+            findings.append(Finding('error', round_id, 'layer0', f"順位が昇順でない（{bad} 行目付近: {ranks[max(0, bad - 2):bad + 2]}）"))
         cls = {
             'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
             'discipline': 'DM', 'gender': g, 'round': 'F1', 'round_text': 'Final Result', 'codex': pdf.get('codex'),

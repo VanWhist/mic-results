@@ -20,7 +20,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2017/competition/0039/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5039/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2016-17/SAJ2017_1930_5039_W_MO.pdf",
+     "sha256": "81484fae3c0b282bfdafba4fc6a214d8020d4b1f509fcbe782706962ee4868ce",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2017/FS/FSRE20175039.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2017/competition/5039/result",
+     "gender": "W",
+     "codex": "5039",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20175039.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2017",
@@ -70,7 +82,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0035/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5035/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2017-18/SAJ2018_1897_5035_W_MO.pdf",
+     "sha256": "f9f6782c3ebf9b3407f3112fb945057727485d72ff0e23f0053a3ae9ac5cd023",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2018/FS/FSRE20185035.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5035/result",
+     "gender": "W",
+     "codex": "5035",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20185035.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2018",
@@ -120,7 +144,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2019/competition/0031/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5031/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2018-19/SAJ2019_1865_5031_W_MO.pdf",
+     "sha256": "94f0203efadb8279e94b04259d851dfb80612df4a2287be1e4e87725e8c2eb4a",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2019/FS/FSRE20195031.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2019/competition/5031/result",
+     "gender": "W",
+     "codex": "5031",
+     "saved_at": "2026-09-25",
+     "src_name": "FSRE20195031.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2019",
@@ -220,7 +256,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2021/competition/0458/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2021/competition/5458/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2020-21/SAJ2021_2765_5458_W_MO.pdf",
+     "sha256": "7a1013c42b9a3d23e41b5af1812cdbeb6fc1bb6f61e31c89809d1135cd543aae",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2021/FS/★全日本MO_0320_女子総合リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2021/competition/5458/result",
+     "gender": "W",
+     "codex": "5458",
+     "saved_at": "2026-09-25",
+     "src_name": "★全日本MO_0320_女子総合リザルト.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2021",
@@ -316,7 +364,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0459/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5459/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2022-23/SAJ2023_3288_5459_W_MO.pdf",
+     "sha256": "700dda625d1012c37ed806fbf06764d6302faa0a1deb5c30c87e692ca6fb5dd0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/MO女子決勝リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/5459/result",
+     "gender": "W",
+     "codex": "5459",
+     "saved_at": "2026-09-25",
+     "src_name": "MO女子決勝リザルト.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2023",
@@ -408,7 +468,19 @@
      "sha256": "1dd3e0b26eafbdbc244b881a591bec7ad31f945f4ac6e1f979753856823d7e27",
      "url": "https://www.age.ne.jp/x/sas/alljapan_fsmo_m_results20250330.pdf",
      "page_url": "https://www.age.ne.jp/x/sas/freestyle_results2025.html",
-     "saved_at": "2026-09-17"
+     "saved_at": "2026-09-17",
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2024-25/SAJ2025_3806_5444_W_MO.pdf",
+     "sha256": "fb1781dca65290194f43f5a8900bd43c904ec5602b33a51fa1903cce1642bf02",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO_女子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/5444/result",
+     "gender": "W",
+     "codex": "5444",
+     "saved_at": "2026-09-25",
+     "src_name": "MO_女子リザルト.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2025",
@@ -458,7 +530,19 @@
      "page_urls": {
       "M": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0443/result",
       "W": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5443/result"
-     }
+     },
+     "gender": "M"
+    },
+    {
+     "path": "SAJ_AJ/2025-26/SAJ2026_4067_5443_W_MO.pdf",
+     "sha256": "a0ee60c1abf1dabbcc6ecaf94cf5431e642f91fc0c7190310017b9f91db8d946",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2026/FS/女子リザルト全部入v01.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5443/result",
+     "gender": "W",
+     "codex": "5443",
+     "saved_at": "2026-09-25",
+     "src_name": "女子リザルト全部入v01.pdf",
+     "note": "全日本用の PDF に女子が無い（または予選が無い）ため、女子は SAJ 競技データバンクの女子 PDF から読む（2026-09-26）"
     }
    ],
    "rules": "規則_2026",

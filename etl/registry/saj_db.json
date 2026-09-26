@@ -1,6 +1,6 @@
 {
- "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-25T12:50:29",
+ "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break は手で編集してよい（再生成しても保持される）",
+ "generated_at": "2026-09-26T10:14:25",
  "events": [
   {
    "event_id": "2011-12-saj_b-2051-0001",
@@ -11645,6 +11645,48 @@
    "notes": ""
   },
   {
+   "event_id": "2021-22-saj_b-3013-0299",
+   "season": "2021-22",
+   "series": "SAJ_B",
+   "grade": "B",
+   "discipline": "MO",
+   "name_ja": "2022HSCフリースタイル選手権大会モーグル大会 第1戦・第2戦",
+   "date": "2022-02-22",
+   "saj_comp": "3013",
+   "saj_category": "B MO",
+   "tier": "detail",
+   "adapter": "saj_aj",
+   "pdfs": [
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3013_0299_M_MO.pdf",
+     "sha256": "1ae1908fb2480b78d9e1e35fd73546efd9abf693fdfca43aea8b7b7b5d1c9f74",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2.22HSC-B#1男子予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0299/result",
+     "gender": "M",
+     "codex": "0299",
+     "saved_at": "2026-09-26",
+     "src_name": "2.22HSC-B#1男子予選.pdf"
+    },
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3013_5299_W_MO.pdf",
+     "sha256": "f76eb0be6b6a8549db6325798dc8049c6dacc6f586be9750de15eb9c3e86ac08",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2.22HSC-B#1女子予選.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5299/result",
+     "gender": "W",
+     "codex": "5299",
+     "saved_at": "2026-09-26",
+     "src_name": "2.22HSC-B#1女子予選.pdf"
+    }
+   ],
+   "rules": "規則_SAJ_2021-22",
+   "sheet_prefix": "2021-22-saj_b-3013-0299",
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2021-22-saj_a-3012-0290",
    "season": "2021-22",
    "series": "SAJ_A",
@@ -11708,6 +11750,16 @@
      "codex": "0300",
      "saved_at": "2026-09-25",
      "src_name": "2.23HSC-B男子予選-結合済み_1.pdf"
+    },
+    {
+     "path": "SAJ_B/2021-22/SAJ2022_3013_5300_W_MO.pdf",
+     "sha256": "45977704858ecdd8447c3d77065e2550bc656a400e8dc5de42ffb8816a9b13a0",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2.23HSC-B#2女子予選-結合済み.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5300/result",
+     "gender": "W",
+     "codex": "5300",
+     "saved_at": "2026-09-26",
+     "src_name": "2.23HSC-B#2女子予選-結合済み.pdf"
     }
    ],
    "rules": "規則_SAJ_2021-22",
@@ -11716,7 +11768,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→エア→タイム）で分けて順位を付けている（女子予選 8・9 位 佐生 彩七／吉川 和花、ともに 25.62、ターン 22.2 と 21.4）。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2021-22-saj_b-3017-0355",
@@ -14503,6 +14560,16 @@
    "tier": "detail",
    "adapter": "saj_aj",
    "pdfs": [
+    {
+     "path": "FIS/2024-25/SAJ2025_3794_0452_M_MO.pdf",
+     "sha256": "ce1c36c2cbd237d2b7257823aea93db8e72a0fd141e6b9e914e90cec22545424",
+     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/MO男子リザルト.pdf",
+     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0452/result",
+     "gender": "M",
+     "codex": "0452",
+     "saved_at": "2026-09-26",
+     "src_name": "MO男子リザルト.pdf"
+    },
     {
      "path": "FIS/2024-25/SAJ2025_3794_5452_W_MO.pdf",
      "sha256": "a144e75ba42a26bffcf08b5ac7e3724f9ed2407ad95a41650b30c52bf7b7544d",

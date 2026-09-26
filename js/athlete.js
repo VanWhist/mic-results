@@ -3,7 +3,7 @@
 import * as data from './data.js';
 import {
   el, clear, num, mountNav, errorBox, eventShortName, genderLabel, roundLabel, tierBadge, TIER_SHORT, athleteMatches,
-  athleteHref, eventHref, micBadge, queryParam, statusBadge,
+  athleteHref, eventHref, queryParam, statusBadge,
 } from './ui.js';
 
 let athletes = [];
@@ -20,7 +20,7 @@ function renderSearch(query) {
   const tbody = el('tbody');
   for (const a of list.slice(0, 200)) {
     tbody.append(el('tr', {}, [
-      el('td', {}, [el('a', { href: athleteHref(a.athlete_id), text: a.name }), ' ', micBadge(a)]),
+      el('td', {}, [el('a', { href: athleteHref(a.athlete_id), text: a.name })]),
       el('td', { text: [a.affiliation, a.club].filter(Boolean).join(' ') }),
       el('td', { text: (a.aliases || []).join('、') }),
       el('td', { class: 'num', text: a.n_results }),
@@ -36,7 +36,7 @@ function renderSearch(query) {
 
 function renderProfile(a) {
   const box = clear(document.getElementById('profile'));
-  box.append(el('h2', {}, [a.name, ' ', micBadge(a)]));
+  box.append(el('h2', { text: a.name }));
   const kv = el('div', { class: 'kv' });
   const add = (k, v) => { if (v) kv.append(el('div', {}, [el('strong', { text: k + '：' }), v])); };
   add('所属', [a.affiliation, a.club].filter(Boolean).join(' '));

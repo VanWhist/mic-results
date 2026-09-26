@@ -316,6 +316,10 @@ def match_b_round(rounds_b, gender_ja, n, bibs=None, code=None):
 def load_event(ev, imported_at, log=print):
     """registry の 1 大会 → [ctx]。ctx = {cls, meta, records, findings, ab_compared, rules}"""
     rules_by_n, raw_rules = load_event_rules(ev['rules'])
+    if ev.get('tie_break') is not None:
+        # 大会ごとの例外: 同点欄に印字が無くても同点を分けて順位を付けている大会（registry の tie_break、根拠は notes）
+        for r in rules_by_n.values():
+            r['tie_break'] = list(ev['tie_break'])
     # sheet 名（pace_by_sheet / recompute_exceptions のキー）: 全日本は "<年>_<Q|F|SF>-<m|w>"、汎用規則の大会は "<event_id>_…"
     sheet_prefix = ev.get('sheet_prefix') or str(raw_rules.get('year'))
     overrides = dict(raw_rules.get('pace_by_sheet', {}))

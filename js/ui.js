@@ -111,12 +111,6 @@ export function tierHelp(tier) {
   return '';
 }
 
-export function micBadge(a) {
-  if (!a || !a.mic) return null;
-  const span = a.mic.from ? '（' + a.mic.from + (a.mic.to ? '〜' + a.mic.to : '〜') + '）' : '';
-  return el('span', { class: 'badge mic', text: 'MIC' + span });
-}
-
 export function eventName(ev) {
   return ev.season + ' ' + (ev.series_label || seriesLabel(ev.series)) + (ev.name_ja ? '　' + ev.name_ja : (ev.venue ? '　' + ev.venue : ''));
 }

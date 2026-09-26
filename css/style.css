@@ -534,7 +534,6 @@ table.fis.fis-mini.fm-turns td.rule { border-top: 1px solid var(--ink); }
 .badge.tier-detail { background: var(--official-soft); color: var(--official); }
 .badge.tier-score { background: #e7eefb; color: #1f4e9c; }
 .badge.tier-rank { background: #eef1f4; color: var(--muted); }
-.badge.mic { background: #fde7ef; color: #b1275b; font-weight: 700; }
 .kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 4px 16px; margin: 8px 0; }
 .kv > div { font-size: 14px; }
 .controls label.check { display: flex; align-items: center; gap: 6px; }
