@@ -65,6 +65,7 @@ def main(argv=None):
     dev = bool(args.adapter or args.event)
 
     expected = load_json(config.EXPECTED_ROUNDS, {})
+    expected_before = set(expected)
     published = load_json(config.PUBLISHED_HASHES, {})
     aliases = load_json(config.ATHLETE_ALIASES, {})
     master = load_json(config.ATHLETE_MASTER, {})
@@ -187,6 +188,9 @@ def main(argv=None):
     print(f"\n{len(all_runs)} records / {n_warn} warnings / {n_err} errors / 公開対象 {len(publish_ctx)}/{len(rounds_ctx)} ラウンド")
 
     if args.accept_rounds:
+        # 基準に登録するのは公開するラウンドだけ。検証を通らないラウンドの人数（読み違いかもしれない）は固定しない
+        published_ids = {ctx['round']['round_id'] for ctx in publish_ctx}
+        expected = {k: v for k, v in expected.items() if k in expected_before or k in published_ids}
         dump_json(config.EXPECTED_ROUNDS, expected)
     if global_errors or dev:
         if dev:

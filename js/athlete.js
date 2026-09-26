@@ -3,7 +3,7 @@
 import * as data from './data.js';
 import {
   el, clear, num, mountNav, errorBox, eventShortName, genderLabel, roundLabel, tierBadge, TIER_SHORT, athleteMatches,
-  athleteHref, eventHref, queryParam, statusBadge,
+  athleteHref, eventHref, queryParam, statusBadge, isNarrow, onWidthChange,
 } from './ui.js';
 
 let athletes = [];
@@ -66,6 +66,7 @@ function renderHistory(a) {
   const box = clear(document.getElementById('history'));
   const list = myRuns(a);
   if (!list.length) { box.append(el('p', { class: 'meta', text: '記録がありません。' })); return; }
+  if (isNarrow()) { box.append(historyCards(list)); return; }
   let season = null;
   const tbody = el('tbody');
   for (const { run, ctx } of list) {
@@ -90,6 +91,47 @@ function renderHistory(a) {
     el('thead', {}, el('tr', {}, ['日付', '大会', '会場', 'ラウンド', '順位 / 人数', '得点', 'ターン / エア / タイム点', 'ジャンプ', '記録'].map((t) => el('th', { class: 'no-sort', text: t })))),
     tbody,
   ])));
+}
+
+// ---- スマホ：年表をシーズンごとに折りたためるカードにする（9 列の表は横スクロールになるため） ----
+// 1 枚 = 1 本の滑走。日付・大会名（結果表へ）／ラウンド・順位・得点／ターン・エア・タイム点とジャンプ。最新シーズンだけ開く。
+function historyCard(run, ctx) {
+  const detail = run.tier === 'detail' && run.status === 'OK';
+  const jumps = (run.air || []).map((x) => x.jump).filter(Boolean).join('・');
+  return el('a', { class: 'hist-card', href: eventHref(ctx.event.event_id, run.round_id) }, [
+    el('div', { class: 'hc-top' }, [
+      el('span', { class: 'hc-date', text: run.date || '' }),
+      el('span', { class: 'hc-event', text: eventShortName(ctx.event) }),
+      el('span', { class: 'badge tier tier-' + run.tier + ' hc-tier', text: TIER_SHORT[run.tier] || run.tier }),
+    ]),
+    el('div', { class: 'hc-main' }, [
+      el('span', { class: 'hc-round', text: genderLabel(run.gender) + ' ' + roundLabel(ctx.round) }),
+      el('span', { class: 'hc-rank' }, [run.rank ? run.rank + '位' : '', el('small', { text: run.rank ? ' / ' + (ctx.roundSize || '') + '人' : '' }), ...statusBadge(run)]),
+      el('span', { class: 'hc-score', text: run.run_score !== null && run.run_score !== undefined ? num(run.run_score) : '' }),
+    ]),
+    detail || jumps ? el('div', { class: 'hc-sub' }, [
+      detail ? 'ターン ' + num(run.turns_total) + '　エア ' + num(run.air_total) + '　タイム ' + num(run.time_points) : null,
+      jumps ? el('span', { class: 'hc-jumps', text: jumps }) : null,
+    ]) : null,
+  ]);
+}
+
+function historyCards(list) {
+  const bySeason = new Map();
+  for (const x of list) {
+    if (!bySeason.has(x.run.season)) bySeason.set(x.run.season, []);
+    bySeason.get(x.run.season).push(x);
+  }
+  const out = el('div', { class: 'hist-seasons' });
+  let first = true;
+  for (const [season, items] of bySeason) {
+    out.append(el('details', { class: 'hist-season', open: first ? '' : null }, [
+      el('summary', {}, [el('span', { text: season + ' シーズン' }), el('span', { class: 'meta', text: items.length + ' 本' })]),
+      el('div', { class: 'hist-list' }, items.map(({ run, ctx }) => historyCard(run, ctx))),
+    ]));
+    first = false;
+  }
+  return out;
 }
 
 // 得点の推移。SVG を手で描く（ライブラリなし）。系列グループで色を分ける。
@@ -187,6 +229,7 @@ async function main() {
   renderHistory(a);
   renderChart(a);
   renderJumps(a);
+  onWidthChange(() => renderHistory(a));
 }
 
 main();

@@ -592,3 +592,27 @@ details.fis-legend > summary { cursor: pointer; color: var(--accent); }
   /* 戻るリンクの上の余白を詰める */
   #results-card > p.meta:first-child { margin-top: 0; }
 }
+
+/* ---- 選手ページ：スマホの年表カード（シーズンごとに折りたたみ） ---------------------------- */
+details.hist-season { border-top: 1px solid var(--line); }
+details.hist-season:first-child { border-top: none; }
+details.hist-season > summary {
+  display: flex; justify-content: space-between; align-items: center; min-height: 44px;
+  cursor: pointer; font-weight: 700; color: var(--accent);
+}
+.hist-list { display: grid; gap: 8px; padding-bottom: 10px; }
+a.hist-card {
+  display: block; min-width: 0; padding: 9px 11px; border: 1px solid var(--line); border-radius: 10px;
+  background: #fff; color: var(--ink); text-decoration: none;
+}
+a.hist-card:active, a.hist-card:hover { border-color: var(--accent); background: var(--accent-soft); }
+.hc-top { display: flex; gap: 8px; font-size: 12.5px; color: var(--muted); min-width: 0; }
+.hc-event { color: var(--accent); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hc-main { display: flex; align-items: baseline; gap: 10px; margin-top: 2px; }
+.hc-round { font-size: 14px; }
+.hc-rank { font-size: 16px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.hc-rank small { font-size: 12px; font-weight: 400; color: var(--muted); }
+.hc-score { margin-left: auto; font-size: 19px; font-weight: 700; font-variant-numeric: tabular-nums; }
+.hc-sub { font-size: 12.5px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
+.hc-jumps { margin-left: 8px; color: var(--ink); }
+.hc-tier { margin-left: auto; flex: 0 0 auto; }
