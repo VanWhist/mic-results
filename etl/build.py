@@ -6,7 +6,7 @@ Every event comes from ``etl/registry/*.json``. Each registry entry names its ad
 (``etl/adapters/<name>/adapter.py`` with ``load_event(ev, imported_at, log)``), which returns round
 contexts in the shared shape (see normalize.py). Verification and publication are tier-aware.
 """
-import argparse, collections, datetime, hashlib, importlib, json, os, sys
+import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, sys
 
 from . import config, normalize, verify, layer5_saj
 
@@ -23,6 +23,57 @@ def load_json(path, default):
 def dump_json(path, obj):
     with open(path, 'w', encoding='utf-8') as fh:
         json.dump(obj, fh, ensure_ascii=False, indent=0, separators=(',', ':'))
+
+
+# ---- 大会ごとの読み取り結果のキャッシュ ------------------------------------------
+# 全体ビルドは 1 時間以上かかり、途中で止められることがある。読み終わった大会の load_event の結果を保存し、
+# やり直したときは読み込むだけにする。登録内容・ETL のプログラム・規則ファイル（moguls_results は上流の manifest）の
+# どれかが変われば指紋が変わり、その大会は読み直す。保存先は etl/.build_cache/（Git に入れない）
+CACHE_DIR = os.path.join(config.HERE, '.build_cache')
+
+
+def _code_fingerprint():
+    h = hashlib.sha256()
+    # 読み取り（load_event）に関わるファイルだけ。build.py・layer5_saj.py・tests を直してもキャッシュは使える
+    core = [os.path.join(config.HERE, f) for f in ('config.py', 'normalize.py', 'verify.py', 'scoring.py') if os.path.exists(os.path.join(config.HERE, f))]
+    # 登録を作り直すスクリプト（gen_registry.py・sync_registry.py）は読み取りに関わらないので除く
+    adapters = [f for f in glob.glob(os.path.join(config.HERE, 'adapters', '**', '*.py'), recursive=True)
+                if os.path.basename(f) not in ('gen_registry.py', 'sync_registry.py')]
+    files = sorted(core + adapters + glob.glob(os.path.join(config.RULES_DIR, '**', '*.json'), recursive=True))
+    for f in files:
+        h.update(os.path.relpath(f, config.HERE).encode('utf-8'))
+        with open(f, 'rb') as fh:
+            h.update(fh.read())
+    return h.hexdigest()
+
+
+def _event_key(ev, code_fp):
+    h = hashlib.sha256((code_fp + json.dumps(ev, ensure_ascii=False, sort_keys=True)).encode('utf-8'))
+    if ev.get('adapter') == 'moguls_results':
+        mf = os.path.join(config.MOGULS_RESULTS_REPO, 'data', 'manifest.json')
+        if os.path.exists(mf):
+            with open(mf, 'rb') as fh:
+                h.update(fh.read())
+    return h.hexdigest()[:24]
+
+
+def load_event_cached(mod, ev, imported_at, code_fp, use_cache=True):
+    path = os.path.join(CACHE_DIR, f"{ev['event_id']}.{_event_key(ev, code_fp)}.pkl")
+    if use_cache and os.path.exists(path):
+        try:
+            with open(path, 'rb') as fh:
+                return pickle.load(fh), True
+        except Exception:  # noqa  壊れたキャッシュは読み直す
+            pass
+    ctxs = mod.load_event(ev, imported_at)
+    os.makedirs(CACHE_DIR, exist_ok=True)
+    for old in glob.glob(os.path.join(CACHE_DIR, f"{ev['event_id']}.*.pkl")):
+        os.remove(old)  # 同じ大会の古い指紋のキャッシュは消す
+    tmp = path + '.tmp'
+    with open(tmp, 'wb') as fh:
+        pickle.dump(ctxs, fh)
+    os.replace(tmp, path)
+    return ctxs, False
 
 
 def content_hash(obj):
@@ -58,13 +109,21 @@ def advance_for(ev, gender):
 def main(argv=None):
     ap = argparse.ArgumentParser()
     ap.add_argument('--accept-rounds', action='store_true', help='新しいラウンドの人数を基準として登録する')
+    ap.add_argument('--forget-rounds', action='append', default=[], metavar='SUBSTR',
+                    help='round_id にこの文字列を含む基準を消す（大会・PDF を意図して登録から外したとき。--accept-rounds と一緒に使う）')
     ap.add_argument('--accept-revision', action='store_true', help='元PDFの変更（公式改訂）を受け入れて基準ハッシュを更新する')
     ap.add_argument('--adapter', default=None, help='このアダプタの大会だけ処理（開発用。公開ゲートは無効）')
     ap.add_argument('--event', default=None, help='event_id にこの文字列を含む大会だけ処理（開発用。公開ゲートは無効）')
+    ap.add_argument('--no-cache', action='store_true', help='大会ごとの読み取り結果のキャッシュを使わずに全部読み直す')
     args = ap.parse_args(argv)
     dev = bool(args.adapter or args.event)
 
     expected = load_json(config.EXPECTED_ROUNDS, {})
+    forgotten = sorted(k for k in expected if any(p in k for p in args.forget_rounds))
+    for k in forgotten:
+        del expected[k]
+    if forgotten:
+        print(f"基準から消した: {len(forgotten)} ラウンド（{', '.join(args.forget_rounds)}）")
     expected_before = set(expected)
     published = load_json(config.PUBLISHED_HASHES, {})
     aliases = load_json(config.ATHLETE_ALIASES, {})
@@ -78,11 +137,23 @@ def main(argv=None):
     rounds_ctx = []
     dd_seen = collections.defaultdict(set)
     events_by_id = {ev['event_id']: ev for ev in events}
+    # 同じ PDF が 2 つ以上の大会に登録されていたら止める（SAJ データバンクで別レース番号に同じ PDF が付いていた
+    # 2024 全日本ジュニア 0430/0431。同じ結果が別の大会として 2 回公開されるのを防ぐ）。同じ大会の男女に同じ PDF は可
+    pdf_owner = {}
+    for ev in events:
+        for sha in {p.get('sha256') for p in ev.get('pdfs', []) if p.get('sha256')}:
+            if sha in pdf_owner and pdf_owner[sha] != ev['event_id']:
+                findings.append(verify.Finding('error', ev['event_id'], 'layer0',
+                                               f"同じ PDF（SHA-256 {sha[:10]}…）が別の大会 {pdf_owner[sha]} にも登録されている"))
+            pdf_owner.setdefault(sha, ev['event_id'])
     loaded = []  # (ev, ctx) を全部読んでから正規化する（SAJ 番号→FIS コードの対応を大会横断で使うため）
+    code_fp = _code_fingerprint()
+    n_cached = 0
     for ev in events:
         mod = importlib.import_module(f"etl.adapters.{ev['adapter']}.adapter")
         try:
-            ctxs = mod.load_event(ev, imported_at)
+            ctxs, hit = load_event_cached(mod, ev, imported_at, code_fp, use_cache=not args.no_cache)
+            n_cached += hit
         except Exception as e:
             findings.append(verify.Finding('error', ev['event_id'], 'layer0', f"アダプタ例外: {e!r}"))
             continue
@@ -91,6 +162,7 @@ def main(argv=None):
                 findings.append(verify.Finding('error', c['event_id'], 'layer0', c['message']))
                 continue
             loaded.append((ev, c))
+    print(f"読み取り: {len(events)} 大会（うちキャッシュから {n_cached}）")
     unify_athlete_ids(loaded)
     for ev, c in loaded:
         if True:
@@ -187,7 +259,7 @@ def main(argv=None):
     n_warn = sum(1 for x in findings if x.level == 'warning')
     print(f"\n{len(all_runs)} records / {n_warn} warnings / {n_err} errors / 公開対象 {len(publish_ctx)}/{len(rounds_ctx)} ラウンド")
 
-    if args.accept_rounds:
+    if args.accept_rounds or forgotten:
         # 基準に登録するのは公開するラウンドだけ。検証を通らないラウンドの人数（読み違いかもしれない）は固定しない
         published_ids = {ctx['round']['round_id'] for ctx in publish_ctx}
         expected = {k: v for k, v in expected.items() if k in expected_before or k in published_ids}

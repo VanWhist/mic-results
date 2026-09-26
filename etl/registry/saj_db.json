@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-26T10:14:25",
+ "generated_at": "2026-09-27T00:40:47",
  "events": [
   {
    "event_id": "2011-12-saj_b-2051-0001",
@@ -12319,7 +12319,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（予選の同点 64・65 位）。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2022-23-saj_a-3279-0260",
@@ -13453,7 +13458,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（予選の同点 69・70 位）。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2023-24-fis-3539-0333",
@@ -13537,7 +13547,7 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "予選に同点欄の印字なしで分けた同点が 3 組ある。37・38 位と 43・44 位は FIS 式（ターン点）で説明できるが、66・67 位（鈴木 翔真／三宅 昌文、4.37、ターン 2.2・エア 2.17 が同じ）はタイムの遅い方が上で FIS 式でも説明できない。規則が確かめられないので非公開のまま（2026-09-26）。"
   },
   {
    "event_id": "2023-24-ac-3543-0378",
@@ -13789,7 +13799,8 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "skip": "SAJ 競技データバンクで 0430 と同じ PDF（総合リザルト.pdf、SHA-256 も同じ）が登録されている。0431 の結果の中身を確かめられるまで公開しない（2026-09-27）"
   },
   {
    "event_id": "2024-25-saj_ajjr-3783-0465",

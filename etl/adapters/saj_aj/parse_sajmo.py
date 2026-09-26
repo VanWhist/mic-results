@@ -128,6 +128,27 @@ def parse_line1(tokens, nturn=5):
                 air_total=None, time=None, time_point=None, score=None, tie=None,
                 raw_partial=partial)
 
+
+GLUED_NUM = re.compile(r'\d+\.\d')
+CJK = re.compile(r'[぀-ヿ㐀-鿿ｦ-ﾟ]')
+
+
+def split_glued(tokens):
+    """所属・クラブ名が長く隣の点数欄に重なると、文字と数字が混ざった 1 語になる
+    （'兵庫県スキー・スノ1ー4.9' = '兵庫県スキー・スノー' + '14.9'、'兵庫県スキー・スノー8.0'）。
+    漢字・かなを含み、数字と小数点だけを抜き出すと小数になる語は、文字列と数値の 2 語に分ける。"""
+    out = []
+    for t in tokens:
+        if CJK.search(t) and re.search(r'\d', t):
+            digits = ''.join(ch for ch in t if ch.isdigit() or ch == '.')
+            text = ''.join(ch for ch in t if not (ch.isdigit() or ch == '.'))
+            if GLUED_NUM.fullmatch(digits) and text:
+                out += [text, digits]
+                continue
+        out.append(t)
+    return out
+
+
 def parse_line2(tokens, nturn=5):
     """FISNO クラブ... D1-Dn Jump2 DD2 Ja Jb  （FISNOなし・2ndエアなしの場合あり）"""
     fisno = None
@@ -202,6 +223,20 @@ def mixed_order(code):
         return [{'w': '女子', 'm': '男子'}.get(x, '?') for x in m.group(1).split('/')]
     return ['女子', '男子']
 
+CATEGORY = re.compile(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部')
+
+
+def page_category(top_lines):
+    """ページ上部の年齢区分（'中学生の部' など）。見出し語の行（'…リザルト'）は除く（見出し語の中の区分は SEC が扱う）"""
+    for l in top_lines:
+        if 'リザルト' in l:
+            continue
+        m = CATEGORY.search(l)
+        if m:
+            return m.group(0)
+    return None
+
+
 def parse_pdf(path):
     sections = []
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={})
@@ -211,6 +246,12 @@ def parse_pdf(path):
             text = page.extract_text() or ''
             lines = [l.strip() for l in text.split('\n') if l.strip()]
             code = None
+            # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。
+            # 以前はページ頭の大会名を、前ページ最後の選手の 2 行目（クラブ名）として取り込み、次ページ先頭に続く本物の
+            # 2 行目（減点・2 本目のエア）を捨てていた（2024 白馬乗鞍埼玉 A級 予選 34 位など）
+            hdr_idx = next((i for i, l in enumerate(lines) if l.startswith('順位') and 'Total' in l), None)
+            # 年齢区分（'種目モーグル 中学生の部'）。見出し語の前（ページ上部）に印字される年がある（2024 全日本ジュニア）
+            category = page_category(lines[:hdr_idx if hdr_idx is not None else 10])
             for li, line in enumerate(lines):
                 mc = ROUNDCODE.match(line)
                 if mc and li < 4:
@@ -221,10 +262,10 @@ def parse_pdf(path):
                     gender, rnd = m.group(1) or '', m.group(2)
                     # 同じラウンドが次のページに続くときは同じセクションに足す
                     # （以前はページごとに '男子予選' '男子予選(2)' と分かれていた）。
-                    if cur is not None and (cur['gender'], cur['round'], cur['code']) == (gender, rnd, code):
+                    if cur is not None and (cur['gender'], cur['round'], cur['code'], cur.get('category')) == (gender, rnd, code, category):
                         cur['pages'].append(pno)
                     else:
-                        cur = dict(gender=gender, round=rnd, code=code, heading=line, pages=[pno], athletes=[])
+                        cur = dict(gender=gender, round=rnd, code=code, heading=line, pages=[pno], athletes=[], category=category)
                         sections.append(cur)
                     continue
                 mg = GENDER_MARK.match(line)
@@ -253,7 +294,7 @@ def parse_pdf(path):
                 mm = re.match(r'(J\d)\s*:?\s*\((Turns|Air)\)\s*(.+)', line)
                 if mm and mm.group(1) not in meta['judges']:
                     meta['judges'][mm.group(1)] = (mm.group(2), mm.group(3).strip())
-                if cur is None:
+                if cur is None or (hdr_idx is not None and li < hdr_idx):
                     continue
                 if line.startswith('順位') and 'Total' in line:
                     if cur['gender'] == '男女' or cur.get('mixed'):
@@ -273,7 +314,7 @@ def parse_pdf(path):
                     if jt:
                         cur['nturn'] = len(jt)
                     continue
-                tokens = line.split()
+                tokens = split_glued(line.split())
                 if not tokens:
                     continue
                 nturn = cur.get('nturn', 5)
@@ -302,6 +343,10 @@ def parse_pdf(path):
             continue
         seen.add(sig)
         kept.append(sec)
+    # 区分で分けるのは、1 つの PDF に区分が 2 つ以上あるときだけ（区分が 1 つの PDF は従来どおり。ラウンドの識別子を変えない）
+    if len({sec.get('category') for sec in kept} - {None}) < 2:
+        for sec in kept:
+            sec['category'] = None
     return meta, kept
 
 def check(meta, sections):

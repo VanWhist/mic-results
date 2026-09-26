@@ -81,6 +81,8 @@ def section_codes(sections):
 
 
 ORDER = {'Q': 0, 'F': 1, 'SF': 2}
+CATEGORY_SLUG = {'中学生の部': 'jhs', '高校生の部': 'hs', '小学生の部': 'es', '総合の部': 'all', '一般の部': 'gen',
+                 'シニアの部': 'sen', 'マスターズの部': 'mas'}
 
 
 def _key(a):
@@ -337,9 +339,17 @@ def load_event(ev, imported_at, log=print):
                 meta, sections = parse_sajmo.parse_pdf(path)
         else:
             meta, sections = parse_sajmo.parse_pdf(path)
-        problems = section_codes(sections)
-        overall_notes = collapse_overall(sections) + mark_overall_groups(sections)
-        problems += check_round_counts(sections)
+        # 年齢区分（中学生の部・高校生の部・総合の部）が 2 つ以上ある PDF（2024 全日本ジュニア）は、
+        # 区分ごとに 1 つの大会とみなしてラウンド記号・総合順位ページ・人数順を決める（区分が無い PDF は従来どおり 1 組）
+        by_cat = collections.OrderedDict()
+        for sec in sections:
+            by_cat.setdefault(sec.get('category'), []).append(sec)
+        problems, overall_notes = [], []
+        for grp in by_cat.values():
+            problems += section_codes(grp)
+            overall_notes += collapse_overall(grp) + mark_overall_groups(grp)
+            problems += check_round_counts(grp)
+        sections = [sec for grp in by_cat.values() for sec in grp]
         if old_layout:
             rounds_b, problems_b = [], []
         else:
@@ -362,11 +372,14 @@ def load_event(ev, imported_at, log=print):
             nturn = s.get('nturn', 5)
             rules = rules_by_n.get(nturn)
             code = SAJ_CODE[s['saj_code']]
-            sheet = f"{sheet_prefix}_{s['saj_code']}-{'m' if g == 'M' else 'w'}"
+            cat = s.get('category')
+            cat_slug = CATEGORY_SLUG.get(cat, 'c') if cat else ''
+            sheet = f"{sheet_prefix}_{s['saj_code']}-{'m' if g == 'M' else 'w'}" + (f"-{cat_slug}" if cat else '')
             cls = {
                 'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
                 'discipline': ev.get('discipline', 'MO'), 'gender': g, 'round': code,
-                'round_text': s['round'] + ('（総合順位）' if s.get('overall_groups') else ''),
+                'round_text': s['round'] + ('（総合順位）' if s.get('overall_groups') else '') + (f'（{cat}）' if cat else ''),
+                'category': cat,
                 'codex': meta.get('codex'), 'tier': 'score' if old_layout else ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
                 'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'),
@@ -374,7 +387,7 @@ def load_event(ev, imported_at, log=print):
                 'pages': s['pages'], 'name_ja': ev.get('name_ja'), 'format': ev.get('format'), 'rules_version': ev['rules'],
                 'sheet': sheet,
             }
-            b_round = match_b_round(rounds_b, s['gender'], len(s['athletes']),
+            b_round = match_b_round([r for r in rounds_b if r.get('category') == cat], s['gender'], len(s['athletes']),
                                     bibs=[a.get('bib') for a in s['athletes']] if s.get('overall_page') else None, code=s['saj_code'])
             pace = None
             pace_note = None
@@ -396,7 +409,13 @@ def load_event(ev, imported_at, log=print):
                         exc[fld] = {'printed': e.get('printed'), 'calc': e.get('calc'), 'basis': e.get('basis')}
                 rec['exceptions'] = exc
             findings = []
-            round_id = f"{cls['event_id']}-{g}-{code}"
+            round_id = f"{cls['event_id']}-{g}-{code}" + (f"-{cat_slug}" if cat else '')
+            if cat:
+                cls['round_id'] = round_id
+                if cat == '総合の部':
+                    # 総合の部は区分ごとの決勝と同じ滑走を並べ直したもの。選手の成績（本数・自己ベスト）には数えない
+                    for rec in records:
+                        rec['counting'] = False
             if rules is None and cls['tier'] != 'detail':
                 rules = {}
             if cls['tier'] != 'detail':

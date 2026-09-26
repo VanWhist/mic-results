@@ -127,6 +127,17 @@ def page_pace(words):
     return out
 
 
+def _unmix(text):
+    """所属が長く隣の点数欄に重なった語（'兵庫県スキー・スノ1ー4.9'）を、文字と数字に分ける。
+    漢字・かなを含み、数字と小数点だけを拾うと小数になるときだけ分ける（それ以外はそのまま）。"""
+    if re.search(r'[぀-ヿ㐀-鿿]', text) and re.search(r'\d', text):
+        num = ''.join(ch for ch in text if ch.isdigit() or ch == '.')
+        rest = ''.join(ch for ch in text if not (ch.isdigit() or ch == '.'))
+        if re.fullmatch(r'\d+\.\d', num) and rest:
+            return [rest, num]
+    return [text]
+
+
 def read_pdf(path):
     """表ごとに {page, code, heading, gender, pace, nturn, columns, blocks} を返す。
     1ページに【女子】【男子】の2表が並ぶ年がある（2024 SF-w/m）。
@@ -146,6 +157,9 @@ def read_pdf(path):
                 heading = ' '.join(w['text'] for w in sorted(words, key=lambda w: w['x0'])
                                    if abs(w['top'] - head_w['top']) < 2)
             pace = page_pace(words)
+            first_hdr = min((w['top'] for w in words if w['text'].startswith('順位')), default=page.height)
+            category = next((m.group(0) for w in words if w['top'] < first_hdr
+                             for m in [re.search(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部', w['text'])] if m), None)
             marks = sorted([w for w in words if re.fullmatch(r'【(男子|女子)】', w['text'])], key=lambda w: w['top'])
             heads = sorted([w for w in words if w['text'].startswith('順位')], key=lambda w: w['top'])  # '順位BIB' と癒着する年がある
             codex = sorted(w['top'] for w in words if w['text'] == 'CODEX')
@@ -188,12 +202,20 @@ def read_pdf(path):
                 anchors = [i for i, l in enumerate(lines) if bib_word(l)]
                 if anchors and anchors[0]:
                     info['stray'].append(anchors[0])
+                    # ページ先頭の、どの選手にも属さない行は、前ページ最後の選手の 2 行目が改ページで送られたもの
+                    # （2024 白馬乗鞍埼玉 A級 予選 34 位など）。同じ表（記号・性別）が続くときだけ前の選手につなぐ
+                    prev = tables[-1] if tables else None
+                    if prev and prev['blocks'] and prev['code'] == code and prev['gender'] == gender and prev['page'] == pno - 1                             and prev.get('category') == category:
+                        carry = lines[:anchors[0]]
+                        last = prev['blocks'][-1]
+                        last['lines'] = last['lines'] + carry
+                        last['tokens'] = last['tokens'] + [t for l in carry for w in l['words'] for t in _unmix(w['text'])]
                 blocks = []
                 for j, i in enumerate(anchors):
                     blk = lines[i:(anchors[j + 1] if j + 1 < len(anchors) else len(lines))]
-                    blocks.append(dict(lines=blk, tokens=[w['text'] for l in blk for w in l['words']],
+                    blocks.append(dict(lines=blk, tokens=[t for l in blk for w in l['words'] for t in _unmix(w['text'])],
                                        bib=bib_word(blk[0])['text'], page=pno))
-                tables.append(dict(page=pno, code=code, heading=heading, gender=gender,
+                tables.append(dict(page=pno, code=code, heading=heading, gender=gender, category=category,
                                    pace=pace.get(gender, pace.get(None)), nturn=nturn, columns=columns, blocks=blocks))
                 info['tables'] += 1
             pages.append(info)
@@ -209,11 +231,12 @@ def group_rounds(tables):
             # 見出し語の無いページ（表が次ページに続くとき）: 直前の表の続きとみなす
             t['heading'], t['code'], t['gender'] = rounds[-1]['heading'], rounds[-1]['printed_code'], rounds[-1]['gender']
             t['pace'] = t['pace'] if t['pace'] is not None else rounds[-1]['tables'][0]['pace']
-        key = (t['heading'], t['code'], t['gender'])
+        key = (t['heading'], t['code'], t['gender'], t.get('category'))
         if rounds and rounds[-1]['key'] == key:
             rounds[-1]['tables'].append(t)
         else:
-            rounds.append(dict(key=key, heading=t['heading'], printed_code=t['code'], gender=t['gender'], tables=[t]))
+            rounds.append(dict(key=key, heading=t['heading'], printed_code=t['code'], gender=t['gender'],
+                               category=t.get('category'), tables=[t]))
     for r in rounds:
         r['blocks'] = [b for t in r['tables'] for b in t['blocks']]
         r['nturn'] = r['tables'][0]['nturn']
@@ -225,18 +248,22 @@ def group_rounds(tables):
     seen = set()
     kept = []
     for r in rounds:
-        sig = (r['gender'], r['printed_code'], tuple(sorted(b['bib'] for b in r['blocks'])))
+        sig = (r['gender'], r['category'], r['printed_code'], tuple(sorted(b['bib'] for b in r['blocks'])))
         if sig in seen:
             continue
         seen.add(sig)
         kept.append(r)
     rounds[:] = kept
+    # 年齢区分（中学生の部・高校生の部…）が 2 つ以上ある PDF だけ区分ごとにラウンドを分ける。1 つなら従来どおり
+    if len({r['category'] for r in rounds} - {None}) < 2:
+        for r in rounds:
+            r['category'] = None
     by_gender = collections.defaultdict(list)
     for r in rounds:
-        by_gender[r['gender']].append(r)
+        by_gender[(r['gender'], r['category'])].append(r)
     most = max((len(rs) for rs in by_gender.values()), default=0)
     full = CODES_BY_ROUNDS.get(most)
-    for g, rs in by_gender.items():
+    for (g, _cat), rs in by_gender.items():
         counts = [len(r['blocks']) for r in rs]
         printed = [(r['printed_code'] or '').split('-')[0] for r in rs]
         if g in GENDER_CODE and all(printed) and len(set(printed)) == len(printed) and set(printed) <= {'Q', 'F', 'SF'}:

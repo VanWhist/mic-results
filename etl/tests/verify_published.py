@@ -129,6 +129,11 @@ def num_tokens(rows):
             for part in re.split(r'[()（）\s]', t):
                 if NUM.match(part):
                     out[abs(Decimal(part))] += 1
+                elif re.search(r'[぀-ヿ㐀-鿿]', part):
+                    # 長い所属名が隣の点数欄に重なった語（'兵庫県スキー・スノ1ー4.9'）から数字だけを拾う
+                    digits = ''.join(ch for ch in part if ch.isdigit() or ch == '.')
+                    if re.fullmatch(r'\d+\.\d+', digits):
+                        out[Decimal(digits)] += 1
     return out
 
 
@@ -142,16 +147,22 @@ def pdf_path(prov):
 def find_anchor(rows, run, fis_style):
     """選手の行の位置（rows の添字）。SAJ は氏名、FIS 様式は FIS コード"""
     want = norm(run['name'])
+    cands = []
     for i, (_, toks) in enumerate(rows):
         line = norm(''.join(t for _, t in toks))
         if fis_style:
             if run.get('fis_code') and any(t == str(run['fis_code']) for _, t in toks):
-                return i
+                cands.append(i)
         elif want and want in line:
             bib = str(run['bib']) if run.get('bib') is not None else None
             if bib is None or any(t == bib for _, t in toks):
-                return i
-    return None
+                cands.append(i)
+    if not cands:
+        return None
+    # 同じ名前がスタート順の一覧などにも載るページがある。結果表の見出し行（'順位 … Total'）より下の行を優先し、
+    # その中で数値の一番多い行（結果の行）を選ぶ
+    hdr = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1].startswith('順位') and any('Total' in t for _, t in toks)), -1)
+    return max(cands, key=lambda i: (i > hdr, sum(1 for _, t in rows[i][1] if NUM.match(t)), -i))
 
 
 def expected_values(run, fis_style):
@@ -181,6 +192,23 @@ def expected_values(run, fis_style):
     add('turns_total', run['turns_total'])
     add('run_score', run['run_score'])
     return ev
+
+
+def next_page_carry(path, pg):
+    """改ページで次ページ先頭に送られた前ページ最後の選手の 2 行目（表の見出し行の後、次の選手の行の前）の数値"""
+    try:
+        rows = page_lines(path, pg + 1)
+    except Exception:  # noqa  次のページが無い
+        return collections.Counter()
+    hdr = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1].startswith('順位') and any('Total' in t for _, t in toks)), None)
+    if hdr is None:
+        return collections.Counter()
+    carry = []
+    for _, toks in rows[hdr + 1:]:
+        if len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1]):
+            break
+        carry.append((_, toks))
+    return num_tokens(carry[:2])
 
 
 def check_pdf_round(rnd_runs, fis_style):
@@ -216,6 +244,8 @@ def check_pdf_round(rnd_runs, fis_style):
             span = 7 if r.get('q_block') else 4  # Q2 の PDF は Q2・Q1 の 2 ブロック（各 3 行）
             end = min(nxt[0] if nxt else len(rows), a + span)
             band = num_tokens(rows[a:end])
+            if not nxt and not fis_style:
+                band += next_page_carry(path, pg)
             for k, v in expected_values(r, fis_style):
                 if band[v] > 0:
                     band[v] -= 1

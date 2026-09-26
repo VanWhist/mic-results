@@ -55,6 +55,7 @@ def make_round(cls, meta, records, rules, imported_at):
         'series': cls['series'], 'grade': cls.get('grade'), 'discipline': cls.get('discipline', 'MO'),
         'gender': cls['gender'], 'round': cls['round'],
         'round_text': cls.get('round_text') or ROUND_TEXT_DEFAULT.get(cls['round'], cls['round']),
+        'category': cls.get('category'),  # 年齢区分（中学生の部など）。区分ごとに順位を付ける大会だけ
         'tier': cls['tier'], 'panel': cls.get('panel'),
         'date': meta.get('date'), 'date_text': meta.get('date_text'), 'start_time': meta.get('start_time'),
         'venue': meta.get('venue'), 'n_competitors': meta.get('num_competitors'),
@@ -76,7 +77,8 @@ def make_round(cls, meta, records, rules, imported_at):
 
 
 def make_run(rec, rnd, rules):
-    suffix = '' if rec.get('counting', True) else '-Q1ref'
+    # Q2 の PDF に並ぶ Q1 の走り（参考）だけ run_id に印を付ける。総合の部など、同じ走りを別の表に並べ直したラウンドは付けない
+    suffix = '-Q1ref' if (not rec.get('counting', True) and rec.get('q_block')) else ''
     run = {
         'run_id': f"{rnd['round_id']}-{rec['athlete_id']}{suffix}",
         'round_id': rnd['round_id'], 'event_id': rnd['event_id'], 'season': rnd['season'], 'series': rnd['series'],

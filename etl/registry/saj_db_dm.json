@@ -1,6 +1,6 @@
 {
  "_comment": "gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-09-26T10:14:25",
+ "generated_at": "2026-09-27T00:40:47",
  "events": [
   {
    "event_id": "2011-12-saj_a-2059-0014",
@@ -1738,16 +1738,6 @@
    "adapter": "saj_dm",
    "pdfs": [
     {
-     "path": "FIS/2024-25/SAJ2025_3794_0451_M_DM.pdf",
-     "sha256": "943a4ba4e9d35626f55bd1b3e2572cf73c3452f4ba10eb4364a9a362cad3002a",
-     "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/DM男子リザルト.pdf",
-     "page_url": "https://sajdb.shikuminet.jp/freestyle/2025/competition/0451/result",
-     "gender": "M",
-     "codex": "0451",
-     "saved_at": "2026-09-25",
-     "src_name": "DM男子リザルト.pdf"
-    },
-    {
      "path": "FIS/2024-25/SAJ2025_3794_5451_W_DM.pdf",
      "sha256": "aef9bd37fd03e536d4053f9dec24e7fad854da236ec83b1077a1a2a2afe81312",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2025/FS/女子リザルト.pdf",
@@ -1764,7 +1754,10 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "男子の PDF（リンク名「DM男子リザルト.pdf」）の中身は第45回全日本（2025-03-29）の DM 結果だった（全日本のリンク名「dm男子リザルト.pdf」と大文字・小文字だけ違い、サーバーが同じファイルを返したと思われる）。男子は登録から除く。北海道選手権の男子 DM の結果は未入手（2026-09-27）。",
+   "exclude_pdfs": [
+    "FIS/2024-25/SAJ2025_3794_0451_M_DM.pdf"
+   ]
   },
   {
    "event_id": "2024-25-saj_b-3796-0475",
