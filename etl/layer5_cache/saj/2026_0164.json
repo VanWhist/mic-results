@@ -1,0 +1,457 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/0164/result",
+"status": 200,
+"fetched_at": "2026-09-27",
+"rows": [
+{
+"rank": "1",
+"bib": "",
+"code": "05001118",
+"name": "村田 優太郎",
+"club": "北翔大学ｽｷｰ部",
+"pref": "北海道",
+"score": "68.54",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "",
+"code": "05002086",
+"name": "高橋 空師",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "48.75",
+"pts": "9.74"
+},
+{
+"rank": "3",
+"bib": "",
+"code": "05002423",
+"name": "坂 鷹翔",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "43.90",
+"pts": "9.48"
+},
+{
+"rank": "4",
+"bib": "",
+"code": "05002080",
+"name": "柏倉 汰地",
+"club": "Fu's ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "42.94",
+"pts": "9.22"
+},
+{
+"rank": "5",
+"bib": "",
+"code": "05002085",
+"name": "國見 将生",
+"club": "Fu's ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "36.66",
+"pts": "8.96"
+},
+{
+"rank": "6",
+"bib": "",
+"code": "05000253",
+"name": "堅田 真人",
+"club": "ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ",
+"pref": "東京",
+"score": "34.31",
+"pts": "8.70"
+},
+{
+"rank": "7",
+"bib": "",
+"code": "05002297",
+"name": "長谷川 遼",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "30.82",
+"pts": "8.44"
+},
+{
+"rank": "8",
+"bib": "",
+"code": "05002231",
+"name": "佐藤 龍生",
+"club": "Fu's ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "30.37",
+"pts": "8.18"
+},
+{
+"rank": "9",
+"bib": "",
+"code": "05002420",
+"name": "押山 夏",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "25.66",
+"pts": "7.92"
+},
+{
+"rank": "10",
+"bib": "",
+"code": "05002212",
+"name": "谷口 旬",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "23.87",
+"pts": "7.66"
+},
+{
+"rank": "11",
+"bib": "",
+"code": "05002228",
+"name": "加藤 湊",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "22.59",
+"pts": "7.40"
+},
+{
+"rank": "12",
+"bib": "",
+"code": "05002172",
+"name": "齋藤 倖",
+"club": "Fu's ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "5.43",
+"pts": "7.14"
+},
+{
+"rank": "13",
+"bib": "",
+"code": "05002267",
+"name": "榊間 崇仁",
+"club": "TEAM BUMPS",
+"pref": "神奈川",
+"score": "22.23",
+"pts": "6.88"
+},
+{
+"rank": "14",
+"bib": "",
+"code": "05000287",
+"name": "我矢 裕一",
+"club": "川崎ﾌﾘｰｽﾀｲﾙSC",
+"pref": "神奈川",
+"score": "19.30",
+"pts": "6.62"
+},
+{
+"rank": "15",
+"bib": "",
+"code": "05002158",
+"name": "對馬 孝征",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "18.26",
+"pts": "6.36"
+},
+{
+"rank": "16",
+"bib": "",
+"code": "05002327",
+"name": "石澤 葉月",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "17.16",
+"pts": "6.10"
+},
+{
+"rank": "17",
+"bib": "",
+"code": "05002317",
+"name": "山口 大陽",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "15.86",
+"pts": "5.84"
+},
+{
+"rank": "18",
+"bib": "",
+"code": "05002160",
+"name": "須賀 淳",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "15.78",
+"pts": "5.58"
+},
+{
+"rank": "19",
+"bib": "",
+"code": "05002213",
+"name": "相宮 大輝",
+"club": "岐阜ﾌﾘｰｽﾀｲﾙ",
+"pref": "岐阜",
+"score": "13.03",
+"pts": "5.32"
+},
+{
+"rank": "20",
+"bib": "",
+"code": "05000063",
+"name": "斎藤 直樹",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "12.83",
+"pts": "5.06"
+},
+{
+"rank": "21",
+"bib": "",
+"code": "05000571",
+"name": "佐竹 誠二",
+"club": "It's MIRACLE",
+"pref": "広島",
+"score": "11.86",
+"pts": "4.80"
+},
+{
+"rank": "22",
+"bib": "",
+"code": "05002157",
+"name": "松澤 優汰",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "10.98",
+"pts": "4.54"
+},
+{
+"rank": "23",
+"bib": "",
+"code": "05002045",
+"name": "堂田 光佑",
+"club": "ｽﾉｰﾄﾞﾙﾌｨﾝｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "10.77",
+"pts": "4.28"
+},
+{
+"rank": "24",
+"bib": "",
+"code": "05000068",
+"name": "木村 淳児",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "10.05",
+"pts": "4.02"
+},
+{
+"rank": "25",
+"bib": "",
+"code": "05002302",
+"name": "横濱 雄一郎",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "9.90",
+"pts": "3.76"
+},
+{
+"rank": "26",
+"bib": "",
+"code": "05002417",
+"name": "門脇 一志",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "9.18",
+"pts": "3.50"
+},
+{
+"rank": "27",
+"bib": "",
+"code": "05002309",
+"name": "横濱 雄人",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "8.25",
+"pts": "3.24"
+},
+{
+"rank": "28",
+"bib": "",
+"code": "05002101",
+"name": "藤谷 優志",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "8.10",
+"pts": "2.98"
+},
+{
+"rank": "29",
+"bib": "",
+"code": "05002411",
+"name": "矢部 政己",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "7.86",
+"pts": "2.72"
+},
+{
+"rank": "30",
+"bib": "",
+"code": "05002413",
+"name": "大口 絃",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "7.08",
+"pts": "2.46"
+},
+{
+"rank": "31",
+"bib": "",
+"code": "05001753",
+"name": "佐藤 正樹",
+"club": "ﾁｰﾑ･ﾎｯﾄﾄﾞｯｸ!",
+"pref": "秋田",
+"score": "6.51",
+"pts": "2.20"
+},
+{
+"rank": "32",
+"bib": "",
+"code": "05002377",
+"name": "西森 葵翔",
+"club": "北海道大学",
+"pref": "学連",
+"score": "5.05",
+"pts": "1.94"
+},
+{
+"rank": "33",
+"bib": "",
+"code": "05002339",
+"name": "三浦 慧",
+"club": "ｽｷｰﾁｰﾑｾﾞﾛ",
+"pref": "京都",
+"score": "3.39",
+"pts": "1.68"
+},
+{
+"rank": "34",
+"bib": "",
+"code": "05002414",
+"name": "大島 隆二",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "3.13",
+"pts": "1.42"
+},
+{
+"rank": "35",
+"bib": "",
+"code": "05000104",
+"name": "伊藤 誠二",
+"club": "ﾁｰﾑ･ﾎｯﾄﾄﾞｯｸ!",
+"pref": "秋田",
+"score": "1.76",
+"pts": "1.16"
+},
+{
+"rank": "36",
+"bib": "",
+"code": "05002099",
+"name": "岩本 光司",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "1.60",
+"pts": "0.90"
+},
+{
+"rank": "37",
+"bib": "",
+"code": "05001845",
+"name": "武居 伸明",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "1.51",
+"pts": "0.64"
+},
+{
+"rank": "38",
+"bib": "",
+"code": "05002415",
+"name": "谷口 誠",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "1.30",
+"pts": "0.38"
+},
+{
+"rank": "",
+"bib": "",
+"code": "05000060",
+"name": "孫 守広",
+"club": "SON BAY CLUB",
+"pref": "北海道",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05002065",
+"name": "玉井 旭",
+"club": "留辺蘂ｽｷｰ連盟",
+"pref": "北海道",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05002087",
+"name": "見上 隆太",
+"club": "ﾁｰﾑﾎｯﾄﾄﾞｯｸ!",
+"pref": "秋田",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05002306",
+"name": "佐々木 大晟",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05000992",
+"name": "西村 佳則",
+"club": "ﾁｰﾑ旭川ｼﾞｮﾘｰﾛｼﾞｬｰｽ",
+"pref": "北海道",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05002134",
+"name": "佐藤 陽向",
+"club": "TEAM BUMPS",
+"pref": "北海道",
+"score": "",
+"pts": ""
+},
+{
+"rank": "",
+"bib": "",
+"code": "05002316",
+"name": "Deacon T Buckley",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "",
+"pts": ""
+}
+]
+}

@@ -1,0 +1,147 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5583/result",
+"status": 200,
+"fetched_at": "2026-09-27",
+"rows": [
+{
+"rank": "1",
+"bib": "",
+"code": "05001389",
+"name": "大塚 早智",
+"club": "東北福祉大学",
+"pref": "学連",
+"score": "43.80",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "",
+"code": "05001928",
+"name": "谷 美音",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "41.25",
+"pts": "9.24"
+},
+{
+"rank": "3",
+"bib": "",
+"code": "05001854",
+"name": "田口 凛",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "39.75",
+"pts": "8.48"
+},
+{
+"rank": "4",
+"bib": "",
+"code": "05001663",
+"name": "中尾 栞",
+"club": "魚津みちした小学校",
+"pref": "富山",
+"score": "31.39",
+"pts": "7.72"
+},
+{
+"rank": "5",
+"bib": "",
+"code": "05001795",
+"name": "水沼 優希菜",
+"club": "TEAM BUMPS",
+"pref": "神奈川",
+"score": "18.76",
+"pts": "6.96"
+},
+{
+"rank": "6",
+"bib": "",
+"code": "05001906",
+"name": "尾藤 陽菜",
+"club": "Fus snow area ｽｷｰｸﾗﾌﾞ",
+"pref": "北海道",
+"score": "DNF",
+"pts": "6.20"
+},
+{
+"rank": "7",
+"bib": "",
+"code": "05000735",
+"name": "畑田 繭",
+"club": "ピリカ自然塾スキー部",
+"pref": "北海道",
+"score": "24.92",
+"pts": "5.44"
+},
+{
+"rank": "8",
+"bib": "",
+"code": "05001929",
+"name": "遠藤 菜樹",
+"club": "NISEKO B&J",
+"pref": "北海道",
+"score": "17.82",
+"pts": "4.68"
+},
+{
+"rank": "9",
+"bib": "",
+"code": "05000673",
+"name": "竹森 清香",
+"club": "ｴｷｯﾌﾟﾌﾘｰｽﾀｲﾙｽｷｰｸﾗﾌﾞ",
+"pref": "新潟",
+"score": "8.88",
+"pts": "3.92"
+},
+{
+"rank": "10",
+"bib": "",
+"code": "05001855",
+"name": "工藤 凛菜",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "6.93",
+"pts": "3.16"
+},
+{
+"rank": "11",
+"bib": "",
+"code": "05001944",
+"name": "熊谷 里風",
+"club": "福島っ子SC",
+"pref": "福島",
+"score": "4.46",
+"pts": "2.40"
+},
+{
+"rank": "12",
+"bib": "",
+"code": "05001936",
+"name": "浅水 結葵",
+"club": "スノードルフィンSC",
+"pref": "北海道",
+"score": "3.71",
+"pts": "1.64"
+},
+{
+"rank": "13",
+"bib": "",
+"code": "05001919",
+"name": "山口 未來",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "1.95",
+"pts": "0.88"
+},
+{
+"rank": "",
+"bib": "",
+"code": "05001851",
+"name": "神頭 藍",
+"club": "チームボルドネスFSC",
+"pref": "兵庫",
+"score": "",
+"pts": ""
+}
+]
+}

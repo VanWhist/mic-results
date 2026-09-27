@@ -52,10 +52,17 @@ def parse_pdf(path):
                     continue
                 toks = line.split()
                 # 選手行: 順位 BIB SAJNO 氏 名 所属 クラブ名 対戦経過...
-                if len(toks) >= 4 and toks[0].isdigit() and toks[1].isdigit() and SAJNO.match(toks[2]):
+                ranked = len(toks) >= 4 and toks[0].isdigit() and toks[1].isdigit() and SAJNO.match(toks[2])
+                # 順位の印字が無い行（BIB SAJNO 氏 名 …）。途中で大会がキャンセルされ、DNF のまま順位が付かなかった選手
+                # （2023 田沢湖 女子 QF。順位表では順位が付いている）。読み落とさず、順位なしで持つ
+                unranked = (not ranked and len(toks) >= 3 and toks[0].isdigit() and SAJNO.match(toks[1])
+                            and PROG.search(line) is not None)
+                if ranked or unranked:
                     mp = PROG.search(line)
                     head = line[:mp.start()].split() if mp else toks
                     prog = line[mp.start():].strip() if mp else ''
+                    if unranked:
+                        head = [''] + head
                     rest = head[3:]
                     # 名と所属の間の空白が無い PDF がある（'キンビッグ 恵茉北海道 TEAM BUMPS'）。名の末尾の県名を所属として切り離す
                     if len(rest) >= 2 and not (len(rest) >= 3 and rest[2] in PREFS):
@@ -69,7 +76,11 @@ def parse_pdf(path):
                         name, pref, club = rest[0], rest[1], ''
                     else:
                         name, pref, club = ' '.join(rest), '', ''
-                    cur = dict(rank=int(toks[0]), bib=int(toks[1]), sajno=toks[2], name=name, pref=pref, club=club,
+                    if ranked:
+                        rank, bib, sajno = int(toks[0]), int(toks[1]), toks[2]
+                    else:
+                        rank, bib, sajno = None, int(toks[0]), toks[1]
+                    cur = dict(rank=rank, bib=bib, sajno=sajno, name=name, pref=pref, club=club,
                                progression=prog, stage=stage, page=pno)
                     athletes.append(cur)
                     continue
@@ -100,7 +111,7 @@ def load_event(ev, imported_at, log=print):
             continue
         if meta.get('gender') and pdf.get('gender') and meta['gender'] != pdf['gender']:
             findings.append(Finding('error', round_id, 'layer0', f"見出しの性別 {meta['gender']} が registry の {pdf['gender']} と違う"))
-        ranks = [a['rank'] for a in athletes]
+        ranks = [a['rank'] for a in athletes if a['rank'] is not None]
         # 同順位はあり得る（1 回戦で DNF の 2 人がともに 25 位など。SAJ の順位表も同順位）。昇順であることだけを見る
         if ranks != sorted(ranks):
             bad = next(i for i in range(1, len(ranks)) if ranks[i] < ranks[i - 1])
@@ -119,7 +130,7 @@ def load_event(ev, imported_at, log=print):
             records.append({
                 'rank': a['rank'], 'bib': a['bib'], 'saj_no': a['sajno'], 'fis_code': None, 'athlete_id': athlete_id_of(a),
                 'name': a['name'], 'noc': None, 'yb': None, 'affiliation': a['pref'], 'club': a['club'],
-                'status': 'OK', 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
+                'status': 'OK' if a['rank'] is not None else ('DNS' if 'DNS' in a['progression'] else 'DNF'), 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
                 'seconds': None, 'time_points': None, 'air_jumps': [], 'air_total': None, 'base_scores': [], 'ded_scores': [],
                 'base_total': None, 'ded_total': None, 'turns_total': None, 'run_score': None, 'tie': None, 'page': a['page'],
                 'components': {'progression': a['progression'], 'stage': a['stage']},

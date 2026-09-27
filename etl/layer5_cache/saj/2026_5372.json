@@ -1,0 +1,47 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5372/result",
+"status": 200,
+"fetched_at": "2026-09-27",
+"rows": [
+{
+"rank": "1",
+"bib": "",
+"code": "05001496",
+"name": "田中 花",
+"club": "武庫川女子大学",
+"pref": "学連",
+"score": "47.49",
+"pts": "11.00"
+},
+{
+"rank": "2",
+"bib": "",
+"code": "05001678",
+"name": "上林 澪奈",
+"club": "岐阜ﾌﾘｰｽﾀｲﾙ",
+"pref": "岐阜",
+"score": "40.16",
+"pts": "8.25"
+},
+{
+"rank": "3",
+"bib": "",
+"code": "05001741",
+"name": "奥村 姫雪",
+"club": "飛騨高山高校",
+"pref": "岐阜",
+"score": "39.98",
+"pts": "5.50"
+},
+{
+"rank": "4",
+"bib": "",
+"code": "05000656",
+"name": "有野 智子",
+"club": "ｴｸｽﾃｯｸさいたま",
+"pref": "埼玉",
+"score": "4.69",
+"pts": "2.75"
+}
+]
+}

@@ -91,12 +91,18 @@ def _dec(s):
 
 def compare(event_id, gender, rounds_by_code, cache):
     """戻り値: (findings, status)。status は 'ok' | 'error' | 'upstream_missing'"""
-    f = []
     rows = cache.get('rows') or []
     if not rows:
-        return f, 'upstream_missing'
+        return [], 'upstream_missing'
     ours = overall_from_rounds(rounds_by_code)
     round_id = rounds_by_code[[c for c in ROUND_ORDER_DESC if c in rounds_by_code][0]][0]['round_id']
+    if all(rnd.get('discipline') == 'DM' for rnd, _ in rounds_by_code.values()):
+        return compare_dm(gender, round_id, ours, rows)
+    f = []
+    # FIS・アジアカップの一部は SAJ データバンクの PDF が決勝だけで、順位表には予選で終わった選手も載る。
+    # 予選のラウンドが無いときは、決勝に居ない下位の選手が PDF 側に居ないのは当然なので警告にとどめる
+    has_q = any(c in rounds_by_code for c in ('Q', 'Q1', 'Q2'))
+    n_ranked = sum(1 for v in ours.values() if v['overall'] is not None)
     by_no = {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no')}
     by_name = {_norm_name(v['name']): k for k, v in ours.items()}
     matched = []
@@ -114,7 +120,10 @@ def compare(event_id, gender, rounds_by_code, cache):
         if aid is None:
             # 順位が空欄の行（棄権などで順位の付かない選手）は結果ではないので、PDF に居なくても警告にとどめる
             level = 'error' if str(row.get('rank') or '').strip() else 'warning'
-            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
+            note = ''
+            if level == 'error' and not has_q and str(row['rank']).strip().isdigit() and int(row['rank']) > n_ranked:
+                level, note = 'warning', '（PDF は決勝だけで予選が無い）'
+            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない{note}"))
             continue
         used.add(aid)
         matched.append((row, aid))
@@ -147,6 +156,59 @@ def compare(event_id, gender, rounds_by_code, cache):
     return f, status
 
 
+def compare_dm(gender, round_id, ours, rows):
+    """デュアルモーグル（順位のみ）: 敗退した選手の順位の付け方が PDF と順位表で違う大会がある（順位表は組み合わせの枠どおり
+    17 位から、PDF は出場人数で詰める。1 回戦 DNF は PDF に順位があり順位表は空欄）。そこで順位の数字そのものではなく、
+    両方に順位のある選手どうしの前後関係と、順位表の選手が PDF に居ることを確かめる"""
+    f = []
+    by_no = {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no')}
+    by_name = {_norm_name(v['name']): k for k, v in ours.items()}
+    pairs = []
+    for row in rows:
+        aid = by_no.get(_norm_no(row.get('code'))) or by_name.get(_norm_name(row.get('name')))
+        html_rank = int(row['rank']) if str(row.get('rank') or '').strip().isdigit() else None
+        if aid is None:
+            level = 'error' if html_rank is not None else 'warning'
+            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
+            continue
+        o = ours[aid]
+        if html_rank is None or o['overall'] is None:
+            if html_rank != o['overall']:
+                f.append(Finding('warning', round_id, 'layer5', f"{gender} {o['name']}: 順位表 {html_rank or '空欄'} / PDF {o['overall'] or '空欄'}（DM。片方だけ順位が無い）"))
+            continue
+        pairs.append((o['overall'], html_rank, o['name']))
+    pairs.sort()
+    for (pa, ha, na), (pb, hb, nb) in zip(pairs, pairs[1:]):
+        if pa < pb and ha > hb:
+            f.append(Finding('error', round_id, 'layer5', f"{gender} DM の順位の前後が逆: PDF {na} {pa}位・{nb} {pb}位 / 順位表 {ha}位・{hb}位"))
+    shifted = sum(1 for p, h, _ in pairs if p != h)
+    if shifted:
+        f.append(Finding('warning', round_id, 'layer5', f"{gender} DM: 順位の数字が PDF と順位表で違う選手 {shifted} 名（前後関係は一致。敗退者の順位の付け方の違い）"))
+    status = 'error' if any(x.level == 'error' for x in f) else 'ok'
+    return f, status
+
+
+def apply_exceptions(findings, ev, round_ids):
+    """registry の layer5_exceptions（PDF と順位表の食い違いを確かめたうえで PDF を正とするもの）に当たるエラーを警告に下げる。
+    登録したのに当たる食い違いが無ければエラー（登録の見直し）"""
+    excs = [e for e in (ev or {}).get('layer5_exceptions') or [] if e.get('round_id') in round_ids]
+    if not excs:
+        return findings
+    out, used = [], set()
+    for x in findings:
+        if x.level == 'error':
+            for i, e in enumerate(excs):
+                if i not in used and x.round_id == e.get('round_id') and all(str(s) in x.message for s in e.get('match', [])):
+                    x = Finding('warning', x.round_id, 'layer5', f"{x.message}（PDF を正とする例外。根拠: {e['basis']}）")
+                    used.add(i)
+                    break
+        out.append(x)
+    for i, e in enumerate(excs):
+        if i not in used:
+            out.append(Finding('error', e.get('round_id'), 'layer5', f"layer5_exceptions の {e.get('match')} に当たる食い違いが無い（登録を見直す）"))
+    return out
+
+
 def cross_check(rounds_ctx, events_by_id):
     """SAJ 系（page_url が sajdb の順位表）のラウンドについて、キャッシュがあれば照合する。
     戻り値: (findings, {round_id: status})"""
@@ -157,17 +219,48 @@ def cross_check(rounds_ctx, events_by_id):
         r = ctx['round']
         if 'sajdb.shikuminet.jp' not in (r['source'].get('page_url') or ''):
             continue
-        groups[(r['event_id'], r['gender'])][r['round']] = (r, ctx['runs'])
-    for (event_id, gender), rbc in groups.items():
-        page_url = next(iter(rbc.values()))[0]['source']['page_url']
+        # 年齢区分のある大会（全日本ジュニア）は区分ごとに別のまとまりにする。総合の部（選手の集計に数えない）は照合しない
+        if r.get('category') and not any(x.get('counting', True) for x in ctx['runs']):
+            status[r['round_id']] = 'skipped'
+            continue
+        groups[(r['event_id'], r['gender'], r.get('category'))][r['round']] = (r, ctx['runs'])
+    by_eg = collections.defaultdict(list)
+    for (event_id, gender, cat), rbc in groups.items():
+        by_eg[(event_id, gender)].append((cat, rbc))
+    for (event_id, gender), cands in by_eg.items():
+        page_url = next(iter(cands[0][1].values()))[0]['source']['page_url']
         cache = load_cache(page_url)
-        rids = [rnd['round_id'] for rnd, _ in rbc.values()]
         if cache is None:
-            for rid in rids:
-                status[rid] = 'skipped'
+            for _, rbc in cands:
+                for rnd, _ in rbc.values():
+                    status[rnd['round_id']] = 'skipped'
+            continue
+        if len(cands) > 1:
+            # 順位表は区分ごとに別ページ（例: 2024 全日本ジュニア 0430 は高校生の部だけ）。SAJ 番号がいちばん多く重なる区分と照合する
+            codes = {_norm_no(r.get('code')) for r in cache.get('rows') or []}
+
+            def overlap(rbc):
+                return len({_norm_no(x.get('saj_no')) for _, runs in rbc.values() for x in runs} & codes)
+            cands = sorted(cands, key=lambda c: -overlap(c[1]))
+            for cat, rbc in cands[1:]:
+                for rnd, _ in rbc.values():
+                    status[rnd['round_id']] = 'skipped'
+                findings.append(Finding('warning', next(iter(rbc.values()))[0]['round_id'], 'layer5',
+                                        f"{gender} 順位表（{cache_key(page_url)}）は {cands[0][0]} のもの。{cat} は照合していない"))
+        rbc = cands[0][1]
+        # registry の layer5_skip: 順位表と照合できない理由が分かっているラウンド（例: PDF が予選だけで順位表は決勝後の順位）
+        skip = [s for s in (events_by_id.get(event_id) or {}).get('layer5_skip') or []
+                if s.get('round_id') in {rnd['round_id'] for rnd, _ in rbc.values()}]
+        if skip:
+            for rnd, _ in rbc.values():
+                status[rnd['round_id']] = 'skipped'
+            findings.append(Finding('warning', skip[0]['round_id'], 'layer5', f"{gender} 順位表と照合しない。理由: {skip[0]['basis']}"))
             continue
         f, st = compare(event_id, gender, rbc, cache)
+        f = apply_exceptions(f, events_by_id.get(event_id), {rnd['round_id'] for rnd, _ in rbc.values()})
+        if st != 'upstream_missing':
+            st = 'error' if any(x.level == 'error' for x in f) else 'ok'
         findings += f
-        for rid in rids:
-            status[rid] = st
+        for rnd, _ in rbc.values():
+            status[rnd['round_id']] = st
     return findings, status

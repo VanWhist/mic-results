@@ -95,13 +95,13 @@ def main():
         for ev in out[disc]:
             o = old.get(ev['event_id'])
             if o:
-                for k in ('rules', 'format', 'pace_by_sheet', 'recompute_exceptions', 'notes', 'tier', 'grade', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions'):
+                for k in ('rules', 'format', 'pace_by_sheet', 'recompute_exceptions', 'notes', 'tier', 'grade', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions', 'layer5_exceptions', 'layer5_skip'):
                     if k in o:
                         ev[k] = o[k]
                 # 中身が別の大会の PDF（SAJ データバンクのリンク先の取り違え）は登録から除く。理由は notes に書く
                 if o.get('exclude_pdfs'):
                     ev['pdfs'] = [p for p in ev['pdfs'] if p['path'] not in set(o['exclude_pdfs'])]
-        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break・exclude_pdfs・rank_exceptions は手で編集してよい（再生成しても保持される）',
+        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break・exclude_pdfs・rank_exceptions・layer5_exceptions・layer5_skip は手で編集してよい（再生成しても保持される）',
                          'generated_at': datetime.datetime.now().isoformat(timespec='seconds'), 'events': out[disc]})
         print(f"{fn}: {len(out[disc])} 大会 / {sum(len(e['pdfs']) for e in out[disc])} PDF")
     print(f"未保存の PDF: {n_missing}")

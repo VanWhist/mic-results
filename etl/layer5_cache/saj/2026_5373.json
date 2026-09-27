@@ -1,0 +1,37 @@
+{
+"url": "https://sajdb.shikuminet.jp/freestyle/2026/competition/5373/result",
+"status": 200,
+"fetched_at": "2026-09-27",
+"rows": [
+{
+"rank": "1",
+"bib": "",
+"code": "05001799",
+"name": "多田 香音",
+"club": "WESTERN BUMPS",
+"pref": "兵庫",
+"score": "15.14",
+"pts": "10.00"
+},
+{
+"rank": "2",
+"bib": "",
+"code": "05002226",
+"name": "紺野 楓愛",
+"club": "TEAM BANKEI",
+"pref": "北海道",
+"score": "14.43",
+"pts": "6.67"
+},
+{
+"rank": "3",
+"bib": "",
+"code": "05002063",
+"name": "河野 朱莉",
+"club": "広島尾長小学校",
+"pref": "広島",
+"score": "6.02",
+"pts": "3.34"
+}
+]
+}
