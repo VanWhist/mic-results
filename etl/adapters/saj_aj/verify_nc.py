@@ -127,6 +127,18 @@ def page_pace(words):
     return out
 
 
+def table_pace(pace, gender, known):
+    """表のペースタイム。男女が並ぶページで、その性別のペースタイムが印字されていないとき（2025 北海道選手権の男女 SF は
+    「男子ペースタイム」だけ）は、同じ PDF の前のページで分かったその性別の値を使う（ページ中央の '秒' の値は男子のもの）"""
+    v = pace.get(gender)
+    if v is None:
+        gendered = any(k is not None for k in pace)
+        v = known.get(gender) if (gendered and known.get(gender) is not None) else pace.get(None)
+    if v is not None and gender is not None:
+        known[gender] = v
+    return v
+
+
 def _unmix(text):
     """所属が長く隣の点数欄に重なった語（'兵庫県スキー・スノ1ー4.9'）を、文字と数字に分ける。
     漢字・かなを含み、数字と小数点だけを拾うと小数になるときだけ分ける（それ以外はそのまま）。"""
@@ -143,10 +155,11 @@ def read_pdf(path):
     1ページに【女子】【男子】の2表が並ぶ年がある（2024 SF-w/m）。
     選手ブロックは「BIB 列に整数がある行」から次のその行までで、1選手=2行を期待する。"""
     tables, pages = [], []
+    known_pace = {}  # 性別 → これまでのページで分かったペースタイム
     with pdfplumber.open(path) as pdf:
         year = None
         for pno, page in enumerate(pdf.pages, 1):
-            words = page.extract_words()
+            words = page.dedupe_chars().extract_words()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
             if year is None:
                 y = next((re.match(r'(\d{4})年', w['text']) for w in words if re.match(r'\d{4}年', w['text'])), None)
                 year = y.group(1) if y else None
@@ -216,7 +229,7 @@ def read_pdf(path):
                     blocks.append(dict(lines=blk, tokens=[t for l in blk for w in l['words'] for t in _unmix(w['text'])],
                                        bib=bib_word(blk[0])['text'], page=pno))
                 tables.append(dict(page=pno, code=code, heading=heading, gender=gender, category=category,
-                                   pace=pace.get(gender, pace.get(None)), nturn=nturn, columns=columns, blocks=blocks))
+                                   pace=table_pace(pace, gender, known_pace), nturn=nturn, columns=columns, blocks=blocks))
                 info['tables'] += 1
             pages.append(info)
     return year, pages, tables

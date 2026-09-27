@@ -26,7 +26,7 @@ def parse_pdf(path):
     cur = None
     with pdfplumber.open(path) as pdf:
         for pno, page in enumerate(pdf.pages, 1):
-            lines = [l.strip() for l in (page.extract_text() or '').split('\n') if l.strip()]
+            lines = [l.strip() for l in (page.dedupe_chars().extract_text() or '').split('\n') if l.strip()]
             in_table = False
             for li, line in enumerate(lines):
                 if meta['gender'] is None:

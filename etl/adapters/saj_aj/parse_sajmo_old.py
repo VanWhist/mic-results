@@ -110,7 +110,7 @@ def parse_pdf(path, force=False):
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
             # 区切りのタブが '(cid:9)' として出て数値にくっつく PDF がある（'(cid:9)(cid:9)29.77'）
-            lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', page.extract_text() or '').split('\n') if l.strip()]
+            lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', page.dedupe_chars().extract_text() or '').split('\n') if l.strip()]
             for li, line in enumerate(lines):
                 m = SEC.search(line)
                 if m and 'リザルト' in line and len(line) < 30 and li < 12:

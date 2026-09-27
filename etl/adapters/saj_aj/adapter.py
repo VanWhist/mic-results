@@ -380,7 +380,7 @@ def load_event(ev, imported_at, log=print):
                 'discipline': ev.get('discipline', 'MO'), 'gender': g, 'round': code,
                 'round_text': s['round'] + ('（総合順位）' if s.get('overall_groups') else '') + (f'（{cat}）' if cat else ''),
                 'category': cat,
-                'codex': meta.get('codex'), 'tier': 'score' if old_layout else ev.get('tier', 'detail'),
+                'codex': meta.get('codex'), 'tier': 'score' if (old_layout or s.get('oneline')) else ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
                 'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'),
                 'page_url': (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
@@ -420,6 +420,8 @@ def load_event(ev, imported_at, log=print):
                 rules = {}
             if cls['tier'] != 'detail':
                 # 得点のみの段階: 行の読み取り（A）だけを使い、印字の合計をそのまま持つ（第1・2層は対象外）
+                if s.get('oneline') and not old_layout:
+                    findings.append(Finding('warning', round_id, 'layer0', '1 行様式（技コード 2 つ・DD の印字なし）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
                 if old_layout:
                     findings.append(Finding('warning', round_id, 'layer0', '旧様式（2010 年代前半の SAJ 様式）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
                     rules = {'tie_break': ['tie_value'], 'source': '旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める'}

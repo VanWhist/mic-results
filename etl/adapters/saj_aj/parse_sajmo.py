@@ -226,6 +226,14 @@ def mixed_order(code):
 CATEGORY = re.compile(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部')
 
 
+def _old_row(tokens, nturn):
+    try:
+        from . import parse_sajmo_old
+    except ImportError:  # スクリプトとして直接使うとき
+        import parse_sajmo_old
+    return parse_sajmo_old.parse_row_old(tokens, nturn)
+
+
 def page_category(top_lines):
     """ページ上部の年齢区分（'中学生の部' など）。見出し語の行（'…リザルト'）は除く（見出し語の中の区分は SEC が扱う）"""
     for l in top_lines:
@@ -243,7 +251,8 @@ def parse_pdf(path):
     with pdfplumber.open(path) as pdf:
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
-            text = page.extract_text() or ''
+            # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
+            text = page.dedupe_chars().extract_text() or ''
             lines = [l.strip() for l in text.split('\n') if l.strip()]
             code = None
             # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。
@@ -275,8 +284,11 @@ def parse_pdf(path):
                     g = mg.group(1)
                     if cur['gender'] != g:
                         if cur['athletes']:
+                            # 同じページの 2 つ目の表は列の並び（審判の人数）が同じ。見出し行が【男子】より前に印字される
+                            # PDF では引き継がないと 5 人審判として読み、氏名に県名が入る（2021 ばんけい A級 第2戦 男子決勝）
                             cur = dict(gender=g, round=cur['round'], code=cur['code'], heading=cur['heading'],
-                                       pages=[pno], athletes=[])
+                                       pages=[pno], athletes=[], category=cur.get('category'),
+                                       **({'nturn': cur['nturn']} if cur.get('nturn') else {}))
                             sections.append(cur)
                         else:
                             cur['gender'] = g
@@ -313,12 +325,23 @@ def parse_pdf(path):
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
                     if jt:
                         cur['nturn'] = len(jt)
+                    # 1 行様式（'… Total 1st 2nd J4 J5 …'）: 技コード 2 つとエア審判の生点が 1 行に並び、DD が印字されない。
+                    # 審判点からの再計算はできないので、旧様式と同じ読み方で印字の合計を得点の段階で持つ（adapter が tier=score にする）
+                    if '1st' in line and '2nd' in line:
+                        cur['oneline'] = True
                     continue
                 tokens = split_glued(line.split())
                 if not tokens:
                     continue
                 nturn = cur.get('nturn', 5)
                 a = None
+                if cur.get('oneline'):
+                    if tokens[0] in STATUS or tokens[0].isdigit():
+                        a = _old_row(tokens, nturn)
+                    if a:
+                        a['page'] = pno
+                        cur['athletes'].append(a)
+                    continue
                 # 1行目候補: rank/status + bib + 7桁SAJNo
                 if (tokens[0] in STATUS or tokens[0].isdigit()) and len(tokens) >= 3:
                     a = parse_line1(tokens, nturn)
