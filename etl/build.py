@@ -98,6 +98,28 @@ def load_registry(adapter_filter=None, event_filter=None):
     return events
 
 
+def apply_rank_exceptions(findings, round_id, ev):
+    """registry の rank_exceptions（規則どおりなら順位が変わるが、印字の順位が公式と確認できたもの）に当たる
+    layer3 の順位の不一致を、根拠つきの警告に下げる。登録したのに当たる不一致が無ければエラーにする（登録の見直し）"""
+    excs = [e for e in ev.get('rank_exceptions') or [] if e.get('round_id') == round_id]
+    if not excs:
+        return findings
+    out, used = [], set()
+    for f in findings:
+        if f.level == 'error' and f.layer == 'layer3':
+            for i, e in enumerate(excs):
+                if i not in used and f.message == f"{e['name']} 順位 印字 {e['printed']} / 再構成 {e['calc']}":
+                    f = verify.Finding('warning', f.round_id, 'layer3', f"{f.message}（印字の順位を正とする例外。根拠: {e['basis']}）")
+                    used.add(i)
+                    break
+        out.append(f)
+    for i, e in enumerate(excs):
+        if i not in used:
+            out.append(verify.Finding('error', round_id, 'layer3',
+                                      f"rank_exceptions の {e['name']}（印字 {e['printed']} / 再構成 {e['calc']}）に当たる順位の不一致が無い（登録を見直す）"))
+    return out
+
+
 def advance_for(ev, gender):
     fmt = ev.get('format') or {}
     adv = fmt.get('advance') or {}
@@ -180,7 +202,7 @@ def main(argv=None):
             if rnd['tier'] == 'detail':
                 findings += verify.layer2(rnd['round_id'], runs, None, rnd['gender'], dd_seen)
             if rnd['tier'] in ('detail', 'score'):
-                findings += verify.layer3_rank(rnd['round_id'], runs, c['rules'])
+                findings += apply_rank_exceptions(verify.layer3_rank(rnd['round_id'], runs, c['rules']), rnd['round_id'], ev)
             rounds_ctx.append(ctx)
             print(f"  読込 {rnd['round_id']:34s} {rnd['gender']} {rnd['round']:3s} {len(runs):3d} records  tier={rnd['tier']}")
 
