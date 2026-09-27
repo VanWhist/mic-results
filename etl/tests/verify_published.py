@@ -127,6 +127,8 @@ def num_tokens(rows):
         for _, t in toks:
             t = unicodedata.normalize('NFKC', t).replace('−', '-')
             for part in re.split(r'[()（）\s]', t):
+                if '..' in part and len(part) % 2 == 0 and part[0::2] == part[1::2]:
+                    part = part[0::2]  # 2 回重ね打ちでずれた太字（'1177..2277' = 17.27）
                 if NUM.match(part):
                     out[abs(Decimal(part))] += 1
                 elif re.search(r'[぀-ヿ㐀-鿿]', part):
@@ -195,16 +197,15 @@ def expected_values(run, fis_style):
 
 
 def next_page_carry(path, pg):
-    """改ページで次ページ先頭に送られた前ページ最後の選手の 2 行目（表の見出し行の後、次の選手の行の前）の数値"""
+    """改ページで次ページ先頭に送られた前ページ最後の選手の 2 行目（表の見出し行の後、次の選手の行の前）の数値。
+    表の見出しの無い続きのページ（2017 東海北陸 愛知 男子予選）はページの頭から次の選手の行の前まで"""
     try:
         rows = page_lines(path, pg + 1)
     except Exception:  # noqa  次のページが無い
         return collections.Counter()
     hdr = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1].startswith('順位') and any('Total' in t for _, t in toks)), None)
-    if hdr is None:
-        return collections.Counter()
     carry = []
-    for _, toks in rows[hdr + 1:]:
+    for _, toks in rows[(hdr + 1) if hdr is not None else 0:]:
         if len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1]):
             break
         carry.append((_, toks))
@@ -358,12 +359,17 @@ def check_names(rnd, runs):
 
 
 def load_exceptions():
-    """etl/rules/events/*.json の recompute_exceptions（印字を画像で確認済みの例外）→ {(年, BIB, 項目)}"""
+    """印字を正とする登録済みの例外 → {(キー, BIB, 項目): 根拠}。
+    全日本は etl/rules/events/規則_YYYY.json（キーは年）、それ以外の大会は registry の recompute_exceptions（キーは event_id）"""
     out = {}
     for fn in glob.glob(os.path.join(REPO, 'etl', 'rules', 'events', '*.json')):
         d = json.load(open(fn, encoding='utf-8'))
         for x in d.get('recompute_exceptions') or []:
             out[(str(d.get('year') or d.get('season')), x.get('bib'), x.get('item'))] = x.get('basis')
+    for fn in glob.glob(os.path.join(REPO, 'etl', 'registry', '*.json')):
+        for ev in json.load(open(fn, encoding='utf-8')).get('events', []):
+            for x in ev.get('recompute_exceptions') or []:
+                out[(ev['event_id'], x.get('bib'), x.get('item'))] = x.get('basis')
     return out
 
 
@@ -436,9 +442,10 @@ def main():
     # 印字を画像で確認済みの例外（規則ファイルに登録済み）は「原本の印字どおり」に分類し直す
     exc = load_exceptions()
     for n, (r, k, d) in enumerate(issues):
-        if k in EXC_ITEM and r['series'] == 'SAJ_AJ':
-            key = (r['date'][:4], r['bib'], EXC_ITEM[k])
-            if key in exc:
+        if k in EXC_ITEM:
+            key = next((kk for kk in ((r['event_id'], r['bib'], EXC_ITEM[k]), (r['date'][:4], r['bib'], EXC_ITEM[k]))
+                        if kk in exc and (kk[0] == r['event_id'] or r['series'] == 'SAJ_AJ')), None)
+            if key:
                 issues[n] = (r, 'printed_as_is', f'{d}（登録済みの例外: {exc[key][:40]}…）')
     kinds = collections.Counter(k for _, k, _ in issues)
     print('照合した run:', dict(checked), '合計', sum(checked.values()))

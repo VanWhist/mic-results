@@ -21,6 +21,9 @@ def parse_line1(tokens, nturn=5):
     st = None
     rank = None
     i = 0
+    if len(tokens) > 1 and tokens[0].isdigit() and 4 <= len(tokens[0]) <= 6 and SAJNO.match(tokens[1]):
+        # 3 桁の BIB は幅が広く、順位の欄とくっついて印字される（'41104' = 41 位 BIB 104。2022 はくのり 男子予選）
+        tokens = [tokens[0][:-3], tokens[0][-3:]] + list(tokens[1:])
     if tokens[0] in STATUS:
         st = tokens[0]; i = 1
     elif tokens[0].isdigit() and len(tokens) > 2 and SAJNO.match(tokens[2]):
@@ -75,8 +78,7 @@ def parse_line1(tokens, nturn=5):
         time_s = float(nums_from_end[nturn+6]); time_pt = float(nums_from_end[nturn+7])
         score = float(nums_from_end[nturn+8])
         namepart = tail[:len(tail)-len(nums_from_end)]
-        name = ' '.join(namepart[:-1]) if len(namepart) > 1 else (namepart[0] if namepart else '')
-        pref = namepart[-1] if namepart else ''
+        name, pref = _name_pref(namepart, sajno)
         return dict(status=st or 'OK', rank=rank, bib=bib, sajno=sajno,
                     name=name, pref=pref, base=base, turns_total=turns_total,
                     jump1=jump1, dd1=dd1, j6_1=j6, j7_1=j7,
@@ -103,8 +105,7 @@ def parse_line1(tokens, nturn=5):
             score = float(nums_from_end[6])
             if len(nums_from_end) > 7:
                 tie = nums_from_end[7]
-            name = ' '.join(namepart[:-1]) if len(namepart) > 1 else (namepart[0] if namepart else '')
-            pref = namepart[-1] if namepart else ''
+            name, pref = _name_pref(namepart, sajno)
             return dict(status=st or 'OK', rank=rank, bib=bib, sajno=sajno,
                         name=name, pref=pref, base=base, turns_total=turns_total,
                         jump1=jump1, dd1=dd1, j6_1=j6, j7_1=j7,
@@ -120,8 +121,7 @@ def parse_line1(tokens, nturn=5):
     trail_status = namepart[-1] if namepart and namepart[-1] in STATUS else None
     if trail_status:
         namepart = namepart[:-1]
-    name = ' '.join(namepart[:-1]) if len(namepart) > 1 else (namepart[0] if namepart else '')
-    pref = namepart[-1] if namepart else ''
+    name, pref = _name_pref(namepart, sajno)
     return dict(status=st or trail_status or 'DNF', rank=rank, bib=bib, sajno=sajno,
                 name=name, pref=pref, base=None, turns_total=None,
                 jump1=None, dd1=None, j6_1=None, j7_1=None,
@@ -139,6 +139,9 @@ def split_glued(tokens):
     漢字・かなを含み、数字と小数点だけを抜き出すと小数になる語は、文字列と数値の 2 語に分ける。"""
     out = []
     for t in tokens:
+        # 2 回重ね打ちの太字が少しずれて印字され、文字が 2 つずつ並ぶ数（'1177..2277' = 17.27、2019 B級 1851-0016）
+        if '..' in t and len(t) % 2 == 0 and t[0::2] == t[1::2] and re.fullmatch(r'\d+\.\d+', t[0::2]):
+            t = t[0::2]
         if CJK.search(t) and re.search(r'\d', t):
             digits = ''.join(ch for ch in t if ch.isdigit() or ch == '.')
             text = ''.join(ch for ch in t if not (ch.isdigit() or ch == '.'))
@@ -226,6 +229,32 @@ def mixed_order(code):
 CATEGORY = re.compile(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部')
 
 
+def _interleaved(text):
+    """2 つの行の文字が交互に混ざった行があるか（語の大半が 1 文字の、長い行）"""
+    for l in text.splitlines():
+        toks = l.split()
+        if len(toks) >= 20 and sum(1 for t in toks if len(t) == 1) / len(toks) > 0.6:
+            return True
+    return False
+
+
+def _name_pref(namepart, sajno):
+    """氏名と所属。最後の語が所属（県名・学連・国名）。ただし SAJ 番号の無い選手で 2 語しかなく、最後の語が
+    所属の一覧に無いときは所属の印字が無いとみなし、2 語とも氏名にする（'47 120 ノイズ キース …' 2017 東海北陸 愛知）"""
+    if not namepart:
+        return '', ''
+    if len(namepart) == 1:
+        return namepart[0], ''
+    if sajno is None and len(namepart) == 2:
+        try:
+            from .parse_sajmo_old import PREFS
+        except ImportError:  # スクリプトとして直接使うとき
+            from parse_sajmo_old import PREFS
+        if namepart[-1] not in PREFS and re.sub(r'[都府県]$', '', namepart[-1]) not in PREFS:
+            return ' '.join(namepart), ''
+    return ' '.join(namepart[:-1]), namepart[-1]
+
+
 def _old_row(tokens, nturn):
     try:
         from . import parse_sajmo_old
@@ -252,7 +281,12 @@ def parse_pdf(path):
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
             # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
-            text = page.dedupe_chars().extract_text() or ''
+            page = page.dedupe_chars()
+            text = page.extract_text() or ''
+            if _interleaved(text):
+                # 1 行目と 2 行目の間隔が詰まったページは、行をまとめる縦の許容幅（既定 3）で 2 行が 1 行に混ざる
+                # （'9 2 . . 9 1'。2022 はくのり 男子予選）。そのページだけ許容幅を小さくして読み直す
+                text = page.extract_text(y_tolerance=2) or ''
             lines = [l.strip() for l in text.split('\n') if l.strip()]
             code = None
             # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。

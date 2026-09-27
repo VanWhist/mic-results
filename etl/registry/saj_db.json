@@ -8426,7 +8426,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（男子予選 33・34 位（1.28、ターン・エア同じ、タイムで分けた））。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2017-18-fis-1889-0026",
@@ -8552,7 +8557,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（男子予選 14・15 位（12.12、ターン点で分けた））。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2017-18-saj_a-1898-0036",
@@ -9140,7 +9150,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "sheet": "2018-19-saj_b-1845-0004_F-m",
+     "bib": 58,
+     "item": "Air Total",
+     "printed": "4.99",
+     "calc": "5.77",
+     "basis": "決勝6位 BIB 58 栗原 草太。1本目 S の DD が 0.530 と印字されているが、同じ大会の予選で印字された S の DD 0.380 で計算すると印字のエア合計 4.99 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ]
   },
   {
    "event_id": "2018-19-saj_a-1845-0005",
@@ -9518,7 +9538,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（男子予選 11・12 位（41.05、ターン点で分けた））。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2018-19-fis-1859-0025",
@@ -9602,7 +9627,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "sheet": "2018-19-saj_a-1866-0033_Q-m",
+     "bib": 61,
+     "item": "Air Total",
+     "printed": "4.30",
+     "calc": "5.05",
+     "basis": "予選45位 BIB 61 高橋 一仁。1本目 S の DD が 0.530 と印字されているが、同シーズンの S の DD 0.38 で計算すると印字のエア合計 4.30 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ]
   },
   {
    "event_id": "2018-19-saj_a-1866-0034",
@@ -9644,7 +9679,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "sheet": "2018-19-saj_a-1866-0034_Q-w",
+     "bib": 23,
+     "item": "Air Total",
+     "printed": "2.89",
+     "calc": "3.06",
+     "basis": "女子予選29位 BIB 23 有野 智子。1本目 S の DD が 0.760 と印字されているが、女子の S の DD 0.48 で計算すると印字のエア合計 2.89 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ]
   },
   {
    "event_id": "2018-19-fis-1868-0037",
@@ -9854,7 +9899,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "sheet": "2019-20-saj_b-211-0012_Q-w",
+     "bib": 34,
+     "item": "Air Total",
+     "printed": "4.28",
+     "calc": "3.83",
+     "basis": "女子予選17位 BIB 34 大西 智美。1本目 TS の DD が 0.480 と印字されているが、TS の DD 0.60 で計算すると印字のエア合計 4.28 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ]
   },
   {
    "event_id": "2019-20-saj_a-206-0005",
@@ -10212,7 +10267,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "sheet": "2020-21-saj_b-2801-0542_Q-m",
+     "bib": 13,
+     "item": "Air Total",
+     "printed": "4.44",
+     "calc": "4.51",
+     "basis": "男子予選17位 BIB 13 生田 晴都。1本目 TS の DD が 0.530 と印字されているが、TS の DD 0.50 で計算すると印字のエア合計 4.44 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ]
   },
   {
    "event_id": "2020-21-saj_b-2747-0126",
@@ -10570,7 +10635,12 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "同点欄に印字が無いが、同点を FIS 式（ターン点→DD を掛ける前のエア→タイム）で分けて順位を付けている（女子予選 14・15 位（50.92、ターン点で分けた））。",
+   "tie_break": [
+    "turns_total",
+    "air_without_dd",
+    "seconds_asc"
+   ]
   },
   {
    "event_id": "2020-21-saj_b-2756-0285",
@@ -12550,16 +12620,6 @@
    "adapter": "saj_aj",
    "pdfs": [
     {
-     "path": "SAJ_B/2022-23/SAJ2023_3281_0287_M_MO.pdf",
-     "sha256": "f9eee3184acd4a73aa28236287c3a60bd7faefc4d369992a6587ec6f437f0206",
-     "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/男子予選.pdf",
-     "page_url": "https://sajdb.shikuminet.jp/freestyle/2023/competition/0287/result",
-     "gender": "M",
-     "codex": "0287",
-     "saved_at": "2026-09-25",
-     "src_name": "男子予選.pdf"
-    },
-    {
      "path": "SAJ_B/2022-23/SAJ2023_3281_5287_W_MO.pdf",
      "sha256": "3f56c89528a977192d4b309c2f1ff84c847cde9ff2c88d8b1c385e0372fe90cf",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2023/FS/女子予選.pdf",
@@ -12576,7 +12636,20 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "男子の PDF は記入されていない雛形（全員 1 位・0.30 点）で、正しい結果が SAJ データバンクに無い。男子は登録から除く（2026-09-27）。",
+   "recompute_exceptions": [
+    {
+     "sheet": "2022-23-saj_b-3281-0287_Q-w",
+     "bib": 2,
+     "item": "Air Total",
+     "printed": "4.03",
+     "calc": "5.04",
+     "basis": "女子予選15位 BIB 2 倉持 心星。1本目 S の DD が 0.780 と印字されているが、女子の S の DD 0.48 で計算すると印字のエア合計 4.03 と一致する。DD の印字の誤りとみなし、印字の合計を正とする（2026-09-27）"
+    }
+   ],
+   "exclude_pdfs": [
+    "SAJ_B/2022-23/SAJ2023_3281_0287_M_MO.pdf"
+   ]
   },
   {
    "event_id": "2022-23-saj_b-3283-0555",

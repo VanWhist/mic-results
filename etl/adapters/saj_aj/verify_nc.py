@@ -127,6 +127,45 @@ def page_pace(words):
     return out
 
 
+def _page_blocks(lines, bibx, pno, info, tables, code, gender, category):
+    """ページの行から選手のブロック（BIB 列に整数がある行から次のその行まで）を作る。
+    ページ先頭の、どの選手にも属さない行は、前ページ最後の選手の 2 行目が改ページで送られたもの
+    （2024 白馬乗鞍埼玉 A級 予選 34 位など）。同じ表（記号・性別・区分）が前ページから続くときだけ前の選手につなぐ"""
+    for line in lines:
+        # 順位の欄から BIB の欄にまたがる数字の語は、順位と 3 桁の BIB がくっついたもの（'41104' = 41 位 BIB 104。
+        # 2022 はくのり 男子予選）。末尾 3 桁を BIB の位置の語として分ける
+        split = []
+        for w in line['words']:
+            t = w['text']
+            if t.isdigit() and 4 <= len(t) <= 6 and w['x0'] < bibx - 6 and w['x1'] > bibx + 2:
+                split += [dict(w, text=t[:-3], x1=bibx - 1), dict(w, text=t[-3:], x0=bibx)]
+            else:
+                split.append(w)
+        line['words'] = split
+
+    def bib_word(line):
+        # BIB は 3 桁まで。2 行目の 7 桁 FIS 番号が BIB 列の近くに印字される様式（ばんけい 2026）を選手行と取り違えない。
+        # 順位と BIB の欄が詰まった様式（2022 はくのり）では順位の数字も範囲に入るので、右側（BIB 側）の語を選ぶ
+        cands = [w for w in line['words'] if bibx - 6 <= w['x0'] <= bibx + 16 and w['text'].isdigit() and len(w['text']) <= 3]
+        return max(cands, key=lambda w: w['x0']) if cands else None
+
+    anchors = [i for i, l in enumerate(lines) if bib_word(l)]
+    if anchors and anchors[0]:
+        info['stray'].append(anchors[0])
+        prev = tables[-1] if tables else None
+        if prev and prev['blocks'] and prev['code'] == code and prev['gender'] == gender and prev['page'] == pno - 1                 and prev.get('category') == category:
+            carry = lines[:anchors[0]]
+            last = prev['blocks'][-1]
+            last['lines'] = last['lines'] + carry
+            last['tokens'] = last['tokens'] + [t for l in carry for w in l['words'] for t in _unmix(w['text'])]
+    blocks = []
+    for j, i in enumerate(anchors):
+        blk = lines[i:(anchors[j + 1] if j + 1 < len(anchors) else len(lines))]
+        blocks.append(dict(lines=blk, tokens=[t for l in blk for w in l['words'] for t in _unmix(w['text'])],
+                           bib=bib_word(blk[0])['text'], page=pno))
+    return blocks
+
+
 def table_pace(pace, gender, known):
     """表のペースタイム。男女が並ぶページで、その性別のペースタイムが印字されていないとき（2025 北海道選手権の男女 SF は
     「男子ペースタイム」だけ）は、同じ PDF の前のページで分かったその性別の値を使う（ページ中央の '秒' の値は男子のもの）"""
@@ -141,7 +180,10 @@ def table_pace(pace, gender, known):
 
 def _unmix(text):
     """所属が長く隣の点数欄に重なった語（'兵庫県スキー・スノ1ー4.9'）を、文字と数字に分ける。
-    漢字・かなを含み、数字と小数点だけを拾うと小数になるときだけ分ける（それ以外はそのまま）。"""
+    漢字・かなを含み、数字と小数点だけを拾うと小数になるときだけ分ける（それ以外はそのまま）。
+    2 回重ね打ちでずれて文字が 2 つずつ並んだ数（'1177..2277' = 17.27）は 1 つずつに戻す。"""
+    if '..' in text and len(text) % 2 == 0 and text[0::2] == text[1::2] and re.fullmatch(r'\d+\.\d+', text[0::2]):
+        return [text[0::2]]
     if re.search(r'[぀-ヿ㐀-鿿]', text) and re.search(r'\d', text):
         num = ''.join(ch for ch in text if ch.isdigit() or ch == '.')
         rest = ''.join(ch for ch in text if not (ch.isdigit() or ch == '.'))
@@ -159,7 +201,11 @@ def read_pdf(path):
     with pdfplumber.open(path) as pdf:
         year = None
         for pno, page in enumerate(pdf.pages, 1):
-            words = page.dedupe_chars().extract_words()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
+            page = page.dedupe_chars()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
+            words = page.extract_words()
+            if sum(1 for w in words if len(w['text']) == 1) > 0.5 * max(1, len(words)):
+                # 1 行目と 2 行目の間隔が詰まったページは、縦の許容幅（既定 3）で 2 行の文字が 1 語に混ざる。許容幅を小さくする
+                words = page.extract_words(y_tolerance=2)
             if year is None:
                 y = next((re.match(r'(\d{4})年', w['text']) for w in words if re.match(r'\d{4}年', w['text'])), None)
                 year = y.group(1) if y else None
@@ -204,33 +250,30 @@ def read_pdf(path):
                 hrow = merge_fragments(sorted([w for w in words if abs(w['top'] - hdr['top']) < 2], key=lambda w: w['x0']))
                 nturn, columns = column_map(hrow, [w for w in words if hdr['top'] - 10 <= w['top'] < hdr['top'] - 1])
                 bib_w = next((w for w in hrow if w['text'] == 'BIB'), None)
-                bibx = bib_w['x0'] if bib_w else next(w['x1'] for w in hrow if w['text'].startswith('順位')) - 14
+                if bib_w:
+                    bibx = bib_w['x0']
+                else:
+                    rank_w = next(w for w in hrow if w['text'].startswith('順位'))
+                    # '順位BIB' と癒着した見出し（2022 はくのり）は、その中の 'B' の文字の位置を BIB 列とする
+                    b_char = next((c for c in page.chars if c['text'] == 'B' and abs(c['top'] - rank_w['top']) < 2
+                                   and rank_w['x0'] <= c['x0'] <= rank_w['x1']), None) if 'BIB' in rank_w['text'] else None
+                    bibx = b_char['x0'] if b_char else rank_w['x1'] - 14
                 lines = _lines([w for w in words if seg_start + 5 < w['top'] < end - 1
                                 and not re.fullmatch(r'【(男子|女子)】', w['text'])])
-
-                def bib_word(line):
-                    # BIB は 3 桁まで。2 行目の 7 桁 FIS 番号が BIB 列の近くに印字される様式（ばんけい 2026）を選手行と取り違えない
-                    return next((w for w in line['words'] if bibx - 6 <= w['x0'] <= bibx + 16 and w['text'].isdigit() and len(w['text']) <= 3), None)
-
-                anchors = [i for i, l in enumerate(lines) if bib_word(l)]
-                if anchors and anchors[0]:
-                    info['stray'].append(anchors[0])
-                    # ページ先頭の、どの選手にも属さない行は、前ページ最後の選手の 2 行目が改ページで送られたもの
-                    # （2024 白馬乗鞍埼玉 A級 予選 34 位など）。同じ表（記号・性別）が続くときだけ前の選手につなぐ
-                    prev = tables[-1] if tables else None
-                    if prev and prev['blocks'] and prev['code'] == code and prev['gender'] == gender and prev['page'] == pno - 1                             and prev.get('category') == category:
-                        carry = lines[:anchors[0]]
-                        last = prev['blocks'][-1]
-                        last['lines'] = last['lines'] + carry
-                        last['tokens'] = last['tokens'] + [t for l in carry for w in l['words'] for t in _unmix(w['text'])]
-                blocks = []
-                for j, i in enumerate(anchors):
-                    blk = lines[i:(anchors[j + 1] if j + 1 < len(anchors) else len(lines))]
-                    blocks.append(dict(lines=blk, tokens=[t for l in blk for w in l['words'] for t in _unmix(w['text'])],
-                                       bib=bib_word(blk[0])['text'], page=pno))
-                tables.append(dict(page=pno, code=code, heading=heading, gender=gender, category=category,
+                blocks = _page_blocks(lines, bibx, pno, info, tables, code, gender, category)
+                tables.append(dict(page=pno, code=code, heading=heading, gender=gender, category=category, bibx=bibx,
                                    pace=table_pace(pace, gender, known_pace), nturn=nturn, columns=columns, blocks=blocks))
                 info['tables'] += 1
+            prev = tables[-1] if tables else None
+            if not heads and prev and prev['page'] == pno - 1 and prev['blocks']:
+                # 見出し行の無いページ: 前ページの表が続いている（2017 東海北陸 愛知 男子予選は 57 名が 3・4 ページにまたがる）。
+                # 前の表の列の並び（BIB の位置）で選手の行を探し、CODEX 行（表の終わり）まで読む
+                end = codex[0] if codex else page.height
+                lines = _lines([w for w in words if w['top'] < end - 1 and not re.fullmatch(r'【(男子|女子)】', w['text'])])
+                blocks = _page_blocks(lines, prev['bibx'], pno, info, tables, prev['code'], prev['gender'], prev.get('category'))
+                if blocks:
+                    tables.append(dict(prev, page=pno, blocks=blocks))
+                    info['tables'] += 1
             pages.append(info)
     return year, pages, tables
 

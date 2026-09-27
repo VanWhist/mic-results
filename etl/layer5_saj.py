@@ -48,11 +48,13 @@ def overall_from_rounds(rounds_by_code):
         items.sort(key=lambda x: x[0])
         ranked_items = [(rk, r) for rk, r in items if rk < 10 ** 6]
         unranked = [r for rk, r in items if rk >= 10 ** 6]
-        # ラウンド内で同じ順位の選手（決勝の DNF 2 人に「11」と印字される等）は総合でも同順位にする
+        # ラウンド内の印字の順位の間隔をそのまま総合に持ち込む：同じ順位（決勝の DNF 2 人に「11」）は同順位、
+        # 欠番（2020 FIS DM 女子は 25 位が無く 26 位）は欠番のまま。ブロックの先頭（未配置の最小順位）からの差で数える
         base = placed
+        first = min((rk for rk, _ in ranked_items), default=1)
         for rank_in_round, r in ranked_items:
             placed += 1
-            overall = base + 1 + sum(1 for rk, _ in ranked_items if rk < rank_in_round)
+            overall = base + 1 + (rank_in_round - first)
             out[r['athlete_id']] = {'overall': overall, 'round': code, 'round_rank': rank_in_round,
                                     'score': r['run_score'], 'saj_no': r.get('saj_no'), 'name': r['name'], 'status': r['status']}
         # 決勝で DNF/DNS になった選手は、SAJ の順位表では決勝ブロックの末尾に同順位で載る（予選落ちの選手より上）
@@ -98,13 +100,23 @@ def compare(event_id, gender, rounds_by_code, cache):
     by_no = {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no')}
     by_name = {_norm_name(v['name']): k for k, v in ours.items()}
     matched = []
+    used = set()
     for row in rows:
         aid = by_no.get(_norm_no(row.get('code'))) or by_name.get(_norm_name(row.get('name')))
+        if aid is None and not _norm_no(row.get('code')) and _dec(row.get('score')) is not None:
+            # SAJ 番号の無い外国籍選手は、順位表がカタカナ（'ノイズ キース'）、PDF がローマ字で名前が突き合わない。
+            # 得点が同じで、まだ誰とも対応していない選手がちょうど 1 人なら同じ選手とみなす
+            cands = [k for k, v in ours.items() if k not in used and v.get('score') is not None
+                     and _num_eq(_dec(row.get('score')), v['score']) and not v.get('saj_no')]
+            if len(cands) == 1:
+                aid = cands[0]
+                f.append(Finding('warning', round_id, 'layer5', f"{gender} 順位表の {row.get('name')} を得点 {row.get('score')} で PDF の {ours[aid]['name']} と対応づけた（名前の表記が違う）"))
         if aid is None:
             # 順位が空欄の行（棄権などで順位の付かない選手）は結果ではないので、PDF に居なくても警告にとどめる
             level = 'error' if str(row.get('rank') or '').strip() else 'warning'
             f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
             continue
+        used.add(aid)
         matched.append((row, aid))
     seen = {aid for _, aid in matched}
     # SAJ の順位表は SAJ 登録選手だけを載せる（外国籍選手などは省かれ、後続の順位が詰まる）。
@@ -117,6 +129,10 @@ def compare(event_id, gender, rounds_by_code, cache):
         html_rank = int(row['rank']) if str(row.get('rank') or '').strip().isdigit() else None
         html_score = _dec(row.get('score'))
         our_rank = rerank.get(id(o))
+        # 順位表が欠番を詰めずに載せている年もある（2020 FIS DM 女子は 25 位が両方に無く、26 位がそのまま）。
+        # PDF の総合順位そのものと一致すれば一致とする
+        if html_rank is not None and html_rank == o['overall']:
+            our_rank = html_rank
         if html_rank != our_rank:
             note = f"（順位表に無い選手を除いた順位。PDF の総合 {o['overall']}位、{o['round']} {o['round_rank']}位）" if our_rank != o['overall'] else f"（{o['round']} {o['round_rank']}位）"
             f.append(Finding('error', round_id, 'layer5', f"{gender} {o['name']}: 順位表 {html_rank}位 / PDF 再構成 {our_rank}位{note}"))
