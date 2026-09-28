@@ -36,8 +36,13 @@ def load_json(path, default):
         return json.load(fh)
 
 
-def n_competitors(path):
-    """決勝の報告書に印字された出場人数（Number of Competitors）。勝ち上がり人数の登録に使う"""
+def n_competitors(path, layout=None):
+    """決勝の報告書に印字された出場人数（Number of Competitors）。勝ち上がり人数の登録に使う。
+    文字表（layout ascii）には出場人数の印字が無いので、進出人数の印字（Cutoff）か、dns 以外の人数"""
+    if layout == 'ascii':
+        from . import ascii_a
+        meta, recs = ascii_a.parse_moguls_results(path)
+        return meta.get('cutoff') or sum(1 for r in recs if r['status'] != 'DNS') or None
     with pdfplumber.open(path) as pdf:
         m = re.search(r'Number of Competitors:\s*(\d+)', pdf.pages[0].extract_text() or '')
     return int(m.group(1)) if m else None
@@ -65,7 +70,7 @@ def advance_of(pdfs):
         a = {}
         for frm, to in (('Q', 'F1'), ('Q1', 'F1'), ('F1', 'F2'), ('F2', 'F3')):
             if (frm in rounds or frm in counts) and (to in rounds or to in counts):
-                n = n_competitors(os.path.join(config.PDF_ROOT, rounds[to]['path'])) if to in rounds else counts[to]
+                n = n_competitors(os.path.join(config.PDF_ROOT, rounds[to]['path']), rounds[to].get('layout')) if to in rounds else counts[to]
                 if n:
                     a[frm] = {'to': to, 'n': n}
         if a:
@@ -74,12 +79,18 @@ def advance_of(pdfs):
 
 
 def layout_family(path):
-    """PDF の様式の系統。fis_std（FIS 標準: Rank Bib 表頭・B:/D: 行）、ascii（「=== ===」の文字表。カナダの集計ソフト）、
+    """PDF の様式の系統。fis_std（FIS 標準: Rank Bib 表頭・B:/D: 行）、ascii（「=== ===」の文字表。カナダの集計ソフト。
+    今の採点方式の表頭のもの。それ以外は ascii_old）、
     ffs（フランスの集計ソフト、仏語）、other"""
     with pdfplumber.open(path) as pdf:
         tx = '\n'.join((pg.extract_text() or '') for pg in pdf.pages[:2])
     if re.search(r'^=== ===', tx, re.M):
-        return 'ascii'
+        # 今の採点方式の文字表（NAC 2022）は表頭がこの並び。ANC 2017（エア審判 1 人 2 本・2 本の良い方）・
+        # 世界ジュニア 2012（旧採点方式、Event 列あり）は別の様式
+        if re.search(r'J\.5\s+(?:T&L|Tec)\s+J\.6\s+J\.7\s+(?:Jumps|Sauts)\s+(?:DofD|DD)\s+(?:Airs|Saut)\s+(?:Judge|Juge)\s+'
+                     r'(?:Time|Temps)\s+Pts\s+(?:Run|Desc)\s*$', tx, re.M):
+            return 'ascii'
+        return 'ascii_old'
     if 'Place Dos Code' in tx or ('Juge 1' in tx and 'Résultats' in tx):
         return 'ffs'
     if 'B:' in tx and 'D:' in tx and re.search(r'Rank\s+Bib', tx):
@@ -143,8 +154,9 @@ def main():
                 overall = [x for x in fl if x['typ'] in FINAL_ONLY]
                 has_final = any(ROUND_OF[x['typ']].startswith('F') for x in per_round)
                 use = per_round + ([] if has_final else overall[:1])
-                fam = layout_family(os.path.join(config.PDF_ROOT, use[0]['rel'])) if use else None
-                if fam != 'fis_std':
+                fams = {layout_family(os.path.join(config.PDF_ROOT, x['rel'])) for x in use}
+                fam = fams.pop() if len(fams) == 1 else (sorted(fams) or [None])[0]
+                if fam not in ('fis_std', 'ascii') or fams:
                     reasons.append(f"{c}: FIS 標準以外の様式（{fam}）はまだ読めない")
                     continue
                 if not use:
@@ -155,6 +167,8 @@ def main():
                     pdfs.append({'path': x['rel'], 'sha256': sha256_file(path), 'url': None,
                                  'page_url': RACE_URL.format(x['raceid']), 'round': ROUND_OF.get(x['typ'], 'overall'),
                                  'gender': x['g'], 'codex': c, 'src_type': x['typ']})
+                    if fam == 'ascii':
+                        pdfs[-1]['layout'] = 'ascii'
             if season not in versions:
                 reasons.append(f"規則の版 {season} が rulesets.json に無い")
             if reasons or not pdfs:

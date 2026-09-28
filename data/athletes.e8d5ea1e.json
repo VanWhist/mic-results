@@ -490,15 +490,18 @@
 "fis_code":"2538696",
 "saj_no":null,
 "name":"AUGER-HAMELIN Juliette",
-"aliases":[],
+"aliases":[
+"AUGER HAMELIN Jul"
+],
 "noc":"CAN",
 "yb":2005,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
+"2021-22",
 "2022-23"
 ],
 "series":[
@@ -545,7 +548,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -1529,11 +1532,12 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":24,
+"n_results":26,
 "seasons":[
 "2017-18",
 "2018-19",
 "2019-20",
+"2021-22",
 "2022-23",
 "2024-25",
 "2025-26"
@@ -1744,7 +1748,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -2528,7 +2532,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -2579,7 +2583,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":58,
+"n_results":62,
 "seasons":[
 "2017-18",
 "2021-22",
@@ -2778,14 +2782,16 @@
 "fis_code":"2538422",
 "saj_no":null,
 "name":"CHAMPAGNE Charlotte",
-"aliases":[],
+"aliases":[
+"CHAMPAGNE Charlot"
+],
 "noc":"CAN",
 "yb":2008,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -2809,7 +2815,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -3140,7 +3146,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2021-22",
 "2023-24",
@@ -3376,7 +3382,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -3451,16 +3457,17 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
+"2021-22",
 "2022-23"
 ],
 "series":[
 "NAC"
 ],
 "best":{
-"run_score":50.39,
-"run_id":"2022-23-nac-apexmountain-8584-W-Q-2538298"
+"run_score":58.19,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2538298"
 }
 },
 {
@@ -3524,8 +3531,9 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
+"2021-22",
 "2022-23",
 "2023-24",
 "2024-25",
@@ -4063,7 +4071,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -4333,7 +4341,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -4351,14 +4359,17 @@
 "fis_code":"2531811",
 "saj_no":null,
 "name":"DESMARAIS-GILBERT Laurianne",
-"aliases":[],
+"aliases":[
+"DESMARAIS-GILBERT",
+"DESMARAIS GILBERT"
+],
 "noc":"CAN",
 "yb":1997,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":64,
+"n_results":70,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -4378,8 +4389,8 @@
 "WSC"
 ],
 "best":{
-"run_score":76.49,
-"run_id":"2018-19-nac-apexmountain-8450-W-Q-2531811"
+"run_score":77.6,
+"run_id":"2021-22-nac-apexmountain-8644-W-F1-2531811"
 }
 },
 {
@@ -4489,7 +4500,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":23,
+"n_results":24,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -5032,7 +5043,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2023-24",
@@ -5284,7 +5295,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -6650,14 +6661,16 @@
 "fis_code":"2530565",
 "saj_no":null,
 "name":"GILBERT Valerie",
-"aliases":[],
+"aliases":[
+"GILBERT Valérie"
+],
 "noc":"CAN",
 "yb":1998,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":22,
 "seasons":[
 "2017-18",
 "2019-20",
@@ -6709,7 +6722,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -6720,8 +6733,8 @@
 "WC"
 ],
 "best":{
-"run_score":59.01,
-"run_id":"2021-22-nac-killington-8526-W-Q-2535638"
+"run_score":65.77,
+"run_id":"2021-22-nac-valstcome-8648-W-F1-2535638"
 }
 },
 {
@@ -7043,7 +7056,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -7412,7 +7425,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -7851,7 +7864,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":65,
+"n_results":69,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -7868,8 +7881,8 @@
 "WSC"
 ],
 "best":{
-"run_score":76.4,
-"run_id":"2024-25-8099-F1-2534251"
+"run_score":77.46,
+"run_id":"2021-22-nac-apexmountain-8644-W-F2-2534251"
 }
 },
 {
@@ -7884,7 +7897,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":18,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -8021,12 +8034,14 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
+"2021-22",
 "2024-25"
 ],
 "series":[
-"ANC"
+"ANC",
+"NAC"
 ],
 "best":{
 "run_score":46.41,
@@ -8227,7 +8242,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -8236,8 +8251,8 @@
 "NAC"
 ],
 "best":{
-"run_score":15.45,
-"run_id":"2021-22-nac-killington-8526-W-Q-2534387"
+"run_score":45.11,
+"run_id":"2021-22-nac-valstcome-8648-W-Q-2534387"
 }
 },
 {
@@ -8369,14 +8384,16 @@
 "fis_code":"2538058",
 "saj_no":null,
 "name":"JACHIMOWICZ Sophie",
-"aliases":[],
+"aliases":[
+"JACHIMOWICZ Sophi"
+],
 "noc":"USA",
 "yb":2006,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -8384,8 +8401,8 @@
 "NAC"
 ],
 "best":{
-"run_score":22.47,
-"run_id":"2021-22-nac-deervalley-8510-W-Q-2538058"
+"run_score":34.74,
+"run_id":"2021-22-nac-valstcome-8648-W-Q-2538058"
 }
 },
 {
@@ -8730,7 +8747,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -8742,8 +8759,8 @@
 "NAC"
 ],
 "best":{
-"run_score":35.58,
-"run_id":"2018-19-anc-perisher-8007-W-Q-2534838"
+"run_score":40.7,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2534838"
 }
 },
 {
@@ -9053,7 +9070,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":35,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -9659,7 +9676,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":22,
+"n_results":25,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -9691,7 +9708,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":15,
 "seasons":[
 "2018-19",
 "2021-22"
@@ -9792,14 +9809,16 @@
 "fis_code":"2537576",
 "saj_no":null,
 "name":"KOSINSKI Charlotte",
-"aliases":[],
+"aliases":[
+"KOSINSKI Charlott"
+],
 "noc":"USA",
 "yb":2005,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -9808,8 +9827,8 @@
 "NAC"
 ],
 "best":{
-"run_score":57.77,
-"run_id":"2022-23-nac-apexmountain-8584-W-Q-2537576"
+"run_score":58.06,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2537576"
 }
 },
 {
@@ -10344,7 +10363,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -10686,7 +10705,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":49,
+"n_results":55,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -10701,8 +10720,8 @@
 "WSC"
 ],
 "best":{
-"run_score":82.3,
-"run_id":"2025-26-8194-F2-2537762"
+"run_score":83.94,
+"run_id":"2021-22-nac-apexmountain-8644-W-F2-2537762"
 }
 },
 {
@@ -10925,7 +10944,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -10934,8 +10953,8 @@
 "NAC"
 ],
 "best":{
-"run_score":64.63,
-"run_id":"2021-22-nac-killington-8526-W-Q-2535574"
+"run_score":67.59,
+"run_id":"2021-22-nac-apexmountain-8644-W-F1-2535574"
 }
 },
 {
@@ -11006,7 +11025,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":33,
+"n_results":36,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -11024,8 +11043,8 @@
 "WSC"
 ],
 "best":{
-"run_score":74.64,
-"run_id":"2022-23-nac-apexmountain-8584-W-F1-2533613"
+"run_score":76.39,
+"run_id":"2021-22-nac-apexmountain-8644-W-F1-2533613"
 }
 },
 {
@@ -11094,8 +11113,9 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":12,
 "seasons":[
+"2021-22",
 "2022-23",
 "2023-24",
 "2024-25",
@@ -11386,7 +11406,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -11470,7 +11490,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":66,
+"n_results":71,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -11604,7 +11624,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -12131,7 +12151,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -12501,7 +12521,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":18,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -13274,6 +13294,30 @@
 }
 },
 {
+"athlete_id":"2538668",
+"fis_code":"2538668",
+"saj_no":null,
+"name":"NELSON Sierra",
+"aliases":[],
+"noc":"CAN",
+"yb":null,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2021-22"
+],
+"series":[
+"NAC"
+],
+"best":{
+"run_score":43.23,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2538668"
+}
+},
+{
 "athlete_id":"2534100",
 "fis_code":"2534100",
 "saj_no":null,
@@ -13309,7 +13353,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -13317,8 +13361,8 @@
 "NAC"
 ],
 "best":{
-"run_score":42.18,
-"run_id":"2021-22-nac-deervalley-8510-W-Q-2534514"
+"run_score":49.31,
+"run_id":"2021-22-nac-valstcome-8648-W-Q-2534514"
 }
 },
 {
@@ -13899,7 +13943,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -13923,7 +13967,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2019-20",
 "2021-22",
@@ -14628,9 +14672,10 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2019-20",
+"2021-22",
 "2022-23",
 "2023-24",
 "2024-25"
@@ -15290,6 +15335,27 @@
 "run_score":30.91,
 "run_id":"2025-26-saj_b-4061-0591-M-Q-saj-5002448"
 }
+},
+{
+"athlete_id":"2538638",
+"fis_code":"2538638",
+"saj_no":null,
+"name":"RICHMOND Nicola",
+"aliases":[],
+"noc":"CAN",
+"yb":null,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2021-22"
+],
+"series":[
+"NAC"
+],
+"best":null
 },
 {
 "athlete_id":"2538584",
@@ -16082,6 +16148,30 @@
 }
 },
 {
+"athlete_id":"2537633",
+"fis_code":"2537633",
+"saj_no":null,
+"name":"SCHAAB Zoe",
+"aliases":[],
+"noc":"USA",
+"yb":null,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2021-22"
+],
+"series":[
+"NAC"
+],
+"best":{
+"run_score":33.1,
+"run_id":"2021-22-nac-valstcome-8648-W-Q-2537633"
+}
+},
+{
 "athlete_id":"2537948",
 "fis_code":"2537948",
 "saj_no":null,
@@ -16229,18 +16319,44 @@
 }
 },
 {
+"athlete_id":"2534236",
+"fis_code":"2534236",
+"saj_no":null,
+"name":"SCHWINGHAMMER Mai",
+"aliases":[],
+"noc":"CAN",
+"yb":null,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":3,
+"seasons":[
+"2021-22"
+],
+"series":[
+"NAC"
+],
+"best":{
+"run_score":81.58,
+"run_id":"2021-22-nac-apexmountain-8644-W-F2-2534236"
+}
+},
+{
 "athlete_id":"2533204",
 "fis_code":"2533204",
 "saj_no":null,
 "name":"SCHWINGHAMMER Maia",
-"aliases":[],
+"aliases":[
+"SCHWINGHAMMER Mai"
+],
 "noc":"CAN",
 "yb":2001,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":87,
+"n_results":89,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -16476,7 +16592,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":15,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -16695,7 +16811,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -16961,7 +17077,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -16969,8 +17085,8 @@
 "NAC"
 ],
 "best":{
-"run_score":44.96,
-"run_id":"2021-22-nac-deervalley-8510-W-Q-2535585"
+"run_score":60.25,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2535585"
 }
 },
 {
@@ -17069,7 +17185,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":16,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -17848,7 +17964,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -17857,8 +17973,8 @@
 "NAC"
 ],
 "best":{
-"run_score":54.17,
-"run_id":"2021-22-nac-deervalley-8510-W-F1-2537790"
+"run_score":55.86,
+"run_id":"2021-22-nac-apexmountain-8644-W-Q1-2537790"
 }
 },
 {
@@ -18248,7 +18364,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -18745,8 +18861,9 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
+"2021-22",
 "2022-23",
 "2023-24",
 "2025-26"
@@ -18805,7 +18922,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -18855,7 +18972,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -19365,9 +19482,10 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":38,
+"n_results":40,
 "seasons":[
 "2019-20",
+"2021-22",
 "2022-23",
 "2023-24",
 "2024-25",
@@ -19438,7 +19556,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -19818,7 +19936,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -19826,8 +19944,8 @@
 "NAC"
 ],
 "best":{
-"run_score":42.88,
-"run_id":"2021-22-nac-deervalley-8510-W-Q-2534306"
+"run_score":46.59,
+"run_id":"2021-22-nac-valstcome-8648-W-Q-2534306"
 }
 },
 {
@@ -22333,7 +22451,7 @@
 }
 ],
 "mic":null,
-"n_results":161,
+"n_results":166,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -22363,8 +22481,8 @@
 "WSC"
 ],
 "best":{
-"run_score":77.14,
-"run_id":"2020-21-wjc-krasnoyarsk-8606-W-F1-2533488"
+"run_score":82.56,
+"run_id":"2021-22-nac-apexmountain-8644-W-F2-2533488"
 }
 },
 {

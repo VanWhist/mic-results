@@ -15,6 +15,9 @@ try:
 except Exception as e:  # noqa
     parser_b = None
     PARSER_B_ERROR = repr(e)
+# 文字表（「=== ===」の等幅の表。カナダの集計ソフト Winfree。NAC 2022 Apex・Val St-Côme）は別の 2 方式で読む。
+# registry の pdfs[] に layout: "ascii" があるもの
+from . import ascii_a, ascii_b
 
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
@@ -254,6 +257,20 @@ def fill_overall_ranks(round_id, recs, rules):
     return f
 
 
+def drop_nonstarters(round_id, recs, meta):
+    """文字表の決勝の報告は、前のラウンドの全員を載せ、進めなかった選手を「dns」で並べる（NAC 2022 Apex）。印字の
+    「Cutoff: N」（進出人数）と、dns 以外の人数が一致するときだけ dns の行を除く。一致しなければ除かずに止める"""
+    n = meta.get('cutoff')
+    dns = [r for r in recs if r['status'] == 'DNS']
+    if not n or not dns:
+        return []
+    started = len(recs) - len(dns)
+    if started != n:
+        return [Finding('error', round_id, 'layer0', f"進出人数の印字 Cutoff {n} と、dns 以外の人数 {started} が合わない（dns の行を除けない）")]
+    recs[:] = [r for r in recs if r['status'] != 'DNS']
+    return [Finding('warning', round_id, 'layer0', f"進めなかった {len(dns)} 名が dns で並ぶ様式。進出人数の印字 Cutoff {n} と一致したので除いた")]
+
+
 def load_event(ev, imported_at, log=print):
     """registry の 1 大会 → [ctx]。pdfs[] の各要素: path, sha256, url, page_url, round, gender, codex。
     round が 'overall' の PDF（総合の報告）からは、区切りと走りの並びでラウンドを組み立てる（同じ性別で別の報告書がある
@@ -264,18 +281,20 @@ def load_event(ev, imported_at, log=print):
     ctxs = []
     for pdf in ev['pdfs']:
         path = pdf_path(pdf['path'])
+        ascii_layout = pdf.get('layout') == 'ascii'
+        pa, pb = (ascii_a, ascii_b) if ascii_layout else (parser_a, parser_b)
         try:
-            meta_a, recs_a = parser_a.parse_moguls_results(path)
+            meta_a, recs_a = pa.parse_moguls_results(path)
         except Exception as e:  # noqa
             ctxs.append({'error_only': True, 'event_id': ev['event_id'], 'message': f"パーサ A 例外 {pdf['path']}: {e!r}"})
             continue
         meta_b, recs_b, b_error = None, None, None
         if tier == 'detail':
-            if parser_b is None:
+            if pb is None:
                 b_error = f"パーサ B を読み込めない: {PARSER_B_ERROR}"
             else:
                 try:
-                    meta_b, recs_b = parser_b.parse_moguls_results(path)
+                    meta_b, recs_b = pb.parse_moguls_results(path)
                 except Exception as e:  # noqa
                     b_error = f"パーサ B 例外: {e!r}"
         gender = pdf.get('gender') or ({"Men's Moguls": 'M', "Ladies' Moguls": 'W', "Women's Moguls": 'W'}.get(meta_a.get('event')))
@@ -283,7 +302,20 @@ def load_event(ev, imported_at, log=print):
             code = pdf['round']
             if meta_a.get('q_layout') and code == 'Q':
                 code = 'Q2'  # 予選2 の報告書は Q1/Q2 二段で印字される
-            ctxs.append(make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_error, rules, tier, [], log))
+            pre, rt = [], None
+            if ascii_layout:
+                round_id = f"{ev['event_id']}-{gender}-{code}"
+                pre += drop_nonstarters(round_id, recs_a, meta_a)
+                if recs_b is not None:
+                    drop_nonstarters(round_id, recs_b, meta_b)
+                for p in meta_a.get('unparsed_lines') or []:
+                    pre.append(Finding('error', round_id, 'layer1', f"A が読めない行 p{p[0]}: {p[1]}"))
+                for p in (meta_b or {}).get('unparsed_lines') or []:
+                    pre.append(Finding('error', round_id, 'layer1', f"B が読めない行 p{p[0]}: {p[1]}"))
+                # 見出しのラウンド名は様式でまちまち（「Moguls Run 1」「Qualif+finale 16 Descente 1」）なので既定名にする
+                rt = config.ROUND_TEXT_DEFAULT.get(code, code)
+            ctxs.append(make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_error, rules, tier, pre, log,
+                                 round_text=rt))
             continue
         # 区切りの無い報告の種類（予選か決勝か）は文書の見出しで決める。A・B とも同じ判定を使う
         ga, prob_a = split_overall(recs_a, meta_a, 'A')

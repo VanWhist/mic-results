@@ -1995,6 +1995,176 @@
    "notes": ""
   },
   {
+   "event_id": "2021-22-nac-apexmountain-8644",
+   "season": "2021-22",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "50864",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50864&seasoncode=2022",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2021-22",
+   "pdfs": [
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ApexMountain_8644_W_MO_RLQ1.pdf",
+     "sha256": "476b241813e76cc589205ab3e59cb371295cfa14a840078af74ff3c6f785f1a5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14729",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8644",
+     "src_type": "RLQ1",
+     "layout": "ascii"
+    },
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ApexMountain_8644_W_MO_RLF1.pdf",
+     "sha256": "374b55b5b0e5bddc9e49aa696d87522caaf289568cf93f56bb51870f2637f487",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14729",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8644",
+     "src_type": "RLF1",
+     "layout": "ascii"
+    },
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ApexMountain_8644_W_MO_RLF2.pdf",
+     "sha256": "708b632d9be9b2f6f31a68e4d10469207bfdd4341f2211801bc30beb1f98eb3f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14729",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8644",
+     "src_type": "RLF2",
+     "layout": "ascii"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-nac-valstcome-8648",
+   "season": "2021-22",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Val St-Come",
+   "fis_event_id": "50865",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50865&seasoncode=2022",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2021-22",
+   "pdfs": [
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ValStCome_8648_W_MO_RLQ.pdf",
+     "sha256": "a7d87e4dd0a242a5f3b13b779bfa45239da7a14d09e2d234962ff1e38ffbc030",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14733",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8648",
+     "src_type": "RLQ",
+     "layout": "ascii"
+    },
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ValStCome_8648_W_MO_RLF1.pdf",
+     "sha256": "a0f2ed60f030f7548cfc04469a3082f1af8c4f8b511a777fc6e7e11cc28011da",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14733",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8648",
+     "src_type": "RLF1",
+     "layout": "ascii"
+    },
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_ValStCome_8648_W_MO_RLF2.pdf",
+     "sha256": "8fc64c8e05a5c5c969616c03cf1ae9333a3c7af1afcd8da199a37bb8ba63766f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14733",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8648",
+     "src_type": "RLF2",
+     "layout": "ascii"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2021-22-nac-valstcome-8648-W-Q",
+     "bib": 24,
+     "name": "DESFOSSES Jolie",
+     "field": "turns_total",
+     "printed": 0.1,
+     "calc": 0.3,
+     "basis": "印字のターン合計は 0.1（B 合計と D 合計の和が 0 未満のときの下限を 0.1 として集計）。規則どおりの下限は 0.3（審判ごと 0.1 × 数える 3 人）。主催者の集計ソフトの下限の設定とみられる。0.2 足しても予選の順位は変わらない（43〜47 位）。印字の得点・順位が公式（2026-09-28 確認）。得点 16.41"
+    },
+    {
+     "round_id": "2021-22-nac-valstcome-8648-W-Q",
+     "bib": 49,
+     "name": "MAUDSON Jaime",
+     "field": "turns_total",
+     "printed": 0.1,
+     "calc": 0.3,
+     "basis": "印字のターン合計は 0.1（B 合計と D 合計の和が 0 未満のときの下限を 0.1 として集計）。規則どおりの下限は 0.3（審判ごと 0.1 × 数える 3 人）。主催者の集計ソフトの下限の設定とみられる。0.2 足しても予選の順位は変わらない（43〜47 位）。印字の得点・順位が公式（2026-09-28 確認）。得点 16.0"
+    },
+    {
+     "round_id": "2021-22-nac-valstcome-8648-W-Q",
+     "bib": 30,
+     "name": "DOOLEY Claire",
+     "field": "turns_total",
+     "printed": 0.1,
+     "calc": 0.3,
+     "basis": "印字のターン合計は 0.1（B 合計と D 合計の和が 0 未満のときの下限を 0.1 として集計）。規則どおりの下限は 0.3（審判ごと 0.1 × 数える 3 人）。主催者の集計ソフトの下限の設定とみられる。0.2 足しても予選の順位は変わらない（43〜47 位）。印字の得点・順位が公式（2026-09-28 確認）。得点 8.52"
+    },
+    {
+     "round_id": "2021-22-nac-valstcome-8648-W-Q",
+     "bib": 41,
+     "name": "GROGEAN Sydney",
+     "field": "turns_total",
+     "printed": 0.1,
+     "calc": 0.3,
+     "basis": "印字のターン合計は 0.1（B 合計と D 合計の和が 0 未満のときの下限を 0.1 として集計）。規則どおりの下限は 0.3（審判ごと 0.1 × 数える 3 人）。主催者の集計ソフトの下限の設定とみられる。0.2 足しても予選の順位は変わらない（43〜47 位）。印字の得点・順位が公式（2026-09-28 確認）。得点 3.85"
+    }
+   ]
+  },
+  {
    "event_id": "2022-23-nac-apexmountain-8584",
    "season": "2022-23",
    "series": "NAC",

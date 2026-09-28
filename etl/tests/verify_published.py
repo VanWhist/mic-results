@@ -117,7 +117,7 @@ def norm(s):
     return re.sub(r'\s+', '', unicodedata.normalize('NFKC', s or ''))
 
 
-NUM = re.compile(r'^[+-]?\d+(?:\.\d+)?$')
+NUM = re.compile(r'^[+-]?(?:\d+(?:\.\d+)?|\.\d+)$')  # 文字表（NAC 2022）は「-.8」「.128」のように 0 を省く
 INT = re.compile(r'^\d{1,3}$')
 
 
@@ -126,7 +126,8 @@ def num_tokens(rows):
     for _, toks in rows:
         for _, t in toks:
             t = unicodedata.normalize('NFKC', t).replace('−', '-')
-            for part in re.split(r'[()（）\s]', t):
+            # 文字表（NAC 2022）は桁の長い数字が隣とくっつく（「-11.0-33.7」）。数字の直後の「-」で分ける
+            for part in re.split(r'[()（）\s]|(?<=\d)(?=-)', t):
                 if '..' in part and len(part) % 2 == 0 and part[0::2] == part[1::2]:
                     part = part[0::2]  # 2 回重ね打ちでずれた太字（'1177..2277' = 17.27）
                 if NUM.match(part):
@@ -299,7 +300,25 @@ def overall_block_index(runs):
     return out
 
 
-def check_pdf_round(rnd_runs, fis_style, block_of=None):
+def ascii_page_carry(path, pg):
+    """文字表（NAC 2022）: ページの最後の選手の 2 本目のジャンプの行が、次のページの下線「=== ===」の次（最初の選手の行の
+    前）に送られる。その行の数値"""
+    try:
+        rows = page_lines(path, pg + 1)
+    except Exception:  # noqa  次のページが無い
+        return collections.Counter()
+    ui = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1].startswith('===')), None)
+    if ui is None:
+        return collections.Counter()
+    carry = []
+    for row in rows[ui + 1:]:
+        if len(row[1]) >= 3 and INT.match(row[1][0][1]) and INT.match(row[1][1][1]):
+            break
+        carry.append(row)
+    return num_tokens(carry)  # 最初の選手の行の前まで（ターン合計の行と 2 本目のジャンプの行の 2 行が送られることもある）
+
+
+def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False):
     """ラウンドの run 群を印字と照合。戻り値: [(run, kind, detail)]"""
     issues = []
     block_of = block_of or {}
@@ -340,7 +359,11 @@ def check_pdf_round(rnd_runs, fis_style, block_of=None):
             band = num_tokens(rows[a:end])
             if not nxt and not fis_style:
                 band += next_page_carry(path, pg)
+            elif not nxt and ascii_carry:
+                band += ascii_page_carry(path, pg)
             for k, v in expected_values(r, fis_style):
+                if ascii_carry and k == 'time_points' and v == 0:
+                    continue  # 文字表はタイム点 0 を空欄で印字する
                 if band[v] > 0:
                     band[v] -= 1
                 else:
@@ -526,6 +549,10 @@ def main():
             issues += check_upstream(rr, up)
             issues += check_pdf_round(rr, fis_style=True)
             checked['C+A(fis)'] += len(rr)
+        elif src.startswith('AA-'):
+            # FIS 海外大会の文字表（fis_pdf アダプタの ascii_a。NAC 2022）: FIS コードで選手の行を探し、ページ送りの行も見る
+            issues += check_pdf_round(rr, fis_style=True, ascii_carry=True)
+            checked['A(fis-ascii)'] += len(rr)
         elif src.startswith('A-'):
             # FIS 海外大会（fis_pdf アダプタのパーサ A）: FIS 様式なので FIS コードで選手の行を探す
             issues += check_pdf_round(rr, fis_style=True, block_of=block_of)
