@@ -18,6 +18,8 @@ except Exception as e:  # noqa
 # 文字表（「=== ===」の等幅の表。カナダの集計ソフト Winfree。NAC 2022 Apex・Val St-Côme）は別の 2 方式で読む。
 # registry の pdfs[] に layout: "ascii" があるもの
 from . import ascii_a, ascii_b
+# FIS 標準の旧版（2014-15・2015-16。B: / D: の印が無い 1 人 2 行）。layout: "fis_old"
+from . import old_a, old_b
 
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
@@ -282,7 +284,7 @@ def load_event(ev, imported_at, log=print):
     for pdf in ev['pdfs']:
         path = pdf_path(pdf['path'])
         ascii_layout = pdf.get('layout') == 'ascii'
-        pa, pb = (ascii_a, ascii_b) if ascii_layout else (parser_a, parser_b)
+        pa, pb = {'ascii': (ascii_a, ascii_b), 'fis_old': (old_a, old_b)}.get(pdf.get('layout'), (parser_a, parser_b))
         try:
             meta_a, recs_a = pa.parse_moguls_results(path)
         except Exception as e:  # noqa
@@ -303,11 +305,12 @@ def load_event(ev, imported_at, log=print):
             if meta_a.get('q_layout') and code == 'Q':
                 code = 'Q2'  # 予選2 の報告書は Q1/Q2 二段で印字される
             pre, rt = [], None
-            if ascii_layout:
+            if pdf.get('layout') in ('ascii', 'fis_old'):
                 round_id = f"{ev['event_id']}-{gender}-{code}"
-                pre += drop_nonstarters(round_id, recs_a, meta_a)
-                if recs_b is not None:
-                    drop_nonstarters(round_id, recs_b, meta_b)
+                if ascii_layout:
+                    pre += drop_nonstarters(round_id, recs_a, meta_a)
+                    if recs_b is not None:
+                        drop_nonstarters(round_id, recs_b, meta_b)
                 for p in meta_a.get('unparsed_lines') or []:
                     pre.append(Finding('error', round_id, 'layer1', f"A が読めない行 p{p[0]}: {p[1]}"))
                 for p in (meta_b or {}).get('unparsed_lines') or []:

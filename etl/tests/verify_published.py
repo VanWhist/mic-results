@@ -130,6 +130,11 @@ def num_tokens(rows):
             for part in re.split(r'[()（）\s]|(?<=\d)(?=-)', t):
                 if '..' in part and len(part) % 2 == 0 and part[0::2] == part[1::2]:
                     part = part[0::2]  # 2 回重ね打ちでずれた太字（'1177..2277' = 17.27）
+                if re.fullmatch(r'(?:\d{1,2}\.\d){2,}', part):
+                    # くっついた審判点（FIS 旧版の様式「2.42.6」= 2.4 と 2.6）
+                    for q in re.findall(r'\d{1,2}\.\d', part):
+                        out[Decimal(q)] += 1
+                    continue
                 if NUM.match(part):
                     out[abs(Decimal(part))] += 1
                 elif re.search(r'[぀-ヿ㐀-鿿]', part):
@@ -168,7 +173,7 @@ def find_anchor(rows, run, fis_style):
     return max(cands, key=lambda i: (i > hdr, sum(1 for _, t in rows[i][1] if NUM.match(t)), -i))
 
 
-def expected_values(run, fis_style):
+def expected_values(run, fis_style, bd_totals=True):
     """公開データのうち印字されているはずの数値（名前, 値）"""
     ev = []
     add = lambda k, v: ev.append((k, abs(dec(v)))) if v is not None else None
@@ -189,7 +194,7 @@ def expected_values(run, fis_style):
     for i, v in enumerate(run['ded'] or []):
         if v is not None and dec(v) != 0:
             add(f'ded.J{i + 1}', v)
-    if fis_style:
+    if fis_style and bd_totals:
         # 減点が 0 のとき B の合計を印字しない様式がある（EC 2017 Gaissau の総合）。その値はターン合計と同じなので、そちらで照合する
         if not (dec(run['ded_total']) == 0 and dec(run['base_total']) == dec(run['turns_total'])):
             add('base_total', run['base_total'])
@@ -318,7 +323,7 @@ def ascii_page_carry(path, pg):
     return num_tokens(carry)  # 最初の選手の行の前まで（ターン合計の行と 2 本目のジャンプの行の 2 行が送られることもある）
 
 
-def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False):
+def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False, bd_totals=True):
     """ラウンドの run 群を印字と照合。戻り値: [(run, kind, detail)]"""
     issues = []
     block_of = block_of or {}
@@ -361,7 +366,7 @@ def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False):
                 band += next_page_carry(path, pg)
             elif not nxt and ascii_carry:
                 band += ascii_page_carry(path, pg)
-            for k, v in expected_values(r, fis_style):
+            for k, v in expected_values(r, fis_style, bd_totals):
                 if ascii_carry and k == 'time_points' and v == 0:
                     continue  # 文字表はタイム点 0 を空欄で印字する
                 if band[v] > 0:
@@ -549,6 +554,10 @@ def main():
             issues += check_upstream(rr, up)
             issues += check_pdf_round(rr, fis_style=True)
             checked['C+A(fis)'] += len(rr)
+        elif src.startswith('OA-'):
+            # FIS 海外大会の旧版の様式（old_a。2014-15・2015-16）: B: / D: の印とベース合計・減点合計の印字が無い
+            issues += check_pdf_round(rr, fis_style=True, bd_totals=False)
+            checked['A(fis-old)'] += len(rr)
         elif src.startswith('AA-'):
             # FIS 海外大会の文字表（fis_pdf アダプタの ascii_a。NAC 2022）: FIS コードで選手の行を探し、ページ送りの行も見る
             issues += check_pdf_round(rr, fis_style=True, ascii_carry=True)

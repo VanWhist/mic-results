@@ -232,6 +232,11 @@ function fisAirCells(air, idx) {
   return [fisNum(a.J6, 1), fisNum(a.J7, 1), el('td', { class: 'jump', text: a.jump || '' }), fisNum(a.dd, 2)];
 }
 
+// 減点の合計。ターン点が審判 1 人 1 つで減点の印字が無い様式（FIS 2014-15）は空欄にする（0.0 と出さない）
+function dedTotal(r) {
+  return r.ded && r.ded.length ? r.ded_total : null;
+}
+
 function turnsText(r) {
   return (num(r.turns_total, 1) ?? '') + (r.turns_floor_applied ? '*' : '');
 }
@@ -296,7 +301,7 @@ function fisRows(item, L) {
   const line2 = el('tr', { class: 'fis-l2' }, [
     ...fisBlanks(idCount(L) + 2),
     ...fisAirCells(r.air, 1), el('td'),
-    el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(r.ded_total, 1),
+    el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(dedTotal(r), 1),
     ...fisBlanks(scoreCount),
   ]);
   const line3 = el('tr', { class: 'fis-l3' }, [
@@ -419,7 +424,7 @@ function miniBlock(r, L) {
   ]);
   const rows = L.detail ? [
     el('tr', {}, [el('td', { class: 'bd', text: 'B:' }), ...fisJudgeCells(r.base, r.base_discard, L.nT), fisNum(r.base_total, 1, 'tot')]),
-    el('tr', {}, [el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(r.ded_total, 1, 'tot')]),
+    el('tr', {}, [el('td', { class: 'bd', text: 'D:' }), ...fisJudgeCells(r.ded, r.ded_discard, L.nT), fisNum(dedTotal(r), 1, 'tot')]),
     turnsRow,
   ] : [turnsRow];
   return el('div', { class: 'fis-mini-block' }, [timeAir, el('table', { class: 'fis fis-mini fm-turns' }, el('tbody', {}, rows))]);

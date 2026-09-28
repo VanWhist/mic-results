@@ -2,6 +2,632 @@
  "_about": "FIS サイトから保存した海外大会（etl/adapters/fis_pdf/gen_registry.py が生成。手書き項目は保持）",
  "events": [
   {
+   "event_id": "2014-15-uvs-sierranevada-8041",
+   "season": "2014-15",
+   "series": "UVS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Sierra Nevada",
+   "fis_event_id": "35103",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=35103&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "UVS/2014-15/FIS2015_UVS_SierraNevada_8040_W_MO_FRL.pdf",
+     "sha256": "6cc03bd3208f8dcf30a97a87e3ea0c387261d061a57d69d3846b60f2137c89e2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8035",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8040",
+     "src_type": "FRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "UVS/2014-15/FIS2015_UVS_SierraNevada_8041_M_MO_FRL.pdf",
+     "sha256": "f996b1dc6a398a419fc343661f82a57ae9d76064dcdd2c471fa9ea9fc156bc55",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8036",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8041",
+     "src_type": "FRL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2014-15-nac-deervalley-8340",
+   "season": "2014-15",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "35278",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=35278&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8339_W_MO_QRL.pdf",
+     "sha256": "9179c6357074486f95d387ff69c7850049ef9abfc51ad545da31861760580ef5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8063",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8339",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8339_W_MO_F1RL.pdf",
+     "sha256": "87fabc9f2a8a6469dd5ac7f182f91438e63a37c52223aa01930a1337815d5dcc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8063",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8339",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8339_W_MO_F2RL.pdf",
+     "sha256": "31a742464c08820b290c7b157e0ba5b8ddf4aed5d9d116078fa6376c90d13534",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8063",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8339",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8340_M_MO_QRL.pdf",
+     "sha256": "ba0b62ef3ebab979ce825fe2426277b952c67fec8c6e45eef8cf9d897f98b29a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8064",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8340",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8340_M_MO_F1RL.pdf",
+     "sha256": "cb038b62cb3eeaefda977cfecba6d74288be828a82a07d4bc457fc6a170bc0eb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8064",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8340",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_DeerValley_8340_M_MO_F2RL.pdf",
+     "sha256": "760052e7cbb93efc2c9530c5f3b397c8444cf73a91da9d75111f94d8eeda5667",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8064",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8340",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2014-15-nac-deervalley-8340-W-Q",
+     "bib": 39,
+     "name": "HICKMAN Lynne",
+     "field": "air_total",
+     "printed": 3.75,
+     "calc": 6.73,
+     "basis": "TS 0.630（6.2・6.2）と DD 0.660（4.4・4.2）。得点 50.04・31 位。審判点 × DD の計算と印字のエア合計が合わない。2 本とも同じ系統のジャンプで、2 本目の扱い（同じジャンプ・同じ系統の繰り返し）による減点とみられるが、印字から式は特定できない。印字の得点・順位が公式（2026-09-28 確認）"
+    },
+    {
+     "round_id": "2014-15-nac-deervalley-8340-M-Q",
+     "bib": 36,
+     "name": "BERNARD Max",
+     "field": "air_total",
+     "printed": 3.75,
+     "calc": 6.27,
+     "basis": "bPp 0.730 を 2 本（5.6・5.7／3.1・2.8）。得点 34.45・41 位。審判点 × DD の計算と印字のエア合計が合わない。2 本とも同じ系統のジャンプで、2 本目の扱い（同じジャンプ・同じ系統の繰り返し）による減点とみられるが、印字から式は特定できない。印字の得点・順位が公式（2026-09-28 確認）"
+    },
+    {
+     "round_id": "2014-15-nac-deervalley-8340-M-Q",
+     "bib": 15,
+     "name": "ANDRINGA Jesse",
+     "field": "air_total",
+     "printed": 3.6,
+     "calc": 7.01,
+     "basis": "bL 0.720 を 2 本（5.0・4.3／5.4・4.8）。得点 32.70・42 位。審判点 × DD の計算と印字のエア合計が合わない。2 本とも同じ系統のジャンプで、2 本目の扱い（同じジャンプ・同じ系統の繰り返し）による減点とみられるが、印字から式は特定できない。印字の得点・順位が公式（2026-09-28 確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2014-15-nac-apexmountain-8108",
+   "season": "2014-15",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "36688",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36688&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8107_W_MO_QRL.pdf",
+     "sha256": "2bb741ee7c32599f1e89a67c45cb758e8b19e47e89186bbdb0b8c60c978f8afd",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8251",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8107",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8107_W_MO_F1RL.pdf",
+     "sha256": "632bf02158a05455c9df034347ca9e47ca12d17ad07512c7fd72173711192311",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8251",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8107",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8107_W_MO_FRL.pdf",
+     "sha256": "49ee0cca95aa071b23d8dc3315a5268291103c6f66729a1bce1f443bec002042",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8251",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8107",
+     "src_type": "FRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8108_M_MO_QRL.pdf",
+     "sha256": "b37dacf69a69a3bc82c10244017fef1225825ce5714493f140903f3472fce7ce",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8252",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8108",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8108_M_MO_F1RL.pdf",
+     "sha256": "8da3ca9b63ae84d20324248b62745a3915805fbd9d4e1c02bebff71bfc38d6fc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8252",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8108",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2014-15/FIS2015_NAC_ApexMountain_8108_M_MO_FRL.pdf",
+     "sha256": "7b648198ef8efaab19da249b8c11f582192d393fa7c85d124cada283265c5b74",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8252",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8108",
+     "src_type": "FRL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2014-15-wjc-chiesainvalmalenco-8537",
+   "season": "2014-15",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "37049",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37049&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8536_W_MO_QRL.pdf",
+     "sha256": "88fb0bea1639eb8cf5fe276499218b316619bcabaecc8207aa9944a64824082f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8530",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8536",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8536_W_MO_F1RL.pdf",
+     "sha256": "62c94623cd864863dcc1b3b56b49883ed58633682cfc6a07b95ed39e3b8a68c7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8530",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8536",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8536_W_MO_F2RL.pdf",
+     "sha256": "f44c5661797f3d0f8575335b492d9700eb306d367c5588c8f808f1730467f0d3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8530",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8536",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8537_M_MO_QRL.pdf",
+     "sha256": "f186b9cca2a1ad5f529000c77979b14c350eca148b7c0bcb66120a3e393f3e0e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8531",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8537",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8537_M_MO_F1RL.pdf",
+     "sha256": "09ec78c271fa02af9909b7350f73a6ded9cf23c67d081cfe0e56ff949adb0951",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8531",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8537",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "WJC/2014-15/FIS2015_WJC_ChiesaInValmalenco_8537_M_MO_F2RL.pdf",
+     "sha256": "a97a395a49427838e80cadd8630097e94fa9a704134f2abe33c419b06717bc4e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8531",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8537",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-nac-killington-8436",
+   "season": "2015-16",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Killington",
+   "fis_event_id": "37716",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37716&seasoncode=2016",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2015-16",
+   "pdfs": [
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8435_W_MO_QRL.pdf",
+     "sha256": "d3b63ad4a10d503b6ceaa6bc070bcf27a71e1a48f335ee6db9bdeb75a4bf306f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8990",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8435",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8435_W_MO_F1RL.pdf",
+     "sha256": "ecc4e881799a4ebb58541f96ac8761de2bce01b418fb6bc4d4739d33225d095e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8990",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8435",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8435_W_MO_F2RL.pdf",
+     "sha256": "4cd61af78fddccae2835e33b55b9b60154e6b68914de6ec8bd4de37bf97b335f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8990",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8435",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8436_M_MO_QRL.pdf",
+     "sha256": "7b482703587d41c9a8bd76ca8b596fd1449a2a07156640e4354dffe34b18f336",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8991",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8436",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8436_M_MO_F1RL.pdf",
+     "sha256": "ced09aba72a89a8f75b0460b24840a4bcda4e96ef0c086b726a1fd79301a8344",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8991",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8436",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_Killington_8436_M_MO_F2RL.pdf",
+     "sha256": "1d0788cd6aafc283523d58d007b7cc3b085b7ba62f880ebb08b61609e61875a7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8991",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8436",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-nac-valstcome-8105",
+   "season": "2015-16",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Val St. Come",
+   "fis_event_id": "37882",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37882&seasoncode=2016",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2015-16",
+   "pdfs": [
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_ValStCome_8105_M_MO_QRL.pdf",
+     "sha256": "6f4651a9074da056da9084794f0fd2355d625fa3333deddc0fb276403042fc10",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9023",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8105",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_ValStCome_8105_M_MO_F1RL.pdf",
+     "sha256": "ac10d06e58ca23420d646b75015176623d7e616361c7cd08daf5ccefbe283a1b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9023",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8105",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_ValStCome_8105_M_MO_F2RL.pdf",
+     "sha256": "66a76746269d244b02e758ef6ea77f22fe564b20f0b9939015c3149b5c18adf8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9023",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8105",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2015-16-nac-parkcity-8428",
+   "season": "2015-16",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Park City",
+   "fis_event_id": "37885",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37885&seasoncode=2016",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2015-16",
+   "pdfs": [
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_ParkCity_8428_M_MO_QRL.pdf",
+     "sha256": "46a54e4d19182782ab06121cec270ded997fb87bae837f989f59e8b91117e491",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9035",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8428",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "NAC/2015-16/FIS2016_NAC_ParkCity_8428_M_MO_F1RL.pdf",
+     "sha256": "027cc8aff99292942edf853c57930003acfbc44217917fbbde34127db977ee2b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9035",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8428",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2016-17-ec-pratoleventino-8687",
    "season": "2016-17",
    "series": "EC",

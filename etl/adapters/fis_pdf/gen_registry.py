@@ -81,7 +81,7 @@ def advance_of(pdfs):
 def layout_family(path):
     """PDF の様式の系統。fis_std（FIS 標準: Rank Bib 表頭・B:/D: 行）、ascii（「=== ===」の文字表。カナダの集計ソフト。
     今の採点方式の表頭のもの。それ以外は ascii_old）、
-    ffs（フランスの集計ソフト、仏語）、other"""
+    ffs（フランスの集計ソフト、仏語）、fis_old（FIS 標準の旧版 2014-16）、other"""
     with pdfplumber.open(path) as pdf:
         tx = '\n'.join((pg.extract_text() or '') for pg in pdf.pages[:2])
     if re.search(r'^=== ===', tx, re.M):
@@ -95,7 +95,19 @@ def layout_family(path):
         return 'ffs'
     if 'B:' in tx and 'D:' in tx and re.search(r'Rank\s+Bib', tx):
         return 'fis_std'
+    # FIS 標準の旧版（2014-15・2015-16。B: / D: の印が無い 1 人 2 行）。「Percent」の列がある 30 点満点の版（2012-14）は
+    # 取り込まない（城さんの判断、2026-09-28）
+    if re.search(r'^Rank Bib Name YB Time Score Tie\s*$', tx, re.M) and re.search(r'^Code Code J1 J2 J3 ', tx, re.M):
+        return 'fis_old'
     return 'other'
+
+
+def frl_round(path):
+    """旧版の様式（fis_old）の FRL は、見出しが「Ladies' Moguls Final 2」なら決勝 2 だけの報告（NAC 2015 Apex）。
+    戻り値: 'F1' / 'F2' / None（総合の報告）"""
+    with pdfplumber.open(path) as pdf:
+        m = re.search(r"Moguls\s+Final\s*(\d)\s*$", pdf.pages[0].extract_text() or '', re.M)
+    return f"F{m.group(1)}" if m else None
 
 
 def rules_versions():
@@ -149,26 +161,31 @@ def main():
             for c in sorted(grp):
                 fl = dict(items)[c]
                 types = {x['typ'] for x in fl}
-                per_round = [x for x in fl if x['typ'] in ROUND_OF]
+                for x in fl:
+                    if x['typ'] in FINAL_ONLY and layout_family(os.path.join(config.PDF_ROOT, x['rel'])) == 'fis_old':
+                        x['round_override'] = frl_round(os.path.join(config.PDF_ROOT, x['rel']))
+                per_round = [x for x in fl if x['typ'] in ROUND_OF or x.get('round_override')]
                 # 総合（RLF/FRL）: 決勝のラウンドごとの報告書が無いときだけ使う（ANC など。予選の報告書があればそれは別に使う）
                 overall = [x for x in fl if x['typ'] in FINAL_ONLY]
-                has_final = any(ROUND_OF[x['typ']].startswith('F') for x in per_round)
+                round_of = lambda x: x.get('round_override') or ROUND_OF.get(x['typ'], 'overall')
+                overall = [x for x in overall if not x.get('round_override')]
+                has_final = any(round_of(x).startswith('F') for x in per_round)
                 use = per_round + ([] if has_final else overall[:1])
                 fams = {layout_family(os.path.join(config.PDF_ROOT, x['rel'])) for x in use}
                 fam = fams.pop() if len(fams) == 1 else (sorted(fams) or [None])[0]
-                if fam not in ('fis_std', 'ascii') or fams:
+                if fam not in ('fis_std', 'ascii', 'fis_old') or fams:
                     reasons.append(f"{c}: FIS 標準以外の様式（{fam}）はまだ読めない")
                     continue
                 if not use:
                     reasons.append(f"{c}: 使える報告書が無い（{sorted(types)}）")
                     continue
-                for x in sorted(use, key=lambda x: config.ROUND_ORDER.index(ROUND_OF[x['typ']]) if x['typ'] in ROUND_OF else 99):
+                for x in sorted(use, key=lambda x: config.ROUND_ORDER.index(round_of(x)) if round_of(x) in config.ROUND_ORDER else 99):
                     path = os.path.join(config.PDF_ROOT, x['rel'])
                     pdfs.append({'path': x['rel'], 'sha256': sha256_file(path), 'url': None,
-                                 'page_url': RACE_URL.format(x['raceid']), 'round': ROUND_OF.get(x['typ'], 'overall'),
+                                 'page_url': RACE_URL.format(x['raceid']), 'round': round_of(x),
                                  'gender': x['g'], 'codex': c, 'src_type': x['typ']})
-                    if fam == 'ascii':
-                        pdfs[-1]['layout'] = 'ascii'
+                    if fam in ('ascii', 'fis_old'):
+                        pdfs[-1]['layout'] = fam
             if season not in versions:
                 reasons.append(f"規則の版 {season} が rulesets.json に無い")
             if reasons or not pdfs:
