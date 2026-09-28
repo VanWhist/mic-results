@@ -60,7 +60,7 @@ export function diffSpan(c, digits = 2) {
 export const SERIES_LABEL = {
   WC: 'ワールドカップ', WSC: '世界選手権', OWG: 'オリンピック',
   EC: 'ヨーロッパカップ', NAC: 'ノルアムカップ', ANC: 'ANC（豪・NZ）', AC: 'アジアカップ',
-  WJC: 'ジュニア世界選手権', YOG: 'ユースオリンピック', FIS: 'FISレース', NC: 'FIS NC', OPN: 'FISオープン',
+  WJC: 'ジュニア世界選手権', YOG: 'ユースオリンピック', UVS: 'ユニバーシアード', FIS: 'FISレース', NC: 'FIS NC', OPN: 'FISオープン',
   SAJ_AJ: '全日本選手権', SAJ_AJJR: '全日本ジュニア', SAJ_KOKUSPO: '国スポ', SAJ_JOC: 'JOCジュニアオリンピックカップ',
   SAJ_A: 'A級公認大会', SAJ_B: 'B級公認大会', SAJ_SEL: '選考会',
 };

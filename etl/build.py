@@ -32,13 +32,21 @@ def dump_json(path, obj):
 CACHE_DIR = os.path.join(config.HERE, '.build_cache')
 
 
-def _code_fingerprint():
+# アダプタが読み取りに使う他のアダプタ（import しているもの）。指紋にはこれらのファイルも入れる
+ADAPTER_DEPS = {'saj_dm': ('saj_dm', 'saj_aj')}
+
+
+def _code_fingerprint(adapter):
+    """アダプタごとの指紋。共通部分（config・normalize・verify・scoring・規則ファイル）とそのアダプタ（と依存先）のファイル。
+    FIS 海外大会用の fis_pdf を直しても SAJ の大会は読み直さない（2026-09-28 までは全アダプタで 1 つの指紋だった）"""
     h = hashlib.sha256()
     # 読み取り（load_event）に関わるファイルだけ。build.py・layer5_saj.py・tests を直してもキャッシュは使える
     core = [os.path.join(config.HERE, f) for f in ('config.py', 'normalize.py', 'verify.py', 'scoring.py') if os.path.exists(os.path.join(config.HERE, f))]
     # 登録を作り直すスクリプト（gen_registry.py・sync_registry.py）は読み取りに関わらないので除く
-    adapters = [f for f in glob.glob(os.path.join(config.HERE, 'adapters', '**', '*.py'), recursive=True)
+    adapters = [f for d in ADAPTER_DEPS.get(adapter, (adapter,))
+                for f in glob.glob(os.path.join(config.HERE, 'adapters', d, '**', '*.py'), recursive=True)
                 if os.path.basename(f) not in ('gen_registry.py', 'sync_registry.py')]
+    adapters += [os.path.join(config.HERE, 'adapters', '__init__.py')]
     files = sorted(core + adapters + glob.glob(os.path.join(config.RULES_DIR, '**', '*.json'), recursive=True))
     for f in files:
         h.update(os.path.relpath(f, config.HERE).encode('utf-8'))
@@ -169,12 +177,14 @@ def main(argv=None):
                                                f"同じ PDF（SHA-256 {sha[:10]}…）が別の大会 {pdf_owner[sha]} にも登録されている"))
             pdf_owner.setdefault(sha, ev['event_id'])
     loaded = []  # (ev, ctx) を全部読んでから正規化する（SAJ 番号→FIS コードの対応を大会横断で使うため）
-    code_fp = _code_fingerprint()
+    code_fps = {}
     n_cached = 0
     for ev in events:
         mod = importlib.import_module(f"etl.adapters.{ev['adapter']}.adapter")
         try:
-            ctxs, hit = load_event_cached(mod, ev, imported_at, code_fp, use_cache=not args.no_cache)
+            if ev['adapter'] not in code_fps:
+                code_fps[ev['adapter']] = _code_fingerprint(ev['adapter'])
+            ctxs, hit = load_event_cached(mod, ev, imported_at, code_fps[ev['adapter']], use_cache=not args.no_cache)
             n_cached += hit
         except Exception as e:
             findings.append(verify.Finding('error', ev['event_id'], 'layer0', f"アダプタ例外: {e!r}"))

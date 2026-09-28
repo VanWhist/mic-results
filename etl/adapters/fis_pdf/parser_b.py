@@ -13,7 +13,7 @@ import re
 
 import pdfplumber
 
-PARSER_VERSION = "B-1.0"
+PARSER_VERSION = "B-1.3"
 
 STATUS_WORDS = ("DNF", "DNS", "DSQ")
 WEEKDAY = r"(?:MON|TUE|WED|THU|FRI|SAT|SUN)"
@@ -28,60 +28,72 @@ RE_NAME_NOC_YB = re.compile(r"^(?P<name>.+?) ?(?P<noc>[A-Z]{3}) (?P<yb>\d{4})(?:
 RE_NAME_NOC_NOYB = re.compile(
     r"^(?P<name>.+?) ?(?P<noc>[A-Z]{3}) (?P<tail>(?:Q[12] )?(?:DNF|DNS|DSQ|\d+\.\d\d).*)$"
 )
+# 国名コードが途中で切れて印字される行（Calgary 2018「DESMARAIS-GILBERTC AN 1997」）
+RE_NAME_NOC_SPLIT = re.compile(r"^(?P<name>.+?)(?:(?P<a1>[A-Z]) (?P<a2>[A-Z]{2})|(?P<b1>[A-Z]{2}) (?P<b2>[A-Z])) (?P<yb>\d{4})(?: (?P<tail>.*))?$")
 RE_QLABEL = re.compile(r"^Q(?P<q>[12])(?: (?P<tail>.*))?$")
 # second (or later) score block of a Q-layout athlete
 RE_QBLOCK = re.compile(r"^Q(?P<q>[12]) (?P<tail>.+)$")
 # scored tail: seconds timepoints J6 J7 jump DD B: J1..J5 BaseTotal RunScore [extras]
 RE_SCORED = re.compile(
-    r"^(?P<sec>\d+\.\d\d) (?P<tp>\d+\.\d\d) (?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
-    r"(?P<jump>[0-9A-Za-z]+) (?P<dd>\d\.\d\d) B: (?P<rest>.+)$"
+    r"^(?:(?P<runlbl>[A-Z]{1,2}\d?): )?(?P<sec>\d+\.\d\d) (?P<tp>\d+\.\d\d) (?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
+    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>\d\.\d\d\d?) B: (?P<rest>.+)$"
 )
 # D line: [wrapped name tokens] J6 J7 jump DD D: deductions
 RE_DLINE = re.compile(
-    r"^(?:(?P<wrap>[^\d\s][^\d]*?) )?(?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
-    r"(?P<jump>[0-9A-Za-z]+) (?P<dd>\d\.\d\d) D:(?P<rest>.*)$"
+    r"^(?:(?P<wrap>[^\d\s][^\d]*?) )?(?:(?P<runlbl>[A-Z]{1,2}\d?): )?(?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
+    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>\d\.\d\d\d?) D:(?P<rest>.*)$"
 )
 RE_DED = re.compile(r"-\d+\.\d")
+RE_RUNLBL = re.compile(r"^[A-Z]{1,2}\d?:$")  # 行頭の走行ラベル（Q1:・F1:・PH:）
 # 3rd line: time points, air total, turns total
-RE_L3 = re.compile(r"^(?P<tp>\d+\.\d\d) (?P<air>\d+\.\d\d) (?P<turns>\d+\.\d)$")
+RE_L3 = re.compile(r"^(?:(?P<wrap>[^\d\s][^\d]*?) )?(?P<tp>\d+\.\d\d) (?P<air>\d+\.\d\d) (?P<turns>\d+\.\d\d?)$")
+# 名前の折り返しとみなす語（人名に使う文字だけ）。見出し・フッタの語（Forerunners・Moguls Women・www.… など）は除く
+RE_NAME_TOKEN = re.compile(r"^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'\-\.]*$")
+NOT_NAME = {"Forerunners", "Forerunner", "Moguls", "Women", "Men", "Ladies", "Run", "FIS", "Results", "RESULTS",
+            "Conditions", "Course", "Weather", "NOTE", "Legend", "Jury", "Qualification", "Final", "QUALIFICATION", "FINAL"}
 RE_NUM = re.compile(r"^\d+\.\d+$")
 RE_DIVIDER = re.compile(r"^(Qualified to |Not Qualified|Qualified$)")
 RE_DIGIT = re.compile(r"\d")
+# 表頭の「B D J1 J2 J3 Total」からターン審判の人数を数える（W杯は 5 人、世界ジュニア 2022 などは 3 人）
+RE_TURNS_HDR = re.compile(r"\bB D((?: J\d)+) Total\b")
+_n_turns = 5  # parse_moguls_results が PDF ごとに設定する
+_best_col = False  # 表頭に Best Score 列がある（NAC 2022 の「eS B co e r s e t」）
 
 # ---------------------------------------------------------------------------
 # Header / footer / jury regexes
 # ---------------------------------------------------------------------------
 RE_FOOTER_DATE = re.compile(
-    r"^(?P<date>\d{1,2} [A-Z]{3} \d{4}) / (?P<body>.+?) / (?P<codex>\d+)(?: Report [Cc]reated .*)?$"
+    r"^(?:" + WEEKDAY + r" )?(?P<date>\d{1,2} [A-Z]{3} \d{4}) / (?P<body>.+?) / (?P<codex>\d+)(?: Report [Cc]reated .*)?$"
 )
-RE_FOOTER_OTHER = re.compile(r"^(Report [Cc]reated|www\.fis-ski\.com|Timing/Scoring|Page \d+/\d+|FRS[A-Z]+-)")
-RE_JURY_START = re.compile(r"^Jury Technical Data")
-RE_JURY_END = re.compile(r"^(Forerunners:|Conditions on course:|Legend:|Progression|Note:|Turnsscore|Timepoints)")
+RE_FOOTER_OTHER = re.compile(r"^(Report [Cc]reated|www\.fis-ski\.com|Timing/Scoring|Page \d+/\d+|FRS[A-Z]+-|Data processing and timing|FIS Results provided by|#FISfreestyle|C\d+M Page|Data Processing & Timing)")
+RE_JURY_START = re.compile(r"^Jury (?:Technical Data|Course Details|Course Data)")
+RE_JURY_END = re.compile(r"^(Forerunners:|Conditions on [Cc]ourse:?$|Conditions on course:|Legend:|Progression|Note:|NOTE$|Turnsscore|Timepoints)")
 
-RE_STD_DATE = re.compile(r"^(?P<date>" + WEEKDAY + r" \d{1,2} [A-Z]{3} \d{4}) Start Time: (?P<time>\S+)")
+RE_STD_DATE = re.compile(r"^(?:.*?\([A-Z]{3}\) )?(?P<date>" + WEEKDAY + r" \d{1,2} [A-Z]{3} \d{4}) Start Time: (?P<time>\S+)")
 RE_OLY_DATE = re.compile(r"^(?P<date>" + WEEKDAY + r" \d{1,2} [A-Z]{3} \d{4}) (?P<round>.+)$")
 RE_OLY_START = re.compile(r"^Start Time (?P<time>\d{1,2}:\d{2})")
 RE_RESULTS_ROUND = re.compile(r"^Results (?P<round>.+)$")
 RE_AFTER_Q = re.compile(r"^After (?P<round>Qualification \d)$")
 RE_NUM_COMP = re.compile(r"^Number of Competitors: (?P<n>\d+)")
-RE_EVENT = re.compile(r"((?:Men|Women)'s Moguls)")
+RE_EVENT = re.compile(r"((?:Men's|Women's|Ladies') Moguls)")
 RE_VENUE_HDR = re.compile(r"^[A-ZÀ-Ý][A-ZÀ-Ý0-9 .'/\-]+ \([A-Z]{3}\)$")
 RE_HEADER = re.compile(
-    r"^(FIS .*(?:WORLD CUP|World Cup|Championships|CHAMPIONSHIPS)|Results\b|MO$|Number of Competitors|Time Air Turns|Rank Bib|Points$|"
-    r"After Qualification|Start Time |\S+/\S+$|.*Freestyle Skiing$|.*(?:Men|Women)'s Moguls$)"
+    r"^(FIS .*(?:WORLD CUP|World Cup|Championships|CHAMPIONSHIPS)|(?:\d{4} )?FIS FREESTYLE|Results\b|MO$|Number of Competitors|Time Air Turns|Rank Bib|Points$|"
+    r"After Qualification|Start Time |\S+/\S+$|.*Freestyle Skiing$|.*(?:Men's|Women's|Ladies') Moguls$|RESULTS |[A-Z0-9 ]*RESULTS$)"
 )
 
 # technical data suffixes (appear at the end of jury lines)
 RE_TECH = [
-    ("course_name", re.compile(r" ?Course Name (?P<v>.+)$")),
-    ("course_length_m", re.compile(r" ?Length (?P<v>[\d.]+)m$")),
-    ("course_gate_width", re.compile(r" ?Course / Gate Width (?P<v>[\d.]+m / [\d.]+m)$")),
-    ("gradient_deg", re.compile(r" ?Gradient (?P<v>[\d.]+)°$")),
-    ("pace_time", re.compile(r" ?Pace Time (?P<v>[\d.]+)s?$")),
-    ("homologation", re.compile(r" ?Homologation Number (?P<v>\S+)$")),
+    ("course_name", re.compile(r" ?Course Name:? (?P<v>.+)$")),
+    ("course_length_m", re.compile(r" ?Length:? (?P<v>[\d.]+)m$")),
+    ("course_gate_width", re.compile(r" ?Course / Gate Width:? (?P<v>[\d.]+m / [\d.]+m)$")),
+    ("_course_width", re.compile(r" ?Course Width:? (?P<v>[\d.]+)m$")),
+    ("gradient_deg", re.compile(r" ?Gradient:? (?P<v>[\d.]+)°$")),
+    ("pace_time", re.compile(r" ?Pace Time:? (?P<v>[\d.]+)s?$")),
+    ("homologation", re.compile(r" ?Homologation Number:? (?P<v>.+)$")),
     ("_judges_hdr", re.compile(r" ?Judges$")),
 ]
-RE_JUDGE = re.compile(r"(?:^| )Judge (?P<no>\d) \((?P<role>[^)]+)\) (?P<rest>.+)$")
+RE_JUDGE = re.compile(r"(?:^| )Judge (?P<no>\d) \((?P<role>[^)]+)\):? (?P<rest>.+)$")
 RE_UPPER_TOKEN = re.compile(r"[A-ZÀ-Ý][A-ZÀ-Ý'\-]+")
 RE_NOC = re.compile(r"[A-Z]{3}")
 
@@ -140,6 +152,9 @@ def _parse_block_tail(rec, tail, warnings, page, line):
     """
     tail = tail.strip()
     tokens = tail.split()
+    if tokens and RE_RUNLBL.match(tokens[0]):
+        tokens = tokens[1:]
+        tail = " ".join(tokens)
     if tokens and tokens[0] in STATUS_WORDS:
         rec["status"] = tokens[0]
         _apply_extras(rec, tokens[1:], warnings, page, line)
@@ -150,16 +165,18 @@ def _parse_block_tail(rec, tail, warnings, page, line):
         return True
     rec["seconds"] = _f(m.group("sec"))
     rec["time_points"] = _f(m.group("tp"))
-    rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
-                             "jump": m.group("jump"), "DD": _f(m.group("dd"))})
+    if m.group("jump") is not None:  # ジャンプが無い走りは「0.0 0.0 0.000」と記号なし（EC 2017）
+        rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
+                                 "jump": m.group("jump"), "DD": _f(m.group("dd"))})
     rest = m.group("rest").split()
-    if len(rest) < 7:
+    n = _n_turns
+    if len(rest) < n + 2:
         warnings.append((page, "short B: line", line))
         return True
-    rec["base_scores"] = [_f(x) for x in rest[:5]]
-    rec["base_total"] = _f(rest[5])
-    rec["run_score"] = _f(rest[6])
-    _apply_extras(rec, rest[7:], warnings, page, line)
+    rec["base_scores"] = [_f(x) for x in rest[:n]]
+    rec["base_total"] = _f(rest[n])
+    rec["run_score"] = _f(rest[n + 1])
+    _apply_extras(rec, rest[n + 2:], warnings, page, line)
     return True
 
 
@@ -169,11 +186,13 @@ def _apply_extras(rec, extras, warnings, page, line):
     for t in extras:
         if t == "RES":
             rec["reserve_judge"] = True
+        elif t == "Q":
+            rec["qualified_mark"] = True  # 次のラウンドへの通過の印（2017-18 の様式）
         elif RE_NUM.match(t):
             nums.append(float(t))
         else:
             warnings.append((page, "unexpected trailing token %r" % t, line))
-    if rec["q_block"] is not None and rec["counting"] and nums:
+    if (rec["q_block"] is not None and rec["counting"] or _best_col) and nums:
         rec["best_score"] = nums.pop(0)
     if nums:
         rec["tie"] = nums.pop(0)
@@ -182,18 +201,22 @@ def _apply_extras(rec, extras, warnings, page, line):
 
 
 def _parse_dline(rec, m, warnings, page, line):
-    rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
-                             "jump": m.group("jump"), "DD": _f(m.group("dd"))})
+    if m.group("jump") is not None:
+        rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
+                                 "jump": m.group("jump"), "DD": _f(m.group("dd"))})
+    elif any(_f(m.group(k)) for k in ("j6", "j7", "dd")):
+        warnings.append((page, "air line without jump code but non-zero scores", line))
     deds = [float(x) for x in RE_DED.findall(m.group("rest"))]
-    if len(deds) == 6:
-        rec["ded_scores"] = deds[:5]
-        rec["ded_total"] = deds[5]
-    elif len(deds) == 5:
+    n = _n_turns
+    if len(deds) == n + 1:
+        rec["ded_scores"] = deds[:n]
+        rec["ded_total"] = deds[n]
+    elif len(deds) == n:
         rec["ded_scores"] = deds
         # the total column is blank when every deduction is -0.0
         rec["ded_total"] = 0.0
         if any(d != 0.0 for d in deds):
-            warnings.append((page, "5 deductions but not all zero", line))
+            warnings.append((page, "deductions all printed but total blank and not all zero", line))
     else:
         warnings.append((page, "unexpected deduction count %d" % len(deds), line))
         rec["ded_scores"] = deds
@@ -361,7 +384,13 @@ def parse_moguls_results(path):
         cur = None
         expect = "L1"
 
+    global _n_turns, _best_col
     with pdfplumber.open(path) as pdf:
+        first = pdf.pages[0].extract_text() or ""
+        mh = RE_TURNS_HDR.search(first)
+        _n_turns = len(mh.group(1).split()) if mh else 5
+        _best_col = bool(re.search(r"\bB co e r s e t\b", first))
+        meta["n_turns_judges"] = _n_turns
         for pno, page in enumerate(pdf.pages, 1):
             text = page.extract_text() or ""
             lines = [l.rstrip() for l in text.split("\n") if l.strip()]
@@ -374,6 +403,8 @@ def parse_moguls_results(path):
                     continue
                 if _is_header_line(l):
                     _parse_header_line(l, meta)
+                    if in_jury and (l.startswith("Number of Competitors") or l.startswith("Rank Bib")):
+                        in_jury = False
                     continue
                 if RE_JURY_START.match(l):
                     close_block(pno)
@@ -398,10 +429,19 @@ def parse_moguls_results(path):
                     rest = m.group("rest")
                     m2 = RE_NAME_NOC_YB.match(rest)
                     yb = None
+                    noc = None
                     if m2:
                         yb = int(m2.group("yb"))
+                        noc = m2.group("noc")
                     else:
                         m2 = RE_NAME_NOC_NOYB.match(rest)
+                        if m2:
+                            noc = m2.group("noc")
+                        else:
+                            m2 = RE_NAME_NOC_SPLIT.match(rest)
+                            if m2:
+                                yb = int(m2.group("yb"))
+                                noc = (m2.group("a1") or m2.group("b1")) + (m2.group("a2") or m2.group("b2"))
                     if not m2:
                         meta["unparsed_lines"].append((pno, l))
                         continue
@@ -410,7 +450,7 @@ def parse_moguls_results(path):
                         "bib": int(m.group("bib")),
                         "fis_code": m.group("code"),
                         "name": m2.group("name").strip(),
-                        "noc": m2.group("noc"),
+                        "noc": noc,
                         "yb": yb,
                     }
                     athlete_recs = []
@@ -452,8 +492,13 @@ def parse_moguls_results(path):
                     if cur is None or expect != "D":
                         meta["unparsed_lines"].append((pno, l))
                         continue
-                    if m.group("wrap"):
-                        _append_name(athlete, athlete_recs, m.group("wrap"))
+                    wrap = m.group("wrap")
+                    if wrap:
+                        # 折り返した名前の後ろに走行ラベル（PH: など）が付く / ラベルだけの行がある（NAC 2022）
+                        wt = [x for x in wrap.split() if not RE_RUNLBL.match(x)]
+                        wrap = " ".join(wt)
+                    if wrap:
+                        _append_name(athlete, athlete_recs, wrap)
                     _parse_dline(cur, m, warnings, pno, l)
                     expect, last_kind = "L3", "D"
                     continue
@@ -464,13 +509,19 @@ def parse_moguls_results(path):
                     if cur is None or expect != "L3":
                         meta["unparsed_lines"].append((pno, l))
                         continue
+                    if m.group("wrap"):  # 3 行目の頭に折り返した名前（世界ジュニア 2017「Kenneth 9.25 11.03 40.10」）
+                        _append_name(athlete, athlete_recs, m.group("wrap").strip())
                     _parse_l3(cur, m, warnings, pno, l)
                     cur, expect, last_kind = None, "L1", "L3"
                     continue
 
-                # --- wrapped name fragment after a status row -----------
-                if athlete is not None and last_kind == "status" and not RE_DIGIT.search(l):
-                    _append_name(athlete, athlete_recs, l.strip())
+                # --- wrapped name fragment after a status row / 3 行目に折り返した名前（D 行と 3 行目の間）
+                if athlete is not None and (last_kind == "status" or expect == "L3") and not RE_DIGIT.search(l):
+                    toks = [x for x in l.split() if not RE_RUNLBL.match(x)]
+                    if toks and len(toks) <= 3 and all(RE_NAME_TOKEN.match(x) and x not in NOT_NAME for x in toks):
+                        _append_name(athlete, athlete_recs, " ".join(toks))
+                        continue
+                    meta["unparsed_lines"].append((pno, l))
                     continue
 
                 meta["unparsed_lines"].append((pno, l))

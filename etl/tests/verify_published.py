@@ -242,7 +242,8 @@ def check_pdf_round(rnd_runs, fis_style):
                 continue
             a = anchors[r['run_id']]
             nxt = [s for s in starts if s > a]
-            span = 7 if r.get('q_block') else 4  # Q2 の PDF は Q2・Q1 の 2 ブロック（各 3 行）
+            # Q2 の PDF は Q2・Q1 の 2 ブロック（各 3 行）。名前が 3 行に折り返すと 1 行増える（EC 2017 RYKKE ALMENNINGEN）
+            span = 7 if r.get('q_block') else 5
             end = min(nxt[0] if nxt else len(rows), a + span)
             band = num_tokens(rows[a:end])
             if not nxt and not fis_style:
@@ -369,11 +370,14 @@ def load_exceptions():
     for fn in glob.glob(os.path.join(REPO, 'etl', 'registry', '*.json')):
         for ev in json.load(open(fn, encoding='utf-8')).get('events', []):
             for x in ev.get('recompute_exceptions') or []:
-                out[(ev['event_id'], x.get('bib'), x.get('item'))] = x.get('basis')
+                # SAJ の registry は item（'Time Points' など）、FIS 海外大会（fis_overseas.json）は field（'time_points' など）で書く
+                item = x.get('item') or FIELD_ITEM.get(x.get('field'))
+                out[(ev['event_id'], x.get('bib'), item)] = x.get('basis')
     return out
 
 
 EXC_ITEM = {'id_air': 'Air Total', 'id_turns': 'Turns Total', 'id_time': 'Time Points', 'id_score': 'Score'}
+FIELD_ITEM = {'air_total': 'Air Total', 'turns_total': 'Turns Total', 'time_points': 'Time Points', 'run_score': 'Score'}
 
 
 # ---- C. moguls-results との照合 --------------------------------------------------
@@ -429,6 +433,10 @@ def main():
             issues += check_upstream(rr, up)
             issues += check_pdf_round(rr, fis_style=True)
             checked['C+A(fis)'] += len(rr)
+        elif src.startswith('A-'):
+            # FIS 海外大会（fis_pdf アダプタのパーサ A）: FIS 様式なので FIS コードで選手の行を探す
+            issues += check_pdf_round(rr, fis_style=True)
+            checked['A(fis)'] += len(rr)
         elif rnd['tier'] == 'rank':
             issues += check_rank_only(rr)
             checked['D'] += len(rr)

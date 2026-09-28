@@ -1,0 +1,2256 @@
+[
+ {
+  "season_code": 2026,
+  "event_id": "57882",
+  "date": "26-27 Aug 2025",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57882&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58253",
+  "date": "16-23 Mar 2026",
+  "place": "Airolo",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xAE 2xDM AET DMT",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58253&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58326",
+  "date": "02-03 Feb 2026",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58326&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58327",
+  "date": "24-25 Jan 2026",
+  "place": "Megève",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58327&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58328",
+  "date": "28-29 Jan 2026",
+  "place": "Tignes",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58328&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58330",
+  "date": "28 Feb- 01 Mar 2026",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58330&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "58331",
+  "date": "06-07 Mar 2026",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58331&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "59414",
+  "date": "07-08 Mar 2026",
+  "place": "Stratton Mountain",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59414&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "59474",
+  "date": "27-28 Feb 2026",
+  "place": "Val St-Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59474&seasoncode=2026"
+ },
+ {
+  "season_code": 2026,
+  "event_id": "59475",
+  "date": "31 Jan- 01 Feb 2026",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59475&seasoncode=2026"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "55777",
+  "date": "26-28 Aug 2024",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55777&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "56250",
+  "date": "07-11 Jan 2025",
+  "place": "Almaty",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xDM 2xAE AET DMT",
+  "nsa": "KAZ",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=56250&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57151",
+  "date": "13-23 Jan 2025",
+  "place": "Torino - Bardonecchia",
+  "categories": [
+   "UVS"
+  ],
+  "disciplines": "2xMO 2xDM 2xSS 2xBA 2xSX",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57151&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57157",
+  "date": "25-26 Jan 2025",
+  "place": "Duved",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57157&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57158",
+  "date": "01-02 Feb 2025",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57158&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57160",
+  "date": "22-23 Feb 2025",
+  "place": "Montafon/Golm",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57160&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57161",
+  "date": "06-07 Mar 2025",
+  "place": "Bila",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CZE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57161&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57199",
+  "date": "12-13 Feb 2025",
+  "place": "Deer Valley Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57199&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57200",
+  "date": "01-02 Mar 2025",
+  "place": "Stratton Mountain Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57200&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57279",
+  "date": "22-23 Feb 2025",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57279&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57281",
+  "date": "07-08 Mar 2025",
+  "place": "Val St Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57281&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57601",
+  "date": "13-14 Feb 2025",
+  "place": "O2 Resort",
+  "categories": [
+   "AC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "KOR",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57601&seasoncode=2025"
+ },
+ {
+  "season_code": 2025,
+  "event_id": "57729",
+  "date": "07-08 Feb 2025",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57729&seasoncode=2025"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53626",
+  "date": "29-30 Aug 2023",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53626&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53794",
+  "date": "31 Mar- 07 Apr 2024",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xAE 2xDM AET DMT",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53794&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53797",
+  "date": "03-04 Feb 2024",
+  "place": "Duved",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53797&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53798",
+  "date": "10-11 Feb 2024",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53798&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53799",
+  "date": "15-16 Feb 2024",
+  "place": "Levi",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53799&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53801",
+  "date": "04-05 Mar 2024",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53801&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53802",
+  "date": "09-10 Mar 2024",
+  "place": "Mègève",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53802&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53933",
+  "date": "07-08 Feb 2024",
+  "place": "Deer Valley Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53933&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "53934",
+  "date": "01-02 Mar 2024",
+  "place": "Stratton Mountain Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53934&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "55146",
+  "date": "17-18 Feb 2024",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55146&seasoncode=2024"
+ },
+ {
+  "season_code": 2024,
+  "event_id": "55149",
+  "date": "24-25 Feb 2024",
+  "place": "Val St Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55149&seasoncode=2024"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51388",
+  "date": "30-31 Aug 2022",
+  "place": "Perisher Valley",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51388&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51964",
+  "date": "21-22 Jan 2023",
+  "place": "Duved",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51964&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51965",
+  "date": "27-28 Jan 2023",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51965&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51966",
+  "date": "03-04 Feb 2023",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51966&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51970",
+  "date": "08-09 Mar 2023",
+  "place": "Engadin",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51970&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "51971",
+  "date": "13-14 Mar 2023",
+  "place": "Alpe d'Huez",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51971&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "52737",
+  "date": "08-09 Feb 2023",
+  "place": "Deer Valley Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52737&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "52739",
+  "date": "09-10 Mar 2023",
+  "place": "Stratton",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52739&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "52866",
+  "date": "19-22 Jan 2023",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52866&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "52869",
+  "date": "01-04 Mar 2023",
+  "place": "Val St-Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52869&seasoncode=2023"
+ },
+ {
+  "season_code": 2023,
+  "event_id": "53325",
+  "date": "21-25 Mar 2023",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xDM DMT",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53325&seasoncode=2023"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49445",
+  "date": "28-29 Jan 2022",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49445&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49446",
+  "date": "22-23 Jan 2022",
+  "place": "Are-Duved",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49446&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49447",
+  "date": "02-03 Feb 2022",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49447&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49452",
+  "date": "26-27 Feb 2022",
+  "place": "Krispl",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49452&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49454",
+  "date": "05-06 Mar 2022",
+  "place": "Bad Wiessee",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "GER",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49454&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49455",
+  "date": "18-21 Mar 2022",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xAE 2xMO 2xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49455&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "49463",
+  "date": "25 Mar- 03 Apr 2022",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xAE 2xDM AET SXT DMT",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49463&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "50744",
+  "date": "18-21 Jan 2022",
+  "place": "Deer Valley Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50744&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "50746",
+  "date": "10-11 Feb 2022",
+  "place": "Killington Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50746&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "50754",
+  "date": "16-17 Mar 2022",
+  "place": "Livigno",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50754&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "50864",
+  "date": "29-30 Jan 2022",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50864&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "50865",
+  "date": "05-06 Feb 2022",
+  "place": "Val St-Come, QC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50865&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "51063",
+  "date": "06-07 Feb 2022",
+  "place": "Agnäs",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51063&seasoncode=2022"
+ },
+ {
+  "season_code": 2022,
+  "event_id": "51079",
+  "date": "12-13 Mar 2022",
+  "place": "Krispl",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51079&seasoncode=2022"
+ },
+ {
+  "season_code": 2021,
+  "event_id": "47283",
+  "date": "28 Feb- 03 Mar 2021",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO 4xAE",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=47283&seasoncode=2021"
+ },
+ {
+  "season_code": 2021,
+  "event_id": "47707",
+  "date": "30-31 Jan 2021",
+  "place": "Are-Duved",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=47707&seasoncode=2021"
+ },
+ {
+  "season_code": 2021,
+  "event_id": "47708",
+  "date": "05-09 Feb 2021",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "8xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=47708&seasoncode=2021"
+ },
+ {
+  "season_code": 2021,
+  "event_id": "47711",
+  "date": "13-14 Feb 2021",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=47711&seasoncode=2021"
+ },
+ {
+  "season_code": 2021,
+  "event_id": "48417",
+  "date": "15-28 Mar 2021",
+  "place": "Krasnoyarsk",
+  "categories": [
+   "WJC",
+   "QUA"
+  ],
+  "disciplines": "2xAE 4xHP 4xSS 2xMO 2xDM 4xBA 2xSX AET SXT",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48417&seasoncode=2021"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "44947",
+  "date": "27-28 Aug 2019",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44947&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45268",
+  "date": "13-19 Jan 2020",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xDM 4xMO",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45268&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45271",
+  "date": "02-03 Feb 2020",
+  "place": "Tignes",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45271&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45273",
+  "date": "08-09 Feb 2020",
+  "place": "Are",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45273&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45274",
+  "date": "14-15 Feb 2020",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45274&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45275",
+  "date": "19-20 Feb 2020",
+  "place": "Krasnoe Ozero",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45275&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "45276",
+  "date": "25-26 Feb 2020",
+  "place": "Taivalkoski",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=45276&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "46444",
+  "date": "09-13 Feb 2020",
+  "place": "Deer Valley Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46444&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "46571",
+  "date": "29 Feb- 01 Mar 2020",
+  "place": "Val St-Come, QC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46571&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "46574",
+  "date": "22-23 Feb 2020",
+  "place": "Calgary, AB",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46574&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "46589",
+  "date": "07-08 Mar 2020",
+  "place": "Killington Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46589&seasoncode=2020"
+ },
+ {
+  "season_code": 2020,
+  "event_id": "46756",
+  "date": "25-26 Jan 2020",
+  "place": "Font Romeu",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46756&seasoncode=2020"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43093",
+  "date": "28-29 Aug 2018",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43093&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43254",
+  "date": "05-06 Feb 2019",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43254&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43257",
+  "date": "01-02 Feb 2019",
+  "place": "Taivalvaara",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43257&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43258",
+  "date": "09-10 Feb 2019",
+  "place": "Bygdsiljum",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43258&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43266",
+  "date": "17-19 Mar 2019",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 4xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43266&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "43482",
+  "date": "21-24 Feb 2019",
+  "place": "Steamboat Ski and Resort / Mount Werner",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43482&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44492",
+  "date": "03-11 Mar 2019",
+  "place": "Krasnoyarsk",
+  "categories": [
+   "UVS"
+  ],
+  "disciplines": "2xAE 2xSS 2xMO 2xDM 2xSX AET",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44492&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44507",
+  "date": "01-06 Apr 2019",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xAE 2xMO 2xDM",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44507&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44564",
+  "date": "09-10 Feb 2019",
+  "place": "Val St-Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44564&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44567",
+  "date": "02-03 Mar 2019",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44567&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44571",
+  "date": "02-03 Feb 2019",
+  "place": "Stratton Mountain, VT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44571&seasoncode=2019"
+ },
+ {
+  "season_code": 2019,
+  "event_id": "44720",
+  "date": "12-13 Mar 2019",
+  "place": "Tignes",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44720&seasoncode=2019"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41189",
+  "date": "29-30 Aug 2017",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41189&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41276",
+  "date": "14-15 Apr 2018",
+  "place": "Duved",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41276&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41281",
+  "date": "17-20 Jan 2018",
+  "place": "Megeve",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41281&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41285",
+  "date": "31 Jan- 01 Feb 2018",
+  "place": "Krasnoe Ozero",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41285&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41287",
+  "date": "04-05 Feb 2018",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41287&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41289",
+  "date": "10-11 Feb 2018",
+  "place": "Are",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41289&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "41295",
+  "date": "15-19 Mar 2018",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM 2xAE 4xAETQ AET",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41295&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42530",
+  "date": "27-28 Jan 2018",
+  "place": "Val St-Come, QC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42530&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42533",
+  "date": "24-25 Feb 2018",
+  "place": "Calgary, AB",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42533&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42567",
+  "date": "27 Feb- 04 Mar 2018",
+  "place": "Park City, UT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42567&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42622",
+  "date": "03-04 Feb 2018",
+  "place": "Killington Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42622&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42690",
+  "date": "03-04 Mar 2018",
+  "place": "Krispl",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42690&seasoncode=2018"
+ },
+ {
+  "season_code": 2018,
+  "event_id": "42697",
+  "date": "09-10 Mar 2018",
+  "place": "Boedele",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42697&seasoncode=2018"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39074",
+  "date": "30-31 Aug 2016",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39074&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39384",
+  "date": "28-29 Jan 2017",
+  "place": "Albiez",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39384&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39390",
+  "date": "15-18 Feb 2017",
+  "place": "Prato Leventino",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xDM 2xMO",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39390&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39396",
+  "date": "11-12 Mar 2017",
+  "place": "Kungsberget",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39396&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39466",
+  "date": "19-20 Mar 2017",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39466&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "39476",
+  "date": "03-07 Apr 2017",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xAE 2xMO 2xDM 2xSS 2xSX",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39476&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40095",
+  "date": "30 Jan- 08 Feb 2017",
+  "place": "Almaty",
+  "categories": [
+   "UVS"
+  ],
+  "disciplines": "2xAE 2xMO 2xDM 2xSX AET",
+  "nsa": "KAZ",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40095&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40146",
+  "date": "18-19 Feb 2017",
+  "place": "Val St-Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40146&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40628",
+  "date": "22-26 Feb 2017",
+  "place": "Northstar California Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40628&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40634",
+  "date": "11-12 Feb 2017",
+  "place": "Killington Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40634&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40702",
+  "date": "11-12 Feb 2017",
+  "place": "Gaissau",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40702&seasoncode=2017"
+ },
+ {
+  "season_code": 2017,
+  "event_id": "40766",
+  "date": "04-05 Mar 2017",
+  "place": "Apex Mountain",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40766&seasoncode=2017"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37333",
+  "date": "01-02 Sep 2015",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37333&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37634",
+  "date": "23-24 Jan 2016",
+  "place": "Albiez",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37634&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37638",
+  "date": "28-29 Jan 2016",
+  "place": "Albiez",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37638&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37640",
+  "date": "04-05 Feb 2016",
+  "place": "Chiesa in Valmalenco (ITA)",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37640&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37641",
+  "date": "12-13 Feb 2016",
+  "place": "St. Gallenkirch",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37641&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37644",
+  "date": "02-03 Mar 2016",
+  "place": "Krasnoe Ozero",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37644&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37646",
+  "date": "05-08 Mar 2016",
+  "place": "Jyvaskyla",
+  "categories": [
+   "EC",
+   "FIS"
+  ],
+  "disciplines": "8xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37646&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37648",
+  "date": "12-13 Mar 2016",
+  "place": "Duved/Are",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37648&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37716",
+  "date": "03-06 Mar 2016",
+  "place": "Killington, VT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37716&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37880",
+  "date": "13-14 Feb 2016",
+  "place": "Calgary",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37880&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37882",
+  "date": "25-28 Feb 2016",
+  "place": "Val St. Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "4xAE 2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37882&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "37885",
+  "date": "20-21 Feb 2016",
+  "place": "Park City Mountain Resort, UT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37885&seasoncode=2016"
+ },
+ {
+  "season_code": 2016,
+  "event_id": "38890",
+  "date": "09-10 Apr 2016",
+  "place": "Are",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=38890&seasoncode=2016"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "34941",
+  "date": "19-20 Aug 2014",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=34941&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "35103",
+  "date": "05-14 Feb 2015",
+  "place": "Sierra Nevada",
+  "categories": [
+   "UVS",
+   "QUA"
+  ],
+  "disciplines": "2xMO 2xSS 4xHP 2xSX",
+  "nsa": "ESP",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=35103&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "35278",
+  "date": "15-16 Jan 2015",
+  "place": "Deer Valley, UT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=35278&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36668",
+  "date": "15-16 Mar 2015",
+  "place": "Are",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36668&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36688",
+  "date": "24-25 Jan 2015",
+  "place": "Apex Mountain, BC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36688&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36690",
+  "date": "20-23 Feb 2015",
+  "place": "Val St. Come, QC",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "4xAE 2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36690&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36855",
+  "date": "28 Feb- 01 Mar 2015",
+  "place": "Killington, VT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36855&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36871",
+  "date": "24-25 Jan 2015",
+  "place": "Krispl",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUT",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36871&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "36922",
+  "date": "10-11 Mar 2015",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36922&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "37040",
+  "date": "28-30 Jan 2015",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "6xMO",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37040&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "37049",
+  "date": "22 Mar- 02 Apr 2015",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xAE 2xMO 2xDM 2xSS 2xHP 2xSX",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37049&seasoncode=2015"
+ },
+ {
+  "season_code": 2015,
+  "event_id": "37069",
+  "date": "03-04 Feb 2015",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=37069&seasoncode=2015"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33273",
+  "date": "16-17 Aug 2013",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33273&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33500",
+  "date": "29 Jan- 02 Feb 2014",
+  "place": "Stratton Mountain, VT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33500&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33502",
+  "date": "22-23 Feb 2014",
+  "place": "Vail, CO",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33502&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33562",
+  "date": "15-16 Feb 2014",
+  "place": "Apex Mountain Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33562&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33563",
+  "date": "07-10 Feb 2014",
+  "place": "Val St. Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM 4xAE",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33563&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "33926",
+  "date": "19-20 Mar 2014",
+  "place": "Kungsberget",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "SWE",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33926&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "34063",
+  "date": "31 Jan- 02 Feb 2014",
+  "place": "Prato Leventina",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO 2xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=34063&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "34318",
+  "date": "23 Mar- 06 Apr 2014",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xAE 2xMO 2xDM 2xHP 2xSX 2xSS",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=34318&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "34570",
+  "date": "06-08 Feb 2014",
+  "place": "Megeve",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=34570&seasoncode=2014"
+ },
+ {
+  "season_code": 2014,
+  "event_id": "34669",
+  "date": "12-13 Mar 2014",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=34669&seasoncode=2014"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "31770",
+  "date": "16-17 Aug 2012",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31770&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "31831",
+  "date": "26-31 Mar 2013",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xAE 2xHP 2xMO 2xSX 2xSS 2xDM",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31831&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "31929",
+  "date": "09-10 Feb 2013",
+  "place": "Telluride, CO",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31929&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "31931",
+  "date": "01-02 Mar 2013",
+  "place": "Stratton Mountain, VT",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31931&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32007",
+  "date": "16-17 Feb 2013",
+  "place": "Apex Resort",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32007&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32008",
+  "date": "21-24 Feb 2013",
+  "place": "Val St. Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "4xAE 2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32008&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32054",
+  "date": "02-03 Feb 2013",
+  "place": "Oberjoch",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "GER",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32054&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32821",
+  "date": "25-30 Jan 2013",
+  "place": "Airolo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 4xDM",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32821&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32971",
+  "date": "11-13 Feb 2013",
+  "place": "La Rosiere",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32971&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32972",
+  "date": "13-16 Mar 2013",
+  "place": "Font Romeu",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 4xDM",
+  "nsa": "FRA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32972&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "32983",
+  "date": "20-22 Feb 2013",
+  "place": "Krvavec",
+  "categories": [
+   "EC",
+   "NC"
+  ],
+  "disciplines": "6xMO",
+  "nsa": "SLO",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=32983&seasoncode=2013"
+ },
+ {
+  "season_code": 2013,
+  "event_id": "33145",
+  "date": "16-17 Feb 2013",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=33145&seasoncode=2013"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "29975",
+  "date": "27 Aug 2011",
+  "place": "Mt Buller",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "2xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=29975&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "29979",
+  "date": "19-20 Aug 2011",
+  "place": "Perisher",
+  "categories": [
+   "ANC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "AUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=29979&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "30284",
+  "date": "08-09 Feb 2012",
+  "place": "Telluride, CO",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=30284&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "30286",
+  "date": "24-26 Feb 2012",
+  "place": "Killington",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xHP 4xMO",
+  "nsa": "USA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=30286&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "30539",
+  "date": "04-05 Feb 2012",
+  "place": "Prato Leventina",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xDM 2xMO",
+  "nsa": "SUI",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=30539&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "30543",
+  "date": "20-25 Mar 2012",
+  "place": "Chiesa in Valmalenco",
+  "categories": [
+   "WJC"
+  ],
+  "disciplines": "2xSX 2xMO 2xSS 2xAE 2xHP 2xDM",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=30543&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31275",
+  "date": "16-17 Dec 2011",
+  "place": "Valmalenco",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31275&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31276",
+  "date": "09-10 Feb 2012",
+  "place": "Piancavallo",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "ITA",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31276&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31277",
+  "date": "04-06 Mar 2012",
+  "place": "Sochi",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "2xAE 2xMO 2xSX",
+  "nsa": "RUS",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31277&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31326",
+  "date": "18-19 Feb 2012",
+  "place": "Sudelfeld",
+  "categories": [
+   "EC"
+  ],
+  "disciplines": "4xMO",
+  "nsa": "GER",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31326&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31365",
+  "date": "24-26 Feb 2012",
+  "place": "Jyväskylä",
+  "categories": [
+   "EC",
+   "FIS"
+  ],
+  "disciplines": "8xMO",
+  "nsa": "FIN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31365&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31382",
+  "date": "13-14 Feb 2012",
+  "place": "Apex",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31382&seasoncode=2012"
+ },
+ {
+  "season_code": 2012,
+  "event_id": "31383",
+  "date": "18-19 Feb 2012",
+  "place": "Val St. Come",
+  "categories": [
+   "NAC"
+  ],
+  "disciplines": "2xMO 2xDM",
+  "nsa": "CAN",
+  "genders": "WM",
+  "url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=31383&seasoncode=2012"
+ }
+]

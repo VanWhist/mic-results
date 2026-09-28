@@ -11,13 +11,73 @@ COLS = {
     'turns_total_col': (486, 500), 'block_score': (500, 522), 'run_score': (526, 548), 'tie': (548, 585),
     'q_label': (198, 216),
 }
-PARSER_VERSION = 'A-2.3'
+PARSER_VERSION = 'A-2.4'
 STATUS_WORDS = {'DNF', 'DNS', 'DSQ', 'DQ'}
 
 
+_page_cols = None  # ページの表頭から決めた列の範囲（_page_layout）。無ければ COLS
+
+
 def band(words, name):
-    lo, hi = COLS[name]
+    lo, hi = (_page_cols or COLS)[name]
     return [w for w in words if lo <= w['x0'] < hi]
+
+
+def _page_layout(words):
+    """表頭（Rank の行の上下 14pt）の語の位置から、審判・得点の列の範囲を決める。
+    W杯の PDF は COLS の固定位置で読めるが、世界ジュニア・NAC・ANC・ユニバーシアードは主催者の様式で
+    ターン審判の人数（3/5）・列の間隔・Run Score の位置が違う（NAC 2022 は審判の間隔が広く Best Score 列がある、
+    ANC 2026 は Run Score が x≈509）。データは表頭の語より数 pt 左に始まるので、範囲は表頭の x0 から少し左にとる。
+    戻り値: (列の範囲, 表頭の下端 top)。表頭が見つからなければ (None, None)"""
+    ranks = [w for w in words if w['text'] == 'Rank']
+    if not ranks:
+        return None, None
+    rt = ranks[0]['top']
+    hdr = sorted([w for w in words if abs(w['top'] - rt) < 14], key=lambda w: w['x0'])
+    hdr_bottom = max(w['bottom'] for w in hdr)
+
+    def first(text, after=0):
+        return next((w['x0'] for w in hdr if w['text'] == text and w['x0'] > after), None)
+    b_x = first('B', 370)
+    name_x = first('Name')
+    jump_x, dd_x = first('Jump', 200), first('DD', 200)
+    js = [w for w in hdr if re.fullmatch(r'J\d', w['text'])]
+    if b_x is None or jump_x is None or dd_x is None or not js:
+        return None, hdr_bottom
+    air = [w['x0'] for w in js if w['x0'] < jump_x]
+    turns = [w['x0'] for w in js if w['x0'] > b_x]
+    air_tot_x = first('Total', dd_x)
+    turns_tot_x = first('Total', turns[-1]) if turns else None
+    sc = next((w['x0'] for w in hdr if w['text'] in ('Sc', 'Score') and turns_tot_x and w['x0'] > turns_tot_x), None)
+    if len(air) != 2 or not turns or None in (air_tot_x, turns_tot_x, sc):
+        return None, hdr_bottom
+    cols = dict(COLS)
+    if name_x:
+        # 姓の x0 が表頭「Name」より 2pt 左に出る様式がある（EC 2017 Prato Leventina は 93.9）
+        cols['fis_code'] = (COLS['fis_code'][0], name_x - 4)
+        cols['name'] = (name_x - 4, COLS['name'][1])
+    # タイム点の数値が表頭より左に出る様式がある（NAC 2022 は x0=256.9）
+    cols['seconds'] = (COLS['seconds'][0], 254)
+    cols['time_points'] = (254, air[0] - 10)
+    cols['J6'] = (air[0] - 10, air[1] - 10)
+    cols['J7'] = (air[1] - 10, jump_x - 4)
+    cols['jump'] = (jump_x - 4, dd_x - 12)
+    cols['DD'] = (dd_x - 12, air_tot_x - 6)
+    cols['air_total'] = (air_tot_x - 6, b_x - 4)
+    cols['bd_label'] = (b_x - 4, turns[0] - 10)
+    names = ['J1', 'J2', 'J3', 'J4', 'J5']
+    for i, x in enumerate(turns):
+        cols[names[i]] = (x - 10, (turns[i + 1] if i + 1 < len(turns) else turns_tot_x + 4) - 10)
+    for n in names[len(turns):]:
+        cols[n] = (-1, -1)  # この様式には無い審判の列
+    cols['turns_total_col'] = (turns_tot_x - 6, sc - 4)
+    # Run Score の列は幅 21pt（W杯 COLS と同じ）。NAC 2022 の Best Score（その右）は拾わない
+    cols['run_score'] = (sc - 4, sc + 17)
+    # Best Score 列（NAC 2022: 表頭の縦書き「Best Score」の B が Run Score の右、top が表頭より 3pt 上）
+    best_x = next((w['x0'] for w in hdr if w['text'] == 'B' and w['x0'] > sc + 10), None)
+    tie_x = first('Tie', sc)
+    cols['best_col'] = (sc + 17, (tie_x or sc + 45) - 4) if best_x else (-1, -1)
+    return cols, hdr_bottom
 
 
 def _extract_meta(first_page_words, first_page_text, jury_page_words, jury_page_text=None):
@@ -139,6 +199,7 @@ def _extract_meta(first_page_words, first_page_text, jury_page_words, jury_page_
 # ---------------------------------------------------------------------------
 
 NUM_RE = re.compile(r'-?\d+(?:\.\d+)?')
+LINE_TOL = 3.0  # B:/D: の印字と同じ行の数値の top の差の許容
 
 
 def _is_num(t):
@@ -154,8 +215,9 @@ def _first_text(words, name, top, tol=2.0):
 def _turns_scores(row_words, top_target):
     """J1..J5 raw texts on the line at top_target, splitting glued pairs like '-10.2-12.3'."""
     raw = []
-    for name in ('J1', 'J2', 'J3', 'J4', 'J5'):
-        ws = [w for w in band(row_words, name) if top_target is not None and abs(w['top'] - top_target) < 2]
+    names = [n for n in ('J1', 'J2', 'J3', 'J4', 'J5') if (_page_cols or COLS)[n][1] > 0]
+    for name in names:
+        ws = [w for w in band(row_words, name) if top_target is not None and abs(w['top'] - top_target) < LINE_TOL]
         raw.append(ws[0]['text'] if ws else None)
     for i, txt in enumerate(raw):
         if txt is None:
@@ -173,7 +235,7 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
     fields (all None when the block is a DNF/DNS/DSQ block)."""
     blk_words = [w for w in row_words if line1_top - 3 <= w['top'] < band_bot]
     status_w = [w['text'] for w in blk_words if w['text'] in STATUS_WORDS
-                and abs(w['top'] - line1_top) < 2 and w['x0'] >= COLS['seconds'][0]]
+                and abs(w['top'] - line1_top) < 2 and w['x0'] >= (_page_cols or COLS)['seconds'][0]]
     out = {'seconds': None, 'time_points': None, 'air_jumps': [], 'air_total': None,
            'base_scores': [], 'base_total': None, 'ded_scores': [], 'ded_total': None,
            'turns_total': None, 'run_score': None, 'status': 'OK'}
@@ -187,9 +249,16 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
 
     # air lines: every distinct top in the J6 band within this block
     air_tops = sorted(set(round(w['top'], 1) for w in band(blk_words, 'J6')))
+    cols = _page_cols or COLS
     for t in air_tops:
         j6, j7 = _first_text(blk_words, 'J6', t), _first_text(blk_words, 'J7', t)
-        jp, dd = _first_text(blk_words, 'jump', t), _first_text(blk_words, 'DD', t)
+        # ジャンプ記号と DD は J7 の右からエア合計の左までの語を左から順に読む（記号の幅で位置が揺れ、
+        # NAC 2023 の「3」は x0=330 で DD の範囲に入る）。最後の小数（2〜3 桁）が DD、その前が記号
+        mid = sorted([w for w in blk_words if abs(w['top'] - t) < 2 and cols['J7'][1] <= w['x0'] < cols['air_total'][0]],
+                     key=lambda w: w['x0'])
+        dd_i = max((i for i, w in enumerate(mid) if re.fullmatch(r'\d\.\d{2,3}', w['text'])), default=None)
+        jp = mid[dd_i - 1]['text'] if dd_i else None
+        dd = mid[dd_i]['text'] if dd_i is not None else None
         if None not in (j6, j7, jp, dd) and _is_num(j6) and _is_num(j7) and _is_num(dd):
             out['air_jumps'].append({'J6': float(j6), 'J7': float(j7), 'jump': jp, 'DD': float(dd)})
     at = [w for w in band(blk_words, 'air_total') if _is_num(w['text'])]
@@ -202,16 +271,18 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
     out['ded_scores'] = _turns_scores(blk_words, d_top)
 
     tot_col = [w for w in band(blk_words, 'turns_total_col') if _is_num(w['text'])]
-    bt = [w for w in tot_col if b_top is not None and abs(w['top'] - b_top) < 2]
-    dt = [w for w in tot_col if d_top is not None and abs(w['top'] - d_top) < 2]
-    tt = [w for w in tot_col if (b_top is None or abs(w['top'] - b_top) >= 2)
-          and (d_top is None or abs(w['top'] - d_top) >= 2)]
+    bt = [w for w in tot_col if b_top is not None and abs(w['top'] - b_top) < LINE_TOL]
+    dt = [w for w in tot_col if d_top is not None and abs(w['top'] - d_top) < LINE_TOL]
+    tt = [w for w in tot_col if (b_top is None or abs(w['top'] - b_top) >= LINE_TOL)
+          and (d_top is None or abs(w['top'] - d_top) >= LINE_TOL)]
     out['base_total'] = float(bt[0]['text']) if bt else None
     out['ded_total'] = float(dt[0]['text']) if dt else None
     out['turns_total'] = float(tt[0]['text']) if tt else None
     # The PDF leaves Deduction Total blank when every deduction is -0.0 (Almaty 2023 M F2).
-    if out['ded_total'] is None and len(out['ded_scores']) == 5 and \
-            all(x is not None for x in out['ded_scores']) and sum(out['ded_scores']) == 0:
+    # 数える審判（5 人なら最高・最低を除く 3 人）の減点の合計が 0 のときも空欄（Park City 2018 の -0.0 -0.0 -0.0 -0.2 -0.0）。
+    # 空欄は 0 として持ち、0 で正しいかは第 2 層の再計算で確かめる
+    if out['ded_total'] is None and len(out['ded_scores']) >= 3 and \
+            all(x is not None for x in out['ded_scores']):
         out['ded_total'] = 0.0
 
     score_band = 'block_score' if q_layout else 'run_score'
@@ -223,6 +294,14 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
 def _parse_page_athletes(words, page_height, table_end, page_no):
     """Returns one record per athlete-block. table_end: top beyond which the table has
     no data on this page (the Jury section start on the last page)."""
+    global _page_cols
+    _page_cols, hdr_bottom = _page_layout(words)
+    if hdr_bottom is not None:
+        # 表頭より上（大会名・日付の行）は選手の行ではない（ユニバーシアード 2025 の「TUE 14 JAN 2025 Results」）
+        words = [w for w in words if w['top'] > hdr_bottom]
+        # 審判団（Jury）の欄が表の上にある様式（NAC・ユニバーシアード）では、Jury の位置は表の終わりではない
+        if table_end is not None and table_end < hdr_bottom:
+            table_end = None
     # Footer: anchor on the 'Report created' / FIS-URL line, then include the nearby
     # '<date> / <venue> / <codex>' and 'Page x/y' lines (Olympic-style reports print the
     # date/venue line ABOVE the Report line; restricting '/' to the anchor's neighbourhood
@@ -262,17 +341,24 @@ def _parse_page_athletes(words, page_height, table_end, page_no):
         # A long name wraps onto a second line inside the Name column ("GERKEN SCHOFIELD" /
         # "Makayla", "GORODKO" / "Anastassiya") ~9-10pt below the first line. No other column
         # prints in the Name band on that line, so append it.
-        name_words2 = sorted([w for w in band(row_words, 'name') if 6 <= w['top'] - rtop < 15], key=lambda w: w['x0'])
+        # 3 行に折り返す名前がある（EC 2017「RYKKE / ALMENNINGEN Ole / Andre」）ので行の順、行の中は左から
+        name_words2 = sorted([w for w in band(row_words, 'name') if 6 <= w['top'] - rtop < 15],
+                             key=lambda w: (round(w['top']), w['x0']))
         noc = _first_text(row_words, 'noc', rtop)
         # 'ElliotCAN': long first name glued to the NOC with no space; split when the last
         # name word ends in a 3-letter uppercase code and extends into the NOC column.
         if noc is None and name_words:
             last_w = name_words[-1]
             m = re.match(r'^(.{2,}?)([A-Z]{3})$', last_w['text'])
-            if m and last_w['x1'] > COLS['name'][1]:
+            if m and last_w['x1'] > (_page_cols or COLS)['name'][1]:
                 sw = dict(last_w); sw['text'] = m.group(1)
                 name_words = name_words[:-1] + [sw]
                 noc = m.group(2)
+        # 国名コードが途中で切れて印字される（Calgary 2018「DESMARAIS-GILBERTC」「AN」）: 名前の最後の大文字 1 字を国名へ戻す
+        if noc and len(noc) == 2 and name_words and re.fullmatch(r'.{2,}[a-zA-Z\-][A-Z]', name_words[-1]['text']) \
+                and name_words[-1]['text'][-2] in '-' + 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' and name_words[-1]['x1'] > (_page_cols or COLS)['name'][1] - 20:
+            lw = dict(name_words[-1]); noc = lw['text'][-1] + noc; lw['text'] = lw['text'][:-1]
+            name_words = name_words[:-1] + [lw]
         name = ' '.join(w['text'] for w in name_words + name_words2)
         yb_txt = _first_text(row_words, 'yb', rtop)
         yb = int(yb_txt) if yb_txt and yb_txt.isdigit() else None
@@ -307,6 +393,9 @@ def _parse_page_athletes(words, page_height, table_end, page_no):
             rec = dict(ident); rec.update(blk)
             rec['q_block'] = None
             rec['best_score'] = None
+            if _page_cols and _page_cols.get('best_col', (-1, -1))[1] > 0:
+                bs = _first_text(row_words, 'best_col', rtop)
+                rec['best_score'] = float(bs) if bs and _is_num(bs) else None
             rec['counting'] = True
             records.append(rec)
     return records

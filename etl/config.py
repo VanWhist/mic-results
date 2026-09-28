@@ -32,14 +32,14 @@ LAYER5_CACHE = os.path.join(HERE, 'layer5_status.json')
 SERIES_LABELS = {
     'WC': 'ワールドカップ', 'WSC': '世界選手権', 'OWG': 'オリンピック',
     'EC': 'ヨーロッパカップ', 'NAC': 'ノルアムカップ', 'ANC': 'ANC（豪・NZ）', 'AC': 'アジアカップ',
-    'WJC': 'ジュニア世界選手権', 'YOG': 'ユースオリンピック',
+    'WJC': 'ジュニア世界選手権', 'YOG': 'ユースオリンピック', 'UVS': 'ユニバーシアード',
     'FIS': 'FISレース', 'NC': 'FIS NC', 'OPN': 'FISオープン',
     'SAJ_AJ': '全日本選手権', 'SAJ_AJJR': '全日本ジュニア', 'SAJ_KOKUSPO': '国スポ', 'SAJ_JOC': 'JOCジュニアオリンピックカップ',
     'SAJ_A': 'A級公認大会', 'SAJ_B': 'B級公認大会', 'SAJ_SEL': '選考会',
 }
 SERIES_GROUP = {  # 画面の絞り込み用の大分類。それ以外は「国内」
     'WC': 'W杯系', 'WSC': 'W杯系', 'OWG': 'W杯系',
-    'EC': 'FIS系', 'NAC': 'FIS系', 'ANC': 'FIS系', 'AC': 'FIS系', 'WJC': 'FIS系', 'YOG': 'FIS系', 'FIS': 'FIS系', 'NC': 'FIS系', 'OPN': 'FIS系',
+    'EC': 'FIS系', 'NAC': 'FIS系', 'ANC': 'FIS系', 'AC': 'FIS系', 'WJC': 'FIS系', 'YOG': 'FIS系', 'UVS': 'FIS系', 'FIS': 'FIS系', 'NC': 'FIS系', 'OPN': 'FIS系',
 }
 TIER_LABELS = {'detail': 'ジャッジ点まで照合済み', 'score': '得点まで照合済み', 'rank': '順位のみ'}
 
