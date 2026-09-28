@@ -23,7 +23,7 @@ MANIFEST = os.path.join(INV, 'fis_pdf_manifest.csv')
 SURVEY = os.path.join(INV, 'fis_overseas_survey.jsonl')
 OUT = os.path.join(config.REGISTRY_DIR, 'fis_overseas.json')
 PRESERVE = ('rules', 'notes', 'tier', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions',
-            'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions')
+            'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions', 'date_fallback')
 ROUND_OF = {'RLQ': 'Q', 'QRL': 'Q', 'RLQ1': 'Q1', 'RLQ2': 'Q2', 'RLF1': 'F1', 'F1RL': 'F1', 'RLF2': 'F2', 'F2RL': 'F2'}
 FINAL_ONLY = ('RLF', 'FRL')
 RACE_URL = 'https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid={}'
@@ -43,15 +43,29 @@ def n_competitors(path):
     return int(m.group(1)) if m else None
 
 
+def overall_counts(path):
+    """総合の報告から組み立てるラウンドごとの人数（アダプタと同じ分け方）"""
+    from .adapter import split_overall, partial_codes
+    from . import parser_a
+    meta, recs = parser_a.parse_moguls_results(path)
+    groups, _ = split_overall(recs, meta, 'A')
+    partial = partial_codes(recs)
+    # 一部のラウンド（先へ進んだ選手の走りが無い）は人数が勝ち上がり人数にならないので数えない
+    return {code: len({r['bib'] for r in grp}) for code, grp in groups.items() if code not in partial}
+
+
 def advance_of(pdfs):
-    """{性別: {前のラウンド: {'to': 次, 'n': 次のラウンドの出場人数}}}。第3層で「前のラウンドの上位 n 人＝次の出場者」を確かめる"""
+    """{性別: {前のラウンド: {'to': 次, 'n': 次のラウンドの出場人数}}}。第3層で「前のラウンドの上位 n 人＝次の出場者」を確かめる。
+    人数は次のラウンドの報告書の表頭の印字、総合の報告から組み立てるラウンドはその人数"""
     adv = {}
     for g in ('M', 'W'):
-        rounds = {p['round']: p for p in pdfs if p['gender'] == g}
+        rounds = {p['round']: p for p in pdfs if p['gender'] == g and p['round'] != 'overall'}
+        ov = next((p for p in pdfs if p['gender'] == g and p['round'] == 'overall'), None)
+        counts = overall_counts(os.path.join(config.PDF_ROOT, ov['path'])) if ov else {}
         a = {}
         for frm, to in (('Q', 'F1'), ('Q1', 'F1'), ('F1', 'F2'), ('F2', 'F3')):
-            if frm in rounds and to in rounds:
-                n = n_competitors(os.path.join(config.PDF_ROOT, rounds[to]['path']))
+            if (frm in rounds or frm in counts) and (to in rounds or to in counts):
+                n = n_competitors(os.path.join(config.PDF_ROOT, rounds[to]['path'])) if to in rounds else counts[to]
                 if n:
                     a[frm] = {'to': to, 'n': n}
         if a:
@@ -125,17 +139,21 @@ def main():
                 fl = dict(items)[c]
                 types = {x['typ'] for x in fl}
                 per_round = [x for x in fl if x['typ'] in ROUND_OF]
-                fam = layout_family(os.path.join(config.PDF_ROOT, per_round[0]['rel'])) if per_round else None
+                # 総合（RLF/FRL）: 決勝のラウンドごとの報告書が無いときだけ使う（ANC など。予選の報告書があればそれは別に使う）
+                overall = [x for x in fl if x['typ'] in FINAL_ONLY]
+                has_final = any(ROUND_OF[x['typ']].startswith('F') for x in per_round)
+                use = per_round + ([] if has_final else overall[:1])
+                fam = layout_family(os.path.join(config.PDF_ROOT, use[0]['rel'])) if use else None
                 if fam != 'fis_std':
                     reasons.append(f"{c}: FIS 標準以外の様式（{fam}）はまだ読めない")
                     continue
-                if not per_round or not any(ROUND_OF[x['typ']].startswith('F') for x in per_round):
-                    reasons.append(f"{c}: ラウンドごとの報告書が無い（{sorted(types)}）")
+                if not use:
+                    reasons.append(f"{c}: 使える報告書が無い（{sorted(types)}）")
                     continue
-                for x in sorted(per_round, key=lambda x: config.ROUND_ORDER.index(ROUND_OF[x['typ']])):
+                for x in sorted(use, key=lambda x: config.ROUND_ORDER.index(ROUND_OF[x['typ']]) if x['typ'] in ROUND_OF else 99):
                     path = os.path.join(config.PDF_ROOT, x['rel'])
                     pdfs.append({'path': x['rel'], 'sha256': sha256_file(path), 'url': None,
-                                 'page_url': RACE_URL.format(x['raceid']), 'round': ROUND_OF[x['typ']],
+                                 'page_url': RACE_URL.format(x['raceid']), 'round': ROUND_OF.get(x['typ'], 'overall'),
                                  'gender': x['g'], 'codex': c, 'src_type': x['typ']})
             if season not in versions:
                 reasons.append(f"規則の版 {season} が rulesets.json に無い")

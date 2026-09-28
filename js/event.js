@@ -63,7 +63,8 @@ function renderChips() {
   const rounds = [...event.rounds];
   for (const r of rounds) {
     const b = el('button', { class: 'chip' + (current && current.round_id === r.round_id ? ' primary' : ''), type: 'button',
-      text: genderLabel(r.gender) + ' ' + roundLabel(r) + '（' + (runsByRound.get(r.round_id) || []).length + '名）',
+      // 人数は採用の走り（1 人 1 本）で数える。Q2 報告の Q1 参考・2 本の良い方の決勝のもう 1 本は数えない
+      text: genderLabel(r.gender) + ' ' + roundLabel(r) + '（' + (runsByRound.get(r.round_id) || []).filter((x) => x.counting !== false).length + '名）',
       onclick: () => {
         current = r; history.replaceState(null, '', '#' + encodeURIComponent(r.round_id)); renderChips(); renderRound();
         // スクロールの途中（チップが上に固定されている状態）で切り替えたら、新しいラウンドの頭へ戻す
@@ -122,7 +123,8 @@ function renderRound() {
   if (!runs.length) { box.append(el('p', { class: 'meta', text: 'この記録はまだありません。' })); return; }
   if (!fisCapable) box.append(isNarrow() ? renderCards(r, runs) : renderTable(r, runs));
   else if (isNarrow()) box.append(renderFisCards(r, orderedRuns(runs)));
-  else box.append(view === 'table' ? renderTable(r, runs) : renderFis(r, orderedRuns(runs)));
+  // 表形式は 1 人 1 行。2 本の良い方の決勝は良い方（採用）の走りだけ（もう 1 本は FIS 形式で開く）
+  else box.append(view === 'table' ? renderTable(r, isBestOf(runs) ? runs.filter((x) => x.counting !== false) : runs) : renderFis(r, orderedRuns(runs)));
 }
 
 // ---- FIS 公式リザルト PDF と同じ並びの表（moguls-results の index.js と同じ形） -------------
@@ -133,8 +135,12 @@ function renderRound() {
 // Q2 の PDF（q_block のある WC など）は選手ごとに Q2 → Q1 の走りを積む。DNF/DNS/DSQ は識別列と状態のみ。
 
 const isQ1Block = (r) => r.q_block === 'Q1';
+// 2 本の良い方で順位が付く決勝（ANC 2019）: 走りに R1（1 本目）・R2（2 本目）の印がある
+const isBestOf = (runs) => runs.some((r) => r.q_block === 'R1' || r.q_block === 'R2');
+const runLabel = (r) => (r.q_block === 'R1' ? '1本目' : r.q_block === 'R2' ? '2本目' : r.q_block || '');
 
-// 表示順に並べる。Q2 のあるラウンドは選手ごとに Q2 → Q1参考 の2段
+// 表示順に並べる。Q2 のあるラウンドは選手ごとに Q2 → Q1参考 の2段。2 本の良い方の決勝は良い方（採用）→ もう 1 本。
+// item: run・role・pairTop（次の行が同じ選手の続き）・ref（続きの行）・label（走りの印）
 function orderedRuns(runs) {
   const byRank = (a, b) => {
     const an = a.rank === null || a.rank === undefined, bn = b.rank === null || b.rank === undefined;
@@ -149,25 +155,35 @@ function orderedRuns(runs) {
     if (!groups.has(r.athlete_id)) groups.set(r.athlete_id, []);
     groups.get(r.athlete_id).push(r);
   }
+  if (isBestOf(runs)) {
+    const out = [];
+    const heads = [...groups.values()].map((g) => g.find((r) => r.counting !== false) || g[0]).sort(byRank);
+    for (const h of heads) {
+      const other = groups.get(h.athlete_id).find((r) => r !== h);
+      out.push({ run: h, role: 'best', pairTop: !!other, ref: false, label: runLabel(h) });
+      if (other) out.push({ run: other, role: 'alt', pairTop: false, ref: true, label: runLabel(other) });
+    }
+    return out;
+  }
   const heads = [...groups.values()].map((g) => g.find((r) => r.q_block === 'Q2') || g[0]).sort(byRank);
   const out = [];
   for (const h of heads) {
     const g = groups.get(h.athlete_id);
     const q2 = g.find((r) => r.q_block === 'Q2');
     const q1 = g.find((r) => isQ1Block(r));
-    if (q2) out.push({ run: q2, role: 'Q2', pairTop: !!q1 });
-    if (q1) out.push({ run: q1, role: q2 ? 'Q1ref' : 'Q1', pairTop: false });
+    if (q2) out.push({ run: q2, role: 'Q2', pairTop: !!q1, ref: false, label: 'Q2' });
+    if (q1) out.push({ run: q1, role: q2 ? 'Q1ref' : 'Q1', pairTop: false, ref: !!q2, label: 'Q1' });
   }
   return out;
 }
 
-// orderedRuns の並び（Q2 → Q1参考）を選手単位にまとめる
+// orderedRuns の並び（Q2 → Q1参考、良い方 → もう 1 本）を選手単位にまとめる
 function fisBlocks(items) {
   const out = [];
   for (let i = 0; i < items.length; i++) {
     const it = items[i];
     const next = items[i + 1];
-    if (it.pairTop && next && next.role === 'Q1ref') {
+    if (it.pairTop && next && next.ref) {
       out.push([it, next]);
       i++;
     } else {
@@ -222,10 +238,10 @@ function turnsText(r) {
 
 function idCount(L) { return (L.intl ? 6 : 4 + (L.showClub ? 1 : 0)) + (L.qLayout ? 1 : 0); }
 
-// 識別列。Q1 参考ブロックはラベルだけ出す
+// 識別列。Q1 参考ブロック・もう 1 本はラベルだけ出す
 function fisIdentityCells(item, L) {
   const r = item.run;
-  const head = item.role !== 'Q1ref';
+  const head = !item.ref;
   const cells = [
     el('td', { class: 'num bold', text: head ? (r.rank ?? '') : '' }),
     el('td', { class: 'num', text: head ? (r.bib ?? '') : '' }),
@@ -235,7 +251,7 @@ function fisIdentityCells(item, L) {
   cells.push(el('td', { text: head ? (L.intl ? (r.noc || '') : (r.affiliation || '')) : '' }));
   if (L.intl) cells.push(el('td', { class: 'num', text: head ? (r.yb ?? '') : '' }));
   else if (L.showClub) cells.push(el('td', { class: 'club', text: head ? (r.club || '') : '' }));
-  if (L.qLayout) cells.push(el('td', { class: 'qlab', text: item.role === 'Q1ref' ? 'Q1' : (item.role || '') }));
+  if (L.qLayout) cells.push(el('td', { class: 'qlab', text: item.label || '' }));
   return cells;
 }
 
@@ -244,7 +260,7 @@ function fisScoreCells(item, L) {
   const r = item.run;
   const dnf = r.status && r.status !== 'OK';
   const score = el('td', { class: 'num bold score', text: dnf ? r.status : (num(r.run_score, 2) ?? '') });
-  const best = L.qLayout ? [fisNum(item.role === 'Q1ref' ? null : r.best_score, 2, 'bold')] : [];
+  const best = L.qLayout ? [fisNum(item.ref ? null : r.best_score, 2, 'bold')] : [];
   const tie = el('td', { class: 'num tie' }, [
     r.tie ?? '',
     r.reserve_judge ? el('span', { class: 'fis-res', text: 'RES', title: 'リザーブジャッジが採点したラン（PDF の RES 印）' }) : null,
@@ -255,7 +271,7 @@ function fisScoreCells(item, L) {
 function fisRows(item, L) {
   const r = item.run;
   const scoreCount = 2 + (L.qLayout ? 1 : 0);
-  const sub = item.role === 'Q1ref' ? ' fis-sub' : '';
+  const sub = item.ref ? ' fis-sub' : '';
   const nMid = L.detail ? 2 + 5 + (L.nT + 2) : 4;
   if (r.status && r.status !== 'OK' && r.seconds == null && r.air_total == null && r.turns_total == null) {
     return [el('tr', { class: 'fis-l1 fis-status' + sub }, [
@@ -319,12 +335,49 @@ function renderFis(r, items) {
     head1 = el('tr', {}, [...ids, th('Time', { colspan: 2, class: 'grp' }), th('Air', { rowspan: 2 }), th('Turns', { rowspan: 2 }), ...tail]);
     head2 = el('tr', {}, [th('Seconds', { class: 'gl' }), th('Time Points', { class: 'gr' })]);
   }
-  const bodies = fisBlocks(items).map((block) => el('tbody', { class: 'fis-block' }, block.flatMap((item) => fisRows(item, L))));
+  const blocks = fisBlocks(items).map((block) => block.map((item) => ({ item, rows: fisRows(item, L) })));
+  const bodies = blocks.map((block) => el('tbody', { class: 'fis-block' }, block.flatMap((x) => x.rows)));
+  const altAll = bestOfToggles(blocks);
   const legend = el('p', { class: 'meta', text: L.detail
     ? 'B: ベース点、D: 減点。' + (L.nT >= 5 ? '取り消し線の薄い数字は最高・最低のため除外された審判点（合計に入らない）。' : '3人制は除外なしで合計。')
       + '3行目の太字はタイム点・エア合計・ターン合計。ターンの下限は 0.3（* 印）。'
     : 'この段階は合計点まで照合済み（審判ごとの点は持っていません）。ターンの下限は 0.3（* 印）。' });
-  return el('div', {}, [el('div', { class: 'table-wrap' }, el('table', { class: 'fis' }, [el('thead', {}, [head1, head2]), ...bodies])), legend]);
+  return el('div', {}, [altAll, el('div', { class: 'table-wrap' }, el('table', { class: 'fis' }, [el('thead', {}, [head1, head2]), ...bodies])), legend]);
+}
+
+// 2 本の良い方の決勝（PC の表）: もう 1 本の行は閉じておき、選手ごとの印（「1本目 ▸」）と「全員の 2 本を表示」で開く。
+// 開閉の状態はこのページを見ている間だけ持つ（showAlt）
+let showAlt = false;
+
+function bestOfToggles(blocks) {
+  const pairs = [];
+  blocks.forEach((block) => {
+    if (block.length < 2 || block[1].item.role !== 'alt') return;
+    const alt = block[1].rows;
+    const altItem = block[1].item;
+    const btn = el('button', { type: 'button', class: 'alt-toggle', title: 'もう 1 本の明細を開く・閉じる' });
+    const set = (open) => {
+      alt.forEach((tr) => { tr.hidden = !open; });
+      btn.textContent = altItem.label + (open ? ' ▾' : ' ▸');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    btn.addEventListener('click', () => set(alt[0].hidden));
+    const cell = block[0].rows[0].querySelector('td.qlab');
+    if (cell) cell.append(el('br'), btn);
+    set(showAlt);
+    pairs.push(set);
+  });
+  if (!pairs.length) return null;
+  const all = el('button', { type: 'button', class: 'chip', 'aria-pressed': showAlt ? 'true' : 'false', text: '全員の 2 本を表示' });
+  all.addEventListener('click', () => {
+    showAlt = !showAlt;
+    all.setAttribute('aria-pressed', showAlt ? 'true' : 'false');
+    pairs.forEach((set) => set(showAlt));
+  });
+  return el('div', { class: 'alt-bar' }, [
+    el('span', { class: 'meta', text: '決勝は 2 本滑り、良い方の得点で順位が付きます。表示しているのは良い方の走り（「1本目」「2本目」はどちらの走りか）。' }),
+    all,
+  ]);
 }
 
 // ---- 狭い画面（スマホ）：1選手＝1カード（moguls-results と同じ形） --------------------------
@@ -393,14 +446,18 @@ function renderFisCards(r, items) {
     ];
     for (const item of block) {
       const run = item.run;
+      const sub = [];
       if (L.qLayout) {
-        parts.push(el('div', { class: 'fis-sub-head' + (run.counting ? ' counting' : '') }, [
-          el('span', { text: item.role === 'Q1ref' ? 'Q1' : (item.role || '') }),
-          run.counting ? el('span', { class: 'badge official', text: '採用' }) : null,
+        sub.push(el(item.role === 'alt' ? 'summary' : 'div', { class: 'fis-sub-head' + (run.counting ? ' counting' : '') }, [
+          el('span', { text: item.role === 'alt' ? 'もう 1 本（' + item.label + '）' : (item.label || '') }),
+          run.counting ? el('span', { class: 'badge official', text: item.role === 'best' ? '良い方' : '採用' }) : null,
           scoreNode(run, run.run_score, 'fis-sub-score'),
         ]));
       }
-      if (!isDnf(run) || hasMarks(run)) parts.push(miniBlock(run, L));
+      if (!isDnf(run) || hasMarks(run)) sub.push(miniBlock(run, L));
+      // 2 本の良い方の決勝: もう 1 本はタップで開く（「全員の 2 本を表示」で全員分を開く）
+      if (item.role === 'alt') parts.push(el('details', { class: 'fis-alt', open: showAlt ? '' : null }, sub));
+      else parts.push(...sub);
     }
     return el('article', { class: 'rec fis-card' }, parts);
   });
@@ -408,9 +465,20 @@ function renderFisCards(r, items) {
     ? '上段：秒・タイム点（太字）｜エア2本の審判点・ジャンプ・DD｜エア計。下段：B: ベース点 ／ D: 減点 ／ ターン計。'
       + (L.nT >= 5 ? '取り消し線は最高・最低で除外された点。' : '')
     : '上段：秒・タイム点（太字）｜エア計。下段：ターン計。この段階は合計点まで照合済み。';
+  const list = el('div', { class: 'card-list' }, cards);
+  let altAll = null;
+  if (items.some((it) => it.role === 'alt')) {
+    const all = el('button', { type: 'button', class: 'chip', 'aria-pressed': showAlt ? 'true' : 'false', text: '全員の 2 本を表示' });
+    all.addEventListener('click', () => {
+      showAlt = !showAlt;
+      all.setAttribute('aria-pressed', showAlt ? 'true' : 'false');
+      list.querySelectorAll('details.fis-alt').forEach((d) => { d.open = showAlt; });
+    });
+    altAll = el('div', { class: 'alt-bar' }, [
+      el('span', { class: 'meta', text: '決勝は 2 本滑り、良い方の得点で順位。もう 1 本はカードの「もう 1 本」をタップ。' }), all]);
+  }
   // 見方の説明は折りたたむ（毎回読むものではないので、結果の1位を上に出す）
-  return el('div', {}, [el('details', { class: 'meta small fis-legend' }, [el('summary', { text: 'カードの見方' }), legend]),
-    el('div', { class: 'card-list' }, cards)]);
+  return el('div', {}, [altAll, el('details', { class: 'meta small fis-legend' }, [el('summary', { text: 'カードの見方' }), legend]), list]);
 }
 
 function nameCell(run) {

@@ -429,6 +429,297 @@
    "notes": ""
   },
   {
+   "event_id": "2016-17-ec-gaissau-8542",
+   "season": "2016-17",
+   "series": "EC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Gaissau",
+   "fis_event_id": "40702",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40702&seasoncode=2017",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2016-17",
+   "pdfs": [
+    {
+     "path": "EC/2016-17/FIS2017_EC_Gaissau_8542_M_MO_RLQ.pdf",
+     "sha256": "d00d5265c7bc567820beeb8dee3c360388fba904fbafc1e0a2a21c6aec61c2af",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10036",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8542",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "EC/2016-17/FIS2017_EC_Gaissau_8542_M_MO_RLF.pdf",
+     "sha256": "88118c273aff0c19c372416e6be03bb135ecb457c24005653aff70c80cf599df",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10036",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8542",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-ec-gaissau-8544",
+   "season": "2016-17",
+   "series": "EC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Gaissau",
+   "fis_event_id": "40702",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40702&seasoncode=2017",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2016-17",
+   "pdfs": [
+    {
+     "path": "EC/2016-17/FIS2017_EC_Gaissau_8544_M_MO_RLQ.pdf",
+     "sha256": "2b34f4229ffb6de3a82f2e282674def17556cc06453e6da4dc6622df63194aae",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10038",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8544",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "EC/2016-17/FIS2017_EC_Gaissau_8544_M_MO_RLF.pdf",
+     "sha256": "7327cbb1df00f95f8699d91e6f268b15fdb6e47db041d5cc429c141f28faa456",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10038",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8544",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-anc-perisher-8029",
+   "season": "2017-18",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "41189",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41189&seasoncode=2018",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2017-18",
+   "pdfs": [
+    {
+     "path": "ANC/2017-18/FIS2018_ANC_Perisher_8028_W_MO_RLF.pdf",
+     "sha256": "a7463ca0c86955dc678bb12b6935372713de8bc3eb77d3ea230c0dc13a374d84",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10500",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8028",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2017-18/FIS2018_ANC_Perisher_8029_M_MO_RLF.pdf",
+     "sha256": "0977819d2c5bc2bd18e31e342e7220494bdcc7d2cbba6a801f8a22b8c819f286",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10501",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8029",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-anc-perisher-8031",
+   "season": "2017-18",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "41189",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41189&seasoncode=2018",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2017-18",
+   "pdfs": [
+    {
+     "path": "ANC/2017-18/FIS2018_ANC_Perisher_8030_W_MO_RLF.pdf",
+     "sha256": "ec637c705d22c2fdfb1a2cfa84a9691bbf009c3b06320050b6a7c9462b2e8a5c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10502",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8030",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2017-18/FIS2018_ANC_Perisher_8031_M_MO_RLF.pdf",
+     "sha256": "4793d84c6ff802eb95bd2b66febcddb7b552c9c0470752299b9e0192371d9be2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10503",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8031",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-wjc-duved-8271",
+   "season": "2017-18",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Duved",
+   "fis_event_id": "41276",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41276&seasoncode=2018",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2017-18",
+   "pdfs": [
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8270_W_MO_RLQ.pdf",
+     "sha256": "93f5e092b87e3ba86df0c51eb08c63aec648178d8ab1667c80908e63d8975a35",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10551",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8270",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8270_W_MO_RLF.pdf",
+     "sha256": "001e0a74e136b29a8dbe021af6aabb5bb6ba274a97e57df86780ca2ab2e55ecf",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10551",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8270",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8271_M_MO_RLQ.pdf",
+     "sha256": "bf30e799317a89dca84a044d71eecdf1ac7552eb619eb7b7efb12d7501b4fff5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10552",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8271",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8271_M_MO_RLF.pdf",
+     "sha256": "48c5f18ff11746a7670ca0d5c15b51f00943f0be2077ede4b8829f8e5300857d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10552",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8271",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2017-18-nac-calgary-8426",
    "season": "2017-18",
    "series": "NAC",
@@ -746,6 +1037,132 @@
    ]
   },
   {
+   "event_id": "2018-19-anc-perisher-8007",
+   "season": "2018-19",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "43093",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43093&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "ANC/2018-19/FIS2019_ANC_Perisher_8006_W_MO_RLF.pdf",
+     "sha256": "d9fbd5f371c8f17e3891acd810c2d62c4d19cfd79de1623af3ed882679156cbe",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11433",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8006",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2018-19/FIS2019_ANC_Perisher_8007_M_MO_RLF.pdf",
+     "sha256": "5608316169f587c8e0a612165de56febf397a5f7e36ded658d722b4d1026c34b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11434",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8007",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2018-19-anc-perisher-8007-M-Q",
+     "bib": 98,
+     "name": "BELSKY Spencer",
+     "field": "turns_total",
+     "printed": 41.87,
+     "calc": 41.9,
+     "basis": "印字の B 合計 43.0・D 合計 -1.1 からは 41.9 だが、印字のターン合計は 41.87（得点 62.39 = 9.45 + 11.07 + 41.87）。主催者の集計が端数を持ったまま計算したとみられる。印字の得点・順位 18 位が公式（2026-09-28 確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2018-19-anc-perisher-8009",
+   "season": "2018-19",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "43093",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43093&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "ANC/2018-19/FIS2019_ANC_Perisher_8008_W_MO_RLF.pdf",
+     "sha256": "da2fe3714def1d040e07f254ec51496003d50e3ed00b0dedfe2999ffa00aa118",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11435",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8008",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2018-19/FIS2019_ANC_Perisher_8009_M_MO_RLF.pdf",
+     "sha256": "4e47be3169c47d1a96c2002bfc10956c08e217222125e9f3a3611e1f3672b92a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11436",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8009",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2018-19-anc-perisher-8009-M-Q",
+     "bib": 69,
+     "name": "DONG Mingwei",
+     "field": "turns_total",
+     "printed": 44.05,
+     "calc": 44.0,
+     "basis": "印字の B 合計 45.8・D 合計 -1.8 からは 44.0 だが、印字のターン合計は 44.05（得点 55.42 = 4.83 + 6.54 + 44.05）。主催者の集計が端数を持ったまま計算したとみられる。印字の得点・順位 23 位が公式（2026-09-28 確認）"
+    }
+   ]
+  },
+  {
    "event_id": "2018-19-nac-steamboat-8823",
    "season": "2018-19",
    "series": "NAC",
@@ -947,6 +1364,300 @@
       }
      }
     },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-wjc-chiesainvalmalenco-8568",
+   "season": "2018-19",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "44507",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44507&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8567_W_MO_RLQ.pdf",
+     "sha256": "23b1f2eee82aad2da0ddf21f32e8525a50722bcd62a48196de6a6280199b1c31",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11734",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8567",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8567_W_MO_RLF.pdf",
+     "sha256": "dc16af26f36eb096399a698949487924bd07e0b762850abfefb339900ab3e3c6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11734",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8567",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8568_M_MO_RLQ.pdf",
+     "sha256": "46ba98b77b8de5fee6ebcf1b4aaf8ba4bc17d5642e0f453c8d81ec85668cc44d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11735",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8568",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8568_M_MO_RLF.pdf",
+     "sha256": "af762511ab0134a5308d9c467a3925e25bf029dc46e93cfee1b8ce18d88b1af7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11735",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8568",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 12
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-nac-apexmountain-8450",
+   "season": "2018-19",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "44567",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44567&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_ApexMountain_8449_W_MO_RLF.pdf",
+     "sha256": "716310a827679f34a03a48fe646c0f46c28dc3f584b7f47f9333afbebb551057",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11867",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8449",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_ApexMountain_8450_M_MO_RLF.pdf",
+     "sha256": "f661cdb4caf4d1a0a6a3ff2fcbff8071f1b3b7d80867becf5b8a347d5909611c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11868",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8450",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2018-19-nac-apexmountain-8450-M-Q",
+     "printed": 63,
+     "actual": 62,
+     "basis": "総合の報告の表は 62 名。FIS 公式サイトの結果（raceid 11868）も 62 名（2026-09-27 に確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2018-19-nac-stratton-8819",
+   "season": "2018-19",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Stratton",
+   "fis_event_id": "44571",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44571&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_Stratton_8819_M_MO_RLF.pdf",
+     "sha256": "e10a318e571bca404ea81f0dc7eec37274c8b9af1c529b523c6ad04b5be1a5c2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11880",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8819",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-anc-perisher-8023",
+   "season": "2019-20",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "44947",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44947&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "ANC/2019-20/FIS2020_ANC_Perisher_8022_W_MO_RLF.pdf",
+     "sha256": "f81eb832122b37c803e2e1e5879fb95ab867afe6a3c5fdc65183fed38307ed47",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12335",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8022",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2019-20/FIS2020_ANC_Perisher_8023_M_MO_RLF.pdf",
+     "sha256": "41148cae1ee2f09277b18829a46cd35a51db6b03cbf0b16c45cca5e85abc21ea",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12336",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8023",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2019-20-anc-perisher-8023-W-Q",
+     "bib": 22,
+     "name": "ANDERSON Grace",
+     "field": "air_total",
+     "printed": 3.83,
+     "calc": 3.84,
+     "basis": "印字のエア合計 3.83（得点 25.53）。規則どおりの計算は 3.84。主催者の集計の丸めの癖とみられる（3.6×0.60 を 2.15 と切り捨てると 3.83 になる）。印字が公式（2026-09-28 確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2019-20-anc-perisher-8045",
+   "season": "2019-20",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "44947",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44947&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "ANC/2019-20/FIS2020_ANC_Perisher_8044_W_MO_RLF.pdf",
+     "sha256": "ee99cc648eba591def74d75aa6194e66d75e06b5ce99c7d74f35fe9e818faff1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12483",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8044",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2019-20/FIS2020_ANC_Perisher_8045_M_MO_RLF.pdf",
+     "sha256": "8ea08278750d01c31a8919a4d9999b575430293737ee1186cc5f8592c872cbc3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12484",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8045",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
@@ -1462,6 +2173,90 @@
    "notes": ""
   },
   {
+   "event_id": "2023-24-anc-perisher-8014",
+   "season": "2023-24",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "53626",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53626&seasoncode=2024",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2023-24",
+   "pdfs": [
+    {
+     "path": "ANC/2023-24/FIS2024_ANC_Perisher_8014_M_MO_RLF.pdf",
+     "sha256": "82d79083501bfdd08623e2ef37d6e9b02c4ac3d005f790676d42ffd7d510f2e3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16298",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8014",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2023-24/FIS2024_ANC_Perisher_8015_W_MO_RLF.pdf",
+     "sha256": "372e93e4fd8b446b301151800ca28e45a287e18a663317e4734a6d4fd75cf30a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16297",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8015",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-anc-perisher-8016",
+   "season": "2023-24",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "53626",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53626&seasoncode=2024",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2023-24",
+   "pdfs": [
+    {
+     "path": "ANC/2023-24/FIS2024_ANC_Perisher_8016_M_MO_RLF.pdf",
+     "sha256": "c4fa92b4656d75949da3f25121bc2f948dbb0dddce92f2b39cecc25168c7cca9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16300",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8016",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2023-24/FIS2024_ANC_Perisher_8017_W_MO_RLF.pdf",
+     "sha256": "22620e3c04d0927624153e33ed2f490b28c798ddb2f9a8f46d3a1d59a2a4fe1c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16299",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8017",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2023-24-wjc-chiesainvalmalenco-8212",
    "season": "2023-24",
    "series": "WJC",
@@ -1563,6 +2358,125 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
+  },
+  {
+   "event_id": "2024-25-anc-perisher-8018",
+   "season": "2024-25",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "55777",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55777&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "ANC/2024-25/FIS2025_ANC_Perisher_8018_M_MO_RLF.pdf",
+     "sha256": "cdaab3ccc166bf6dfd87706abde2aaa4d2ef1934984a766efb6b7b95d943bd68",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17382",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8018",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2024-25/FIS2025_ANC_Perisher_8019_W_MO_RLF.pdf",
+     "sha256": "4502aeabf46e1e96706b6cdb294c3ac030c396462699992d86504a73722aaf97",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17381",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8019",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "date_fallback": [
+    {
+     "codex": "8018",
+     "date": "2024-08-27",
+     "basis": "PDF に見出し（大会名・日付）が無い。FIS の大会ページ（eventid 55777）の日程による（2026-09-28 に確認）"
+    },
+    {
+     "codex": "8019",
+     "date": "2024-08-27",
+     "basis": "PDF に見出し（大会名・日付）が無い。FIS の大会ページ（eventid 55777）の日程による（2026-09-28 に確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2024-25-anc-perisher-8020",
+   "season": "2024-25",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "55777",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55777&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "ANC/2024-25/FIS2025_ANC_Perisher_8020_M_MO_RLF.pdf",
+     "sha256": "0f487723b93131229dcc0418a2f0a014ac87b562e7f41128ab6b4971dee798d9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17384",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8020",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2024-25/FIS2025_ANC_Perisher_8021_W_MO_RLF.pdf",
+     "sha256": "841638f5ff7bb4243718c82f5600da9432da4e47b33054d01cc04f6f964f388e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17383",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8021",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "recompute_exceptions": [
+    {
+     "round_id": "2024-25-anc-perisher-8020-M-Q",
+     "bib": 53,
+     "name": "DUBENEC Harry",
+     "field": "air_total",
+     "printed": 3.61,
+     "calc": 3.6,
+     "basis": "印字のエア合計 3.61（得点 17.81）。規則どおり（審判ごとに DD を掛けて切り捨て）の計算は 3.60。2 人の平均に DD を掛けると 3.61 になる。印字が公式（2026-09-28 確認）"
+    }
+   ],
+   "date_fallback": [
+    {
+     "codex": "8020",
+     "date": "2024-08-28",
+     "basis": "PDF に見出し（大会名・日付）が無い。FIS の大会ページ（eventid 55777）の日程による（2026-09-28 に確認）"
+    },
+    {
+     "codex": "8021",
+     "date": "2024-08-28",
+     "basis": "PDF に見出し（大会名・日付）が無い。FIS の大会ページ（eventid 55777）の日程による（2026-09-28 に確認）"
+    }
+   ]
   },
   {
    "event_id": "2024-25-wjc-almaty-8431",
@@ -1766,6 +2680,80 @@
       }
      }
     },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-anc-perisher-8026",
+   "season": "2025-26",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "57882",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57882&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "ANC/2025-26/FIS2026_ANC_Perisher_8026_M_MO_RLF.pdf",
+     "sha256": "f54daa4763e1f923c5275ca5bd919e7dea091e00b9ce5c9703f029d5ae1e8065",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18324",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8026",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2025-26/FIS2026_ANC_Perisher_8027_W_MO_RLF.pdf",
+     "sha256": "0c07689f1fd8061202bc23c54ca5c0bd327f7524175a31a79297e730ce9b6b6b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18323",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8027",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-anc-perisher-8029",
+   "season": "2025-26",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "57882",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57882&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "ANC/2025-26/FIS2026_ANC_Perisher_8029_W_MO_RLF.pdf",
+     "sha256": "63a2b50adaaba622c806550b7df9e8e225e373253223fc342a15bd0acc00dd9a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18325",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8029",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""

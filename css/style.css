@@ -616,3 +616,18 @@ a.hist-card:active, a.hist-card:hover { border-color: var(--accent); background:
 .hc-sub { font-size: 12.5px; color: var(--muted); margin-top: 2px; font-variant-numeric: tabular-nums; }
 .hc-jumps { margin-left: 8px; color: var(--ink); }
 .hc-tier { margin-left: auto; flex: 0 0 auto; }
+
+/* 2 本の良い方で順位が付く決勝（ANC 2019）：良い方の走りを見せ、もう 1 本は開閉 */
+.alt-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 4px 0 8px; }
+.alt-bar .meta { flex: 1 1 260px; }
+table.fis td.qlab button.alt-toggle {
+  margin-top: 2px; padding: 1px 6px; min-height: 0; font-size: 11.5px; border-radius: 999px;
+  background: #fff; color: var(--accent); border: 1px solid var(--line); white-space: nowrap;
+}
+details.fis-alt > summary.fis-sub-head { cursor: pointer; list-style: none; }
+details.fis-alt > summary.fis-sub-head::-webkit-details-marker { display: none; }
+details.fis-alt > summary.fis-sub-head > span:first-child::before { content: "▸ "; }
+details.fis-alt[open] > summary.fis-sub-head > span:first-child::before { content: "▾ "; }
+@media (max-width: 767px) {
+  details.fis-alt > summary.fis-sub-head { min-height: 36px; align-items: center; }
+}

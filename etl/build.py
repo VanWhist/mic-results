@@ -226,8 +226,10 @@ def main(argv=None):
     findings += verify.dd_consistency(dd_seen)
     for ev in events:
         for gender in ('M', 'W'):
+            # 総合の報告から組み立てた一部のラウンド（先へ進んだ選手の走りが無い。cls の partial）は勝ち上がりを検算できない
             rbc = {ctx['round']['round']: (ctx['round'], ctx['runs']) for ctx in rounds_ctx
-                   if ctx['round']['event_id'] == ev['event_id'] and ctx['round']['gender'] == gender and ctx['round']['tier'] != 'rank'}
+                   if ctx['round']['event_id'] == ev['event_id'] and ctx['round']['gender'] == gender and ctx['round']['tier'] != 'rank'
+                   and not ctx['cls'].get('partial')}
             if rbc:
                 findings += verify.layer3_progression(ev['event_id'], rbc, advance_for(ev, gender))
     all_runs = [r for ctx in rounds_ctx for r in ctx['runs']]

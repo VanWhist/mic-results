@@ -13,7 +13,7 @@ import re
 
 import pdfplumber
 
-PARSER_VERSION = "B-1.3"
+PARSER_VERSION = "B-1.7"
 
 STATUS_WORDS = ("DNF", "DNS", "DSQ")
 WEEKDAY = r"(?:MON|TUE|WED|THU|FRI|SAT|SUN)"
@@ -36,28 +36,35 @@ RE_QBLOCK = re.compile(r"^Q(?P<q>[12]) (?P<tail>.+)$")
 # scored tail: seconds timepoints J6 J7 jump DD B: J1..J5 BaseTotal RunScore [extras]
 RE_SCORED = re.compile(
     r"^(?:(?P<runlbl>[A-Z]{1,2}\d?): )?(?P<sec>\d+\.\d\d) (?P<tp>\d+\.\d\d) (?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
-    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>\d\.\d\d\d?) B: (?P<rest>.+)$"
+    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>-?\d\.\d\d\d?) B: (?P<rest>.+)$"
 )
 # D line: [wrapped name tokens] J6 J7 jump DD D: deductions
 RE_DLINE = re.compile(
     r"^(?:(?P<wrap>[^\d\s][^\d]*?) )?(?:(?P<runlbl>[A-Z]{1,2}\d?): )?(?P<j6>\d+\.\d) (?P<j7>\d+\.\d) "
-    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>\d\.\d\d\d?) D:(?P<rest>.*)$"
+    r"(?:(?P<jump>[0-9A-Za-z]+) )?(?P<dd>-?\d\.\d\d\d?) D:(?P<rest>.*)$"
 )
 RE_DED = re.compile(r"-\d+\.\d")
+RE_SECTION_LINE = re.compile(r"^(Super Final|Final ?\d?|Qualification ?\d?)$", re.I)  # 総合の報告の区切り
+RE_RUN_NOCOLON = re.compile(r"^[QF]\d$")  # ANC 2018 の総合: 各行の走行の印（コロンなし）
+# 総合の報告で同じ選手の続きの走り（決勝 2 の選手の決勝 1・予選など）の 1 行目。行頭に国名と生年（ANC 2018）や
+# 走行の印（F1: / Q1 / 無し）が付く
+RE_CONT = re.compile(r"^(?:[A-Z]{3} \d{4} )?(?:(?P<lbl>[QF]\d|SF|PH):? )?(?P<tail>\d+\.\d\d \d+\.\d\d .* B: .+|DNF|DNS|DSQ)$")
 RE_RUNLBL = re.compile(r"^[A-Z]{1,2}\d?:$")  # 行頭の走行ラベル（Q1:・F1:・PH:）
 # 3rd line: time points, air total, turns total
 RE_L3 = re.compile(r"^(?:(?P<wrap>[^\d\s][^\d]*?) )?(?P<tp>\d+\.\d\d) (?P<air>\d+\.\d\d) (?P<turns>\d+\.\d\d?)$")
 # 名前の折り返しとみなす語（人名に使う文字だけ）。見出し・フッタの語（Forerunners・Moguls Women・www.… など）は除く
 RE_NAME_TOKEN = re.compile(r"^[A-Za-zÀ-ÖØ-öø-ÿ][A-Za-zÀ-ÖØ-öø-ÿ'\-\.]*$")
 NOT_NAME = {"Forerunners", "Forerunner", "Moguls", "Women", "Men", "Ladies", "Run", "FIS", "Results", "RESULTS",
-            "Conditions", "Course", "Weather", "NOTE", "Legend", "Jury", "Qualification", "Final", "QUALIFICATION", "FINAL"}
+            "Conditions", "Course", "Weather", "NOTE", "Legend", "Jury", "Qualification", "Final", "QUALIFICATION", "FINAL",
+            "Race", "Rac", "Points", "Poi", "nts", "e"}  # 縦書きの表頭の切れ端（NAC 2018 Calgary の「Rac nts」）
 RE_NUM = re.compile(r"^\d+\.\d+$")
 RE_DIVIDER = re.compile(r"^(Qualified to |Not Qualified|Qualified$)")
 RE_DIGIT = re.compile(r"\d")
 # 表頭の「B D J1 J2 J3 Total」からターン審判の人数を数える（W杯は 5 人、世界ジュニア 2022 などは 3 人）
 RE_TURNS_HDR = re.compile(r"\bB D((?: J\d)+) Total\b")
 _n_turns = 5  # parse_moguls_results が PDF ごとに設定する
-_best_col = False  # 表頭に Best Score 列がある（NAC 2022 の「eS B co e r s e t」）
+_best_col = False  # 表頭に Best Score 列がある（NAC 2022 の「eS B co e r s e t」、総合の報告の「Best」「ScoreScore」）
+_tie_col = True  # 表頭に Tie 列がある（総合の報告は Tie の代わりに Race Points で、右端の数値は同点の値ではない）
 
 # ---------------------------------------------------------------------------
 # Header / footer / jury regexes
@@ -157,6 +164,13 @@ def _parse_block_tail(rec, tail, warnings, page, line):
         tail = " ".join(tokens)
     if tokens and tokens[0] in STATUS_WORDS:
         rec["status"] = tokens[0]
+        if not _tie_col:
+            # 右端の数値: 2 つなら Best Score と FIS ポイント（ANC 2019「DNF 60.90 99」）、1 つなら FIS ポイントだけ
+            # （ANC 2018「Q1 DNF 0.00」「F1 DNF 75.00」）
+            nums = [x for x in tokens[1:] if RE_NUM.match(x) or x.isdigit()]
+            if _best_col and len(nums) >= 2:
+                rec["best_score"] = _f(nums[0])
+            return False
         _apply_extras(rec, tokens[1:], warnings, page, line)
         return False
     m = RE_SCORED.match(tail)
@@ -165,11 +179,17 @@ def _parse_block_tail(rec, tail, warnings, page, line):
         return True
     rec["seconds"] = _f(m.group("sec"))
     rec["time_points"] = _f(m.group("tp"))
-    if m.group("jump") is not None:  # ジャンプが無い走りは「0.0 0.0 0.000」と記号なし（EC 2017）
+    if m.group("jump") is not None:  # DD -1.000 は差し引くジャンプ。DD 0 の「NJ 0.000」はジャンプなしの印字（0 点の欄として持つ）
         rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
                                  "jump": m.group("jump"), "DD": _f(m.group("dd"))})
     rest = m.group("rest").split()
     n = _n_turns
+    if len(rest) == n + 1 or (len(rest) == n + 2 and rest[n + 1] in ("Q", "RES")):
+        # ターンの合計（Total）欄が空欄の様式: 審判 n 人の点のあとは Run Score
+        rec["base_scores"] = [_f(x) for x in rest[:n]]
+        rec["run_score"] = _f(rest[n])
+        _apply_extras(rec, rest[n + 1:], warnings, page, line)
+        return True
     if len(rest) < n + 2:
         warnings.append((page, "short B: line", line))
         return True
@@ -191,9 +211,12 @@ def _apply_extras(rec, extras, warnings, page, line):
         elif RE_NUM.match(t):
             nums.append(float(t))
         else:
-            warnings.append((page, "unexpected trailing token %r" % t, line))
+            if not (t.endswith("…") and not _tie_col):  # 途中で切れた Race Points（ANC 2024「29…」）
+                warnings.append((page, "unexpected trailing token %r" % t, line))
     if (rec["q_block"] is not None and rec["counting"] or _best_col) and nums:
         rec["best_score"] = nums.pop(0)
+    if nums and not _tie_col:
+        nums = []  # Race Points（FIS ポイント）。記録には持たない
     if nums:
         rec["tie"] = nums.pop(0)
     if nums:
@@ -204,7 +227,7 @@ def _parse_dline(rec, m, warnings, page, line):
     if m.group("jump") is not None:
         rec["air_jumps"].append({"J6": _f(m.group("j6")), "J7": _f(m.group("j7")),
                                  "jump": m.group("jump"), "DD": _f(m.group("dd"))})
-    elif any(_f(m.group(k)) for k in ("j6", "j7", "dd")):
+    elif any(_f(m.group(k)) > 0 for k in ("j6", "j7")):
         warnings.append((page, "air line without jump code but non-zero scores", line))
     deds = [float(x) for x in RE_DED.findall(m.group("rest"))]
     n = _n_turns
@@ -384,22 +407,36 @@ def parse_moguls_results(path):
         cur = None
         expect = "L1"
 
-    global _n_turns, _best_col
+    global _n_turns, _best_col, _tie_col
+    section = None
     with pdfplumber.open(path) as pdf:
         first = pdf.pages[0].extract_text() or ""
+        # Q1/Q2 の 2 ブロックの表は Q2 のブロックがある。無ければ行頭の Q1/F1 は走行の印として読み飛ばす
+        q2_doc = any(re.search(r"(?m) Q2 (?:\d+\.\d\d|DN[SF]|DSQ)", pg.extract_text() or "") for pg in pdf.pages)
         mh = RE_TURNS_HDR.search(first)
         _n_turns = len(mh.group(1).split()) if mh else 5
-        _best_col = bool(re.search(r"\bB co e r s e t\b", first))
+        hdr_line = next((l for l in first.split("\n") if l.startswith("Rank Bib")), "")
+        _best_col = bool(re.search(r"\bB co e r s e t\b", first)) or "Best" in first.split("Rank Bib")[0][-200:] \
+            or "ScoreScore" in hdr_line or "Score Score" in hdr_line
+        _tie_col = " Tie" in hdr_line
         meta["n_turns_judges"] = _n_turns
         for pno, page in enumerate(pdf.pages, 1):
             text = page.extract_text() or ""
             lines = [l.rstrip() for l in text.split("\n") if l.strip()]
             skip_rest = False      # after Forerunners/Conditions/Legend until footer
+            in_table = False       # このページで表頭（Rank Bib）より下に来たか
 
             for l in lines:
                 if _parse_footer_line(l, meta) or RE_FOOTER_OTHER.match(l):
                     skip_rest = False
                     in_jury = False
+                    continue
+                if l.startswith("Rank Bib"):
+                    in_table = True
+                if RE_SECTION_LINE.match(l.strip()) and in_table:
+                    close_block(pno)
+                    section = re.sub(r"\s+", " ", l.strip()).title()
+                    athlete = None
                     continue
                 if _is_header_line(l):
                     _parse_header_line(l, meta)
@@ -457,10 +494,18 @@ def parse_moguls_results(path):
                     tail_txt = (m2.group("tail") or "").strip()
                     q_block = None
                     mq = RE_QLABEL.match(tail_txt)
-                    if mq:
+                    if mq and q2_doc:
                         q_block = "Q" + mq.group("q")
                         tail_txt = (mq.group("tail") or "").strip()
+                    run_label = None
+                    if not q_block and tail_txt.split() and (RE_RUN_NOCOLON.match(tail_txt.split()[0]) or RE_RUNLBL.match(tail_txt.split()[0])):
+                        run_label = tail_txt.split()[0].rstrip(":")
+                    if not (mq and q2_doc) and tail_txt.split() and RE_RUN_NOCOLON.match(tail_txt.split()[0]):
+                        tail_txt = tail_txt.split(" ", 1)[1] if " " in tail_txt else ""
                     rec = _new_record(athlete, pno, q_block, True)
+                    rec["section"] = section
+                    rec["run_label"] = run_label
+                    rec["block_index"] = 0
                     records.append(rec)
                     athlete_recs.append(rec)
                     if not tail_txt:
@@ -475,9 +520,24 @@ def parse_moguls_results(path):
 
                 # --- further Q block of the same athlete ----------------
                 m = RE_QBLOCK.match(l)
-                if m and athlete is not None:
+                if m and athlete is not None and q2_doc:
                     close_block(pno)
                     rec = _new_record(athlete, pno, "Q" + m.group("q"), False)
+                    rec["section"] = section
+                    records.append(rec)
+                    athlete_recs.append(rec)
+                    if _parse_block_tail(rec, m.group("tail"), warnings, pno, l):
+                        cur, expect, last_kind = rec, "D", "scored"
+                    else:
+                        last_kind = "status"
+                    continue
+
+                # --- continuation run of the same athlete (overall report) ---
+                m = RE_CONT.match(l)
+                if m and athlete is not None and expect == "L1" and not q2_doc:
+                    close_block(pno)
+                    rec = _new_record(athlete, pno, None, True)
+                    rec.update({"section": section, "rank": None, "run_label": m.group("lbl"), "block_index": len(athlete_recs)})
                     records.append(rec)
                     athlete_recs.append(rec)
                     if _parse_block_tail(rec, m.group("tail"), warnings, pno, l):
@@ -493,10 +553,15 @@ def parse_moguls_results(path):
                         meta["unparsed_lines"].append((pno, l))
                         continue
                     wrap = m.group("wrap")
+                    # 走行ラベルが 2 行目（D の行）の先頭にある様式（ANC 2019 の総合「F2: 6.5 5.0 S 0.480 D: …」）
+                    lbl = m.group("runlbl")
                     if wrap:
                         # 折り返した名前の後ろに走行ラベル（PH: など）が付く / ラベルだけの行がある（NAC 2022）
+                        lbl = lbl or next((x.rstrip(":") for x in wrap.split() if RE_RUNLBL.match(x)), None)
                         wt = [x for x in wrap.split() if not RE_RUNLBL.match(x)]
                         wrap = " ".join(wt)
+                    if lbl and cur.get("run_label") is None:
+                        cur["run_label"] = lbl
                     if wrap:
                         _append_name(athlete, athlete_recs, wrap)
                     _parse_dline(cur, m, warnings, pno, l)
@@ -516,8 +581,15 @@ def parse_moguls_results(path):
                     continue
 
                 # --- wrapped name fragment after a status row / 3 行目に折り返した名前（D 行と 3 行目の間）
-                if athlete is not None and (last_kind == "status" or expect == "L3") and not RE_DIGIT.search(l):
+                if athlete is not None and (last_kind == "status" or expect == "L3") \
+                        and not RE_DIGIT.search(" ".join(x for x in l.split() if not RE_RUNLBL.match(x))):
                     toks = [x for x in l.split() if not RE_RUNLBL.match(x)]
+                    lbls = [x.rstrip(":") for x in l.split() if RE_RUNLBL.match(x)]
+                    if lbls and last_kind == "status" and athlete_recs and athlete_recs[-1].get("run_label") is None:
+                        # 途中棄権などの行の下に走りの印だけがある（ANC 2019 の総合「DNF 60.90 99」の次の行「F2:」）
+                        athlete_recs[-1]["run_label"] = lbls[0]
+                        if not toks:
+                            continue
                     if toks and len(toks) <= 3 and all(RE_NAME_TOKEN.match(x) and x not in NOT_NAME for x in toks):
                         _append_name(athlete, athlete_recs, " ".join(toks))
                         continue

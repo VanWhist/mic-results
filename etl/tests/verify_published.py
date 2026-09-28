@@ -189,7 +189,9 @@ def expected_values(run, fis_style):
         if v is not None and dec(v) != 0:
             add(f'ded.J{i + 1}', v)
     if fis_style:
-        add('base_total', run['base_total'])
+        # 減点が 0 のとき B の合計を印字しない様式がある（EC 2017 Gaissau の総合）。その値はターン合計と同じなので、そちらで照合する
+        if not (dec(run['ded_total']) == 0 and dec(run['base_total']) == dec(run['turns_total'])):
+            add('base_total', run['base_total'])
         add('ded_total', run['ded_total'])
     add('turns_total', run['turns_total'])
     add('run_score', run['run_score'])
@@ -212,9 +214,99 @@ def next_page_carry(path, pg):
     return num_tokens(carry[:2])
 
 
-def check_pdf_round(rnd_runs, fis_style):
+def _athlete_start(toks):
+    return len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1])
+
+
+def _block_start(toks):
+    return any(t in ('B:', 'DNF', 'DNS', 'DSQ') for _, t in toks)
+
+
+def _split_blocks(rows, first, end):
+    """選手の行の範囲 rows[first:end] を走りごとに分ける（各走りは「B:」の行、または途中棄権などの行から始まる）"""
+    bs = sorted({first} | {i for i in range(first, end) if _block_start(rows[i][1])})
+    return [rows[b:min(nb, b + 4)] for b, nb in zip(bs, bs[1:] + [end])]
+
+
+def fis_blocks(path, pg, run):
+    """総合の報告（1 人の選手の行に、その選手の走りが最後の走りから順に並ぶ）の、その選手の走りごとの行。
+    続きの走りが次のページの頭に送られる（NAC 2019 Apex）ので、選手の行が無いページなら前のページから探す。
+    戻り値: [走りの行] / 選手の行が見つからなければ None"""
+    for page in (pg, pg - 1):
+        if page < 1:
+            continue
+        rows = page_lines(path, page)
+        a = find_anchor(rows, run, True)
+        if a is None:
+            continue
+        nxt = [i for i in range(a + 1, len(rows)) if _athlete_start(rows[i][1])]
+        blocks = _split_blocks(rows, a, nxt[0] if nxt else len(rows))
+        if not nxt:
+            try:
+                nrows = page_lines(path, page + 1)
+            except Exception:  # noqa  次のページが無い
+                nrows = []
+            first = next((i for i, (_, toks) in enumerate(nrows) if _athlete_start(toks)), len(nrows))
+            carry = [i for i in range(first) if _block_start(nrows[i][1])]
+            if carry:
+                blocks += _split_blocks(nrows, carry[0], first)
+        return blocks
+    return None
+
+
+def check_overall_runs(rnd_runs, block_of):
+    """総合の報告から組み立てた run（block_of に走りの位置がある）を、その選手の k 本目の走りの行と照合する"""
+    issues = []
+    for r in rnd_runs:
+        path, pg = pdf_path(r['provenance']), r['provenance'].get('page') or 1
+        if not os.path.exists(path):
+            issues.append((r, 'pdf_missing', path))
+            continue
+        blocks = fis_blocks(path, pg, r)
+        k = block_of[r['run_id']]
+        if blocks is None or k >= len(blocks):
+            issues.append((r, 'anchor_not_found', f'{os.path.basename(path)} p{pg} 走り {k + 1} 本目'))
+            continue
+        band = num_tokens(blocks[k])
+        for key, v in expected_values(r, True):
+            # 2 本目以降の走りの行に順位・ゼッケンは無い（下のラウンドの順位は得点から付けたもの、2 本の良い方の決勝は
+            # 1 行目の最終順位を両方の走りに持たせたもの）
+            if key in ('bib', 'rank') and k > 0:
+                continue
+            if band[v] > 0:
+                band[v] -= 1
+            else:
+                issues.append((r, 'value_not_printed', f'{key}={v}（走り {k + 1} 本目）'))
+    return issues
+
+
+def overall_block_index(runs):
+    """同じ PDF・同じ FIS コードで複数のラウンドがある run（総合の報告から組み立てたもの）の、選手の行の中での走りの位置。
+    総合の報告は上のラウンドの走りから順に並ぶ（決勝 2 → 決勝 1 → 予選）。戻り値: {run_id: 0 始まりの位置}"""
+    # 2 本の良い方で順位が付く決勝（q_block R1・R2）は 2 本目（R2）→ 1 本目（R1）の順に載る
+    order = ['F3', 'F2', 'R2', 'F1', 'R1', 'Q']
+    key = lambda r: r['q_block'] if r.get('q_block') in ('R1', 'R2') else r['round']
+    groups = collections.defaultdict(list)
+    for r in runs:
+        if r['provenance']['parser_version'].startswith('A-') and r.get('q_block') in (None, 'R1', 'R2') \
+                and r.get('fis_code') and key(r) in order:
+            groups[(r['provenance']['pdf'], r['fis_code'])].append(r)
+    out = {}
+    for g in groups.values():
+        if len(g) > 1 and len({key(r) for r in g}) == len(g):
+            for k, r in enumerate(sorted(g, key=lambda r: order.index(key(r)))):
+                out[r['run_id']] = k
+    return out
+
+
+def check_pdf_round(rnd_runs, fis_style, block_of=None):
     """ラウンドの run 群を印字と照合。戻り値: [(run, kind, detail)]"""
     issues = []
+    block_of = block_of or {}
+    multi = [r for r in rnd_runs if r['run_id'] in block_of]
+    if multi:
+        issues += check_overall_runs(multi, block_of)
+        rnd_runs = [r for r in rnd_runs if r['run_id'] not in block_of]
     by_page = collections.defaultdict(list)
     for r in rnd_runs:
         by_page[(pdf_path(r['provenance']), r['provenance'].get('page') or 1)].append(r)
@@ -424,6 +516,7 @@ def main():
             continue
         by_round[r['round_id']].append(r)
     up = load_upstream()
+    block_of = overall_block_index(runs)
     issues = []
     checked = collections.Counter()
     for i, (rid, rr) in enumerate(sorted(by_round.items())):
@@ -435,7 +528,7 @@ def main():
             checked['C+A(fis)'] += len(rr)
         elif src.startswith('A-'):
             # FIS 海外大会（fis_pdf アダプタのパーサ A）: FIS 様式なので FIS コードで選手の行を探す
-            issues += check_pdf_round(rr, fis_style=True)
+            issues += check_pdf_round(rr, fis_style=True, block_of=block_of)
             checked['A(fis)'] += len(rr)
         elif rnd['tier'] == 'rank':
             issues += check_rank_only(rr)

@@ -11,11 +11,12 @@ COLS = {
     'turns_total_col': (486, 500), 'block_score': (500, 522), 'run_score': (526, 548), 'tie': (548, 585),
     'q_label': (198, 216),
 }
-PARSER_VERSION = 'A-2.4'
+PARSER_VERSION = 'A-2.6'
 STATUS_WORDS = {'DNF', 'DNS', 'DSQ', 'DQ'}
 
 
 _page_cols = None  # ページの表頭から決めた列の範囲（_page_layout）。無ければ COLS
+_doc_cols = None  # 同じ PDF で最後に決められた列の範囲（表頭の一部しか取れないページで使う）
 
 
 def band(words, name):
@@ -48,7 +49,8 @@ def _page_layout(words):
     turns = [w['x0'] for w in js if w['x0'] > b_x]
     air_tot_x = first('Total', dd_x)
     turns_tot_x = first('Total', turns[-1]) if turns else None
-    sc = next((w['x0'] for w in hdr if w['text'] in ('Sc', 'Score') and turns_tot_x and w['x0'] > turns_tot_x), None)
+    # Run Score の表頭は縦書きの「Sc」、「Score」、Best Score と重なった「ScoreScore」（ANC 2019・2024）
+    sc = next((w['x0'] for w in hdr if w['text'] in ('Sc', 'Score', 'ScoreScore') and turns_tot_x and w['x0'] > turns_tot_x), None)
     if len(air) != 2 or not turns or None in (air_tot_x, turns_tot_x, sc):
         return None, hdr_bottom
     cols = dict(COLS)
@@ -74,9 +76,15 @@ def _page_layout(words):
     # Run Score の列は幅 21pt（W杯 COLS と同じ）。NAC 2022 の Best Score（その右）は拾わない
     cols['run_score'] = (sc - 4, sc + 17)
     # Best Score 列（NAC 2022: 表頭の縦書き「Best Score」の B が Run Score の右、top が表頭より 3pt 上）
-    best_x = next((w['x0'] for w in hdr if w['text'] == 'B' and w['x0'] > sc + 10), None)
+    # Best Score 列: 縦書きの B（NAC 2022）、「Best」（ANC 2019〜2024・世界ジュニア 2018）、2 つ目の「Score」（ANC 2018）
+    best_x = next((w['x0'] for w in hdr if (w['text'] in ('B', 'Best') or (w['text'] == 'Score' and w['x0'] > sc + 10))
+                   and w['x0'] > sc + 10), None)
     tie_x = first('Tie', sc)
-    cols['best_col'] = (sc + 17, (tie_x or sc + 45) - 4) if best_x else (-1, -1)
+    pts_x = next((w['x0'] for w in hdr if w['text'] in ('Race', 'Rac', 'Points') and w['x0'] > sc + 25), None)
+    cols['best_col'] = (sc + 17, (tie_x or pts_x or sc + 45) - 4) if best_x else (-1, -1)
+    if tie_x is None:
+        # 表頭に Tie が無い様式（総合の報告: Run Score・Best Score・Race Points）。右端の数値は FIS ポイントで同点の値ではない
+        cols['tie'] = (-1, -1)
     return cols, hdr_bottom
 
 
@@ -206,6 +214,11 @@ def _is_num(t):
     return bool(NUM_RE.fullmatch(t))
 
 
+def _first_word_x(words, name, top, tol=2.0):
+    ws = sorted([w for w in band(words, name) if abs(w['top'] - top) < tol], key=lambda w: w['x0'])
+    return ws[0]['x0'] if ws else None
+
+
 def _first_text(words, name, top, tol=2.0):
     ws = [w for w in band(words, name) if abs(w['top'] - top) < tol]
     ws.sort(key=lambda w: w['x0'])
@@ -254,11 +267,15 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
         j6, j7 = _first_text(blk_words, 'J6', t), _first_text(blk_words, 'J7', t)
         # ジャンプ記号と DD は J7 の右からエア合計の左までの語を左から順に読む（記号の幅で位置が揺れ、
         # NAC 2023 の「3」は x0=330 で DD の範囲に入る）。最後の小数（2〜3 桁）が DD、その前が記号
-        mid = sorted([w for w in blk_words if abs(w['top'] - t) < 2 and cols['J7'][1] <= w['x0'] < cols['air_total'][0]],
+        # 記号の左端が J7 の範囲の終わりより少し左に出ることがある（ANC 2019「10oGA」x0=311.9）。J7 の数値はさらに左で終わる
+        mid = sorted([w for w in blk_words if abs(w['top'] - t) < 2 and cols['J7'][1] - 4 <= w['x0'] < cols['air_total'][0]
+                      and w['x0'] > (_first_word_x(blk_words, 'J7', t) or 0)],
                      key=lambda w: w['x0'])
-        dd_i = max((i for i, w in enumerate(mid) if re.fullmatch(r'\d\.\d{2,3}', w['text'])), default=None)
+        dd_i = max((i for i, w in enumerate(mid) if re.fullmatch(r'-?\d\.\d{2,3}', w['text'])), default=None)
         jp = mid[dd_i - 1]['text'] if dd_i else None
         dd = mid[dd_i]['text'] if dd_i is not None else None
+        # DD がマイナス（-1.000）のジャンプは点を差し引く（世界ジュニア 2018 CROZET の「Lg -1.000」: 印字のエア合計 1.74 は
+        # これを差し引いた値）。DD 0 の「N 0.000」「NJ 0.000」はジャンプなしの印字で、0 点の欄としてそのまま持つ
         if None not in (j6, j7, jp, dd) and _is_num(j6) and _is_num(j7) and _is_num(dd):
             out['air_jumps'].append({'J6': float(j6), 'J7': float(j7), 'jump': jp, 'DD': float(dd)})
     at = [w for w in band(blk_words, 'air_total') if _is_num(w['text'])]
@@ -291,11 +308,25 @@ def _parse_block(row_words, line1_top, band_bot, q_layout):
     return out
 
 
-def _parse_page_athletes(words, page_height, table_end, page_no):
+RE_SECTION = re.compile(r'^(Super Final|Final ?\d?|Qualification ?\d?)$', re.I)
+
+
+def _run_label(words, btop, bbot):
+    """走りの印（F2: / F1 / Q1: など）。1 行目に出る様式（ANC 2018）と 2 行目に出る様式（ANC 2019 の総合）がある"""
+    cand = sorted((w for w in words if btop - 2 < w['top'] < bbot and 196 <= w['x0'] < 228
+                   and re.fullmatch(r'(?:F\d|Q\d|SF|PH):?', w['text'])), key=lambda w: w['top'])
+    return cand[0]['text'].rstrip(':') if cand else None
+
+
+def _parse_page_athletes(words, page_height, table_end, page_no, section=None):
     """Returns one record per athlete-block. table_end: top beyond which the table has
     no data on this page (the Jury section start on the last page)."""
-    global _page_cols
+    global _page_cols, _doc_cols
     _page_cols, hdr_bottom = _page_layout(words)
+    if _page_cols is None and hdr_bottom is not None and _doc_cols is not None:
+        _page_cols = _doc_cols  # 続きのページで表頭の一部が取れない（世界ジュニア 2022 の総合）: 前のページと同じ列
+    if _page_cols is not None:
+        _doc_cols = _page_cols
     if hdr_bottom is not None:
         # 表頭より上（大会名・日付の行）は選手の行ではない（ユニバーシアード 2025 の「TUE 14 JAN 2025 Results」）
         words = [w for w in words if w['top'] > hdr_bottom]
@@ -314,7 +345,9 @@ def _parse_page_athletes(words, page_height, table_end, page_no):
     footer_limit = min(footer_tops) - 2 if footer_tops else page_height - 40
     cutoff = min(table_end, footer_limit) if table_end is not None else footer_limit
 
-    q_layout = any(re.fullmatch(r'Q[12]', w['text']) for w in band(words, 'q_label') if w['top'] < cutoff)
+    # Q1/Q2 の 2 ブロックの表（五輪・世界選手権の Q2 報告）には Q2 のラベルがある。ANC 2018 の総合は各行に走行の印（F1・Q1）が
+    # 同じ位置に出るだけなので、Q2 が無ければ q-layout ではない
+    q_layout = any(w['text'] == 'Q2' for w in band(words, 'q_label') if w['top'] < cutoff)
 
     rank_tops = sorted(w['top'] for w in band(words, 'rank') if w['top'] < cutoff and re.fullmatch(r'\d+', w['text']))
     # Un-ranked rows (DNF/DNS/DSQ): a bib number in the bib band with no rank on the same line.
@@ -322,15 +355,40 @@ def _parse_page_athletes(words, page_height, table_end, page_no):
     status_tops = [t for t in bib_tops if not any(abs(t - rt) < 2 for rt in rank_tops)]
     # Divider lines print non-digit text in the Rank column ("Qualified to Final 1", ...).
     divider_tops = sorted(set(w['top'] for w in band(words, 'rank')
-                              if w['top'] < cutoff and w['top'] > 190 and not re.fullmatch(r'\d+', w['text'])))
+                              # 表頭より上は取り除いてあるので、表頭が分かるページはページ上部の区切り（「Final 2」）も拾う
+                              if w['top'] < cutoff and (hdr_bottom is not None or w['top'] > 190)
+                              and not re.fullmatch(r'\d+', w['text'])))
     all_row_tops = sorted(set(rank_tops + status_tops + divider_tops))
 
     records = []
+    # ページの先頭（表頭の直下、最初の選手の行より上）にある走り: 前のページの最後の選手の続き（総合の報告で、決勝に進んだ
+    # 選手の走りがページをまたぐ。NAC 2019 Apex の松田 颯など）。呼び出し側で前の選手に付ける
+    carry = []
+    first_row = min((x for x in all_row_tops if x not in divider_tops), default=None)
+    if hdr_bottom is not None and first_row is not None:
+        head_words = [w for w in words if w['top'] < first_row - 3]
+        cols0 = _page_cols or COLS
+        cstarts = sorted({round(w['top'], 1) for w in head_words
+                          if (w['text'] == 'B:' and cols0['bd_label'][0] <= w['x0'] < cols0['bd_label'][1])
+                          or (w['text'] in STATUS_WORDS and w['x0'] >= cols0['seconds'][0])})
+        for j, btop in enumerate(cstarts):
+            bbot = (cstarts[j + 1] - 3) if j + 1 < len(cstarts) else first_row - 3
+            blk = _parse_block(head_words, btop, bbot, False)
+            blk['run_label'] = _run_label(head_words, btop, bbot)
+            blk['page'] = page_no
+            carry.append(blk)
     for i, rtop in enumerate(all_row_tops):
         band_top = rtop - 3
         band_bot = (all_row_tops[i + 1] - 3) if i + 1 < len(all_row_tops) else cutoff
         row_words = [w for w in words if band_top <= w['top'] < band_bot]
         row_words.sort(key=lambda w: (w['top'], w['x0']))
+        if rtop in divider_tops:
+            # 区切りの行。総合（OVERALL）の報告は「Final 2」「Final 1」「Qualification」の区切りごとに、その段で終わった選手を並べる。
+            # 「Final 2」の 2 を BIB と読まないよう、区切りの行は選手の行として扱わない
+            line = ' '.join(w['text'] for w in sorted([w for w in row_words if abs(w['top'] - rtop) < 2], key=lambda w: w['x0']))
+            if RE_SECTION.match(line.strip()):
+                section = re.sub(r'\s+', ' ', line.strip()).title()
+            continue
 
         bib_txt = _first_text(row_words, 'bib', rtop)
         if bib_txt is None or not bib_txt.isdigit():
@@ -383,32 +441,56 @@ def _parse_page_athletes(words, page_height, table_end, page_no):
                 blk = _parse_block(row_words, lw['top'], blk_bot, True)
                 rec = dict(ident); rec.update(blk)
                 rec['q_block'] = lw['text']
+                rec['section'] = section
                 rec['best_score'] = best if j == 0 else None  # the counting score belongs to the athlete's first block
                 if j > 0:
                     rec['tie'] = None  # tie-break points are printed once per athlete, on the first block
                 rec['counting'] = (j == 0)  # first block is the round's own run
                 records.append(rec)
         else:
-            blk = _parse_block(row_words, rtop, band_bot, False)
-            rec = dict(ident); rec.update(blk)
-            rec['q_block'] = None
-            rec['best_score'] = None
-            if _page_cols and _page_cols.get('best_col', (-1, -1))[1] > 0:
-                bs = _first_text(row_words, 'best_col', rtop)
-                rec['best_score'] = float(bs) if bs and _is_num(bs) else None
-            rec['counting'] = True
-            records.append(rec)
-    return records
+            # 総合（OVERALL）の報告は、決勝に進んだ選手の行に決勝 2・決勝 1・予選の走りを続けて印字する（各走りは 3 行、
+            # 1 行目に B:。走りの印「F2:」「F1」「Q1:」が付く様式と付かない様式がある）。走りの 1 行目の位置で分ける
+            cols = _page_cols or COLS
+            starts = sorted({round(w['top'], 1) for w in row_words
+                             if (w['text'] == 'B:' and cols['bd_label'][0] <= w['x0'] < cols['bd_label'][1])
+                             or (w['text'] in STATUS_WORDS and w['x0'] >= cols['seconds'][0])})
+            blocks = []
+            for s in starts:
+                if not blocks or s - blocks[-1] >= 5:
+                    blocks.append(s)
+            if not blocks or abs(blocks[0] - rtop) >= 2:
+                blocks = [rtop] + [s for s in blocks if abs(s - rtop) >= 2]
+            for j, btop in enumerate(blocks):
+                bbot = (blocks[j + 1] - 3) if j + 1 < len(blocks) else band_bot
+                blk = _parse_block(row_words, btop, bbot, False)
+                rec = dict(ident); rec.update(blk)
+                rec['run_label'] = _run_label(row_words, btop, bbot)
+                rec['block_index'] = j
+                rec['q_block'] = None
+                rec['section'] = section
+                rec['best_score'] = None
+                if j == 0 and cols.get('best_col', (-1, -1))[1] > 0:
+                    bs = _first_text(row_words, 'best_col', btop)
+                    rec['best_score'] = float(bs) if bs and _is_num(bs) else None
+                if j > 0:
+                    rec['rank'] = None  # 順位と同点の値は選手の 1 行目（最後の走り）にだけ印字される
+                    rec['tie'] = None
+                rec['counting'] = True
+                records.append(rec)
+    return records, section, carry
 
 
 def parse_moguls_results(path):
     """Parses a FIS single-run moguls result PDF (Q / Q1 / Q2 / F1 / F2).
     Returns (meta, records); one record per athlete score block."""
+    global _doc_cols
+    _doc_cols = None
     with pdfplumber.open(path) as pdf:
         pages = pdf.pages
         first_words, first_text = pages[0].extract_words(), pages[0].extract_text() or ''
         jury_page_words, jury_page_text = None, None
         records = []
+        section = None  # 総合の報告の区切り（ページをまたいで続く）
         for pno, page in enumerate(pages, start=1):
             words = page.extract_words()
             jury_words = [w for w in words if w['text'] == 'Jury']
@@ -416,7 +498,16 @@ def parse_moguls_results(path):
                 jury_page_words = words
                 jury_page_text = page.extract_text() or ''
             table_end = jury_words[0]['top'] - 2 if jury_words else None
-            records.extend(_parse_page_athletes(words, page.height, table_end, pno))
+            recs, section, carry = _parse_page_athletes(words, page.height, table_end, pno, section)
+            if carry and records:
+                last = records[-1]
+                for k, blk in enumerate(carry, start=1):
+                    rec = {x: last.get(x) for x in ('bib', 'fis_code', 'name', 'noc', 'yb', 'reserve_judge', 'section')}
+                    rec.update(blk)
+                    rec.update({'rank': None, 'tie': None, 'q_block': None, 'best_score': None, 'counting': True,
+                                'block_index': (last.get('block_index') or 0) + k})
+                    records.append(rec)
+            records.extend(recs)
     meta = _extract_meta(first_words, first_text, jury_page_words, jury_page_text)
     meta['parser_version'] = PARSER_VERSION
     meta['q_layout'] = any(r['q_block'] for r in records)

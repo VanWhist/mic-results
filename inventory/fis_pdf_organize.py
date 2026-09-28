@@ -30,6 +30,10 @@ def pdf_gd(path):
         t = (pdf.pages[0].extract_text() or '')[:1500]
     tl = t.lower().replace('’', "'")
     g = None
+    # 見出しの「Men's Moguls」「Ladies' Moguls」を最優先（ANC 2018 の男子 8029・8031 は本文の別の語で女子と誤判定していた）
+    mh = re.search(r"\b(men|women|ladies)'?s?\s+(?:dual\s+)?moguls", tl)
+    if mh:
+        return ('M' if mh.group(1) == 'men' else 'W'), ('DM' if 'dual' in mh.group(0) else 'MO'), t.split('\n')[:3]
     # 性別は見出しの語か、ANC 2017 の (F0000)/(M0000) で見る。'individual' に 'dual' が含まれるので語頭で見る
     if re.search(r"(women|ladies|lady)'?s?", tl) or '(f0000)' in tl: g = 'W'
     elif re.search(r"\bmen'?s?\b", tl) or '(m0000)' in tl: g = 'M'

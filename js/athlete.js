@@ -54,8 +54,11 @@ function renderProfile(a) {
   box.append(kv);
 }
 
-function myRuns(a) {
-  return runs.filter((r) => r.athlete_id === a.athlete_id && r.counting !== false)
+// 年表・推移は 1 ラウンド 1 本（採用の走り）。allRuns: true なら、2 本の良い方の決勝のもう 1 本（q_block R1・R2 の採用外。
+// 正式な走り）も含める（Q2 報告の Q1 参考は Q1 のラウンドと同じ走りなので含めない）
+function myRuns(a, allRuns = false) {
+  return runs.filter((r) => r.athlete_id === a.athlete_id
+      && (r.counting !== false || (allRuns && (r.q_block === 'R1' || r.q_block === 'R2'))))
     .map((r) => ({ run: r, ctx: rounds.get(r.round_id) }))
     .filter((x) => x.ctx)
     .sort((x, y) => (y.run.date || '').localeCompare(x.run.date || '') || (y.ctx.event.event_id).localeCompare(x.ctx.event.event_id)
@@ -176,7 +179,7 @@ function renderChart(a) {
 
 function renderJumps(a) {
   const box = clear(document.getElementById('jumps'));
-  const list = myRuns(a).filter(({ run }) => run.tier === 'detail' && run.status === 'OK' && (run.air || []).length);
+  const list = myRuns(a, true).filter(({ run }) => run.tier === 'detail' && run.status === 'OK' && (run.air || []).length);
   if (!list.length) { box.append(el('p', { class: 'meta', text: 'ジャッジ明細のある記録がまだありません。' })); return; }
   const tbody = el('tbody');
   for (const { run, ctx } of list) {

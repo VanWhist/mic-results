@@ -77,8 +77,12 @@ def make_round(cls, meta, records, rules, imported_at):
 
 
 def make_run(rec, rnd, rules):
-    # Q2 の PDF に並ぶ Q1 の走り（参考）だけ run_id に印を付ける。総合の部など、同じ走りを別の表に並べ直したラウンドは付けない
-    suffix = '-Q1ref' if (not rec.get('counting', True) and rec.get('q_block')) else ''
+    # Q2 の PDF に並ぶ Q1 の走り（参考）だけ run_id に印を付ける。総合の部など、同じ走りを別の表に並べ直したラウンドは付けない。
+    # 2 本の良い方で順位が付く決勝（q_block R1・R2）は、どちらが良い方かに関わらず 1 本目・2 本目の印を付ける
+    if rec.get('q_block') in ('R1', 'R2'):
+        suffix = '-' + rec['q_block']
+    else:
+        suffix = '-Q1ref' if (not rec.get('counting', True) and rec.get('q_block')) else ''
     run = {
         'run_id': f"{rnd['round_id']}-{rec['athlete_id']}{suffix}",
         'round_id': rnd['round_id'], 'event_id': rnd['event_id'], 'season': rnd['season'], 'series': rnd['series'],
