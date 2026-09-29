@@ -71851,7 +71851,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:22, Rk 1, EF-1: R, Tot:16, Rk 1, QF-1: B, Tot:25, Rk 1, SF-1: R, Tot:16, Rk 1, F-1: R, Tot:15, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -71900,7 +71903,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:21, Rk 1, EF-1: R, Tot:13, Rk 1, QF-1: B, Tot:13, Rk 1, SF-1: R, Tot:25, Rk 1, F-1: B, Tot:10, Rk 2,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -71949,7 +71955,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:15, Rk 1, EF-1: R, Tot:19, Rk 1, QF-1: B, Tot:25, Rk 1, SF-1: B, Tot:0, DNF, F-1: B, Tot:14, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -71998,7 +72007,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:20, Rk 1, EF-1: R, Tot:16, Rk 1, QF-1: R, Tot:25, Rk 1, SF-1: B, Tot:9, Rk 2, F-1: R, Tot:11, Rk 2,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72047,7 +72059,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:17, Rk 1, EF-1: R, Tot:15, Rk 1, QF-1: R, Tot:12, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72096,7 +72111,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:25, Rk 1, EF-1: R, Tot:22, Rk 1, QF-1: B, Tot:0, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72145,7 +72163,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:17, Rk 1, EF-1: B, Tot:13, Rk 1, QF-1: R, Tot:0, DNF,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72194,7 +72215,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:21, Rk 1, EF-1: B, Tot:14, Rk 1, QF-1: R, Tot:0, DNF,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72243,7 +72267,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:25, Rk 1, EF-1: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72292,7 +72319,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:17, Rk 1, EF-1: B, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72341,7 +72371,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:22, Rk 1, R32-1: R, Tot:17, Rk 1, EF-1: R, Tot:11, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72390,7 +72423,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:13, Rk 1, EF-1: B, Tot:10, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72439,7 +72475,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:22, Rk 1, EF-1: B, Tot:9, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72488,7 +72527,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:22, Rk 1, EF-1: B, Tot:9, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72537,7 +72579,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:21, Rk 1, R32-1: B, Tot:25, Rk 1, EF-1: B, Tot:6, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72586,7 +72631,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:21, Rk 1, EF-1: B, Tot:3, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72635,7 +72683,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:20, Rk 1, R32-1: B, Tot:12, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72684,7 +72735,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:25, Rk 1, R32-1: R, Tot:10, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72733,7 +72787,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72782,7 +72839,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:18, Rk 1, R32-1: R, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72831,7 +72891,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:21, Rk 1, R32-1: B, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72880,7 +72943,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:19, Rk 1, R32-1: B, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72929,7 +72995,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:25, Rk 1, R32-1: R, Tot:5, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -72978,7 +73047,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:16, Rk 1, R32-1: B, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -73027,7 +73099,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:22, Rk 1, R32-1: B, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":1,
@@ -73076,7 +73151,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:25, Rk 1, R32-1: R, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73125,7 +73203,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:14, Rk 1, R32-1: B, Tot:3, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73174,7 +73255,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:16, Rk 1, R32-1: B, Tot:3, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73223,7 +73307,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:25, Rk 1, R32-1: R, Tot:3, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73272,7 +73359,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:14, Rk 1, R32-1: R, Tot:0, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73321,7 +73411,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:16, Rk 1, R32-1: R, Tot:0, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73370,7 +73463,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73419,7 +73515,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:11, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73468,7 +73567,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:11, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73517,7 +73619,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:9, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73566,7 +73671,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:9, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73615,7 +73723,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:9, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73664,7 +73775,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:7, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73713,7 +73827,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:6, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73762,7 +73879,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:5, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73811,7 +73931,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:4, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73860,7 +73983,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:4, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73909,7 +74035,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:3, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -73958,7 +74087,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:3, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -74007,7 +74139,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:0, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -74056,7 +74191,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -74105,7 +74243,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -74154,7 +74295,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_0016_M_DM.pdf",
 "page":2,
@@ -74203,7 +74347,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:24, Rk 1, QF-1: R, Tot:14, Rk 1, SF-1: B, Tot:13, Rk 1, F-1: B, Tot:13, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74252,7 +74399,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:13, Rk 1, QF-1: R, Tot:18, Rk 1, SF-1: B, Tot:13, Rk 1, F-1: R, Tot:12, Rk 2,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74301,7 +74451,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:18, Rk 1, QF-1: R, Tot:14, Rk 1, SF-1: R, Tot:12, Rk 2, F-1: B, Tot:15, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74350,7 +74503,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: B, Tot:17, Rk 1, QF-1: R, Tot:15, Rk 1, SF-1: R, Tot:12, Rk 2, F-1: R, Tot:10, Rk 2,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74399,7 +74555,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:24, Rk 1, EF-1: B, Tot:14, Rk 1, QF-1: B, Tot:11, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74448,7 +74607,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:14, Rk 1, EF-1: B, Tot:17, Rk 1, QF-1: B, Tot:11, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74497,7 +74659,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: R, Tot:18, Rk 1, QF-1: B, Tot:10, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74546,7 +74711,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:20, Rk 1, EF-2: B, Tot:18, Rk 1, QF-1: B, Tot:7, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74595,7 +74763,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:17, Rk 1, EF-1: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74644,7 +74815,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: R, Tot:11, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74693,7 +74867,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: R, Tot:8, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74742,7 +74919,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:21, Rk 1, EF-3: R, Tot:8, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74791,7 +74971,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: R, Tot:7, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74840,7 +75023,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:14, Rk 1, EF-1: R, Tot:7, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74889,7 +75075,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:25, Rk 1, EF-1: B, Tot:7, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74938,7 +75127,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:14, Rk 1, EF-1: R, Tot:1, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -74987,7 +75179,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:11, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75036,7 +75231,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:11, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75085,7 +75283,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:11, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75134,7 +75335,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75183,7 +75387,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:5, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75232,7 +75439,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75281,7 +75491,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:1, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,
@@ -75330,7 +75543,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_A/2015-16/SAJ2016_1943_5016_W_DM.pdf",
 "page":1,

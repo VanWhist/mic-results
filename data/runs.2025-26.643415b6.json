@@ -16789,6 +16789,4686 @@
 }
 },
 {
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538325",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":1,
+"bib":3,
+"athlete_id":"2538325",
+"fis_code":"2538325",
+"saj_no":null,
+"name":"GRAVENFORS Noel",
+"noc":"SWE",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-12:B,Tot:35,Rk1 8F-6:R,Tot:21,Rk1 QF-3:B,Tot:19,Rk1 SF-2:B,Tot:35,Rk 1 BigF:B,Tot:19,Rk1",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538063",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":2,
+"bib":57,
+"athlete_id":"2538063",
+"fis_code":"2538063",
+"saj_no":null,
+"name":"EGAN Jack",
+"noc":"USA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-2:R,Tot:30,Rk1 16F-1:B,Tot:19,Rk1 8F-1:B,Tot:20,Rk1 QF-1:R,Tot:35,Rk 1 SF-1:B,Tot:23,Rk1 BigF:R,Tot:16,Rk2",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537792",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":3,
+"bib":1,
+"athlete_id":"2537792",
+"fis_code":"2537792",
+"saj_no":null,
+"name":"KROUPA Matyas",
+"noc":"CZE",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-16:B,Tot:20.5,Rk1 8F-8:R,Tot:25,Rk1 QF-4:B,Tot:21,Rk1 SF-2:R,DNF Small F: B, Tot: 35, Rk 1",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540343",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":4,
+"bib":21,
+"athlete_id":"2540343",
+"fis_code":"2540343",
+"saj_no":null,
+"name":"HAYASHI Ryoma",
+"noc":"JPN",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-14:B,Tot:19,Rk1 16F-7:B,Tot:19,Rk1 8F-4:B,Tot:19,Rk1 QF-2:B,Tot:35,Rk 1 SF-1:R,Tot:12,Rk2 SmallF:R,DNF",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538994",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":5,
+"bib":4,
+"athlete_id":"2538994",
+"fis_code":"2538994",
+"saj_no":null,
+"name":"HUFF Porter",
+"noc":"USA",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-9:R,Tot:31,Rk1 8F-5:B,Tot:19,Rk1 QF-3:R,Tot:16,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538852",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":6,
+"bib":7,
+"athlete_id":"2538852",
+"fis_code":"2538852",
+"saj_no":null,
+"name":"FUGERE Simon Philippon",
+"noc":"CAN",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-13:R,Tot:19,Rk1 8F-7:B,Tot:20,Rk1 QF-4:R,Tot:14,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539559",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":7,
+"bib":6,
+"athlete_id":"2539559",
+"fis_code":"2539559",
+"saj_no":null,
+"name":"LAMEILLE Noe",
+"noc":"FRA",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-12:R,Tot:24,Rk1 16F-6:B,Tot:20,Rk1 8F-3:R,Tot:18,Rk1 QF-2:R,DNF",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540692",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":8,
+"bib":45,
+"athlete_id":"2540692",
+"fis_code":"2540692",
+"saj_no":null,
+"name":"TAMANO Akihiro",
+"noc":"JPN",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-3:R,Tot:19,Rk1 8F-2:B,Tot:19,Rk1 QF-1:B,DNF",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539248",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":9,
+"bib":11,
+"athlete_id":"2539248",
+"fis_code":"2539248",
+"saj_no":null,
+"name":"LEWIS Camden",
+"noc":"USA",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-5:R,Tot:25,Rk1 8F-3:B,Tot:17,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538999",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":10,
+"bib":12,
+"athlete_id":"2538999",
+"fis_code":"2538999",
+"saj_no":null,
+"name":"UNGER Quinn",
+"noc":"CAN",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-20:B,Tot:26,Rk1 16F-10:B,Tot:35,Rk1 8F-5:R,Tot:16,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539666",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":11,
+"bib":20,
+"athlete_id":"2539666",
+"fis_code":"2539666",
+"saj_no":null,
+"name":"DUFOUR Alexis",
+"noc":"CAN",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-7:R,Tot:21,Rk1 16F-4:R,Tot:18,Rk1 8F-2:R,Tot:16,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540040",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":12,
+"bib":25,
+"athlete_id":"2540040",
+"fis_code":"2540040",
+"saj_no":null,
+"name":"JOHANSSON Linus",
+"noc":"SWE",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-15:R,Tot:24,Rk1 16F-8:R,Tot:35,Rk1 8F-4:R,Tot:16,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540380",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":13,
+"bib":15,
+"athlete_id":"2540380",
+"fis_code":"2540380",
+"saj_no":null,
+"name":"DUHEM Hugo",
+"noc":"FRA",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-3:B,Tot:35,Rk1 16F-2:R,Tot:21,Rk1 8F-1:R,Tot:15,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540078",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":14,
+"bib":27,
+"athlete_id":"2540078",
+"fis_code":"2540078",
+"saj_no":null,
+"name":"DODD Milo",
+"noc":"GBR",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-27:R,Tot:23,Rk1 16F-14:R,Tot:19,Rk1 8F-7:R,Tot:15,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538855",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":15,
+"bib":10,
+"athlete_id":"2538855",
+"fis_code":"2538855",
+"saj_no":null,
+"name":"BOUGIE Louis-Philippe",
+"noc":"CAN",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-21:B,Tot:22,Rk1 16F-11:R,Tot:24,Rk1 8F-6:B,Tot:14,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539549",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":16,
+"bib":22,
+"athlete_id":"2539549",
+"fis_code":"2539549",
+"saj_no":null,
+"name":"SERVOZ Noe",
+"noc":"FRA",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-30:B,Tot:35,Rk1 16F-15:B,Tot:35,Rk1 8F-8:B,Tot:10,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538079",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":17,
+"bib":5,
+"athlete_id":"2538079",
+"fis_code":"2538079",
+"saj_no":null,
+"name":"COHEN Jiah",
+"noc":"USA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-4: B, Tot: 17, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537616",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":18,
+"bib":9,
+"athlete_id":"2537616",
+"fis_code":"2537616",
+"saj_no":null,
+"name":"MOBERG Elis",
+"noc":"SWE",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-1: R, Tot: 16, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538593",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":19,
+"bib":13,
+"athlete_id":"2538593",
+"fis_code":"2538593",
+"saj_no":null,
+"name":"SAUVE Mavrick",
+"noc":"CAN",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-14: B, Tot: 16, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540060",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":20,
+"bib":16,
+"athlete_id":"2540060",
+"fis_code":"2540060",
+"saj_no":null,
+"name":"KIM Rihu",
+"noc":"KOR",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-13:B,Tot:35,Rk1 16F-7:R,Tot:16,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539013",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":21,
+"bib":47,
+"athlete_id":"2539013",
+"fis_code":"2539013",
+"saj_no":null,
+"name":"COOPER Owen",
+"noc":"CAN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-6:R,Tot:23,Rk1 16F-3:B,Tot:16,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539227",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":22,
+"bib":48,
+"athlete_id":"2539227",
+"fis_code":"2539227",
+"saj_no":null,
+"name":"LANKES Xaver",
+"noc":"GER",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-26:B,Tot:25,Rk1 16F-13:B,Tot:16,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540849",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":23,
+"bib":55,
+"athlete_id":"2540849",
+"fis_code":"2540849",
+"saj_no":null,
+"name":"SPETT Edvin",
+"noc":"SWE",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-11:R,Tot:26,Rk1 16F-6:R,Tot:15,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537221",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":24,
+"bib":18,
+"athlete_id":"2537221",
+"fis_code":"2537221",
+"saj_no":null,
+"name":"MICKEL Freddie",
+"noc":"USA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-31:B,Tot:28,Rk1 16F-16:R,Tot:14.5,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538751",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":25,
+"bib":8,
+"athlete_id":"2538751",
+"fis_code":"2538751",
+"saj_no":null,
+"name":"GAY Paul Andrea",
+"noc":"FRA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-4:B,Tot:25,Rk1 16F-2:B,Tot:14,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539588",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":26,
+"bib":23,
+"athlete_id":"2539588",
+"fis_code":"2539588",
+"saj_no":null,
+"name":"VERDAGUER FORN Anton",
+"noc":"ESP",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-22:R,Tot:27,Rk1 16F-11:B,Tot:11,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537619",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":27,
+"bib":17,
+"athlete_id":"2537619",
+"fis_code":"2537619",
+"saj_no":null,
+"name":"LUNDHOLM Vilgot",
+"noc":"SWE",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-10:B,Tot:24,Rk1 16F-5:B,Tot:10,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539451",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":28,
+"bib":35,
+"athlete_id":"2539451",
+"fis_code":"2539451",
+"saj_no":null,
+"name":"RONKAINEN Matias",
+"noc":"FIN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-18:B,Tot:25,Rk1 16F-9:B,Tot:4,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539055",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":29,
+"bib":44,
+"athlete_id":"2539055",
+"fis_code":"2539055",
+"saj_no":null,
+"name":"HIRAOKA Byron",
+"noc":"JPN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-23:B,Tot:24,Rk1 16F-12:R,Tot:0,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538750",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":30,
+"bib":2,
+"athlete_id":"2538750",
+"fis_code":"2538750",
+"saj_no":null,
+"name":"TENE Antoine",
+"noc":"FRA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-8: B, DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539200",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":31,
+"bib":19,
+"athlete_id":"2539200",
+"fis_code":"2539200",
+"saj_no":null,
+"name":"ORGELDINGER Jon",
+"noc":"GER",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-29:B,Tot:20,Rk1 16F-15:R,DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538054",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":32,
+"bib":14,
+"athlete_id":"2538054",
+"fis_code":"2538054",
+"saj_no":null,
+"name":"LITTLEFIELD Chase",
+"noc":"USA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-19:R,Tot:28,Rk1 16F-10:R,DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541653",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":33,
+"bib":37,
+"athlete_id":"2541653",
+"fis_code":"2541653",
+"saj_no":null,
+"name":"TRUJILLO MESSNER Oscar Manuel",
+"noc":"ESP",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-14: R, Tot: 16, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541341",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":34,
+"bib":42,
+"athlete_id":"2541341",
+"fis_code":"2541341",
+"saj_no":null,
+"name":"CRUICKSHANK Tyler",
+"noc":"GBR",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-29: R, Tot: 15, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539054",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":35,
+"bib":53,
+"athlete_id":"2539054",
+"fis_code":"2539054",
+"saj_no":null,
+"name":"NAGATA Mashiro",
+"noc":"JPN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-7: B, Tot: 14, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539211",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":36,
+"bib":46,
+"athlete_id":"2539211",
+"fis_code":"2539211",
+"saj_no":null,
+"name":"IBRAGIMOV Ilnar",
+"noc":"KAZ",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-21: R, Tot: 13, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537488",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":37,
+"bib":52,
+"athlete_id":"2537488",
+"fis_code":"2537488",
+"saj_no":null,
+"name":"RASTRUBA Denis",
+"noc":"KAZ",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-27: B, Tot: 12, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540801",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":38,
+"bib":49,
+"athlete_id":"2540801",
+"fis_code":"2540801",
+"saj_no":null,
+"name":"QUIRICI Naele",
+"noc":"SUI",
+"yb":2011,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-6: B, Tot: 12, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541348",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":39,
+"bib":51,
+"athlete_id":"2541348",
+"fis_code":"2541348",
+"saj_no":null,
+"name":"STEWART Alexander",
+"noc":"GBR",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-10: R, Tot: 11, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540856",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":40,
+"bib":43,
+"athlete_id":"2540856",
+"fis_code":"2540856",
+"saj_no":null,
+"name":"DEGTYARYOV Alexey",
+"noc":"KAZ",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-12: B, Tot: 11, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540855",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":41,
+"bib":30,
+"athlete_id":"2540855",
+"fis_code":"2540855",
+"saj_no":null,
+"name":"KOROTKOV Daniil",
+"noc":"KAZ",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-15: B, Tot: 11, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540708",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":42,
+"bib":56,
+"athlete_id":"2540708",
+"fis_code":"2540708",
+"saj_no":null,
+"name":"CHARRIER Cesar",
+"noc":"FRA",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-23: R, Tot: 11, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538950",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":43,
+"bib":29,
+"athlete_id":"2538950",
+"fis_code":"2538950",
+"saj_no":null,
+"name":"MIYASHITA Sakuto",
+"noc":"JPN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-26: R, Tot: 10, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2538534",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":44,
+"bib":50,
+"athlete_id":"2538534",
+"fis_code":"2538534",
+"saj_no":null,
+"name":"ZVALENY Filip",
+"noc":"CZE",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-18: R, Tot: 10, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539842",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":45,
+"bib":54,
+"athlete_id":"2539842",
+"fis_code":"2539842",
+"saj_no":null,
+"name":"BOGNUDA Fedro",
+"noc":"SUI",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-4: R, Tot: 10, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537801",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":46,
+"bib":26,
+"athlete_id":"2537801",
+"fis_code":"2537801",
+"saj_no":null,
+"name":"ADRIANSSON Vincent",
+"noc":"SWE",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-20: R, Tot: 9, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539031",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":47,
+"bib":31,
+"athlete_id":"2539031",
+"fis_code":"2539031",
+"saj_no":null,
+"name":"NANAUMI Kaisei",
+"noc":"JPN",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-11: B, Tot: 9, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541652",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":48,
+"bib":36,
+"athlete_id":"2541652",
+"fis_code":"2541652",
+"saj_no":null,
+"name":"TRUJILLO MESSNER Remy Carlos",
+"noc":"ESP",
+"yb":2011,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-22: B, Tot: 8, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2540541",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":49,
+"bib":32,
+"athlete_id":"2540541",
+"fis_code":"2540541",
+"saj_no":null,
+"name":"OLEKSIUK Rostyslav",
+"noc":"UKR",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-31: R, Tot: 7, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539462",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":50,
+"bib":33,
+"athlete_id":"2539462",
+"fis_code":"2539462",
+"saj_no":null,
+"name":"DOSTAL Filip",
+"noc":"CZE",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-19: B, Tot: 7, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541240",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":51,
+"bib":28,
+"athlete_id":"2541240",
+"fis_code":"2541240",
+"saj_no":null,
+"name":"PYATAKOV Dmitriy",
+"noc":"KAZ",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-2: B, Tot: 5, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2541182",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":52,
+"bib":38,
+"athlete_id":"2541182",
+"fis_code":"2541182",
+"saj_no":null,
+"name":"LASSILA Kai",
+"noc":"FIN",
+"yb":2011,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-30: R, Tot: 0, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2539841",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":53,
+"bib":40,
+"athlete_id":"2539841",
+"fis_code":"2539841",
+"saj_no":null,
+"name":"ALBERTALLI Marco",
+"noc":"SUI",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-13: R, DNF",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-M-F1-2537599",
+"round_id":"2025-26-wjc-airolo-8365-M-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2026-03-22",
+"rank":54,
+"bib":39,
+"athlete_id":"2537599",
+"fis_code":"2537599",
+"saj_no":null,
+"name":"DOOLEY Thomas",
+"noc":"IRL",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-3: R, DNF",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+"page":3,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538763",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":1,
+"bib":8,
+"athlete_id":"2538763",
+"fis_code":"2538763",
+"saj_no":null,
+"name":"LAMONTAGNE Flavie",
+"noc":"CAN",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-11:R,Tot:21,Rk1 8F-6:B,Tot:21,Rk1 QF-3:B,Tot:21,Rk1 SF-2:B,Tot:19,Rk 1 BigF:B,Tot:19,Rk1",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540039",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":2,
+"bib":19,
+"athlete_id":"2540039",
+"fis_code":"2540039",
+"saj_no":null,
+"name":"HEDBERG Olivia",
+"noc":"SWE",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-7:R,Tot:30,Rk1 8F-4:B,Tot:23,Rk1 QF-2:B,Tot:28,Rk1 SF-1:R,Tot:18,Rk 1 BigF:R,Tot:16,Rk2",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539742",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":3,
+"bib":11,
+"athlete_id":"2539742",
+"fis_code":"2539742",
+"saj_no":null,
+"name":"JOHNSON Victoria",
+"noc":"USA",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-13:R,Tot:25,Rk1 8F-7:B,Tot:21,Rk1 QF-4:R,Tot:34,Rk1 SF-2:R,Tot:16,Rk 2 SmallF:B,Tot:22,Rk1",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540529",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":4,
+"bib":12,
+"athlete_id":"2540529",
+"fis_code":"2540529",
+"saj_no":null,
+"name":"NONOBE Riku",
+"noc":"JPN",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-2:B,Tot:18,Rk1 8F-1:R,Tot:19,Rk1 QF-1:R,Tot:22,Rk1 SF-1:B,Tot:17,Rk 2 SmallF:R,Tot:13,Rk2",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538430",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":5,
+"bib":3,
+"athlete_id":"2538430",
+"fis_code":"2538430",
+"saj_no":null,
+"name":"McLARNON Abby",
+"noc":"USA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-9:R,Tot:35,Rk1 8F-5:B,Tot:23,Rk1 QF-3:R,Tot:14,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2537719",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":6,
+"bib":6,
+"athlete_id":"2537719",
+"fis_code":"2537719",
+"saj_no":null,
+"name":"WAKIM Kareema",
+"noc":"AUS",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-4:B,Tot:18,Rk1 8F-2:R,Tot:35,Rk1 QF-1:B,Tot:13,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539131",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":7,
+"bib":4,
+"athlete_id":"2539131",
+"fis_code":"2539131",
+"saj_no":null,
+"name":"TANI Mio",
+"noc":"JPN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-5:R,Tot:30,Rk1 8F-3:B,Tot:28,Rk1 QF-2:R,Tot:7,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2541285",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":8,
+"bib":32,
+"athlete_id":"2541285",
+"fis_code":"2541285",
+"saj_no":null,
+"name":"MARTIN Alivia",
+"noc":"USA",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-15:B,Tot:35,Rk1 8F-8:B,Tot:29,Rk1 QF-4:B,Tot:1,Rk2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540042",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":9,
+"bib":7,
+"athlete_id":"2540042",
+"fis_code":"2540042",
+"saj_no":null,
+"name":"NILSSON Nova",
+"noc":"SWE",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-1:R,Tot:34,Rk1 8F-1:B,Tot:16,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538897",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":10,
+"bib":5,
+"athlete_id":"2538897",
+"fis_code":"2538897",
+"saj_no":null,
+"name":"KRUGER Eden",
+"noc":"USA",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-12:B,Tot:20,Rk1 8F-6:R,Tot:14,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538892",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":11,
+"bib":16,
+"athlete_id":"2538892",
+"fis_code":"2538892",
+"saj_no":null,
+"name":"PEDERSON Emily",
+"noc":"USA",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-14:R,Tot:29,Rk1 8F-7:R,Tot:14,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539124",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":12,
+"bib":2,
+"athlete_id":"2539124",
+"fis_code":"2539124",
+"saj_no":null,
+"name":"BOYCHUK Citrine",
+"noc":"CAN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-8:B,Tot:35,Rk1 8F-4:R,Tot:12,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540216",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":13,
+"bib":20,
+"athlete_id":"2540216",
+"fis_code":"2540216",
+"saj_no":null,
+"name":"ROBLAIN Vicky",
+"noc":"CAN",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-10:B,Tot:26,Rk1 8F-5:R,Tot:12,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539929",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":14,
+"bib":25,
+"athlete_id":"2539929",
+"fis_code":"2539929",
+"saj_no":null,
+"name":"MIZUNUMA Yukina",
+"noc":"JPN",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"8F-3: R, Tot: 7, Rk 2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2541241",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":15,
+"bib":33,
+"athlete_id":"2541241",
+"fis_code":"2541241",
+"saj_no":null,
+"name":"VOLOVIKOVA Valeriya",
+"noc":"KAZ",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-31:R,Tot:33,Rk1 16F-16:R,Tot:18,Rk1 8F-8:R,Tot:6,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539209",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":16,
+"bib":10,
+"athlete_id":"2539209",
+"fis_code":"2539209",
+"saj_no":null,
+"name":"FEKLISTOVA Yuliya",
+"noc":"KAZ",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-3:R,Tot:18,Rk1 8F-2:B,Tot:0,Rk2",
+"stage":"1/8 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538150",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":17,
+"bib":1,
+"athlete_id":"2538150",
+"fis_code":"2538150",
+"saj_no":null,
+"name":"COOTE Xanthia",
+"noc":"AUS",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-16: B, Tot: 17, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538689",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":18,
+"bib":17,
+"athlete_id":"2538689",
+"fis_code":"2538689",
+"saj_no":null,
+"name":"TUETA Margaux",
+"noc":"FRA",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-3: B, Tot: 17, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539684",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":19,
+"bib":22,
+"athlete_id":"2539684",
+"fis_code":"2539684",
+"saj_no":null,
+"name":"FOREST Raphaelle",
+"noc":"CAN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-2: R, Tot: 17, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540000",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":20,
+"bib":38,
+"athlete_id":"2540000",
+"fis_code":"2540000",
+"saj_no":null,
+"name":"RUIZ LOPEZ Erika",
+"noc":"ESP",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-4: R, Tot: 17, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2537886",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":21,
+"bib":13,
+"athlete_id":"2537886",
+"fis_code":"2537886",
+"saj_no":null,
+"name":"PASSARETTA Manuela",
+"noc":"ITA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-12: R, Tot: 15, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539095",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":22,
+"bib":27,
+"athlete_id":"2539095",
+"fis_code":"2539095",
+"saj_no":null,
+"name":"HELVOIGT Miranda",
+"noc":"CAN",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-11: B, Tot: 14, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538575",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":23,
+"bib":23,
+"athlete_id":"2538575",
+"fis_code":"2538575",
+"saj_no":null,
+"name":"PERSSON Lenna",
+"noc":"NZL",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-13: B, Tot: 10, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540511",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":24,
+"bib":37,
+"athlete_id":"2540511",
+"fis_code":"2540511",
+"saj_no":null,
+"name":"BUTLER Lucy",
+"noc":"GBR",
+"yb":2008,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-10: R, Tot: 9, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2537081",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":25,
+"bib":9,
+"athlete_id":"2537081",
+"fis_code":"2537081",
+"saj_no":null,
+"name":"ECKLE Laura",
+"noc":"GER",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-14: B, Tot: 6, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538191",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":26,
+"bib":34,
+"athlete_id":"2538191",
+"fis_code":"2538191",
+"saj_no":null,
+"name":"KISIL Yuliana",
+"noc":"UKR",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-5: B, Tot: 5, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540857",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":27,
+"bib":35,
+"athlete_id":"2540857",
+"fis_code":"2540857",
+"saj_no":null,
+"name":"MOKINA Yuliya",
+"noc":"KAZ",
+"yb":2010,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-7: B, Tot: 5, Rk 2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539184",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":28,
+"bib":24,
+"athlete_id":"2539184",
+"fis_code":"2539184",
+"saj_no":null,
+"name":"TLAPAKOVA Zuzana",
+"noc":"CZE",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-2:R,Tot:25,Rk1 16F-1:B,Tot:1,Rk2",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539971",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":29,
+"bib":14,
+"athlete_id":"2539971",
+"fis_code":"2539971",
+"saj_no":null,
+"name":"TORRES Mahlia",
+"noc":"USA",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-15: R, DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540636",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":30,
+"bib":36,
+"athlete_id":"2540636",
+"fis_code":"2540636",
+"saj_no":null,
+"name":"BERGHUIS Floortje",
+"noc":"NED",
+"yb":2011,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-15:B,Tot:19,Rk1 16F-8:R,DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540786",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":31,
+"bib":30,
+"athlete_id":"2540786",
+"fis_code":"2540786",
+"saj_no":null,
+"name":"BROAD Beatrix",
+"noc":"GBR",
+"yb":2009,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-9: B, DNF",
+"stage":"1/16 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540785",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":32,
+"bib":26,
+"athlete_id":"2540785",
+"fis_code":"2540785",
+"saj_no":null,
+"name":"BROAD Romilly",
+"noc":"GBR",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-15: R, Tot: 16, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2540802",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":33,
+"bib":29,
+"athlete_id":"2540802",
+"fis_code":"2540802",
+"saj_no":null,
+"name":"SCANZIO Alissa",
+"noc":"SUI",
+"yb":2011,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-2: B, Tot: 10, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539655",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":34,
+"bib":28,
+"athlete_id":"2539655",
+"fis_code":"2539655",
+"saj_no":null,
+"name":"TIMPONE Sofia Carla",
+"noc":"ITA",
+"yb":2007,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-31: B, Tot: 2, Rk 2",
+"stage":"1/32 Final"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2538642",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":null,
+"bib":15,
+"athlete_id":"2538642",
+"fis_code":"2538642",
+"saj_no":null,
+"name":"BERTRAND Lise",
+"noc":"FRA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"DNS",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"16F-6: B, DNS",
+"stage":"Qualification"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2025-26-wjc-airolo-8365-W-F1-2539336",
+"round_id":"2025-26-wjc-airolo-8365-W-F1",
+"event_id":"2025-26-wjc-airolo-8365",
+"season":"2025-26",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2026-03-22",
+"rank":null,
+"bib":21,
+"athlete_id":"2539336",
+"fis_code":"2539336",
+"saj_no":null,
+"name":"VUILLOUD Rose",
+"noc":"FRA",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"DNS",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"32F-18: B, DNS",
+"stage":"Qualification"
+},
+"provenance":{
+"pdf":"WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
 "run_id":"2025-26-8122-Q-2532001",
 "round_id":"2025-26-8122-Q",
 "event_id":"2025-26-ruka-8122",
@@ -178547,7 +183227,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:19, Rk 1/ EF-4: R, Tot:25, Rk 1/ QF-2: B, Tot:25, Rk 1/ SF-1: R, Tot:14, Rk 1/ F-1: R, Tot:19, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178596,7 +183279,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:19, Rk 1/ EF-7: B, Tot:21, Rk 1/ QF-4: R, Tot:13, Rk 1/ SF-2: R, Tot:24, Rk 1/ F-1: B, Tot:6, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178645,7 +183331,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:14, Rk 1/ EF-1: B, Tot:16, Rk 1/ QF-1: R, Tot:16, Rk 1/ SF-1: B, Tot:11, Rk 2/ SmF-1: R, Tot:14, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178694,7 +183383,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:24, Rk 1/ EF-5: B, Tot:16, Rk 1/ QF-3: R, Tot:15, Rk 1/ SF-2: B, Tot:1, Rk 2/ SmF-1: B, Tot:11, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178743,7 +183435,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: B, Tot:23, Rk 1/ EF-8: R, Tot:15, Rk 1/ QF-4: B, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178792,7 +183487,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:16, Rk 1/ EF-6: R, Tot:25, Rk 1/ QF-3: B, Tot:10, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178841,7 +183539,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:13, Rk 1/ EF-2: R, Tot:15, Rk 1/ QF-1: B, Tot:9, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178890,7 +183591,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:16, Rk 1/ EF-3: B, Tot:16, Rk 1/ QF-2: R, Tot:0, DNF/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178939,7 +183643,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: B, Tot:22, Rk 1/ R32-15: R, Tot:15, Rk 1/ EF-8: B, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -178988,7 +183695,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:16, Rk 1/ EF-2: B, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179037,7 +183747,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: R, Tot:18, Rk 1/ R32-6: B, Tot:13, Rk 1/ EF-3: R, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179086,7 +183799,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: R, Tot:24, Rk 1/ R32-2: B, Tot:15, Rk 1/ EF-1: R, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179135,7 +183851,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: R, Tot:25, Rk 1/ R32-10: B, Tot:16, Rk 1/ EF-5: R, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179184,7 +183903,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: R, Tot:25, Rk 1/ R32-14: B, Tot:22, Rk 1/ EF-7: R, Tot:4, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179233,7 +183955,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: B, Tot:25, Rk 1/ R32-7: R, Tot:25, Rk 1/ EF-4: B, Tot:0, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179282,7 +184007,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: R, Tot:19, Rk 1/ R32-11: B, Tot:24, Rk 1/ EF-6: B, Tot:0, DNF/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179331,7 +184059,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: B, Tot:25, Rk 1/ R32-6: R, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179380,7 +184111,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:13, Rk 1/ R32-4: R, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179429,7 +184163,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:25, Rk 1/ R32-1: B, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179478,7 +184215,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: B, Tot:19, Rk 1/ R32-2: R, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179527,7 +184267,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: B, Tot:13, Rk 1/ R32-15: B, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179576,7 +184319,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: B, Tot:23, Rk 1/ R32-10: R, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179625,7 +184371,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: R, Tot:17, Rk 1/ R32-3: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179674,7 +184423,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:17, Rk 1/ R32-5: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179723,7 +184475,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:23, Rk 1/ R32-12: R, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179772,7 +184527,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:20, Rk 1/ R32-13: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179821,7 +184579,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:25, Rk 1/ R32-8: R, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179870,7 +184631,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: B, Tot:24, Rk 1/ R32-14: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179919,7 +184683,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:21, Rk 1/ R32-16: R, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -179968,7 +184735,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:25, Rk 1/ R32-9: B, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -180017,7 +184787,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: R, Tot:14, Rk 1/ R32-11: R, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -180066,7 +184839,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: R, Tot:20, Rk 1/ R32-7: B, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":1,
@@ -180115,7 +184891,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: R, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180164,7 +184943,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180213,7 +184995,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: B, Tot:11, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180262,7 +185047,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: B, Tot:8, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180311,7 +185099,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:8, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180360,7 +185151,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: B, Tot:7, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180409,7 +185203,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: B, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180458,7 +185255,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: R, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180507,7 +185307,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: B, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180556,7 +185359,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180605,7 +185411,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180654,7 +185463,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: R, Tot:3, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180703,7 +185515,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:2, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180752,7 +185567,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: R, Tot:2, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180801,7 +185619,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180850,7 +185671,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: R, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180899,7 +185723,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180948,7 +185775,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -180997,7 +185827,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -181046,7 +185879,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -181095,7 +185931,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -181144,7 +185983,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -181193,7 +186035,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:0, DNS/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_0235_M_DM.pdf",
 "page":2,
@@ -181242,7 +186087,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:14, Rk 1/ QF-1: R, Tot:18, Rk 1/ SF-1: B, Tot:14, Rk 1/ F-1: R, Tot:13, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181291,7 +186139,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: R, Tot:16, Rk 1/ QF-4: B, Tot:15, Rk 1/ SF-2: R, Tot:15, Rk 1/ F-1: B, Tot:12, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181340,7 +186191,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:25, Rk 1/ EF-5: B, Tot:16, Rk 1/ QF-3: R, Tot:15, Rk 1/ SF-2: B, Tot:10, Rk 2/ SmF-1: B, Tot:13, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181389,7 +186243,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:25, Rk 1/ EF-3: R, Tot:17, Rk 1/ QF-2: R, Tot:25, Rk 1/ SF-1: R, Tot:11, Rk 2/ SmF-1: R, Tot:12, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181438,7 +186295,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:25, Rk 1/ EF-6: R, Tot:16, Rk 1/ QF-3: B, Tot:10, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181487,7 +186347,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:25, Rk 1/ EF-7: B, Tot:17, Rk 1/ QF-4: R, Tot:10, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181536,7 +186399,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:24, Rk 1/ EF-2: B, Tot:13, Rk 1/ QF-1: B, Tot:7, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181585,7 +186451,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:22, Rk 1/ EF-4: R, Tot:20, Rk 1/ QF-2: B, Tot:0, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181634,7 +186503,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: R, Tot:21, Rk 1/ EF-2: R, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181683,7 +186555,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:25, Rk 1/ EF-1: R, Tot:11, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181732,7 +186607,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:25, Rk 1/ EF-5: R, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181781,7 +186659,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:24, Rk 1/ EF-8: B, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181830,7 +186711,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:19, Rk 1/ EF-6: B, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181879,7 +186763,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:24, Rk 1/ EF-3: B, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181928,7 +186815,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: B, Tot:22, Rk 1/ EF-7: R, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -181977,7 +186867,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:25, Rk 1/ EF-4: B, Tot:5, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182026,7 +186919,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182075,7 +186971,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:4, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182124,7 +187023,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182173,7 +187075,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182222,7 +187127,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: B, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182271,7 +187179,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: B, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182320,7 +187231,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182369,7 +187283,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:0, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182418,7 +187335,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:0, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182467,7 +187387,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: B, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182516,7 +187439,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182565,7 +187491,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: B, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182614,7 +187543,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182663,7 +187595,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2025-26/SAJ2026_4056_5235_W_DM.pdf",
 "page":1,
@@ -182712,7 +187647,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:21, Rk 1/ EF-7: B, Tot:25, Rk 1/ QF-1: R, Tot:23, Rk 1/ SF-2: R, Tot:25, Rk 1/ F-1: B, Tot:14, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -182761,7 +187699,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:19, Rk 1/ EF-4: R, Tot:17, Rk 1/ QF-1: B, Tot:13, Rk 1/ SF-1: R, Tot:15, Rk 1/ F-1: R, Tot:11, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -182810,7 +187751,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: B, Tot:24, Rk 1/ R32-1: R, Tot:18, Rk 1/ EF-6: B, Tot:18, Rk 1/ QF-1: B, Tot:19, Rk 1/ SF-2: B, Tot:0, Rk 2/ SmF-1: B, Tot:16, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -182859,7 +187803,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:23, Rk 1/ EF-1: B, Tot:19, Rk 1/ QF-1: R, Tot:25, Rk 1/ SF-1: B, Tot:10, Rk 2/ SmF-1: R, Tot:9, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -182908,7 +187855,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: B, Tot:16, Rk 1/ R32-1: R, Tot:18, Rk 1/ EF-3: R, Tot:14, Rk 1/ QF-1: R, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -182957,7 +187907,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: R, Tot:25, Rk 1/ R32-1: B, Tot:15, Rk 1/ EF-5: R, Tot:24, Rk 1/ QF-1: R, Tot:6, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183006,7 +187959,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:20, Rk 1/ EF-8: R, Tot:25, Rk 1/ QF-1: B, Tot:2, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183055,7 +188011,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-5: B, Tot:13, Rk 1/ R32-1: R, Tot:17, Rk 1/ EF-2: B, Tot:13, Rk 1/ QF-1: B, Tot:0, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183104,7 +188063,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-8: R, Tot:24, Rk 1/ R32-1: B, Tot:23, Rk 1/ EF-2: R, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183153,7 +188115,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:15, Rk 1/ EF-3: B, Tot:11, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183202,7 +188167,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: B, Tot:25, Rk 1/ R32-1: R, Tot:19, Rk 1/ EF-4: B, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183251,7 +188219,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:24, Rk 1/ R32-1: R, Tot:13, Rk 1/ EF-6: R, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183300,7 +188271,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: R, Tot:19, Rk 1/ R32-1: B, Tot:15, Rk 1/ EF-1: R, Tot:6, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183349,7 +188323,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:17, Rk 1/ EF-5: B, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183398,7 +188375,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: B, Tot:20, Rk 1/ R32-1: R, Tot:14, Rk 1/ EF-7: R, Tot:0, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183447,7 +188427,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: B, Tot:22, Rk 1/ R32-1: R, Tot:25, Rk 1/ EF-8: B, Tot:0, DNF/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183496,7 +188479,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: B, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183545,7 +188531,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: R, Tot:13, Rk 1/ R32-1: B, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183594,7 +188583,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:22, Rk 1/ R32-1: B, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183643,7 +188635,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: B, Tot:15, Rk 1/ R32-1: R, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183692,7 +188687,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: R, Tot:18, Rk 1/ R32-1: R, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183741,7 +188739,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: R, Tot:25, Rk 1/ R32-1: B, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183790,7 +188791,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:14, Rk 1/ R32-1: B, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183839,7 +188843,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: R, Tot:15, Rk 1/ R32-1: B, Tot:7, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183888,7 +188895,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: R, Tot:25, Rk 1/ R32-1: B, Tot:7, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183937,7 +188947,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: R, Tot:25, Rk 1/ R32-1: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -183986,7 +188999,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:16, Rk 1/ R32-1: R, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -184035,7 +189051,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:13, Rk 1/ R32-1: R, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -184084,7 +189103,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:16, Rk 1/ R32-1: B, Tot:4, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -184133,7 +189155,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:19, Rk 1/ R32-1: B, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -184182,7 +189207,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:13, Rk 1/ R32-1: R, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":1,
@@ -184231,7 +189259,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: R, Tot:15, Rk 1/ R32-1: B, Tot:0, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184280,7 +189311,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: B, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184329,7 +189363,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184378,7 +189415,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184427,7 +189467,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-5: R, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184476,7 +189519,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:11, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184525,7 +189571,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: B, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184574,7 +189623,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: B, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184623,7 +189675,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: R, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184672,7 +189727,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:9, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184721,7 +189779,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: R, Tot:9, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184770,7 +189831,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:9, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184819,7 +189883,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: B, Tot:7, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184868,7 +189935,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: B, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184917,7 +189987,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -184966,7 +190039,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: R, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185015,7 +190091,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: R, Tot:3, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185064,7 +190143,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:3, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185113,7 +190195,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185162,7 +190247,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-8: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185211,7 +190299,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: R, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185260,7 +190351,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185309,7 +190403,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185358,7 +190455,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: R, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185407,7 +190507,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: B, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185456,7 +190559,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: B, Tot:0, DNS/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_0592_M_DM.pdf",
 "page":2,
@@ -185505,7 +190611,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: B, Tot:15, Rk 1/ QF-1: B, Tot:21, Rk 1/ SF-2: R, Tot:18, Rk 1/ F-1: B, Tot:22, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185554,7 +190663,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:25, Rk 1/ EF-1: R, Tot:13, Rk 1/ QF-1: R, Tot:18, Rk 1/ SF-1: B, Tot:25, Rk 1/ F-1: R, Tot:3, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185603,7 +190715,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: R, Tot:20, Rk 1/ QF-1: B, Tot:25, Rk 1/ SF-1: R, Tot:0, DNF/ SmF-1: R, Tot:15, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185652,7 +190767,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-5: B, Tot:25, Rk 1/ QF-1: R, Tot:19, Rk 1/ SF-2: B, Tot:7, Rk 2/ SmF-1: B, Tot:10, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185701,7 +190819,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: R, Tot:24, Rk 1/ QF-1: B, Tot:7, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185750,7 +190871,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: R, Tot:18, Rk 1/ QF-1: B, Tot:6, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185799,7 +190923,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: R, Tot:24, Rk 1/ QF-1: R, Tot:4, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185848,7 +190975,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: R, Tot:21, Rk 1/ QF-1: R, Tot:0, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185897,7 +191027,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185946,7 +191079,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: R, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -185995,7 +191131,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: B, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186044,7 +191183,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: B, Tot:5, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186093,7 +191235,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: B, Tot:4, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186142,7 +191287,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: B, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186191,7 +191339,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: B, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186240,7 +191391,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-5: R, Tot:0, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186289,7 +191443,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_B/2025-26/SAJ2026_4061_5592_W_DM.pdf",
 "page":1,
@@ -186338,7 +191495,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: R, Tot:20, Rk 1/ R32-2: B, Tot:22, Rk 1/ EF-1: R, Tot:25, Rk 1/ QF-1: R, Tot:24, Rk 1/ SF-1: B, Tot:14, Rk 1/ F-1: R, Tot:16, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186387,7 +191547,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: R, Tot:21, Rk 1/ R32-14: B, Tot:25, Rk 1/ EF-7: R, Tot:18, Rk 1/ QF-4: R, Tot:24, Rk 1/ SF-2: R, Tot:14, Rk 1/ F-1: B, Tot:9, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186436,7 +191599,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-9: B, Tot:25, Rk 1/ R32-5: R, Tot:19, Rk 1/ EF-3: B, Tot:15, Rk 1/ QF-2: R, Tot:13, Rk 1/ SF-1: R, Tot:11, Rk 2/ SmF-1: R, Tot:17, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186485,7 +191651,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: B, Tot:15, Rk 1/ R32-10: R, Tot:19, Rk 1/ EF-5: R, Tot:14, Rk 1/ QF-3: R, Tot:20, Rk 1/ SF-2: B, Tot:11, Rk 2/ SmF-1: B, Tot:8, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186534,7 +191703,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-16: R, Tot:25, Rk 1/ R32-8: B, Tot:14, Rk 1/ EF-4: R, Tot:25, Rk 1/ QF-2: B, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186583,7 +191755,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-24: R, Tot:24, Rk 1/ R32-12: B, Tot:25, Rk 1/ EF-6: R, Tot:25, Rk 1/ QF-3: B, Tot:5, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186632,7 +191807,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-5: B, Tot:25, Rk 1/ R32-3: R, Tot:20, Rk 1/ EF-2: B, Tot:18, Rk 1/ QF-1: B, Tot:1, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186681,7 +191859,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: B, Tot:23, Rk 1/ R32-15: R, Tot:16, Rk 1/ EF-8: B, Tot:24, Rk 1/ QF-4: B, Tot:1, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186730,7 +191911,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:13, Rk 1/ R32-9: B, Tot:25, Rk 1/ EF-5: B, Tot:11, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186779,7 +191963,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: R, Tot:23, Rk 1/ R32-6: B, Tot:18, Rk 1/ EF-3: R, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186828,7 +192015,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-25: B, Tot:18, Rk 1/ R32-13: R, Tot:23, Rk 1/ EF-7: B, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186877,7 +192067,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:14, Rk 1/ R32-4: R, Tot:19, Rk 1/ EF-2: R, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186926,7 +192119,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:20, Rk 1/ R32-16: R, Tot:13, Rk 1/ EF-8: R, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -186975,7 +192171,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: B, Tot:24, Rk 1/ R32-1: R, Tot:23, Rk 1/ EF-1: B, Tot:0, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187024,7 +192223,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: B, Tot:24, Rk 1/ R32-7: B, Tot:18, Rk 1/ EF-4: B, Tot:0, DNF/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187073,7 +192275,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: B, Tot:25, Rk 1/ R32-11: R, Tot:25, Rk 1/ EF-6: B, Tot:0, DNF/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187122,7 +192327,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-32: R, Tot:24, Rk 1/ R32-16: B, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187171,7 +192379,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:17, Rk 1/ R32-8: R, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187220,7 +192431,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: R, Tot:21, Rk 1/ R32-15: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187269,7 +192483,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: B, Tot:24, Rk 1/ R32-7: R, Tot:7, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187318,7 +192535,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: R, Tot:25, Rk 1/ R32-6: R, Tot:7, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187367,7 +192587,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-8: R, Tot:22, Rk 1/ R32-4: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187416,7 +192639,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:25, Rk 1/ R32-5: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187465,7 +192691,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: B, Tot:25, Rk 1/ R32-10: B, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187514,7 +192743,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: B, Tot:18, Rk 1/ R32-3: B, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187563,7 +192795,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: B, Tot:15, Rk 1/ R32-2: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187612,7 +192847,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:25, Rk 1/ R32-1: B, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187661,7 +192899,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:19, Rk 1/ R32-13: B, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187710,7 +192951,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: B, Tot:19, Rk 1/ R32-14: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":1,
@@ -187759,7 +193003,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: B, Tot:25, Rk 1/ R32-11: B, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -187808,7 +193055,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:21, Rk 1/ R32-12: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -187857,7 +193107,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-17: R, Tot:25, Rk 1/ R32-9: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -187906,7 +193159,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:12, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -187955,7 +193211,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:11, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188004,7 +193263,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: R, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188053,7 +193315,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: R, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188102,7 +193367,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:8, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188151,7 +193419,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-25: R, Tot:7, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188200,7 +193471,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: R, Tot:7, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188249,7 +193523,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188298,7 +193575,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: R, Tot:6, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188347,7 +193627,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-4: B, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188396,7 +193679,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188445,7 +193731,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: B, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188494,7 +193783,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: B, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188543,7 +193835,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188592,7 +193887,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-8: B, Tot:3, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188641,7 +193939,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-12: B, Tot:2, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188690,7 +193991,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: R, Tot:2, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188739,7 +194043,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-1: R, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188788,7 +194095,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-13: R, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188837,7 +194147,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-32: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188886,7 +194199,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-24: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188935,7 +194251,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: R, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -188984,7 +194303,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: R, Tot:0, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189033,7 +194355,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189082,7 +194407,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-20: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189131,7 +194459,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-16: B, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189180,7 +194511,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: B, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189229,7 +194563,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-9: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":2,
@@ -189278,7 +194615,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-21: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189327,7 +194667,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189376,7 +194719,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-5: R, Tot:0, DNF/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189425,7 +194771,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189474,7 +194823,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189523,7 +194875,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189572,7 +194927,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189621,7 +194979,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-17: B, Tot:0, DNS/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_0406_M_DM.pdf",
 "page":3,
@@ -189670,7 +195031,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:22, Rk 1/ EF-1: B, Tot:25, Rk 1/ QF-1: R, Tot:13, Rk 1/ SF-1: B, Tot:17, Rk 1/ F-1: R, Tot:15, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189719,7 +195083,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: B, Tot:17, Rk 1/ EF-8: R, Tot:24, Rk 1/ QF-4: B, Tot:16, Rk 1/ SF-2: R, Tot:16, Rk 1/ F-1: B, Tot:10, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189768,7 +195135,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:19, Rk 1/ EF-4: R, Tot:15, Rk 1/ QF-2: B, Tot:13, Rk 1/ SF-1: R, Tot:8, Rk 2/ SmF-1: R, Tot:14, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189817,7 +195187,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:25, Rk 1/ EF-6: R, Tot:15, Rk 1/ QF-3: B, Tot:25, Rk 1/ SF-2: B, Tot:9, Rk 2/ SmF-1: B, Tot:11, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189866,7 +195239,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:20, Rk 1/ EF-3: B, Tot:19, Rk 1/ QF-2: R, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189915,7 +195291,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:20, Rk 1/ EF-2: R, Tot:14, Rk 1/ QF-1: B, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -189964,7 +195343,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:16, Rk 1/ EF-7: B, Tot:16, Rk 1/ QF-4: R, Tot:9, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190013,7 +195395,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:23, Rk 1/ EF-5: B, Tot:23, Rk 1/ QF-3: R, Tot:0, DNF/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190062,7 +195447,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:25, Rk 1/ EF-2: B, Tot:11, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190111,7 +195499,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:23, Rk 1/ EF-4: B, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190160,7 +195551,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:20, Rk 1/ EF-6: B, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190209,7 +195603,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: B, Tot:17, Rk 1/ EF-7: R, Tot:9, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190258,7 +195655,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:17, Rk 1/ EF-3: R, Tot:6, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190307,7 +195707,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:13, Rk 1/ EF-5: R, Tot:2, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190356,7 +195759,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:15, Rk 1/ EF-8: B, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190405,7 +195811,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:16, Rk 1/ EF-1: R, Tot:0, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190454,7 +195863,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190503,7 +195915,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:10, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190552,7 +195967,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190601,7 +196019,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:21, Rk 1/ R32-13: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190650,7 +196071,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:21, Rk 1/ R32-16: R, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190699,7 +196123,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: R, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190748,7 +196175,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: R, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190797,7 +196227,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:18, Rk 1/ R32-8: R, Tot:6, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190846,7 +196279,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:15, Rk 1/ R32-4: R, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190895,7 +196331,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: B, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190944,7 +196383,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:15, Rk 1/ R32-5: B, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -190993,7 +196435,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:22, Rk 1/ R32-1: B, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -191042,7 +196487,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":1,
@@ -191091,7 +196539,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:23, Rk 1/ R32-9: B, Tot:2, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191140,7 +196591,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: B, Tot:0, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191189,7 +196643,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:20, Rk 1/ R32-12: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191238,7 +196695,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191287,7 +196747,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:10, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191336,7 +196799,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:7, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191385,7 +196851,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:5, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191434,7 +196903,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191483,7 +196955,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:4, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191532,7 +197007,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:3, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191581,7 +197059,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:2, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJJR/2025-26/SAJ2026_4065_5406_W_DM.pdf",
 "page":2,
@@ -191630,7 +197111,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:22, Rk 1/ EF-4: R, Tot:18, Rk 1/ QF-2: B, Tot:15, Rk 1/ SF-1: R, Tot:13, Rk 1/ F-1: R, Tot:14, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191679,7 +197163,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:25, Rk 1/ EF-7: B, Tot:17, Rk 1/ QF-4: R, Tot:13, Rk 1/ SF-2: R, Tot:22, Rk 1/ F-1: B, Tot:11, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191728,7 +197215,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:24, Rk 1/ EF-6: R, Tot:20, Rk 1/ QF-3: B, Tot:14, Rk 1/ SF-2: B, Tot:3, Rk 2/ SmF-1: B, Tot:13, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191777,7 +197267,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:22, Rk 1/ EF-1: B, Tot:13, Rk 1/ QF-1: R, Tot:14, Rk 1/ SF-1: B, Tot:12, Rk 2/ SmF-1: R, Tot:12, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191826,7 +197319,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: B, Tot:20, Rk 1/ EF-8: R, Tot:24, Rk 1/ QF-4: B, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191875,7 +197371,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:21, Rk 1/ EF-5: B, Tot:17, Rk 1/ QF-3: R, Tot:11, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191924,7 +197423,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:21, Rk 1/ EF-2: B, Tot:13, Rk 1/ QF-1: B, Tot:11, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -191973,7 +197475,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:16, Rk 1/ EF-3: B, Tot:17, Rk 1/ QF-2: R, Tot:10, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192022,7 +197527,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:35, Rk 1/ EF-2: R, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192071,7 +197579,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:20, Rk 1/ EF-1: R, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192120,7 +197631,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:25, Rk 1/ EF-3: R, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192169,7 +197683,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:22, Rk 1/ EF-5: R, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192218,7 +197735,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: B, Tot:24, Rk 1/ EF-7: R, Tot:8, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192267,7 +197787,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:24, Rk 1/ EF-4: B, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192316,7 +197839,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:14, Rk 1/ EF-6: B, Tot:5, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192365,7 +197891,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:17, Rk 1/ EF-8: B, Tot:1, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192414,7 +197943,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: B, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192463,7 +197995,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192512,7 +198047,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192561,7 +198099,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192610,7 +198151,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: R, Tot:5, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192659,7 +198203,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: B, Tot:4, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192708,7 +198255,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: B, Tot:4, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192757,7 +198307,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:24, Rk 1/ R32-1: B, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192806,7 +198359,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192855,7 +198411,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:3, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192904,7 +198463,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -192953,7 +198515,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: R, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":1,
@@ -193002,7 +198567,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: R, Tot:1, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":2,
@@ -193051,7 +198619,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: B, Tot:0, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":2,
@@ -193100,7 +198671,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: R, Tot:0, DNF/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":2,
@@ -193149,7 +198723,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:1, Rk 2/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":2,
@@ -193198,7 +198775,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:0, DNS/ R32-4: R, Tot:0, DNS/",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_0442_M_DM.pdf",
 "page":2,
@@ -193247,7 +198827,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: B, Tot:15, Rk 1/ QF-2: R, Tot:17, Rk 1/ SF-1: R, Tot:15, Rk 1/ F-1: R, Tot:13, Rk 1/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193296,7 +198879,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: B, Tot:18, Rk 1/ QF-4: R, Tot:13, Rk 1/ SF-2: R, Tot:13, Rk 1/ F-1: B, Tot:12, Rk 2/",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193345,7 +198931,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:21, Rk 1/ QF-1: R, Tot:18, Rk 1/ SF-1: B, Tot:10, Rk 2/ SmF-1: R, Tot:14, Rk 1/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193394,7 +198983,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:16, Rk 1/ EF-6: B, Tot:14, Rk 1/ QF-3: B, Tot:17, Rk 1/ SF-2: B, Tot:12, Rk 2/ SmF-1: B, Tot:11, Rk 2/",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193443,7 +199035,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: R, Tot:21, Rk 1/ QF-4: B, Tot:12, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193492,7 +199087,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: R, Tot:19, Rk 1/ QF-2: B, Tot:8, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193541,7 +199139,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:13, Rk 1/ EF-5: R, Tot:13, Rk 1/ QF-3: R, Tot:8, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193590,7 +199191,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: R, Tot:25, Rk 1/ QF-1: B, Tot:7, Rk 2/",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193639,7 +199243,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-5: B, Tot:12, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193688,7 +199295,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: R, Tot:11, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193737,7 +199347,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:17, Rk 1/ EF-3: R, Tot:10, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193786,7 +199399,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: R, Tot:7, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193835,7 +199451,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:14, Rk 1/ EF-4: B, Tot:6, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193884,7 +199503,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:14, Rk 1/ EF-1: R, Tot:4, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193933,7 +199555,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:13, Rk 1/ EF-8: B, Tot:4, Rk 2/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -193982,7 +199607,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: B, Tot:0, DNF/",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194031,7 +199659,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194080,7 +199711,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:12, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194129,7 +199763,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194178,7 +199815,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:11, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194227,7 +199867,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: B, Tot:9, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,
@@ -194276,7 +199919,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: R, Tot:8, Rk 2/",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2025-26/SAJ2026_4067_5442_W_DM.pdf",
 "page":1,

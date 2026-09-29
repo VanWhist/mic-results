@@ -1,0 +1,812 @@
+{
+ "_about": "FIS サイトから保存した海外大会のデュアルモーグル最終成績（etl/adapters/fis_dm_pdf/gen_registry.py が生成。手書き項目は保持）",
+ "events": [
+  {
+   "event_id": "2016-17-wjc-chiesainvalmalenco-8340",
+   "season": "2016-17",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "39476",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=39476&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2016-17/FIS2017_WJC_ChiesaInValmalenco_8340_M_DM_RLF.pdf",
+     "sha256": "d225df88d862e213f2a4e0e128fb865a29678833838441fbd53b21f5e375c5d0",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9752",
+     "gender": "M",
+     "codex": "8340",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2016-17/FIS2017_WJC_ChiesaInValmalenco_8339_W_DM_RLF.pdf",
+     "sha256": "f9fad4ac73a6df5838ca588fc5609e01b264dd0c258d0a21c98ae3cc81a02f7f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9751",
+     "gender": "W",
+     "codex": "8339",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-uvs-almaty-8399",
+   "season": "2016-17",
+   "series": "UVS",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Almaty",
+   "fis_event_id": "40095",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40095&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "UVS/2016-17/FIS2017_UVS_Almaty_8399_M_DM_RLF.pdf",
+     "sha256": "b3e257d91dd2515870e862067c59221e963693f60aace63ca9a61c4dc0b1a38a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9945",
+     "gender": "M",
+     "codex": "8399",
+     "src_type": "RLF"
+    },
+    {
+     "path": "UVS/2016-17/FIS2017_UVS_Almaty_8398_W_DM_RLF.pdf",
+     "sha256": "be93c107d10aa34a9e1a23a7a0ba3b259b65a7d78ed8571d4a5a60adb8e95a8a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9944",
+     "gender": "W",
+     "codex": "8398",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-nac-valstcome-8221",
+   "season": "2016-17",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Val St-Come",
+   "fis_event_id": "40146",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40146&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2016-17/FIS2017_NAC_ValStCome_8221_M_DM_RLF.pdf",
+     "sha256": "3867cd144d83ab395792dda53058534a060fab34a17e17960d85a3f0af4c40cb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9866",
+     "gender": "M",
+     "codex": "8221",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2016-17-nac-northstar-8508",
+   "season": "2016-17",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Northstar",
+   "fis_event_id": "40628",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40628&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2016-17/FIS2017_NAC_Northstar_8508_M_DM_RLF.pdf",
+     "sha256": "37c03543ac97ed2505e521df051cb80236d11c28add82c0e627e57691f3e4e88",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10002",
+     "gender": "M",
+     "codex": "8508",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-wjc-duved-8273",
+   "season": "2017-18",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Duved",
+   "fis_event_id": "41276",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=41276&seasoncode=2018",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8273_M_DM_RLF.pdf",
+     "sha256": "e288c100eb3a4e3bbcb339495af29c396420a9e112eff45efae9800b35ceef6c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10554",
+     "gender": "M",
+     "codex": "8273",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2017-18/FIS2018_WJC_Duved_8272_W_DM_RLF.pdf",
+     "sha256": "3d4ea11ec5b35da4c3c514949701aef045450f4dd4a9889daebf099c69923370",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10553",
+     "gender": "W",
+     "codex": "8272",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-nac-calgary-8430",
+   "season": "2017-18",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Calgary",
+   "fis_event_id": "42533",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42533&seasoncode=2018",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2017-18/FIS2018_NAC_Calgary_8430_M_DM_RLF.pdf",
+     "sha256": "08288c53e1f40e616a85d9f19e6a30105a2273e2365f984edf7f727a02495668",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10780",
+     "gender": "M",
+     "codex": "8430",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2017-18/FIS2018_NAC_Calgary_8429_W_DM_RLF.pdf",
+     "sha256": "478ec735fb59b1117313cc29ae2554e4490cc5f36ef0ac409389e46945fc67b3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10779",
+     "gender": "W",
+     "codex": "8429",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2017-18-nac-killington-8562",
+   "season": "2017-18",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Killington",
+   "fis_event_id": "42622",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42622&seasoncode=2018",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2017-18/FIS2018_NAC_Killington_8562_M_DM_RLF.pdf",
+     "sha256": "516a30a9e1b66ab3a996054969c85c73280d3c77dbd312fdfd1abcf928502b56",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10910",
+     "gender": "M",
+     "codex": "8562",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2017-18/FIS2018_NAC_Killington_8561_W_DM_RLF.pdf",
+     "sha256": "527ff9002c1f8cc77905100b83c9e60d008412e169e561a2bbbaf6eafb7a76b0",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10909",
+     "gender": "W",
+     "codex": "8561",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2017-18-nac-killington-8562-W-F1",
+     "printed": 45,
+     "actual": 44,
+     "basis": "最終成績の表は 44 名で順位は 1 位から抜けずに並ぶ。FIS 公式サイトの結果（raceid 10909）も 1〜44 位の 44 名（2026-09-29 に確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2018-19-nac-steamboat-8825",
+   "season": "2018-19",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Steamboat",
+   "fis_event_id": "43482",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=43482&seasoncode=2019",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_Steamboat_8825_M_DM_RLF.pdf",
+     "sha256": "6bc5cb39d8ed8dc62d4b5e2ee0fee0b8dc99ac67be69bb9a0ce321ecd4b9e058",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11593",
+     "gender": "M",
+     "codex": "8825",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_Steamboat_8824_W_DM_RLF.pdf",
+     "sha256": "1e1b646e4fc8722cd04e94bde2953a003dfc4246a0178083f2cc9775c06ef926",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11592",
+     "gender": "W",
+     "codex": "8824",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2018-19-nac-steamboat-8825-M-F1",
+     "printed": 63,
+     "actual": 62,
+     "basis": "最終成績の表は 62 名で順位は 1 位から抜けずに並ぶ。FIS 公式サイトの結果（raceid 11593）も 1〜55 位と途中棄権 6 名・出走なし 1 名の計 62 名（2026-09-29 に確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2018-19-uvs-krasnoyarsk-8683",
+   "season": "2018-19",
+   "series": "UVS",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Krasnoyarsk",
+   "fis_event_id": "44492",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44492&seasoncode=2019",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "UVS/2018-19/FIS2019_UVS_Krasnoyarsk_8683_M_DM_RLF.pdf",
+     "sha256": "dc04fbe99e689361e90e8b028755e28c5933bdbd77f9149904db839af04454e9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11717",
+     "gender": "M",
+     "codex": "8683",
+     "src_type": "RLF"
+    },
+    {
+     "path": "UVS/2018-19/FIS2019_UVS_Krasnoyarsk_8682_W_DM_RLF.pdf",
+     "sha256": "5df1139108c55a5bd114760f14cbe7fcb72b94ad18371de1246d7ebaec3128c4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11716",
+     "gender": "W",
+     "codex": "8682",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-wjc-chiesainvalmalenco-8570",
+   "season": "2018-19",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "44507",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44507&seasoncode=2019",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8570_M_DM_RLF.pdf",
+     "sha256": "8d0edbb7e7b4407467c9cf7e7cf18e9cb14eec3d44367941487460e447f20b4a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11737",
+     "gender": "M",
+     "codex": "8570",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2018-19/FIS2019_WJC_ChiesaInValmalenco_8569_W_DM_RLF.pdf",
+     "sha256": "03797dc51b81f35d1b67d1c206bda2021c4fdbe1d5a3777000c439db03bfed64",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11736",
+     "gender": "W",
+     "codex": "8569",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-nac-apexmountain-8452",
+   "season": "2018-19",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "44567",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44567&seasoncode=2019",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_ApexMountain_8452_M_DM_RLF.pdf",
+     "sha256": "429178329e2bca880bb5984ba9493cf22cecd8c184f759f5b86e1b6873c75b3a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11870",
+     "gender": "M",
+     "codex": "8452",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2018-19/FIS2019_NAC_ApexMountain_8451_W_DM_RLF.pdf",
+     "sha256": "b7ba85f10d6acc7d3d0ab5c59ad485925981dbda227203fcb7711eb3936da69b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11869",
+     "gender": "W",
+     "codex": "8451",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2018-19-nac-apexmountain-8452-M-F1",
+     "printed": 62,
+     "actual": 61,
+     "basis": "最終成績の表は 61 名で順位は 1 位から抜けずに並ぶ。FIS 公式サイトの結果（raceid 11870）も 1〜61 位の 61 名（2026-09-29 に確認）"
+    }
+   ]
+  },
+  {
+   "event_id": "2020-21-wjc-krasnoyarsk-8612",
+   "season": "2020-21",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Krasnoyarsk",
+   "fis_event_id": "48417",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48417&seasoncode=2021",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+     "sha256": "564a1bdf0c2a648ac27973045ae36cbe90e03eeaf884836fc085b6b119f0825b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13770",
+     "gender": "M",
+     "codex": "8612",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+     "sha256": "dfb2574c874e78b4901ce5911cb916850c6e99ea686853628a74339508aafa29",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13769",
+     "gender": "W",
+     "codex": "8613",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-wjc-chiesainvalmalenco-8301",
+   "season": "2021-22",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "49463",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49463&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2021-22/FIS2022_WJC_ChiesaInValmalenco_8301_M_DM_RLF.pdf",
+     "sha256": "1b5bb971fbd6ff534593f68fbe59a5fca9ae32dc20cfcf4e72b62718802f41a9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14373",
+     "gender": "M",
+     "codex": "8301",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2021-22/FIS2022_WJC_ChiesaInValmalenco_8302_W_DM_RLF.pdf",
+     "sha256": "8694794cc5b5e2eb224c9171088f686aed83781fc329400894f9a1f938061719",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14372",
+     "gender": "W",
+     "codex": "8302",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-nac-deervalley-8512",
+   "season": "2021-22",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "50744",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50744&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_DeerValley_8512_W_DM_RLF.pdf",
+     "sha256": "86d59df69da6362afdf54d6d98cdd59ecb76473cd44d981ac5e9bba4398ff2a1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14606",
+     "gender": "W",
+     "codex": "8512",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2021-22-nac-killington-8528",
+   "season": "2021-22",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Killington",
+   "fis_event_id": "50746",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=50746&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2021-22/FIS2022_NAC_Killington_8528_W_DM_RLF.pdf",
+     "sha256": "474f7c37832216d0c02153be8255650dff6a1ede531444d769bd0b2686d5f2d2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14618",
+     "gender": "W",
+     "codex": "8528",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-nac-apexmountain-8586",
+   "season": "2022-23",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "52866",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52866&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2022-23/FIS2023_NAC_ApexMountain_8586_M_DM_RLF.pdf",
+     "sha256": "fc8b14f9f84692cf2dd432d08909010d0efb8a2769ba8fd56e6046890230bbfe",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15699",
+     "gender": "M",
+     "codex": "8586",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2022-23/FIS2023_NAC_ApexMountain_8587_W_DM_RLF.pdf",
+     "sha256": "7288273eff5a6ef72a6bdf416859c6aaa085de112d1fe95e6eec5a52eb9e90b8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15698",
+     "gender": "W",
+     "codex": "8587",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-wjc-chiesainvalmalenco-8350",
+   "season": "2022-23",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "53325",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53325&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2022-23/FIS2023_WJC_ChiesaInValmalenco_8350_M_DM_RLF.pdf",
+     "sha256": "4f5968b4b9311271db2a10f26e434675dcd28d947cead4019e698b8176a58b23",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15452",
+     "gender": "M",
+     "codex": "8350",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2022-23/FIS2023_WJC_ChiesaInValmalenco_8351_W_DM_RLF.pdf",
+     "sha256": "cd77e11dbfa706c8367dce5c4eb7542805d2b092b0e3b172f840837d41c9955f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15451",
+     "gender": "W",
+     "codex": "8351",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wjc-chiesainvalmalenco-8219",
+   "season": "2023-24",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Chiesa in Valmalenco",
+   "fis_event_id": "53794",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53794&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2023-24/FIS2024_WJC_ChiesaInValmalenco_8219_M_DM_RLF.pdf",
+     "sha256": "cdf6603f9233f36a0165446768e51d993224e55425330139d2be2f5e8509271b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16388",
+     "gender": "M",
+     "codex": "8219",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2023-24/FIS2024_WJC_ChiesaInValmalenco_8218_W_DM_RLF.pdf",
+     "sha256": "5cb2a009b507e2234679c8751d0c8a1658e2898ed8d3e9766c23cac2d8a6c902",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16387",
+     "gender": "W",
+     "codex": "8218",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wjc-almaty-8433",
+   "season": "2024-25",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Almaty",
+   "fis_event_id": "56250",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=56250&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2024-25/FIS2025_WJC_Almaty_8433_M_DM_RLF.pdf",
+     "sha256": "16a7a2553c37ed6052f5684dbc69e3109ee924f653e3f0e2197b45ff2cb9ba9b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17627",
+     "gender": "M",
+     "codex": "8433",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2024-25/FIS2025_WJC_Almaty_8434_W_DM_RLF.pdf",
+     "sha256": "1ab395a55b2042124e9abcf4684b4b7f90f95a08326954f4fa9c60414bbc6f69",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17626",
+     "gender": "W",
+     "codex": "8434",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-uvs-torinobardonecchia-8495",
+   "season": "2024-25",
+   "series": "UVS",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Torino-Bardonecchia",
+   "fis_event_id": "57151",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57151&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "UVS/2024-25/FIS2025_UVS_TorinoBardonecchia_8495_M_DM_RLF.pdf",
+     "sha256": "7c0080f3389cf26565a90d93b67e4d0110532f7367de9e924b4cc64a72c9073c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17731",
+     "gender": "M",
+     "codex": "8495",
+     "src_type": "RLF"
+    },
+    {
+     "path": "UVS/2024-25/FIS2025_UVS_TorinoBardonecchia_8496_W_DM_RLF.pdf",
+     "sha256": "852064373658e44f5711e92290e31531071f1011c7de4203cd738a5546281dd4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17730",
+     "gender": "W",
+     "codex": "8496",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-wjc-airolo-8365",
+   "season": "2025-26",
+   "series": "WJC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Airolo",
+   "fis_event_id": "58253",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58253&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "WJC/2025-26/FIS2026_WJC_Airolo_8365_M_DM_RLF.pdf",
+     "sha256": "6d5289e5213f55190dfa9085c13f6820c150a4c01974c442929a4966cd6d00d5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18675",
+     "gender": "M",
+     "codex": "8365",
+     "src_type": "RLF"
+    },
+    {
+     "path": "WJC/2025-26/FIS2026_WJC_Airolo_8364_W_DM_RLF.pdf",
+     "sha256": "8e5b5edd9eb328ec603c66de7f8030c3234d3b837687a4b6c8d23510b5280a66",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18674",
+     "gender": "W",
+     "codex": "8364",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  }
+ ]
+}

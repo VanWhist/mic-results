@@ -11,7 +11,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -37,7 +37,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":35,
+"n_results":39,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -97,7 +97,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -121,7 +121,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2018-19",
 "2020-21"
@@ -146,7 +146,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19"
 ],
@@ -170,7 +170,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -196,7 +196,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":51,
+"n_results":57,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -307,7 +307,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":18,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -335,7 +335,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -363,7 +363,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":18,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -390,7 +390,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":19,
+"n_results":24,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -454,7 +454,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":18,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -506,7 +506,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2018-19",
@@ -534,7 +534,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -560,7 +560,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -611,7 +611,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -640,7 +640,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -661,7 +661,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -689,7 +689,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":30,
+"n_results":34,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -742,7 +742,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -790,7 +790,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2018-19"
 ],
@@ -814,7 +814,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -888,7 +888,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -938,7 +938,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -966,7 +966,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":22,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -1015,7 +1015,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":28,
+"n_results":31,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -1047,7 +1047,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":16,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -1122,7 +1122,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -1175,7 +1175,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -1201,7 +1201,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -1222,7 +1222,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2015-16",
 "2018-19",
@@ -1252,7 +1252,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2020-21",
 "2022-23",
@@ -1306,7 +1306,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":11,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -1333,7 +1333,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -1360,7 +1360,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":17,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -1379,9 +1379,9 @@
 "athlete_id":"2530486",
 "fis_code":"2530486",
 "saj_no":null,
-"name":"BEZGODOVA Yelizaveta",
+"name":"BEZGODOVA Elizaveta",
 "aliases":[
-"BEZGODOVA Elizaveta"
+"BEZGODOVA Yelizaveta"
 ],
 "noc":"RUS",
 "yb":1997,
@@ -1389,7 +1389,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -1417,7 +1417,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -1443,7 +1443,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2022-23"
 ],
@@ -1469,7 +1469,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2016-17"
 ],
@@ -1494,7 +1494,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -1520,7 +1520,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -1571,7 +1571,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -1596,7 +1596,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -1697,7 +1697,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":31,
+"n_results":34,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -1731,7 +1731,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -1757,7 +1757,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -1782,7 +1782,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":26,
+"n_results":30,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -1817,7 +1817,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -1844,7 +1844,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -1870,7 +1870,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -1889,14 +1889,16 @@
 "fis_code":"2538855",
 "saj_no":null,
 "name":"BOUGIE Louis- Philippe",
-"aliases":[],
+"aliases":[
+"BOUGIE Louis-Philippe"
+],
 "noc":"CAN",
 "yb":2007,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2025-26"
 ],
@@ -1920,7 +1922,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":19,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -1999,7 +2001,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -2025,7 +2027,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2021-22"
 ],
@@ -2049,7 +2051,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -2073,7 +2075,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -2094,7 +2096,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -2115,7 +2117,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -2163,7 +2165,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":40,
+"n_results":44,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -2224,7 +2226,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -2248,7 +2250,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -2274,7 +2276,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -2293,7 +2295,8 @@
 "saj_no":null,
 "name":"BUGAKOV Fyodor",
 "aliases":[
-"BUGAKOV Fedor"
+"BUGAKOV Fedor",
+"BUGAKOV Fyodor GROUP PHASE"
 ],
 "noc":"KAZ",
 "yb":2004,
@@ -2301,7 +2304,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":24,
+"n_results":28,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -2431,7 +2434,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2024-25"
 ],
@@ -2455,7 +2458,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -2479,7 +2482,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -2505,7 +2508,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -2554,7 +2557,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":36,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -2585,7 +2588,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2024-25"
 ],
@@ -2645,7 +2648,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2016-17"
 ],
@@ -2693,7 +2696,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -2727,7 +2730,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2019-20",
 "2022-23",
@@ -2759,7 +2762,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -2784,7 +2787,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -2812,7 +2815,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":12,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -2865,7 +2868,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -2890,7 +2893,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2016-17"
 ],
@@ -2916,7 +2919,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":75,
+"n_results":78,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -2977,7 +2980,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":16,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -3031,7 +3034,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -3055,7 +3058,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":73,
+"n_results":74,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -3143,7 +3146,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":36,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -3200,7 +3203,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":19,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -3256,7 +3259,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -3355,7 +3358,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -3452,7 +3455,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -3476,7 +3479,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2020-21",
 "2021-22"
@@ -3502,7 +3505,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":22,
+"n_results":25,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -3532,7 +3535,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -3559,7 +3562,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2023-24",
@@ -3613,7 +3616,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -3638,7 +3641,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2017-18"
 ],
@@ -3662,7 +3665,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -3687,7 +3690,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -3736,7 +3739,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -3764,7 +3767,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -3813,7 +3816,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":34,
 "seasons":[
 "2016-17",
 "2020-21",
@@ -3846,7 +3849,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":15,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -3945,7 +3948,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -3970,7 +3973,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -4019,7 +4022,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -4050,7 +4053,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":35,
+"n_results":41,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -4082,7 +4085,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2016-17",
 "2018-19"
@@ -4108,7 +4111,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -4258,7 +4261,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":12,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -4311,7 +4314,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -4335,7 +4338,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":17,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -4365,7 +4368,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":25,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -4395,7 +4398,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -4419,7 +4422,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18"
 ],
@@ -4443,7 +4446,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":11,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -4507,7 +4510,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2024-25"
 ],
@@ -4531,7 +4534,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -4555,7 +4558,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -4579,7 +4582,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -4654,7 +4657,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":16,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -4707,7 +4710,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -4736,7 +4739,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -4762,7 +4765,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -4814,7 +4817,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":29,
+"n_results":31,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -4844,7 +4847,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -4893,7 +4896,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -4918,7 +4921,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":20,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -4948,7 +4951,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -4973,7 +4976,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -5001,7 +5004,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":73,
+"n_results":80,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -5060,7 +5063,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -5108,7 +5111,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -5157,7 +5160,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":24,
+"n_results":28,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -5191,7 +5194,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":8,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -5218,7 +5221,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -5242,7 +5245,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -5268,7 +5271,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -5292,7 +5295,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2024-25"
 ],
@@ -5337,7 +5340,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -5361,7 +5364,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":28,
+"n_results":31,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -5417,7 +5420,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -5446,7 +5449,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -5497,7 +5500,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -5569,7 +5572,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":66,
+"n_results":70,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -5605,7 +5608,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -5629,7 +5632,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -5660,7 +5663,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18"
 ],
@@ -5681,7 +5684,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -5707,7 +5710,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":18,
 "seasons":[
 "2021-22",
 "2023-24",
@@ -5725,6 +5728,28 @@
 }
 },
 {
+"athlete_id":"2529439",
+"fis_code":"2529439",
+"saj_no":null,
+"name":"DYATKINA Antonina",
+"aliases":[],
+"noc":"RUS",
+"yb":1996,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2016-17",
+"2018-19"
+],
+"series":[
+"UVS"
+],
+"best":null
+},
+{
 "athlete_id":"2527071",
 "fis_code":"2527071",
 "saj_no":null,
@@ -5736,7 +5761,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -5934,7 +5959,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -5985,7 +6010,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -6006,7 +6031,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -6032,7 +6057,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -6083,7 +6108,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -6135,7 +6160,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -6211,7 +6236,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -6235,7 +6260,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -6310,7 +6335,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":16,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -6338,7 +6363,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":36,
+"n_results":43,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -6379,7 +6404,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -6458,7 +6483,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2016-17"
 ],
@@ -6479,7 +6504,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2017-18"
 ],
@@ -6578,7 +6603,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -6602,7 +6627,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2023-24"
 ],
@@ -6626,7 +6651,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -6650,7 +6675,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":9,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -6676,7 +6701,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -6701,7 +6726,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -6726,7 +6751,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -6774,7 +6799,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2025-26"
 ],
@@ -6799,7 +6824,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -6871,7 +6896,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19"
 ],
@@ -6919,7 +6944,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":24,
+"n_results":28,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -6950,7 +6975,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -7022,7 +7047,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":38,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -7055,7 +7080,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19",
 "2020-21"
@@ -7082,7 +7107,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":43,
+"n_results":44,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -7139,7 +7164,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -7236,7 +7261,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":22,
+"n_results":26,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -7266,7 +7291,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":11,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -7296,7 +7321,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -7323,7 +7348,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -7349,7 +7374,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2024-25"
 ],
@@ -7374,7 +7399,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -7391,14 +7416,16 @@
 "fis_code":"2530539",
 "saj_no":null,
 "name":"GERKEN SCHOFIELD Leonie",
-"aliases":[],
+"aliases":[
+"GERKENSCHOFIELD Leonie"
+],
 "noc":"GBR",
 "yb":1998,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -7420,14 +7447,16 @@
 "fis_code":"2530540",
 "saj_no":null,
 "name":"GERKEN SCHOFIELD Makayla",
-"aliases":[],
+"aliases":[
+"GERKENSCHOFIELD Makayla"
+],
 "noc":"GBR",
 "yb":1999,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":44,
+"n_results":47,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -7454,14 +7483,16 @@
 "fis_code":"2530541",
 "saj_no":null,
 "name":"GERKEN SCHOFIELD Thomas",
-"aliases":[],
+"aliases":[
+"GERKENSCHOFIELD Thomas"
+],
 "noc":"GBR",
 "yb":1998,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":18,
+"n_results":20,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -7491,7 +7522,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -7515,7 +7546,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":89,
+"n_results":90,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -7551,7 +7582,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -7576,7 +7607,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2022-23"
 ],
@@ -7602,7 +7633,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":29,
+"n_results":33,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -7656,7 +7687,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -7707,7 +7738,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19"
 ],
@@ -7731,7 +7762,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":26,
+"n_results":30,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -7762,7 +7793,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -7788,7 +7819,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -7817,7 +7848,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":62,
+"n_results":67,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -7842,14 +7873,16 @@
 "fis_code":"2530810",
 "saj_no":null,
 "name":"GOSSELIN Pier- Alexandre",
-"aliases":[],
+"aliases":[
+"GOSSELIN Pier-Alexandre"
+],
 "noc":"CAN",
 "yb":1997,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -7909,7 +7942,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -7936,7 +7969,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":68,
+"n_results":71,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -7967,7 +8000,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -7993,7 +8026,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -8041,7 +8074,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -8071,7 +8104,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":18,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -8100,7 +8133,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -8124,7 +8157,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -8200,7 +8233,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2016-17"
 ],
@@ -8225,7 +8258,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":31,
+"n_results":34,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -8256,7 +8289,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -8282,7 +8315,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -8306,7 +8339,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2023-24"
 ],
@@ -8354,7 +8387,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -8440,7 +8473,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -8466,7 +8499,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -8561,7 +8594,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":29,
+"n_results":30,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -8593,7 +8626,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -8617,7 +8650,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -8643,7 +8676,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2025-26"
 ],
@@ -8667,7 +8700,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":19,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -8694,7 +8727,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":25,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -8746,7 +8779,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -8772,7 +8805,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -8846,7 +8879,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2016-17",
 "2018-19"
@@ -8872,7 +8905,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":9,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -8922,7 +8955,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":12,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -9028,7 +9061,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":18,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -9054,7 +9087,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":69,
+"n_results":79,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -9087,7 +9120,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":19,
+"n_results":27,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -9115,7 +9148,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":46,
+"n_results":49,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -9148,7 +9181,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":31,
+"n_results":33,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -9178,7 +9211,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -9204,7 +9237,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -9254,7 +9287,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -9302,7 +9335,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -9435,7 +9468,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -9486,7 +9519,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -9535,7 +9568,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -9609,7 +9642,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2018-19",
@@ -9638,7 +9671,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -9662,7 +9695,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -9686,7 +9719,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":44,
+"n_results":48,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -9719,7 +9752,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2020-21"
 ],
@@ -9743,7 +9776,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -9769,7 +9802,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -9793,7 +9826,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -9818,7 +9851,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -9948,7 +9981,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2025-26"
 ],
@@ -9972,7 +10005,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2017-18"
 ],
@@ -9997,7 +10030,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -10023,7 +10056,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -10053,7 +10086,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2016-17"
 ],
@@ -10078,7 +10111,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -10143,7 +10176,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":56,
+"n_results":58,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -10173,7 +10206,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -10204,7 +10237,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -10229,7 +10262,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -10250,7 +10283,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2014-15",
 "2018-19"
@@ -10300,7 +10333,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -10326,7 +10359,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":20,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -10352,7 +10385,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":31,
+"n_results":37,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -10381,7 +10414,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":35,
+"n_results":42,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -10413,7 +10446,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":27,
+"n_results":29,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -10445,7 +10478,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -10526,7 +10559,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":30,
+"n_results":33,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -10550,9 +10583,9 @@
 "athlete_id":"2530279",
 "fis_code":"2530279",
 "saj_no":null,
-"name":"KEYES Liam",
+"name":"KEYES Liam Thomas",
 "aliases":[
-"KEYES Liam Thomas"
+"KEYES Liam"
 ],
 "noc":"GBR",
 "yb":1995,
@@ -10560,7 +10593,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -10595,7 +10628,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":13,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -10653,7 +10686,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":12,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -10734,7 +10767,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -10800,7 +10833,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -10818,14 +10851,16 @@
 "fis_code":"2538191",
 "saj_no":null,
 "name":"KISIL Yuliana",
-"aliases":[],
+"aliases":[
+"KISIL Yuliana Group Phase"
+],
 "noc":"UKR",
 "yb":2007,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -10855,7 +10890,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18"
 ],
@@ -10928,7 +10963,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2017-18"
@@ -10953,7 +10988,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -10977,7 +11012,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":18,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -11027,7 +11062,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":25,
+"n_results":29,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -11059,7 +11094,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":20,
 "seasons":[
 "2018-19",
 "2021-22"
@@ -11109,7 +11144,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2015-16",
 "2018-19"
@@ -11134,7 +11169,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":66,
+"n_results":68,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -11170,7 +11205,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -11197,7 +11232,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -11222,7 +11257,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -11247,7 +11282,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -11295,7 +11330,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":24,
+"n_results":27,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -11325,7 +11360,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -11351,7 +11386,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -11375,9 +11410,10 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
-"2017-18"
+"2017-18",
+"2020-21"
 ],
 "series":[
 "WJC"
@@ -11408,7 +11444,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":27,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -11436,7 +11472,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -11461,7 +11497,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -11487,7 +11523,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2015-16",
 "2017-18"
@@ -11512,7 +11548,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2024-25"
 ],
@@ -11573,7 +11609,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -11624,7 +11660,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -11650,7 +11686,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -11677,7 +11713,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -11719,7 +11755,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -11745,7 +11781,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -11770,7 +11806,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -11797,7 +11833,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":12,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -11827,7 +11863,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -11838,6 +11874,27 @@
 "run_score":49.56,
 "run_id":"2025-26-wjc-airolo-8358-M-Q-2541182"
 }
+},
+{
+"athlete_id":"2530495",
+"fis_code":"2530495",
+"saj_no":null,
+"name":"LATYSHEV Anton",
+"aliases":[],
+"noc":"RUS",
+"yb":1997,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2018-19"
+],
+"series":[
+"UVS"
+],
+"best":null
 },
 {
 "athlete_id":"2531687",
@@ -11851,7 +11908,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":20,
+"n_results":22,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -11907,7 +11964,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -11937,7 +11994,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2016-17"
 ],
@@ -12031,7 +12088,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -12055,7 +12112,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -12082,7 +12139,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":40,
+"n_results":45,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -12114,7 +12171,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -12138,7 +12195,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -12188,7 +12245,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -12213,7 +12270,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":20,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -12240,7 +12297,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":55,
+"n_results":57,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -12300,7 +12357,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2021-22"
 ],
@@ -12324,7 +12381,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":18,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -12351,7 +12408,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":22,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -12380,7 +12437,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":19,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -12431,7 +12488,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":22,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -12459,7 +12516,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -12486,7 +12543,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -12535,7 +12592,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":26,
+"n_results":28,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -12567,7 +12624,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":36,
+"n_results":43,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -12601,7 +12658,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -12626,7 +12683,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2019-20",
 "2022-23",
@@ -12655,7 +12712,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -12686,7 +12743,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -12712,7 +12769,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":30,
+"n_results":32,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -12845,7 +12902,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -12869,7 +12926,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -12922,7 +12979,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -12949,7 +13006,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -12998,7 +13055,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":12,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -13024,7 +13081,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":12,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -13073,7 +13130,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":20,
+"n_results":21,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -13108,7 +13165,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":71,
+"n_results":78,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -13163,7 +13220,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -13189,7 +13246,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -13216,7 +13273,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -13243,7 +13300,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":37,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -13374,7 +13431,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2015-16",
 "2017-18"
@@ -13399,7 +13456,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":36,
+"n_results":39,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -13455,7 +13512,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -13481,7 +13538,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2018-19",
 "2022-23"
@@ -13555,7 +13612,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -13582,7 +13639,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2025-26"
 ],
@@ -13663,7 +13720,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -13716,7 +13773,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -13740,7 +13797,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -13898,7 +13955,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -13925,7 +13982,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -13976,7 +14033,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -14036,7 +14093,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":27,
+"n_results":32,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -14071,7 +14128,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":25,
+"n_results":27,
 "seasons":[
 "2016-17",
 "2018-19",
@@ -14129,7 +14186,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -14150,7 +14207,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":32,
+"n_results":35,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -14180,7 +14237,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -14208,7 +14265,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":46,
+"n_results":49,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -14239,7 +14296,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -14267,7 +14324,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":16,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -14318,7 +14375,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":18,
+"n_results":24,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -14348,7 +14405,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2015-16",
 "2017-18"
@@ -14373,7 +14430,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -14479,7 +14536,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -14507,7 +14564,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -14532,7 +14589,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -14593,7 +14650,7 @@
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2023-24"
 ],
@@ -14619,7 +14676,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -14648,7 +14705,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -14676,7 +14733,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -14700,7 +14757,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -14724,7 +14781,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2024-25"
 ],
@@ -14748,7 +14805,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":49,
+"n_results":53,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -14783,7 +14840,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -14809,7 +14866,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -14919,7 +14976,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -14967,7 +15024,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -14994,7 +15051,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":10,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -15023,7 +15080,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":45,
+"n_results":50,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -15081,7 +15138,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":11,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -15133,7 +15190,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -15157,7 +15214,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -15174,14 +15231,16 @@
 "fis_code":"2532724",
 "saj_no":null,
 "name":"McQUINN George",
-"aliases":[],
+"aliases":[
+"MCQUINN George"
+],
 "noc":"USA",
 "yb":1998,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":21,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -15212,7 +15271,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":19,
+"n_results":26,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -15265,7 +15324,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -15289,7 +15348,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -15358,7 +15417,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":15,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -15385,7 +15444,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":10,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -15437,7 +15496,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -15477,6 +15536,27 @@
 }
 },
 {
+"athlete_id":"2534567",
+"fis_code":"2534567",
+"saj_no":null,
+"name":"NOVIKOV Vyacheslav",
+"aliases":[],
+"noc":"RUS",
+"yb":2003,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2020-21"
+],
+"series":[
+"WJC"
+],
+"best":null
+},
+{
 "athlete_id":"2532059",
 "fis_code":"2532059",
 "saj_no":null,
@@ -15490,7 +15570,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -15520,7 +15600,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":12,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -15546,7 +15626,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -15572,7 +15652,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -15672,7 +15752,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -15724,7 +15804,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -15750,7 +15830,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":28,
+"n_results":30,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -15780,7 +15860,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -15805,7 +15885,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":18,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -15834,7 +15914,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2025-26"
 ],
@@ -15897,6 +15977,27 @@
 }
 },
 {
+"athlete_id":"2531126",
+"fis_code":"2531126",
+"saj_no":null,
+"name":"OTROSCHENKO Anna",
+"aliases":[],
+"noc":"RUS",
+"yb":1997,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2018-19"
+],
+"series":[
+"UVS"
+],
+"best":null
+},
+{
 "athlete_id":"2534962",
 "fis_code":"2534962",
 "saj_no":null,
@@ -15908,7 +16009,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":34,
+"n_results":37,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -15938,7 +16039,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -15962,7 +16063,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2019-20",
 "2021-22",
@@ -15989,7 +16090,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":91,
+"n_results":96,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -16024,7 +16125,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -16050,7 +16151,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -16078,7 +16179,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2022-23"
 ],
@@ -16127,7 +16228,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -16163,7 +16264,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -16192,7 +16293,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -16241,7 +16342,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -16293,7 +16394,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -16317,7 +16418,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19"
 ],
@@ -16365,7 +16466,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":25,
+"n_results":28,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -16394,7 +16495,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -16418,7 +16519,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":23,
+"n_results":30,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -16450,7 +16551,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -16498,7 +16599,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -16646,7 +16747,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -16771,7 +16872,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -16820,7 +16921,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":13,
 "seasons":[
 "2019-20",
 "2021-22",
@@ -16877,7 +16978,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -16903,7 +17004,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2025-26"
 ],
@@ -16954,7 +17055,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -17015,7 +17116,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -17042,7 +17143,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2016-17"
 ],
@@ -17066,7 +17167,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2016-17",
 "2018-19"
@@ -17091,7 +17192,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":16,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -17191,7 +17292,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":29,
+"n_results":36,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -17247,7 +17348,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -17271,7 +17372,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -17295,7 +17396,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -17321,7 +17422,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -17369,7 +17470,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -17393,7 +17494,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":12,
+"n_results":15,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -17443,7 +17544,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":40,
+"n_results":42,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -17477,7 +17578,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -17531,7 +17632,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -17560,7 +17661,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -17587,7 +17688,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":27,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -17640,7 +17741,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":15,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -17752,7 +17853,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -17778,7 +17879,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":11,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -17804,7 +17905,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2017-18"
 ],
@@ -17828,7 +17929,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2025-26"
 ],
@@ -17852,7 +17953,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2024-25"
@@ -17878,7 +17979,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":14,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -17908,7 +18009,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -17935,7 +18036,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -17963,7 +18064,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2016-17",
 "2017-18"
@@ -18012,7 +18113,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -18040,7 +18141,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -18064,7 +18165,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2024-25"
 ],
@@ -18088,7 +18189,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -18112,7 +18213,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -18128,9 +18229,9 @@
 "athlete_id":"2537324",
 "fis_code":"2537324",
 "saj_no":null,
-"name":"RUSSAKOV Semyon",
+"name":"RUSAKOV Semyon",
 "aliases":[
-"RUSAKOV Semyon"
+"RUSSAKOV Semyon"
 ],
 "noc":"KAZ",
 "yb":2005,
@@ -18138,7 +18239,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":14,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -18167,7 +18268,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -18217,7 +18318,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":15,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -18245,7 +18346,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2016-17"
 ],
@@ -18325,7 +18426,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -18343,7 +18444,8 @@
 "saj_no":null,
 "name":"SAFIULINA Anastasiya",
 "aliases":[
-"SAFIULINA Anastasiia"
+"SAFIULINA Anastasiia",
+"SAFIULINA Anastasiia Forerunners"
 ],
 "noc":"RUS",
 "yb":1997,
@@ -18351,7 +18453,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -18407,7 +18509,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -18435,7 +18537,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -18459,7 +18561,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -18485,7 +18587,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2025-26"
@@ -18550,7 +18652,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -18622,7 +18724,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -18670,7 +18772,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -18694,7 +18796,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":9,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -18721,8 +18823,9 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
+"2017-18",
 "2018-19"
 ],
 "series":[
@@ -18769,7 +18872,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2017-18"
 ],
@@ -18793,7 +18896,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":19,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -18846,7 +18949,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":89,
+"n_results":94,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -18881,7 +18984,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2016-17"
 ],
@@ -18905,7 +19008,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2016-17"
 ],
@@ -18956,7 +19059,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -19038,7 +19141,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -19112,7 +19215,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":18,
+"n_results":21,
 "seasons":[
 "2015-16",
 "2021-22",
@@ -19164,7 +19267,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -19188,7 +19291,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -19262,7 +19365,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2014-15",
 "2016-17"
@@ -19287,7 +19390,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2020-21"
 ],
@@ -19335,7 +19438,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2018-19"
 ],
@@ -19359,7 +19462,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":11,
+"n_results":16,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -19391,7 +19494,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":18,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -19420,7 +19523,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":18,
+"n_results":20,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -19471,7 +19574,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":56,
+"n_results":60,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -19578,7 +19681,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2024-25"
 ],
@@ -19602,7 +19705,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -19680,7 +19783,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -19704,7 +19807,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22"
 ],
@@ -19776,7 +19879,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2017-18",
 "2022-23",
@@ -19807,7 +19910,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":24,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -19836,7 +19939,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -19860,7 +19963,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":16,
+"n_results":21,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -19888,7 +19991,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":9,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -19962,7 +20065,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":12,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -19989,7 +20092,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2021-22"
 ],
@@ -20013,7 +20116,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":17,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -20113,7 +20216,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2018-19"
 ],
@@ -20185,12 +20288,13 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2015-16",
 "2016-17"
 ],
 "series":[
+"UVS",
 "WJC"
 ],
 "best":{
@@ -20210,7 +20314,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2017-18"
 ],
@@ -20265,7 +20369,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2022-23"
 ],
@@ -20290,7 +20394,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":20,
+"n_results":27,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -20320,7 +20424,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -20359,6 +20463,27 @@
 }
 },
 {
+"athlete_id":"2532870",
+"fis_code":"2532870",
+"saj_no":null,
+"name":"TCVETKOV Viacheslav",
+"aliases":[],
+"noc":"RUS",
+"yb":2000,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2018-19"
+],
+"series":[
+"UVS"
+],
+"best":null
+},
+{
 "athlete_id":"2538750",
 "fis_code":"2538750",
 "saj_no":null,
@@ -20370,7 +20495,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":12,
 "seasons":[
 "2021-22",
 "2023-24",
@@ -20424,7 +20549,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2016-17",
 "2018-19"
@@ -20449,7 +20574,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2023-24"
 ],
@@ -20463,14 +20588,16 @@
 "fis_code":"2534848",
 "saj_no":null,
 "name":"THIVIERGE Charles- Olivier",
-"aliases":[],
+"aliases":[
+"THIVIERGE Charles-Olivier"
+],
 "noc":"CAN",
 "yb":2002,
 "affiliation":null,
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -20494,7 +20621,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":8,
 "seasons":[
 "2015-16",
 "2016-17"
@@ -20519,7 +20646,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -20544,7 +20671,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":17,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -20573,7 +20700,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -20597,7 +20724,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -20624,7 +20751,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -20650,7 +20777,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -20676,7 +20803,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -20701,7 +20828,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2025-26"
 ],
@@ -20725,7 +20852,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2022-23",
 "2023-24"
@@ -20751,7 +20878,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -20775,7 +20902,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -20799,7 +20926,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":15,
+"n_results":19,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -20832,7 +20959,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":16,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -20860,7 +20987,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -20884,7 +21011,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":19,
+"n_results":21,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -20934,7 +21061,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -21008,7 +21135,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2014-15",
 "2017-18"
@@ -21034,7 +21161,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -21058,7 +21185,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2024-25",
 "2025-26"
@@ -21084,7 +21211,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -21109,7 +21236,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":79,
+"n_results":88,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -21145,7 +21272,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":9,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -21195,7 +21322,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -21243,7 +21370,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2023-24",
 "2024-25",
@@ -21270,7 +21397,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":24,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -21301,7 +21428,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":23,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -21355,7 +21482,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":67,
+"n_results":69,
 "seasons":[
 "2018-19",
 "2022-23",
@@ -21386,7 +21513,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":56,
+"n_results":58,
 "seasons":[
 "2017-18",
 "2020-21",
@@ -21419,7 +21546,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -21467,7 +21594,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":14,
+"n_results":18,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -21500,7 +21627,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":13,
+"n_results":15,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -21533,7 +21660,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2025-26"
 ],
@@ -21557,7 +21684,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2023-24",
 "2024-25"
@@ -21583,7 +21710,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2020-21",
 "2021-22"
@@ -21608,7 +21735,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2016-17"
 ],
@@ -21632,7 +21759,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -21661,7 +21788,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":61,
+"n_results":63,
 "seasons":[
 "2017-18",
 "2021-22",
@@ -21693,7 +21820,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":8,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -21743,7 +21870,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":5,
 "seasons":[
 "2021-22",
 "2022-23"
@@ -21792,7 +21919,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2016-17"
 ],
@@ -21816,7 +21943,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":7,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -21842,7 +21969,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":66,
+"n_results":68,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -21877,7 +22004,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -21982,7 +22109,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2018-19"
 ],
@@ -22006,7 +22133,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":10,
 "seasons":[
 "2017-18",
 "2018-19"
@@ -22031,7 +22158,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2022-23"
 ],
@@ -22055,7 +22182,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":36,
+"n_results":40,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -22088,7 +22215,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":25,
+"n_results":28,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -22120,7 +22247,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":20,
+"n_results":24,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -22152,7 +22279,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":54,
+"n_results":59,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -22186,7 +22313,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2015-16",
 "2017-18",
@@ -22284,7 +22411,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":40,
+"n_results":42,
 "seasons":[
 "2019-20",
 "2021-22",
@@ -22344,7 +22471,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":75,
+"n_results":78,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -22383,7 +22510,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":12,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -22410,7 +22537,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2016-17",
 "2018-19"
@@ -22546,7 +22673,7 @@
 }
 ],
 "mic":null,
-"n_results":28,
+"n_results":29,
 "seasons":[
 "2019-20",
 "2022-23",
@@ -22605,7 +22732,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":17,
+"n_results":22,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -22637,7 +22764,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -22765,7 +22892,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
 "2021-22"
 ],
@@ -22789,7 +22916,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":23,
+"n_results":27,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -22868,7 +22995,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":1,
+"n_results":2,
 "seasons":[
 "2023-24"
 ],
@@ -22938,7 +23065,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
 "2015-16",
 "2017-18"
@@ -23113,7 +23240,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":8,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -23140,7 +23267,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":6,
 "seasons":[
 "2022-23",
 "2023-24",
@@ -23193,7 +23320,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":4,
 "seasons":[
 "2018-19"
 ],
@@ -23260,7 +23387,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2019-20",
 "2022-23",
@@ -23433,7 +23560,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -23514,7 +23641,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2019-20",
 "2022-23",
@@ -23620,7 +23747,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":11,
 "seasons":[
 "2019-20",
 "2022-23"
@@ -23770,7 +23897,7 @@
 "from":null,
 "to":null
 },
-"n_results":57,
+"n_results":58,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -25117,7 +25244,7 @@
 }
 ],
 "mic":null,
-"n_results":76,
+"n_results":77,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -25425,7 +25552,7 @@
 }
 ],
 "mic":null,
-"n_results":166,
+"n_results":170,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -26125,7 +26252,7 @@
 }
 ],
 "mic":null,
-"n_results":62,
+"n_results":64,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -27325,7 +27452,7 @@
 }
 ],
 "mic":null,
-"n_results":109,
+"n_results":111,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -28540,7 +28667,7 @@
 }
 ],
 "mic":null,
-"n_results":139,
+"n_results":144,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -29117,7 +29244,7 @@
 }
 ],
 "mic":null,
-"n_results":71,
+"n_results":74,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29614,7 +29741,7 @@
 }
 ],
 "mic":null,
-"n_results":125,
+"n_results":127,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30587,7 +30714,7 @@
 }
 ],
 "mic":null,
-"n_results":55,
+"n_results":56,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -31047,7 +31174,7 @@
 }
 ],
 "mic":null,
-"n_results":124,
+"n_results":125,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -31562,7 +31689,7 @@
 }
 ],
 "mic":null,
-"n_results":185,
+"n_results":187,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -32737,7 +32864,7 @@
 }
 ],
 "mic":null,
-"n_results":103,
+"n_results":104,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -33311,7 +33438,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -36314,7 +36441,7 @@
 }
 ],
 "mic":null,
-"n_results":136,
+"n_results":137,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -39943,7 +40070,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -40213,7 +40340,7 @@
 }
 ],
 "mic":null,
-"n_results":56,
+"n_results":57,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -40812,7 +40939,7 @@
 }
 ],
 "mic":null,
-"n_results":103,
+"n_results":105,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -40950,7 +41077,7 @@
 }
 ],
 "mic":null,
-"n_results":66,
+"n_results":70,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -41768,7 +41895,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":73,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -42259,7 +42386,7 @@
 }
 ],
 "mic":null,
-"n_results":118,
+"n_results":120,
 "seasons":[
 "2016-17",
 "2018-19",
@@ -42726,7 +42853,7 @@
 }
 ],
 "mic":null,
-"n_results":118,
+"n_results":119,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42978,7 +43105,7 @@
 }
 ],
 "mic":null,
-"n_results":29,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -44530,7 +44657,7 @@
 }
 ],
 "mic":null,
-"n_results":89,
+"n_results":91,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -45524,7 +45651,7 @@
 }
 ],
 "mic":null,
-"n_results":127,
+"n_results":130,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -45700,7 +45827,7 @@
 }
 ],
 "mic":null,
-"n_results":96,
+"n_results":98,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45769,7 +45896,7 @@
 }
 ],
 "mic":null,
-"n_results":91,
+"n_results":93,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45823,7 +45950,7 @@
 }
 ],
 "mic":null,
-"n_results":118,
+"n_results":119,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -46534,7 +46661,7 @@
 }
 ],
 "mic":null,
-"n_results":187,
+"n_results":188,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46685,7 +46812,7 @@
 }
 ],
 "mic":null,
-"n_results":59,
+"n_results":60,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -47440,7 +47567,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":50,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49745,7 +49872,7 @@
 }
 ],
 "mic":null,
-"n_results":117,
+"n_results":118,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -50550,7 +50677,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":103,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -51271,7 +51398,7 @@
 }
 ],
 "mic":null,
-"n_results":117,
+"n_results":121,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52835,7 +52962,7 @@
 }
 ],
 "mic":null,
-"n_results":122,
+"n_results":124,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -53213,7 +53340,7 @@
 "from":null,
 "to":null
 },
-"n_results":58,
+"n_results":59,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -54334,7 +54461,7 @@
 }
 ],
 "mic":null,
-"n_results":117,
+"n_results":118,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -54439,7 +54566,7 @@
 }
 ],
 "mic":null,
-"n_results":79,
+"n_results":80,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54523,7 +54650,7 @@
 }
 ],
 "mic":null,
-"n_results":123,
+"n_results":127,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -56898,7 +57025,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":73,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -57004,7 +57131,7 @@
 }
 ],
 "mic":null,
-"n_results":125,
+"n_results":127,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -57127,7 +57254,7 @@
 }
 ],
 "mic":null,
-"n_results":129,
+"n_results":130,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -57305,7 +57432,7 @@
 }
 ],
 "mic":null,
-"n_results":57,
+"n_results":58,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -58250,7 +58377,7 @@
 }
 ],
 "mic":null,
-"n_results":140,
+"n_results":142,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -58381,7 +58508,7 @@
 }
 ],
 "mic":null,
-"n_results":83,
+"n_results":84,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -60693,7 +60820,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2022-23",
 "2024-25",
@@ -61421,6 +61548,7 @@
 "name":"田口 友麻",
 "aliases":[
 "TAGUCHI Yuma",
+"TAGUCHI Yuma GROUP PHASE",
 "たぐち ゆうま"
 ],
 "noc":null,
@@ -61448,7 +61576,7 @@
 }
 ],
 "mic":null,
-"n_results":136,
+"n_results":139,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -62753,7 +62881,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -64232,7 +64360,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":104,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66121,7 +66249,7 @@
 }
 ],
 "mic":null,
-"n_results":112,
+"n_results":113,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66356,7 +66484,7 @@
 }
 ],
 "mic":null,
-"n_results":138,
+"n_results":139,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -66754,7 +66882,7 @@
 }
 ],
 "mic":null,
-"n_results":70,
+"n_results":72,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67146,7 +67274,7 @@
 }
 ],
 "mic":null,
-"n_results":167,
+"n_results":169,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -67296,7 +67424,7 @@
 }
 ],
 "mic":null,
-"n_results":87,
+"n_results":88,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -68375,7 +68503,7 @@
 }
 ],
 "mic":null,
-"n_results":170,
+"n_results":173,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68620,7 +68748,7 @@
 }
 ],
 "mic":null,
-"n_results":73,
+"n_results":76,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68799,7 +68927,7 @@
 "from":null,
 "to":null
 },
-"n_results":81,
+"n_results":82,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -68934,7 +69062,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":61,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -69114,7 +69242,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":102,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -70335,7 +70463,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":47,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -70886,7 +71014,7 @@
 }
 ],
 "mic":null,
-"n_results":94,
+"n_results":95,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -73440,7 +73568,7 @@
 }
 ],
 "mic":null,
-"n_results":107,
+"n_results":108,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -74392,7 +74520,7 @@
 }
 ],
 "mic":null,
-"n_results":136,
+"n_results":137,
 "seasons":[
 "2012-13",
 "2013-14",

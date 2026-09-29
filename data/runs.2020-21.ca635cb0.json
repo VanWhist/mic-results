@@ -5972,6 +5972,1826 @@
 }
 },
 {
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533771",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":1,
+"bib":7,
+"athlete_id":"2533771",
+"fis_code":"2533771",
+"saj_no":null,
+"name":"KAWAOKA Shima",
+"noc":"JPN",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-2: R, Tot: 20.00, Rk 1 QF-1: B, Tot: 13.00, Rk 1 SF-1: R, Tot: 13.00, Rk 1 Big F: R, Tot: 20.00, Rk 1",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533908",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":2,
+"bib":1,
+"athlete_id":"2533908",
+"fis_code":"2533908",
+"saj_no":null,
+"name":"SHULDYAKOV Artem",
+"noc":"RUS",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-8: B, Tot: 23.00, Rk 1 QF-4: B, Tot: 25.00, Rk 1 SF-2: B, Tot: 14.00, Rk 1 Big F: B, DNF",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2534567",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":3,
+"bib":8,
+"athlete_id":"2534567",
+"fis_code":"2534567",
+"saj_no":null,
+"name":"NOVIKOV Vyacheslav",
+"noc":"RUS",
+"yb":2003,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-5: R, Tot: 24.00, Rk 1 QF-3: R, Tot: 14.00, Rk 1 SF-2: R, Tot: 11.00, Rk 2 Small F: R, Tot: 13.00, Rk 1",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533901",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":4,
+"bib":4,
+"athlete_id":"2533901",
+"fis_code":"2533901",
+"saj_no":null,
+"name":"ALEYNIKOV Mikhail",
+"noc":"RUS",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-3: B, Tot: 23.00, Rk 1 QF-2: R, Tot: 25.00, Rk 1 SF-1: B, Tot: 12.00, Rk 2 Small F: B, Tot: 12.00, Rk 2",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2535067",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":5,
+"bib":3,
+"athlete_id":"2535067",
+"fis_code":"2535067",
+"saj_no":null,
+"name":"ANDREEV Nikita",
+"noc":"RUS",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 78.26 EF-1: R, Tot: 21.00, Rk 1 QF-1: R, Tot: 12.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2535572",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":6,
+"bib":10,
+"athlete_id":"2535572",
+"fis_code":"2535572",
+"saj_no":null,
+"name":"JEANNESSON Mateo",
+"noc":"GBR",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 65.93 EF-6: R, Tot: 25.00, Rk 1 QF-3: B, Tot: 11.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533386",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":7,
+"bib":5,
+"athlete_id":"2533386",
+"fis_code":"2533386",
+"saj_no":null,
+"name":"VIERELA Severi",
+"noc":"FIN",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 73.95 EF-4: B, Tot: 22.00, Rk 1 QF-2: B, DNF",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533687",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":8,
+"bib":2,
+"athlete_id":"2533687",
+"fis_code":"2533687",
+"saj_no":null,
+"name":"AHVENAINEN Akseli",
+"noc":"FIN",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 68.97 EF-7: R, Tot: 15.00, Rk 1 QF-4: R, DNF",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2532862",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":9,
+"bib":9,
+"athlete_id":"2532862",
+"fis_code":"2532862",
+"saj_no":null,
+"name":"ROMANOV Sergey",
+"noc":"KAZ",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 68.35 EF-7: B, Tot: 10.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2534056",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":10,
+"bib":6,
+"athlete_id":"2534056",
+"fis_code":"2534056",
+"saj_no":null,
+"name":"KAISLA Aleksi",
+"noc":"FIN",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 68.49 EF-2: B, Tot: 5.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2535392",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":11,
+"bib":14,
+"athlete_id":"2535392",
+"fis_code":"2535392",
+"saj_no":null,
+"name":"GAJDECKA Marek",
+"noc":"CZE",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 51.06 EF-1: B, Tot: 4.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2537625",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":12,
+"bib":15,
+"athlete_id":"2537625",
+"fis_code":"2537625",
+"saj_no":null,
+"name":"LEE Yoon Seung",
+"noc":"KOR",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 59.56 EF-4: R, Tot: 3.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533573",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":13,
+"bib":11,
+"athlete_id":"2533573",
+"fis_code":"2533573",
+"saj_no":null,
+"name":"BAEK Hyun-Min",
+"noc":"KOR",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 62.28 EF-3: R, Tot: 2.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2535756",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":14,
+"bib":17,
+"athlete_id":"2535756",
+"fis_code":"2535756",
+"saj_no":null,
+"name":"WAGNER Felix",
+"noc":"GER",
+"yb":2006,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 53.04 EF-8: R, Tot: 2.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2537669",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":15,
+"bib":18,
+"athlete_id":"2537669",
+"fis_code":"2537669",
+"saj_no":null,
+"name":"JEANNESSON Tom",
+"noc":"GBR",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 57.19 EF-5: B, Tot: 1.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2533002",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":16,
+"bib":13,
+"athlete_id":"2533002",
+"fis_code":"2533002",
+"saj_no":null,
+"name":"BUZZI Enea",
+"noc":"SUI",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 70.33 EF-6: B, DNF",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2535693",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":17,
+"bib":16,
+"athlete_id":"2535693",
+"fis_code":"2535693",
+"saj_no":null,
+"name":"WEESE Nicolas",
+"noc":"GER",
+"yb":2003,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 43.42",
+"stage":"Qualification"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-M-F1-2532502",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-M-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"M",
+"round":"F1",
+"date":"2021-03-22",
+"rank":18,
+"bib":12,
+"athlete_id":"2532502",
+"fis_code":"2532502",
+"saj_no":null,
+"name":"CONEDERA Martino",
+"noc":"SUI",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 42.60",
+"stage":"Qualification"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8612_M_DM_RLF.pdf",
+"page":2,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2534101",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":1,
+"bib":3,
+"athlete_id":"2534101",
+"fis_code":"2534101",
+"saj_no":null,
+"name":"LAZARENKO Viktoriia",
+"noc":"RUS",
+"yb":2003,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-1: B, Tot: 25.00, Rk 1 QF-1: B, Tot: 20.00, Rk 1 SF-1: B, Tot: 16.00, Rk 1 Big F: B, Tot: 16.00, Rk 1",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533488",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":2,
+"bib":6,
+"athlete_id":"2533488",
+"fis_code":"2533488",
+"saj_no":null,
+"name":"NAKAO Haruka",
+"noc":"JPN",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-5: B, Tot: 24.00, Rk 1 QF-3: B, Tot: 14.00, Rk 1 SF-2: R, Tot: 15.00, Rk 1 Big F: R, Tot: 9.00, Rk 2",
+"stage":"Big Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533044",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":3,
+"bib":2,
+"athlete_id":"2533044",
+"fis_code":"2533044",
+"saj_no":null,
+"name":"SMIRNOVA Anastasiia",
+"noc":"RUS",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-8: B, Tot: 23.00, Rk 1 QF-4: B, Tot: 20.00, Rk 1 SF-2: B, Tot: 10.00, Rk 2 Small F: B, Tot: 13.00, Rk 1",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2534852",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":4,
+"bib":1,
+"athlete_id":"2534852",
+"fis_code":"2534852",
+"saj_no":null,
+"name":"KAWAMURA Anri",
+"noc":"JPN",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"EF-3: R, Tot: 19.00, Rk 1 QF-2: R, Tot: 15.00, Rk 1 SF-1: R, Tot: 9.00, Rk 2 Small F: R, Tot: 12.00, Rk 2",
+"stage":"Small Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2535385",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":5,
+"bib":4,
+"athlete_id":"2535385",
+"fis_code":"2535385",
+"saj_no":null,
+"name":"GORODKO Anastassiya",
+"noc":"KAZ",
+"yb":2005,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 70.54 EF-6: B, Tot: 23.00, Rk 1 QF-3: R, Tot: 11.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533910",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":6,
+"bib":8,
+"athlete_id":"2533910",
+"fis_code":"2533910",
+"saj_no":null,
+"name":"CHUDINOVA Polina",
+"noc":"RUS",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 71.35 EF-4: B, Tot: 24.00, Rk 1 QF-2: B, Tot: 10.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533039",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":7,
+"bib":12,
+"athlete_id":"2533039",
+"fis_code":"2533039",
+"saj_no":null,
+"name":"FUJIKI Hina",
+"noc":"JPN",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 67.92 EF-7: R, Tot: 18.00, Rk 1 QF-4: R, Tot: 5.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2532085",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":8,
+"bib":10,
+"athlete_id":"2532085",
+"fis_code":"2532085",
+"saj_no":null,
+"name":"AMRENOVA Ayaulym",
+"noc":"KAZ",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 60.58 EF-2: B, Tot: 15.00, Rk 1 QF-1: R, Tot: 5.00, Rk 2",
+"stage":"Quarter Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2532819",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":9,
+"bib":7,
+"athlete_id":"2532819",
+"fis_code":"2532819",
+"saj_no":null,
+"name":"WEESE Hanna",
+"noc":"GER",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 53.37 EF-2: R, Tot: 10.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2534483",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":10,
+"bib":17,
+"athlete_id":"2534483",
+"fis_code":"2534483",
+"saj_no":null,
+"name":"SAMANKOVA Dorota",
+"noc":"CZE",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 50.78 EF-7: B, Tot: 7.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2535386",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":11,
+"bib":11,
+"athlete_id":"2535386",
+"fis_code":"2535386",
+"saj_no":null,
+"name":"GRAUR Olessya",
+"noc":"KAZ",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 49.78 EF-3: B, Tot: 6.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2535376",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":12,
+"bib":18,
+"athlete_id":"2535376",
+"fis_code":"2535376",
+"saj_no":null,
+"name":"BERGHUIS Laura",
+"noc":"NED",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 49.95 EF-6: R, Tot: 2.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2535327",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":13,
+"bib":15,
+"athlete_id":"2535327",
+"fis_code":"2535327",
+"saj_no":null,
+"name":"MERZ Annika",
+"noc":"GER",
+"yb":2004,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 41.53 EF-8: R, Tot: 2.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533045",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":14,
+"bib":19,
+"athlete_id":"2533045",
+"fis_code":"2533045",
+"saj_no":null,
+"name":"KULIKOVA Anastasia",
+"noc":"RUS",
+"yb":2001,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 49.14 EF-4: R, Tot: 1.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533944",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":15,
+"bib":16,
+"athlete_id":"2533944",
+"fis_code":"2533944",
+"saj_no":null,
+"name":"GAJDECKOVA Klara",
+"noc":"CZE",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 49.02 EF-5: R, Tot: 1.00, Rk 2",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2534580",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":16,
+"bib":13,
+"athlete_id":"2534580",
+"fis_code":"2534580",
+"saj_no":null,
+"name":"COUFALOVA Eliska",
+"noc":"CZE",
+"yb":2003,
+"affiliation":null,
+"club":null,
+"status":"OK",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: 39.56 EF-1: R, DNF",
+"stage":"Eight Final"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
+"run_id":"2020-21-wjc-krasnoyarsk-8612-W-F1-2533937",
+"round_id":"2020-21-wjc-krasnoyarsk-8612-W-F1",
+"event_id":"2020-21-wjc-krasnoyarsk-8612",
+"season":"2020-21",
+"series":"WJC",
+"discipline":"DM",
+"tier":"rank",
+"gender":"W",
+"round":"F1",
+"date":"2021-03-22",
+"rank":null,
+"bib":14,
+"athlete_id":"2533937",
+"fis_code":"2533937",
+"saj_no":null,
+"name":"VOUTILAINEN Riikka",
+"noc":"FIN",
+"yb":2002,
+"affiliation":null,
+"club":null,
+"status":"DNS",
+"reserve_judge":false,
+"seconds":null,
+"time_points":null,
+"air":[],
+"air_total":null,
+"base":[],
+"base_discard":[],
+"base_total":null,
+"ded":[],
+"ded_discard":[],
+"ded_total":null,
+"turns_total":null,
+"turns_floor_applied":false,
+"run_score":null,
+"tie":null,
+"q_block":null,
+"counting":true,
+"best_score":null,
+"rank_group":null,
+"components":{
+"progression":"Qualification: DNS",
+"stage":"Qualification"
+},
+"provenance":{
+"pdf":"WJC/2020-21/FIS2021_WJC_Krasnoyarsk_8613_W_DM_RLF.pdf",
+"page":1,
+"parser_version":"FIS-DM-1.0",
+"rules_version":null
+}
+},
+{
 "run_id":"2020-21-saj_aj-2021-M-F2-2531671",
 "round_id":"2020-21-saj_aj-2021-M-F2",
 "event_id":"2020-21-saj_aj-2021",
@@ -125904,7 +127724,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:25, Rk 1, EF-7: B, Tot:18, Rk 1, QF-4: R, Tot:17, Rk 1, SF-2: R, Tot:16, Rk 1, F-1: B, Tot:14, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -125953,7 +127776,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:23, Rk 1, EF-4: R, Tot:16, Rk 1, QF-2: B, Tot:14, Rk 1, SF-1: R, Tot:14, Rk 1, F-1: R, Tot:11, Rk 2,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126002,7 +127828,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:16, Rk 1, EF-2: R, Tot:15, Rk 1, QF-1: B, Tot:24, Rk 1, SF-1: B, Tot:11, Rk 2, SmF-1: R, Tot:13, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126051,7 +127880,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:13, Rk 1, EF-5: B, Tot:13, Rk 1, QF-3: R, Tot:13, Rk 1, SF-2: B, Tot:9, Rk 2, SmF-1: B, Tot:12, Rk 2,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126100,7 +127932,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:17, Rk 1, EF-6: R, Tot:14, Rk 1, QF-3: B, Tot:12, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126149,7 +127984,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:17, Rk 1, EF-3: B, Tot:14, Rk 1, QF-2: R, Tot:11, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126198,7 +128036,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: B, Tot:24, Rk 1, EF-8: R, Tot:21, Rk 1, QF-4: B, Tot:8, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126247,7 +128088,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:23, Rk 1, EF-1: B, Tot:17, Rk 1, QF-1: R, Tot:1, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126296,7 +128140,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:24, Rk 1, EF-5: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126345,7 +128192,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:22, Rk 1, EF-6: B, Tot:11, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126394,7 +128244,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:16, Rk 1, EF-3: R, Tot:11, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126443,7 +128296,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:16, Rk 1, EF-2: B, Tot:10, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126492,7 +128348,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: R, Tot:25, Rk 1, R32-7: B, Tot:23, Rk 1, EF-4: B, Tot:9, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126541,7 +128400,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:23, Rk 1, EF-1: R, Tot:8, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126590,7 +128452,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: B, Tot:25, Rk 1, R32-14: R, Tot:25, Rk 1, EF-7: R, Tot:7, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126639,7 +128504,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:25, Rk 1, EF-8: B, Tot:4, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":1,
@@ -126688,7 +128556,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:24, Rk 1, R32-9: B, Tot:12, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126737,7 +128608,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: R, Tot:20, Rk 1, R32-3: B, Tot:9, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126786,7 +128660,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:24, Rk 1, R32-4: R, Tot:9, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126835,7 +128712,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: B, Tot:23, Rk 1, R32-6: R, Tot:9, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126884,7 +128764,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:25, Rk 1, R32-12: R, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126933,7 +128816,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:14, Rk 1, R32-5: B, Tot:8, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -126982,7 +128868,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: R, Tot:24, Rk 1, R32-11: B, Tot:3, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127031,7 +128920,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127080,7 +128972,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127129,7 +129024,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:20, Rk 1, R32-8: R, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127178,7 +129076,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:16, Rk 1, R32-1: B, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127227,7 +129128,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:20, Rk 1, R32-16: R, Tot:1, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127276,7 +129180,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: R, Tot:17, Rk 1, R32-10: R, Tot:1, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127325,7 +129232,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:23, Rk 1, R32-13: B, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127374,7 +129284,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:11, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127423,7 +129336,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:9, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127472,7 +129388,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: B, Tot:8, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127521,7 +129440,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: B, Tot:5, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127570,7 +129492,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:5, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127619,7 +129544,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:5, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127668,7 +129596,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: R, Tot:2, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127717,7 +129648,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:2, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127766,7 +129700,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127815,7 +129752,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: B, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127864,7 +129804,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127913,7 +129856,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:0, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -127962,7 +129908,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: B, Tot:0, DNF,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -128011,7 +129960,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-29: B, Tot:0, DNS, R32-15: R, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -128060,7 +130012,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-28: B, Tot:0, DNS, R32-14: B, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_0362_M_DM.pdf",
 "page":2,
@@ -128109,7 +130064,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:20, Rk 1, QF-1: R, Tot:25, Rk 1, SF-1: B, Tot:13, Rk 1, F-1: R, Tot:19, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128158,7 +130116,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:25, Rk 1, EF-5: R, Tot:25, Rk 1, QF-3: R, Tot:25, Rk 1, SF-2: B, Tot:14, Rk 1, F-1: B, Tot:6, Rk 2,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128207,7 +130168,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: R, Tot:17, Rk 1, QF-2: B, Tot:13, Rk 1, SF-1: R, Tot:12, Rk 2, SmF-1: R, Tot:19, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128256,7 +130220,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: B, Tot:21, Rk 1, QF-4: R, Tot:13, Rk 1, SF-2: R, Tot:11, Rk 2, SmF-1: B, Tot:6, Rk 2,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128305,7 +130272,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: B, Tot:13, Rk 1, QF-2: R, Tot:12, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128354,7 +130324,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:21, Rk 1, EF-8: B, Tot:13, Rk 1, QF-4: B, Tot:12, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128403,7 +130376,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: R, Tot:20, Rk 1, QF-3: B, Tot:0, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128452,7 +130428,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:16, Rk 1, EF-2: B, Tot:13, Rk 1, QF-1: B, Tot:0, DNF,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128501,7 +130480,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128550,7 +130532,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:23, Rk 1, EF-2: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128599,7 +130584,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:13, Rk 1, EF-3: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128648,7 +130636,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:21, Rk 1, EF-4: B, Tot:8, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128697,7 +130688,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:13, Rk 1, EF-6: B, Tot:5, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128746,7 +130740,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:25, Rk 1, EF-1: R, Tot:5, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128795,7 +130792,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: R, Tot:25, Rk 1, EF-7: R, Tot:4, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":1,
@@ -128844,7 +130844,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: R, Tot:12, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -128893,7 +130896,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: B, Tot:12, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -128942,7 +130948,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: B, Tot:9, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -128991,7 +131000,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129040,7 +131052,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:4, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129089,7 +131104,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: R, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129138,7 +131156,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:0, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129187,7 +131208,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:0, DNS, EF-5: B, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129236,7 +131260,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: B, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129285,7 +131312,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"FIS/2020-21/SAJ2021_2760_5362_W_DM.pdf",
 "page":2,
@@ -129334,7 +131364,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-16: B, Tot:30, Rk 1, EF-8: R, Tot:35, Rk 1, QF-4: B, Tot:35, Rk 1, SF-2: R, Tot:21, Rk 1, F-1: B, Tot:19, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129383,7 +131416,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-8: B, Tot:35, Rk 1, EF-4: R, Tot:25, Rk 1, QF-2: B, Tot:19, Rk 1, SF-1: R, Tot:35, Rk 1, F-1: R, Tot:16, Rk 2,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129432,7 +131468,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-9: R, Tot:33, Rk 1, EF-5: B, Tot:23, Rk 1, QF-3: R, Tot:35, Rk 1, SF-2: B, Tot:14, Rk 2, SmF-1: B, Tot:33, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129481,7 +131520,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-4: B, Tot:23, Rk 1, EF-2: R, Tot:21, Rk 1, QF-1: B, Tot:22, Rk 1, SF-1: B, Tot:0, Rk 2, SmF-1: R, Tot:2, Rk 2,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129530,7 +131572,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-5: R, Tot:30, Rk 1, EF-3: B, Tot:22, Rk 1, QF-2: R, Tot:16, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129579,7 +131624,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:29, Rk 1, EF-1: R, Tot:18, Rk 1, QF-1: R, Tot:13, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129628,7 +131676,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-12: B, Tot:29, Rk 1, EF-6: R, Tot:35, Rk 1, QF-3: B, Tot:0, DNF,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129677,7 +131728,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: B, Tot:35, Rk 1, R32-14: R, Tot:20, Rk 1, EF-7: R, Tot:26, Rk 1, QF-4: R, Tot:0, DNF,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129726,7 +131780,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-1: R, Tot:29, Rk 1, EF-1: B, Tot:17, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129775,7 +131832,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-3: R, Tot:25, Rk 1, EF-2: B, Tot:14, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129824,7 +131884,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-6: B, Tot:35, Rk 1, EF-3: R, Tot:13, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129873,7 +131936,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:18, Rk 1, EF-5: R, Tot:12, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129922,7 +131988,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: R, Tot:32, Rk 1, EF-4: B, Tot:10, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -129971,7 +132040,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: R, Tot:24, Rk 1, R32-13: B, Tot:22, Rk 1, EF-7: B, Tot:9, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -130020,7 +132092,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:35, Rk 1, EF-8: B, Tot:0, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -130069,7 +132144,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-11: R, Tot:28, Rk 1, EF-6: B, Tot:0, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":1,
@@ -130118,7 +132196,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: B, Tot:32, Rk 1, R32-10: R, Tot:17, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130167,7 +132248,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-14: B, Tot:15, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130216,7 +132300,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-13: R, Tot:13, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130265,7 +132352,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: R, Tot:34, Rk 1, R32-4: R, Tot:12, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130314,7 +132404,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: B, Tot:35, Rk 1, R32-3: B, Tot:10, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130363,7 +132456,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: R, Tot:35, Rk 1, R32-11: B, Tot:7, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130412,7 +132508,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: R, Tot:35, Rk 1, R32-1: B, Tot:6, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130461,7 +132560,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: B, Tot:31, Rk 1, R32-2: R, Tot:6, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130510,7 +132612,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: R, Tot:35, Rk 1, R32-12: R, Tot:6, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130559,7 +132664,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: B, Tot:23, Rk 1, R32-16: R, Tot:5, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130608,7 +132716,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: R, Tot:27, Rk 1, R32-5: B, Tot:5, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130657,7 +132768,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-7: B, Tot:3, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130706,7 +132820,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: B, Tot:25, Rk 1, R32-9: B, Tot:2, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130755,7 +132872,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: B, Tot:34, Rk 1, R32-6: R, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130804,7 +132924,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: R, Tot:20, Rk 1, R32-15: B, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130853,7 +132976,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: B, Tot:34, Rk 1, R32-8: R, Tot:0, DNF,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130902,7 +133028,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-30: B, Tot:15, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -130951,7 +133080,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-31: R, Tot:12, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131000,7 +133132,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-26: B, Tot:11, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131049,7 +133184,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-18: R, Tot:10, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131098,7 +133236,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-10: B, Tot:8, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131147,7 +133288,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-3: R, Tot:4, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131196,7 +133340,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-19: R, Tot:3, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131245,7 +133392,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-7: B, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131294,7 +133444,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-11: R, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131343,7 +133496,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-15: R, Tot:1, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131392,7 +133548,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-27: R, Tot:0, Rk 2,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":2,
@@ -131441,7 +133600,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-2: B, Tot:0, DNF,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":3,
@@ -131490,7 +133652,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-14: B, Tot:0, DNF,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":3,
@@ -131539,7 +133704,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-23: B, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":3,
@@ -131588,7 +133756,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-6: R, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":3,
@@ -131637,7 +133808,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R64-22: B, Tot:0, DNS,",
+"stage":"Round of 64"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_0459_M_DM.pdf",
 "page":3,
@@ -131686,7 +133860,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: B, Tot:33, Rk 1, QF-2: R, Tot:20, Rk 1, SF-1: R, Tot:19, Rk 1, F-1: R, Tot:35, Rk 1,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131735,7 +133912,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: R, Tot:22, Rk 1, QF-3: B, Tot:18, Rk 1, SF-2: B, Tot:18, Rk 1, F-1: B, Tot:0, DNF,",
+"stage":"BIG FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131784,7 +133964,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: B, Tot:35, Rk 1, QF-1: B, Tot:19, Rk 1, SF-1: B, Tot:16, Rk 2, SmF-1: R, Tot:35, Rk 1,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131833,7 +134016,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: R, Tot:35, Rk 1, QF-4: R, Tot:18, Rk 1, SF-2: R, Tot:17, Rk 2, SmF-1: B, Tot:0, DNF,",
+"stage":"SMALL FINAL"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131882,7 +134068,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-8: R, Tot:24, Rk 1, QF-4: B, Tot:17, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131931,7 +134120,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-5: B, Tot:19, Rk 1, QF-3: R, Tot:17, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -131980,7 +134172,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: B, Tot:35, Rk 1, EF-1: R, Tot:35, Rk 1, QF-1: R, Tot:16, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132029,7 +134224,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: B, Tot:21, Rk 1, QF-2: B, Tot:15, Rk 2,",
+"stage":"Quarter Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132078,7 +134276,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: B, Tot:35, Rk 1, EF-5: R, Tot:16, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132127,7 +134328,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-4: R, Tot:14, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132176,7 +134380,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-6: B, Tot:13, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132225,7 +134432,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: R, Tot:21, Rk 1, EF-8: B, Tot:11, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132274,7 +134484,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-3: R, Tot:2, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132323,7 +134536,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-2: R, Tot:0, Rk 2,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132372,7 +134588,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-7: B, Tot:0, DNF,",
+"stage":"Eight Final"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132421,7 +134640,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-15: B, Tot:14, Rk 2,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132470,7 +134692,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"EF-1: B, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132519,7 +134744,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-2: R, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
@@ -132568,7 +134796,10 @@
 "counting":true,
 "best_score":null,
 "rank_group":null,
-"components":null,
+"components":{
+"progression":"R32-10: R, Tot:0, DNS,",
+"stage":"Round of 32"
+},
 "provenance":{
 "pdf":"SAJ_AJ/2020-21/SAJ2021_2765_5459_W_DM.pdf",
 "page":1,
