@@ -770,6 +770,84 @@
    "notes": ""
   },
   {
+   "event_id": "2024-25-nac-deervalley-8605",
+   "season": "2024-25",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "57199",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57199&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8605_M_DM_RLF.pdf",
+     "sha256": "90f20028b579a2b1f805d590f6c918823b40ea294ddca228100e05ad10fc1450",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17771",
+     "gender": "M",
+     "codex": "8605",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8606_W_DM_RLF.pdf",
+     "sha256": "345611e3f8169072d16513d2ba646f344af50aaa4dd4f3db7b7845eff5c87476",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17770",
+     "gender": "W",
+     "codex": "8606",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-nac-apexmountain-8631",
+   "season": "2024-25",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "57279",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57279&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_ApexMountain_8631_M_DM_RLF.pdf",
+     "sha256": "a2dab668f021b60be2feadfe28fded05ef245e04bbef0766ed409e415287e805",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17815",
+     "gender": "M",
+     "codex": "8631",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_ApexMountain_8632_W_DM_RLF.pdf",
+     "sha256": "087e01c709500d7e76b8f7a5bb1ff9b1bff3fceef51d54ff62c9c9df0e1d6059",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17814",
+     "gender": "W",
+     "codex": "8632",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2025-26-wjc-airolo-8365",
    "season": "2025-26",
    "series": "WJC",

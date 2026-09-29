@@ -4014,6 +4014,151 @@
    "notes": ""
   },
   {
+   "event_id": "2024-25-nac-deervalley-8603",
+   "season": "2024-25",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "57199",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57199&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8603_M_MO_RLQ.pdf",
+     "sha256": "e75d5c3f3e4d30197d364369cb89fc52cbfbd59e1fcb77feee671d32a3d196de",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17769",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8603",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8603_M_MO_RLF1.pdf",
+     "sha256": "dac1dea0dfe5081771385391936a1ef651b410354938f971b88ac094a7906f23",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17769",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8603",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8603_M_MO_RLF2.pdf",
+     "sha256": "2d00b985fead737558132ae26967935428746b70c1d91318d74f61bea66f46a1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17769",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8603",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8604_W_MO_RLQ.pdf",
+     "sha256": "a2b8d98be9746e38b2b9ed8a21336fb2bd19e7af05635701d4d008b875040c5a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17768",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8604",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8604_W_MO_RLF1.pdf",
+     "sha256": "c80610e86570749cfb908b29b27c8b47a390a41d81d792dd66c4ff515905aecc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17768",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8604",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_DeerValley_8604_W_MO_RLF2.pdf",
+     "sha256": "dbb4c4cfc7a71a4ebd2526cf8a7cb28b96ea5844e70c7032f7ffa003a380077d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17768",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8604",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-nac-apexmountain-8627",
+   "season": "2024-25",
+   "series": "NAC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "57279",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57279&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_ApexMountain_8627_M_MO_RLF.pdf",
+     "sha256": "290c07622fcd422c29a6a2b52994f432e88c2d86a63b7d09258f0dfe1364e681",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17813",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8627",
+     "src_type": "RLF"
+    },
+    {
+     "path": "NAC/2024-25/FIS2025_NAC_ApexMountain_8628_W_MO_RLQ.pdf",
+     "sha256": "87c1b5ca5b031d8417821a8fc9bb148f17376a743655f7d5586558a628007154",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17812",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8628",
+     "src_type": "RLQ"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2025-26-anc-perisher-8026",
    "season": "2025-26",
    "series": "ANC",

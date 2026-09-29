@@ -13,13 +13,14 @@ import pdfplumber
 from ... import config
 from ...verify import Finding
 
-PARSER_VERSION = 'FIS-DM-1.0'
+PARSER_VERSION = 'FIS-DM-1.1'
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 # 1 行目: [順位] Bib FISコード 名前… 国 生年 [対戦経過]
 # 順位の後ろに点が付く様式がある（「1. 7 2529403 …」、2017-19 の NAC・世界ジュニア）。3 桁の Bib が「…」で切れて
 # 順位とくっつくことがある（「10.11… 2527725」= 10 位・Bib 11…、「10… 2532366」= 順位なし・Bib 10…）。行頭に「DNS」が付くことがある。
-# 名前と国名がくっつくことがある（「PASCARELLA RiccardoSUI」）
-RE_ROW = re.compile(r'^(?:(DNS|DNF|DSQ)\s+)?(?:(\d+)(?:\.\s*|\s+))?(\d+)(…?)\s+(\d{7})\s*(.+?)\s*([A-Z]{3})\s+((?:19|20)\d\d)\b\s*(.*)$')
+# 名前と国名がくっつくことがある（「PASCARELLA RiccardoSUI」）。Bib と FIS コードがくっつくことがある
+# （「1. 12534089 MARCELLINI」= 1 位・Bib 1・FIS 2534089、NAC 2025 Apex）。FIS コードは 7 桁なので後ろの 7 桁で分ける
+RE_ROW = re.compile(r'^(?:(DNS|DNF|DSQ)\s+)?(?:(\d+)(?:\.\s*|\s+))?(\d+)(…?)\s*(\d{7})\s*(.+?)\s*([A-Z]{3})\s+((?:19|20)\d\d)\b\s*(.*)$')
 RE_ROW_NOYB = re.compile(r'^(\d+)\s+(\d+)\s+(\d{7})\s+(.+?)\s+([A-Z]{3})(?:\s+(DNF|DNS|DSQ))?$')
 RE_STAGE = re.compile(r'^(Big ?Final|Small ?Final|Semi ?Finals?|Quarter ?Finals?|Eight ?Finals?|1/\d+ ?Finals?|Round ?of ?\d+'
                       r'|Not ?Ranked|Qualification(?: ?Heat ?Round)?|Did ?Not ?(?:Start|Finish)|Disqualified)$', re.I)
@@ -29,8 +30,12 @@ RE_PROG = re.compile(r'(?:\b(?:R\d+|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\
 RE_PROG_TAIL = re.compile(r'^(?:[RB],\s*)?(?:Tot:\s*)?(?:\d+(?:\.\d+)?,\s*)?Rk\s*\d+')
 # 表の中に出る表の外の行（天気・凡例・曜日つきの日付のフッタ）
 RE_SKIP = re.compile(r'^(Weather:|Legend:|Conditions on Course|[A-Z]{3} \d{1,2} [A-Z]{3} \d{4} /|\d{2}-\d{2}-\d{4}\s*/|Data Processing|\d{1,2}$'
-                     r'|F\d+ - |.*changed to follow rule)')  # 天気の欄・凡例・フッタ・前走者・審判点の訂正の注記（ユニバーシアード 2017）
+                     r'|F\d+ - |.*changed to follow rule'  # 天気の欄・凡例・フッタ・前走者・審判点の訂正の注記（ユニバーシアード 2017）
+                     r'|DNF\s*Did\s*Not\s*Finish'  # 「Legend:」の次の行の凡例（NAC 2025 Apex）。DNF・DNS の語を含むので対戦経過と取り違えないよう飛ばす
+                     r'|Forerunners?$)')  # 前走者の見出し。ページの頭に来ると前の選手の名前の折り返しと取り違える（ユニバーシアード 2017）
 STATUS_WORDS = ('DNF', 'DNS', 'DSQ', 'DQ')
+# 「…,Rk1」の直後に空白なしで次の対戦の印（16F-10: / R64-3: / QF-2: / BigF: …）が続く所
+RE_PROG_GLUED = re.compile(r'(Rk\s?[12])(?=(?:R\d+|\d+F|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
 
 
 def stage_name(s):
@@ -124,6 +129,9 @@ def parse_pdf(path):
                     cur['name'] = (cur['name'] + ' ' + line) if not cur['name'].endswith('-') else cur['name'] + line
                     continue
                 problems.append((pno, line))
+    for a in athletes:
+        # 対戦ごとの区切りの空白が文字情報に無く「Rk116F-10」と続く様式（NAC 2025 Apex）。1 対戦の順位は 1 か 2 なので、その直後で分ける
+        a['progression'] = RE_PROG_GLUED.sub(r'\1 ', a['progression'])
     return meta, athletes, problems
 
 
