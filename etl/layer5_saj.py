@@ -77,8 +77,16 @@ def _norm_no(s):
 
 
 def _norm_name(s):
-    # 順位表は外国籍選手の名前を全角英字で載せることがある（'Ｂｒａｙｄｅｎ Ｋｕｒｏｄａ'）ので NFKC で揃える
-    return ''.join(unicodedata.normalize('NFKC', s or '').split()).lower()
+    # 順位表は外国籍選手の名前を全角英字で載せることがある（'Ｂｒａｙｄｅｎ Ｋｕｒｏｄａ'）ので NFKC で揃える。
+    # 空白とハイフンの違い（順位表 'BAEK Hyun-Min' / PDF 'BAEK-Hyun-Min'、2019 田沢湖）も吸収するため、文字と数字だけを残す
+    return ''.join(ch for ch in unicodedata.normalize('NFKC', s or '') if ch.isalnum()).lower()
+
+
+def _unique_nos(ours):
+    """SAJ 番号 → 選手。外国籍選手に仮の番号（'9999999' など）を複数人で共有させている PDF があるので、
+    2 人以上が持つ番号は番号での対応づけに使わない（名前・得点で対応づける）"""
+    cnt = collections.Counter(_norm_no(v['saj_no']) for v in ours.values() if v.get('saj_no'))
+    return {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no') and cnt[_norm_no(v['saj_no'])] == 1}
 
 
 def _dec(s):
@@ -103,7 +111,7 @@ def compare(event_id, gender, rounds_by_code, cache):
     # 予選のラウンドが無いときは、決勝に居ない下位の選手が PDF 側に居ないのは当然なので警告にとどめる
     has_q = any(c in rounds_by_code for c in ('Q', 'Q1', 'Q2'))
     n_ranked = sum(1 for v in ours.values() if v['overall'] is not None)
-    by_no = {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no')}
+    by_no = _unique_nos(ours)
     by_name = {_norm_name(v['name']): k for k, v in ours.items()}
     matched = []
     used = set()
@@ -113,7 +121,7 @@ def compare(event_id, gender, rounds_by_code, cache):
             # SAJ 番号の無い外国籍選手は、順位表がカタカナ（'ノイズ キース'）、PDF がローマ字で名前が突き合わない。
             # 得点が同じで、まだ誰とも対応していない選手がちょうど 1 人なら同じ選手とみなす
             cands = [k for k, v in ours.items() if k not in used and v.get('score') is not None
-                     and _num_eq(_dec(row.get('score')), v['score']) and not v.get('saj_no')]
+                     and _num_eq(_dec(row.get('score')), v['score']) and _norm_no(v.get('saj_no')) not in by_no]
             if len(cands) == 1:
                 aid = cands[0]
                 f.append(Finding('warning', round_id, 'layer5', f"{gender} 順位表の {row.get('name')} を得点 {row.get('score')} で PDF の {ours[aid]['name']} と対応づけた（名前の表記が違う）"))
@@ -161,7 +169,7 @@ def compare_dm(gender, round_id, ours, rows):
     17 位から、PDF は出場人数で詰める。1 回戦 DNF は PDF に順位があり順位表は空欄）。そこで順位の数字そのものではなく、
     両方に順位のある選手どうしの前後関係と、順位表の選手が PDF に居ることを確かめる"""
     f = []
-    by_no = {_norm_no(v['saj_no']): k for k, v in ours.items() if v.get('saj_no')}
+    by_no = _unique_nos(ours)
     by_name = {_norm_name(v['name']): k for k, v in ours.items()}
     pairs = []
     for row in rows:

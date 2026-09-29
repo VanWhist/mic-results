@@ -417,6 +417,10 @@ def check_rank_only(rnd_runs):
         rows = page_lines(path, pg)
         want = norm(r['name'])
         hit = [toks for _, toks in rows if want and want in norm(''.join(t for _, t in toks))]
+        if not hit and want.isascii():
+            # ローマ字の名前に所属の漢字が割り込んだ文字情報（'PARK Sung-Y韓o国un 韓国'、2017 全日本 DM 女子）。
+            # ローマ字の名前は行の中の ASCII 以外の文字を無視して探す（名前が違えば見つからないのは同じ）
+            hit = [toks for _, toks in rows if want in ''.join(ch for ch in norm(''.join(t for _, t in toks)) if ch.isascii())]
         if not hit:
             issues.append((r, 'name_not_on_page', f'{os.path.basename(path)} p{pg}'))
         elif r['rank'] is not None and not any(any(t == str(r['rank']) for _, t in toks) for toks in hit):

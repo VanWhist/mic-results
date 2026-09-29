@@ -449,6 +449,16 @@ def load_event(ev, imported_at, log=print):
                 findings.append(Finding('warning', round_id, 'layer2', '減点の印字が無い行がある（減点 0 として扱う）'))
             ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': ab,
                          'rules': rules or {}})
+        dup_a = meta.get('duplicate_pages') or []
+        if dup_a:
+            # 同じページが 2 回綴じ込まれていた。A・B がそれぞれ別の読み方で同じページを見つけたときだけ読み飛ばしを認める
+            dup_b = [] if old_layout else [p['page'] for p in pages_b if p.get('duplicate_of')]
+            if not old_layout and dup_a != dup_b:
+                problems.append(f"同じページの読み飛ばしが A {dup_a} / B {dup_b} で一致しない")
+            for c in ctxs:
+                if not c.get('error_only') and c['cls'].get('rel') == pdf['path']:
+                    c['findings'].append(Finding('warning', f"{c['cls']['event_id']}-{c['cls']['gender']}-{c['cls']['round']}", 'layer0',
+                                                 f"PDF の {dup_a} ページ目は前のページと一字一句同じなので読み飛ばした"))
         for p in problems + problems_b:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'], 'message': p})
         log(f"  {ev['event_id']}: {len(sections)} セクション / B {len(rounds_b)} ラウンド")

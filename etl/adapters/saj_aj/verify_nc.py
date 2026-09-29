@@ -199,10 +199,16 @@ def read_pdf(path):
     tables, pages = [], []
     known_pace = {}  # 性別 → これまでのページで分かったペースタイム
     with pdfplumber.open(path) as pdf:
-        year = None
+        year, prev_sig = None, None
         for pno, page in enumerate(pdf.pages, 1):
             page = page.dedupe_chars()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
             words = page.extract_words()
+            # 前のページと語も位置もまったく同じページ（同じページが 2 回綴じ込まれた PDF、2022 宮様 女子決勝）は読まない
+            sig = tuple((w['text'], round(w['x0'], 1), round(w['top'], 1)) for w in words)
+            if words and sig == prev_sig:
+                pages.append(dict(page=pno, tables=0, stray=[], duplicate_of=pno - 1))
+                continue
+            prev_sig = sig
             if sum(1 for w in words if len(w['text']) == 1) > 0.5 * max(1, len(words)):
                 # 1 行目と 2 行目の間隔が詰まったページは、縦の許容幅（既定 3）で 2 行の文字が 1 語に混ざる。許容幅を小さくする
                 words = page.extract_words(y_tolerance=2)

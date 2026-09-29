@@ -76,6 +76,10 @@ def parse_pdf(path):
                         name, pref, club = rest[0], rest[1], ''
                     else:
                         name, pref, club = ' '.join(rest), '', ''
+                    # ローマ字の名前に所属（国名）の漢字が割り込む文字情報がある（'PARK Sung-Y韓o国un 韓国'、2017 全日本 女子）。
+                    # ローマ字の名前に限り、所属と同じ漢字を取り除く（和名は所属と同じ字を名前に持つことがあるので触らない）
+                    if pref and re.search(r'[A-Za-z]', name) and any(ch in name for ch in pref):
+                        name = ''.join(ch for ch in name if ch not in pref or ch.isascii())
                     if ranked:
                         rank, bib, sajno = int(toks[0]), int(toks[1]), toks[2]
                     else:

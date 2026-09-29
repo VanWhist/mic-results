@@ -278,7 +278,7 @@ def parse_pdf(path):
     sections = []
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={})
     with pdfplumber.open(path) as pdf:
-        cur = None
+        cur, prev_text = None, None
         for pno, page in enumerate(pdf.pages, 1):
             # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
             page = page.dedupe_chars()
@@ -287,6 +287,12 @@ def parse_pdf(path):
                 # 1 行目と 2 行目の間隔が詰まったページは、行をまとめる縦の許容幅（既定 3）で 2 行が 1 行に混ざる
                 # （'9 2 . . 9 1'。2022 はくのり 男子予選）。そのページだけ許容幅を小さくして読み直す
                 text = page.extract_text(y_tolerance=2) or ''
+            # 同じページが 2 回続けて綴じ込まれた PDF がある（2022 宮様 女子決勝。2 ページ目が 1 ページ目と一字一句同じ）。
+            # 読むと同じ選手が 2 回になるので飛ばし、記録に残す
+            if text.strip() and text == prev_text:
+                meta.setdefault('duplicate_pages', []).append(pno)
+                continue
+            prev_text = text
             lines = [l.strip() for l in text.split('\n') if l.strip()]
             code = None
             # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。
