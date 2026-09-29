@@ -1,11 +1,11 @@
 {
-  "_comment": "規則版。大会日（season）・大会種別（series）・フォーマットで選ぶ。値の根拠: ICR 2026春版 4008/4206/4207/4203.2、ジャッジハンドブック 2025年11月版 6203/6204、DD表 2023年11月版。26/27 は改定後に版を追加する。",
+  "_comment": "pace_speed_mps（ペースタイムを決める規定の速さ）は、FIS 海外大会の印字「コース長 ÷ ペースタイム」から確かめた値: 2014-15・2015-16 は男子 9.7・女子 8.2、2016-17〜2022-23 は男子 10.3・女子 8.8、2023-24 以降は男子 10.3・女子 9.0 m/s（2026-09-28）。計算には使わず、ペースタイムは印字の値を使う。 規則版。大会日（season）・大会種別（series）・フォーマットで選ぶ。値の根拠: ICR 2026春版 4008/4206/4207/4203.2、ジャッジハンドブック 2025年11月版 6203/6204、DD表 2023年11月版。26/27 は改定後に版を追加する。",
   "versions": {
     "2014-15": {
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 9.70, "W": 8.20},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会の旧版の様式（集計ソフト Mainstream / URTUR）用。ターン点は審判 1 人 1 つ（ベース点と減点に分けない）で、最高・最低を除く 3 人の和。エア・タイムは 2016-17 以降と同じ式を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）"
@@ -14,7 +14,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 9.70, "W": 8.20},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会の旧版の様式（集計ソフト Mainstream / URTUR）用。ベース点と減点（減点は正の数で印字、合計の印字なし）。2016-17 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）"
@@ -23,7 +23,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会（世界ジュニア・NAC・EC・ANC・ユニバーシアード）用。2021-22 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）。ターン審判 3 人の大会はアダプタが印字から人数を決める"
@@ -32,7 +32,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会（世界ジュニア・NAC・EC・ANC・ユニバーシアード）用。2021-22 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）。ターン審判 3 人の大会はアダプタが印字から人数を決める"
@@ -41,7 +41,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会（世界ジュニア・NAC・EC・ANC・ユニバーシアード）用。2021-22 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）。ターン審判 3 人の大会はアダプタが印字から人数を決める"
@@ -50,7 +50,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会（世界ジュニア・NAC・EC・ANC・ユニバーシアード）用。2021-22 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）。ターン審判 3 人の大会はアダプタが印字から人数を決める"
@@ -59,7 +59,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "FIS 海外大会（世界ジュニア・NAC・EC・ANC・ユニバーシアード）用。2021-22 と同じ値を仮に置き、取り込んだ全ラウンドの印字の再計算（第2層）で一致を確かめて確定する（2026-09-28）。ターン審判 3 人の大会はアダプタが印字から人数を決める"
@@ -68,7 +68,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "Beijing 2022 rules (values identical to current ICR for scoring)"
@@ -77,7 +77,7 @@
       "judges": {"turns": 5, "air": 2}, "discard_high_low": true, "truncate_decimals": 2,
       "air_cap_per_judge": 10.0, "turns_floor": 0.3, "turns_min_per_judge": 0.1,
       "time_formula": "48 - 32 * seconds / pace_time", "time_max": 20.0, "time_min": 0.0,
-      "pace_speed_mps": {"M": 10.30, "W": 9.00},
+      "pace_speed_mps": {"M": 10.30, "W": 8.80},
       "tie_break": ["turns_total", "air_without_dd", "seconds_asc"],
       "dd_table": null,
       "source": "ICR / JH (pre Nov-2023 DD table not on file; DD read from PDF)"

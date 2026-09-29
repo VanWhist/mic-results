@@ -554,6 +554,10 @@ def main():
             issues += check_upstream(rr, up)
             issues += check_pdf_round(rr, fis_style=True)
             checked['C+A(fis)'] += len(rr)
+        elif src.startswith('LA-'):
+            # FIS 海外大会の 1 人 1 行の様式（oneline_a。世界ジュニア 2016）: ターン合計は審判 3 人の和で、ベース合計・減点合計の印字は無い
+            issues += check_pdf_round(rr, fis_style=True, bd_totals=False)
+            checked['A(fis-oneline)'] += len(rr)
         elif src.startswith('OA-'):
             # FIS 海外大会の旧版の様式（old_a。2014-15・2015-16）: B: / D: の印とベース合計・減点合計の印字が無い
             issues += check_pdf_round(rr, fis_style=True, bd_totals=False)

@@ -13,8 +13,8 @@
 "time_max":20.0,
 "time_min":0.0,
 "pace_speed_mps":{
-"M":10.3,
-"W":9.0
+"M":9.7,
+"W":8.2
 },
 "tie_break":[
 "turns_total",
@@ -38,8 +38,8 @@
 "time_max":20.0,
 "time_min":0.0,
 "pace_speed_mps":{
-"M":10.3,
-"W":9.0
+"M":9.7,
+"W":8.2
 },
 "tie_break":[
 "turns_total",
@@ -64,7 +64,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -89,7 +89,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -114,7 +114,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -139,7 +139,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -164,7 +164,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -189,7 +189,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",
@@ -214,7 +214,7 @@
 "time_min":0.0,
 "pace_speed_mps":{
 "M":10.3,
-"W":9.0
+"W":8.8
 },
 "tie_break":[
 "turns_total",

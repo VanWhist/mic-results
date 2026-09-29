@@ -23,7 +23,8 @@ MANIFEST = os.path.join(INV, 'fis_pdf_manifest.csv')
 SURVEY = os.path.join(INV, 'fis_overseas_survey.jsonl')
 OUT = os.path.join(config.REGISTRY_DIR, 'fis_overseas.json')
 PRESERVE = ('rules', 'notes', 'tier', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions',
-            'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions', 'date_fallback')
+            'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions', 'date_fallback',
+            'pace_exceptions')
 ROUND_OF = {'RLQ': 'Q', 'QRL': 'Q', 'RLQ1': 'Q1', 'RLQ2': 'Q2', 'RLF1': 'F1', 'F1RL': 'F1', 'RLF2': 'F2', 'F2RL': 'F2'}
 FINAL_ONLY = ('RLF', 'FRL')
 RACE_URL = 'https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid={}'
@@ -43,6 +44,10 @@ def n_competitors(path, layout=None):
         from . import ascii_a
         meta, recs = ascii_a.parse_moguls_results(path)
         return meta.get('cutoff') or sum(1 for r in recs if r['status'] != 'DNS') or None
+    if layout == 'oneline':
+        from . import oneline_a
+        _, recs = oneline_a.parse_moguls_results(path)
+        return sum(1 for r in recs if r['status'] != 'DNS') or None
     with pdfplumber.open(path) as pdf:
         m = re.search(r'Number of Competitors:\s*(\d+)', pdf.pages[0].extract_text() or '')
     return int(m.group(1)) if m else None
@@ -81,7 +86,7 @@ def advance_of(pdfs):
 def layout_family(path):
     """PDF の様式の系統。fis_std（FIS 標準: Rank Bib 表頭・B:/D: 行）、ascii（「=== ===」の文字表。カナダの集計ソフト。
     今の採点方式の表頭のもの。それ以外は ascii_old）、
-    ffs（フランスの集計ソフト、仏語）、fis_old（FIS 標準の旧版 2014-16）、other"""
+    ffs（フランスの集計ソフト、仏語）、fis_old（FIS 標準の旧版 2014-16）、oneline（1 人 1 行。世界ジュニア 2016）、other"""
     with pdfplumber.open(path) as pdf:
         tx = '\n'.join((pg.extract_text() or '') for pg in pdf.pages[:2])
     if re.search(r'^=== ===', tx, re.M):
@@ -99,6 +104,9 @@ def layout_family(path):
     # 取り込まない（城さんの判断、2026-09-28）
     if re.search(r'^Rank Bib Name YB Time Score Tie\s*$', tx, re.M) and re.search(r'^Code Code J1 J2 J3 ', tx, re.M):
         return 'fis_old'
+    # 1 人 1 行の様式（世界ジュニア 2016 Åre。ターン審判 3 人、2 本のジャンプが同じ行）
+    if re.search(r'J1 J2 J3 Total J4 J5 Jump DD J4 J5 Jump DD Total Time Time Score', tx):
+        return 'oneline'
     return 'other'
 
 
@@ -173,7 +181,7 @@ def main():
                 use = per_round + ([] if has_final else overall[:1])
                 fams = {layout_family(os.path.join(config.PDF_ROOT, x['rel'])) for x in use}
                 fam = fams.pop() if len(fams) == 1 else (sorted(fams) or [None])[0]
-                if fam not in ('fis_std', 'ascii', 'fis_old') or fams:
+                if fam not in ('fis_std', 'ascii', 'fis_old', 'oneline') or fams:
                     reasons.append(f"{c}: FIS 標準以外の様式（{fam}）はまだ読めない")
                     continue
                 if not use:
@@ -184,7 +192,7 @@ def main():
                     pdfs.append({'path': x['rel'], 'sha256': sha256_file(path), 'url': None,
                                  'page_url': RACE_URL.format(x['raceid']), 'round': round_of(x),
                                  'gender': x['g'], 'codex': c, 'src_type': x['typ']})
-                    if fam in ('ascii', 'fis_old'):
+                    if fam in ('ascii', 'fis_old', 'oneline'):
                         pdfs[-1]['layout'] = fam
             if season not in versions:
                 reasons.append(f"規則の版 {season} が rulesets.json に無い")

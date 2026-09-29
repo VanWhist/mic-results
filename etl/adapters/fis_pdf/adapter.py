@@ -20,6 +20,8 @@ except Exception as e:  # noqa
 from . import ascii_a, ascii_b
 # FIS 標準の旧版（2014-15・2015-16。B: / D: の印が無い 1 人 2 行）。layout: "fis_old"
 from . import old_a, old_b
+# 1 人 1 行の様式（世界ジュニア 2016 Åre）。layout: "oneline"
+from . import oneline_a, oneline_b
 
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
@@ -284,7 +286,8 @@ def load_event(ev, imported_at, log=print):
     for pdf in ev['pdfs']:
         path = pdf_path(pdf['path'])
         ascii_layout = pdf.get('layout') == 'ascii'
-        pa, pb = {'ascii': (ascii_a, ascii_b), 'fis_old': (old_a, old_b)}.get(pdf.get('layout'), (parser_a, parser_b))
+        pa, pb = {'ascii': (ascii_a, ascii_b), 'fis_old': (old_a, old_b),
+                  'oneline': (oneline_a, oneline_b)}.get(pdf.get('layout'), (parser_a, parser_b))
         try:
             meta_a, recs_a = pa.parse_moguls_results(path)
         except Exception as e:  # noqa
@@ -305,7 +308,7 @@ def load_event(ev, imported_at, log=print):
             if meta_a.get('q_layout') and code == 'Q':
                 code = 'Q2'  # 予選2 の報告書は Q1/Q2 二段で印字される
             pre, rt = [], None
-            if pdf.get('layout') in ('ascii', 'fis_old'):
+            if pdf.get('layout') in ('ascii', 'fis_old', 'oneline'):
                 round_id = f"{ev['event_id']}-{gender}-{code}"
                 if ascii_layout:
                     pre += drop_nonstarters(round_id, recs_a, meta_a)
@@ -388,6 +391,13 @@ def make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_erro
             meta['num_competitors'] = exc['actual']
             findings.append(Finding('warning', round_id, 'layer0',
                                     f"出走数の印字 {exc['printed']} を {exc['actual']} として扱う（例外。根拠: {exc['basis']}）"))
+    # registry の pace_exceptions: ペースタイムの印字の誤り（世界ジュニア 2016 の男子の報告書は女子のペース 23.78 を印字）。
+    # 全員のタイム点から逆算したペースを根拠つきで使う
+    for exc in ev.get('pace_exceptions') or []:
+        if exc.get('gender') == gender and meta.get('pace_time') == exc.get('printed'):
+            meta['pace_time'] = exc['actual']
+            findings.append(Finding('warning', round_id, 'layer0',
+                                    f"ペースタイムの印字 {exc['printed']} を {exc['actual']} として扱う（例外。根拠: {exc['basis']}）"))
     meta['date_text'] = meta_a.get('date')
     meta['date'] = iso_date(meta_a.get('date'))
     # registry の date_fallback: 見出しが無く日付が印字されていない PDF（ANC 2025）の日付。FIS の大会ページの日程（根拠つき）
