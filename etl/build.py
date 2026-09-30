@@ -195,6 +195,10 @@ def main(argv=None):
                 findings.append(verify.Finding('error', c['event_id'], 'layer0', c['message']))
                 continue
             loaded.append((ev, c))
+        if not ctxs:
+            # 表を 1 つも読めなかった大会（画像だけの PDF・文字が符号のままの PDF・未対応の様式）。以前はエラーにならず、
+            # 黙って非公開になっていた（2026-09-30 に 29 大会で判明）。見送る大会は registry の skip に理由を書く
+            findings.append(verify.Finding('error', ev['event_id'], 'layer0', "PDF から結果の表を 1 つも読めない（画像だけ・文字が符号のまま・未対応の様式のどれか）"))
     print(f"読み取り: {len(events)} 大会（うちキャッシュから {n_cached}）")
     unify_athlete_ids(loaded)
     merged_ids = apply_athlete_merges(loaded, master)
