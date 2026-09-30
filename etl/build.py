@@ -6,7 +6,7 @@ Every event comes from ``etl/registry/*.json``. Each registry entry names its ad
 (``etl/adapters/<name>/adapter.py`` with ``load_event(ev, imported_at, log)``), which returns round
 contexts in the shared shape (see normalize.py). Verification and publication are tier-aware.
 """
-import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, sys
+import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys
 
 from . import config, normalize, verify, layer5_saj
 from .adapters.saj_aj.parse_sajmo_old import PREFS
@@ -197,6 +197,7 @@ def main(argv=None):
             loaded.append((ev, c))
     print(f"読み取り: {len(events)} 大会（うちキャッシュから {n_cached}）")
     unify_athlete_ids(loaded)
+    merged_ids = apply_athlete_merges(loaded, master)
     for ev, c in loaded:
         if True:
             # verify the PDF hash recorded in the registry
@@ -235,7 +236,7 @@ def main(argv=None):
                 findings += verify.layer3_progression(ev['event_id'], rbc, advance_for(ev, gender))
     all_runs = [r for ctx in rounds_ctx for r in ctx['runs']]
     all_rounds = [ctx['round'] for ctx in rounds_ctx]
-    findings += verify.layer4(all_runs, all_rounds)
+    findings += verify.layer4(all_runs, all_rounds, merged_ids)
 
     layer5_status = 'skipped'
     layer5_cache = load_json(config.LAYER5_CACHE, {})  # moguls-results から引き継いだ FIS 公式 Web との照合結果
@@ -337,6 +338,26 @@ def unify_athlete_ids(loaded):
         print(f"  SAJ 番号→FIS コードで athlete_id を揃えた記録: {n}")
 
 
+def apply_athlete_merges(loaded, master):
+    """athlete_master.json の merge_into で、別々の ID に分かれた同一人物を 1 つにまとめる（根拠を見て城さんが判断したものだけ）。
+    名前由来の ID（x- で始まる）は別人と重なりうるので、names の氏名（空白を無視）に一致する記録だけを移す。
+    印字の FIS コード・SAJ 番号・氏名は記録のまま残す。統合先の ID の集合を返す（第4層で FIS コードの複数を許すため）。"""
+    merges = {aid: m for aid, m in master.get('athletes', {}).items() if m.get('merge_into')}
+    chained = sorted(aid for aid, m in merges.items() if m['merge_into'] in merges)
+    if chained:
+        raise ValueError(f"athlete_master.json: 統合先がさらに統合されている {chained}")
+    n = 0
+    for _, c in loaded:
+        for rec in c['records']:
+            m = merges.get(rec.get('athlete_id'))
+            if m and (not m.get('names') or _name_key(rec.get('name')) in {_name_key(x) for x in m['names']}):
+                rec['athlete_id'] = m['merge_into']
+                n += 1
+    if n:
+        print(f"  同一人物の統合（athlete_master.json）で athlete_id を移した記録: {n}")
+    return {m['merge_into'] for m in merges.values()}
+
+
 def strip_private(run):
     return {k: v for k, v in run.items() if not k.startswith('_')}
 
@@ -392,13 +413,25 @@ def _pref_glued(name, others):
     return False
 
 
-def display_name(names):
+def display_name(names, foreign=False):
     """表示名: 日本語表記（SAJ 様式の印字）があればそれを優先し、無ければ最も多い表記。他の表記は別名になる。
+    外国籍の選手の日本語表記がカナだけ（読みを写したもの。'パク センヨン'）なら、ローマ字の表記を選ぶ（漢字の名前は日本語表記のまま）。
     所属の文字が混ざった表記は、混ざっていない表記があればそちらを選ぶ。"""
     ja = collections.Counter({n: c for n, c in names.items() if verify.is_cjk(n)})
-    pool = ja or names
+    latin = collections.Counter({n: c for n, c in names.items() if n not in ja})
+    # 所属の漢字が混ざっただけの表記（'パク センヨン韓国'）は漢字の名前に数えない
+    if foreign and latin and not any(re.search(r'[一-鿿]', n) for n in ja if not _pref_glued(n, ja)):
+        pool = latin
+    else:
+        pool = ja or names
     clean = collections.Counter({n: c for n, c in pool.items() if not _pref_glued(n, pool)})
     return (clean or pool).most_common(1)[0][0]
+
+
+def is_saj_no(value, fis_code):
+    """選手ページに SAJ 番号として出してよい値か。外国籍の選手の SAJ 番号の欄には、仮の番号（2019 田沢湖などの 9999999、
+    2017 全日本 DM の 5000000）や FIS コード（全日本 2024 MOON SEOYOUNG）が印字されることがある。記録（runs）の印字はそのまま残す。"""
+    return bool(value) and str(value) != str(fis_code) and not re.fullmatch(r'9999\d{3}|5000000', str(value))
 
 
 def _name_key(name):
@@ -470,10 +503,11 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     for run in all_runs:
         by_id[run['athlete_id']].append(run)
     athletes = []
+    merge_targets = {m['merge_into'] for m in master.get('athletes', {}).values() if m.get('merge_into')}
     for aid, rs in by_id.items():
         rs_sorted = sorted(rs, key=lambda x: x['date'] or '')
         names = collections.Counter(x['name'] for x in rs)
-        name = display_name(names)
+        name = display_name(names, foreign=any(x.get('noc') not in (None, 'JPN') for x in rs))
         aff_hist = []
         for x in rs_sorted:
             key = (x.get('affiliation'), x.get('club'))
@@ -486,8 +520,9 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         al = aliases.get(aid, {}) if isinstance(aliases, dict) else {}
         alias_list = [n for n in names if n != name] + ([al.get('kana')] if al.get('kana') else []) + list(al.get('kanji', []))
         best = max([x for x in rs if x['run_score'] is not None], key=lambda x: x['run_score'], default=None)
-        fis = next((x['fis_code'] for x in rs_sorted if x.get('fis_code')), None)
-        saj = next((x['saj_no'] for x in rs_sorted if x.get('saj_no')), None)
+        # 統合した選手は印字の番号が複数あるので、FIS コードは統合先の ID（FIS に残っている登録）、SAJ 番号はいちばん新しい印字を代表にする
+        fis = aid if aid.isdigit() else next((x['fis_code'] for x in rs_sorted if x.get('fis_code')), None)
+        saj = next((x['saj_no'] for x in (reversed(rs_sorted) if aid in merge_targets else rs_sorted) if is_saj_no(x.get('saj_no'), fis)), None)
         athletes.append({'athlete_id': aid, 'fis_code': fis, 'saj_no': saj, 'name': name, 'aliases': [a for a in alias_list if a],
                          'noc': rs_sorted[-1].get('noc'), 'yb': next((x['yb'] for x in reversed(rs_sorted) if x.get('yb')), None),
                          # 所属は FIS 様式には印字されないので、最後に印字があった大会の値を使う

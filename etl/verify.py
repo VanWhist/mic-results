@@ -301,7 +301,8 @@ def layer3_progression(event_id, rounds_by_code, advance):
 
 
 # ---------------------------------------------------------------- layer 4: cross-file consistency
-def layer4(all_runs, rounds):
+def layer4(all_runs, rounds, merged_ids=()):
+    """merged_ids: athlete_master.json で同一人物として統合した選手。印字の FIS コードが複数あるのは統合の結果なので警告に留める。"""
     f = []
     by_id = collections.defaultdict(list)
     for r in all_runs:
@@ -326,7 +327,9 @@ def layer4(all_runs, rounds):
             f.append(Finding('warning', 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の SAJ 番号が複数 {sorted(sajs)}"))
         fiss = {r['fis_code'] for r in rs if r.get('fis_code')}
         if len(fiss) > 1:
-            f.append(Finding('error', 'global', 'layer4', f"選手 {aid} {sorted(names)[0]} の FIS コードが複数 {sorted(fiss)}"))
+            f.append(Finding('warning' if aid in merged_ids else 'error', 'global', 'layer4',
+                             f"選手 {aid} {sorted(names)[0]} の FIS コードが複数 {sorted(fiss)}"
+                             + ('（athlete_master.json の統合による）' if aid in merged_ids else '')))
     by_name = collections.defaultdict(set)
     for r in all_runs:
         by_name[(r['name'], r['yb'])].add(r['athlete_id'])
