@@ -9,6 +9,7 @@ contexts in the shared shape (see normalize.py). Verification and publication ar
 import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, sys
 
 from . import config, normalize, verify, layer5_saj
+from .adapters.saj_aj.parse_sajmo_old import PREFS
 
 BUILD_VERSION = '2026-09-25-1'
 
@@ -371,10 +372,33 @@ def cut_label(advance, round_code):
     return {'rank': adv['n'], 'to': adv['to'], 'label': f"{adv['to']} 進出ライン（{adv['n']}位）"}
 
 
+def _pref_glued(name, others):
+    """name が別の表記 others のどれかに所属（都道府県名・半角カナのクラブ名）の文字が混ざっただけのものか。
+    長い氏名が所属の欄にはみ出した PDF では、文字の拾い順で「松本 ベンジャミ千ン葉」「久保田 さくら愛知」になる。"""
+    key = _name_key(name)
+    for other in others:
+        okey = _name_key(other)
+        if not okey or okey == key:
+            continue
+        rest, i = [], 0
+        for ch in key:  # okey が key の部分列なら、残りの文字を集める
+            if i < len(okey) and ch == okey[i]:
+                i += 1
+            else:
+                rest.append(ch)
+        rest = ''.join(ch for ch in rest if not '｡' <= ch <= 'ﾟ').removesuffix('県')
+        if i == len(okey) and rest in PREFS:
+            return True
+    return False
+
+
 def display_name(names):
-    """表示名: 日本語表記（SAJ 様式の印字）があればそれを優先し、無ければ最も多い表記。他の表記は別名になる。"""
+    """表示名: 日本語表記（SAJ 様式の印字）があればそれを優先し、無ければ最も多い表記。他の表記は別名になる。
+    所属の文字が混ざった表記は、混ざっていない表記があればそちらを選ぶ。"""
     ja = collections.Counter({n: c for n, c in names.items() if verify.is_cjk(n)})
-    return (ja or names).most_common(1)[0][0]
+    pool = ja or names
+    clean = collections.Counter({n: c for n, c in pool.items() if not _pref_glued(n, pool)})
+    return (clean or pool).most_common(1)[0][0]
 
 
 def _name_key(name):
