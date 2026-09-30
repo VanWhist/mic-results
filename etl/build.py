@@ -6,7 +6,7 @@ Every event comes from ``etl/registry/*.json``. Each registry entry names its ad
 (``etl/adapters/<name>/adapter.py`` with ``load_event(ev, imported_at, log)``), which returns round
 contexts in the shared shape (see normalize.py). Verification and publication are tier-aware.
 """
-import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys
+import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys, unicodedata
 
 from . import config, normalize, verify, layer5_saj
 from .adapters.saj_aj.parse_sajmo_old import PREFS
@@ -428,6 +428,45 @@ def display_name(names, foreign=False):
     return (clean or pool).most_common(1)[0][0]
 
 
+def _aff_key(pref, club):
+    """所属の履歴で同じ所属とみなすためのキー (都道府県, クラブ)。空白・中黒・全角半角・大文字小文字と、都道府県名の末尾の
+    「都・府・県」を無視する（'東京都 / ﾁｰﾑ ｼﾞｮｯｸｽ' と '東京 / ﾁｰﾑｼﾞｮｯｸｽ' は同じ）。所属の欄が都道府県名でない印字は
+    クラブ名が所属の欄にずれている（'ﾁｰﾑ / ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ'）ので、2 つをつないだものをクラブとし、都道府県は不明（None）。"""
+    def norm(s):
+        return re.sub(r'[\s・･]', '', unicodedata.normalize('NFKC', s or '')).lower()
+    p, c = norm(pref), norm(club)
+    if p[:-1] in PREFS and p[-1:] in ('都', '府', '県'):
+        p = p[:-1]
+    if p and p not in PREFS:
+        return None, p + c
+    return p or None, c
+
+
+def affiliation_history(rs_sorted):
+    """選手ページの所属の履歴。印字の表記ゆれ（_aff_key）は同じ所属としてまとめ、都道府県が読めた表記のうちいちばん多いものを出す。
+    FIS 様式（所属の印字なし）は飛ばす。クラブ名の欄が空の印字は、同じシーズンに同じ都道府県のクラブ名つきの印字があれば
+    情報が無いので飛ばす（無ければ都道府県だけの行として残す）。記録（runs）の所属・クラブは印字のまま。"""
+    keys = [(x, _aff_key(x.get('affiliation'), x.get('club'))) for x in rs_sorted]
+    with_club = {(x['season'], p) for x, (p, c) in keys if c}
+    hist = []
+    for x, (pref, club) in keys:
+        if not club and (pref is None or (x['season'], pref) in with_club):
+            continue
+        last = hist[-1] if hist else None
+        if not last or last['club'] != club or (pref and last['pref'] and pref != last['pref']):
+            last = {'club': club, 'pref': pref, 'forms': collections.Counter(), 'from': x['season']}
+            hist.append(last)
+        last['pref'] = last['pref'] or pref
+        last['to'] = x['season']
+        last['forms'][(x.get('affiliation'), x.get('club'), pref is not None)] += 1
+    out = []
+    for h in hist:
+        forms = [f for f in h['forms'].most_common() if f[0][2]] or h['forms'].most_common()
+        aff, club, _ = forms[0][0]
+        out.append({'affiliation': aff, 'club': club, 'from': h['from'], 'to': h['to']})
+    return out
+
+
 def is_saj_no(value, fis_code):
     """選手ページに SAJ 番号として出してよい値か。外国籍の選手の SAJ 番号の欄には、仮の番号（2019 田沢湖などの 9999999、
     2017 全日本 DM の 5000000）や FIS コード（全日本 2024 MOON SEOYOUNG）が印字されることがある。記録（runs）の印字はそのまま残す。"""
@@ -508,15 +547,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         rs_sorted = sorted(rs, key=lambda x: x['date'] or '')
         names = collections.Counter(x['name'] for x in rs)
         name = display_name(names, foreign=any(x.get('noc') not in (None, 'JPN') for x in rs))
-        aff_hist = []
-        for x in rs_sorted:
-            key = (x.get('affiliation'), x.get('club'))
-            if key == (None, None):  # FIS 様式には所属の印字がないので履歴の途切れとしては扱わない
-                continue
-            if not aff_hist or (aff_hist[-1]['affiliation'], aff_hist[-1]['club']) != key:
-                aff_hist.append({'affiliation': key[0], 'club': key[1], 'from': x['season'], 'to': x['season']})
-            else:
-                aff_hist[-1]['to'] = x['season']
+        aff_hist = affiliation_history(rs_sorted)
         al = aliases.get(aid, {}) if isinstance(aliases, dict) else {}
         alias_list = [n for n in names if n != name] + ([al.get('kana')] if al.get('kana') else []) + list(al.get('kanji', []))
         best = max([x for x in rs if x['run_score'] is not None], key=lambda x: x['run_score'], default=None)

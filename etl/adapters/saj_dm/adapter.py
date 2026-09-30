@@ -14,9 +14,11 @@ from ..saj_aj.parse_sajmo_old import PREFS
 
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
 STAGE = re.compile(r'^(BIG FINAL|SMALL FINAL|Quarter Final|Eight Final|Round of \d+|1/\d+ Final)\s*$', re.I)
-PROG = re.compile(r'\b(R\d+|EF|QF|SF|SmF|F)-\d+:')
+# 対戦経過の始まり（'R32-8:'、組の無い 1 回戦 'R128, Tot:10'）。長いクラブ名に空白なしで続く PDF がある
+# （'…スキー部R64-14:'、'…ｸﾗﾌRﾞ32-3:' は半角カナの濁点が R と数字の間に割り込む）ので、前が英数字でなければ区切る
+PROG = re.compile(r'(?<![A-Za-z0-9])(R[ﾞﾟ]?\d+|EF|QF|SF|SmF|F)(?:-\d+:|,\s*Tot:)')
 GENDER = {"Men's": 'M', "Ladies'": 'W', "Women's": 'W', "Lady's": 'W'}
-PARSER_VERSION = 'SAJ-DM-1.0'
+PARSER_VERSION = 'SAJ-DM-1.1'
 
 
 def parse_pdf(path):
@@ -59,8 +61,10 @@ def parse_pdf(path):
                             and PROG.search(line) is not None)
                 if ranked or unranked:
                     mp = PROG.search(line)
-                    head = line[:mp.start()].split() if mp else toks
-                    prog = line[mp.start():].strip() if mp else ''
+                    head_text, prog = (line[:mp.start()], line[mp.start():].strip()) if mp else (line, '')
+                    if re.match(r'R[ﾞﾟ]', prog):  # 割り込んだ濁点はクラブ名の最後の字のもの
+                        head_text, prog = head_text + prog[1], 'R' + prog[2:]
+                    head = head_text.split()
                     if unranked:
                         head = [''] + head
                     rest = head[3:]
