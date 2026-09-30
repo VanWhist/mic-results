@@ -162,7 +162,10 @@ def parse_pdf(path, force=False):
                 # 2 行目: FISNO クラブ … （score 段階ではクラブと FISNO だけ使う）
                 if cur['athletes'] and 'fisno' not in cur['athletes'][-1]:
                     last = cur['athletes'][-1]
-                    fis = toks[0] if re.fullmatch(r'\d{7}', toks[0]) else None
+                    # 県大会を兼ねる決勝は、2 行目の先頭に開催県の選手の県内順位 '( 1)' が印字される（表頭 2 行目 '埼玉 BIB FISNO …'）。
+                    # クラブ名ではないので読み飛ばす（以前はクラブ名になり、続く FISNO とクラブ名を読み落としていた）
+                    toks = re.sub(r'^\(\s*\d+\)\s*', '', line).split()
+                    fis = toks[0] if toks and re.fullmatch(r'\d{7}', toks[0]) else None
                     body = toks[1:] if fis else toks
                     club_tokens = []
                     for t in body:
