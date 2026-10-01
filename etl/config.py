@@ -55,6 +55,15 @@ def slug(s):
     return s or 'x'
 
 
+# 外国籍の選手の SAJ 番号の欄に印字される仮の番号（'9999999'。2019 田沢湖では韓国の 2 人、2023 北海道選手権でも同じ番号）。
+# 選手を区別しないので、athlete_id にも SAJ 番号→FIS コードの対応にも使わない
+PLACEHOLDER_SAJ = re.compile(r'9999\d{3}')
+
+
+def is_placeholder_saj(value):
+    return bool(value) and PLACEHOLDER_SAJ.fullmatch(str(value)) is not None
+
+
 def season_of(date_iso):
     """'2026-03-22' -> '2025-26' (season starts in July)."""
     y, m = int(date_iso[:4]), int(date_iso[5:7])

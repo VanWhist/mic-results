@@ -28,7 +28,33 @@ DD = re.compile(r'^\d\.\d{3}$')
 # 2 行目 SAJ 番号（対戦経過の続き）。姓と名が空白なしで印字される（'NISHINobuyuki'）。段の見出しも空白なし（'BIGFINAL'・'Roundof32'）
 EN_ROW = re.compile(r'^(?:(\d+)\s+)?(\d+)\s+(\d{7})\s+(\S+)\s+([A-Z]{3})\b\s*(.*)$')
 EN_STAGE = {'BIGFINAL': 'BIG FINAL', 'SMALLFINAL': 'SMALL FINAL', 'QuarterFinal': 'Quarter Final', 'EightFinal': 'Eight Final'}
-PARSER_VERSION = 'SAJ-DM-1.2'
+KANA = re.compile(r'[゠-ヿ･-ﾟ]+')
+PARSER_VERSION = 'SAJ-DM-1.3'
+
+
+def _split_ascii(t):
+    return ''.join(ch for ch in t if ch.isascii()), ''.join(ch for ch in t if not ch.isascii())
+
+
+def split_interleaved(rest):
+    """氏名以降の語（氏名・所属・クラブ名）。ローマ字の氏名に、隣の欄の文字が 1 字ずつ割り込む文字情報がある。
+    - 所属（国名・県名）が割り込み、所属の欄が空になる: 'BAEK-Hyun-韓Mi国n SMX'（2019 田沢湖）、'Mｵeｰlｽaﾄnﾘiｱe'（2020 全日本。
+      ｵｰｽﾄﾘｱ）。割り込んだ字が所属の一覧にあるか、カタカナだけのとき、名前から外して所属にする（所属が別に印字されていれば外すだけ。
+      'PARK Sung-Y韓o国un 韓国'、2017 全日本）
+    - その後ろで名がクラブ名と混ざる: 'SAVEHSHEM東SH京AKI FARﾎｯBﾄOｱﾝDﾄﾞｸﾚｲｼﾞｰ'（2026 B級。SAJ の順位表では
+      'SAVEHSHEMSHAKI FARBOD' 東京 ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ）。英字を名、残りをクラブ名にする"""
+    pref_i = None
+    for i, t in enumerate(rest[:2]):
+        asc, non = _split_ascii(t)
+        if asc and non and re.search(r'[A-Za-z]', asc) and (non in PREFS or KANA.fullmatch(non)):
+            rest = rest[:i] + [asc] + ([] if rest[i + 1:i + 2] == [non] else [non]) + rest[i + 1:]
+            pref_i = i + 1
+            break
+    if pref_i is not None and len(rest) > pref_i + 1:
+        asc, non = _split_ascii(rest[pref_i + 1])
+        if asc and non and re.fullmatch(r'[A-Za-z-]+', asc):
+            rest = rest[:pref_i] + [asc, rest[pref_i], non] + rest[pref_i + 2:]
+    return rest
 
 
 def parse_pdf(path):
@@ -110,7 +136,15 @@ def parse_pdf(path):
                 # （2023 田沢湖 女子 QF。順位表では順位が付いている）。読み落とさず、順位なしで持つ
                 unranked = (not ranked and len(toks) >= 3 and toks[0].isdigit() and SAJNO.match(toks[1])
                             and PROG.search(line) is not None)
-                if ranked or unranked:
+                # SAJ 番号の欄が空の外国籍選手（'4 24 MIN-JI JUN KOR Phoenix park R32-2: …'、2016 北海道選手権 女子。
+                # 順位の無い DNF の行 '102 WANG Wenxi中an国g China Jr. Moguls R64-26: B, Tot:0, DNF,'、2020 全日本）。
+                # 以前は読み落とし、公開済みの大会からも抜けていた（2020 全日本・2020 猪苗代の中国の選手など）
+                no_saj = no_saj_unranked = False
+                if in_table is True and not ranked and not unranked and PROG.search(line) is not None and toks[0].isdigit():
+                    no_saj = len(toks) >= 4 and toks[1].isdigit() and re.match(r'[A-Za-z]', toks[2]) is not None
+                    no_saj_unranked = (not no_saj and len(toks) >= 3 and re.match(r'[A-Za-z]', toks[1]) is not None
+                                       and re.search(r'\bDN[FS]\b', line) is not None)
+                if ranked or unranked or no_saj or no_saj_unranked:
                     mp = PROG.search(line)
                     head_text, prog = (line[:mp.start()], line[mp.start():].strip()) if mp else (line, '')
                     if in_table == 'old':  # 氏名・所属は審判点の手前まで（クラブ名は次の行）
@@ -120,14 +154,20 @@ def parse_pdf(path):
                     head = head_text.split()
                     if unranked:
                         head = [''] + head
-                    rest = head[3:]
+                    if no_saj:
+                        head = head[:2] + [''] + head[2:]
+                    if no_saj_unranked:
+                        head = ['', head[0], ''] + head[1:]
+                    rest = split_interleaved(head[3:])
                     # 名と所属の間の空白が無い PDF がある（'キンビッグ 恵茉北海道 TEAM BUMPS'）。名の末尾の県名を所属として切り離す
                     if len(rest) >= 2 and not (len(rest) >= 3 and rest[2] in PREFS):
                         glued = next((p for p in sorted(PREFS, key=len, reverse=True) if rest[1].endswith(p) and len(rest[1]) > len(p)), None)
                         if glued:
                             rest = rest[:1] + [rest[1][:-len(glued)], glued] + rest[2:]
                     # 氏名は「姓 名」の 2 語が基本。所属（県名など）とクラブ名が続く。
-                    if len(rest) >= 3:
+                    if len(rest) >= 3 and rest[1] in PREFS and re.search(r'[A-Za-z]', rest[0]):
+                        name, pref, club = rest[0], rest[1], ' '.join(rest[2:])  # 1 語のローマ字の名前（'BAEK-Hyun-Min 韓国 SMX'）
+                    elif len(rest) >= 3:
                         name, pref, club = ' '.join(rest[:2]), rest[2], ' '.join(rest[3:])
                     elif len(rest) == 2:
                         name, pref, club = rest[0], rest[1], ''
@@ -139,10 +179,16 @@ def parse_pdf(path):
                         name = ''.join(ch for ch in name if ch not in pref or ch.isascii())
                     if ranked:
                         rank, bib, sajno = int(toks[0]), int(toks[1]), toks[2]
+                    elif no_saj:
+                        rank, bib, sajno = int(toks[0]), int(toks[1]), None
+                    elif no_saj_unranked:
+                        rank, bib, sajno = None, int(toks[0]), None
                     else:
                         rank, bib, sajno = None, int(toks[0]), toks[1]
                     cur = dict(rank=rank, bib=bib, sajno=sajno, name=name, pref=pref, club=club,
                                progression=prog, stage=stage, page=pno)
+                    if (no_saj or no_saj_unranked) and re.fullmatch(r'[A-Z]{3}', pref):
+                        cur['noc'] = pref
                     athletes.append(cur)
                     continue
                 if in_table == 'old':
@@ -163,7 +209,10 @@ def parse_pdf(path):
 def athlete_id_of(a):
     if a.get('fisno'):  # 英語版は FIS コードが印字される
         return a['fisno']
-    return 'saj-' + str(a['sajno']) if a.get('sajno') else 'x-' + config.slug(a['name']) + '-' + config.slug(a.get('pref', ''))
+    # 外国籍選手の仮の SAJ 番号（'9999999'。2019 田沢湖では韓国の 2 人が同じ番号）は選手を区別しないので、名前で ID を作る
+    if a.get('sajno') and not config.is_placeholder_saj(a['sajno']):
+        return 'saj-' + str(a['sajno'])
+    return 'x-' + config.slug(a['name']) + '-' + config.slug(a.get('pref', ''))
 
 
 def load_event(ev, imported_at, log=print):
@@ -199,7 +248,16 @@ def load_event(ev, imported_at, log=print):
         rmeta = {'date': meta.get('date'), 'date_text': meta.get('date'), 'venue': None, 'judges': meta['judges'],
                  'pace_time': None, 'num_competitors': None, 'parser_version': PARSER_VERSION, 'title': meta.get('title'), 'officials': []}
         records = []
+        seen = {}
         for a in athletes:
+            # 同じ選手の行が順位だけ変えて 2 回印字された PDF がある（2016 北海道選手権 女子の 23 位・24 位 栄 穂乃花。順位表は 23 名）。
+            # BIB・SAJ 番号・氏名・対戦経過まで同じ行は印字の重複なので、後の行を読み飛ばす
+            sig = (a['bib'], a['sajno'], a['name'], a['progression'])
+            if sig in seen:
+                findings.append(Finding('warning', round_id, 'layer0',
+                                        f"{a['name']}（BIB {a['bib']}）の行が {seen[sig]} 位と {a['rank']} 位に同じ内容で 2 回印字されている。後の行を読み飛ばした"))
+                continue
+            seen[sig] = a['rank']
             records.append({
                 'rank': a['rank'], 'bib': a['bib'], 'saj_no': a['sajno'], 'fis_code': a.get('fisno'), 'athlete_id': athlete_id_of(a),
                 'name': a['name'], 'noc': a.get('noc'), 'yb': None, 'affiliation': a['pref'], 'club': a['club'],

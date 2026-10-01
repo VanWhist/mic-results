@@ -16,7 +16,11 @@ import pdfplumber
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
 STATUS = ('DNF', 'DNS', 'DSQ', 'DQ')
-SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル|高校生|中学生|小学生|[^\s]{1,4}の部)?\s*(予選[・･]?決勝|予選|準決勝|決勝|スーパーファイナル)\s*リザルト')
+# 'スーパーファイナル決勝リザルト'（2013 ふくしま #2）はスーパーファイナル。'ファイナルリザルト'（2016 全日本）は全員の最終順位を
+# 並べ直した表（adapter の drop_relisted が捨てる）。以前はどちらも見出しと読めず、前の表の続きになっていた
+SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル|高校生|中学生|小学生|[^\s]{1,4}の部)?\s*(予選[・･]?決勝|予選|準決勝|決勝|スーパーファイナル(?:決勝)?|ファイナル)\s*リザルト')
+# 「リザルト」の無い見出し（'男子中学予選'、2012 JOC ジュニア）。行全体がこの形のときだけ見出しとみなす
+SEC_SHORT = re.compile(r'^(女子|男子)(?:中学|高校|小学)?(予選|決勝)$')
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -112,10 +116,14 @@ def parse_pdf(path, force=False):
             # 区切りのタブが '(cid:9)' として出て数値にくっつく PDF がある（'(cid:9)(cid:9)29.77'）
             lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', page.dedupe_chars().extract_text() or '').split('\n') if l.strip()]
             for li, line in enumerate(lines):
-                m = SEC.search(line)
-                if m and 'リザルト' in line and len(line) < 30 and li < 12:
+                m = SEC.search(line) if 'リザルト' in line else SEC_SHORT.match(line)
+                if m and len(line) < 30 and li < 12:
                     gender, rnd = m.group(1) or '', m.group(2)
-                    if cur is not None and (cur['gender'], cur['round']) == (gender, rnd) and not cur.get('closed'):
+                    if rnd == 'スーパーファイナル決勝':
+                        rnd = 'スーパーファイナル'
+                    # 見出しの文言まで同じときだけ前の表の続き（'男子成年の部決勝リザルト' の後の '男子決勝リザルト' は別の表。2013 宮様）
+                    if (cur is not None and (cur['gender'], cur['round']) == (gender, rnd) and not cur.get('closed')
+                            and re.sub(r'\s', '', cur['heading']) == re.sub(r'\s', '', line)):
                         cur['pages'].append(pno)
                     else:
                         cur = dict(gender=gender, round=rnd, code=None, heading=line, pages=[pno], athletes=[], mixed=(gender == '男女'))

@@ -1014,7 +1014,17 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "layer5_exceptions": [
+    {
+     "round_id": "2018-19-fis-1849-0012-M-F1",
+     "match": [
+      "37位 BAEK Hyun",
+      "PDF 側に居ない"
+     ],
+     "basis": "順位表の 37 位 BIB 75 は名前が「BAEK Hyun」で切れていて SAJ 番号も空欄。PDF の 37 位 BIB 75 は「BAEK-Hyun-Min」（韓国、対戦表のページも同じ）で同じ選手。名前が合わないだけなので PDF を正とする（2026-10-01）"
+    }
+   ]
   },
   {
    "event_id": "2018-19-fis-1850-0014",

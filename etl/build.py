@@ -325,11 +325,13 @@ def main(argv=None):
 
 def unify_athlete_ids(loaded):
     """SAJ 様式は予選に FIS コードが無く決勝にだけ印字される年がある。同じ SAJ 番号にどこかで FIS コードが印字されていれば、
-    その選手の athlete_id を FIS コードに揃える（根拠は印字。同姓同名の推測はしない）。"""
+    その選手の athlete_id を FIS コードに揃える（根拠は印字。同姓同名の推測はしない）。
+    外国籍の選手の仮の SAJ 番号（9999999 など、is_saj_no が認めない値）は使わない。以前は 9999999 にどこかで印字された
+    BAEK Hyun-Min の FIS コードが、9999999 を印字された別の選手（2019 田沢湖 DM の PARK Se-Jin）にも付いていた"""
     saj_to_fis = {}
     for _, c in loaded:
         for rec in c['records']:
-            if rec.get('saj_no') and rec.get('fis_code'):
+            if rec.get('fis_code') and is_saj_no(rec.get('saj_no'), rec['fis_code']):
                 saj_to_fis.setdefault(str(rec['saj_no']), str(rec['fis_code']))
     n = 0
     for _, c in loaded:
@@ -474,7 +476,7 @@ def affiliation_history(rs_sorted):
 def is_saj_no(value, fis_code):
     """選手ページに SAJ 番号として出してよい値か。外国籍の選手の SAJ 番号の欄には、仮の番号（2019 田沢湖などの 9999999、
     2017 全日本 DM の 5000000）や FIS コード（全日本 2024 MOON SEOYOUNG）が印字されることがある。記録（runs）の印字はそのまま残す。"""
-    return bool(value) and str(value) != str(fis_code) and not re.fullmatch(r'9999\d{3}|5000000', str(value))
+    return bool(value) and str(value) != str(fis_code) and not config.is_placeholder_saj(value) and str(value) != '5000000'
 
 
 def _name_key(name):

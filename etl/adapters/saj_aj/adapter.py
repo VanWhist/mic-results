@@ -89,6 +89,39 @@ def _key(a):
     return a.get('sajno') or ('bib', a.get('bib'))
 
 
+def _row_sig(a):
+    """同じ滑走かどうかを見る印（選手・得点・タイム・状態）"""
+    return (_key(a), a.get('score'), a.get('time'), a.get('status'))
+
+
+def drop_relisted(sections):
+    """他の表を並べ直しただけの表を捨てる。同じ性別の別の表（3 名以上）の行を、選手・得点・タイム・状態まで全部同じで含み、
+    それより人数の多い表は、その表を含む最終順位の一覧（2016 全日本の「ファイナルリザルト」、2013 ふくしま #2 の 1〜3 ページ）や、
+    区分を合わせた総合順位（2013 宮様の成年・少年の後の「決勝リザルト」）。読むと同じ選手が同じラウンドに 2 回になる。
+    注記は含まれていた側の表に付ける。戻り値: 注記の list"""
+    notes = []
+    drop = []
+    for s in sections:
+        sigs = {_row_sig(a) for a in s['athletes']}
+        for t in sections:
+            if t is s or t['gender'] != s['gender'] or len(t['athletes']) < 3 or len(t['athletes']) >= len(s['athletes']):
+                continue
+            if all(_row_sig(a) in sigs for a in t['athletes']):
+                others = set()
+                for u in sections:
+                    if u is not s and u['gender'] == s['gender']:
+                        others |= {_row_sig(a) for a in u['athletes']}
+                n_other = sum(1 for a in s['athletes'] if _row_sig(a) not in others)
+                notes.append(f"{t['gender']} {t['round']}: 「{s['heading']}」（{s['pages']} ページ、{len(s['athletes'])} 名）はこの表"
+                             f"（{len(t['athletes'])} 名）の行をすべて同じ得点で含む並べ直しの表なので捨てた"
+                             + (f"（うち {n_other} 名はこの PDF の他の表に無い）" if n_other else ''))
+                drop.append(s)
+                break
+    for s in drop:
+        sections.remove(s)
+    return notes
+
+
 def collapse_overall(sections):
     """決勝・スーパーファイナルのページに全員の総合順位が印字されている大会（FIS/A 2026 など）:
     前のラウンドと同じ得点・タイムの行は持ち越し（そのラウンドを滑っていない）なので除く。
@@ -178,7 +211,7 @@ def check_round_counts(sections):
 def athlete_id_of(a):
     if a.get('fisno'):
         return str(a['fisno'])
-    if a.get('sajno'):
+    if a.get('sajno') and not config.is_placeholder_saj(a['sajno']):  # 仮の番号は選手を区別しない
         return 'saj-' + str(a['sajno'])
     return 'x-' + config.slug(a.get('name', '')) + '-' + config.slug(a.get('pref', ''))
 
@@ -327,6 +360,10 @@ def load_event(ev, imported_at, log=print):
     overrides = dict(raw_rules.get('pace_by_sheet', {}))
     overrides.update(ev.get('pace_by_sheet', {}))
     exceptions = list(raw_rules.get('recompute_exceptions', [])) + list(ev.get('recompute_exceptions', []))
+    # FIS コードの印字の誤り（別の選手の FIS コードが印字されている。registry の fis_code_fixes、根拠は basis）。
+    # SAJ 番号と印字の両方が合う行だけを直す
+    fis_fixes = ev.get('fis_code_fixes') or []
+    fis_fixes_used = set()
     ctxs = []
     for pdf in ev['pdfs']:
         path = os.path.join(config.PDF_ROOT, pdf['path'])
@@ -346,6 +383,7 @@ def load_event(ev, imported_at, log=print):
             by_cat.setdefault(sec.get('category'), []).append(sec)
         problems, overall_notes = [], []
         for grp in by_cat.values():
+            overall_notes += drop_relisted(grp)
             problems += section_codes(grp)
             overall_notes += collapse_overall(grp) + mark_overall_groups(grp)
             problems += check_round_counts(grp)
@@ -410,6 +448,13 @@ def load_event(ev, imported_at, log=print):
                 rec['exceptions'] = exc
             findings = []
             round_id = f"{cls['event_id']}-{g}-{code}" + (f"-{cat_slug}" if cat else '')
+            for rec in records:
+                for i, fx in enumerate(fis_fixes):
+                    if str(rec.get('saj_no')) == fx['saj_no'] and str(rec.get('fis_code')) == fx['printed']:
+                        rec['fis_code'] = rec['athlete_id'] = fx['fis_code']
+                        fis_fixes_used.add(i)
+                        findings.append(Finding('warning', round_id, 'layer0',
+                                                f"{rec.get('name')}（SAJ {fx['saj_no']}）の FIS コードの印字 {fx['printed']} を {fx['fis_code']} に直した。根拠: {fx['basis']}"))
             if cat:
                 cls['round_id'] = round_id
                 if cat == '総合の部':
@@ -462,4 +507,8 @@ def load_event(ev, imported_at, log=print):
         for p in problems + problems_b:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'], 'message': p})
         log(f"  {ev['event_id']}: {len(sections)} セクション / B {len(rounds_b)} ラウンド")
+    for i, fx in enumerate(fis_fixes):
+        if i not in fis_fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"fis_code_fixes の SAJ {fx['saj_no']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
     return ctxs
