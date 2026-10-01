@@ -6,6 +6,10 @@ FIS国際様式用 fis-moguls-pdf-to-excel が対応しない国内リザルト
 """
 import re
 import pdfplumber
+try:
+    from . import glyph_font as glyph_font_mod
+except ImportError:  # スクリプトとして直接使うとき
+    import glyph_font as glyph_font_mod
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 # SAJ番号は通常7桁の数字だが、外国籍選手には '500KOR2' のような英数字が振られる
@@ -274,12 +278,14 @@ def page_category(top_lines):
     return None
 
 
-def parse_pdf(path):
+def parse_pdf(path, glyph_font=None):
+    """glyph_font: 文字が字形の番号のままの PDF（registry の glyph_font）。glyph_font.fix_page で文字に戻してから読む"""
     sections = []
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={})
     with pdfplumber.open(path) as pdf:
         cur, prev_text = None, None
         for pno, page in enumerate(pdf.pages, 1):
+            glyph_font_mod.fix_page(page, glyph_font)
             # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
             page = page.dedupe_chars()
             text = page.extract_text() or ''

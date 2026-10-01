@@ -16,11 +16,12 @@ B. 恒等式（公開データだけで再計算。規則の式を読み直し�
 C. moguls-results 由来のラウンド: moguls-results の data/*.json と run 単位で順位・得点・タイム点・エア・ターンを照合
 D. 順位のみ（デュアルモーグル）: PDF のページに氏名があり、同じ行に順位の数字があるか
 """
-import argparse, collections, glob, json, os, re, sys, unicodedata
+import argparse, collections, functools, glob, json, os, re, sys, unicodedata
 from decimal import Decimal, ROUND_DOWN
 import ctypes
 import pypdfium2 as pdfium
 import pypdfium2.raw as pdfium_c
+from etl.adapters.saj_aj import glyph_font
 
 sys.stdout.reconfigure(encoding='utf-8')
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -56,17 +57,69 @@ def load_published():
 _pdf_cache = {}
 
 
+@functools.lru_cache(maxsize=None)
+def glyph_pdfs():
+    """registry の glyph_font（文字が字形の番号のままの PDF）→ {PDF の絶対パス: 字形の番号 → 文字}。
+    pdfium もその PDF の文字を字形の番号のまま返す（chr(4580)）ので、ETL と同じフォントの対応表（glyph_font.glyph_map）で戻す"""
+    out = {}
+    for fn in glob.glob(os.path.join(REPO, 'etl', 'registry', '*.json')):
+        for ev in json.load(open(fn, encoding='utf-8')).get('events', []):
+            for p in ev.get('pdfs', []):
+                if p.get('glyph_font'):
+                    out[os.path.normcase(os.path.abspath(os.path.join(PDF_ROOT, p['path'])))] = glyph_font.glyph_map(p['glyph_font'])
+    return out
+
+
+def _font_name(tp, i):
+    buf, flags = ctypes.create_string_buffer(256), ctypes.c_int()
+    pdfium_c.FPDFText_GetFontInfo(tp.raw, i, buf, 256, ctypes.byref(flags))
+    return buf.value.decode('utf-8', 'replace')
+
+
+@functools.lru_cache(maxsize=None)
+def _decomposed_glyphs(n):
+    """pdfium は互換分解のある文字コードを分解して返す（'多' の字形の番号 1654 = U+0676 → U+0648 U+0674）。
+    分解後の 2 文字 → 元の字形の番号"""
+    out = {}
+    for g in range(n):
+        for form in ('NFKD', 'NFKC'):
+            s = unicodedata.normalize(form, chr(g))
+            if len(s) > 1:
+                out.setdefault(s, g)
+    return out
+
+
+def _glyph_chars(tp, glyphs):
+    """字形の番号のままの PDF: [(pdfium の文字の位置, 戻した文字)]。分解されて 2 文字で来た字形は 1 文字に戻し、位置は 1 文字目"""
+    decomposed = _decomposed_glyphs(max(glyphs) + 1)
+    out, i, n = [], 0, tp.count_chars()
+    while i < n:
+        ch = tp.get_text_range(i, 1)
+        # pdfium が補う空白（' '）は字形の番号ではないので戻さない（字形の空白は chr(2) で来る）
+        if len(ch) == 1 and not ch.isspace() and glyph_font.is_target_font(_font_name(tp, i)):
+            pair = tp.get_text_range(i, 2) if i + 1 < n else ''
+            if pair in decomposed and glyph_font.is_target_font(_font_name(tp, i + 1)):
+                out.append((i, glyphs.get(decomposed[pair], ch)))
+                i += 2
+                continue
+            ch = glyphs.get(ord(ch), ch)
+        out.append((i, ch))
+        i += 1
+    return out
+
+
 def page_lines(path, page_no):
     """[(y_center, [(x, text_token)...])] を上から順に。pdfium の文字箱を自前で語・行にまとめる"""
     key = (path, page_no)
     if key in _pdf_cache:
         return _pdf_cache[key]
+    glyphs = glyph_pdfs().get(os.path.normcase(os.path.abspath(path)))
     doc = pdfium.PdfDocument(path)
     page = doc[page_no - 1]
     tp = page.get_textpage()
     chars = []
-    for i in range(tp.count_chars()):
-        ch = tp.get_text_range(i, 1)
+    seq = _glyph_chars(tp, glyphs) if glyphs is not None else ((i, tp.get_text_range(i, 1)) for i in range(tp.count_chars()))
+    for i, ch in seq:
         if not ch or ch in '\r\n':
             continue
         l, b, r, t = tp.get_charbox(i, loose=True)

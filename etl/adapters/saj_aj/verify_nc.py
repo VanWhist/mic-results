@@ -13,6 +13,10 @@ import sys, re, json, collections
 from decimal import Decimal as D, ROUND_DOWN
 import pdfplumber
 import openpyxl
+try:
+    from . import glyph_font as glyph_font_mod
+except ImportError:  # スクリプトとして直接使うとき
+    import glyph_font as glyph_font_mod
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 ROUNDCODE = re.compile(r'^(SF|F|Q)-[a-z/]+$')
@@ -192,7 +196,7 @@ def _unmix(text):
     return [text]
 
 
-def read_pdf(path):
+def read_pdf(path, glyph_font=None):
     """表ごとに {page, code, heading, gender, pace, nturn, columns, blocks} を返す。
     1ページに【女子】【男子】の2表が並ぶ年がある（2024 SF-w/m）。
     選手ブロックは「BIB 列に整数がある行」から次のその行までで、1選手=2行を期待する。"""
@@ -201,6 +205,7 @@ def read_pdf(path):
     with pdfplumber.open(path) as pdf:
         year, prev_sig = None, None
         for pno, page in enumerate(pdf.pages, 1):
+            glyph_font_mod.fix_page(page, glyph_font)  # 文字が字形の番号のままの PDF（registry の glyph_font）
             page = page.dedupe_chars()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
             words = page.extract_words()
             # 前のページと語も位置もまったく同じページ（同じページが 2 回綴じ込まれた PDF、2022 宮様 女子決勝）は読まない

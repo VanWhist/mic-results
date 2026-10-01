@@ -336,9 +336,9 @@ def load_event(ev, imported_at, log=print):
             meta, sections = parse_sajmo_old.parse_pdf(path, force=True)
             old_layout = bool(meta.get('old_layout'))
             if not old_layout:
-                meta, sections = parse_sajmo.parse_pdf(path)
+                meta, sections = parse_sajmo.parse_pdf(path, pdf.get('glyph_font'))
         else:
-            meta, sections = parse_sajmo.parse_pdf(path)
+            meta, sections = parse_sajmo.parse_pdf(path, pdf.get('glyph_font'))
         # 年齢区分（中学生の部・高校生の部・総合の部）が 2 つ以上ある PDF（2024 全日本ジュニア）は、
         # 区分ごとに 1 つの大会とみなしてラウンド記号・総合順位ページ・人数順を決める（区分が無い PDF は従来どおり 1 組）
         by_cat = collections.OrderedDict()
@@ -353,7 +353,7 @@ def load_event(ev, imported_at, log=print):
         if old_layout:
             rounds_b, problems_b = [], []
         else:
-            _, pages_b, tables_b = verify_nc.read_pdf(path)
+            _, pages_b, tables_b = verify_nc.read_pdf(path, pdf.get('glyph_font'))
             rounds_b, problems_b = verify_nc.group_rounds(tables_b)
         judges = []
         for jno, (role, name) in sorted(meta['judges'].items()):

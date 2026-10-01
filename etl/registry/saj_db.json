@@ -3204,6 +3204,7 @@
    "pdfs": [
     {
      "path": "SAJ_B/2013-14/SAJ2014_2008_0022_M_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "40cfca980e7b7730791f1f694dcb0eadc7d3d3230791667b609a2a1b899fa42f",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20140022.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/0022/result",
@@ -3214,6 +3215,7 @@
     },
     {
      "path": "SAJ_B/2013-14/SAJ2014_2008_5022_W_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "be570b8ae93160408cd2259dd9a09cb2f2b531337e6e785f7e4e4bb2eeb1c374",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2014/FS/FSRE20145022.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2014/competition/5022/result",
@@ -11371,6 +11373,7 @@
    "pdfs": [
     {
      "path": "SAJ_B/2021-22/SAJ2022_3002_0545_M_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "8ef7341d94d731bfaa05affe97fa95c2301b0609d795ba67c23ebe50f2789491",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2022 グランドリザルト（ドラッグされました）_8B3VifM.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0545/result",
@@ -11381,6 +11384,7 @@
     },
     {
      "path": "SAJ_B/2021-22/SAJ2022_3002_5545_W_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "946ca3892ba660e115a1aacabfc238b0fba2b1540f4040244ea341d93a8757d9",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2022 グランドリザルト（ドラッグされました）_1kVt3qZ.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5545/result",
@@ -11455,6 +11459,7 @@
    "pdfs": [
     {
      "path": "SAJ_B/2021-22/SAJ2022_3002_0546_M_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "f8c67c6cbbf5d14cd96e76aa2971ec270787724f4ac92a6622bc130fe5033b8e",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2022 グランドリザルト（ドラッグされました）_UWzSx8T.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0546/result",
@@ -11465,6 +11470,7 @@
     },
     {
      "path": "SAJ_B/2021-22/SAJ2022_3002_5546_W_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "7e992910920c9ba9614fb9f4a89789bc1729f63df4ec8298f5cc621ab088aea6",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/2022 グランドリザルト（ドラッグされました）_NizUdMv.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5546/result",
@@ -12129,6 +12135,7 @@
    "pdfs": [
     {
      "path": "SAJ_AJJR/2021-22/SAJ2022_3022_0455_M_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "8bf42f8b795f0151972a5330a5ced326672bfd7463464b368c74a9ae851a2c0a",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/高校男子.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0455/result",
@@ -12139,6 +12146,7 @@
     },
     {
      "path": "SAJ_AJJR/2021-22/SAJ2022_3022_5455_W_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "2986eabe78bac8bf480e419ae2ee17ef453980909784d49381bdf6348ae568b4",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/高校女子.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5455/result",
@@ -12171,6 +12179,7 @@
    "pdfs": [
     {
      "path": "SAJ_AJJR/2021-22/SAJ2022_3022_0630_M_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "4fa939a56477a5a21b7261d388831090437f4d51c945bc186297133f9ca43b9f",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/中学男子.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/0630/result",
@@ -12181,6 +12190,7 @@
     },
     {
      "path": "SAJ_AJJR/2021-22/SAJ2022_3022_5630_W_MO.pdf",
+     "glyph_font": "HGRSMP",
      "sha256": "0e5dbfc5c524e4adcb05dc489c8556e39b94a83f6bb26de3722061d97cb64c80",
      "url": "https://sajdb.shikuminet.jp/static/media/race/2022/FS/中学女子.pdf",
      "page_url": "https://sajdb.shikuminet.jp/freestyle/2022/competition/5630/result",
