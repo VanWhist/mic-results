@@ -6,7 +6,7 @@ Eight Final / Round of 32 / Round of 64）、1 選手 = 1〜2 行（対戦経過
 古い様式（2012 年ごろの男女が横に並ぶ決勝成績表）はまだ読めないので、その大会はエラーとして残す。
 順位・BIB・SAJ 番号・氏名・所属・クラブ・対戦経過・最終段だけを持つ。得点や審判点は無い。
 """
-import os, re
+import itertools, os, re
 import pdfplumber
 from ... import config
 from ...verify import Finding
@@ -18,7 +18,17 @@ STAGE = re.compile(r'^(BIG FINAL|SMALL FINAL|Quarter Final|Eight Final|Round of 
 # （'…スキー部R64-14:'、'…ｸﾗﾌRﾞ32-3:' は半角カナの濁点が R と数字の間に割り込む）ので、前が英数字でなければ区切る
 PROG = re.compile(r'(?<![A-Za-z0-9])(R[ﾞﾟ]?\d+|EF|QF|SF|SmF|F)(?:-\d+:|,\s*Tot:)')
 GENDER = {"Men's": 'M', "Ladies'": 'W', "Women's": 'W', "Lady's": 'W'}
-PARSER_VERSION = 'SAJ-DM-1.1'
+# 古い様式（2013-14〜2014-15 の全日本・田沢湖）: 表頭 '順位 BIB SAJNO 氏 名 所属 クラブ名 J1 …'（対戦経過の列が無い）。段の見出し
+# （'BIG FINAL'・'BIGFINAL'・'EIGHTS FINAL'）の後に 1 選手 2 行（順位 BIB SAJNO 氏 名 所属 審判点… / クラブ名 2 本目…）。
+# 同じ PDF の前のページに DM の前の予選の得点表（表頭 '順位 BIB FISNO …'、段の見出しなし）があるので、段の見出しの後だけ読む
+OLD_STAGE = re.compile(r'^(BIG|SMALL|SEMI|QUARTER|EIGHTS?)\s*FINAL\s*$', re.I)
+NUMBER = re.compile(r'^-?\d+(\.\d+)?$')
+DD = re.compile(r'^\d\.\d{3}$')
+# 英語版（2015 全日本）: 表頭 'Rk BIB SAJCode Name Nation Progression'、1 行目 順位 BIB FISコード 姓名 国 対戦経過、
+# 2 行目 SAJ 番号（対戦経過の続き）。姓と名が空白なしで印字される（'NISHINobuyuki'）。段の見出しも空白なし（'BIGFINAL'・'Roundof32'）
+EN_ROW = re.compile(r'^(?:(\d+)\s+)?(\d+)\s+(\d{7})\s+(\S+)\s+([A-Z]{3})\b\s*(.*)$')
+EN_STAGE = {'BIGFINAL': 'BIG FINAL', 'SMALLFINAL': 'SMALL FINAL', 'QuarterFinal': 'Quarter Final', 'EightFinal': 'Eight Final'}
+PARSER_VERSION = 'SAJ-DM-1.2'
 
 
 def parse_pdf(path):
@@ -28,7 +38,9 @@ def parse_pdf(path):
     cur = None
     with pdfplumber.open(path) as pdf:
         for pno, page in enumerate(pdf.pages, 1):
-            lines = [l.strip() for l in (page.dedupe_chars().extract_text() or '').split('\n') if l.strip()]
+            # 重ね打ちの太字は同じ位置に同じ文字が重なる。許容幅の既定（1pt）だと、詰めて印字された本物の連続文字
+            # （2015 全日本 英語版 'YOSHII' の I と I は 0.96pt 差）まで 1 つにしてしまうので 0.5pt にする
+            lines = [l.strip() for l in (page.dedupe_chars(tolerance=0.5).extract_text() or '').split('\n') if l.strip()]
             in_table = False
             for li, line in enumerate(lines):
                 if meta['gender'] is None:
@@ -46,8 +58,47 @@ def parse_pdf(path):
                 if line.startswith('順位') and 'Progression' in line:
                     in_table = True
                     continue
+                if line.startswith('順位') and 'SAJNO' in line:
+                    in_table, old_stage = 'old', False
+                    continue
+                if line.startswith('Rk BIB SAJCode Name'):
+                    in_table = 'en'
+                    continue
+                md = re.match(r'^(\d{1,2})/(\d{1,2})/(\d{4})$', line)
+                if md and meta['date'] is None:  # 英語版の日付（日/月/年）
+                    meta['date'] = '%s-%02d-%02d' % (md.group(3), int(md.group(2)), int(md.group(1)))
                 if not in_table:
                     continue
+                if in_table == 'en':
+                    if line.startswith(('CODEX', 'HeadJudge', 'Head Judge')):
+                        in_table = False
+                        continue
+                    mr = re.match(r'^Roundof(\d+)$', line)
+                    if line in EN_STAGE or mr:
+                        stage = EN_STAGE.get(line) or f"Round of {mr.group(1)}"
+                        continue
+                    me = EN_ROW.match(line)
+                    if me:
+                        rank, bib, fis, glued, noc, prog = me.groups()
+                        ms2 = re.match(r"^([A-Z][A-Z'-]*?)([A-Z][a-z].*)$", glued)  # 姓（大文字）と名（大文字＋小文字）の境目
+                        cur = dict(rank=int(rank) if rank else None, bib=int(bib), sajno=None, fisno=fis,
+                                   name=' '.join(ms2.groups()) if ms2 else glued, pref='', club='', noc=noc,
+                                   progression=prog.strip(), stage=stage, page=pno)
+                        athletes.append(cur)
+                    elif cur is not None and re.match(r'^\d{7}\b', line) and cur.get('sajno') is None:
+                        cur['sajno'], _, more = line.partition(' ')
+                        cur['progression'] = (cur['progression'] + ' ' + more).strip()
+                    continue
+                if in_table == 'old':
+                    if line.startswith(('CODEX', 'Head Judge')):
+                        in_table = False
+                        continue
+                    mo = OLD_STAGE.match(line)
+                    if mo:
+                        stage, old_stage = mo.group(1).upper() + ' FINAL', True
+                        continue
+                    if not old_stage:
+                        continue
                 ms = STAGE.match(line)
                 if ms:
                     stage = ms.group(1)
@@ -62,6 +113,8 @@ def parse_pdf(path):
                 if ranked or unranked:
                     mp = PROG.search(line)
                     head_text, prog = (line[:mp.start()], line[mp.start():].strip()) if mp else (line, '')
+                    if in_table == 'old':  # 氏名・所属は審判点の手前まで（クラブ名は次の行）
+                        head_text = ' '.join(toks[:3] + list(itertools.takewhile(lambda t: not NUMBER.match(t), toks[3:])))
                     if re.match(r'R[ﾞﾟ]', prog):  # 割り込んだ濁点はクラブ名の最後の字のもの
                         head_text, prog = head_text + prog[1], 'R' + prog[2:]
                     head = head_text.split()
@@ -92,12 +145,24 @@ def parse_pdf(path):
                                progression=prog, stage=stage, page=pno)
                     athletes.append(cur)
                     continue
+                if in_table == 'old':
+                    # 2 行目: クラブ名（続く 2 本目の技コードと DD・審判点の手前まで）
+                    if cur is not None and not cur['club'] and not toks[0].isdigit():
+                        club = []
+                        for i, t in enumerate(toks):
+                            if NUMBER.match(t) or (i + 1 < len(toks) and DD.match(toks[i + 1])):
+                                break
+                            club.append(t)
+                        cur['club'] = ' '.join(club)
+                    continue
                 if cur is not None and PROG.search(line) and not toks[0].isdigit():
                     cur['progression'] = (cur['progression'] + ' ' + line).strip()  # 折り返し行
     return meta, athletes
 
 
 def athlete_id_of(a):
+    if a.get('fisno'):  # 英語版は FIS コードが印字される
+        return a['fisno']
     return 'saj-' + str(a['sajno']) if a.get('sajno') else 'x-' + config.slug(a['name']) + '-' + config.slug(a.get('pref', ''))
 
 
@@ -136,8 +201,8 @@ def load_event(ev, imported_at, log=print):
         records = []
         for a in athletes:
             records.append({
-                'rank': a['rank'], 'bib': a['bib'], 'saj_no': a['sajno'], 'fis_code': None, 'athlete_id': athlete_id_of(a),
-                'name': a['name'], 'noc': None, 'yb': None, 'affiliation': a['pref'], 'club': a['club'],
+                'rank': a['rank'], 'bib': a['bib'], 'saj_no': a['sajno'], 'fis_code': a.get('fisno'), 'athlete_id': athlete_id_of(a),
+                'name': a['name'], 'noc': a.get('noc'), 'yb': None, 'affiliation': a['pref'], 'club': a['club'],
                 'status': 'OK' if a['rank'] is not None else ('DNS' if 'DNS' in a['progression'] else 'DNF'), 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
                 'seconds': None, 'time_points': None, 'air_jumps': [], 'air_total': None, 'base_scores': [], 'ded_scores': [],
                 'base_total': None, 'ded_total': None, 'turns_total': None, 'run_score': None, 'tie': None, 'page': a['page'],

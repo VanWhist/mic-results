@@ -22,7 +22,8 @@ MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 
 # （「1. 12534089 MARCELLINI」= 1 位・Bib 1・FIS 2534089、NAC 2025 Apex）。FIS コードは 7 桁なので後ろの 7 桁で分ける
 RE_ROW = re.compile(r'^(?:(DNS|DNF|DSQ)\s+)?(?:(\d+)(?:\.\s*|\s+))?(\d+)(…?)\s*(\d{7})\s*(.+?)\s*([A-Z]{3})\s+((?:19|20)\d\d)\b\s*(.*)$')
 RE_ROW_NOYB = re.compile(r'^(\d+)\s+(\d+)\s+(\d{7})\s+(.+?)\s+([A-Z]{3})(?:\s+(DNF|DNS|DSQ))?$')
-RE_STAGE = re.compile(r'^(Big ?Final|Small ?Final|Semi ?Finals?|Quarter ?Finals?|Eight ?Finals?|1/\d+ ?Finals?|Round ?of ?\d+'
+# 'QUARETERFINALS' は 2017 札幌アジア大会の印字の綴り誤り（Quarter Final として読む）
+RE_STAGE = re.compile(r'^(Big ?Final|Small ?Final|Semi ?Finals?|Quarter ?Finals?|Quareter ?Finals?|Eight ?Finals?|1/\d+ ?Finals?|Round ?of ?\d+'
                       r'|Not ?Ranked|Qualification(?: ?Heat ?Round)?|Did ?Not ?(?:Start|Finish)|Disqualified)$', re.I)
 # 対戦経過の印（R32-1: / EF-3: / QF-2: / SF-1: / F: / SmF: / Big F: / BigF:）
 RE_PROG = re.compile(r'(?:\b(?:R\d+|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
@@ -42,7 +43,7 @@ def stage_name(s):
     """段の見出しの表記をそろえる（「BigFinal」「BIG FINAL」→「Big Final」、「Roundof32」→「Round of 32」、「1/8 Finals」→「1/8 Final」）"""
     k = re.sub(r'\s+', '', s).lower()
     fixed = {'bigfinal': 'Big Final', 'smallfinal': 'Small Final', 'semifinal': 'Semi Final', 'semifinals': 'Semi Final',
-             'quarterfinal': 'Quarter Final', 'quarterfinals': 'Quarter Final', 'eightfinal': 'Eight Final',
+             'quarterfinal': 'Quarter Final', 'quarterfinals': 'Quarter Final', 'quareterfinals': 'Quarter Final', 'eightfinal': 'Eight Final',
              'eightfinals': 'Eight Final', 'notranked': 'Not Ranked', 'qualification': 'Qualification',
              'qualificationheatround': 'Qualification Heat Round', 'didnotstart': 'Did Not Start',
              'didnotfinish': 'Did Not Finish', 'disqualified': 'Disqualified'}
@@ -79,7 +80,8 @@ def parse_pdf(path):
                 if m:
                     meta['num_competitors'] = int(m.group(1))
                 if re.match(r'^Rank\s*Bib\b', line):
-                    in_table = True
+                    # DM の前の予選の得点表（表頭 'Rank Bib FISCode Name YB Time Score Tie'、2017 札幌アジア大会）は最終成績ではない
+                    in_table = not re.search(r'\bTime\b.*\bScore\b', line)
                     continue
                 if not in_table:
                     continue

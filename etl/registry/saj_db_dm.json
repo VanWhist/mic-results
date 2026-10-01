@@ -298,6 +298,7 @@
   },
   {
    "event_id": "2013-14-saj_a-2016-0031",
+   "layer5_dm_finalists_only": "PDF の DM 最終成績表は決勝トーナメントに進んだ選手（男子 16・女子 8 名）だけ。予選で敗退した選手は SAJ 順位表の下位にだけ載る（2014 全日本は PDF 1 ページ目、田沢湖 2015 は予選の得点表の後のページ。2026-10-01 確認）",
    "season": "2013-14",
    "series": "SAJ_A",
    "grade": "A",
@@ -340,6 +341,7 @@
   },
   {
    "event_id": "2013-14-saj_aj-2018-0034",
+   "layer5_dm_finalists_only": "PDF の DM 最終成績表は決勝トーナメントに進んだ選手（男子 16・女子 8 名）だけ。予選で敗退した選手は SAJ 順位表の下位にだけ載る（2014 全日本は PDF 1 ページ目、田沢湖 2015 は予選の得点表の後のページ。2026-10-01 確認）",
    "season": "2013-14",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -382,6 +384,7 @@
   },
   {
    "event_id": "2014-15-saj_a-1970-0016",
+   "layer5_dm_finalists_only": "PDF の DM 最終成績表は決勝トーナメントに進んだ選手（男子 16・女子 8 名）だけ。予選で敗退した選手は SAJ 順位表の下位にだけ載る（2014 全日本は PDF 1 ページ目、田沢湖 2015 は予選の得点表の後のページ。2026-10-01 確認）",
    "season": "2014-15",
    "series": "SAJ_A",
    "grade": "A",
@@ -686,7 +689,8 @@
    "saj_comp": "1918",
    "saj_category": "FIS/A DM",
    "tier": "rank",
-   "adapter": "saj_dm",
+   "adapter": "fis_dm_pdf",
+   "place": "Sapporo Bankei",
    "pdfs": [
     {
      "path": "FIS/2016-17/SAJ2017_1918_0018_M_DM.pdf",
@@ -715,7 +719,7 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "PDF は FIS の国際様式（DM の前の予選の得点表＋最終成績表）なので、海外 FIS 大会と同じ fis_dm_pdf で読む（2026-10-01）"
   },
   {
    "event_id": "2016-17-fis-1927-0033",

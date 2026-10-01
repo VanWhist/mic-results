@@ -419,9 +419,10 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":82,
+"n_results":83,
 "seasons":[
 "2014-15",
+"2016-17",
 "2017-18",
 "2018-19",
 "2019-20",
@@ -433,6 +434,7 @@
 ],
 "series":[
 "ANC",
+"FIS",
 "NAC",
 "OWG",
 "WC",
@@ -531,14 +533,16 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2014-15",
+"2016-17",
 "2018-19",
 "2021-22"
 ],
 "series":[
 "ANC",
+"FIS",
 "NAC",
 "OWG"
 ],
@@ -855,6 +859,27 @@
 }
 },
 {
+"athlete_id":"2439985",
+"fis_code":"2439985",
+"saj_no":null,
+"name":"BARMASHOV Dmitriy",
+"aliases":[],
+"noc":"KAZ",
+"yb":1985,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2016-17"
+],
+"series":[
+"FIS"
+],
+"best":null
+},
+{
 "athlete_id":"2534094",
 "fis_code":"2534094",
 "saj_no":null,
@@ -1001,6 +1026,27 @@
 "run_score":69.69,
 "run_id":"2024-25-nac-apexmountain-8627-M-Q-2538310"
 }
+},
+{
+"athlete_id":"2533855",
+"fis_code":"2533855",
+"saj_no":null,
+"name":"BAYANMUNKH Orkhontamir",
+"aliases":[],
+"noc":"MGL",
+"yb":1996,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2016-17"
+],
+"series":[
+"FIS"
+],
+"best":null
 },
 {
 "athlete_id":"2533593",
@@ -3612,12 +3658,14 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
+"2016-17",
 "2017-18"
 ],
 "series":[
-"ANC"
+"ANC",
+"FIS"
 ],
 "best":{
 "run_score":82.77,
@@ -7469,7 +7517,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":44,
+"n_results":45,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -7479,6 +7527,7 @@
 "2025-26"
 ],
 "series":[
+"FIS",
 "OWG",
 "UVS",
 "WC",
@@ -7501,12 +7550,13 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2014-15",
 "2016-17"
 ],
 "series":[
+"FIS",
 "UVS"
 ],
 "best":{
@@ -8573,11 +8623,13 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
-"2015-16"
+"2015-16",
+"2016-17"
 ],
 "series":[
+"FIS",
 "NAC"
 ],
 "best":{
@@ -11220,13 +11272,15 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":4,
+"n_results":5,
 "seasons":[
 "2014-15",
+"2016-17",
 "2017-18"
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS"
 ],
 "best":{
@@ -11777,7 +11831,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":68,
+"n_results":69,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -11790,6 +11844,7 @@
 "2025-26"
 ],
 "series":[
+"FIS",
 "OWG",
 "UVS",
 "WC",
@@ -13880,7 +13935,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":21,
+"n_results":22,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -13893,6 +13948,7 @@
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS",
 "WC",
 "WJC",
@@ -14630,13 +14686,15 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":5,
+"n_results":6,
 "seasons":[
+"2016-17",
 "2017-18",
 "2019-20"
 ],
 "series":[
-"ANC"
+"ANC",
+"FIS"
 ],
 "best":{
 "run_score":72.01,
@@ -16286,6 +16344,27 @@
 "run_score":66.84,
 "run_id":"2019-20-anc-perisher-8023-W-F1-2527560"
 }
+},
+{
+"athlete_id":"2528800",
+"fis_code":"2528800",
+"saj_no":null,
+"name":"NING Suning",
+"aliases":[],
+"noc":"CHN",
+"yb":1991,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2016-17"
+],
+"series":[
+"FIS"
+],
+"best":null
 },
 {
 "athlete_id":"2529023",
@@ -18338,6 +18417,27 @@
 }
 },
 {
+"athlete_id":"2533899",
+"fis_code":"2533899",
+"saj_no":null,
+"name":"RAGCHAA Tuvshinbayar",
+"aliases":[],
+"noc":"MGL",
+"yb":1987,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2016-17"
+],
+"series":[
+"FIS"
+],
+"best":null
+},
+{
 "athlete_id":"2530496",
 "fis_code":"2530496",
 "saj_no":null,
@@ -18490,13 +18590,14 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2014-15",
 "2016-17",
 "2021-22"
 ],
 "series":[
+"FIS",
 "OWG",
 "UVS"
 ],
@@ -19892,14 +19993,16 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2014-15",
+"2016-17",
 "2017-18",
 "2018-19"
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS"
 ],
 "best":{
@@ -19921,14 +20024,16 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2014-15",
+"2016-17",
 "2017-18",
 "2019-20"
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS"
 ],
 "best":{
@@ -19948,13 +20053,15 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
 "2014-15",
+"2016-17",
 "2017-18"
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS"
 ],
 "best":{
@@ -20089,6 +20196,27 @@
 }
 },
 {
+"athlete_id":"2534046",
+"fis_code":"2534046",
+"saj_no":null,
+"name":"SHAO Huijun",
+"aliases":[],
+"noc":"CHN",
+"yb":1998,
+"affiliation":null,
+"club":null,
+"affiliation_history":[],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2016-17"
+],
+"series":[
+"FIS"
+],
+"best":null
+},
+{
 "athlete_id":"2529060",
 "fis_code":"2529060",
 "saj_no":null,
@@ -20150,12 +20278,14 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":2,
+"n_results":3,
 "seasons":[
+"2016-17",
 "2019-20"
 ],
 "series":[
-"ANC"
+"ANC",
+"FIS"
 ],
 "best":{
 "run_score":57.79,
@@ -22913,14 +23043,16 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
+"2016-17",
 "2017-18",
 "2018-19",
 "2019-20"
 ],
 "series":[
 "ANC",
+"FIS",
 "UVS",
 "WJC"
 ],
@@ -23422,7 +23554,7 @@
 "club":null,
 "affiliation_history":[],
 "mic":null,
-"n_results":78,
+"n_results":79,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -23437,6 +23569,7 @@
 ],
 "series":[
 "ANC",
+"FIS",
 "NAC",
 "OWG",
 "WC",
@@ -25356,9 +25489,10 @@
 "saj_no":"5000936",
 "name":"上田 諒太郎",
 "aliases":[
-"上田諒太郎"
+"上田諒太郎",
+"UEDA Ryotaro"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
@@ -25377,7 +25511,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -25387,6 +25521,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -27412,7 +27547,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":34,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -27840,7 +27975,7 @@
 }
 ],
 "mic":null,
-"n_results":115,
+"n_results":117,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -28542,7 +28677,8 @@
 "saj_no":"5000986",
 "name":"今野 衣純",
 "aliases":[
-"今野衣純"
+"今野衣純",
+"KONNO Izumi"
 ],
 "noc":null,
 "yb":null,
@@ -28569,7 +28705,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -28716,7 +28852,7 @@
 }
 ],
 "mic":null,
-"n_results":176,
+"n_results":177,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -28755,7 +28891,8 @@
 "saj_no":"5000751",
 "name":"伊藤 あづさ",
 "aliases":[
-"伊藤あづさ"
+"伊藤あづさ",
+"ITO Azusa"
 ],
 "noc":null,
 "yb":null,
@@ -28770,9 +28907,10 @@
 }
 ],
 "mic":null,
-"n_results":29,
+"n_results":31,
 "seasons":[
 "2011-12",
+"2013-14",
 "2014-15",
 "2016-17",
 "2017-18"
@@ -28822,11 +28960,12 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":62,
 "seasons":[
 "2011-12",
 "2012-13",
 "2013-14",
+"2014-15",
 "2017-18",
 "2018-19",
 "2019-20",
@@ -28865,8 +29004,9 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
+"2016-17",
 "2017-18",
 "2018-19"
 ],
@@ -29110,7 +29250,8 @@
 "saj_no":"5001341",
 "name":"伊藤 颯汰",
 "aliases":[
-"伊藤颯汰"
+"伊藤颯汰",
+"ITOU Souta"
 ],
 "noc":null,
 "yb":null,
@@ -29125,7 +29266,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -29135,6 +29276,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -29366,7 +29508,8 @@
 "saj_no":"5001231",
 "name":"住吉 桃華",
 "aliases":[
-"住吉桃華"
+"住吉桃華",
+"SUMIYOSHI Momoka"
 ],
 "noc":null,
 "yb":null,
@@ -29405,7 +29548,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29416,6 +29559,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -29466,7 +29610,7 @@
 }
 ],
 "mic":null,
-"n_results":75,
+"n_results":77,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29764,7 +29908,8 @@
 "saj_no":"5000818",
 "name":"佐々木 流星",
 "aliases":[
-"佐々木流星"
+"佐々木流星",
+"SASAKI Ryusei"
 ],
 "noc":null,
 "yb":null,
@@ -29797,7 +29942,7 @@
 }
 ],
 "mic":null,
-"n_results":102,
+"n_results":104,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29933,7 +30078,7 @@
 }
 ],
 "mic":null,
-"n_results":137,
+"n_results":140,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30069,7 +30214,8 @@
 "saj_no":"5000730",
 "name":"佐渡島 純子",
 "aliases":[
-"佐渡島純子"
+"佐渡島純子",
+"SADOSHIMA Junko"
 ],
 "noc":null,
 "yb":null,
@@ -30102,7 +30248,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":40,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -30117,6 +30263,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -30451,9 +30598,10 @@
 "saj_no":"5000023",
 "name":"佐藤 央隆",
 "aliases":[
-"佐藤央隆"
+"佐藤央隆",
+"SATO Hisataka"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
 "club":"TEAMBANKEI",
@@ -30472,7 +30620,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -30480,7 +30628,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":64.59,
@@ -31681,9 +31830,10 @@
 "saj_no":"5000943",
 "name":"冨永 伸夫",
 "aliases":[
-"冨永伸夫"
+"冨永伸夫",
+"TOMINAGA Nobuo"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
@@ -31696,7 +31846,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -31706,6 +31856,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -31756,7 +31907,7 @@
 }
 ],
 "mic":null,
-"n_results":195,
+"n_results":199,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -32237,9 +32388,10 @@
 "saj_no":"5000719",
 "name":"加藤 千博",
 "aliases":[
-"加藤千博"
+"加藤千博",
+"KATO Chihiro"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"学連",
 "club":"中京大学",
@@ -32252,7 +32404,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -32266,6 +32418,43 @@
 "best":{
 "run_score":61.48,
 "run_id":"2014-15-saj_a-1969-0014-W-F2-2526691"
+}
+},
+{
+"athlete_id":"2484865",
+"fis_code":"2484865",
+"saj_no":"5000029",
+"name":"加藤 大輔",
+"aliases":[
+"加藤大輔"
+],
+"noc":null,
+"yb":null,
+"affiliation":"長野",
+"club":"白馬村SC",
+"affiliation_history":[
+{
+"affiliation":"長野",
+"club":"白馬村SC",
+"from":"2011-12",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":9,
+"seasons":[
+"2011-12",
+"2012-13",
+"2013-14"
+],
+"series":[
+"FIS",
+"SAJ_A",
+"SAJ_AJ"
+],
+"best":{
+"run_score":20.75,
+"run_id":"2011-12-saj_a-2068-0023-M-Q-2484865"
 }
 },
 {
@@ -32473,42 +32662,6 @@
 "best":{
 "run_score":25.83,
 "run_id":"2025-26-saj_b-4047-0496-W-F1-saj-5002140"
-}
-},
-{
-"athlete_id":"2484865",
-"fis_code":"2484865",
-"saj_no":"5000029",
-"name":"加藤大輔",
-"aliases":[
-"加藤 大輔"
-],
-"noc":null,
-"yb":null,
-"affiliation":"長野",
-"club":"白馬村SC",
-"affiliation_history":[
-{
-"affiliation":"長野",
-"club":"白馬村SC",
-"from":"2011-12",
-"to":"2013-14"
-}
-],
-"mic":null,
-"n_results":8,
-"seasons":[
-"2011-12",
-"2012-13",
-"2013-14"
-],
-"series":[
-"FIS",
-"SAJ_A"
-],
-"best":{
-"run_score":20.75,
-"run_id":"2011-12-saj_a-2068-0023-M-Q-2484865"
 }
 },
 {
@@ -32960,8 +33113,10 @@
 "fis_code":"2527310",
 "saj_no":"5000024",
 "name":"千葉 大誉",
-"aliases":[],
-"noc":null,
+"aliases":[
+"CHIBA Hirotaka"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"学連",
 "club":"東海大学",
@@ -32986,7 +33141,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -32994,7 +33149,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":67.78,
@@ -33402,7 +33558,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2014-15",
@@ -33432,7 +33588,8 @@
 "saj_no":"5001155",
 "name":"原 旭飛",
 "aliases":[
-"原旭飛"
+"原旭飛",
+"HARA Asahi"
 ],
 "noc":null,
 "yb":null,
@@ -33459,7 +33616,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33470,6 +33627,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -33573,9 +33731,10 @@
 "saj_no":"5000613",
 "name":"原田 琴音",
 "aliases":[
-"原田琴音"
+"原田琴音",
+"HARADA Kotone"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
 "club":"北翔大学",
@@ -33594,7 +33753,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":19,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33782,9 +33941,10 @@
 "saj_no":"5001291",
 "name":"古賀 華梨",
 "aliases":[
-"古賀華梨"
+"古賀華梨",
+"KOGA Kelly"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"千葉",
 "club":"ﾁｰﾑ ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
@@ -33797,7 +33957,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -33806,6 +33966,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -33855,7 +34016,8 @@
 "saj_no":"5001044",
 "name":"吉井 萌恵",
 "aliases":[
-"吉井萌恵"
+"吉井萌恵",
+"YOSHII Moe"
 ],
 "noc":null,
 "yb":null,
@@ -33876,7 +34038,7 @@
 }
 ],
 "mic":null,
-"n_results":43,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34009,7 +34171,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34021,6 +34183,7 @@
 "FIS",
 "NAC",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR"
 ],
 "best":{
@@ -34033,7 +34196,9 @@
 "fis_code":"2484486",
 "saj_no":"5000030",
 "name":"吉川 空",
-"aliases":[],
+"aliases":[
+"YOSHIKAWA Sora"
+],
 "noc":null,
 "yb":null,
 "affiliation":"埼玉",
@@ -34053,9 +34218,10 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2011-12",
+"2014-15",
 "2016-17",
 "2017-18"
 ],
@@ -34748,7 +34914,7 @@
 }
 ],
 "mic":null,
-"n_results":92,
+"n_results":96,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -34781,7 +34947,8 @@
 "saj_no":"5000707",
 "name":"国料 順子",
 "aliases":[
-"国料順子"
+"国料順子",
+"KOKURYO Junko"
 ],
 "noc":null,
 "yb":null,
@@ -34796,7 +34963,7 @@
 }
 ],
 "mic":null,
-"n_results":43,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35466,7 +35633,8 @@
 "saj_no":"5000990",
 "name":"坂田 天来",
 "aliases":[
-"坂田天来"
+"坂田天来",
+"SAKATA Tera"
 ],
 "noc":null,
 "yb":null,
@@ -35481,7 +35649,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":12,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -35490,6 +35658,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR"
 ],
 "best":{
@@ -35630,7 +35799,8 @@
 "saj_no":"5001909",
 "name":"垂水 勇優希",
 "aliases":[
-"垂水勇優希"
+"垂水勇優希",
+"TARUMI Yuuki"
 ],
 "noc":null,
 "yb":null,
@@ -35663,7 +35833,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35691,7 +35861,8 @@
 "saj_no":"5000864",
 "name":"城代 洋",
 "aliases":[
-"城代洋"
+"城代洋",
+"JODAI Hiroshi"
 ],
 "noc":null,
 "yb":null,
@@ -35730,7 +35901,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35830,7 +36001,9 @@
 "fis_code":"2527950",
 "saj_no":"5000729",
 "name":"堀 幸",
-"aliases":[],
+"aliases":[
+"HORI Sachi"
+],
 "noc":null,
 "yb":null,
 "affiliation":"愛知",
@@ -35862,7 +36035,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":70,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -36065,7 +36238,8 @@
 "saj_no":"5000781",
 "name":"堀島 有紗",
 "aliases":[
-"堀島有紗"
+"堀島有紗",
+"HORISHIMA Arisa"
 ],
 "noc":null,
 "yb":null,
@@ -36092,7 +36266,7 @@
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":62,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36156,7 +36330,7 @@
 }
 ],
 "mic":null,
-"n_results":138,
+"n_results":141,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38379,7 +38553,8 @@
 "saj_no":"5000471",
 "name":"大津 弘樹",
 "aliases":[
-"大津弘樹"
+"大津弘樹",
+"OOTSU Hiroki"
 ],
 "noc":null,
 "yb":null,
@@ -38394,14 +38569,16 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2011-12",
 "2013-14",
+"2014-15",
 "2017-18"
 ],
 "series":[
 "FIS",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -39822,7 +39999,8 @@
 "saj_no":"5000894",
 "name":"宮本 二郎",
 "aliases":[
-"宮本二郎"
+"宮本二郎",
+"MIYAMOTO Jiro"
 ],
 "noc":null,
 "yb":null,
@@ -39837,7 +40015,7 @@
 }
 ],
 "mic":null,
-"n_results":84,
+"n_results":85,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -40451,7 +40629,7 @@
 }
 ],
 "mic":null,
-"n_results":112,
+"n_results":114,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -40612,9 +40790,10 @@
 "saj_no":"5000897",
 "name":"小岩 空",
 "aliases":[
-"小岩空"
+"小岩空",
+"KOIWA Sora"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"長野",
 "club":"信州大学",
@@ -40627,7 +40806,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -40635,7 +40814,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":67.51,
@@ -41137,6 +41317,34 @@
 "run_score":20.09,
 "run_id":"2016-17-saj_b-1906-0002-M-Q-saj-5001631"
 }
+},
+{
+"athlete_id":"2527128",
+"fis_code":"2527128",
+"saj_no":"5000345",
+"name":"小林 樹生",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"長野",
+"club":"白馬村SC",
+"affiliation_history":[
+{
+"affiliation":"長野",
+"club":"白馬村SC",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_AJ"
+],
+"best":null
 },
 {
 "athlete_id":"saj-5001268",
@@ -42270,7 +42478,7 @@
 }
 ],
 "mic":null,
-"n_results":125,
+"n_results":127,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42516,7 +42724,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":34,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -42527,7 +42735,8 @@
 "series":[
 "FIS",
 "NAC",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":79.89,
@@ -42832,7 +43041,7 @@
 }
 ],
 "mic":null,
-"n_results":62,
+"n_results":64,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43176,7 +43385,7 @@
 }
 ],
 "mic":null,
-"n_results":91,
+"n_results":92,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44292,9 +44501,10 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":33,
 "seasons":[
 "2011-12",
+"2013-14",
 "2014-15",
 "2015-16",
 "2016-17",
@@ -44545,7 +44755,7 @@
 }
 ],
 "mic":null,
-"n_results":149,
+"n_results":150,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45080,7 +45290,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":101,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45313,7 +45523,8 @@
 "saj_no":"5000721",
 "name":"市村 美樹",
 "aliases":[
-"市村美樹"
+"市村美樹",
+"ICHIMURA Miki"
 ],
 "noc":null,
 "yb":null,
@@ -45334,7 +45545,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45630,6 +45841,7 @@
 "aliases":[
 "HIRAYAMA Shota",
 "平山将大",
+"HIRAYAMA Shouta",
 "ひらやま しょうた",
 "平山翔太"
 ],
@@ -45670,7 +45882,7 @@
 }
 ],
 "mic":null,
-"n_results":194,
+"n_results":195,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46029,22 +46241,30 @@
 "noc":null,
 "yb":null,
 "affiliation":"福井",
-"club":"福井ﾓｰｸﾞﾙSC",
+"club":"福井MSC",
 "affiliation_history":[
 {
 "affiliation":"福井",
 "club":"福井ﾓｰｸﾞﾙSC",
 "from":"2011-12",
 "to":"2011-12"
+},
+{
+"affiliation":"福井",
+"club":"福井MSC",
+"from":"2013-14",
+"to":"2013-14"
 }
 ],
 "mic":null,
-"n_results":3,
+"n_results":4,
 "seasons":[
-"2011-12"
+"2011-12",
+"2013-14"
 ],
 "series":[
-"FIS"
+"FIS",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":16.69,
@@ -46166,28 +46386,29 @@
 "saj_no":"5000843",
 "name":"後藤 萌希",
 "aliases":[
-"後藤萌希"
+"後藤萌希",
+"GOTO Moeki"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
-"club":"TEAMBANKEI",
+"club":"TEAM BANKEI",
 "affiliation_history":[
 {
 "affiliation":"北海道",
 "club":"TEAMBANKEI",
 "from":"2011-12",
-"to":"2012-13"
+"to":"2013-14"
 },
 {
 "affiliation":"北海道",
 "club":"",
-"from":"2013-14",
+"from":"2014-15",
 "to":"2014-15"
 }
 ],
 "mic":null,
-"n_results":20,
+"n_results":22,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46197,6 +46418,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -46452,7 +46674,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":56,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46978,7 +47200,8 @@
 "name":"提 雄大",
 "aliases":[
 "堤 雄大",
-"堤雄大"
+"堤雄大",
+"TSUTSUMI Yuta"
 ],
 "noc":null,
 "yb":null,
@@ -46993,11 +47216,12 @@
 }
 ],
 "mic":null,
-"n_results":23,
+"n_results":24,
 "seasons":[
 "2011-12",
 "2012-13",
 "2013-14",
+"2014-15",
 "2017-18",
 "2018-19",
 "2020-21",
@@ -47006,6 +47230,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -47051,7 +47276,8 @@
 "name":"斉土 日菜子",
 "aliases":[
 "齊土 日菜子",
-"齊土日菜子"
+"齊土日菜子",
+"SAIDO Hinako"
 ],
 "noc":null,
 "yb":null,
@@ -47078,7 +47304,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":43,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47090,6 +47316,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -47208,8 +47435,10 @@
 "fis_code":"2527672",
 "saj_no":"5000898",
 "name":"斎藤 竜也",
-"aliases":[],
-"noc":null,
+"aliases":[
+"SAITO Tatsuya"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
 "club":"ｽﾉｰﾄﾞﾙﾌｨﾝSC",
@@ -47228,7 +47457,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -47237,6 +47466,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -47360,7 +47590,7 @@
 }
 ],
 "mic":null,
-"n_results":86,
+"n_results":87,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -47425,7 +47655,8 @@
 "name":"新谷 奈津美",
 "aliases":[
 "浅見 奈津美",
-"新谷奈津美"
+"新谷奈津美",
+"SHINTANI Natsumi"
 ],
 "noc":null,
 "yb":null,
@@ -47440,7 +47671,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":75,
 "seasons":[
 "2012-13",
 "2014-15",
@@ -47823,13 +48054,15 @@
 {
 "affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
-"from":"2016-17",
+"from":"2013-14",
 "to":"2021-22"
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":36,
 "seasons":[
+"2013-14",
+"2014-15",
 "2016-17",
 "2017-18",
 "2018-19",
@@ -47998,7 +48231,8 @@
 "saj_no":"5000452",
 "name":"有賀 康敏",
 "aliases":[
-"有賀康敏"
+"有賀康敏",
+"ARIGA Yasutoshi"
 ],
 "noc":null,
 "yb":null,
@@ -48073,7 +48307,7 @@
 }
 ],
 "mic":null,
-"n_results":66,
+"n_results":67,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48190,7 +48424,7 @@
 }
 ],
 "mic":null,
-"n_results":116,
+"n_results":117,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48543,7 +48777,7 @@
 }
 ],
 "mic":null,
-"n_results":129,
+"n_results":130,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -49270,7 +49504,7 @@
 }
 ],
 "mic":null,
-"n_results":110,
+"n_results":113,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49907,7 +50141,7 @@
 }
 ],
 "mic":null,
-"n_results":122,
+"n_results":123,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49945,9 +50179,11 @@
 "fis_code":"2484830",
 "saj_no":"5000605",
 "name":"村田 愛里咲",
-"aliases":[],
+"aliases":[
+"MURATA Arisa"
+],
 "noc":null,
-"yb":null,
+"yb":1990,
 "affiliation":"福岡",
 "club":"行学学園",
 "affiliation_history":[
@@ -49959,13 +50195,14 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2015-16",
 "2016-17",
 "2017-18"
 ],
 "series":[
+"FIS",
 "SAJ_A",
 "SAJ_AJ"
 ],
@@ -50960,7 +51197,8 @@
 "saj_no":"5000976",
 "name":"松本 祐一郎",
 "aliases":[
-"松本祐一郎"
+"松本祐一郎",
+"MATSUMOTO Yuichiro"
 ],
 "noc":null,
 "yb":null,
@@ -51011,7 +51249,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":54,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -51307,7 +51545,7 @@
 }
 ],
 "mic":null,
-"n_results":125,
+"n_results":127,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -51903,7 +52141,7 @@
 }
 ],
 "mic":null,
-"n_results":184,
+"n_results":185,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52502,8 +52740,10 @@
 "fis_code":"2440154",
 "saj_no":"5000112",
 "name":"桑原 竜司",
-"aliases":[],
-"noc":null,
+"aliases":[
+"KUWABARA Ryuji"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"福島",
 "club":"ﾁｰﾑ ﾘｽﾃﾙ",
@@ -52516,14 +52756,15 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":10,
 "seasons":[
 "2013-14",
 "2014-15"
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":48.57,
@@ -52797,7 +53038,7 @@
 }
 ],
 "mic":null,
-"n_results":81,
+"n_results":83,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52937,8 +53178,10 @@
 "fis_code":"2527318",
 "saj_no":"5000018",
 "name":"梶浦 一成",
-"aliases":[],
-"noc":null,
+"aliases":[
+"KAJIURA Issei"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
 "club":null,
@@ -52951,7 +53194,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -52959,7 +53202,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":68.31,
@@ -53139,7 +53383,9 @@
 "fis_code":"2481487",
 "saj_no":"5000602",
 "name":"森山 素直",
-"aliases":[],
+"aliases":[
+"MORIYAMA Sunao"
+],
 "noc":null,
 "yb":null,
 "affiliation":"北海道",
@@ -53159,7 +53405,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":27,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -53169,7 +53415,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":79.86,
@@ -53356,7 +53603,8 @@
 "saj_no":"5001324",
 "name":"森池 あおい",
 "aliases":[
-"森池あおい"
+"森池あおい",
+"MORIIKE Aoi"
 ],
 "noc":null,
 "yb":null,
@@ -53383,7 +53631,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":34,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -53877,7 +54125,8 @@
 "saj_no":"5001109",
 "name":"横尾 かえで",
 "aliases":[
-"横尾かえで"
+"横尾かえで",
+"YOKOO Kaede"
 ],
 "noc":null,
 "yb":null,
@@ -53898,7 +54147,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":25,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -53909,6 +54158,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -54917,7 +55167,8 @@
 "saj_no":"5001207",
 "name":"氏家 沙耶香",
 "aliases":[
-"氏家沙耶香"
+"氏家沙耶香",
+"UJIIE Sayaka"
 ],
 "noc":null,
 "yb":null,
@@ -54938,10 +55189,11 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":47,
 "seasons":[
 "2011-12",
 "2012-13",
+"2013-14",
 "2014-15",
 "2015-16",
 "2016-17",
@@ -56768,7 +57020,8 @@
 "saj_no":"5000132",
 "name":"渡辺 侑希",
 "aliases":[
-"渡辺侑希"
+"渡辺侑希",
+"WATANABE Yuki"
 ],
 "noc":null,
 "yb":null,
@@ -56783,7 +57036,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56793,6 +57046,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -56979,7 +57233,7 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":47,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -57666,7 +57920,8 @@
 "saj_no":"5000432",
 "name":"濱田 耕輔",
 "aliases":[
-"濱田耕輔"
+"濱田耕輔",
+"HAMADA Kousuke"
 ],
 "noc":null,
 "yb":null,
@@ -57687,7 +57942,7 @@
 }
 ],
 "mic":null,
-"n_results":49,
+"n_results":50,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -58831,9 +59086,10 @@
 "saj_no":"5000344",
 "name":"田中 良",
 "aliases":[
-"田中良"
+"田中良",
+"TANAKA Ryo"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"長野",
 "club":"松本市SC",
@@ -58846,7 +59102,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":22,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -58856,6 +59112,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -58922,26 +59179,31 @@
 "fis_code":"2526411",
 "saj_no":"5000568",
 "name":"田中 陸也",
-"aliases":[],
-"noc":null,
+"aliases":[
+"TANAKA Rikuya"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"大阪",
 "club":"ﾁｰﾑ ｻﾝｶﾞﾘｱ",
 "affiliation_history":[
 {
-"affiliation":"大阪府",
+"affiliation":"大阪",
 "club":"ﾁｰﾑ ｻﾝｶﾞﾘｱ",
 "from":"2011-12",
-"to":"2011-12"
+"to":"2013-14"
 }
 ],
 "mic":null,
-"n_results":4,
+"n_results":6,
 "seasons":[
-"2011-12"
+"2011-12",
+"2013-14",
+"2014-15"
 ],
 "series":[
-"FIS"
+"FIS",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":16.49,
@@ -59261,10 +59523,11 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2011-12",
 "2012-13",
+"2013-14",
 "2014-15"
 ],
 "series":[
@@ -59283,7 +59546,8 @@
 "saj_no":"5000762",
 "name":"田村 孝大",
 "aliases":[
-"田村孝大"
+"田村孝大",
+"TAMURA Takahiro"
 ],
 "noc":null,
 "yb":null,
@@ -59310,7 +59574,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -59321,6 +59585,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -59369,7 +59634,8 @@
 "saj_no":"5001225",
 "name":"田村 斗亜",
 "aliases":[
-"田村斗亜"
+"田村斗亜",
+"TAMURA Hoshia"
 ],
 "noc":null,
 "yb":null,
@@ -59402,7 +59668,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59414,6 +59680,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -59766,7 +60033,8 @@
 "saj_no":"5000963",
 "name":"畑田 萌香",
 "aliases":[
-"畑田萌香"
+"畑田萌香",
+"HATADA Moka"
 ],
 "noc":null,
 "yb":null,
@@ -59793,10 +60061,11 @@
 }
 ],
 "mic":null,
-"n_results":28,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2012-13",
+"2013-14",
 "2014-15",
 "2015-16",
 "2016-17",
@@ -60046,7 +60315,8 @@
 "saj_no":"5000161",
 "name":"白土 幹",
 "aliases":[
-"白土幹"
+"白土幹",
+"SHIRATO Motoki"
 ],
 "noc":null,
 "yb":null,
@@ -60079,7 +60349,7 @@
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":53,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60108,7 +60378,8 @@
 "saj_no":"5001006",
 "name":"白鳥 功貴",
 "aliases":[
-"白鳥功貴"
+"白鳥功貴",
+"SHIRATORI Atsuki"
 ],
 "noc":null,
 "yb":null,
@@ -60135,7 +60406,7 @@
 }
 ],
 "mic":null,
-"n_results":54,
+"n_results":57,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60340,7 +60611,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -61415,9 +61686,10 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2011-12",
+"2013-14",
 "2014-15",
 "2015-16",
 "2016-17"
@@ -63248,7 +63520,7 @@
 }
 ],
 "mic":null,
-"n_results":44,
+"n_results":47,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -63371,7 +63643,7 @@
 }
 ],
 "mic":null,
-"n_results":101,
+"n_results":103,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -63437,7 +63709,7 @@
 }
 ],
 "mic":null,
-"n_results":120,
+"n_results":123,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -63809,7 +64081,8 @@
 "saj_no":"5000436",
 "name":"菊地 理",
 "aliases":[
-"菊地理"
+"菊地理",
+"KIKUCHI Osamu"
 ],
 "noc":null,
 "yb":null,
@@ -63824,7 +64097,7 @@
 }
 ],
 "mic":null,
-"n_results":38,
+"n_results":39,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -64508,7 +64781,7 @@
 }
 ],
 "mic":null,
-"n_results":124,
+"n_results":126,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65075,12 +65348,20 @@
 "fis_code":"2397776",
 "saj_no":"5000315",
 "name":"西 伸幸",
-"aliases":[],
+"aliases":[
+"NISHI Nobuyuki"
+],
 "noc":null,
 "yb":null,
 "affiliation":"東京",
 "club":"Main Mano Foods",
 "affiliation_history":[
+{
+"affiliation":"長野",
+"club":"白馬村SC",
+"from":"2013-14",
+"to":"2013-14"
+},
 {
 "affiliation":"東京",
 "club":"Main Mano Foods",
@@ -65089,8 +65370,10 @@
 }
 ],
 "mic":null,
-"n_results":5,
+"n_results":7,
 "seasons":[
+"2013-14",
+"2014-15",
 "2016-17",
 "2017-18"
 ],
@@ -65327,8 +65610,10 @@
 "fis_code":"2526421",
 "saj_no":"5000396",
 "name":"西川 琳太朗",
-"aliases":[],
-"noc":null,
+"aliases":[
+"NISHIKAWA Rintaro"
+],
+"noc":"JPN",
 "yb":null,
 "affiliation":"学連",
 "club":"慶応義塾大学",
@@ -65341,7 +65626,7 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -65349,7 +65634,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":52.0,
@@ -65537,7 +65823,7 @@
 }
 ],
 "mic":null,
-"n_results":184,
+"n_results":187,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65770,7 +66056,7 @@
 }
 ],
 "mic":null,
-"n_results":81,
+"n_results":83,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66216,7 +66502,7 @@
 }
 ],
 "mic":null,
-"n_results":112,
+"n_results":115,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66721,7 +67007,7 @@
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -68193,7 +68479,8 @@
 "saj_no":"5000487",
 "name":"鈴木 亮",
 "aliases":[
-"鈴木亮"
+"鈴木亮",
+"SUZUKI Akira"
 ],
 "noc":null,
 "yb":null,
@@ -68208,7 +68495,7 @@
 }
 ],
 "mic":null,
-"n_results":75,
+"n_results":76,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68386,6 +68673,47 @@
 "best":{
 "run_score":37.58,
 "run_id":"2014-15-saj_b-1991-0043-M-Q-saj-5001186"
+}
+},
+{
+"athlete_id":"2526257",
+"fis_code":"2526257",
+"saj_no":"5000470",
+"name":"鈴木 健太",
+"aliases":[
+"鈴木健太"
+],
+"noc":null,
+"yb":null,
+"affiliation":"岐阜",
+"club":"岐阜ﾌﾘｰｽﾀｲﾙ",
+"affiliation_history":[
+{
+"affiliation":"山形",
+"club":"AP山形",
+"from":"2011-12",
+"to":"2011-12"
+},
+{
+"affiliation":"岐阜",
+"club":"岐阜ﾌﾘｰｽﾀｲﾙ",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":4,
+"seasons":[
+"2011-12",
+"2013-14"
+],
+"series":[
+"FIS",
+"SAJ_AJ"
+],
+"best":{
+"run_score":18.57,
+"run_id":"2011-12-fis-2078-0036-M-Q-2526257"
 }
 },
 {
@@ -68862,39 +69190,6 @@
 }
 },
 {
-"athlete_id":"2526257",
-"fis_code":"2526257",
-"saj_no":"5000470",
-"name":"鈴木健太",
-"aliases":[
-"鈴木 健太"
-],
-"noc":null,
-"yb":null,
-"affiliation":"山形",
-"club":"AP山形",
-"affiliation_history":[
-{
-"affiliation":"山形",
-"club":"AP山形",
-"from":"2011-12",
-"to":"2011-12"
-}
-],
-"mic":null,
-"n_results":3,
-"seasons":[
-"2011-12"
-],
-"series":[
-"FIS"
-],
-"best":{
-"run_score":18.57,
-"run_id":"2011-12-fis-2078-0036-M-Q-2526257"
-}
-},
-{
 "athlete_id":"2531353",
 "fis_code":"2531353",
 "saj_no":"5001204",
@@ -69103,7 +69398,8 @@
 "saj_no":"5001052",
 "name":"長岡 宥汰",
 "aliases":[
-"長岡宥汰"
+"長岡宥汰",
+"NAGAOKA Yuuta"
 ],
 "noc":null,
 "yb":null,
@@ -69130,7 +69426,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69280,6 +69576,35 @@
 "run_score":8.77,
 "run_id":"2018-19-saj_b-1844-0002-M-Q-saj-5001712"
 }
+},
+{
+"athlete_id":"2484461",
+"fis_code":"2484461",
+"saj_no":"5000120",
+"name":"長谷川 健太",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"福島",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
+"affiliation_history":[
+{
+"affiliation":"福島",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_A",
+"SAJ_AJ"
+],
+"best":null
 },
 {
 "athlete_id":"2532266",
@@ -70061,28 +70386,29 @@
 "saj_no":"5000058",
 "name":"香川 満亮",
 "aliases":[
-"香川満亮"
+"香川満亮",
+"KAGAWA Mitsuaki"
 ],
-"noc":null,
+"noc":"JPN",
 "yb":null,
 "affiliation":"北海道",
-"club":"NISEKOB&J",
+"club":"NISEKO B&J",
 "affiliation_history":[
 {
 "affiliation":"北海道",
 "club":"NISEKOB&J",
 "from":"2011-12",
-"to":"2011-12"
+"to":"2013-14"
 },
 {
 "affiliation":"北海道",
 "club":"",
-"from":"2013-14",
+"from":"2014-15",
 "to":"2014-15"
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -70090,7 +70416,8 @@
 ],
 "series":[
 "FIS",
-"SAJ_A"
+"SAJ_A",
+"SAJ_AJ"
 ],
 "best":{
 "run_score":66.17,
@@ -70497,7 +70824,9 @@
 "fis_code":"2532229",
 "saj_no":"5001298",
 "name":"高橋 昇汰",
-"aliases":[],
+"aliases":[
+"TAKAHASHI Shota"
+],
 "noc":null,
 "yb":null,
 "affiliation":"北海道",
@@ -70517,7 +70846,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -70625,7 +70954,8 @@
 "name":"高橋 誉志樹",
 "aliases":[
 "髙橋 誉志樹",
-"髙橋誉志樹"
+"髙橋誉志樹",
+"TAKAHASHI Yoshiki"
 ],
 "noc":null,
 "yb":null,
@@ -70664,7 +70994,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -70675,6 +71005,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -71152,7 +71483,7 @@
 }
 ],
 "mic":null,
-"n_results":147,
+"n_results":148,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -71251,7 +71582,8 @@
 "saj_no":"5001112",
 "name":"髙橋 勇気",
 "aliases":[
-"髙橋勇気"
+"髙橋勇気",
+"TAKAHASHI Yuuki"
 ],
 "noc":null,
 "yb":null,
@@ -71266,7 +71598,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -71276,6 +71608,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_B"
 ],
 "best":{
@@ -71451,7 +71784,8 @@
 "saj_no":"5001111",
 "name":"髙橋 歩夢",
 "aliases":[
-"髙橋歩夢"
+"髙橋歩夢",
+"TAKAHASHI Ayumu"
 ],
 "noc":null,
 "yb":null,
@@ -71466,7 +71800,7 @@
 }
 ],
 "mic":null,
-"n_results":15,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -71476,6 +71810,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],

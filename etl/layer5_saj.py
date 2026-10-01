@@ -97,15 +97,16 @@ def _dec(s):
         return None
 
 
-def compare(event_id, gender, rounds_by_code, cache):
-    """戻り値: (findings, status)。status は 'ok' | 'error' | 'upstream_missing'"""
+def compare(event_id, gender, rounds_by_code, cache, dm_finalists_only=None):
+    """戻り値: (findings, status)。status は 'ok' | 'error' | 'upstream_missing'。dm_finalists_only は registry の
+    layer5_dm_finalists_only（DM の PDF が決勝トーナメントの選手だけを載せる大会の、その根拠）"""
     rows = cache.get('rows') or []
     if not rows:
         return [], 'upstream_missing'
     ours = overall_from_rounds(rounds_by_code)
     round_id = rounds_by_code[[c for c in ROUND_ORDER_DESC if c in rounds_by_code][0]][0]['round_id']
     if all(rnd.get('discipline') == 'DM' for rnd, _ in rounds_by_code.values()):
-        return compare_dm(gender, round_id, ours, rows)
+        return compare_dm(gender, round_id, ours, rows, dm_finalists_only)
     f = []
     # FIS・アジアカップの一部は SAJ データバンクの PDF が決勝だけで、順位表には予選で終わった選手も載る。
     # 予選のラウンドが無いときは、決勝に居ない下位の選手が PDF 側に居ないのは当然なので警告にとどめる
@@ -164,11 +165,14 @@ def compare(event_id, gender, rounds_by_code, cache):
     return f, status
 
 
-def compare_dm(gender, round_id, ours, rows):
+def compare_dm(gender, round_id, ours, rows, finalists_only=None):
     """デュアルモーグル（順位のみ）: 敗退した選手の順位の付け方が PDF と順位表で違う大会がある（順位表は組み合わせの枠どおり
     17 位から、PDF は出場人数で詰める。1 回戦 DNF は PDF に順位があり順位表は空欄）。そこで順位の数字そのものではなく、
-    両方に順位のある選手どうしの前後関係と、順位表の選手が PDF に居ることを確かめる"""
+    両方に順位のある選手どうしの前後関係と、順位表の選手が PDF に居ることを確かめる。
+    finalists_only（registry の layer5_dm_finalists_only）の大会は PDF が決勝トーナメントの選手だけなので、PDF の最下位より下の
+    順位表の選手（予選で敗退）が PDF に居ないのは警告にとどめる。最下位より上の選手が居なければ従来どおりエラー"""
     f = []
+    last = max((v['overall'] for v in ours.values() if v['overall'] is not None), default=0)
     by_no = _unique_nos(ours)
     by_name = {_norm_name(v['name']): k for k, v in ours.items()}
     pairs = []
@@ -176,8 +180,10 @@ def compare_dm(gender, round_id, ours, rows):
         aid = by_no.get(_norm_no(row.get('code'))) or by_name.get(_norm_name(row.get('name')))
         html_rank = int(row['rank']) if str(row.get('rank') or '').strip().isdigit() else None
         if aid is None:
-            level = 'error' if html_rank is not None else 'warning'
-            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない"))
+            beyond = finalists_only and html_rank is not None and html_rank > last
+            level = 'error' if html_rank is not None and not beyond else 'warning'
+            why = f"（PDF は決勝トーナメントの {last} 名まで）" if beyond else ''
+            f.append(Finding(level, round_id, 'layer5', f"{gender} 順位表の {row.get('rank') or '（順位なし）'}位 {row.get('name')}（{row.get('code')}）が PDF 側に居ない{why}"))
             continue
         o = ours[aid]
         if html_rank is None or o['overall'] is None:
@@ -264,7 +270,7 @@ def cross_check(rounds_ctx, events_by_id):
                 status[rnd['round_id']] = 'skipped'
             findings.append(Finding('warning', skip[0]['round_id'], 'layer5', f"{gender} 順位表と照合しない。理由: {skip[0]['basis']}"))
             continue
-        f, st = compare(event_id, gender, rbc, cache)
+        f, st = compare(event_id, gender, rbc, cache, (events_by_id.get(event_id) or {}).get('layer5_dm_finalists_only'))
         f = apply_exceptions(f, events_by_id.get(event_id), {rnd['round_id'] for rnd, _ in rbc.values()})
         if st != 'upstream_missing':
             st = 'error' if any(x.level == 'error' for x in f) else 'ok'
