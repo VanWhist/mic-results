@@ -469,7 +469,10 @@ def load_event(ev, imported_at, log=print):
                     findings.append(Finding('warning', round_id, 'layer0', '1 行様式（技コード 2 つ・DD の印字なし）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
                 if old_layout:
                     findings.append(Finding('warning', round_id, 'layer0', '旧様式（2010 年代前半の SAJ 様式）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
-                    rules = {'tie_break': ['tie_value'], 'source': '旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める'}
+                    rules = {'tie_break': ['tie_value'], 'source': '旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める',
+                             # 同点欄が 'T1'・'T2' の年（2014 松之山国体記念）: ICR 4207.3 の最初の基準（ターン点の印字）で分け、
+                             # 決まらなければ T の番号の順。T の順がターン点と逆なら順位の検算で食い違いになる
+                             'tie_break_if_marked': ['turns_total', 'tie_value']}
                 ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': False,
                              'rules': rules or {}})
                 continue

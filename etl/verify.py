@@ -182,6 +182,9 @@ def _rank_items(items, rules):
     for it in items:
         b = it['best_run']
         tv = Decimal(str(b['tie'])) if b.get('tie') is not None and re.fullmatch(r'-?\d+(\.\d+)?', str(b['tie'])) else Decimal(0)
+        mt = re.fullmatch(r'T(\d+)', str(b.get('tie') or ''))
+        if mt:  # 同点欄の 'T1'・'T2'（同点の中の順）。小さい番号が上位（tie_value は大きい方が上位）
+            tv = -Decimal(mt.group(1))
         if '_recomputed' in b:
             rc = b['_recomputed']
             recs.append({'item': it, 'run_score': rc['run_score'], 'turns_total': rc['turns_total'],

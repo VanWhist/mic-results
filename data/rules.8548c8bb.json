@@ -543,31 +543,51 @@
 "tie_break":[
 "tie_value"
 ],
-"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める"
+"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める",
+"tie_break_if_marked":[
+"turns_total",
+"tie_value"
+]
 },
 "規則_SAJ_2012-13":{
 "tie_break":[
 "tie_value"
 ],
-"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める"
+"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める",
+"tie_break_if_marked":[
+"turns_total",
+"tie_value"
+]
 },
 "規則_SAJ_2013-14":{
 "tie_break":[
 "tie_value"
 ],
-"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める"
+"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める",
+"tie_break_if_marked":[
+"turns_total",
+"tie_value"
+]
 },
 "規則_SAJ_2014-15":{
 "tie_break":[
 "tie_value"
 ],
-"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める"
+"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める",
+"tie_break_if_marked":[
+"turns_total",
+"tie_value"
+]
 },
 "規則_SAJ_2015-16":{
 "tie_break":[
 "tie_value"
 ],
-"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める"
+"source":"旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める",
+"tie_break_if_marked":[
+"turns_total",
+"tie_value"
+]
 },
 "規則_SAJ_2016-17":{
 "judges":{
