@@ -4043,6 +4043,15 @@
     "advance": {}
    },
    "notes": "",
+   "rank_fixes": [
+    {
+     "round_id": "2014-15-saj_b-1964-0003-W-Q",
+     "bib": 38,
+     "printed": 0,
+     "rank": 8,
+     "basis": "女子 久保田 さくら（BIB 38）の順位の欄に「0」が印字されている（pdfplumber・pdfium とも同じ）。スコア 36.12 は 7 位 36.27 と 9 位 35.86 の間で、SAJ 競技データバンクの順位表も 8 位（2026-10-02 確認）"
+    }
+   ],
    "layout": "old"
   },
   {
@@ -8755,7 +8764,13 @@
      "gender": "M",
      "codex": "0042",
      "saved_at": "2026-09-25",
-     "src_name": "FSRE20180042.pdf"
+     "src_name": "FSRE20180042.pdf",
+     "content": {
+      "gender": "W",
+      "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/5042/result",
+      "codex": "5042",
+      "basis": "SAJ 競技データバンクの男子（0042）に登録された PDF の中身は「女子決勝リザルト」（36 名）。女子（5042）の PDF の中身は男子。順位表は女子 5042 と照合する（2026-10-02 確認）"
+     }
     },
     {
      "path": "FIS/2017-18/SAJ2018_1902_5042_W_MO.pdf",
@@ -8765,7 +8780,13 @@
      "gender": "W",
      "codex": "5042",
      "saved_at": "2026-09-25",
-     "src_name": "FSRE20185042.pdf"
+     "src_name": "FSRE20185042.pdf",
+     "content": {
+      "gender": "M",
+      "page_url": "https://sajdb.shikuminet.jp/freestyle/2018/competition/0042/result",
+      "codex": "0042",
+      "basis": "SAJ 競技データバンクの女子（5042）に登録された PDF の中身は「男子決勝リザルト」（54 名）。男子（0042）の PDF の中身は女子。順位表は男子 0042 と照合する（2026-10-02 確認）"
+     }
     }
    ],
    "rules": "規則_SAJ_2017-18",

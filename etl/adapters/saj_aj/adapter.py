@@ -70,8 +70,13 @@ def section_codes(sections):
                 s['saj_code'] = 'F'
             elif r == '決勝':
                 s['saj_code'] = 'SF' if '準決勝' in heads else 'F'
-            elif r.startswith('予選') and r.endswith('決勝'):
-                # 1 本で順位が決まる小規模大会。左上の印字記号（Q-w / F-w）があればそれに従う
+            elif r == 'リザルト' and len(secs) == 1 and overall_boundary(s) is not None:
+                # ラウンドの語が無い見出し（'男子リザルト'）の 1 表だけで、決勝の得点の後に予選の得点が続く（全員の総合順位。
+                # 2013 北海道選手権・2013 札幌 B級）。決勝として mark_overall_groups が上下のブロックに分ける
+                s['saj_code'] = 'F'
+            elif (r.startswith('予選') and r.endswith('決勝')) or r == 'リザルト':
+                # 1 本で順位が決まる小規模大会（'男子リザルト' だけの見出しで総合順位の形でないもの: 2015 松之山など）。
+                # 左上の印字記号（Q-w / F-w）があればそれに従う
                 pc = (s.get('code') or 'Q').split('-')[0]
                 s['saj_code'] = pc if pc in ('Q', 'F', 'SF') else 'Q'
             else:
@@ -165,10 +170,25 @@ def collapse_overall(sections):
     return notes
 
 
+def overall_boundary(s):
+    """全員の総合順位の表で、予選の得点で並ぶ下のブロックの最初の順位。無ければ None。
+    印字の '[Results from Qualification]' の後の行（2013 北海道選手権。決勝 DNF の 16 位の後なので得点の上がりでは分からない）、
+    無ければ得点が前の行より上がる最初の行"""
+    marked = [a['rank'] for a in s['athletes'] if a.get('from_q') and a.get('rank')]
+    if marked:
+        return min(marked)
+    rows = [a for a in s['athletes'] if a.get('status') == 'OK' and a.get('score') is not None and a.get('rank')]
+    rows.sort(key=lambda a: a['rank'])
+    for prev, a in zip(rows, rows[1:]):
+        if a['score'] > prev['score']:
+            return a['rank']
+    return None
+
+
 def mark_overall_groups(sections):
     """決勝ページしか無く、全員の総合順位が印字されている大会（ばんけい A級 2026 など）:
     上位ブロック（決勝を滑った選手、決勝の得点順）と、それ以下（予選の得点で並ぶ）に分け、順位の検算をブロックごとに行う。
-    境目は「得点が前の行より上がる最初の行」。戻り値: 注記の list。"""
+    境目は overall_boundary（印字の '[Results from Qualification]'、無ければ得点が前の行より上がる最初の行）。戻り値: 注記の list。"""
     notes = []
     by_g = collections.defaultdict(list)
     for s in sections:
@@ -178,13 +198,7 @@ def mark_overall_groups(sections):
         if len(secs) != 1 or secs[0]['saj_code'] != 'F':
             continue
         s = secs[0]
-        rows = [a for a in s['athletes'] if a.get('status') == 'OK' and a.get('score') is not None and a.get('rank')]
-        rows.sort(key=lambda a: a['rank'])
-        k = None
-        for prev, a in zip(rows, rows[1:]):
-            if a['score'] > prev['score']:
-                k = a['rank']
-                break
+        k = overall_boundary(s)
         if k is None:
             continue
         for a in s['athletes']:
@@ -364,8 +378,18 @@ def load_event(ev, imported_at, log=print):
     # SAJ 番号と印字の両方が合う行だけを直す
     fis_fixes = ev.get('fis_code_fixes') or []
     fis_fixes_used = set()
+    # 順位の印字の誤り（あり得ない順位 '0' など。registry の rank_fixes、根拠は basis）。ラウンド・BIB・印字の順位が合う行だけを直す
+    rank_fixes = ev.get('rank_fixes') or []
+    rank_fixes_used = set()
     ctxs = []
     for pdf in ev['pdfs']:
+        content_note = None
+        if pdf.get('content'):
+            # SAJ データバンクで男女の PDF が入れ替わって登録されている（2018 ふくしま #3: 男子 0042 の PDF の中身が女子決勝）。
+            # registry の pdfs[].content（根拠は basis）の性別・順位表・CODEX で読む
+            c = pdf['content']
+            pdf = dict(pdf, gender=c['gender'], page_url=c['page_url'], codex=c['codex'])
+            content_note = f"{pdf['path']} は中身が {c['gender']} の結果（registry の登録と性別が逆）。根拠: {c['basis']}"
         path = os.path.join(config.PDF_ROOT, pdf['path'])
         old_layout = False
         if ev.get('layout') == 'old':
@@ -416,7 +440,9 @@ def load_event(ev, imported_at, log=print):
             cls = {
                 'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
                 'discipline': ev.get('discipline', 'MO'), 'gender': g, 'round': code,
-                'round_text': s['round'] + ('（総合順位）' if s.get('overall_groups') else '') + (f'（{cat}）' if cat else ''),
+                # 'リザルト' だけの見出しは、総合順位の形なら「決勝」、1 本勝負なら「予選決勝」と同じ表示にする
+                'round_text': ((('決勝' if s['saj_code'] in ('F', 'SF') else '予選決勝') if s['round'] == 'リザルト' else s['round'])
+                               + ('（総合順位）' if s.get('overall_groups') else '') + (f'（{cat}）' if cat else '')),
                 'category': cat,
                 'codex': meta.get('codex'), 'tier': 'score' if (old_layout or s.get('oneline')) else ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
@@ -448,6 +474,8 @@ def load_event(ev, imported_at, log=print):
                 rec['exceptions'] = exc
             findings = []
             round_id = f"{cls['event_id']}-{g}-{code}" + (f"-{cat_slug}" if cat else '')
+            if content_note:
+                findings.append(Finding('warning', round_id, 'layer0', content_note))
             for rec in records:
                 for i, fx in enumerate(fis_fixes):
                     if str(rec.get('saj_no')) == fx['saj_no'] and str(rec.get('fis_code')) == fx['printed']:
@@ -455,6 +483,12 @@ def load_event(ev, imported_at, log=print):
                         fis_fixes_used.add(i)
                         findings.append(Finding('warning', round_id, 'layer0',
                                                 f"{rec.get('name')}（SAJ {fx['saj_no']}）の FIS コードの印字 {fx['printed']} を {fx['fis_code']} に直した。根拠: {fx['basis']}"))
+                for i, fx in enumerate(rank_fixes):
+                    if fx['round_id'] == round_id and rec.get('bib') == fx['bib'] and rec.get('rank') == fx['printed']:
+                        rec['rank'] = fx['rank']
+                        rank_fixes_used.add(i)
+                        findings.append(Finding('warning', round_id, 'layer0',
+                                                f"{rec.get('name')}（BIB {fx['bib']}）の順位の印字 {fx['printed']} を {fx['rank']} に直した。根拠: {fx['basis']}"))
             if cat:
                 cls['round_id'] = round_id
                 if cat == '総合の部':
@@ -514,4 +548,8 @@ def load_event(ev, imported_at, log=print):
         if i not in fis_fixes_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],
                          'message': f"fis_code_fixes の SAJ {fx['saj_no']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
+    for i, fx in enumerate(rank_fixes):
+        if i not in rank_fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"rank_fixes の {fx['round_id']} BIB {fx['bib']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
     return ctxs

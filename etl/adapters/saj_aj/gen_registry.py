@@ -96,18 +96,19 @@ def main():
             o = old.get(ev['event_id'])
             if o:
                 for k in ('rules', 'format', 'pace_by_sheet', 'recompute_exceptions', 'notes', 'tier', 'grade', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions', 'layer5_exceptions', 'layer5_skip',
-                          'layer5_dm_finalists_only', 'adapter', 'place', 'fis_code_fixes'):
+                          'layer5_dm_finalists_only', 'adapter', 'place', 'fis_code_fixes', 'rank_fixes'):
                     if k in o:
                         ev[k] = o[k]
-                # PDF ごとの手書きの項目（glyph_font: 文字が字形の番号のままの PDF）も残す
+                # PDF ごとの手書きの項目（glyph_font: 文字が字形の番号のままの PDF、content: 中身が登録と別の性別の PDF）も残す
                 old_pdfs = {p['path']: p for p in o.get('pdfs', [])}
                 for p in ev['pdfs']:
-                    if old_pdfs.get(p['path'], {}).get('glyph_font'):
-                        p['glyph_font'] = old_pdfs[p['path']]['glyph_font']
+                    for k in ('glyph_font', 'content'):
+                        if old_pdfs.get(p['path'], {}).get(k):
+                            p[k] = old_pdfs[p['path']][k]
                 # 中身が別の大会の PDF（SAJ データバンクのリンク先の取り違え）は登録から除く。理由は notes に書く
                 if o.get('exclude_pdfs'):
                     ev['pdfs'] = [p for p in ev['pdfs'] if p['path'] not in set(o['exclude_pdfs'])]
-        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break・exclude_pdfs・rank_exceptions・layer5_exceptions・layer5_skip・layer5_dm_finalists_only・adapter・place・fis_code_fixes・pdfs の glyph_font は手で編集してよい（再生成しても保持される）',
+        dump_json(path, {'_comment': f'gen_registry.py が inventory/saj_pdf_plan.json と保存済み PDF から生成。rules・format・pace_by_sheet・recompute_exceptions・notes・skip・tie_break・exclude_pdfs・rank_exceptions・layer5_exceptions・layer5_skip・layer5_dm_finalists_only・adapter・place・fis_code_fixes・rank_fixes・pdfs の glyph_font・content は手で編集してよい（再生成しても保持される）',
                          'generated_at': datetime.datetime.now().isoformat(timespec='seconds'), 'events': out[disc]})
         print(f"{fn}: {len(out[disc])} 大会 / {sum(len(e['pdfs']) for e in out[disc])} PDF")
     print(f"未保存の PDF: {n_missing}")

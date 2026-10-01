@@ -260,7 +260,10 @@ def read_pdf(path, glyph_font=None):
                 # 隣り合う断片をつないでから列を決める。
                 hrow = merge_fragments(sorted([w for w in words if abs(w['top'] - hdr['top']) < 2], key=lambda w: w['x0']))
                 nturn, columns = column_map(hrow, [w for w in words if hdr['top'] - 10 <= w['top'] < hdr['top'] - 1])
-                bib_w = next((w for w in hrow if w['text'] == 'BIB'), None)
+                # 'BIB' が見出し行より少し下（2 段の見出しの下の段）に印字される年がある（2023 松之山。'順位' より 7pt 下）。
+                # 以前は順位の列を BIB と取り違え、順位の無い DNF の行を前の選手の続きにしていた
+                bib_w = (next((w for w in hrow if w['text'] == 'BIB'), None)
+                         or next((w for w in words if w['text'] == 'BIB' and 0 < w['top'] - hdr['top'] <= 10), None))
                 if bib_w:
                     bibx = bib_w['x0']
                 else:

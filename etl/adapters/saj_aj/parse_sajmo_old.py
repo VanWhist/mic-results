@@ -24,6 +24,9 @@ SEC_SHORT = re.compile(r'^(女子|男子)(?:中学|高校|小学)?(予選|決勝
 # ページの途中の表の見出し（'女子決勝 Codex 5004'、2013 埼玉県松之山。'決 勝リザルト' のページに女子・男子の表が続く）。
 # ページのどこにあっても見出しとみなし、同じ性別・ラウンドの表が続いていればその続き（'男子予選 Codex 0004'）
 SEC_CODEX = re.compile(r'^(女子|男子)(予選|決勝)\s+Codex\s+\d+\b')
+# ラウンドの語が無い見出し（'男子リザルト'。2013 札幌・2013 北海道選手権・2015 松之山）。round は 'リザルト' とし、
+# 1 本勝負か全員の総合順位かは adapter の section_codes が行の中身で決める
+SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -156,9 +159,10 @@ def parse_pdf(path, force=False):
                 # 見出しは空白を除いて照合する（'決 勝リザルト'、2013 埼玉県松之山）
                 m = SEC.search(re.sub(r'\s', '', line)) if 'リザルト' in line else SEC_SHORT.match(line)
                 mc = SEC_CODEX.match(line)
-                if (m and len(line) < 30 and li < 12) or mc:
-                    m = m if not mc else mc
-                    gender, rnd = m.group(1) or '', m.group(2)
+                mb = SEC_BARE.match(line) if li < 12 else None
+                if (m and len(line) < 30 and li < 12) or mc or mb:
+                    m = mc or m or mb
+                    gender, rnd = m.group(1) or '', (m.group(2) if m is not mb else 'リザルト')
                     if rnd == 'スーパーファイナル決勝':
                         rnd = 'スーパーファイナル'
                     # 見出しの文言まで同じときだけ前の表の続き（'男子成年の部決勝リザルト' の後の '男子決勝リザルト' は別の表。2013 宮様）
@@ -192,6 +196,10 @@ def parse_pdf(path, force=False):
                     continue
                 if not cur.get('old'):
                     continue
+                if line.strip() == '[Results from Qualification]' and cur['round'] == 'リザルト':
+                    # 全員の総合順位の表（'男子リザルト'、2013 北海道選手権）で、ここから下は予選の得点で並ぶ選手
+                    cur['from_q'] = True
+                    continue
                 toks = [undouble(t) for t in line.split()]
                 # SAJ 番号と氏名の間の空白が無い行（'43 91 5001252松本 ベンジャミン …'、2013 埼玉県松之山 B級）
                 toks = [p for t in toks for p in (GLUED_SAJNO.fullmatch(t).groups() if GLUED_SAJNO.fullmatch(t) else (t,))]
@@ -201,6 +209,8 @@ def parse_pdf(path, force=False):
                     a = parse_row_old(toks, cur.get('nturn', 3))
                     if a:
                         a['page'] = pno
+                        if cur.get('from_q'):
+                            a['from_q'] = True
                         if cur.get('fis_header') and re.fullmatch(r'\d{7}', a['sajno'] or ''):
                             a['fisno'], a['sajno'] = a['sajno'], None
                         if cur.get('mixed') and cur['athletes'] and a.get('rank') == 1 and any(x.get('rank') for x in cur['athletes']):

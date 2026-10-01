@@ -264,7 +264,10 @@ def next_page_carry(path, pg):
         rows = page_lines(path, pg + 1)
     except Exception:  # noqa  次のページが無い
         return collections.Counter()
-    hdr = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1].startswith('順位') and any('Total' in t for _, t in toks)), None)
+    # 表の見出し行は、最初の選手の行より前で 'Total' を含む最後の行。2 段の見出しで '順位' と 'Total' が別の行に
+    # 割れる年がある（2023 松之山: '順位 SAJNO 氏 名 …' / 'BIB FISNO … Total …'）
+    first = next((i for i, (_, toks) in enumerate(rows) if len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1])), len(rows))
+    hdr = max((i for i, (_, toks) in enumerate(rows[:first]) if any('Total' in t for _, t in toks)), default=None)
     carry = []
     for _, toks in rows[(hdr + 1) if hdr is not None else 0:]:
         if len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1]):
@@ -584,6 +587,16 @@ def load_exceptions():
     return out
 
 
+def load_rank_fixes():
+    """registry の rank_fixes（順位の印字の誤りを直したもの）→ {(round_id, BIB): fix}"""
+    out = {}
+    for fn in glob.glob(os.path.join(REPO, 'etl', 'registry', '*.json')):
+        for ev in json.load(open(fn, encoding='utf-8')).get('events', []):
+            for x in ev.get('rank_fixes') or []:
+                out[(x['round_id'], x['bib'])] = x
+    return out
+
+
 EXC_ITEM = {'id_air': 'Air Total', 'id_turns': 'Turns Total', 'id_time': 'Time Points', 'id_score': 'Score'}
 FIELD_ITEM = {'air_total': 'Air Total', 'turns_total': 'Turns Total', 'time_points': 'Time Points', 'run_score': 'Score'}
 
@@ -679,6 +692,12 @@ def main():
                         if kk in exc and (kk[0] == r['event_id'] or r['series'] == 'SAJ_AJ')), None)
             if key:
                 issues[n] = (r, 'printed_as_is', f'{d}（登録済みの例外: {exc[key][:40]}…）')
+    # 順位の印字の誤りを registry の rank_fixes で直した行（印字 '0' → 8 位など）は、直した順位が印字に無いのが正しい
+    rank_fixes = load_rank_fixes()
+    for n, (r, k, d) in enumerate(issues):
+        fx = rank_fixes.get((r['round_id'], r['bib']))
+        if k == 'value_not_printed' and fx and d == f"rank={fx['rank']}":
+            issues[n] = (r, 'printed_as_is', f"{d}（印字 {fx['printed']} を registry の rank_fixes で直した: {fx['basis'][:40]}…）")
     kinds = collections.Counter(k for _, k, _ in issues)
     print('照合した run:', dict(checked), '合計', sum(checked.values()))
     print('不一致:', dict(kinds), '合計', len(issues))

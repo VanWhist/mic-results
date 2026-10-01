@@ -161,6 +161,11 @@ def parse_line2(tokens, nturn=5):
     fisno = None
     i = 0
     tokens = [t for t in tokens if t != '#N/A']  # 表計算の '#N/A' はクラブ名にも値にもしない
+    # 県大会を兼ねる大会は、2 行目の先頭に開催県の選手の県内順位 '( 7)' が印字される（2023 松之山。旧様式パーサと同じ扱い）。
+    # クラブ名ではないので読み飛ばす（以前は続く FIS 番号を読み落とした）
+    m = re.match(r'^\(\s*\d+\)\s*', ' '.join(tokens))
+    if m:
+        tokens = ' '.join(tokens)[m.end():].split()
     if tokens and re.match(r'^\d{7}$', tokens[0]):
         fisno = tokens[0]; i = 1
     rest = tokens[i:]
@@ -221,6 +226,8 @@ SEC = re.compile(r'(男女|女子|男子)?\s*(?:モーグル|高校生|中学生
 # （2026は SF-m=「決勝」、F-m=「準決勝」）。
 ROUNDCODE = re.compile(r'^(?:MO\s+)?((?:SF|F|Q)-[a-z/]+)$')
 GENDER_MARK = re.compile(r'^【(男子|女子)】$')
+# ラウンドの語が無い見出し（'男子リザルト'、2023 松之山）。round は 'リザルト'（adapter の section_codes が決める）
+SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
 
 
 def mixed_order(code):
@@ -313,8 +320,9 @@ def parse_pdf(path, glyph_font=None):
                     code = mc.group(1)
                     continue
                 m = SEC.search(line)
-                if m and 'リザルト' in line and len(line) < 30:
-                    gender, rnd = m.group(1) or '', m.group(2)
+                mb = SEC_BARE.match(line)
+                if (m and 'リザルト' in line and len(line) < 30) or mb:
+                    gender, rnd = (m.group(1) or '', m.group(2)) if m else (mb.group(1), 'リザルト')
                     # 同じラウンドが次のページに続くときは同じセクションに足す
                     # （以前はページごとに '男子予選' '男子予選(2)' と分かれていた）。
                     if cur is not None and (cur['gender'], cur['round'], cur['code'], cur.get('category')) == (gender, rnd, code, category):
