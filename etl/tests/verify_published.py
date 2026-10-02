@@ -655,6 +655,11 @@ def main():
             issues += check_upstream(rr, up)
             issues += check_pdf_round(rr, fis_style=True)
             checked['C+A(fis)'] += len(rr)
+        elif src.startswith('TA-'):
+            # ターンの列が先・エアの列が後で 1 人 3 行の FIS 様式（tf_a。2017 札幌アジア大会）: FIS コードで選手の行を探し、
+            # その下の 2 行（減点・2 本目のジャンプの行と、タイム点・ターン合計・エア合計の行）までの数を照合する
+            issues += check_pdf_round(rr, fis_style=True)
+            checked['A(fis-turns-first)'] += len(rr)
         elif src.startswith('LA-'):
             # FIS 海外大会の 1 人 1 行の様式（oneline_a。世界ジュニア 2016）: ターン合計は審判 3 人の和で、ベース合計・減点合計の印字は無い
             issues += check_pdf_round(rr, fis_style=True, bd_totals=False)

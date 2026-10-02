@@ -22,6 +22,8 @@ from . import ascii_a, ascii_b
 from . import old_a, old_b
 # 1 人 1 行の様式（世界ジュニア 2016 Åre）。layout: "oneline"
 from . import oneline_a, oneline_b
+# ターンの列が先・エアの列が後で 1 人 3 行の様式（2017 札幌アジア大会）。layout: "turns_first"
+from . import tf_a, tf_b
 
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
@@ -281,15 +283,24 @@ def load_event(ev, imported_at, log=print):
     ラウンドは除く）"""
     rules = load_rules(ev['rules'])
     tier = ev.get('tier', 'detail')
-    own = {(p.get('gender'), p['round']) for p in ev['pdfs'] if p['round'] != 'overall'}
+    pdfs = ev['pdfs']
+    if ev.get('page_rounds'):
+        # 1 つの PDF に複数ラウンドの報告書が綴じてある大会（2017 札幌アジア大会: 予選 1〜3・決勝 1 4〜5・決勝 2 6〜7 ページ）。
+        # registry の page_rounds（path・round・pages [最初, 最後]、根拠は notes）でラウンドごとの PDF の項目に分ける
+        by_path = {p['path']: p for p in ev['pdfs']}
+        pdfs = [dict(by_path[r['path']], round=r['round'], pages=list(range(r['pages'][0], r['pages'][1] + 1)),
+                     **({'layout': r['layout']} if r.get('layout') else {}))
+                for r in ev['page_rounds']]
+    own = {(p.get('gender'), p['round']) for p in pdfs if p['round'] != 'overall'}
     ctxs = []
-    for pdf in ev['pdfs']:
+    for pdf in pdfs:
         path = pdf_path(pdf['path'])
         ascii_layout = pdf.get('layout') == 'ascii'
         pa, pb = {'ascii': (ascii_a, ascii_b), 'fis_old': (old_a, old_b),
-                  'oneline': (oneline_a, oneline_b)}.get(pdf.get('layout'), (parser_a, parser_b))
+                  'oneline': (oneline_a, oneline_b), 'turns_first': (tf_a, tf_b)}.get(pdf.get('layout'), (parser_a, parser_b))
+        page_kw = {'pages': pdf['pages']} if pdf.get('pages') else {}
         try:
-            meta_a, recs_a = pa.parse_moguls_results(path)
+            meta_a, recs_a = pa.parse_moguls_results(path, **page_kw)
         except Exception as e:  # noqa
             ctxs.append({'error_only': True, 'event_id': ev['event_id'], 'message': f"パーサ A 例外 {pdf['path']}: {e!r}"})
             continue
@@ -299,7 +310,7 @@ def load_event(ev, imported_at, log=print):
                 b_error = f"パーサ B を読み込めない: {PARSER_B_ERROR}"
             else:
                 try:
-                    meta_b, recs_b = pb.parse_moguls_results(path)
+                    meta_b, recs_b = pb.parse_moguls_results(path, **page_kw)
                 except Exception as e:  # noqa
                     b_error = f"パーサ B 例外: {e!r}"
         gender = pdf.get('gender') or ({"Men's Moguls": 'M', "Ladies' Moguls": 'W', "Women's Moguls": 'W'}.get(meta_a.get('event')))
@@ -308,7 +319,7 @@ def load_event(ev, imported_at, log=print):
             if meta_a.get('q_layout') and code == 'Q':
                 code = 'Q2'  # 予選2 の報告書は Q1/Q2 二段で印字される
             pre, rt = [], None
-            if pdf.get('layout') in ('ascii', 'fis_old', 'oneline'):
+            if pdf.get('layout') in ('ascii', 'fis_old', 'oneline', 'turns_first'):
                 round_id = f"{ev['event_id']}-{gender}-{code}"
                 if ascii_layout:
                     pre += drop_nonstarters(round_id, recs_a, meta_a)

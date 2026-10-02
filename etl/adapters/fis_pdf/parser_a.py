@@ -480,18 +480,21 @@ def _parse_page_athletes(words, page_height, table_end, page_no, section=None):
     return records, section, carry
 
 
-def parse_moguls_results(path):
+def parse_moguls_results(path, pages=None):
     """Parses a FIS single-run moguls result PDF (Q / Q1 / Q2 / F1 / F2).
-    Returns (meta, records); one record per athlete score block."""
+    Returns (meta, records); one record per athlete score block.
+    pages: そのラウンドの報告書のページ（1 始まりの番号の list）。1 つの PDF に複数ラウンドが綴じてある大会（2017 札幌アジア大会）。
+    ページ番号は PDF 全体での番号のまま（page.page_number）"""
     global _doc_cols
     _doc_cols = None
-    with pdfplumber.open(path) as pdf:
+    with pdfplumber.open(path, pages=pages) as pdf:
         pages = pdf.pages
         first_words, first_text = pages[0].extract_words(), pages[0].extract_text() or ''
         jury_page_words, jury_page_text = None, None
         records = []
         section = None  # 総合の報告の区切り（ページをまたいで続く）
-        for pno, page in enumerate(pages, start=1):
+        for page in pages:
+            pno = page.page_number
             words = page.extract_words()
             jury_words = [w for w in words if w['text'] == 'Jury']
             if jury_words:

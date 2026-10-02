@@ -379,7 +379,8 @@ def _parse_jury_line(l, meta):
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
-def parse_moguls_results(path):
+def parse_moguls_results(path, pages=None):
+    # pages: そのラウンドの報告書のページ（PDF 全体での番号）。1 つの PDF に複数ラウンドが綴じてある大会（2017 札幌アジア大会）
     meta = {
         "event": None, "round": None, "date": None, "start_time": None,
         "venue": None, "codex": None, "num_competitors": None,
@@ -409,7 +410,7 @@ def parse_moguls_results(path):
 
     global _n_turns, _best_col, _tie_col
     section = None
-    with pdfplumber.open(path) as pdf:
+    with pdfplumber.open(path, pages=pages) as pdf:
         first = pdf.pages[0].extract_text() or ""
         # Q1/Q2 の 2 ブロックの表は Q2 のブロックがある。無ければ行頭の Q1/F1 は走行の印として読み飛ばす
         q2_doc = any(re.search(r"(?m) Q2 (?:\d+\.\d\d|DN[SF]|DSQ)", pg.extract_text() or "") for pg in pdf.pages)
@@ -420,7 +421,8 @@ def parse_moguls_results(path):
             or "ScoreScore" in hdr_line or "Score Score" in hdr_line
         _tie_col = " Tie" in hdr_line
         meta["n_turns_judges"] = _n_turns
-        for pno, page in enumerate(pdf.pages, 1):
+        for page in pdf.pages:
+            pno = page.page_number
             text = page.extract_text() or ""
             lines = [l.rstrip() for l in text.split("\n") if l.strip()]
             skip_rest = False      # after Forerunners/Conditions/Legend until footer
