@@ -331,6 +331,21 @@ def group_rounds(tables):
         seen.add(sig)
         kept.append(r)
     rounds[:] = kept
+    # 他の表を並べ直しただけの表（決勝の後の全員の総合順位: 2026 宮様・札幌）を捨てる。A 側の drop_relisted と同じ考え方で、
+    # 同じ性別の別の表（3 名以上）の選手のブロックを、BIB ごとに数値の印字まで全部同じで含み、それより人数の多い表
+    def nums(b):
+        return sorted(t for t in b['tokens'] if NUM.match(t))
+    drop = []
+    for r in rounds:
+        by_bib = {b['bib']: nums(b) for b in r['blocks']}
+        for t in rounds:
+            if t is r or (t['gender'], t['category']) != (r['gender'], r['category']) \
+                    or len(t['blocks']) < 3 or len(t['blocks']) >= len(r['blocks']):
+                continue
+            if all(by_bib.get(b['bib']) == nums(b) for b in t['blocks']):
+                drop.append(r)
+                break
+    rounds[:] = [r for r in rounds if r not in drop]
     # 年齢区分（中学生の部・高校生の部…）が 2 つ以上ある PDF だけ区分ごとにラウンドを分ける。1 つなら従来どおり
     if len({r['category'] for r in rounds} - {None}) < 2:
         for r in rounds:

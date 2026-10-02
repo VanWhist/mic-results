@@ -398,6 +398,10 @@ def parse_pdf(path, glyph_font=None):
                 tokens = split_glued(line.split())
                 if not tokens:
                     continue
+                # 先頭に 0 の付いた 8 桁の SAJ 番号（'05000118'、2018 東京都 予選 17 位。SAJ 順位表と同じ書き方）は 7 桁に戻す。
+                # 以前はその行が選手の行と分からず、黙って抜けていた。順位・BIB の後の 3 語目だけ見る
+                if len(tokens) > 2 and re.fullmatch(r'0\d{7}', tokens[2]):
+                    tokens = tokens[:2] + [tokens[2][1:]] + tokens[3:]
                 nturn = cur.get('nturn', 5)
                 a = None
                 if cur.get('oneline'):
