@@ -299,6 +299,7 @@ def parse_pdf(path, glyph_font=None):
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={})
     with pdfplumber.open(path) as pdf:
         cur, prev_text = None, None
+        doc_nturn = None  # この PDF で表頭から分かったターン審判の人数
         for pno, page in enumerate(pdf.pages, 1):
             glyph_font_mod.fix_page(page, glyph_font)
             # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
@@ -389,7 +390,11 @@ def parse_pdf(path, glyph_font=None):
                         cur['mixed_k'] = k + 1
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
                     if jt:
-                        cur['nturn'] = len(jt)
+                        cur['nturn'] = doc_nturn = len(jt)
+                    elif doc_nturn and 'nturn' not in cur:
+                        # 表頭の 'J1 J2 J3' に数字が重なって読めないページ（'順位 BIB FISNO クラブ名 30.82 8.1 7.9 Total …'、
+                        # 2019 ハチ北 女子予選）は、同じ PDF の別の表の人数を使う
+                        cur['nturn'] = doc_nturn
                     # ターン審判 2 人の様式（'J1 J2 AVE Total'、2024・2025 大阪府ジュニア）: 審判の点の後に 2 人の平均が印字される。
                     # 審判の点ではないので読み飛ばす（印字は ave_base・ave_ded に残す）
                     cur['ave'] = 'AVE' in line.split('Total')[0]

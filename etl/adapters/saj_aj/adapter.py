@@ -389,6 +389,10 @@ def load_event(ev, imported_at, log=print):
     # 順位の印字の誤り（あり得ない順位 '0' など。registry の rank_fixes、根拠は basis）。ラウンド・BIB・印字の順位が合う行だけを直す
     rank_fixes = ev.get('rank_fixes') or []
     rank_fixes_used = set()
+    # 合計の欄の印字の誤り（ターン合計の欄に 3.0。審判の点の和とスコアの式からは 11.5。registry の value_fixes、根拠は basis）。
+    # ラウンド・BIB・項目・印字の値が合う行だけを直す
+    value_fixes = ev.get('value_fixes') or []
+    value_fixes_used = set()
     ctxs = []
     for pdf in ev['pdfs']:
         content_note = None
@@ -497,6 +501,14 @@ def load_event(ev, imported_at, log=print):
                         rank_fixes_used.add(i)
                         findings.append(Finding('warning', round_id, 'layer0',
                                                 f"{rec.get('name')}（BIB {fx['bib']}）の順位の印字 {fx['printed']} を {fx['rank']} に直した。根拠: {fx['basis']}"))
+                for i, fx in enumerate(value_fixes):
+                    if fx['round_id'] == round_id and rec.get('bib') == fx['bib'] and rec.get(fx['field']) == fx['printed']:
+                        rec[fx['field']] = fx['value']
+                        if fx['field'] == 'saj_no' and not rec.get('fis_code'):
+                            rec['athlete_id'] = 'saj-' + str(fx['value'])  # 別の選手の SAJ 番号が印字されていた行
+                        value_fixes_used.add(i)
+                        findings.append(Finding('warning', round_id, 'layer0',
+                                                f"{rec.get('name')}（BIB {fx['bib']}）の {fx['field']} の印字 {fx['printed']} を {fx['value']} に直した。根拠: {fx['basis']}"))
             if cat:
                 cls['round_id'] = round_id
                 if cat == '総合の部':
@@ -511,7 +523,9 @@ def load_event(ev, imported_at, log=print):
                     findings.append(Finding('warning', round_id, 'layer0', '1 行様式（技コード 2 つ・DD の印字なし）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
                 if old_layout:
                     findings.append(Finding('warning', round_id, 'layer0', '旧様式（2010 年代前半の SAJ 様式）のため、審判点は読まず印字の合計だけを得点段階で持つ'))
-                    rules = {'tie_break': ['tie_value'], 'source': '旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める',
+                    # registry の tie_break（同点欄の印字なしで分けている大会。根拠は notes）があればそれを使う（2012 東海北陸 愛知 B級）
+                    rules = {'tie_break': list(ev['tie_break']) if ev.get('tie_break') is not None else ['tie_value'],
+                             'source': '旧様式: 同点は「同点」欄の印字（2.0 勝ち／1.0 負け／1.5 同順位）で決める',
                              # 同点欄が 'T1'・'T2' の年（2014 松之山国体記念）: ICR 4207.3 の最初の基準（ターン点の印字）で分け、
                              # 決まらなければ T の番号の順。T の順がターン点と逆なら順位の検算で食い違いになる
                              'tie_break_if_marked': ['turns_total', 'tie_value']}
@@ -560,4 +574,8 @@ def load_event(ev, imported_at, log=print):
         if i not in rank_fixes_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],
                          'message': f"rank_fixes の {fx['round_id']} BIB {fx['bib']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
+    for i, fx in enumerate(value_fixes):
+        if i not in value_fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"value_fixes の {fx['round_id']} BIB {fx['bib']} {fx['field']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
     return ctxs

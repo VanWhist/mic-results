@@ -183,6 +183,8 @@ def num_tokens(rows):
             for part in re.split(r'[()（）\s]|(?<=\d)(?=-)', t):
                 if '..' in part and len(part) % 2 == 0 and part[0::2] == part[1::2]:
                     part = part[0::2]  # 2 回重ね打ちでずれた太字（'1177..2277' = 17.27）
+                if re.fullmatch(r'R\d{1,3}', part):
+                    part = part[1:]  # 'R' の付いた BIB（'R31'、2016 北陸コカ・コーラ杯 女子）
                 if re.fullmatch(r'(?:\d{1,2}\.\d){2,}', part):
                     # くっついた審判点（FIS 旧版の様式「2.42.6」= 2.4 と 2.6）
                     for q in re.findall(r'\d{1,2}\.\d', part):
@@ -216,7 +218,8 @@ def find_anchor(rows, run, fis_style):
                 cands.append(i)
         elif want and want in line:
             bib = str(run['bib']) if run.get('bib') is not None else None
-            if bib is None or any(t == bib for _, t in toks):
+            # BIB に 'R' の付いた印字（'R31'、2016 北陸コカ・コーラ杯 女子）も同じ BIB
+            if bib is None or any(t == bib or t == 'R' + bib for _, t in toks):
                 cands.append(i)
     if not cands:
         return None
@@ -594,6 +597,9 @@ def load_rank_fixes():
         for ev in json.load(open(fn, encoding='utf-8')).get('events', []):
             for x in ev.get('rank_fixes') or []:
                 out[(x['round_id'], x['bib'])] = x
+            # value_fixes（合計の欄の印字の誤りを直したもの）も同じ形で持つ（field と value）
+            for x in ev.get('value_fixes') or []:
+                out[(x['round_id'], x['bib'])] = dict(x, rank=None)
     return out
 
 
@@ -701,8 +707,8 @@ def main():
     rank_fixes = load_rank_fixes()
     for n, (r, k, d) in enumerate(issues):
         fx = rank_fixes.get((r['round_id'], r['bib']))
-        if k == 'value_not_printed' and fx and d == f"rank={fx['rank']}":
-            issues[n] = (r, 'printed_as_is', f"{d}（印字 {fx['printed']} を registry の rank_fixes で直した: {fx['basis'][:40]}…）")
+        if k == 'value_not_printed' and fx and d == (f"{fx['field']}={fx['value']}" if fx.get('field') else f"rank={fx['rank']}"):
+            issues[n] = (r, 'printed_as_is', f"{d}（印字 {fx['printed']} を registry で直した: {fx['basis'][:40]}…）")
     kinds = collections.Counter(k for _, k, _ in issues)
     print('照合した run:', dict(checked), '合計', sum(checked.values()))
     print('不一致:', dict(kinds), '合計', len(issues))

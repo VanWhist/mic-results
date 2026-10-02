@@ -27,6 +27,8 @@ SEC_CODEX = re.compile(r'^(女子|男子)(予選|決勝)\s+Codex\s+\d+\b')
 # ラウンドの語が無い見出し（'男子リザルト'。2013 札幌・2013 北海道選手権・2015 松之山）。round は 'リザルト' とし、
 # 1 本勝負か全員の総合順位かは adapter の section_codes が行の中身で決める
 SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
+# 「成績表」の見出し（'モーグル男子予選成績表'、2012・2013 東海北陸 愛知県大会）
+SEC_SEISEKI = re.compile(r'^モーグル(女子|男子)(予選決勝|予選|決勝)成績表$')  # 予選決勝＝1 本で順位が決まる（2013）
 # 英語版の見出し（"Men's Moguls Super Final Result"、2015 全日本・2024 五箇山 AC）。性別・ラウンドを日本語の見出し語に読み替える
 SEC_EN = re.compile(r"^(Men's|Ladies'|Women's)\s+Moguls\s+(Super\s*Final|Final|Qualification)\s+Result")
 EN_GENDER = {"Men's": '男子', "Ladies'": '女子', "Women's": '女子'}
@@ -71,7 +73,10 @@ def undouble(t):
     return t[::2] if DOUBLED_NUM.fullmatch(t) else t
 
 
-GLUED_SAJNO = re.compile(r'(\d{7})([^\x00-\x7f].*)')  # 7 桁の SAJ 番号に続く氏名（ASCII 以外の字で始まる）
+# 7 桁の SAJ 番号に続く氏名（ASCII 以外の字で始まる）。先頭に 0 の付いた 8 桁（'05000470鈴木'、2012 東海北陸 愛知）も 7 桁にする
+GLUED_SAJNO = re.compile(r'0?(\d{7})([^\x00-\x7f].*)')
+# BIB・組・SAJ 番号・氏名が空白なしで続く語（'5男子5000470鈴木'、2012 東海北陸 愛知 男子決勝。表頭 '順位BIB 組 SAJ競技者No'）
+GLUED_BIB_GROUP = re.compile(r'(\d{1,3})(?:男子|女子)0?(\d{7})([^\x00-\x7f].*)')
 
 
 def undouble_heading(line):
@@ -87,6 +92,9 @@ def is_old_header(line, force=False):
     # 表頭が 2 行に割れる年（1 行目 '順位 SAJNO 氏 名 ターン エアー タイム'、2 行目 'SAC BIB FISNO … Pts …'）や
     # 英語版（'Rk BIB FIS Code Name YB … Pts Score Tie'）もある。force のときは 'Point' 表頭（2013〜2016 年の過渡期の様式）も
     # 同じ「末尾 4 列＝エア計・タイム・タイム点・スコア」として読む
+    if force and line.startswith('順位') and 'SAJ競技者No' in line:
+        # 2012・2013 東海北陸 愛知県大会: '順位 BIB SAJ競技者No 氏名 所属 クラブ名 …'（2013 は J1 … Total が次の行に割れる）
+        return True
     if force and line.startswith('順位') and 'SAS' in line and 'Score' in line:
         # 表頭が 3 行に割れる年（2013 埼玉県松之山: 'SAJ競 Turns …' / '順位 SAS BIB 氏名 所属 クラブ名 Score Tie' /
         # '技者№ J1 J2 J3 Turn 1st 2nd … Total Time Time'）。1 選手 1 行で、末尾 4 列は同じ並び
@@ -191,6 +199,8 @@ def parse_pdf(path, force=False):
                 m = SEC.search(re.sub(r'\s', '', line)) if 'リザルト' in line else SEC_SHORT.match(line)
                 mc = SEC_CODEX.match(line)
                 mb = SEC_BARE.match(line) if li < 12 else None
+                if m is None and li < 12:
+                    m = SEC_SEISEKI.match(re.sub(r'\s', '', line))
                 me = en_heading(line) if li < 12 else None
                 if (m and len(line) < 30 and li < 12) or mc or mb or me:
                     if me:
@@ -239,8 +249,18 @@ def parse_pdf(path, force=False):
                 toks = [undouble(t) for t in line.split()]
                 # SAJ 番号と氏名の間の空白が無い行（'43 91 5001252松本 ベンジャミン …'、2013 埼玉県松之山 B級）
                 toks = [p for t in toks for p in (GLUED_SAJNO.fullmatch(t).groups() if GLUED_SAJNO.fullmatch(t) else (t,))]
+                if len(toks) > 1 and GLUED_BIB_GROUP.fullmatch(toks[1]):
+                    toks = toks[:1] + list(GLUED_BIB_GROUP.fullmatch(toks[1]).groups()) + toks[2:]
                 if not toks:
                     continue
+                if '#N/A' in toks:
+                    continue  # 表計算の空の行（'75 0 #N/A #N/A …'、2012 東海北陸 愛知）。選手の行ではない
+                if len(toks) > 2 and toks[0].isdigit() and re.fullmatch(r'R\d{1,3}', toks[1]):
+                    toks[1] = toks[1][1:]  # 'R' の付いた BIB（'1 R31 5000925 …'、2016 北陸コカ・コーラ杯 女子）
+                if any(DOUBLED_NUM.fullmatch(t) for t in line.split()) and len(toks[0]) % 2 == 0 and toks[0].isdigit() \
+                        and toks[0][0::2] == toks[0][1::2]:
+                    # 太字の行は順位も重ね打ちでずれる（'1155 41 … 1166..7744' = 15 位、2013 東海北陸 愛知）。スコアが重ね打ちの行だけ順位も戻す
+                    toks[0] = toks[0][0::2]
                 if toks[0] in STATUS or toks[0].isdigit():
                     a = parse_row_old(toks, cur.get('nturn', 3))
                     if a:
