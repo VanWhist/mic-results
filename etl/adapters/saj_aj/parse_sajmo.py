@@ -390,6 +390,9 @@ def parse_pdf(path, glyph_font=None):
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
                     if jt:
                         cur['nturn'] = len(jt)
+                    # ターン審判 2 人の様式（'J1 J2 AVE Total'、2024・2025 大阪府ジュニア）: 審判の点の後に 2 人の平均が印字される。
+                    # 審判の点ではないので読み飛ばす（印字は ave_base・ave_ded に残す）
+                    cur['ave'] = 'AVE' in line.split('Total')[0]
                     # 1 行様式（'… Total 1st 2nd J4 J5 …'）: 技コード 2 つとエア審判の生点が 1 行に並び、DD が印字されない。
                     # 審判点からの再計算はできないので、旧様式と同じ読み方で印字の合計を得点の段階で持つ（adapter が tier=score にする）
                     if '1st' in line and '2nd' in line:
@@ -411,11 +414,19 @@ def parse_pdf(path, glyph_font=None):
                         a['page'] = pno
                         cur['athletes'].append(a)
                     continue
+                ave_base = None
+                if cur.get('ave') and tokens[0].isdigit():
+                    i = next((k for k in range(3, len(tokens)) if re.fullmatch(r'\d+\.\d', tokens[k])), None)
+                    if i is not None and i + nturn < len(tokens) and re.fullmatch(r'\d+\.\d', tokens[i + nturn]):
+                        ave_base = tokens[i + nturn]
+                        tokens = tokens[:i + nturn] + tokens[i + nturn + 1:]
                 # 1行目候補: rank/status + bib + 7桁SAJNo
                 if (tokens[0] in STATUS or tokens[0].isdigit()) and len(tokens) >= 3:
                     a = parse_line1(tokens, nturn)
                 if a:
                     a['page'] = pno
+                    if ave_base is not None:
+                        a['ave_base'] = float(ave_base)
                     if cur.get('en'):
                         a['en'] = True
                     cur['athletes'].append(a)
@@ -429,11 +440,21 @@ def parse_pdf(path, glyph_font=None):
                     yb = None
                     if last.get('en') and len(tokens) >= 2 and re.fullmatch(r'\d{7}', tokens[0]) and re.fullmatch(r'(?:19|20)\d\d', tokens[1]):
                         yb, tokens = int(tokens[1]), [tokens[0]] + tokens[2:]  # 英語版の 2 行目の生年
+                    ave_ded = None
+                    if cur.get('ave'):
+                        # 減点 J1 J2 AVE の AVE は、2 本目の技コードの直前（DD の 2 つ前）。2 本目が無い行は末尾の数
+                        d = next((k for k, t in enumerate(tokens) if re.fullmatch(r'\d\.\d{3}', t)), None)
+                        k = d - 2 if d is not None and d >= 2 else len(tokens) - 1
+                        if k >= 0 and re.fullmatch(r'\d+\.\d', tokens[k]):
+                            ave_ded = tokens[k]
+                            tokens = tokens[:k] + tokens[k + 1:]
                     l2 = parse_line2(tokens, nturn)
                     if l2 and (l2.get('ded') or l2.get('fisno') or l2.get('club')):
                         last.update(l2)
                         if yb is not None:
                             last['yb'] = yb
+                        if ave_ded is not None:
+                            last['ave_ded'] = float(ave_ded)
     # 英語版は 1 行目の 3 列目が FIS コード、2 行目の先頭が SAJ 番号（日本語版と逆）。読んだ位置のまま持っているので入れ替える。
     # 印字の順の照合（adapter の printed_sequence_a）は en の印を見て元の順に並べる
     for sec in sections:
