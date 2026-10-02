@@ -24966,7 +24966,7 @@
 "from":null,
 "to":null
 },
-"n_results":60,
+"n_results":61,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -25598,9 +25598,11 @@
 "fis_code":"2535852",
 "saj_no":"5001678",
 "name":"上林 澪奈",
-"aliases":[],
+"aliases":[
+"KAMBAYASHI Miona"
+],
 "noc":null,
-"yb":null,
+"yb":2005,
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
@@ -25624,7 +25626,7 @@
 }
 ],
 "mic":null,
-"n_results":54,
+"n_results":55,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -25731,7 +25733,7 @@
 "UEDA Ryotaro"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1990,
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "affiliation_history":[
@@ -25749,7 +25751,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -26188,7 +26190,7 @@
 }
 ],
 "mic":null,
-"n_results":83,
+"n_results":85,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -26345,7 +26347,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":61,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -26498,7 +26500,7 @@
 }
 ],
 "mic":null,
-"n_results":180,
+"n_results":182,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -26627,7 +26629,7 @@
 }
 ],
 "mic":null,
-"n_results":82,
+"n_results":83,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -27217,7 +27219,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":71,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -27485,9 +27487,11 @@
 "fis_code":"2535143",
 "saj_no":"5001557",
 "name":"中澤 葵",
-"aliases":[],
+"aliases":[
+"NAKAZAWA Aoi"
+],
 "noc":null,
-"yb":null,
+"yb":2004,
 "affiliation":"学連",
 "club":"早稲田大学",
 "affiliation_history":[
@@ -27511,7 +27515,7 @@
 }
 ],
 "mic":null,
-"n_results":65,
+"n_results":66,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -27571,9 +27575,11 @@
 "fis_code":"2538267",
 "saj_no":"5001773",
 "name":"中谷 妃菜",
-"aliases":[],
+"aliases":[
+"NAKATANI Hina"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"富山",
 "club":"金沢学院大学附属高校",
 "affiliation_history":[
@@ -27591,7 +27597,7 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":47,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -27665,9 +27671,11 @@
 "fis_code":"2539812",
 "saj_no":"5001774",
 "name":"中谷 美結",
-"aliases":[],
+"aliases":[
+"NAKATANI Miyu"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"富山",
 "club":"金沢学院大学附属高校",
 "affiliation_history":[
@@ -27691,7 +27699,7 @@
 }
 ],
 "mic":null,
-"n_results":35,
+"n_results":36,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -28308,7 +28316,7 @@
 }
 ],
 "mic":null,
-"n_results":134,
+"n_results":135,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -29020,7 +29028,7 @@
 "KONNO Izumi"
 ],
 "noc":null,
-"yb":null,
+"yb":1998,
 "affiliation":"北海道",
 "club":"北翔大学",
 "affiliation_history":[
@@ -29044,7 +29052,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":48,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29191,7 +29199,7 @@
 }
 ],
 "mic":null,
-"n_results":200,
+"n_results":203,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29234,7 +29242,7 @@
 "ITO Azusa"
 ],
 "noc":null,
-"yb":null,
+"yb":1985,
 "affiliation":"大阪",
 "club":"ﾁｰﾑ ｻﾝｶﾞﾘｱ",
 "affiliation_history":[
@@ -29246,7 +29254,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":42,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -29300,7 +29308,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":77,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29435,7 +29443,7 @@
 }
 ],
 "mic":null,
-"n_results":156,
+"n_results":157,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -29552,9 +29560,11 @@
 "fis_code":"2537013",
 "saj_no":"5001264",
 "name":"伊藤 隆平",
-"aliases":[],
+"aliases":[
+"ITO Ryuhei"
+],
 "noc":null,
-"yb":null,
+"yb":1988,
 "affiliation":"京都",
 "club":"ｽｷｰﾁｰﾑｾﾞﾛ",
 "affiliation_history":[
@@ -29566,7 +29576,7 @@
 }
 ],
 "mic":null,
-"n_results":70,
+"n_results":71,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -29579,6 +29589,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_B"
@@ -29598,7 +29609,7 @@
 "ITOU Souta"
 ],
 "noc":null,
-"yb":null,
+"yb":2000,
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
@@ -29610,7 +29621,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":27,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -29757,9 +29768,11 @@
 "fis_code":"2539956",
 "saj_no":"5001805",
 "name":"伴 和咲",
-"aliases":[],
+"aliases":[
+"BAN Kazusa"
+],
 "noc":null,
-"yb":null,
+"yb":2006,
 "affiliation":"学連",
 "club":"東京理科大学",
 "affiliation_history":[
@@ -29783,7 +29796,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":44,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -29857,7 +29870,7 @@
 "SUMIYOSHI Momoka"
 ],
 "noc":null,
-"yb":null,
+"yb":1998,
 "affiliation":"北海道",
 "club":"NISEKO B&J",
 "affiliation_history":[
@@ -29887,7 +29900,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":25,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29949,7 +29962,7 @@
 }
 ],
 "mic":null,
-"n_results":87,
+"n_results":90,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30252,7 +30265,7 @@
 "SASAKI Ryusei"
 ],
 "noc":null,
-"yb":null,
+"yb":1995,
 "affiliation":"岩手",
 "club":"ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
@@ -30282,7 +30295,7 @@
 }
 ],
 "mic":null,
-"n_results":118,
+"n_results":119,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30418,7 +30431,7 @@
 }
 ],
 "mic":null,
-"n_results":152,
+"n_results":155,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30558,7 +30571,7 @@
 "SADOSHIMA Junko"
 ],
 "noc":null,
-"yb":null,
+"yb":1975,
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
@@ -30588,7 +30601,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":47,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -30958,7 +30971,7 @@
 "SATO Hisataka"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1993,
 "affiliation":"北海道",
 "club":"札幌学院大学",
 "affiliation_history":[
@@ -30982,7 +30995,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -31158,7 +31171,7 @@
 }
 ],
 "mic":null,
-"n_results":80,
+"n_results":83,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -31379,7 +31392,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":62,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -31818,7 +31831,7 @@
 }
 ],
 "mic":null,
-"n_results":146,
+"n_results":148,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -32304,7 +32317,7 @@
 }
 ],
 "mic":null,
-"n_results":216,
+"n_results":218,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -32792,7 +32805,7 @@
 "KATO Chihiro"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1992,
 "affiliation":"学連",
 "club":"中京大学",
 "affiliation_history":[
@@ -32804,7 +32817,7 @@
 }
 ],
 "mic":null,
-"n_results":32,
+"n_results":33,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33459,7 +33472,7 @@
 }
 ],
 "mic":null,
-"n_results":113,
+"n_results":114,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -33543,7 +33556,7 @@
 "CHIBA Hirotaka"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1993,
 "affiliation":"学連",
 "club":"東海大学",
 "affiliation_history":[
@@ -33567,7 +33580,7 @@
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":24,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33893,9 +33906,11 @@
 "fis_code":"2538178",
 "saj_no":"5001709",
 "name":"原 つばさ",
-"aliases":[],
+"aliases":[
+"HARA Tsubasa"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"長野",
 "club":"白馬高校",
 "affiliation_history":[
@@ -33919,7 +33934,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -34018,7 +34033,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":50,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34054,7 +34069,7 @@
 "HARA Asahi"
 ],
 "noc":null,
-"yb":null,
+"yb":1999,
 "affiliation":"東京",
 "club":"日体荏原高校",
 "affiliation_history":[
@@ -34078,7 +34093,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34197,7 +34212,7 @@
 "HARADA Kotone"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1993,
 "affiliation":"北海道",
 "club":"北翔大学",
 "affiliation_history":[
@@ -34215,7 +34230,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34420,7 +34435,7 @@
 "KOGA Kelly"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":2000,
 "affiliation":"千葉",
 "club":"ﾁｰﾑ ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "affiliation_history":[
@@ -34432,7 +34447,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -34496,7 +34511,7 @@
 "YOSHII Moe"
 ],
 "noc":null,
-"yb":null,
+"yb":1999,
 "affiliation":"埼玉",
 "club":"西武台高校",
 "affiliation_history":[
@@ -34514,7 +34529,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":64,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34648,7 +34663,7 @@
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":53,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34713,7 +34728,7 @@
 "YOSHIKAWA Sora"
 ],
 "noc":null,
-"yb":null,
+"yb":1990,
 "affiliation":"埼玉",
 "club":"Gas One ｽｷｰ部",
 "affiliation_history":[
@@ -34743,7 +34758,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":16,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -35443,7 +35458,7 @@
 }
 ],
 "mic":null,
-"n_results":111,
+"n_results":116,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -35480,7 +35495,7 @@
 "KOKURYO Junko"
 ],
 "noc":null,
-"yb":null,
+"yb":1970,
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "affiliation_history":[
@@ -35492,7 +35507,7 @@
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":62,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35874,7 +35889,7 @@
 }
 ],
 "mic":null,
-"n_results":87,
+"n_results":89,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -36201,7 +36216,7 @@
 "SAKATA Tera"
 ],
 "noc":null,
-"yb":null,
+"yb":1996,
 "affiliation":"北海道",
 "club":"札幌国際情報高校",
 "affiliation_history":[
@@ -36219,7 +36234,7 @@
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":23,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36449,7 +36464,7 @@
 "JODAI Hiroshi"
 ],
 "noc":null,
-"yb":null,
+"yb":1972,
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
@@ -36485,7 +36500,7 @@
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":52,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36613,7 +36628,7 @@
 "HORI Sachi"
 ],
 "noc":null,
-"yb":null,
+"yb":1978,
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
@@ -36643,7 +36658,7 @@
 }
 ],
 "mic":null,
-"n_results":82,
+"n_results":83,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -36807,9 +36822,11 @@
 "fis_code":"2537709",
 "saj_no":"5001857",
 "name":"堀尾 英由",
-"aliases":[],
+"aliases":[
+"HORIO Hideyoshi"
+],
 "noc":null,
-"yb":null,
+"yb":2006,
 "affiliation":"北海道",
 "club":"東海大学札幌ｽｷｰｸﾗﾌﾞ",
 "affiliation_history":[
@@ -36827,7 +36844,7 @@
 }
 ],
 "mic":null,
-"n_results":49,
+"n_results":50,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -36859,7 +36876,7 @@
 "HORISHIMA Arisa"
 ],
 "noc":null,
-"yb":null,
+"yb":1995,
 "affiliation":"岐阜",
 "club":"中京大学大学院",
 "affiliation_history":[
@@ -36883,7 +36900,7 @@
 }
 ],
 "mic":null,
-"n_results":81,
+"n_results":82,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36947,7 +36964,7 @@
 }
 ],
 "mic":null,
-"n_results":151,
+"n_results":154,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37153,9 +37170,11 @@
 "fis_code":"2539923",
 "saj_no":"5001817",
 "name":"塚田 真央",
-"aliases":[],
+"aliases":[
+"TSUKADA Mao"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"富山",
 "club":"富山FSC",
 "affiliation_history":[
@@ -37167,7 +37186,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -37176,6 +37195,7 @@
 "2023-24"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJJR",
@@ -37478,9 +37498,11 @@
 "fis_code":"2539804",
 "saj_no":"5001667",
 "name":"外山 紗雪",
-"aliases":[],
+"aliases":[
+"TOYAMA Sayuki"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"長野",
 "club":"白馬村ｽｷｰｸﾗﾌﾞ",
 "affiliation_history":[
@@ -37498,7 +37520,7 @@
 }
 ],
 "mic":null,
-"n_results":37,
+"n_results":38,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -38549,9 +38571,11 @@
 "fis_code":"2535878",
 "saj_no":"5001563",
 "name":"大山 琉高",
-"aliases":[],
+"aliases":[
+"OYAMA Ritaka"
+],
 "noc":null,
-"yb":null,
+"yb":2004,
 "affiliation":"学連",
 "club":"東北学院大学",
 "affiliation_history":[
@@ -38569,7 +38593,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -38582,6 +38606,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -39193,7 +39218,7 @@
 "OOTSU Hiroki"
 ],
 "noc":null,
-"yb":null,
+"yb":1980,
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
 "affiliation_history":[
@@ -39205,7 +39230,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -39429,9 +39454,11 @@
 "fis_code":"2397582",
 "saj_no":"5001598",
 "name":"大谷 拓史",
-"aliases":[],
+"aliases":[
+"OTANI Takumi"
+],
 "noc":null,
-"yb":null,
+"yb":1985,
 "affiliation":"宮城",
 "club":"自然学校ｷｯﾂ",
 "affiliation_history":[
@@ -39443,7 +39470,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -39456,6 +39483,7 @@
 "2024-25"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -39921,9 +39949,11 @@
 "fis_code":"2538258",
 "saj_no":"5001741",
 "name":"奥村 姫雪",
-"aliases":[],
+"aliases":[
+"OKUMURA Kisetsu"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"岐阜",
 "club":"飛騨高山高校",
 "affiliation_history":[
@@ -39947,7 +39977,7 @@
 }
 ],
 "mic":null,
-"n_results":80,
+"n_results":81,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -40668,7 +40698,7 @@
 "MIYAMOTO Jiro"
 ],
 "noc":null,
-"yb":null,
+"yb":1976,
 "affiliation":"東京",
 "club":"ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ",
 "affiliation_history":[
@@ -40680,7 +40710,7 @@
 }
 ],
 "mic":null,
-"n_results":96,
+"n_results":98,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -40699,6 +40729,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -40903,9 +40934,11 @@
 "fis_code":"2539036",
 "saj_no":"5001703",
 "name":"寺川 未来",
-"aliases":[],
+"aliases":[
+"TERAKAWA Miku"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"富山",
 "club":"富山第一高校",
 "affiliation_history":[
@@ -40929,7 +40962,7 @@
 }
 ],
 "mic":null,
-"n_results":62,
+"n_results":64,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -41076,9 +41109,11 @@
 "fis_code":"2539906",
 "saj_no":"5001680",
 "name":"寺田 裕美子",
-"aliases":[],
+"aliases":[
+"TERADA Yumiko"
+],
 "noc":null,
-"yb":null,
+"yb":2008,
 "affiliation":"岐阜",
 "club":"大阪学院大学高校",
 "affiliation_history":[
@@ -41108,7 +41143,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":52,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -41374,7 +41409,7 @@
 }
 ],
 "mic":null,
-"n_results":133,
+"n_results":134,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41541,7 +41576,7 @@
 "KOIWA Sora"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1989,
 "affiliation":"長野",
 "club":"信州大学",
 "affiliation_history":[
@@ -41553,7 +41588,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42376,7 +42411,7 @@
 }
 ],
 "mic":null,
-"n_results":79,
+"n_results":81,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -42831,7 +42866,7 @@
 }
 ],
 "mic":null,
-"n_results":126,
+"n_results":127,
 "seasons":[
 "2016-17",
 "2018-19",
@@ -43283,7 +43318,7 @@
 }
 ],
 "mic":null,
-"n_results":154,
+"n_results":156,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43302,6 +43337,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -43529,7 +43565,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -43852,7 +43888,7 @@
 }
 ],
 "mic":null,
-"n_results":86,
+"n_results":87,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44217,7 +44253,7 @@
 }
 ],
 "mic":null,
-"n_results":109,
+"n_results":110,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44298,10 +44334,11 @@
 "saj_no":"5000425",
 "name":"山本 篤",
 "aliases":[
-"山本篤"
+"山本篤",
+"YAMAMOTO Atsushi"
 ],
 "noc":null,
-"yb":null,
+"yb":1973,
 "affiliation":"石川",
 "club":"ﾏｯﾄﾞﾊｳｽMST",
 "affiliation_history":[
@@ -44313,7 +44350,7 @@
 }
 ],
 "mic":null,
-"n_results":86,
+"n_results":87,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -44331,6 +44368,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -45084,7 +45122,7 @@
 }
 ],
 "mic":null,
-"n_results":96,
+"n_results":98,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -45392,7 +45430,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":49,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45411,8 +45449,8 @@
 "SAJ_AJ"
 ],
 "best":{
-"run_score":63.27,
-"run_id":"2015-16-fis-1962-0043-W-Q-2484827"
+"run_score":64.31,
+"run_id":"2014-15-saj_aj-1987-0037-W-F2-2484827"
 }
 },
 {
@@ -45642,7 +45680,7 @@
 }
 ],
 "mic":null,
-"n_results":164,
+"n_results":169,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45958,7 +45996,7 @@
 }
 ],
 "mic":null,
-"n_results":141,
+"n_results":143,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -46180,7 +46218,7 @@
 }
 ],
 "mic":null,
-"n_results":117,
+"n_results":118,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46234,7 +46272,7 @@
 }
 ],
 "mic":null,
-"n_results":131,
+"n_results":133,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -46418,7 +46456,7 @@
 "ICHIMURA Miki"
 ],
 "noc":null,
-"yb":null,
+"yb":1993,
 "affiliation":"学連",
 "club":"中京大学",
 "affiliation_history":[
@@ -46436,7 +46474,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46636,9 +46674,11 @@
 "fis_code":"2538287",
 "saj_no":"5001666",
 "name":"平井 青空",
-"aliases":[],
+"aliases":[
+"HIRAI Soara"
+],
 "noc":null,
-"yb":null,
+"yb":2006,
 "affiliation":"富山",
 "club":"富山第一高校",
 "affiliation_history":[
@@ -46668,7 +46708,7 @@
 }
 ],
 "mic":null,
-"n_results":49,
+"n_results":50,
 "seasons":[
 "2016-17",
 "2018-19",
@@ -46774,7 +46814,7 @@
 }
 ],
 "mic":null,
-"n_results":205,
+"n_results":208,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46908,7 +46948,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -47051,9 +47091,11 @@
 "fis_code":"2538179",
 "saj_no":"5001783",
 "name":"広瀬 怜楠",
-"aliases":[],
+"aliases":[
+"HIROSE Reina"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"長野",
 "club":"松本深志高校",
 "affiliation_history":[
@@ -47077,7 +47119,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -47318,7 +47360,7 @@
 "GOTO Moeki"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1995,
 "affiliation":"北海道",
 "club":"TEAM BANKEI",
 "affiliation_history":[
@@ -47336,7 +47378,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47604,7 +47646,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":73,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48136,7 +48178,7 @@
 "TSUTSUMI Yuta"
 ],
 "noc":null,
-"yb":null,
+"yb":1983,
 "affiliation":"兵庫",
 "club":"D-RIDE",
 "affiliation_history":[
@@ -48148,7 +48190,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48213,7 +48255,7 @@
 "SAIDO Hinako"
 ],
 "noc":null,
-"yb":null,
+"yb":1996,
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
@@ -48237,7 +48279,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":61,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48387,7 +48429,7 @@
 "SAITO Tatsuya"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1988,
 "affiliation":"北海道",
 "club":"ｽﾉｰﾄﾞﾙﾌｨﾝSC",
 "affiliation_history":[
@@ -48405,7 +48447,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":20,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48539,7 +48581,7 @@
 }
 ],
 "mic":null,
-"n_results":97,
+"n_results":98,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -48608,7 +48650,7 @@
 "SHINTANI Natsumi"
 ],
 "noc":null,
-"yb":null,
+"yb":1984,
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "affiliation_history":[
@@ -48620,7 +48662,7 @@
 }
 ],
 "mic":null,
-"n_results":88,
+"n_results":90,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -48690,10 +48732,11 @@
 "saj_no":"5000279",
 "name":"日良 康隆",
 "aliases":[
-"日良康隆"
+"日良康隆",
+"HIRA Yasutaka"
 ],
 "noc":null,
-"yb":null,
+"yb":1978,
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "affiliation_history":[
@@ -48705,7 +48748,7 @@
 }
 ],
 "mic":null,
-"n_results":119,
+"n_results":120,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49020,7 +49063,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":43,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -49208,7 +49251,7 @@
 "ARIGA Yasutoshi"
 ],
 "noc":null,
-"yb":null,
+"yb":1977,
 "affiliation":"愛知",
 "club":"ﾊﾟﾄﾞﾙｸﾗﾌﾞNGY",
 "affiliation_history":[
@@ -49304,7 +49347,7 @@
 }
 ],
 "mic":null,
-"n_results":79,
+"n_results":80,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49406,10 +49449,11 @@
 "saj_no":"5000656",
 "name":"有野 智子",
 "aliases":[
-"有野智子"
+"有野智子",
+"ARINO Tomoko"
 ],
 "noc":null,
-"yb":null,
+"yb":1970,
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
 "affiliation_history":[
@@ -49421,7 +49465,7 @@
 }
 ],
 "mic":null,
-"n_results":139,
+"n_results":140,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49440,6 +49484,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -49792,7 +49837,7 @@
 }
 ],
 "mic":null,
-"n_results":142,
+"n_results":143,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -50560,7 +50605,7 @@
 }
 ],
 "mic":null,
-"n_results":122,
+"n_results":124,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -50868,9 +50913,11 @@
 "fis_code":"2539805",
 "saj_no":"5001905",
 "name":"村上 伊織",
-"aliases":[],
+"aliases":[
+"MURAKAMI Iori"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"北海道",
 "club":"NISEKO B&J",
 "affiliation_history":[
@@ -50894,7 +50941,7 @@
 }
 ],
 "mic":null,
-"n_results":58,
+"n_results":59,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -51913,9 +51960,11 @@
 "fis_code":"2537332",
 "saj_no":"5001689",
 "name":"松尾 駿寿",
-"aliases":[],
+"aliases":[
+"MATSUO Takahisa"
+],
 "noc":null,
-"yb":null,
+"yb":2005,
 "affiliation":"岐阜",
 "club":"豊田工業高等専門学校",
 "affiliation_history":[
@@ -51939,7 +51988,7 @@
 }
 ],
 "mic":null,
-"n_results":48,
+"n_results":49,
 "seasons":[
 "2018-19",
 "2021-22",
@@ -51949,6 +51998,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJJR",
@@ -52300,7 +52350,7 @@
 "MATSUMOTO Yuichiro"
 ],
 "noc":null,
-"yb":null,
+"yb":1983,
 "affiliation":"兵庫",
 "club":"WESTERN BUMPS",
 "affiliation_history":[
@@ -52372,7 +52422,7 @@
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":62,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52738,7 +52788,7 @@
 }
 ],
 "mic":null,
-"n_results":139,
+"n_results":141,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52897,9 +52947,11 @@
 "fis_code":"2537022",
 "saj_no":"5001559",
 "name":"林 星那",
-"aliases":[],
+"aliases":[
+"HAYASHI Sena"
+],
 "noc":null,
-"yb":null,
+"yb":2005,
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
 "affiliation_history":[
@@ -52911,7 +52963,7 @@
 }
 ],
 "mic":null,
-"n_results":106,
+"n_results":109,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -53346,7 +53398,7 @@
 }
 ],
 "mic":null,
-"n_results":209,
+"n_results":210,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -53968,7 +54020,7 @@
 "KUWABARA Ryuji"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1988,
 "affiliation":"福島",
 "club":"ﾁｰﾑ ﾘｽﾃﾙ",
 "affiliation_history":[
@@ -53980,7 +54032,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":19,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -53992,8 +54044,8 @@
 "SAJ_AJ"
 ],
 "best":{
-"run_score":48.57,
-"run_id":"2014-15-fis-1963-0002-M-Q-2440154"
+"run_score":50.99,
+"run_id":"2014-15-saj_aj-1987-0037-M-Q-2440154"
 }
 },
 {
@@ -54127,9 +54179,11 @@
 "fis_code":"2539097",
 "saj_no":"5001910",
 "name":"梅村 浬太朗",
-"aliases":[],
+"aliases":[
+"UMEMURA Ritaro"
+],
 "noc":null,
-"yb":null,
+"yb":2008,
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
@@ -54141,7 +54195,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -54188,7 +54242,7 @@
 }
 ],
 "mic":null,
-"n_results":127,
+"n_results":129,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -54263,7 +54317,7 @@
 }
 ],
 "mic":null,
-"n_results":99,
+"n_results":101,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54341,7 +54395,7 @@
 }
 ],
 "mic":null,
-"n_results":143,
+"n_results":144,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -54415,7 +54469,7 @@
 "KAJIURA Issei"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1993,
 "affiliation":"北海道",
 "club":"TEAMBANKEI",
 "affiliation_history":[
@@ -54439,7 +54493,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54635,7 +54689,7 @@
 "MORIYAMA Sunao"
 ],
 "noc":null,
-"yb":null,
+"yb":1988,
 "affiliation":"北海道",
 "club":"TEAM BANKEI",
 "affiliation_history":[
@@ -54665,7 +54719,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54784,7 +54838,7 @@
 }
 ],
 "mic":null,
-"n_results":111,
+"n_results":112,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -54868,7 +54922,7 @@
 "MORIIKE Aoi"
 ],
 "noc":null,
-"yb":null,
+"yb":2000,
 "affiliation":"北海道",
 "club":"倶知安高校",
 "affiliation_history":[
@@ -54892,7 +54946,7 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":46,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -55077,10 +55131,11 @@
 "saj_no":"5001256",
 "name":"植松 信",
 "aliases":[
-"植松信"
+"植松信",
+"UEMATSU Shin"
 ],
 "noc":null,
-"yb":null,
+"yb":1998,
 "affiliation":"富山",
 "club":"富山FSC",
 "affiliation_history":[
@@ -55110,7 +55165,7 @@
 }
 ],
 "mic":null,
-"n_results":94,
+"n_results":96,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -55393,7 +55448,7 @@
 "YOKOO Kaede"
 ],
 "noc":null,
-"yb":null,
+"yb":1998,
 "affiliation":"北海道",
 "club":"札幌国際情報高校",
 "affiliation_history":[
@@ -55411,7 +55466,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -55763,9 +55818,11 @@
 "fis_code":"2538256",
 "saj_no":"5001823",
 "name":"橋下 太一",
-"aliases":[],
+"aliases":[
+"HASHISHITA Taichi"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"学連",
 "club":"愛知工業大学",
 "affiliation_history":[
@@ -55795,7 +55852,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -56456,7 +56513,7 @@
 "UJIIE Sayaka"
 ],
 "noc":null,
-"yb":null,
+"yb":2000,
 "affiliation":"学連",
 "club":"福島県立医科大学",
 "affiliation_history":[
@@ -56474,7 +56531,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56560,7 +56617,7 @@
 }
 ],
 "mic":null,
-"n_results":76,
+"n_results":77,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -56618,7 +56675,7 @@
 }
 ],
 "mic":null,
-"n_results":137,
+"n_results":138,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -56681,7 +56738,7 @@
 }
 ],
 "mic":null,
-"n_results":146,
+"n_results":148,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -56848,7 +56905,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -56980,9 +57037,11 @@
 "fis_code":"2538182",
 "saj_no":"5001556",
 "name":"江村 希実",
-"aliases":[],
+"aliases":[
+"EMURA Nozomi"
+],
 "noc":null,
-"yb":null,
+"yb":2002,
 "affiliation":"学連",
 "club":"上智大学",
 "affiliation_history":[
@@ -57006,7 +57065,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":43,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -57752,7 +57811,7 @@
 }
 ],
 "mic":null,
-"n_results":148,
+"n_results":150,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -58376,7 +58435,7 @@
 "WATANABE Yuki"
 ],
 "noc":null,
-"yb":null,
+"yb":1995,
 "affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
 "affiliation_history":[
@@ -58388,7 +58447,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -58586,7 +58645,7 @@
 }
 ],
 "mic":null,
-"n_results":61,
+"n_results":63,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59286,7 +59345,7 @@
 "HAMADA Kousuke"
 ],
 "noc":null,
-"yb":null,
+"yb":1976,
 "affiliation":"福井",
 "club":"福井MSC",
 "affiliation_history":[
@@ -59304,7 +59363,7 @@
 }
 ],
 "mic":null,
-"n_results":62,
+"n_results":63,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59522,9 +59581,11 @@
 "fis_code":"2539811",
 "saj_no":"5001744",
 "name":"熊谷 波來",
-"aliases":[],
+"aliases":[
+"KUMAGAI Haru"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"福島",
 "club":"福島東高等学校",
 "affiliation_history":[
@@ -59548,7 +59609,7 @@
 }
 ],
 "mic":null,
-"n_results":57,
+"n_results":58,
 "seasons":[
 "2018-19",
 "2020-21",
@@ -60498,7 +60559,7 @@
 "TANAKA Ryo"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1983,
 "affiliation":"長野",
 "club":"松本市SC",
 "affiliation_history":[
@@ -60510,7 +60571,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60533,9 +60594,11 @@
 "fis_code":"2534419",
 "saj_no":"5001496",
 "name":"田中 花",
-"aliases":[],
+"aliases":[
+"TANAKA Hana"
+],
 "noc":null,
-"yb":null,
+"yb":2003,
 "affiliation":"学連",
 "club":"武庫川女子大学",
 "affiliation_history":[
@@ -60565,7 +60628,7 @@
 }
 ],
 "mic":null,
-"n_results":47,
+"n_results":48,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -60598,7 +60661,7 @@
 "TANAKA Rikuya"
 ],
 "noc":null,
-"yb":null,
+"yb":1992,
 "affiliation":"大阪",
 "club":"ﾁｰﾑ ｻﾝｶﾞﾘｱ",
 "affiliation_history":[
@@ -60610,7 +60673,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -60622,8 +60685,8 @@
 "SAJ_AJ"
 ],
 "best":{
-"run_score":21.5,
-"run_id":"2013-14-saj_aj-2018-0033-M-F1-2526411"
+"run_score":69.31,
+"run_id":"2014-15-saj_aj-1987-0037-M-Q-2526411"
 }
 },
 {
@@ -60632,10 +60695,11 @@
 "saj_no":"5001100",
 "name":"田中 雄大",
 "aliases":[
-"田中雄大"
+"田中雄大",
+"TANAKA Yudai"
 ],
 "noc":null,
-"yb":null,
+"yb":1997,
 "affiliation":"北海道",
 "club":"TEAM BUMPS",
 "affiliation_history":[
@@ -60665,7 +60729,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":19,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60676,6 +60740,7 @@
 "series":[
 "FIS",
 "SAJ_A",
+"SAJ_AJ",
 "SAJ_AJJR",
 "SAJ_B"
 ],
@@ -60808,7 +60873,7 @@
 }
 ],
 "mic":null,
-"n_results":145,
+"n_results":147,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -60844,9 +60909,11 @@
 "fis_code":"2538959",
 "saj_no":"5001683",
 "name":"田口 瑛大",
-"aliases":[],
+"aliases":[
+"TAGUCHI Eita"
+],
 "noc":null,
-"yb":null,
+"yb":2008,
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "affiliation_history":[
@@ -60858,7 +60925,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":42,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -60871,6 +60938,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJJR",
@@ -60966,7 +61034,7 @@
 "TAMURA Takahiro"
 ],
 "noc":null,
-"yb":null,
+"yb":1993,
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "affiliation_history":[
@@ -60990,7 +61058,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":42,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -61497,7 +61565,7 @@
 "HATADA Moka"
 ],
 "noc":null,
-"yb":null,
+"yb":1997,
 "affiliation":"学連",
 "club":"早稲田大学",
 "affiliation_history":[
@@ -61527,7 +61595,7 @@
 }
 ],
 "mic":null,
-"n_results":45,
+"n_results":48,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -61545,8 +61613,8 @@
 "SAJ_B"
 ],
 "best":{
-"run_score":63.99,
-"run_id":"2015-16-fis-1962-0042-W-Q-2529741"
+"run_score":64.32,
+"run_id":"2014-15-saj_aj-1987-0037-W-F2-2529741"
 }
 },
 {
@@ -61832,7 +61900,7 @@
 "SHIRATO Motoki"
 ],
 "noc":null,
-"yb":null,
+"yb":1971,
 "affiliation":"栃木",
 "club":"宇都宮SC",
 "affiliation_history":[
@@ -61862,7 +61930,7 @@
 }
 ],
 "mic":null,
-"n_results":66,
+"n_results":67,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -61895,7 +61963,7 @@
 "SHIRATORI Atsuki"
 ],
 "noc":null,
-"yb":null,
+"yb":1998,
 "affiliation":"学連",
 "club":"日本大学",
 "affiliation_history":[
@@ -61919,7 +61987,7 @@
 }
 ],
 "mic":null,
-"n_results":76,
+"n_results":78,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -62126,7 +62194,7 @@
 }
 ],
 "mic":null,
-"n_results":56,
+"n_results":57,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -63539,7 +63607,7 @@
 }
 ],
 "mic":null,
-"n_results":126,
+"n_results":128,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -64313,9 +64381,11 @@
 "fis_code":"2539951",
 "saj_no":"5001933",
 "name":"篠原 宇汰",
-"aliases":[],
+"aliases":[
+"SHINOHARA Uta"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"長野",
 "club":"白馬村ｽｷｰｸﾗﾌﾞ",
 "affiliation_history":[
@@ -64333,7 +64403,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":42,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -64463,7 +64533,7 @@
 }
 ],
 "mic":null,
-"n_results":79,
+"n_results":81,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -65155,7 +65225,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":65,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65279,7 +65349,7 @@
 }
 ],
 "mic":null,
-"n_results":120,
+"n_results":123,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65345,7 +65415,7 @@
 }
 ],
 "mic":null,
-"n_results":146,
+"n_results":148,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65581,7 +65651,7 @@
 }
 ],
 "mic":null,
-"n_results":161,
+"n_results":163,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -65695,7 +65765,7 @@
 }
 ],
 "mic":null,
-"n_results":43,
+"n_results":44,
 "seasons":[
 "2021-22",
 "2022-23",
@@ -65726,7 +65796,7 @@
 "KIKUCHI Osamu"
 ],
 "noc":null,
-"yb":null,
+"yb":1972,
 "affiliation":"静岡",
 "club":"静岡ｽｷｰ技術研究会",
 "affiliation_history":[
@@ -65738,7 +65808,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":54,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66347,7 +66417,7 @@
 }
 ],
 "mic":null,
-"n_results":181,
+"n_results":183,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -66428,7 +66498,7 @@
 }
 ],
 "mic":null,
-"n_results":147,
+"n_results":150,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -66486,7 +66556,7 @@
 }
 ],
 "mic":null,
-"n_results":94,
+"n_results":96,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -67021,7 +67091,7 @@
 "NISHI Nobuyuki"
 ],
 "noc":null,
-"yb":null,
+"yb":1985,
 "affiliation":"東京",
 "club":"Main Mano Foods",
 "affiliation_history":[
@@ -67039,7 +67109,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":13,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -67050,8 +67120,8 @@
 "SAJ_AJ"
 ],
 "best":{
-"run_score":75.43,
-"run_id":"2017-18-saj_aj-2018-M-F2-2397776"
+"run_score":75.98,
+"run_id":"2014-15-saj_aj-1987-0037-M-F1-2397776"
 }
 },
 {
@@ -67059,9 +67129,11 @@
 "fis_code":"2538286",
 "saj_no":"5001775",
 "name":"西出 空牙",
-"aliases":[],
+"aliases":[
+"NISHIDE Kuga"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"富山",
 "club":"金沢学院大学附属高校",
 "affiliation_history":[
@@ -67079,7 +67151,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":70,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -67285,7 +67357,7 @@
 "NISHIKAWA Rintaro"
 ],
 "noc":null,
-"yb":null,
+"yb":1994,
 "affiliation":"学連",
 "club":"慶応義塾大学",
 "affiliation_history":[
@@ -67297,7 +67369,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":19,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -67497,7 +67569,7 @@
 }
 ],
 "mic":null,
-"n_results":202,
+"n_results":205,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67739,7 +67811,7 @@
 }
 ],
 "mic":null,
-"n_results":99,
+"n_results":100,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67924,7 +67996,7 @@
 "from":null,
 "to":null
 },
-"n_results":84,
+"n_results":86,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -68059,7 +68131,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -68211,7 +68283,7 @@
 }
 ],
 "mic":null,
-"n_results":139,
+"n_results":140,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68591,7 +68663,7 @@
 }
 ],
 "mic":null,
-"n_results":85,
+"n_results":87,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -68994,9 +69066,11 @@
 "fis_code":"2539959",
 "saj_no":"5001929",
 "name":"遠藤 菜樹",
-"aliases":[],
+"aliases":[
+"ENDO Natsuki"
+],
 "noc":null,
-"yb":null,
+"yb":2009,
 "affiliation":"北海道",
 "club":"NISEKO B&J",
 "affiliation_history":[
@@ -69008,7 +69082,7 @@
 }
 ],
 "mic":null,
-"n_results":44,
+"n_results":46,
 "seasons":[
 "2020-21",
 "2021-22",
@@ -69376,7 +69450,7 @@
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":52,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -69406,9 +69480,11 @@
 "fis_code":"2539801",
 "saj_no":"5001743",
 "name":"野々部 莉桜",
-"aliases":[],
+"aliases":[
+"NONOBE Rio"
+],
 "noc":null,
-"yb":null,
+"yb":2007,
 "affiliation":"岐阜",
 "club":"新川高校",
 "affiliation_history":[
@@ -69432,7 +69508,7 @@
 }
 ],
 "mic":null,
-"n_results":54,
+"n_results":55,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -69888,7 +69964,7 @@
 }
 ],
 "mic":null,
-"n_results":101,
+"n_results":103,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -70208,7 +70284,7 @@
 "SUZUKI Akira"
 ],
 "noc":null,
-"yb":null,
+"yb":1972,
 "affiliation":"京都",
 "club":"ｽｷｰﾁｰﾑｾﾞﾛ",
 "affiliation_history":[
@@ -70220,7 +70296,7 @@
 }
 ],
 "mic":null,
-"n_results":89,
+"n_results":90,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -70661,9 +70737,11 @@
 "fis_code":"2539912",
 "saj_no":"5001742",
 "name":"鈴木 桃子",
-"aliases":[],
+"aliases":[
+"SUZUKI Momoko"
+],
 "noc":null,
-"yb":null,
+"yb":2008,
 "affiliation":"岐阜",
 "club":"瑞陵高校",
 "affiliation_history":[
@@ -70687,7 +70765,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":52,
 "seasons":[
 "2018-19",
 "2019-20",
@@ -70699,6 +70777,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJJR",
@@ -71170,7 +71249,7 @@
 "NAGAOKA Yuuta"
 ],
 "noc":null,
-"yb":null,
+"yb":1995,
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
 "affiliation_history":[
@@ -71194,7 +71273,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":64,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -71714,9 +71793,11 @@
 "fis_code":"2537021",
 "saj_no":"5001462",
 "name":"関口 豊萌",
-"aliases":[],
+"aliases":[
+"SEKIGUCHI Tomo"
+],
 "noc":null,
-"yb":null,
+"yb":2005,
 "affiliation":"学連",
 "club":"東北大学",
 "affiliation_history":[
@@ -71746,7 +71827,7 @@
 }
 ],
 "mic":null,
-"n_results":90,
+"n_results":91,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -72260,7 +72341,7 @@
 "KAGAWA Mitsuaki"
 ],
 "noc":"JPN",
-"yb":null,
+"yb":1987,
 "affiliation":"北海道",
 "club":"NISEKO B&J",
 "affiliation_history":[
@@ -72278,7 +72359,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":21,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -72344,9 +72425,11 @@
 "fis_code":"2535042",
 "saj_no":"5001627",
 "name":"高原 究",
-"aliases":[],
+"aliases":[
+"TAKAHARA Kiwamu"
+],
 "noc":null,
-"yb":null,
+"yb":2004,
 "affiliation":"学連",
 "club":"愛知工業大学",
 "affiliation_history":[
@@ -72370,7 +72453,7 @@
 }
 ],
 "mic":null,
-"n_results":81,
+"n_results":82,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -72464,7 +72547,7 @@
 }
 ],
 "mic":null,
-"n_results":111,
+"n_results":112,
 "seasons":[
 "2014-15",
 "2016-17",
@@ -72703,7 +72786,7 @@
 "TAKAHASHI Shota"
 ],
 "noc":null,
-"yb":null,
+"yb":2000,
 "affiliation":"北海道",
 "club":"TEAM BANKEI",
 "affiliation_history":[
@@ -72721,7 +72804,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":54,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -73216,7 +73299,7 @@
 }
 ],
 "mic":null,
-"n_results":98,
+"n_results":99,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -73366,7 +73449,7 @@
 }
 ],
 "mic":null,
-"n_results":166,
+"n_results":168,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -73470,7 +73553,7 @@
 "TAKAHASHI Yuuki"
 ],
 "noc":null,
-"yb":null,
+"yb":1993,
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
@@ -73482,7 +73565,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":27,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -73496,8 +73579,8 @@
 "SAJ_B"
 ],
 "best":{
-"run_score":28.0,
-"run_id":"2014-15-fis-1963-0002-M-Q-2529745"
+"run_score":34.2,
+"run_id":"2014-15-saj_aj-1987-0037-M-Q-2529745"
 }
 },
 {
@@ -73674,7 +73757,7 @@
 "TAKAHASHI Ayumu"
 ],
 "noc":null,
-"yb":null,
+"yb":1996,
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
@@ -73686,7 +73769,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":27,
 "seasons":[
 "2011-12",
 "2012-13",

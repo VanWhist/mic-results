@@ -234,8 +234,10 @@ def to_record(a, nturn):
     """parse_sajmo の選手 dict → ETL 共通 record。減点は負の数にする。"""
     rec = {
         'rank': a.get('rank'), 'bib': a.get('bib'), 'saj_no': a.get('sajno'), 'fis_code': a.get('fisno'),
-        'athlete_id': athlete_id_of(a), 'name': a.get('name'), 'noc': None, 'yb': None,
-        'affiliation': a.get('pref'), 'club': a.get('club'),
+        'athlete_id': athlete_id_of(a), 'name': a.get('name'), 'yb': a.get('yb'),  # 生年は英語版だけ印字される
+        # 英語版（a['en']）の所属の欄は国（'JPN'）なので NOC として持ち、所属（県）は空にする
+        'noc': a.get('pref') if a.get('en') else None,
+        'affiliation': None if a.get('en') else a.get('pref'), 'club': a.get('club'),
         'status': a.get('status') or 'OK', 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
         'seconds': a.get('time'), 'time_points': a.get('time_point'), 'air_jumps': [], 'air_total': a.get('air_total'),
         'base_scores': list(a.get('base') or []), 'ded_scores': [], 'base_total': None, 'ded_total': None,
@@ -265,18 +267,25 @@ def printed_sequence_a(a):
     def add(v):
         if v is not None:
             seq.append(Decimal(str(v)).normalize())
+    # 英語版（a['en']）は 1 行目の 3 列目が FIS コード、2 行目の先頭が SAJ 番号と生年（印字の順に並べる）
+    col3, line2 = (a.get('fisno'), a.get('sajno')) if a.get('en') else (a.get('sajno'), a.get('fisno'))
+
+    def add_line2_head():
+        if line2:
+            add(line2)
+        if a.get('en') and a.get('yb'):
+            add(a['yb'])
     if a.get('status') != 'OK' or a.get('base') is None:
         add(a.get('rank')); add(a.get('bib'))
-        if a.get('sajno') and NUM.match(str(a['sajno'])):
-            add(a['sajno'])
+        if col3 and NUM.match(str(col3)):
+            add(col3)
         for x in a.get('raw_partial') or []:
             add(x)
-        if a.get('fisno'):
-            add(a['fisno'])
+        add_line2_head()
         return seq
     add(a.get('rank')); add(a.get('bib'))
-    if a.get('sajno') and NUM.match(str(a['sajno'])):
-        add(a['sajno'])
+    if col3 and NUM.match(str(col3)):
+        add(col3)
     for x in a.get('base') or []:
         add(x)
     add(a.get('turns_total'))
@@ -286,8 +295,7 @@ def printed_sequence_a(a):
         add(a.get(k))
     if a.get('tie') is not None and NUM.match(str(a['tie'])):
         add(a['tie'])
-    if a.get('fisno'):
-        add(a['fisno'])
+    add_line2_head()
     for x in a.get('ded') or []:
         add(x)
     if a.get('jump2') is not None and NUM.match(str(a['jump2'])):

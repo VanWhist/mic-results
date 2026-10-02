@@ -27,6 +27,32 @@ SEC_CODEX = re.compile(r'^(女子|男子)(予選|決勝)\s+Codex\s+\d+\b')
 # ラウンドの語が無い見出し（'男子リザルト'。2013 札幌・2013 北海道選手権・2015 松之山）。round は 'リザルト' とし、
 # 1 本勝負か全員の総合順位かは adapter の section_codes が行の中身で決める
 SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
+# 英語版の見出し（"Men's Moguls Super Final Result"、2015 全日本・2024 五箇山 AC）。性別・ラウンドを日本語の見出し語に読み替える
+SEC_EN = re.compile(r"^(Men's|Ladies'|Women's)\s+Moguls\s+(Super\s*Final|Final|Qualification)\s+Result")
+EN_GENDER = {"Men's": '男子', "Ladies'": '女子', "Women's": '女子'}
+EN_ROUND = {'Qualification': '予選', 'Final': '決勝', 'SuperFinal': 'スーパーファイナル'}
+
+
+def en_heading(line):
+    """英語版の見出し → (性別, ラウンドの見出し語)。英語版でなければ None"""
+    m = SEC_EN.match(line)
+    if not m:
+        return None
+    return EN_GENDER[m.group(1)], EN_ROUND[re.sub(r'\s', '', m.group(2))]
+
+
+def split_en_name(tokens):
+    """英語版の氏名と国（'HARADaichi JPN' → ('HARA Daichi', 'JPN')、'FUJIMURA Ikkei JPN' → ('FUJIMURA Ikkei', 'JPN')）。
+    姓（大文字）と名（大文字＋小文字）が空白なしで印字された語は境目で分ける（文字は変えない）"""
+    noc = tokens[-1] if tokens and re.fullmatch(r'[A-Z]{3}', tokens[-1]) else ''
+    words = tokens[:-1] if noc else list(tokens)
+    out = []
+    for w in words:
+        m = re.match(r"^([A-Z][A-Z'-]*?)([A-Z][a-z].*)$", w)
+        out += list(m.groups()) if m else [w]
+    return ' '.join(out), noc
+
+
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -152,7 +178,12 @@ def parse_pdf(path, force=False):
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
             # 区切りのタブが '(cid:9)' として出て数値にくっつく PDF がある（'(cid:9)(cid:9)29.77'）
-            lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', page.dedupe_chars().extract_text() or '').split('\n') if l.strip()]
+            text = page.dedupe_chars().extract_text() or ''
+            if re.search(r'^Rk BIB', text, re.M):
+                # 英語版は詰めて印字された本物の連続文字（'YOSHII' の I と I）が重ね打ちの許容幅（1pt）でまとまってしまうので
+                # 0.5pt で読み直す（saj_dm の英語版と同じ。2015 全日本）
+                text = page.dedupe_chars(tolerance=0.5).extract_text() or ''
+            lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', text).split('\n') if l.strip()]
             for li, line in enumerate(lines):
                 if li < 12:
                     line = undouble_heading(line)
@@ -160,9 +191,13 @@ def parse_pdf(path, force=False):
                 m = SEC.search(re.sub(r'\s', '', line)) if 'リザルト' in line else SEC_SHORT.match(line)
                 mc = SEC_CODEX.match(line)
                 mb = SEC_BARE.match(line) if li < 12 else None
-                if (m and len(line) < 30 and li < 12) or mc or mb:
-                    m = mc or m or mb
-                    gender, rnd = m.group(1) or '', (m.group(2) if m is not mb else 'リザルト')
+                me = en_heading(line) if li < 12 else None
+                if (m and len(line) < 30 and li < 12) or mc or mb or me:
+                    if me:
+                        gender, rnd = me
+                    else:
+                        m = mc or m or mb
+                        gender, rnd = m.group(1) or '', (m.group(2) if m is not mb else 'リザルト')
                     if rnd == 'スーパーファイナル決勝':
                         rnd = 'スーパーファイナル'
                     # 見出しの文言まで同じときだけ前の表の続き（'男子成年の部決勝リザルト' の後の '男子決勝リザルト' は別の表。2013 宮様）
@@ -171,7 +206,8 @@ def parse_pdf(path, force=False):
                         if pno not in cur['pages']:
                             cur['pages'].append(pno)
                     else:
-                        cur = dict(gender=gender, round=rnd, code=None, heading=line, pages=[pno], athletes=[], mixed=(gender == '男女'))
+                        cur = dict(gender=gender, round=rnd, code=None, heading=line, pages=[pno], athletes=[], mixed=(gender == '男女'),
+                                   en_heading=bool(me))
                         sections.append(cur)
                     continue
                 if meta['title'] is None and li < 6 and ('大会' in line or '競技会' in line):
@@ -213,12 +249,25 @@ def parse_pdf(path, force=False):
                             a['from_q'] = True
                         if cur.get('fis_header') and re.fullmatch(r'\d{7}', a['sajno'] or ''):
                             a['fisno'], a['sajno'] = a['sajno'], None
+                            # 英語版の氏名と国（'HARADaichi JPN'）。以前は 'HARADaichi JPN' が氏名になっていた。
+                            # 末尾が国（3 文字の大文字）の行だけ（'Rk' の表頭でも和名・県名の年がある。2012 宮様）
+                            parts = ' '.join(x for x in (a['name'], a['pref'], a['club']) if x).split()
+                            if parts and re.fullmatch(r'[A-Z]{3}', parts[-1]):
+                                a['name'], a['pref'] = split_en_name(parts)
+                                a['club'] = ''
+                                a['en'] = True
                         if cur.get('mixed') and cur['athletes'] and a.get('rank') == 1 and any(x.get('rank') for x in cur['athletes']):
                             # 男女合同の表: 順位が 1 に戻ったら次の性別（女子→男子）
                             cur = dict(gender=None, round=cur['round'], code=None, heading=cur['heading'], pages=[pno], athletes=[],
                                        mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1)
                             sections.append(cur)
                         cur['athletes'].append(a)
+                        continue
+                # 英語版の 2 行目: SAJ 番号 生年 2 本目の技…（'5000947 1997 bL 0.720 8.6 9.0'、2015 全日本）。順位表との照合に SAJ 番号を使う
+                if cur.get('fis_header') and cur['athletes'] and cur['athletes'][-1].get('fisno') and 'yb' not in cur['athletes'][-1]:
+                    m2 = re.match(r'^(\d{7})\s+((?:19|20)\d\d)\b', line)
+                    if m2:
+                        cur['athletes'][-1]['sajno'], cur['athletes'][-1]['yb'] = m2.group(1), int(m2.group(2))
                         continue
                 # 2 行目: FISNO クラブ … （score 段階ではクラブと FISNO だけ使う）
                 if cur['athletes'] and 'fisno' not in cur['athletes'][-1]:
@@ -241,6 +290,10 @@ def parse_pdf(path, force=False):
     sections = [s for s in sections if s['athletes'] or s.get('old')]
     # 英語版（FIS コード）と日本語版（SAJ 番号）が同じ PDF に重複しているとき: 日本語版を残し、FIS コードだけ写す
     ja = [s for s in sections if not s.get('fis_header')]
+    # 英語版の見出しの表は、同じ性別の日本語版の表がある PDF（2014-15 の FIS 併催大会。英語版は FIS レースの選手だけで BIB も
+    # 違うことがある）では読まない。英語版の見出しを読む前と同じ扱い。英語版だけの PDF（2015 全日本）は英語版を使う
+    ja_genders = {s['gender'] for s in ja}
+    sections = [s for s in sections if not (s.get('en_heading') and s['gender'] in ja_genders)]
     for s in [s for s in sections if s.get('fis_header')]:
         twin = next((t for t in ja if (t['gender'], t['round']) == (s['gender'], s['round'])
                      and {a['bib'] for a in t['athletes']} == {a['bib'] for a in s['athletes']}), None)

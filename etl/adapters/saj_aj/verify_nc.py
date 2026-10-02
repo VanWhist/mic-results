@@ -22,6 +22,7 @@ NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 ROUNDCODE = re.compile(r'^(SF|F|Q)-[a-z/]+$')
 STATUS = {'DNF', 'DNS', 'DSQ', 'DQ'}
 GENDER_CODE = {'男子': 'm', '女子': 'w'}
+EN_GENDER = {"Men's": '男子', "Ladies'": '女子', "Women's": '女子'}  # 英語版の見出し（2024 五箇山 AC）
 CODES_BY_ROUNDS = {1: ['F'], 2: ['Q', 'F'], 3: ['Q', 'F', 'SF']}
 ROUND_ORDER = {'Q': 0, 'F': 1, 'SF': 2}
 LAYERS = ['完全性', '印字照合', '再計算', '順位', 'セル', 'ゴールデン', '件数ゲート']
@@ -97,6 +98,8 @@ def column_map(hrow, above):
             cols.append((w['x0'], 'Time', None))
         elif t == 'Point':
             cols.append((w['x0'], 'Time Points', None))
+        elif t in ('Score', 'Tie'):  # 英語版は見出し行に並ぶ（日本語版は上の行の 'スコア'・'同点'）
+            cols.append((w['x0'], t, None))
     for w in above:
         if w['text'] == 'スコア':
             cols.append((w['x0'], 'Score', None))
@@ -116,7 +119,7 @@ def page_pace(words):
     """{性別 or None: ペースタイム}。'23.78 秒' の行か、'ペースタイム' ラベルの直下の数値。
     男女が同じページに並ぶ年は '男子ペースタイム' のように性別つきで印字される。"""
     out = {}
-    sec = next((w for w in words if w['text'] == '秒'), None)
+    sec = next((w for w in words if w['text'] in ('秒', '(sec)')), None)  # 英語版は '21.35 (sec)'
     if sec:
         row = [w for w in words if abs(w['top'] - sec['top']) < 2 and NUM.match(w['text'])]
         if row:
@@ -221,7 +224,8 @@ def read_pdf(path, glyph_font=None):
                 y = next((re.match(r'(\d{4})年', w['text']) for w in words if re.match(r'\d{4}年', w['text'])), None)
                 year = y.group(1) if y else None
             code = next((w['text'] for w in words if w['top'] < 90 and ROUNDCODE.match(w['text'])), None)
-            head_w = next((w for w in words if w['text'].endswith('リザルト') and w['top'] < 400), None)  # 題名が長い年は見出しが下がる
+            # 題名が長い年は見出しが下がる。英語版は "Men's Moguls Qualification Result"（2024 五箇山 AC）
+            head_w = next((w for w in words if (w['text'].endswith('リザルト') or w['text'] == 'Result') and w['top'] < 400), None)
             heading = None
             if head_w:
                 heading = ' '.join(w['text'] for w in sorted(words, key=lambda w: w['x0'])
@@ -231,7 +235,8 @@ def read_pdf(path, glyph_font=None):
             category = next((m.group(0) for w in words if w['top'] < first_hdr
                              for m in [re.search(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部', w['text'])] if m), None)
             marks = sorted([w for w in words if re.fullmatch(r'【(男子|女子)】', w['text'])], key=lambda w: w['top'])
-            heads = sorted([w for w in words if w['text'].startswith('順位')], key=lambda w: w['top'])  # '順位BIB' と癒着する年がある
+            # '順位BIB' と癒着する年がある。英語版の見出し行は 'Rk BIB …'
+            heads = sorted([w for w in words if w['text'].startswith('順位') or w['text'] == 'Rk'], key=lambda w: w['top'])
             codex = sorted(w['top'] for w in words if w['text'] == 'CODEX')
             info = dict(page=pno, tables=0, stray=[])
             # 男女合同ページで 2 つ目の表に見出し行が無い年（2022 HSC）: CODEX 行の後に選手行が続いていれば、
@@ -252,6 +257,8 @@ def read_pdf(path, glyph_font=None):
                     gender = mark[-1]['text'].strip('【】')
                 else:
                     gender = next((g for g in GENDER_CODE if heading and g in heading), None)  # '中学生の部 男子決勝リザルト' も可
+                    if gender is None and heading:
+                        gender = next((g for k_en, g in EN_GENDER.items() if heading.startswith(k_en)), None)
                 if gender is None and heading and heading.startswith('男女'):
                     # 男女合同ページ: 左上の記号（F-w/m = 女子→男子）の順に表が並ぶ
                     order = mixed_order(code)

@@ -230,6 +230,14 @@ GENDER_MARK = re.compile(r'^【(男子|女子)】$')
 SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
 
 
+def _en_heading(line):
+    try:
+        from . import parse_sajmo_old
+    except ImportError:  # スクリプトとして直接使うとき
+        import parse_sajmo_old
+    return parse_sajmo_old.en_heading(line)
+
+
 def mixed_order(code):
     """'F-w/m' → ['女子', '男子']。記号が無ければ女子→男子（SAJ 様式の男女合同ページの既定）。"""
     m = re.match(r'^(?:SF|F|Q)-([a-z/]+)$', code or '')
@@ -311,7 +319,7 @@ def parse_pdf(path, glyph_font=None):
             # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。
             # 以前はページ頭の大会名を、前ページ最後の選手の 2 行目（クラブ名）として取り込み、次ページ先頭に続く本物の
             # 2 行目（減点・2 本目のエア）を捨てていた（2024 白馬乗鞍埼玉 A級 予選 34 位など）
-            hdr_idx = next((i for i, l in enumerate(lines) if l.startswith('順位') and 'Total' in l), None)
+            hdr_idx = next((i for i, l in enumerate(lines) if l.startswith(('順位', 'Rk ')) and 'Total' in l), None)
             # 年齢区分（'種目モーグル 中学生の部'）。見出し語の前（ページ上部）に印字される年がある（2024 全日本ジュニア）
             category = page_category(lines[:hdr_idx if hdr_idx is not None else 10])
             for li, line in enumerate(lines):
@@ -321,8 +329,9 @@ def parse_pdf(path, glyph_font=None):
                     continue
                 m = SEC.search(line)
                 mb = SEC_BARE.match(line)
-                if (m and 'リザルト' in line and len(line) < 30) or mb:
-                    gender, rnd = (m.group(1) or '', m.group(2)) if m else (mb.group(1), 'リザルト')
+                me = _en_heading(line)  # 英語版（"Men's Moguls Qualification Result"、2024 五箇山 AC）
+                if (m and 'リザルト' in line and len(line) < 30) or mb or me:
+                    gender, rnd = (m.group(1) or '', m.group(2)) if m else ((mb.group(1), 'リザルト') if mb else me)
                     # 同じラウンドが次のページに続くときは同じセクションに足す
                     # （以前はページごとに '男子予選' '男子予選(2)' と分かれていた）。
                     if cur is not None and (cur['gender'], cur['round'], cur['code'], cur.get('category')) == (gender, rnd, code, category):
@@ -362,7 +371,9 @@ def parse_pdf(path, glyph_font=None):
                     meta['judges'][mm.group(1)] = (mm.group(2), mm.group(3).strip())
                 if cur is None or (hdr_idx is not None and li < hdr_idx):
                     continue
-                if line.startswith('順位') and 'Total' in line:
+                if line.startswith(('順位', 'Rk ')) and 'Total' in line:
+                    # 英語版（'Rk BIB SAJNO Name Nation YB …'）: 1 行目の 3 列目は FIS コード、2 行目は SAJ 番号・生年で始まる
+                    cur['en'] = line.startswith('Rk ')
                     if cur['gender'] == '男女' or cur.get('mixed'):
                         # 「男女 決勝リザルト」は1セクションに女子表・男子表が並ぶ（順位ヘッダ行が表ごとに出る）。
                         # 表の順序は左上の記号（F-w/m = 女子→男子）で決め、表ごとにセクションを分ける。
@@ -401,6 +412,8 @@ def parse_pdf(path, glyph_font=None):
                     a = parse_line1(tokens, nturn)
                 if a:
                     a['page'] = pno
+                    if cur.get('en'):
+                        a['en'] = True
                     cur['athletes'].append(a)
                     continue
                 # 2行目候補: 直前に選手がいて、その選手にまだ line2 が無い
@@ -409,9 +422,20 @@ def parse_pdf(path, glyph_font=None):
                     # ヘッダ行等を除外
                     if line.startswith('競技者') or 'CODEX' in line:
                         continue
+                    yb = None
+                    if last.get('en') and len(tokens) >= 2 and re.fullmatch(r'\d{7}', tokens[0]) and re.fullmatch(r'(?:19|20)\d\d', tokens[1]):
+                        yb, tokens = int(tokens[1]), [tokens[0]] + tokens[2:]  # 英語版の 2 行目の生年
                     l2 = parse_line2(tokens, nturn)
                     if l2 and (l2.get('ded') or l2.get('fisno') or l2.get('club')):
                         last.update(l2)
+                        if yb is not None:
+                            last['yb'] = yb
+    # 英語版は 1 行目の 3 列目が FIS コード、2 行目の先頭が SAJ 番号（日本語版と逆）。読んだ位置のまま持っているので入れ替える。
+    # 印字の順の照合（adapter の printed_sequence_a）は en の印を見て元の順に並べる
+    for sec in sections:
+        for a in sec['athletes']:
+            if a.get('en'):
+                a['sajno'], a['fisno'] = a.get('fisno'), a.get('sajno')
     # 同じ表が2回印字されている PDF（結合ミス）: 性別・ラウンド・BIB の集合が同じセクションは後の方を捨てる
     seen, kept = set(), []
     for sec in sections:
