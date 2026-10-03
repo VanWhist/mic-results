@@ -35,6 +35,14 @@ EN_GENDER = {"Men's": '男子', "Ladies'": '女子', "Women's": '女子'}
 EN_ROUND = {'Qualification': '予選', 'Final': '決勝', 'SuperFinal': 'スーパーファイナル'}
 
 
+# 全員の総合順位のページで、下のブロックの始まりを示す印字（'[Results from Final1]'・'[Results from Qualification]'）
+BLOCK_MARK = re.compile(r'\[Results from (Final ?1|Qualification)\]')
+
+
+def block_code(word):
+    return 'Q' if word == 'Qualification' else 'F1'
+
+
 def en_heading(line):
     """英語版の見出し → (性別, ラウンドの見出し語)。英語版でなければ None"""
     m = SEC_EN.match(line)
@@ -243,9 +251,11 @@ def parse_pdf(path, force=False):
                     continue
                 if not cur.get('old'):
                     continue
-                if line.strip() == '[Results from Qualification]' and cur['round'] == 'リザルト':
-                    # 全員の総合順位の表（'男子リザルト'、2013 北海道選手権）で、ここから下は予選の得点で並ぶ選手
-                    cur['from_q'] = True
+                mb = BLOCK_MARK.fullmatch(line.strip())
+                if mb:
+                    # 全員の総合順位の表（'男子リザルト'、2013 北海道選手権）で、ここから下は予選の得点で並ぶ選手。
+                    # スーパーファイナルのページ（2014 ふくしま #1）は '[Results from Final1]' の後が決勝 1 の得点で並ぶ選手
+                    cur['from_block'] = block_code(mb.group(1))
                     continue
                 toks = [undouble(t) for t in line.split()]
                 # SAJ 番号と氏名の間の空白が無い行（'43 91 5001252松本 ベンジャミン …'、2013 埼玉県松之山 B級）
@@ -266,8 +276,8 @@ def parse_pdf(path, force=False):
                     a = parse_row_old(toks, cur.get('nturn', 3))
                     if a:
                         a['page'] = pno
-                        if cur.get('from_q'):
-                            a['from_q'] = True
+                        if cur.get('from_block'):
+                            a['from_block'] = cur['from_block']
                         if cur.get('fis_header') and re.fullmatch(r'\d{7}', a['sajno'] or ''):
                             a['fisno'], a['sajno'] = a['sajno'], None
                             # 英語版の氏名と国（'HARADaichi JPN'）。以前は 'HARADaichi JPN' が氏名になっていた。

@@ -213,8 +213,11 @@ def layer3_rank(round_id, runs, rules):
     if q_layout:
         groups = [[it for it in items if it['direct']], [it for it in items if not it['direct']]]
     elif any(it.get('rank_group') for it in items):
-        # 総合順位ページ: 決勝を滑った上位ブロックと、予選の得点で並ぶ下位ブロックを別々に検算する
-        groups = [[it for it in items if it.get('rank_group') == 1], [it for it in items if it.get('rank_group') != 1]]
+        # 総合順位ページ: 決勝を滑った上位ブロックと、予選の得点で並ぶ下位ブロックを別々に検算する。
+        # スーパーファイナルのページは 3 ブロック（スーパーファイナル・決勝 1 の得点・予選の得点）
+        # 上位ブロックが無いラウンド（海外 FIS の「上位 N 名を除く」予選）も、下のブロックは印字の最小順位から数える
+        keys = sorted({1} | {it.get('rank_group') or 2 for it in items})
+        groups = [[it for it in items if (it.get('rank_group') or 2) == k] for k in keys]
     else:
         groups = [items]
     # SAJ 国内大会: 同点欄（T1/T2）が印字されたラウンドだけタイブレークで順位を分け、それ以外は同点＝同順位。
@@ -225,7 +228,7 @@ def layer3_rank(round_id, runs, rules):
     for gi, grp in enumerate(groups):
         if not grp:
             continue
-        if gi == 1 and any(it.get('rank_group') for it in items):
+        if gi >= 1 and any(it.get('rank_group') for it in items):
             offset = min(it['rank'] for it in grp if it['rank']) - 1  # 下位ブロックは印字の最小順位から（決勝の DNF も上位ブロックに数える）
         ranked = _rank_items(grp, rules_eff)
         # 同点の扱い（2026-10-03、城さんの判断）: 規則では同順位になる同点を、同点欄の印字なしで分けて印字している大会がある。

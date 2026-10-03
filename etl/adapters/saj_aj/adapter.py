@@ -174,7 +174,7 @@ def overall_boundary(s):
     """全員の総合順位の表で、予選の得点で並ぶ下のブロックの最初の順位。無ければ None。
     印字の '[Results from Qualification]' の後の行（2013 北海道選手権。決勝 DNF の 16 位の後なので得点の上がりでは分からない）、
     無ければ得点が前の行より上がる最初の行"""
-    marked = [a['rank'] for a in s['athletes'] if a.get('from_q') and a.get('rank')]
+    marked = [a['rank'] for a in s['athletes'] if a.get('from_block') == 'Q' and a.get('rank')]
     if marked:
         return min(marked)
     rows = [a for a in s['athletes'] if a.get('status') == 'OK' and a.get('score') is not None and a.get('rank')]
@@ -195,6 +195,19 @@ def mark_overall_groups(sections):
         if s.get('saj_code'):
             by_g[s['gender']].append(s)
     for g, secs in by_g.items():
+        if len(secs) == 1 and secs[0]['saj_code'] == 'SF' and any(a.get('from_block') == 'F1' for a in secs[0]['athletes']):
+            # スーパーファイナルのページしか無く、'[Results from Final1]'・'[Results from Qualification]' の区切りで
+            # 全員の総合順位が印字されている大会（2014 ふくしま #1・2018 北海道選手権・2021 札幌 AC）: 3 つのブロックに分ける
+            s = secs[0]
+            group = {None: 1, 'F1': 2, 'Q': 3}
+            for a in s['athletes']:
+                a['rank_group'] = group[a.get('from_block')]
+            firsts = [min((a['rank'] for a in s['athletes'] if a.get('from_block') == b and a.get('rank')), default=None)
+                      for b in ('F1', 'Q')]
+            s['overall_groups'] = firsts[0]
+            notes.append(f"{g} {s['round']}: スーパーファイナルのページに全員の総合順位が印字されている（{firsts[0] - 1} 位までが"
+                         f"スーパーファイナル、{firsts[0]} 位から決勝 1 の得点、{firsts[1]} 位から予選の得点）。予選・決勝 1 の表は無い")
+            continue
         if len(secs) != 1 or secs[0]['saj_code'] != 'F':
             continue
         s = secs[0]
@@ -515,6 +528,10 @@ def load_event(ev, imported_at, log=print):
                     # 総合の部は区分ごとの決勝と同じ滑走を並べ直したもの。選手の成績（本数・自己ベスト）には数えない
                     for rec in records:
                         rec['counting'] = False
+            # 総合順位ページなどの注記（得点の段階のラウンドにも出す。以前は旧様式・1 行様式のラウンドで抜けていた）
+            for note in overall_notes:
+                if note.startswith(f"{s['gender']} {s['round']}:"):
+                    findings.append(Finding('warning', round_id, 'layer0', note))
             if rules is None and cls['tier'] != 'detail':
                 rules = {}
             if cls['tier'] != 'detail':
@@ -546,9 +563,6 @@ def load_event(ev, imported_at, log=print):
                     findings.append(Finding('error', round_id, 'layer1', f"ペースタイム A/B 不一致 {pace} / {b_round['pace']}"))
             if pace_note:
                 findings.append(Finding('warning', round_id, 'layer2', f"ペースタイムは規則ファイルの {pace} を使用。根拠: {pace_note}"))
-            for note in overall_notes:
-                if note.startswith(f"{s['gender']} {s['round']}:"):
-                    findings.append(Finding('warning', round_id, 'layer0', note))
             if any(r.get('_no_deductions') for r in records):
                 findings.append(Finding('warning', round_id, 'layer2', '減点の印字が無い行がある（減点 0 として扱う）'))
             ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': ab,

@@ -25102,7 +25102,7 @@
 }
 ],
 "mic":null,
-"n_results":23,
+"n_results":24,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -25327,7 +25327,7 @@
 }
 ],
 "mic":null,
-"n_results":55,
+"n_results":56,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -25537,12 +25537,13 @@
 }
 ],
 "mic":null,
-"n_results":20,
+"n_results":21,
 "seasons":[
 "2018-19",
 "2020-21"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -25852,7 +25853,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":32,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -26617,7 +26618,7 @@
 }
 ],
 "mic":null,
-"n_results":191,
+"n_results":193,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -27465,7 +27466,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":70,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -27509,7 +27510,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":27,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -27518,6 +27519,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJJR",
@@ -27635,7 +27637,7 @@
 }
 ],
 "mic":null,
-"n_results":70,
+"n_results":71,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -28465,7 +28467,7 @@
 }
 ],
 "mic":null,
-"n_results":137,
+"n_results":138,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -28479,6 +28481,7 @@
 "2023-24"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -29379,7 +29382,7 @@
 }
 ],
 "mic":null,
-"n_results":211,
+"n_results":214,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29446,7 +29449,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":53,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -29642,7 +29645,7 @@
 }
 ],
 "mic":null,
-"n_results":170,
+"n_results":171,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -30206,7 +30209,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":101,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30546,7 +30549,7 @@
 }
 ],
 "mic":null,
-"n_results":124,
+"n_results":127,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -30622,7 +30625,7 @@
 }
 ],
 "mic":null,
-"n_results":90,
+"n_results":93,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -30636,6 +30639,7 @@
 "2022-23"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -30682,7 +30686,7 @@
 }
 ],
 "mic":null,
-"n_results":161,
+"n_results":163,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -32115,7 +32119,7 @@
 }
 ],
 "mic":null,
-"n_results":151,
+"n_results":152,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -32628,7 +32632,7 @@
 }
 ],
 "mic":null,
-"n_results":231,
+"n_results":232,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -33825,7 +33829,7 @@
 }
 ],
 "mic":null,
-"n_results":124,
+"n_results":125,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -34589,7 +34593,7 @@
 }
 ],
 "mic":null,
-"n_results":29,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34704,7 +34708,7 @@
 }
 ],
 "mic":null,
-"n_results":16,
+"n_results":17,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -34813,7 +34817,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -34895,7 +34899,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":75,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -35818,7 +35822,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -35828,6 +35832,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_B"
@@ -35870,7 +35875,7 @@
 }
 ],
 "mic":null,
-"n_results":127,
+"n_results":128,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -35931,7 +35936,7 @@
 }
 ],
 "mic":null,
-"n_results":68,
+"n_results":69,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36889,7 +36894,7 @@
 }
 ],
 "mic":null,
-"n_results":51,
+"n_results":52,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37351,7 +37356,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -37419,7 +37424,7 @@
 }
 ],
 "mic":null,
-"n_results":92,
+"n_results":93,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37625,7 +37630,7 @@
 }
 ],
 "mic":null,
-"n_results":131,
+"n_results":133,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38103,13 +38108,13 @@
 "affiliation_history":[
 {
 "affiliation":"福島",
-"club":"ﾁｰﾑﾘｽﾃﾙ",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
 "from":"2012-13",
 "to":"2013-14"
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38619,13 +38624,13 @@
 "affiliation_history":[
 {
 "affiliation":"福島",
-"club":"ﾁｰﾑﾘｽﾃﾙ",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
 "from":"2012-13",
 "to":"2013-14"
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38703,7 +38708,7 @@
 }
 ],
 "mic":null,
-"n_results":38,
+"n_results":40,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -38716,6 +38721,7 @@
 "2022-23"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_B"
@@ -39114,7 +39120,7 @@
 }
 ],
 "mic":null,
-"n_results":68,
+"n_results":69,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -39126,6 +39132,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -39392,7 +39399,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":31,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -39864,7 +39871,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":20,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41373,7 +41380,7 @@
 }
 ],
 "mic":null,
-"n_results":105,
+"n_results":106,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41465,7 +41472,7 @@
 }
 ],
 "mic":null,
-"n_results":70,
+"n_results":72,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -41478,6 +41485,7 @@
 "2020-21"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -42002,7 +42010,7 @@
 }
 ],
 "mic":null,
-"n_results":86,
+"n_results":87,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -42092,7 +42100,7 @@
 }
 ],
 "mic":null,
-"n_results":140,
+"n_results":141,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42295,7 +42303,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":47,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42715,6 +42723,44 @@
 "best":{
 "run_score":34.34,
 "run_id":"2015-16-saj_b-1958-0036-M-F1-saj-5000519"
+}
+},
+{
+"athlete_id":"saj-5001269",
+"fis_code":null,
+"saj_no":"5001269",
+"name":"小林 慶次",
+"aliases":[
+"小林慶次"
+],
+"noc":null,
+"yb":null,
+"affiliation":"福島",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
+"affiliation_history":[
+{
+"affiliation":"福島",
+"club":"ﾁｰﾑ ﾘｽﾃﾙ",
+"from":"2011-12",
+"to":"2014-15"
+}
+],
+"mic":null,
+"n_results":5,
+"seasons":[
+"2011-12",
+"2012-13",
+"2013-14",
+"2014-15"
+],
+"series":[
+"FIS",
+"SAJ_A",
+"SAJ_B"
+],
+"best":{
+"run_score":39.29,
+"run_id":"2014-15-saj_b-1964-0003-M-Q-saj-5001269"
 }
 },
 {
@@ -43173,42 +43219,6 @@
 }
 },
 {
-"athlete_id":"saj-5001269",
-"fis_code":null,
-"saj_no":"5001269",
-"name":"小林慶次",
-"aliases":[
-"小林 慶次"
-],
-"noc":null,
-"yb":null,
-"affiliation":"福島",
-"club":"ﾁｰﾑ ﾘｽﾃﾙ",
-"affiliation_history":[
-{
-"affiliation":"福島",
-"club":"ﾁｰﾑﾘｽﾃﾙ",
-"from":"2011-12",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":4,
-"seasons":[
-"2011-12",
-"2012-13",
-"2014-15"
-],
-"series":[
-"SAJ_A",
-"SAJ_B"
-],
-"best":{
-"run_score":39.29,
-"run_id":"2014-15-saj_b-1964-0003-M-Q-saj-5001269"
-}
-},
-{
 "athlete_id":"saj-5001270",
 "fis_code":null,
 "saj_no":"5001270",
@@ -43262,7 +43272,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43313,7 +43323,7 @@
 }
 ],
 "mic":null,
-"n_results":97,
+"n_results":98,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -43622,7 +43632,7 @@
 }
 ],
 "mic":null,
-"n_results":132,
+"n_results":133,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -43878,7 +43888,7 @@
 }
 ],
 "mic":null,
-"n_results":78,
+"n_results":79,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -43891,6 +43901,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -44108,7 +44119,7 @@
 }
 ],
 "mic":null,
-"n_results":158,
+"n_results":159,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44691,7 +44702,7 @@
 }
 ],
 "mic":null,
-"n_results":95,
+"n_results":96,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45056,7 +45067,7 @@
 }
 ],
 "mic":null,
-"n_results":116,
+"n_results":118,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -45071,6 +45082,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -46538,7 +46550,7 @@
 }
 ],
 "mic":null,
-"n_results":169,
+"n_results":171,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46863,7 +46875,7 @@
 }
 ],
 "mic":null,
-"n_results":145,
+"n_results":147,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -46961,7 +46973,7 @@
 }
 ],
 "mic":null,
-"n_results":68,
+"n_results":69,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -47086,7 +47098,7 @@
 }
 ],
 "mic":null,
-"n_results":124,
+"n_results":125,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47140,7 +47152,7 @@
 }
 ],
 "mic":null,
-"n_results":137,
+"n_results":138,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -47461,7 +47473,7 @@
 }
 ],
 "mic":null,
-"n_results":35,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47721,7 +47733,7 @@
 }
 ],
 "mic":null,
-"n_results":215,
+"n_results":216,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48586,7 +48598,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":75,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -48801,7 +48813,7 @@
 }
 ],
 "mic":null,
-"n_results":121,
+"n_results":122,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -49610,7 +49622,7 @@
 }
 ],
 "mic":null,
-"n_results":93,
+"n_results":94,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -49696,7 +49708,7 @@
 }
 ],
 "mic":null,
-"n_results":131,
+"n_results":132,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -50433,7 +50445,7 @@
 }
 ],
 "mic":null,
-"n_results":152,
+"n_results":153,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -50826,7 +50838,7 @@
 }
 ],
 "mic":null,
-"n_results":145,
+"n_results":147,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -51041,7 +51053,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":42,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -51424,6 +51436,42 @@
 }
 },
 {
+"athlete_id":"saj-5000241",
+"fis_code":null,
+"saj_no":"5000241",
+"name":"杉山 裕",
+"aliases":[
+"杉山裕"
+],
+"noc":null,
+"yb":null,
+"affiliation":"東京",
+"club":"ﾁｰﾑｼﾞｮｯｸｽ",
+"affiliation_history":[
+{
+"affiliation":"東京",
+"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
+"from":"2012-13",
+"to":"2014-15"
+}
+],
+"mic":null,
+"n_results":9,
+"seasons":[
+"2012-13",
+"2013-14",
+"2014-15"
+],
+"series":[
+"FIS",
+"SAJ_B"
+],
+"best":{
+"run_score":46.34,
+"run_id":"2014-15-saj_b-1967-0010-M-Q-saj-5000241"
+}
+},
+{
 "athlete_id":"saj-5000813",
 "fis_code":null,
 "saj_no":"5000813",
@@ -51456,42 +51504,6 @@
 "best":{
 "run_score":21.77,
 "run_id":"2014-15-saj_b-1967-0010-W-Q-saj-5000813"
-}
-},
-{
-"athlete_id":"saj-5000241",
-"fis_code":null,
-"saj_no":"5000241",
-"name":"杉山裕",
-"aliases":[
-"杉山 裕"
-],
-"noc":null,
-"yb":null,
-"affiliation":"東京",
-"club":"ﾁｰﾑｼﾞｮｯｸｽ",
-"affiliation_history":[
-{
-"affiliation":"東京",
-"club":"ﾁｰﾑｼﾞｮｯｸｽ",
-"from":"2012-13",
-"to":"2014-15"
-}
-],
-"mic":null,
-"n_results":8,
-"seasons":[
-"2012-13",
-"2013-14",
-"2014-15"
-],
-"series":[
-"FIS",
-"SAJ_B"
-],
-"best":{
-"run_score":46.34,
-"run_id":"2014-15-saj_b-1967-0010-M-Q-saj-5000241"
 }
 },
 {
@@ -52265,7 +52277,7 @@
 }
 ],
 "mic":null,
-"n_results":156,
+"n_results":158,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -52282,6 +52294,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -53089,7 +53102,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":73,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -53103,6 +53116,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -53885,7 +53899,7 @@
 }
 ],
 "mic":null,
-"n_results":151,
+"n_results":153,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54070,7 +54084,7 @@
 }
 ],
 "mic":null,
-"n_results":114,
+"n_results":115,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -54316,7 +54330,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -54326,6 +54340,7 @@
 "2020-21"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -54519,7 +54534,7 @@
 }
 ],
 "mic":null,
-"n_results":220,
+"n_results":223,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -54538,6 +54553,7 @@
 "2025-26"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "OWG",
@@ -54981,7 +54997,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -55024,7 +55040,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -55195,7 +55211,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":22,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -55411,7 +55427,7 @@
 }
 ],
 "mic":null,
-"n_results":129,
+"n_results":131,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -55486,7 +55502,7 @@
 }
 ],
 "mic":null,
-"n_results":102,
+"n_results":104,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -55499,6 +55515,7 @@
 "2020-21"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -55564,7 +55581,7 @@
 }
 ],
 "mic":null,
-"n_results":152,
+"n_results":153,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -55727,7 +55744,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -55953,7 +55970,7 @@
 }
 ],
 "mic":null,
-"n_results":42,
+"n_results":43,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56078,7 +56095,7 @@
 }
 ],
 "mic":null,
-"n_results":121,
+"n_results":122,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -56180,7 +56197,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":53,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -57468,7 +57485,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":64,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -57479,6 +57496,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -57591,7 +57609,7 @@
 }
 ],
 "mic":null,
-"n_results":92,
+"n_results":93,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -57804,7 +57822,7 @@
 }
 ],
 "mic":null,
-"n_results":68,
+"n_results":69,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -57949,7 +57967,7 @@
 }
 ],
 "mic":null,
-"n_results":148,
+"n_results":149,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -58012,7 +58030,7 @@
 }
 ],
 "mic":null,
-"n_results":151,
+"n_results":152,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -58950,7 +58968,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2011-12",
 "2013-14"
@@ -59106,7 +59124,7 @@
 }
 ],
 "mic":null,
-"n_results":158,
+"n_results":159,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -60131,7 +60149,7 @@
 }
 ],
 "mic":null,
-"n_results":73,
+"n_results":75,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -60653,7 +60671,7 @@
 }
 ],
 "mic":null,
-"n_results":18,
+"n_results":19,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60710,7 +60728,7 @@
 }
 ],
 "mic":null,
-"n_results":67,
+"n_results":68,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60909,7 +60927,7 @@
 }
 ],
 "mic":null,
-"n_results":8,
+"n_results":9,
 "seasons":[
 "2017-18"
 ],
@@ -61927,7 +61945,7 @@
 }
 ],
 "mic":null,
-"n_results":35,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -62237,7 +62255,7 @@
 }
 ],
 "mic":null,
-"n_results":154,
+"n_results":155,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -63416,7 +63434,7 @@
 }
 ],
 "mic":null,
-"n_results":82,
+"n_results":83,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -63465,7 +63483,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -63623,7 +63641,7 @@
 }
 ],
 "mic":null,
-"n_results":59,
+"n_results":60,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -64644,7 +64662,7 @@
 }
 ],
 "mic":null,
-"n_results":67,
+"n_results":68,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -64653,6 +64671,7 @@
 "2020-21"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "SAJ_A",
@@ -65101,7 +65120,7 @@
 }
 ],
 "mic":null,
-"n_results":132,
+"n_results":133,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -65584,7 +65603,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":47,
 "seasons":[
 "2014-15",
 "2017-18",
@@ -65721,7 +65740,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67019,7 +67038,7 @@
 }
 ],
 "mic":null,
-"n_results":160,
+"n_results":162,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67034,6 +67053,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -67187,7 +67207,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":64,
 "seasons":[
 "2019-20",
 "2020-21",
@@ -67255,7 +67275,7 @@
 }
 ],
 "mic":null,
-"n_results":167,
+"n_results":168,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -67657,7 +67677,7 @@
 }
 ],
 "mic":null,
-"n_results":98,
+"n_results":99,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67672,6 +67692,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -68051,7 +68072,7 @@
 }
 ],
 "mic":null,
-"n_results":191,
+"n_results":192,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -68132,7 +68153,7 @@
 }
 ],
 "mic":null,
-"n_results":156,
+"n_results":157,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68831,7 +68852,7 @@
 }
 ],
 "mic":null,
-"n_results":122,
+"n_results":123,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69048,7 +69069,7 @@
 }
 ],
 "mic":null,
-"n_results":53,
+"n_results":54,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69212,7 +69233,7 @@
 }
 ],
 "mic":null,
-"n_results":208,
+"n_results":210,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69490,7 +69511,7 @@
 }
 ],
 "mic":null,
-"n_results":109,
+"n_results":110,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69775,7 +69796,7 @@
 }
 ],
 "mic":null,
-"n_results":37,
+"n_results":39,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -69785,6 +69806,7 @@
 "2020-21"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -69976,7 +69998,7 @@
 }
 ],
 "mic":null,
-"n_results":144,
+"n_results":147,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -69991,6 +70013,7 @@
 "2021-22"
 ],
 "series":[
+"AC",
 "ANC",
 "FIS",
 "NAC",
@@ -70387,7 +70410,7 @@
 }
 ],
 "mic":null,
-"n_results":92,
+"n_results":93,
 "seasons":[
 "2015-16",
 "2016-17",
@@ -71001,7 +71024,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":25,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -71445,7 +71468,7 @@
 }
 ],
 "mic":null,
-"n_results":100,
+"n_results":101,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -71461,6 +71484,7 @@
 "2023-24"
 ],
 "series":[
+"AC",
 "FIS",
 "SAJ_A",
 "SAJ_AJ",
@@ -71720,7 +71744,7 @@
 }
 ],
 "mic":null,
-"n_results":107,
+"n_results":108,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -72089,7 +72113,7 @@
 }
 ],
 "mic":null,
-"n_results":98,
+"n_results":99,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -72524,7 +72548,7 @@
 }
 ],
 "mic":null,
-"n_results":9,
+"n_results":10,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -72617,7 +72641,7 @@
 }
 ],
 "mic":null,
-"n_results":37,
+"n_results":38,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -73097,7 +73121,7 @@
 }
 ],
 "mic":null,
-"n_results":70,
+"n_results":71,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -73280,7 +73304,7 @@
 }
 ],
 "mic":null,
-"n_results":11,
+"n_results":12,
 "seasons":[
 "2012-13",
 "2013-14"
@@ -73664,7 +73688,7 @@
 }
 ],
 "mic":null,
-"n_results":99,
+"n_results":100,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -74061,7 +74085,7 @@
 }
 ],
 "mic":null,
-"n_results":25,
+"n_results":26,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -74300,7 +74324,7 @@
 }
 ],
 "mic":null,
-"n_results":84,
+"n_results":85,
 "seasons":[
 "2016-17",
 "2017-18",
@@ -74428,7 +74452,7 @@
 }
 ],
 "mic":null,
-"n_results":122,
+"n_results":123,
 "seasons":[
 "2014-15",
 "2015-16",
@@ -74558,7 +74582,7 @@
 }
 ],
 "mic":null,
-"n_results":38,
+"n_results":39,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -74600,7 +74624,7 @@
 }
 ],
 "mic":null,
-"n_results":86,
+"n_results":87,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -74686,7 +74710,7 @@
 }
 ],
 "mic":null,
-"n_results":56,
+"n_results":57,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -74732,7 +74756,7 @@
 }
 ],
 "mic":null,
-"n_results":58,
+"n_results":59,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -75191,7 +75215,7 @@
 }
 ],
 "mic":null,
-"n_results":104,
+"n_results":106,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -75384,7 +75408,7 @@
 }
 ],
 "mic":null,
-"n_results":178,
+"n_results":180,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -75501,7 +75525,7 @@
 }
 ],
 "mic":null,
-"n_results":28,
+"n_results":29,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -75538,7 +75562,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2017-18",
 "2018-19",
@@ -75755,7 +75779,7 @@
 }
 ],
 "mic":null,
-"n_results":32,
+"n_results":33,
 "seasons":[
 "2011-12",
 "2012-13",

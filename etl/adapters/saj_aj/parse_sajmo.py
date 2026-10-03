@@ -238,6 +238,17 @@ def _en_heading(line):
     return parse_sajmo_old.en_heading(line)
 
 
+def _block_mark(line):
+    """全員の総合順位のページの下のブロックの始まり（'[Results from Final1]' → 'F1'、'[Results from Qualification]' → 'Q'）。
+    2018 北海道選手権・2021 札幌 AC のスーパーファイナルのページ。違えば None"""
+    try:
+        from . import parse_sajmo_old
+    except ImportError:  # スクリプトとして直接使うとき
+        import parse_sajmo_old
+    m = parse_sajmo_old.BLOCK_MARK.fullmatch(line.strip())
+    return parse_sajmo_old.block_code(m.group(1)) if m else None
+
+
 def mixed_order(code):
     """'F-w/m' → ['女子', '男子']。記号が無ければ女子→男子（SAJ 様式の男女合同ページの既定）。"""
     m = re.match(r'^(?:SF|F|Q)-([a-z/]+)$', code or '')
@@ -403,6 +414,10 @@ def parse_pdf(path, glyph_font=None):
                     if '1st' in line and '2nd' in line:
                         cur['oneline'] = True
                     continue
+                blk = _block_mark(line)
+                if blk:
+                    cur['from_block'] = blk
+                    continue
                 tokens = split_glued(line.split())
                 if not tokens:
                     continue
@@ -417,6 +432,8 @@ def parse_pdf(path, glyph_font=None):
                         a = _old_row(tokens, nturn)
                     if a:
                         a['page'] = pno
+                        if cur.get('from_block'):
+                            a['from_block'] = cur['from_block']
                         cur['athletes'].append(a)
                     continue
                 ave_base = None
@@ -434,6 +451,8 @@ def parse_pdf(path, glyph_font=None):
                         a['ave_base'] = float(ave_base)
                     if cur.get('en'):
                         a['en'] = True
+                    if cur.get('from_block'):
+                        a['from_block'] = cur['from_block']
                     cur['athletes'].append(a)
                     continue
                 # 2行目候補: 直前に選手がいて、その選手にまだ line2 が無い
