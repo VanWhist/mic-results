@@ -185,16 +185,35 @@ def overall_boundary(s):
     return None
 
 
-def mark_overall_groups(sections):
+def mark_overall_groups(sections, overall_rounds=None, used=None):
     """決勝ページしか無く、全員の総合順位が印字されている大会（ばんけい A級 2026 など）:
     上位ブロック（決勝を滑った選手、決勝の得点順）と、それ以下（予選の得点で並ぶ）に分け、順位の検算をブロックごとに行う。
-    境目は overall_boundary（印字の '[Results from Qualification]'、無ければ得点が前の行より上がる最初の行）。戻り値: 注記の list。"""
+    境目は overall_boundary（印字の '[Results from Qualification]'、無ければ得点が前の行より上がる最初の行）。
+    overall_rounds（registry。{'M-F1': {'boundary': 4, 'basis': …}}）: 予選の表もあるが、決勝の上位だけが別の滑走の得点で
+    並ぶラウンド（2012 ばんけい 第 2 戦・2012 宮様 女子）。得点の上がる行が registry の境目と同じときだけ分け、used に入れる。
+    戻り値: 注記の list。"""
     notes = []
+    for s in sections:
+        key = f"{GENDER.get(s['gender'])}-{SAJ_CODE.get(s.get('saj_code'))}"
+        ent = (overall_rounds or {}).get(key)
+        if ent is None:
+            continue
+        k = overall_boundary(s)
+        if k != ent['boundary']:
+            continue  # 境目が違えば分けない（used に入らず、登録の見直しのエラーになる）
+        for a in s['athletes']:
+            a['rank_group'] = 1 if (a.get('rank') or 10 ** 6) < k else 2
+        s['overall_groups'] = k
+        used.add(key)
+        notes.append(f"{s['gender']} {s['round']}: 決勝の上位 {k - 1} 名は別の滑走（スーパーファイナルに当たる）の得点とみて、"
+                     f"{k} 位から下と分けて順位を検算する（registry の overall_rounds。根拠: {ent['basis']}）")
     by_g = collections.defaultdict(list)
     for s in sections:
         if s.get('saj_code'):
             by_g[s['gender']].append(s)
     for g, secs in by_g.items():
+        if any(s.get('overall_groups') for s in secs):
+            continue  # registry の overall_rounds で分けたもの
         if len(secs) == 1 and secs[0]['saj_code'] == 'SF' and any(a.get('from_block') == 'F1' for a in secs[0]['athletes']):
             # スーパーファイナルのページしか無く、'[Results from Final1]'・'[Results from Qualification]' の区切りで
             # 全員の総合順位が印字されている大会（2014 ふくしま #1・2018 北海道選手権・2021 札幌 AC）: 3 つのブロックに分ける
@@ -406,6 +425,9 @@ def load_event(ev, imported_at, log=print):
     # ラウンド・BIB・項目・印字の値が合う行だけを直す
     value_fixes = ev.get('value_fixes') or []
     value_fixes_used = set()
+    # 決勝の上位だけが別の滑走の得点で並ぶラウンド（registry の overall_rounds、根拠は basis）。キーは 'M-F1' など
+    overall_rounds = {e['round_id'][len(ev['event_id']) + 1:]: e for e in ev.get('overall_rounds') or []}
+    overall_rounds_used = set()
     ctxs = []
     for pdf in ev['pdfs']:
         content_note = None
@@ -434,7 +456,7 @@ def load_event(ev, imported_at, log=print):
         for grp in by_cat.values():
             overall_notes += drop_relisted(grp)
             problems += section_codes(grp)
-            overall_notes += collapse_overall(grp) + mark_overall_groups(grp)
+            overall_notes += collapse_overall(grp) + mark_overall_groups(grp, overall_rounds, overall_rounds_used)
             problems += check_round_counts(grp)
         sections = [sec for grp in by_cat.values() for sec in grp]
         if old_layout:
@@ -588,6 +610,10 @@ def load_event(ev, imported_at, log=print):
         if i not in rank_fixes_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],
                          'message': f"rank_fixes の {fx['round_id']} BIB {fx['bib']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
+    for key, e in overall_rounds.items():
+        if key not in overall_rounds_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"overall_rounds の {e['round_id']}（境目 {e['boundary']} 位）に当たるラウンドが無い（登録を見直す）"})
     for i, fx in enumerate(value_fixes):
         if i not in value_fixes_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],
