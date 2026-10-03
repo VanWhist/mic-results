@@ -114,6 +114,9 @@ def rank_order(records, rules):
                 k.append(-r['turns_total'])
             elif t == 'air_without_dd':
                 k.append(-r['air_without_dd'])
+            elif t == 'air_icr':
+                # 同点の検算用: DD を掛ける前のエア点（得点の段階では印字のエア合計で代える。verify._rank_items）
+                k.append(-r['air_icr'])
             elif t == 'seconds_asc':
                 k.append(r['seconds'])
             elif t == 'tie_value':

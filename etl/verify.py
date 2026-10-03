@@ -182,16 +182,19 @@ def _rank_items(items, rules):
     for it in items:
         b = it['best_run']
         tv = Decimal(str(b['tie'])) if b.get('tie') is not None and re.fullmatch(r'-?\d+(\.\d+)?', str(b['tie'])) else Decimal(0)
-        mt = re.fullmatch(r'T(\d+)', str(b.get('tie') or ''))
-        if mt:  # 同点欄の 'T1'・'T2'（同点の中の順）。小さい番号が上位（tie_value は大きい方が上位）
+        mt = re.fullmatch(r'[TAS](\d+)', str(b.get('tie') or ''))
+        if mt:  # 同点欄の 'T1'・'T2'（ターン）、'A1'・'A2'（エア）、'S1'・'S2'（スピード）。小さい番号が上位（tie_value は大きい方が上位）
             tv = -Decimal(mt.group(1))
         if '_recomputed' in b:
             rc = b['_recomputed']
             recs.append({'item': it, 'run_score': rc['run_score'], 'turns_total': rc['turns_total'],
-                         'air_without_dd': rc['air_without_dd'], 'seconds': Decimal(str(b['seconds'])), 'tie_value': tv})
+                         'air_without_dd': rc['air_without_dd'], 'air_icr': rc['air_without_dd'],
+                         'seconds': Decimal(str(b['seconds'])), 'tie_value': tv})
         else:  # score tier: only the printed score is available
+            # 同点を ICR の順で確かめるときのエアは、DD を掛ける前の点が無いので印字のエア合計で代える
             recs.append({'item': it, 'run_score': Decimal(str(b['run_score'])),
                          'turns_total': Decimal(str(b['turns_total'] or 0)), 'air_without_dd': Decimal(0),
+                         'air_icr': Decimal(str(b['air_total'] or 0)),
                          'seconds': Decimal(str(b['seconds'] or 0)), 'tie_value': tv})
     return scoring.rank_order(recs, rules)
 
@@ -224,9 +227,17 @@ def layer3_rank(round_id, runs, rules):
             continue
         if gi == 1 and any(it.get('rank_group') for it in items):
             offset = min(it['rank'] for it in grp if it['rank']) - 1  # 下位ブロックは印字の最小順位から（決勝の DNF も上位ブロックに数える）
-        for rec, rank in _rank_items(grp, rules_eff):
+        ranked = _rank_items(grp, rules_eff)
+        # 同点の扱い（2026-10-03、城さんの判断）: 規則では同順位になる同点を、同点欄の印字なしで分けて印字している大会がある。
+        # 印字が同順位なら同順位のまま、分けていれば ICR 4207.3 の順（ターン点 → 同点欄の印字 → エア → スピード）になっているかを確かめる
+        icr = {id(rec['item']): rank for rec, rank in
+               scoring.rank_order([rec for rec, _ in ranked], dict(rules_eff, tie_break=['turns_total', 'tie_value', 'air_icr', 'seconds_asc']))}
+        tied = collections.Counter(rank for _, rank in ranked)
+        split_ok = {rank for rank, n in tied.items() if n > 1
+                    and all(rec['item']['rank'] == icr[id(rec['item'])] + offset for rec, r in ranked if r == rank)}
+        for rec, rank in ranked:
             it = rec['item']
-            if it['rank'] != rank + offset:
+            if it['rank'] != rank + offset and rank not in split_ok:
                 f.append(Finding('error', round_id, 'layer3', f"{it['name']} 順位 印字 {it['rank']} / 再構成 {rank + offset}"))
         offset += len(grp)
     return f

@@ -132,7 +132,8 @@ def parse_row_old(tokens, nturn):
 
 def _finish_row(rank, st, bib, sajno, rest, nturn):
     tie = None
-    if rest and re.fullmatch(r'[A-Z]\d+', rest[-1]):
+    # 同点欄: 'T1'・'A1'・'S1' など。2013 ふくしま #1 は 'ﾀｰﾝ'（ターン点で分けた）、2012 白馬さのさか 女子は '##'
+    if rest and re.fullmatch(r'[A-Z]\d+|ﾀｰﾝ|##', rest[-1]):
         tie = rest[-1]; rest = rest[:-1]
     # 名前・所属・クラブ: 最初の数値の並び（ベース点）の手前まで
     k = 0
