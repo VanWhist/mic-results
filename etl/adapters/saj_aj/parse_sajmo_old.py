@@ -26,7 +26,7 @@ SEC_SHORT = re.compile(r'^(女子|男子)(?:中学|高校|小学)?(予選|決勝
 SEC_CODEX = re.compile(r'^(女子|男子)(予選|決勝)\s+Codex\s+\d+\b')
 # ラウンドの語が無い見出し（'男子リザルト'。2013 札幌・2013 北海道選手権・2015 松之山）。round は 'リザルト' とし、
 # 1 本勝負か全員の総合順位かは adapter の section_codes が行の中身で決める
-SEC_BARE = re.compile(r'^(女子|男子)リザルト$')
+SEC_BARE = re.compile(r'^(女子|男子)\s*リザルト(?:\s+(?:成年|少年))?$')  # '男子 リザルト 成年'（2014 宮様。成年・少年は大会ごとに別の codex）
 # 「成績表」の見出し（'モーグル男子予選成績表'、2012・2013 東海北陸 愛知県大会）
 SEC_SEISEKI = re.compile(r'^モーグル(女子|男子)(予選決勝|予選|決勝)成績表$')  # 予選決勝＝1 本で順位が決まる（2013）
 # 英語版の見出し（"Men's Moguls Super Final Result"、2015 全日本・2024 五箇山 AC）。性別・ラウンドを日本語の見出し語に読み替える
@@ -63,6 +63,26 @@ def split_en_name(tokens):
     return ' '.join(out), noc
 
 
+def untangle_noc(word):
+    """国（3 文字の大文字）が氏名に 1 字ずつ重なった語（'MARTINWilliAamUS' = 'MARTIN William' と 'AUS'、
+    'JUNJin-WonKOR'、2013 長野県選手権・2013 白馬 47）→ ('MARTIN William', 'AUS')。
+    語の末尾が大文字で、最後の 3 つの大文字を除くと「姓（大文字）＋名（大文字＋小文字）」になるときだけ。違えば None"""
+    ups = [i for i, ch in enumerate(word) if ch.isupper()]
+    if len(ups) < 3 or not word[-1].isupper():
+        return None
+    drop = set(ups[-3:])
+    m = re.fullmatch(r"([A-Z][A-Z'-]*[A-Z])([A-Z][a-z][A-Za-z'-]*)", ''.join(ch for i, ch in enumerate(word) if i not in drop))
+    if not m:
+        return None
+    return f'{m.group(1)} {m.group(2)}', ''.join(word[i] for i in sorted(drop))
+
+
+def split_ascii_pref(word):
+    """ローマ字の氏名の語に所属が空白なしで続く語（'MAR海外'）→ ('MAR', '海外')。所属が一覧に無ければ (word,)"""
+    m = re.fullmatch(r"([A-Za-z][A-Za-z'-]*)([^\x00-\x7f]+)", word)
+    return m.groups() if m and m.group(2) in PREFS else (word,)
+
+
 PREFS = {'北海道', '青森', '岩手', '宮城', '秋田', '山形', '福島', '茨城', '栃木', '群馬', '埼玉', '千葉', '東京', '神奈川', '新潟', '富山', '石川', '福井',
          '山梨', '長野', '岐阜', '静岡', '愛知', '三重', '滋賀', '京都', '大阪', '兵庫', '奈良', '和歌山', '鳥取', '島根', '岡山', '広島', '山口',
          '徳島', '香川', '愛媛', '高知', '福岡', '佐賀', '長崎', '熊本', '大分', '宮崎', '鹿児島', '沖縄', '学連', '韓国', '中国', '台湾', '海外'}
@@ -85,6 +105,8 @@ def undouble(t):
 GLUED_SAJNO = re.compile(r'0?(\d{7})([^\x00-\x7f].*)')
 # BIB・組・SAJ 番号・氏名が空白なしで続く語（'5男子5000470鈴木'、2012 東海北陸 愛知 男子決勝。表頭 '順位BIB 組 SAJ競技者No'）
 GLUED_BIB_GROUP = re.compile(r'(\d{1,3})(?:男子|女子)0?(\d{7})([^\x00-\x7f].*)')
+# BIB と SAJ 番号の間の空白が無い語（'1 915000030 吉川 空 …' = BIB 91・SAJ 5000030、2012 東京都・2013 東京都 B級の男子決勝）
+GLUED_BIB_SAJNO = re.compile(r'([1-9]\d{0,2})(5\d{6})')
 
 
 def undouble_heading(line):
@@ -149,6 +171,9 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
         k += 1
     head = [t for t in rest[:k] if not is_num(t) and t not in STATUS]  # 完走していない行の '0.00 DNF' は名前・クラブに含めない
     nums_tail = [x for x in rest[k:] if is_num(x)]
+    # ローマ字の氏名に所属が空白なしで続く語（'William MAR海外 ｵｰｽﾄﾗﾘｱ'、2012 東京都）は氏名と所属に分ける（氏名は印字のまま）。
+    # 氏名の位置（先頭 2 語）だけ。クラブ名（'AP山形'）は分けない
+    head = [p for t in head[:2] for p in split_ascii_pref(t)] + head[2:]
     # 所属は 2 語目以降から探す（姓が県名と同じ選手がいる: '山口 卓也 長野県'）。'長野県' '大阪府' のような表記も県名とみなす
     pi = next((j for j in range(1, len(head)) if head[j] in PREFS or re.sub(r'[都府県]$', '', head[j]) in PREFS), None)
     if pi is None:
@@ -262,6 +287,8 @@ def parse_pdf(path, force=False):
                 toks = [p for t in toks for p in (GLUED_SAJNO.fullmatch(t).groups() if GLUED_SAJNO.fullmatch(t) else (t,))]
                 if len(toks) > 1 and GLUED_BIB_GROUP.fullmatch(toks[1]):
                     toks = toks[:1] + list(GLUED_BIB_GROUP.fullmatch(toks[1]).groups()) + toks[2:]
+                if len(toks) > 2 and toks[0].isdigit() and GLUED_BIB_SAJNO.fullmatch(toks[1]):
+                    toks = toks[:1] + list(GLUED_BIB_SAJNO.fullmatch(toks[1]).groups()) + toks[2:]
                 if not toks:
                     continue
                 if '#N/A' in toks:
@@ -362,4 +389,19 @@ def parse_pdf(path, force=False):
             else:
                 k = s.get('mixed_k', 0)
                 s['gender'] = order[k] if k < len(order) else '?'
+    # 和文の 1 行の表で、外国籍選手の SAJ 番号の欄に FIS コード（2 で始まる 7 桁）が印字され、氏名に国が重なる行
+    # （'34 110 2529732 MARTINWilliAamUS オーストラリア …'、2013 長野県選手権・2013 白馬 47）。2 行目に FIS コードが無く、
+    # 国の重なりが解けるときだけ、英語版の行と同じく FIS コード・氏名・NOC として持つ（3 列目が FIS コードの印字）
+    for s in sections:
+        for a in s['athletes']:
+            if a.get('fisno') or a.get('en') or not re.fullmatch(r'2\d{6}', a.get('sajno') or '') \
+                    or not re.match(r'[A-Za-z]', a.get('name') or ''):
+                continue
+            words = ' '.join(x for x in (a['name'], a['pref'], a['club']) if x).split()
+            un = untangle_noc(''.join(w for w in words if w.isascii()))
+            if un:
+                a['fisno'], a['sajno'] = a['sajno'], None
+                a['name'], a['pref'] = un
+                a['club'] = ''
+                a['en'] = True
     return meta, sections

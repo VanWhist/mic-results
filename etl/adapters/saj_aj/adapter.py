@@ -70,9 +70,10 @@ def section_codes(sections):
                 s['saj_code'] = 'F'
             elif r == '決勝':
                 s['saj_code'] = 'SF' if '準決勝' in heads else 'F'
-            elif r == 'リザルト' and len(secs) == 1 and overall_boundary(s) is not None:
+            elif r == 'リザルト' and overall_boundary(s) is not None and (len(secs) == 1 or any(a.get('from_block') for a in s['athletes'])):
                 # ラウンドの語が無い見出し（'男子リザルト'）の 1 表だけで、決勝の得点の後に予選の得点が続く（全員の総合順位。
-                # 2013 北海道選手権・2013 札幌 B級）。決勝として mark_overall_groups が上下のブロックに分ける
+                # 2013 北海道選手権・2013 札幌 B級）。決勝として mark_overall_groups が上下のブロックに分ける。
+                # 予選の表が別にあっても、'[Results from …]' の区切りが印字された総合順位のページは決勝（2014 宮様 成年・少年）
                 s['saj_code'] = 'F'
             elif (r.startswith('予選') and r.endswith('決勝')) or r == 'リザルト':
                 # 1 本で順位が決まる小規模大会（'男子リザルト' だけの見出しで総合順位の形でないもの: 2015 松之山など）。
@@ -214,18 +215,21 @@ def mark_overall_groups(sections, overall_rounds=None, used=None):
     for g, secs in by_g.items():
         if any(s.get('overall_groups') for s in secs):
             continue  # registry の overall_rounds で分けたもの
-        if len(secs) == 1 and secs[0]['saj_code'] == 'SF' and any(a.get('from_block') == 'F1' for a in secs[0]['athletes']):
-            # スーパーファイナルのページしか無く、'[Results from Final1]'・'[Results from Qualification]' の区切りで
-            # 全員の総合順位が印字されている大会（2014 ふくしま #1・2018 北海道選手権・2021 札幌 AC）: 3 つのブロックに分ける
-            s = secs[0]
+        marked = [s for s in secs if any(a.get('from_block') == 'F1' for a in s['athletes'])]
+        if len(marked) == 1 and all(t is marked[0] or t['saj_code'] == 'Q' for t in secs):
+            # '[Results from Final1]'・'[Results from Qualification]' の区切りで全員の総合順位が印字されたページ: 3 つのブロックに分ける。
+            # スーパーファイナルのページしか無い大会（2014 ふくしま #1・2018 北海道選手権・2021 札幌 AC）と、予選の表が別にある大会
+            # （2014 宮様 成年・少年の「男子 リザルト」。予選の得点の行は予選の表と同じなので collapse_overall が先に除いている）
+            s = marked[0]
             group = {None: 1, 'F1': 2, 'Q': 3}
             for a in s['athletes']:
                 a['rank_group'] = group[a.get('from_block')]
             firsts = [min((a['rank'] for a in s['athletes'] if a.get('from_block') == b and a.get('rank')), default=None)
                       for b in ('F1', 'Q')]
             s['overall_groups'] = firsts[0]
-            notes.append(f"{g} {s['round']}: スーパーファイナルのページに全員の総合順位が印字されている（{firsts[0] - 1} 位までが"
-                         f"スーパーファイナル、{firsts[0]} 位から決勝 1 の得点、{firsts[1]} 位から予選の得点）。予選・決勝 1 の表は無い")
+            rest = (f"、{firsts[1]} 位から予選の得点）。予選・決勝 1 の表は無い" if firsts[1] else "）。予選の得点の行は予選の表にある")
+            notes.append(f"{g} {s['round']}: 全員の総合順位が印字されている（{firsts[0] - 1} 位までがスーパーファイナル、"
+                         f"{firsts[0]} 位から決勝 1 の得点" + rest)
             continue
         if len(secs) != 1 or secs[0]['saj_code'] != 'F':
             continue
@@ -476,7 +480,10 @@ def load_event(ev, imported_at, log=print):
             if g is None:
                 problems.append(f"性別が読めないセクション {s['heading']!r}")
                 continue
-            if want_g and g != want_g:
+            # registry の pdfs[].also_rounds（{'round': 'W-F1', 'page_url': その性別の順位表, 'basis': …}）: 別の性別の PDF に
+            # その表が無く、この PDF の「男女 決勝リザルト」のページにだけ載っているラウンド（2012 松之山国体記念 女子決勝）
+            also = {a['round']: a for a in pdf.get('also_rounds') or []}
+            if want_g and g != want_g and f"{g}-{SAJ_CODE[s['saj_code']]}" not in also:
                 continue
             nturn = s.get('nturn', 5)
             rules = rules_by_n.get(nturn)
@@ -494,7 +501,7 @@ def load_event(ev, imported_at, log=print):
                 'codex': meta.get('codex'), 'tier': 'score' if (old_layout or s.get('oneline')) else ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
                 'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'),
-                'page_url': (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
+                'page_url': (also.get(f"{g}-{code}") or {}).get('page_url') or (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
                 'pages': s['pages'], 'name_ja': ev.get('name_ja'), 'format': ev.get('format'), 'rules_version': ev['rules'],
                 'sheet': sheet,
             }

@@ -221,6 +221,11 @@ def find_anchor(rows, run, fis_style):
             # BIB に 'R' の付いた印字（'R31'、2016 北陸コカ・コーラ杯 女子）も同じ BIB
             if bib is None or any(t == bib or t == 'R' + bib for _, t in toks):
                 cands.append(i)
+    if not cands and not fis_style and run.get('fis_code') and run.get('bib') is not None:
+        # 和文の表で氏名に国が重なって印字された外国籍選手（'MARTINWilliAamUS'、2013 長野県選手権）は氏名では見つからない。
+        # SAJ 番号の欄に印字された FIS コードと BIB の両方がある行を選手の行とする
+        cands = [i for i, (_, toks) in enumerate(rows)
+                 if any(t == str(run['fis_code']) for _, t in toks) and any(t == str(run['bib']) for _, t in toks)]
     if not cands:
         return None
     # 同じ名前がスタート順の一覧などにも載るページがある。結果表の見出し行（'順位 … Total'）より下の行を優先し、
