@@ -45,3 +45,18 @@ def fix_page(page, key):
             c['text'] = table[int(m.group(1))]
             n += 1
     return n
+
+
+# 表の上に大きな色付きの字で押された注記（'視界不良により日没キャンセル'、2021 五箇山 男子予選。青の 23.8 ポイント）。
+# 表の字は 11 ポイント以下。大きな字でも黒・灰色の見出し（大会名・'MO'・'第2戦'）は残し、20 ポイント以上で色付きの字だけを除く
+STAMP_SIZE = 20
+
+
+def _colored(color):
+    return isinstance(color, (list, tuple)) and len(color) == 3 and len(set(color)) > 1
+
+
+def drop_stamps(page):
+    """大きな色付きの字の注記を除いたページ（dedupe_chars・extract_text より前に呼ぶ）"""
+    return page.filter(lambda o: o.get('object_type') != 'char' or o.get('size', 0) < STAMP_SIZE
+                       or not _colored(o.get('non_stroking_color')))

@@ -217,6 +217,9 @@ def athlete_id_of(a):
 
 def load_event(ev, imported_at, log=print):
     ctxs = []
+    # 順位の印字の誤り（registry の rank_fixes、根拠は basis。モーグルの saj_aj と同じ）。ラウンド・BIB・印字の順位が合う行だけを直す
+    rank_fixes = ev.get('rank_fixes') or []
+    rank_fixes_used = set()
     for pdf in ev['pdfs']:
         path = os.path.join(config.PDF_ROOT, pdf['path'])
         try:
@@ -233,6 +236,15 @@ def load_event(ev, imported_at, log=print):
             continue
         if meta.get('gender') and pdf.get('gender') and meta['gender'] != pdf['gender']:
             findings.append(Finding('error', round_id, 'layer0', f"見出しの性別 {meta['gender']} が registry の {pdf['gender']} と違う"))
+        for i, fx in enumerate(rank_fixes):
+            if fx['round_id'] != round_id:
+                continue
+            for a in athletes:
+                if a['bib'] == fx['bib'] and a['rank'] == fx['printed']:
+                    a['rank'] = fx['rank']
+                    rank_fixes_used.add(i)
+                    findings.append(Finding('warning', round_id, 'layer0',
+                                            f"{a['name']}（BIB {fx['bib']}）の順位の印字 {fx['printed']} を {fx['rank']} に直した。根拠: {fx['basis']}"))
         ranks = [a['rank'] for a in athletes if a['rank'] is not None]
         # 同順位はあり得る（1 回戦で DNF の 2 人がともに 25 位など。SAJ の順位表も同順位）。昇順であることだけを見る
         if ranks != sorted(ranks):
@@ -268,4 +280,8 @@ def load_event(ev, imported_at, log=print):
             })
         ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': False, 'rules': {}})
         log(f"  {round_id}: {len(records)} 名")
+    for i, fx in enumerate(rank_fixes):
+        if i not in rank_fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"rank_fixes の {fx['round_id']} BIB {fx['bib']}・印字 {fx['printed']} に当たる行が無い（登録を見直す）"})
     return ctxs

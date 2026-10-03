@@ -184,6 +184,12 @@ def parse_line2(tokens, nturn=5):
         ded = [float(x) for x in pnums[-nturn:]] if len(pnums) >= nturn else None
         club = ' '.join(pre[:len(pre) - len(pnums)])
         return dict(fisno=fisno, club=club, ded=ded, jump2=jump2, dd2=float(rest[k]), j6_2=float(rest[k + 1]), j7_2=float(rest[k + 2]))
+    if len(rest) >= 4 and not is_num(rest[-4]) and re.fullmatch(r'\d\.\d{1,2}', rest[-3]) and is_num(rest[-2]) and is_num(rest[-1]) \
+            and not any(is_num(t) for t in rest[:-4]):
+        # 減点の欄が空で、DD・審判の点が末尾のゼロを省いて印字された行（'SON BAY CLUB TT 0.5 4 3.9' = DD 0.500・4.0・3.9、
+        # 2019 札幌 FIS 男子決勝）。「クラブ名 技コード DD Ja Jb」で終わるときだけ
+        return dict(fisno=fisno, club=' '.join(rest[:-4]), ded=None, jump2=rest[-4], dd2=float(rest[-3]),
+                    j6_2=float(rest[-2]), j7_2=float(rest[-1]))
     nums_from_end = []
     j = len(rest) - 1
     while j >= 0 and is_num(rest[j]):
@@ -313,6 +319,7 @@ def parse_pdf(path, glyph_font=None):
         doc_nturn = None  # この PDF で表頭から分かったターン審判の人数
         for pno, page in enumerate(pdf.pages, 1):
             glyph_font_mod.fix_page(page, glyph_font)
+            page = glyph_font_mod.drop_stamps(page)
             # 太字を同じ文字の重ね打ちで表す PDF がある（'44446666....77772222' = 46.72）。同じ位置の同じ文字は 1 つにする
             page = page.dedupe_chars()
             text = page.extract_text() or ''

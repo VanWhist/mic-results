@@ -198,6 +198,11 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
                 v4 = v5
                 ok4 = True
                 rec['tie'] = rec['tie'] or nums_tail[-1]
+        if not ok4 and len(rest) >= 2 and rest[-2] == '###':
+            # タイム点の欄が '###'（表計算の欄の幅に入らない 10 点以上の値。'… 6.86 20.66 ### 32.81'、2017 白馬さのさか）:
+            # タイム点は印字なしとして持ち、エア計・タイム・スコアは印字のまま
+            air, tm, sc = (float(x) for x in nums_tail[-3:])
+            v4, ok4 = (air, tm, None, sc), True
         if not ok4:
             # タイムの欄が空でタイム点 0.00 の行（'… 1.02 0.00 1.32'、2013 埼玉県松之山 B級 予選の 65・66 位）。
             # 末尾 3 つ（エア計・タイム点・スコア）で式が合い、タイム点が 0 のときだけ、タイムなしとして読む
@@ -267,6 +272,15 @@ def parse_pdf(path, force=False):
                     meta['judges'][mj.group(1)] = (role, mj.group(3).strip())
                 if cur is None:
                     continue
+                mg = re.fullmatch(r'【(男子|女子)】', line.strip())
+                if mg and cur.get('mixed'):
+                    # 男女合同の表の性別の印字（'【女子】' … '【男子】'、2016 札幌 B級）。印字があれば SAJ 番号の照合より優先する
+                    if cur['athletes']:
+                        cur = dict(gender=None, round=cur['round'], code=None, heading=cur['heading'], pages=[pno], athletes=[],
+                                   mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1)
+                        sections.append(cur)
+                    cur['gender_mark'] = mg.group(1)
+                    continue
                 if is_old_header(line, force):
                     meta['old_layout'] = True
                     jt = re.findall(r'J(\d)', line.split('Total')[0])
@@ -289,6 +303,9 @@ def parse_pdf(path, force=False):
                     toks = toks[:1] + list(GLUED_BIB_GROUP.fullmatch(toks[1]).groups()) + toks[2:]
                 if len(toks) > 2 and toks[0].isdigit() and GLUED_BIB_SAJNO.fullmatch(toks[1]):
                     toks = toks[:1] + list(GLUED_BIB_SAJNO.fullmatch(toks[1]).groups()) + toks[2:]
+                # 先頭に 0 の付いた 8 桁の SAJ 番号（'1 2 05000638 寺澤穂乃佳 …'、2015 白馬さのさか 第 2 戦 女子。SAJ 順位表と同じ書き方）は
+                # 7 桁に戻す（新しい様式の parse_sajmo と同じ）。順位・BIB の後の 2〜3 語目だけ
+                toks = [t[1:] if 1 <= j <= 2 and re.fullmatch(r'0\d{7}', t) else t for j, t in enumerate(toks)]
                 if not toks:
                     continue
                 if '#N/A' in toks:
@@ -378,7 +395,9 @@ def parse_pdf(path, force=False):
                     votes[g] = votes.get(g, 0) + 1
             if votes:
                 s['gender'] = max(votes, key=votes.get)
-        if s.get('mixed'):
+        if s.get('gender_mark'):
+            s['gender'] = s['gender_mark']
+        elif s.get('mixed'):
             votes = {}
             for a in s['athletes']:
                 g = by_no.get(a['sajno'])

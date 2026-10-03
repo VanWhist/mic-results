@@ -209,6 +209,7 @@ def read_pdf(path, glyph_font=None):
         year, prev_sig = None, None
         for pno, page in enumerate(pdf.pages, 1):
             glyph_font_mod.fix_page(page, glyph_font)  # 文字が字形の番号のままの PDF（registry の glyph_font）
+            page = glyph_font_mod.drop_stamps(page)  # 表の上に大きな字で押された注記を除く
             page = page.dedupe_chars()  # 重ね打ちの太字（同じ位置の同じ文字）を 1 つにする
             words = page.extract_words()
             # 前のページと語も位置もまったく同じページ（同じページが 2 回綴じ込まれた PDF、2022 宮様 女子決勝）は読まない

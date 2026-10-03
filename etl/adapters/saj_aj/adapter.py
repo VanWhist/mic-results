@@ -192,6 +192,7 @@ def mark_overall_groups(sections, overall_rounds=None, used=None):
     境目は overall_boundary（印字の '[Results from Qualification]'、無ければ得点が前の行より上がる最初の行）。
     overall_rounds（registry。{'M-F1': {'boundary': 4, 'basis': …}}）: 予選の表もあるが、決勝の上位だけが別の滑走の得点で
     並ぶラウンド（2012 ばんけい 第 2 戦・2012 宮様 女子）。得点の上がる行が registry の境目と同じときだけ分け、used に入れる。
+    'upper'（[7] など）は得点では分からない上の境目（区切りの印字が無いスーパーファイナルのページ、2013 全日本）。
     戻り値: 注記の list。"""
     notes = []
     for s in sections:
@@ -202,12 +203,24 @@ def mark_overall_groups(sections, overall_rounds=None, used=None):
         k = overall_boundary(s)
         if k != ent['boundary']:
             continue  # 境目が違えば分けない（used に入らず、登録の見直しのエラーになる）
+        # 得点の上がりでは分からない上の境目（'upper'。2013 全日本: スーパーファイナルの途中棄権が順位の印字なしで 6 位の位置に
+        # あり、7 位から決勝 1 の得点）。その 1 つ前の順位が印字に無い（欠番）ときだけ使う
+        printed = {a.get('rank') for a in s['athletes']}
+        uppers = [b for b in ent.get('upper') or [] if b - 1 not in printed]
+        if len(uppers) != len(ent.get('upper') or []):
+            continue
+        bounds = sorted(uppers + [k])
         for a in s['athletes']:
-            a['rank_group'] = 1 if (a.get('rank') or 10 ** 6) < k else 2
-        s['overall_groups'] = k
+            r = a.get('rank') or 10 ** 6
+            a['rank_group'] = 1 + sum(1 for b in bounds if r >= b)
+        s['overall_groups'] = bounds[0]
         used.add(key)
-        notes.append(f"{s['gender']} {s['round']}: 決勝の上位 {k - 1} 名は別の滑走（スーパーファイナルに当たる）の得点とみて、"
-                     f"{k} 位から下と分けて順位を検算する（registry の overall_rounds。根拠: {ent['basis']}）")
+        if uppers:
+            notes.append(f"{s['gender']} {s['round']}: 全員の総合順位のページ。{bounds[0] - 1} 位までがスーパーファイナル、{bounds[0]} 位から決勝 1 の"
+                         f"得点、{k} 位から予選の得点とみて、ブロックごとに順位を検算する（registry の overall_rounds。根拠: {ent['basis']}）")
+        else:
+            notes.append(f"{s['gender']} {s['round']}: 決勝の上位 {k - 1} 名は別の滑走（スーパーファイナルに当たる）の得点とみて、"
+                         f"{k} 位から下と分けて順位を検算する（registry の overall_rounds。根拠: {ent['basis']}）")
     by_g = collections.defaultdict(list)
     for s in sections:
         if s.get('saj_code'):

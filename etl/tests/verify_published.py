@@ -712,7 +712,10 @@ def main():
     rank_fixes = load_rank_fixes()
     for n, (r, k, d) in enumerate(issues):
         fx = rank_fixes.get((r['round_id'], r['bib']))
-        if k == 'value_not_printed' and fx and d == (f"{fx['field']}={fx['value']}" if fx.get('field') else f"rank={fx['rank']}"):
+        # デュアルモーグル（順位のみ）の検算は「rank_not_on_line」で出る（2020 全日本 DM 女子の 3・4 位の入れ替わり）
+        if fx and not fx.get('field') and k == 'rank_not_on_line' and d.split(' ')[0] == f"rank={fx['rank']}":
+            issues[n] = (r, 'printed_as_is', f"{d}（印字 {fx['printed']} を registry で直した: {fx['basis'][:40]}…）")
+        elif k == 'value_not_printed' and fx and d == (f"{fx['field']}={fx['value']}" if fx.get('field') else f"rank={fx['rank']}"):
             issues[n] = (r, 'printed_as_is', f"{d}（印字 {fx['printed']} を registry で直した: {fx['basis'][:40]}…）")
     kinds = collections.Counter(k for _, k, _ in issues)
     print('照合した run:', dict(checked), '合計', sum(checked.values()))

@@ -1192,7 +1192,23 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "",
+   "rank_fixes": [
+    {
+     "round_id": "2019-20-saj_aj-214-0019-W-F1",
+     "bib": 3,
+     "printed": 4,
+     "rank": 3,
+     "basis": "女子 SMALL FINAL（3 位決定戦）の対戦経過は冨髙 日向子が 'SmF-1: B, Tot:19, Rk 1'（勝ち）、川村 あんりが 'SmF-1: R, Tot:16, Rk 2'。印字の順位は冨髙 4・川村 3 で逆。SAJ 競技データバンクの順位表は冨髙 3 位・川村 4 位（2026-10-03）"
+    },
+    {
+     "round_id": "2019-20-saj_aj-214-0019-W-F1",
+     "bib": 1,
+     "printed": 3,
+     "rank": 4,
+     "basis": "同上（川村 あんり。3 位決定戦で負け、SAJ 順位表 4 位）"
+    }
+   ]
   },
   {
    "event_id": "2019-20-fis-208-0009",
