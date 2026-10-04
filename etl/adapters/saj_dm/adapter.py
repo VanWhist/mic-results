@@ -22,6 +22,24 @@ GENDER = {"Men's": 'M', "Ladies'": 'W', "Women's": 'W', "Lady's": 'W'}
 # （'BIG FINAL'・'BIGFINAL'・'EIGHTS FINAL'）の後に 1 選手 2 行（順位 BIB SAJNO 氏 名 所属 審判点… / クラブ名 2 本目…）。
 # 同じ PDF の前のページに DM の前の予選の得点表（表頭 '順位 BIB FISNO …'、段の見出しなし）があるので、段の見出しの後だけ読む
 OLD_STAGE = re.compile(r'^(BIG|SMALL|SEMI|QUARTER|EIGHTS?)\s*FINAL\s*$', re.I)
+# 同じ表頭で、段の見出しが 'Results from Big Final'（2012〜2014 の北海道選手権・全日本。空白なし 'ResultsfromBigFinal' もある）。
+# 決勝リザルトのページにだけ出るので、この見出しがあるページは表頭の直後から読む（2012 北海道選手権は 1・2 位の前に見出しが無い）
+RESULTS_FROM = re.compile(r'^Results\s*from\s*(.+?)\s*$')
+RESULTS_FROM_GLUED = {'BigFinal': 'Big Final', 'SmallFinal': 'Small Final', 'QuarterFinal': 'Quarter Final',
+                      'RoundofBest16': 'Round of Best 16', 'ConsolationRound': 'Consolation Round'}
+# 男女横並びの決勝成績表（2012・2013 愛知県大会）: '女子成績表 Codex5014 男子成績表 Codex0014' の下に表頭
+# '順位 BIB SAJ競技者No 氏名 県連盟 所属' が左右に 2 つ。左が女子、右が男子（見出しの x 位置で決める）。1 選手 1 行で段も対戦経過も無い。
+# SAJ 番号は先頭に 0 を付けた 8 桁（'05000714'）で印字される（モーグルの古い様式と同じく 0 を外して 7 桁にする）。
+# 左の表の右端（右の表の順位の手前）に、行ごとに 17〜24 の数字だけが印字される（女子 8 行の横。選手の欄ではない）ので読まない
+SIDE_TITLE = {'女子成績表': 'W', '男子成績表': 'M'}
+# 決勝トーナメントが中止になり予選を決勝とした大会（2016 全日本: 最後のページの注記「※視界不良により決勝トーナメント実施の見込みが
+# できないため予選をもって決勝とする。」）。PDF は予選の得点表だけ（表頭 '順位 BIB FISNO クラブ名 所属 J1 …'、1 選手 2 行
+# 順位 BIB SAJNO 氏 名 所属 審判点… / FIS コード クラブ名 減点…）。順位・氏名・所属・クラブだけを読み、得点は読まない。
+# 順位の無い DNF・DNS の行は 'BIB SAJNO 氏 名 所属 0.00 DNF'。SAJ 番号の無い外国籍選手は 'BIB 名 姓 国名 …' で、2 行目の FIS コードで選手を区別する
+QUAL_AS_FINAL = re.compile(r'予選をもって決勝とする')
+QUAL_STATUS = re.compile(r'\b(DNF|DNS|DSQ)\b')
+FISNO = re.compile(r'^\d{7}$')
+SAJNO8 = re.compile(r'^0(\d{7})$')
 NUMBER = re.compile(r'^-?\d+(\.\d+)?$')
 DD = re.compile(r'^\d\.\d{3}$')
 # 英語版（2015 全日本）: 表頭 'Rk BIB SAJCode Name Nation Progression'、1 行目 順位 BIB FISコード 姓名 国 対戦経過、
@@ -29,7 +47,7 @@ DD = re.compile(r'^\d\.\d{3}$')
 EN_ROW = re.compile(r'^(?:(\d+)\s+)?(\d+)\s+(\d{7})\s+(\S+)\s+([A-Z]{3})\b\s*(.*)$')
 EN_STAGE = {'BIGFINAL': 'BIG FINAL', 'SMALLFINAL': 'SMALL FINAL', 'QuarterFinal': 'Quarter Final', 'EightFinal': 'Eight Final'}
 KANA = re.compile(r'[゠-ヿ･-ﾟ]+')
-PARSER_VERSION = 'SAJ-DM-1.3'
+PARSER_VERSION = 'SAJ-DM-1.4'
 
 
 def _split_ascii(t):
@@ -57,16 +75,75 @@ def split_interleaved(rest):
     return rest
 
 
-def parse_pdf(path):
+def parse_side_by_side(page, gender, pno):
+    """男女横並びの決勝成績表（SIDE_TITLE の説明）から gender の側の行を読む。この様式のページでなければ None"""
+    words = page.extract_words()
+    titles = {w['text']: w for w in words if w['text'] in SIDE_TITLE}
+    heads = sorted((w for w in words if w['text'] == '順位'), key=lambda w: w['x0'])
+    if len(titles) != 2 or len(heads) != 2:
+        return None
+    if gender not in ('M', 'W'):
+        raise ValueError('男女横並びの決勝成績表は registry の性別が無いと左右を選べない')
+    head_top = heads[0]['top']
+    boundary = heads[1]['x0']  # 右の表の順位の表頭より左が左の表
+    left_gender = min(titles.values(), key=lambda w: w['x0'])['text']
+    left = SIDE_TITLE[left_gender] == gender
+    # 県連盟の欄は表頭 '県連盟' の位置から。県名の一覧では決めない（姓の '山口' が県名と同じ）
+    pref_heads = sorted((w for w in words if w['text'] == '県連盟'), key=lambda w: w['x0'])
+    if len(pref_heads) != 2:
+        raise ValueError(f"男女横並びの決勝成績表 {pno} ページ: 表頭の県連盟が左右に無い")
+    pref_x = pref_heads[0 if left else 1]['x0'] - 6
+    # 同じ行でも語ごとに top が 1〜2pt ずれる（SAJ 番号・英字のクラブ名が下にずれる）ので、行の最初の語から 4pt 以内を同じ行にする
+    rows = []
+    for w in sorted((w for w in words if w['top'] > head_top + 3 and (w['x0'] < boundary) == left), key=lambda w: w['top']):
+        if rows and w['top'] - rows[-1][0]['top'] < 4:
+            rows[-1].append(w)
+        else:
+            rows.append([w])
+    athletes = []
+    for ws in rows:
+        ws = sorted(ws, key=lambda w: w['x0'])
+        toks = [w['text'] for w in ws]
+        if len(toks) < 5 or not (toks[0].isdigit() and toks[1].isdigit() and SAJNO8.match(toks[2])):
+            if athletes:
+                break  # 表の後（印刷日時など）
+            continue
+        if left and toks[-1].isdigit():
+            ws, toks = ws[:-1], toks[:-1]  # 左の表の右端の数字（SIDE_TITLE の説明）
+        rest = toks[3:]
+        pi = next((i for i, w in enumerate(ws[3:]) if w['x0'] >= pref_x), None)
+        if pi is None or pi == 0:
+            raise ValueError(f"男女横並びの決勝成績表 {pno} ページ: 県連盟の欄が分からない行 {' '.join(toks)}")
+        athletes.append(dict(rank=int(toks[0]), bib=int(toks[1]), sajno=SAJNO8.match(toks[2]).group(1), name=' '.join(rest[:pi]),
+                             pref=rest[pi], club=' '.join(rest[pi + 1:]), progression='', stage=None, page=pno))
+    return athletes
+
+
+def parse_pdf(path, gender=None):
     meta = dict(title=None, venue=None, date=None, gender=None, judges=[])
     athletes = []
     stage = None
     cur = None
+    side_rows = None
     with pdfplumber.open(path) as pdf:
+        # 予選を決勝とした大会の注記は最後のページの表の後にある（QUAL_AS_FINAL の説明）。表を読む前に見ておく
+        last_text = (pdf.pages[-1].extract_text() or '') if pdf.pages else ''
+        meta['qual_as_final'] = next((l.strip() for l in last_text.splitlines() if QUAL_AS_FINAL.search(l)), None)
         for pno, page in enumerate(pdf.pages, 1):
             # 重ね打ちの太字は同じ位置に同じ文字が重なる。許容幅の既定（1pt）だと、詰めて印字された本物の連続文字
             # （2015 全日本 英語版 'YOSHII' の I と I は 0.96pt 差）まで 1 つにしてしまうので 0.5pt にする
-            lines = [l.strip() for l in (page.dedupe_chars(tolerance=0.5).extract_text() or '').split('\n') if l.strip()]
+            page = page.dedupe_chars(tolerance=0.5)
+            side = parse_side_by_side(page, gender, pno)
+            if side is not None:
+                # 2012 愛知 女子は同じ決勝成績表が最後のページにもう一度入っている。中身が同じなら 1 回だけ読む
+                if side_rows is None:
+                    side_rows = side
+                    athletes.extend(side)
+                elif [{k: v for k, v in a.items() if k != 'page'} for a in side] != [{k: v for k, v in a.items() if k != 'page'} for a in side_rows]:
+                    raise ValueError(f"男女横並びの決勝成績表が {pno} ページにもあり、中身が前のページと違う")
+                continue
+            lines = [l.strip() for l in (page.extract_text() or '').split('\n') if l.strip()]
+            results_from = any(RESULTS_FROM.match(l) for l in lines)
             in_table = False
             for li, line in enumerate(lines):
                 if meta['gender'] is None:
@@ -85,15 +162,50 @@ def parse_pdf(path):
                     in_table = True
                     continue
                 if line.startswith('順位') and 'SAJNO' in line:
-                    in_table, old_stage = 'old', False
+                    in_table, old_stage = 'old', results_from
+                    if results_from:
+                        stage = None
                     continue
                 if line.startswith('Rk BIB SAJCode Name'):
                     in_table = 'en'
+                    continue
+                if meta.get('qual_as_final') and line.startswith('順位') and 'FISNO' in line:
+                    in_table = 'qual'
                     continue
                 md = re.match(r'^(\d{1,2})/(\d{1,2})/(\d{4})$', line)
                 if md and meta['date'] is None:  # 英語版の日付（日/月/年）
                     meta['date'] = '%s-%02d-%02d' % (md.group(3), int(md.group(2)), int(md.group(1)))
                 if not in_table:
+                    continue
+                if in_table == 'qual':
+                    if line.startswith(('CODEX', 'Head Judge', 'SAJNO', 'スコア', '※')):
+                        in_table = False if line.startswith(('CODEX', 'Head Judge', '※')) else in_table
+                        continue
+                    toks = line.split()
+                    rest = None
+                    if len(toks) >= 2 and re.fullmatch(r'\d{1,3}', toks[0]):
+                        if re.fullmatch(r'\d{1,3}', toks[1]):  # 順位 BIB …
+                            rank, bib, rest = int(toks[0]), int(toks[1]), toks[2:]
+                        elif QUAL_STATUS.search(line):  # 順位の無い DNF・DNS: BIB SAJNO …
+                            rank, bib, rest = None, int(toks[0]), toks[1:]
+                    if rest is not None:
+                        sajno = rest[0] if rest and SAJNO.match(rest[0]) else None
+                        words = list(itertools.takewhile(lambda t: not NUMBER.match(t), rest[1:] if sajno else rest))
+                        if len(words) < 2:
+                            raise ValueError(f"予選をもって決勝の表 {pno} ページ: 氏名・所属が読めない行 {line}")
+                        name, pref = ' '.join(words[:-1]), words[-1]
+                        ms = QUAL_STATUS.search(line)
+                        if rank is None and not ms:
+                            raise ValueError(f"予選をもって決勝の表 {pno} ページ: 順位も DNF・DNS も無い行 {line}")
+                        cur = dict(rank=rank, bib=bib, sajno=sajno, name=name, pref=pref, club='',
+                                   progression='', stage=None, page=pno, status=ms.group(1) if rank is None else 'OK')
+                        athletes.append(cur)
+                        continue
+                    # 2 行目: FIS コード クラブ名 減点…（クラブ名の無い行もある）
+                    if cur is not None and toks and FISNO.match(toks[0]):
+                        cur['club'] = ' '.join(itertools.takewhile(lambda t: not NUMBER.match(t) and not DD.match(t), toks[1:]))
+                        if cur['sajno'] is None:
+                            cur['fisno'] = toks[0]
                     continue
                 if in_table == 'en':
                     if line.startswith(('CODEX', 'HeadJudge', 'Head Judge')):
@@ -122,6 +234,10 @@ def parse_pdf(path):
                     mo = OLD_STAGE.match(line)
                     if mo:
                         stage, old_stage = mo.group(1).upper() + ' FINAL', True
+                        continue
+                    mf = RESULTS_FROM.match(line)
+                    if mf:
+                        stage = RESULTS_FROM_GLUED.get(mf.group(1), mf.group(1))
                         continue
                     if not old_stage:
                         continue
@@ -223,7 +339,7 @@ def load_event(ev, imported_at, log=print):
     for pdf in ev['pdfs']:
         path = os.path.join(config.PDF_ROOT, pdf['path'])
         try:
-            meta, athletes = parse_pdf(path)
+            meta, athletes = parse_pdf(path, pdf.get('gender'))
         except Exception as e:  # noqa
             ctxs.append({'error_only': True, 'event_id': ev['event_id'], 'message': f"DM パーサ例外 {pdf['path']}: {e!r}"})
             continue
@@ -245,6 +361,9 @@ def load_event(ev, imported_at, log=print):
                     rank_fixes_used.add(i)
                     findings.append(Finding('warning', round_id, 'layer0',
                                             f"{a['name']}（BIB {fx['bib']}）の順位の印字 {fx['printed']} を {fx['rank']} に直した。根拠: {fx['basis']}"))
+        if meta.get('qual_as_final'):
+            findings.append(Finding('warning', round_id, 'layer0',
+                                    f"決勝トーナメントは行われず、予選の順位を最終成績として読んだ（得点は読まない）。PDF の注記: {meta['qual_as_final']}"))
         ranks = [a['rank'] for a in athletes if a['rank'] is not None]
         # 同順位はあり得る（1 回戦で DNF の 2 人がともに 25 位など。SAJ の順位表も同順位）。昇順であることだけを見る
         if ranks != sorted(ranks):
@@ -252,7 +371,8 @@ def load_event(ev, imported_at, log=print):
             findings.append(Finding('error', round_id, 'layer0', f"順位が昇順でない（{bad} 行目付近: {ranks[max(0, bad - 2):bad + 2]}）"))
         cls = {
             'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
-            'discipline': 'DM', 'gender': g, 'round': 'F1', 'round_text': 'Final Result', 'codex': pdf.get('codex'),
+            'discipline': 'DM', 'gender': g, 'round': 'F1',
+            'round_text': 'Final Result（予選をもって決勝）' if meta.get('qual_as_final') else 'Final Result', 'codex': pdf.get('codex'),
             'tier': 'rank', 'panel': None, 'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'),
             'url': pdf.get('url'), 'page_url': pdf.get('page_url'), 'pages': None, 'name_ja': ev.get('name_ja'),
             'format': ev.get('format'), 'rules_version': None,
@@ -273,7 +393,7 @@ def load_event(ev, imported_at, log=print):
             records.append({
                 'rank': a['rank'], 'bib': a['bib'], 'saj_no': a['sajno'], 'fis_code': a.get('fisno'), 'athlete_id': athlete_id_of(a),
                 'name': a['name'], 'noc': a.get('noc'), 'yb': None, 'affiliation': a['pref'], 'club': a['club'],
-                'status': 'OK' if a['rank'] is not None else ('DNS' if 'DNS' in a['progression'] else 'DNF'), 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
+                'status': a.get('status') or ('OK' if a['rank'] is not None else ('DNS' if 'DNS' in a['progression'] else 'DNF')), 'reserve_judge': False, 'counting': True, 'q_block': None, 'best_score': None,
                 'seconds': None, 'time_points': None, 'air_jumps': [], 'air_total': None, 'base_scores': [], 'ded_scores': [],
                 'base_total': None, 'ded_total': None, 'turns_total': None, 'run_score': None, 'tie': None, 'page': a['page'],
                 'components': {'progression': a['progression'], 'stage': a['stage']},
