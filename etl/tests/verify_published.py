@@ -441,8 +441,10 @@ def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False, bd_to
 
 
 def check_rank_only_fis(rnd_runs):
-    """FIS 海外大会のデュアルモーグル（fis_dm_pdf、順位のみ）: FIS コードで選手の行を探し、その行に順位・姓・国・生年が
-    印字されているかを見る。順位は「2.」のように点が付いたり、切れた Bib とくっついたり（「10.11…」）する。名前は折り返すので姓だけ見る"""
+    """FIS 海外大会のデュアルモーグル（fis_dm_pdf、順位のみ）: FIS コードで選手の行を探し、その行に順位・氏名・国・生年が
+    印字されているかを見る。順位は「2.」のように点が付いたり、切れた Bib とくっついたり（「10.11…」）する。
+    名は次の行に折り返すことがある（'GORLACHEV KAZ 1997 …' の次の行に 'Konstantin'。'Jean-Christophe' はハイフンの位置で
+    折り返し、ハイフンは U+FFFE で印字）ので、氏名を空白・ハイフンで分けた語が、選手の行と次の行に順に並んでいるかを見る"""
     issues = []
     for r in rnd_runs:
         path, pg = pdf_path(r['provenance']), r['provenance'].get('page') or 1
@@ -450,19 +452,39 @@ def check_rank_only_fis(rnd_runs):
             issues.append((r, 'pdf_missing', path))
             continue
         rows = page_lines(path, pg)
-        hit = [toks for _, toks in rows if any(t == str(r['fis_code']) or t.endswith(str(r['fis_code'])) or t.startswith(str(r['fis_code']))
-                                               for _, t in toks)]
+        hit = [i for i, (_, toks) in enumerate(rows)
+               if any(t == str(r['fis_code']) or t.endswith(str(r['fis_code'])) or t.startswith(str(r['fis_code'])) for _, t in toks)]
         if not hit:
             issues.append((r, 'code_not_on_page', f"{os.path.basename(path)} p{pg} {r['fis_code']}"))
             continue
-        line = ' '.join(t for _, t in hit[0])
-        toks = [t for _, t in hit[0]]
+        toks = [t for _, t in rows[hit[0]][1]]
+        line = ' '.join(toks)
+        nxt = ' '.join(t for _, t in rows[hit[0] + 1][1]) if hit[0] + 1 < len(rows) else ''
+        if re.search(r'\d{7}', nxt):
+            nxt = ''  # 次の選手の行（FIS コードがある）は折り返しではない。その選手の名で通さない
         # 順位は行の先頭の語（「2」「2.」「10.11…」）。Bib と同じ数のことがあるので先頭だけを見る
         if r['rank'] is not None and not re.fullmatch(rf"{r['rank']}\.?|{r['rank']}\.\d+…?", toks[0]):
             issues.append((r, 'rank_not_on_line', f"rank={r['rank']} / {line[:60]}"))
-        surname = r['name'].split()[0]
-        if norm(surname) not in norm(line):
-            issues.append((r, 'name_not_on_line', f"{surname} / {line[:60]}"))
+        # 姓（最初の語）は選手の行に、残りの語はその後ろか次の行に、印字の順で並ぶこと
+        pieces = [norm(p) for p in re.split(r'[\s\-]+', r['name']) if p]
+        text, pos = norm(line), 0
+        if pieces and pieces[0] in text:
+            text = text + norm(nxt)
+            for k, p in enumerate(pieces):
+                # 語の途中で終わる一致（'So' が 'Sora' の頭）は数えない。印字では語の後ろに小文字は続かない（国名・対戦経過は大文字）。
+                # ただし氏名の次の語が小文字で始まるとき（'FENG yue'、'van der MERWE'）はその語が続いてよい
+                follow = pieces[k + 1] if k + 1 < len(pieces) else None
+                while True:
+                    pos = text.find(p, pos)
+                    end = pos + len(p)
+                    if pos < 0 or not text[end:end + 1].islower() or (follow and text.startswith(follow, end)):
+                        break
+                    pos += 1
+                if pos < 0:
+                    break
+                pos += len(p)
+        if not pieces or pieces[0] not in norm(line) or pos < 0:
+            issues.append((r, 'name_not_on_line', f"{r['name']} / {line[:60]} / {nxt[:30]}"))
         # 国・生年は語として一致するか（名前と国名がくっつく「RiccardoSUI」は語の末尾で見る）
         if r.get('noc') is not None and not any(t == r['noc'] or (t.endswith(r['noc']) and t[:-3].isalpha() and t[-4].islower()) for t in toks):
             issues.append((r, 'noc_not_on_line', f"noc={r['noc']} / {line[:60]}"))
