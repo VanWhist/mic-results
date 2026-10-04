@@ -155,6 +155,9 @@ def parse_pdf(path, gender=None):
                 mm = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
                 if mm and meta['date'] is None:
                     meta['date'] = '%s-%02d-%02d' % (mm.group(1), int(mm.group(2)), int(mm.group(3)))
+                mh = re.search(r'平成(\d{1,2})年(\d{1,2})月(\d{1,2})日', line)  # 2012・2013 愛知（決勝成績表の後の予選のページにある）
+                if mh and meta['date'] is None:
+                    meta['date'] = '%d-%02d-%02d' % (1988 + int(mh.group(1)), int(mh.group(2)), int(mh.group(3)))
                 mj = re.match(r'(J\d)\s*\((Turns|Air|Speed|Overall)\)\s*(.+?)\s*\(([^)]*)\)', line)
                 if mj and not any(j['judge_no'] == int(mj.group(1)[1:]) for j in meta['judges']):
                     meta['judges'].append({'judge_no': int(mj.group(1)[1:]), 'role': mj.group(2), 'name': mj.group(3).strip(), 'noc': mj.group(4)})
