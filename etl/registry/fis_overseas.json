@@ -184,6 +184,194 @@
    ]
   },
   {
+   "event_id": "2014-15-fis-winterpark-8317",
+   "season": "2014-15",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park, CO",
+   "fis_event_id": "36335",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36335&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8315_W_MO_QRL.pdf",
+     "sha256": "9759a4b209de860bbb578c1ca4e7e04ac2b2a44affd0c42850f8a0ae2681f6dc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8139",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8315",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8315_W_MO_F1RL.pdf",
+     "sha256": "11ec5849856dc6846bd98b7736de283e16ac4b46fdb6c1415ac2c2b691ebcce6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8139",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8315",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8315_W_MO_F2RL.pdf",
+     "sha256": "d4f13fd3d6aa7a93b8c60cdeb42fd5033d1dd5a3051c955b713c4fb66bb441db",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8139",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8315",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8317_M_MO_QRL.pdf",
+     "sha256": "8537f797663a582cd529b914aee1f0ac5964c0475cd074e6bbd5f3cde4a1b14a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8140",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8317",
+     "src_type": "QRL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8317_M_MO_F1RL.pdf",
+     "sha256": "307f539cfa9d20fd6160ee656b485cf383499b5dc063663e3191d78a8ce81589",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8140",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8317",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8317_M_MO_F2RL.pdf",
+     "sha256": "35b5229aad7cf331e723c28619a3dfef3e0c80da03bcfa76ac7ac71757763b22",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8140",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8317",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2014-15-fis-winterpark-8322",
+   "season": "2014-15",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park, CO",
+   "fis_event_id": "36335",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=36335&seasoncode=2015",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2014-15",
+   "pdfs": [
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8321_W_MO_F1RL.pdf",
+     "sha256": "55a6f1c955ad8bd681d7c025b7193e6f1186fc6210663691d53b0261e2e468e7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8141",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8321",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8321_W_MO_F2RL.pdf",
+     "sha256": "542aa3d0a3d520357536176fb728aca1ddbb9fb8f0e7ba8d062ab3f4fdbc7e2f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8141",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8321",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8322_M_MO_F1RL.pdf",
+     "sha256": "1ea80637b3d6bba6c1330d805baa08acdd8f074bca41d891e3bfe74fe01695d5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8142",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8322",
+     "src_type": "F1RL",
+     "layout": "fis_old"
+    },
+    {
+     "path": "FIS/2014-15/FIS2015_FIS_WinterPark_8322_M_MO_F2RL.pdf",
+     "sha256": "0a177b530797e7c25e801ae071e7b9462b86b507e703677b26bcbeb030502e56",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=8142",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8322",
+     "src_type": "F2RL",
+     "layout": "fis_old"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2014-15-nac-apexmountain-8108",
    "season": "2014-15",
    "series": "NAC",
@@ -1462,6 +1650,89 @@
    "notes": ""
   },
   {
+   "event_id": "2016-17-opn-winterparkresort-8454",
+   "season": "2016-17",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park Resort",
+   "fis_event_id": "40607",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40607&seasoncode=2017",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2016-17",
+   "pdfs": [
+    {
+     "path": "OPN/2016-17/FIS2017_OPN_WinterParkResort_8454_M_MO_RLF1.pdf",
+     "sha256": "c666d437a58dc1a2809f6061ab628465cbaf1b87b6a77ad73ad64a264f91e9eb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9974",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8454",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2016-17/FIS2017_OPN_WinterParkResort_8454_M_MO_RLF2.pdf",
+     "sha256": "75727e25d8eb901600764f74cd3dc001bf668f10cd469d7f2a835f0a6691efec",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9974",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8454",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2016-17/FIS2017_OPN_WinterParkResort_8454_M_MO_RLQ.pdf",
+     "sha256": "2506054e1ceb9761c152982a0877ab26db2611c097f3eaf49b2bb31e09335d85",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9974",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8454",
+     "src_type": "RLQ"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "status_fixes": [
+    {
+     "round_id": "2016-17-opn-winterparkresort-8454-M-Q",
+     "bib": 21,
+     "status": "DNF",
+     "basis": "FIS 公式サイトの結果（raceid 9974、2026-10-04 確認）。PDF の行は「Q1:」だけで状態の印字が無い（MATSUMOTO Thomas）"
+    },
+    {
+     "round_id": "2016-17-opn-winterparkresort-8454-M-Q",
+     "bib": 64,
+     "status": "DNF",
+     "basis": "FIS 公式サイトの結果（raceid 9974、2026-10-04 確認）。PDF の行は「Q1:」だけで状態の印字が無い（MORDINI Nick）"
+    },
+    {
+     "round_id": "2016-17-opn-winterparkresort-8454-M-Q",
+     "bib": 37,
+     "status": "DNS",
+     "basis": "FIS 公式サイトの結果（raceid 9974、2026-10-04 確認）。PDF の行は「Q1:」だけで状態の印字が無い（KOIWA Kai）"
+    }
+   ]
+  },
+  {
    "event_id": "2016-17-nac-northstar-8506",
    "season": "2016-17",
    "series": "NAC",
@@ -2603,6 +2874,171 @@
    "notes": ""
   },
   {
+   "event_id": "2018-19-fis-apexmountain-8410",
+   "season": "2018-19",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "44563",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44563&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLQ.pdf",
+     "sha256": "cd52301bb5660d877d25d3665c7948ce285d59b006eeb6153861284421115ad3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11851",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8409",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLQ1.pdf",
+     "sha256": "a6d65d9ce9bff4fb218edd142762e275d7eee917fad20e86f586a1e722b4f1ff",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11851",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8409",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLQ2.pdf",
+     "sha256": "76648ae2cfdbc5d84d5a835cc36fdc448c108b716bd8ab908b0f08d06a8d9a97",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11851",
+     "round": "Q2",
+     "gender": "W",
+     "codex": "8409",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLF.pdf",
+     "sha256": "23ed988cf5182f83a133c65f80e64f68e81ff081e6d0f89319282a8eb57cd831",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11851",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8409",
+     "src_type": "RLF"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLQ.pdf",
+     "sha256": "21cc4e847373ef876dd354caf5ba64b77de28f4d909cd440a71befe1fc9feb27",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11852",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8410",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLQ1.pdf",
+     "sha256": "6771a5d372a683687365638379a1cc3145ed03a092b4d1101d473af554ca9924",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11852",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8410",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLQ2.pdf",
+     "sha256": "6c54d2b638eeef9792b25e405b7edacbc8abf6fb57eef9bd09dd4881207f5a97",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11852",
+     "round": "Q2",
+     "gender": "M",
+     "codex": "8410",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLF.pdf",
+     "sha256": "fe09898e402a67327dcd22da6e38e4f33ace3ba82b1241d410688b5e5612e148",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11852",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8410",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 45
+      },
+      "Q1": {
+       "to": "F1",
+       "n": 45
+      },
+      "F1": {
+       "to": "F2",
+       "n": 12
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 19
+      },
+      "Q1": {
+       "to": "F1",
+       "n": 19
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
+   "event_id": "2018-19-fis-apexmountain-8411",
+   "season": "2018-19",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "44563",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44563&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8411_W_MO_RLQ1.pdf",
+     "sha256": "2c9ddd65a1cf48268fee9b86a76fb56b964260dce41d40a368df7a4f754fe5df",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11853",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8411",
+     "src_type": "RLQ1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
    "event_id": "2018-19-nac-apexmountain-8450",
    "season": "2018-19",
    "series": "NAC",
@@ -2701,6 +3137,212 @@
    "format": {
     "label": null,
     "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-opn-winterpark-8869",
+   "season": "2018-19",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park, CO",
+   "fis_event_id": "44594",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44594&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8868_W_MO_RLQ1.pdf",
+     "sha256": "07b90a843c884ccf5f92b8154f3b953665b8f73550ee3bd9de06d2f744b6d14c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11889",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8868",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8868_W_MO_RLF1.pdf",
+     "sha256": "6cfa759de892acebb978e3ea7e47dd209ffe9444a5d490a6350e7f063b6054fb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11889",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8868",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8868_W_MO_RLF2.pdf",
+     "sha256": "caa86f86a13259e9f437342965dd91bdc074abce7b1310c0bfdf88f359655427",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11889",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8868",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8869_M_MO_RLQ1.pdf",
+     "sha256": "5769081a88216f230f66e7c34c42e54851460ee16be157d0c8bd4b2bc2cb9614",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11890",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8869",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8869_M_MO_RLF1.pdf",
+     "sha256": "ac1f6df2b07f673b27f74fcac38335b30abb7cc783f1f7d2b52200420278bf9a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11890",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8869",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8869_M_MO_RLF2.pdf",
+     "sha256": "738ad45ffdc2d1c538c3c6f62683e9505f8dd17de39a97d516cf309f27bfe369",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11890",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8869",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 17
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2018-19-opn-winterpark-8871",
+   "season": "2018-19",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park, CO",
+   "fis_event_id": "44594",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44594&seasoncode=2019",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2018-19",
+   "pdfs": [
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8870_W_MO_RLQ1.pdf",
+     "sha256": "a8fd756a379ec716207dcf28adc4ff3015f4b6794e97fe254c6db3c0dfb67a2c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11891",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8870",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8870_W_MO_RLF1.pdf",
+     "sha256": "25685c8073e3509f6d86651e568648ac228cefd8b01e2f4df6998b4fe1548074",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11891",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8870",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8870_W_MO_RLF2.pdf",
+     "sha256": "64808daf0c7dee2ec3f8fb4345d3107dd40bc718096b0d1763298856a775f5fb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11891",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8870",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8871_M_MO_RLQ1.pdf",
+     "sha256": "1d75c8b3623982c702f03551efbf725584272a0ca1cc72493d781f7d229e8dcd",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11892",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8871",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8871_M_MO_RLF1.pdf",
+     "sha256": "4669ec31ec307fc0236dec189340791339834ee4918e1bedbd1a942297d71213",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11892",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8871",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8871_M_MO_RLF2.pdf",
+     "sha256": "f451a6d6904b4c0b10dca053d3e326f2ae187f53ced553780a492839ce217757",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11892",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8871",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
@@ -2820,6 +3462,556 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
+  },
+  {
+   "event_id": "2019-20-opn-steamboat-8443",
+   "season": "2019-20",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Steamboat",
+   "fis_event_id": "46543",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46543&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8442_W_MO_RLQ.pdf",
+     "sha256": "d9d49215be287e72229b636913be900088e597f092e76a2ebb4e9dd0f12237aa",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12657",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8442",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8442_W_MO_RLF1.pdf",
+     "sha256": "e242a9f4b9bce79987cc3c436f399063c503ab49f2bf5b5ad97cdbfa7b3a0598",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12657",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8442",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8442_W_MO_RLF2.pdf",
+     "sha256": "3cd27bd09d061e58a6d5fc992599af3d5c053ab3facfb1b226c72603f7a1e7cc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12657",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8442",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8443_M_MO_RLQ.pdf",
+     "sha256": "94185407402091957c62615a433111a66151bbc32231d1008535459827b2968d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12658",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8443",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8443_M_MO_RLF1.pdf",
+     "sha256": "a4d44d214f02180f11e8b432207388196a990cd17044759276c057e76c1a69e8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12658",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8443",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8443_M_MO_RLF2.pdf",
+     "sha256": "f6493f3a7e992f000a8273df6b97908e0867d4549c428b14901ff96e370549ac",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12658",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8443",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-opn-steamboat-8445",
+   "season": "2019-20",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Steamboat",
+   "fis_event_id": "46543",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46543&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8444_W_MO_RLQ.pdf",
+     "sha256": "58437add6bcf1e5cc76427930dcf521347a0f2ada92b62da009ebd37e912ccda",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12659",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8444",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8444_W_MO_RLF1.pdf",
+     "sha256": "e4614ab49742b49a2c7a1e8c3bc227d3450702634af3d4b503d7408b2dddd69a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12659",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8444",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8444_W_MO_RLF2.pdf",
+     "sha256": "1a4b4f4eb5ce898dc54f74d750b764875bf4877b0d837467b78ecb77ddb52ec8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12659",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8444",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8445_M_MO_RLQ.pdf",
+     "sha256": "6a19e28c0ad6b60529428fe1fae992fe7f21123ad858719c9a75f203670eb58b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12660",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8445",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8445_M_MO_RLF1.pdf",
+     "sha256": "882d7bd8ac43e3c156d2b793025ca598ca17bda227be6752a864ddf0379afc6b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12660",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8445",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8445_M_MO_RLF2.pdf",
+     "sha256": "6d9a4e73965f10a22c52568402f546cdb9a4af1259b661f95a24cdaa46116cf3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12660",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8445",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-fis-apexmountain-8457",
+   "season": "2019-20",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "46569",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46569&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8456_W_MO_RLQ1.pdf",
+     "sha256": "adb642fa8f11f994dfdef05236077fd05c8a090022eb836cfff7a11d62ad4409",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12687",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8456",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8456_W_MO_RLQ2.pdf",
+     "sha256": "7450cab87a08cb7aa0e1ce17466c78daf55aa187b794c42bdb111e800e00350e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12687",
+     "round": "Q2",
+     "gender": "W",
+     "codex": "8456",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8456_W_MO_RLF1.pdf",
+     "sha256": "f524d08f6ef7a2d3b582305b6a50be8b29742e934b8def18deabde8aade71bbb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12687",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8456",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8457_M_MO_RLQ1.pdf",
+     "sha256": "462edf74dddcb00e987fe2154be37ae28cdd06588eedb29ef8c36b119d005c01",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12688",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8457",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8457_M_MO_RLQ2.pdf",
+     "sha256": "2105e70a75d88fdd0c479305caeed6f92066f22eb0be84c0573bfb6fb25b6d7b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12688",
+     "round": "Q2",
+     "gender": "M",
+     "codex": "8457",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8457_M_MO_RLF1.pdf",
+     "sha256": "d1143dd6fe783aad229d0daec171946c3b904e198c61cb696ade436ee700bb9c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12688",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8457",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 20
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 15
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
+   "event_id": "2019-20-fis-apexmountain-8459",
+   "season": "2019-20",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "46569",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46569&seasoncode=2020",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2019-20",
+   "pdfs": [
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8458_W_MO_RLQ1.pdf",
+     "sha256": "ae3ad1ea369675e982a4c1e0111796f489a649ce618cbb77d1525344764357fb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12689",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8458",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8458_W_MO_RLQ2.pdf",
+     "sha256": "72b4c77137157201abed3b46b6c1f078982958cb94b02b45a7df15cc9259460d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12689",
+     "round": "Q2",
+     "gender": "W",
+     "codex": "8458",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8458_W_MO_RLF1.pdf",
+     "sha256": "29218a7b284d9d2142c54185fcc331390ad6d10f80781d8f1acc40e017363f4a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12689",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8458",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8459_M_MO_RLQ1.pdf",
+     "sha256": "54460886d0a8612e65f183d2efe34694bc87b32ff5bf44ab39081efeadd6795c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12690",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8459",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8459_M_MO_RLQ2.pdf",
+     "sha256": "680dfb9eedd245e3bed057d473f42acff6b6aceeef5539cf383e38544bf75c17",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12690",
+     "round": "Q2",
+     "gender": "M",
+     "codex": "8459",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2019-20/FIS2020_FIS_ApexMountain_8459_M_MO_RLF1.pdf",
+     "sha256": "6cadcc6cd7003d22194ea04e01d99eaaa5404508fd3fa0ffe39fb5de99fdeeae",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12690",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8459",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 20
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 15
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
+   "event_id": "2020-21-opn-idrefjall-8387",
+   "season": "2020-21",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "48170",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48170&seasoncode=2021",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2020-21",
+   "pdfs": [
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8387_M_MO_RLQ.pdf",
+     "sha256": "001abc1a0e98e9e735f64033a9cb2dc3b0512a55be1fbd861e41910a2e237fdb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13537",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8387",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8387_M_MO_RLF1.pdf",
+     "sha256": "b9279565b2b0fe96399dd03db0260ed6fc6c768e3cb17be45e71a6a6258da90a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13537",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8387",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8388_W_MO_RLQ.pdf",
+     "sha256": "0ae631f9010012a9c9c8cd71ff31a4ef14663901ceca2bbf86a6c75d26343ca3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13536",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8388",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8388_W_MO_RLF1.pdf",
+     "sha256": "8f6c5e4b7ac3b6eee894061ebe37394e1270949153512d5ffb0baa9ea4c59163",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13536",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8388",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "ターン審判 8 人・エア審判 4 人の採点（規則の版に無い審判構成）。取り込み方は城さんの判断待ち（2026-10-04）"
+  },
+  {
+   "event_id": "2020-21-opn-idrefjall-8389",
+   "season": "2020-21",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "48170",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48170&seasoncode=2021",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2020-21",
+   "pdfs": [
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8389_M_MO_RLQ.pdf",
+     "sha256": "6ba7903c46d924eb261eee7cc284c946f36af6a4021597b54941a9d43dd2ebd7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13539",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8389",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8389_M_MO_RLF1.pdf",
+     "sha256": "c4df43ac8c742149599d6fdb261ac30d2e3d4366ae012221ebdbd0e729856e76",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13539",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8389",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8390_W_MO_RLQ.pdf",
+     "sha256": "8bb02cf0c5f5d1e87af6abf67157971f7783b6afcef495940acafccbce8a1c2d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13538",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8390",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2020-21/FIS2021_OPN_IdreFjall_8390_W_MO_RLF1.pdf",
+     "sha256": "caed31f5eae92e415e90a6f5b76b00c125188e34c5b38fb5a67c99b21eddc5c0",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=13538",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8390",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "ターン審判 8 人・エア審判 4 人の採点（規則の版に無い審判構成）。取り込み方は城さんの判断待ち（2026-10-04）"
   },
   {
    "event_id": "2020-21-wjc-krasnoyarsk-8606",
@@ -3324,6 +4516,404 @@
    ]
   },
   {
+   "event_id": "2022-23-fis-winterparkresort-8514",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park Resort",
+   "fis_event_id": "52738",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52738&seasoncode=2023",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2022-23",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8514_M_MO_RLQ.pdf",
+     "sha256": "f56ef84adfefbbf40cf167a1a97914528ddc498653aaa2a9565bf4e0bf5913b4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15626",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8514",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8514_M_MO_RLF1.pdf",
+     "sha256": "269583daa74808d0fca4b3e7657e434b366336c98cd9640007fe0286aff222f5",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15626",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8514",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8514_M_MO_RLF2.pdf",
+     "sha256": "4fbb7b6b7fd3ba110851e500a868cb8ee07d997dc5af2f7b675a3c07e8945371",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15626",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8514",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8515_W_MO_RLQ.pdf",
+     "sha256": "b7864b3b8df9b5f8a53af093fcf837e8e7e1c9b93cafb48bb4cfaa1ced5a2cf1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15627",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8515",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8515_W_MO_RLF1.pdf",
+     "sha256": "cb9dc0954615f7ff93fd43311c2c725eb9f3d737e0ecbe48f53fc66a1f5ddd29",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15627",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8515",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8515_W_MO_RLF2.pdf",
+     "sha256": "f4078c0b03b9b93c81826f199ac825b5af50b5e94aec14f210611b72dd8fa492",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15627",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8515",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-fis-winterparkresort-8516",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Winter Park Resort",
+   "fis_event_id": "52738",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52738&seasoncode=2023",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2022-23",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8516_M_MO_RLQ.pdf",
+     "sha256": "eb2bf683100f7ed6a6c856147c0338f09b6f8e5cc26224d772c3fcb367fa044f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15628",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8516",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8516_M_MO_RLF1.pdf",
+     "sha256": "393c6320d14613117aaae422c354f2f9d8066464d83a495fb8b22d058fd0de36",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15628",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8516",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8516_M_MO_RLF2.pdf",
+     "sha256": "dcf0acd3f42e8a23a8d7f6281e0737cfe0b6b1ae1c19a7f8c4d98845746d92b4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15628",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8516",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8517_W_MO_RLQ.pdf",
+     "sha256": "2849c104745e23c80b4235db49be9617705d41fb87c118f95f891121c9d6167d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15629",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8517",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8517_W_MO_RLF1.pdf",
+     "sha256": "a6b09bea7c01c7b667709a681f5022badf1fe7e2d36839f3eb754a7d3ecdc326",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15629",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8517",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8517_W_MO_RLF2.pdf",
+     "sha256": "c3249b8bc2d73e3ab5dd851def8e0be78ab5585d0ee9572a84a4b847f371c446",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15629",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8517",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-fis-apexmountain-8580",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "52864",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52864&seasoncode=2023",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2022-23",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8580_M_MO_RLQ1.pdf",
+     "sha256": "eb286c595f3d8ed5c45bddbd7e909c059b7c97c04e25df16a4917beede8210e0",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15693",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8580",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8580_M_MO_RLQ2.pdf",
+     "sha256": "315c4eff1e77c70a19ca85d9e95ffad547118e39f48992901e4feb6949152ee2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15693",
+     "round": "Q2",
+     "gender": "M",
+     "codex": "8580",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8580_M_MO_RLF1.pdf",
+     "sha256": "d9c45e3f09cb9a909a373ee44de54d4b5cae89322007d2f38ed44802f98022a1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15693",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8580",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8581_W_MO_RLQ1.pdf",
+     "sha256": "b11fb9ab4cc7562aa804c462a0407166ec2c3ea8ef608bb7b291427613c88ede",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15692",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8581",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8581_W_MO_RLQ2.pdf",
+     "sha256": "b4acb375301c240f73bbe3dc012dc589a3767421d9a550f69e5918a78aa8a9e8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15692",
+     "round": "Q2",
+     "gender": "W",
+     "codex": "8581",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8581_W_MO_RLF1.pdf",
+     "sha256": "3aadbd7d5f022b7f10cf66fde9b2840841ce317c75f8aa7f96108170cb349bd4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15692",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8581",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 22
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 23
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
+   "event_id": "2022-23-fis-apexmountain-8582",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "52864",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52864&seasoncode=2023",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2022-23",
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8582_M_MO_RLQ1.pdf",
+     "sha256": "6483af46f0eaa43c8c01a4f3cd10741db82cdf69d1a33a5c286bdd7db026dc71",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15695",
+     "round": "Q1",
+     "gender": "M",
+     "codex": "8582",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8582_M_MO_RLQ2.pdf",
+     "sha256": "d9725df1a20d1f7e44eb6f165b6e0af3e895d7af5b22f6ddba6d21ba4a86b0d6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15695",
+     "round": "Q2",
+     "gender": "M",
+     "codex": "8582",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8582_M_MO_RLF1.pdf",
+     "sha256": "d068a9b2377eb1ba53479e1795470e45cfd7865b2b12f2d26cac44efdd9e3ce2",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15695",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8582",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8583_W_MO_RLQ1.pdf",
+     "sha256": "dd67dbaa1bdf7fbceba1d3933f9e2858ff39d22a0dab2ab14f9673456dbfb439",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15694",
+     "round": "Q1",
+     "gender": "W",
+     "codex": "8583",
+     "src_type": "RLQ1"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8583_W_MO_RLQ2.pdf",
+     "sha256": "2d2c6db043eff2aab5f3efd93c28585c3d8118693df66678c0e0da73489ab168",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15694",
+     "round": "Q2",
+     "gender": "W",
+     "codex": "8583",
+     "src_type": "RLQ2"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_ApexMountain_8583_W_MO_RLF1.pdf",
+     "sha256": "749b0294b09b418a2f966592b8a030e304ae83aeb0119ddf62900c10e5f10c11",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15694",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8583",
+     "src_type": "RLF1"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q1": {
+       "to": "F1",
+       "n": 22
+      }
+     },
+     "W": {
+      "Q1": {
+       "to": "F1",
+       "n": 22
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": "",
+   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+  },
+  {
    "event_id": "2022-23-nac-apexmountain-8584",
    "season": "2022-23",
    "series": "NAC",
@@ -3397,6 +4987,69 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": "女子予選 19 位 LYNCH Kassidy（bib 22）: PDF は 63.55 点・19 位（審判点からの再計算と一致）、FIS 公式サイトの結果（raceid 15696）は 58.98 点・28 位で、20〜27 位が 1 つずつ繰り上がる。原本側の食い違いとして PDF どおり公開（2026-09-28 確認）"
+  },
+  {
+   "event_id": "2022-23-opn-snowbird-8897",
+   "season": "2022-23",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Snowbird",
+   "fis_event_id": "53295",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53295&seasoncode=2023",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2022-23",
+   "pdfs": [
+    {
+     "path": "OPN/2022-23/FIS2023_OPN_Snowbird_8897_W_MO_RLQ.pdf",
+     "sha256": "ae9e799eb7c31f064adf164cba9f86479e914de8dec56615d0bc9da4f273a5f8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16018",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8897",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2022-23/FIS2023_OPN_Snowbird_8897_W_MO_RLF1.pdf",
+     "sha256": "30759922f2ee1ee729b654be66816e6181ab77f4cd37b459f238232639e85dd6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16018",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8897",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2022-23/FIS2023_OPN_Snowbird_8897_W_MO_RLF2.pdf",
+     "sha256": "686b0f19aaf4385d253ac552c347c6f3e663373057bf4776ee0d20226026f76a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16018",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8897",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 8
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
   },
   {
    "event_id": "2022-23-wjc-chiesainvalmalenco-8344",
@@ -3681,6 +5334,158 @@
       "F1": {
        "to": "F2",
        "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-opn-apexmountain-8605",
+   "season": "2023-24",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "55145",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55145&seasoncode=2024",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2023-24",
+   "pdfs": [
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8605_M_MO_RLQ.pdf",
+     "sha256": "d29963f09120673c26b77e373ecc16f8098c9cb6d949e74bb1729035fd9b59da",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16708",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8605",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8605_M_MO_RLF1.pdf",
+     "sha256": "89cb0c5e38dc21f4ac82f1be5ef5992481a9480c33e1a81b66e5667d346b2ed4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16708",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8605",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8605_M_MO_RLF2.pdf",
+     "sha256": "4552fde16913aae7708e30e7bb29305c09503bed0f1b72a8620c935f5e5d0359",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16708",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8605",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8606_W_MO_RLQ.pdf",
+     "sha256": "0aceb79ea4d285dfa964b3608716798cc8263748abed660fb0735eed90e50f95",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16709",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8606",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8606_W_MO_RLF1.pdf",
+     "sha256": "a8edba332c03ac1e08e73061ee308ceb52e7851e897e4fe7e77bb150de272dea",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16709",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8606",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8606_W_MO_RLF2.pdf",
+     "sha256": "9ac8f0859690211f66924c0e1780db73a674f966691d51af112e5274d826cd1d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16709",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8606",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-opn-snowbird-8772",
+   "season": "2023-24",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Snowbird, UT",
+   "fis_event_id": "55299",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55299&seasoncode=2024",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2023-24",
+   "pdfs": [
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_Snowbird_8772_W_MO_RLQ.pdf",
+     "sha256": "0cebf175aeef5db53b51959913051e8be12c282c6307074459bbc85fa6b1fe74",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16867",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8772",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_Snowbird_8772_W_MO_RLF.pdf",
+     "sha256": "446947fab9bc3e5d06faca5764ffce55a8de6bd807331404fdc5ead2e7007245",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16867",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8772",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
       }
      }
     },
@@ -4117,6 +5922,81 @@
    "notes": ""
   },
   {
+   "event_id": "2024-25-opn-apexmountain-8623",
+   "season": "2024-25",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "57278",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57278&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8622_W_MO_RLQ.pdf",
+     "sha256": "52f59630260748b94ffb5e677f89fe9c5c7ce7473ba783c28dbdc9e3355ef645",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17810",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8622",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8622_W_MO_RLF.pdf",
+     "sha256": "4d4e42f9dbdec4fff98036e12026ccd47583a030906746d0d0a91cb452b8e186",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17810",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8622",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8623_M_MO_RLQ.pdf",
+     "sha256": "621bead7708dc470cb7010178ccbb58ad67f5fb6a289d48a05e6e77cabf75c65",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17811",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8623",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8623_M_MO_RLF.pdf",
+     "sha256": "e717a3b845817c6ce2b813833c21e036e1bde588dad10785a0c2856ee567e484",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17811",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8623",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2024-25-nac-apexmountain-8627",
    "season": "2024-25",
    "series": "NAC",
@@ -4154,6 +6034,55 @@
    "format": {
     "label": null,
     "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-fis-hintertux-8669",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Hintertux",
+   "fis_event_id": "57309",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57309&seasoncode=2025",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2024-25",
+   "pdfs": [
+    {
+     "path": "FIS/2024-25/FIS2025_FIS_Hintertux_8669_M_MO_RLQ.pdf",
+     "sha256": "85ae6ff4007e33bb5939b5ff529813fba84643e1a08071ef9d62c4a41e7b7124",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17859",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8669",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2024-25/FIS2025_FIS_Hintertux_8669_M_MO_RLF.pdf",
+     "sha256": "a5621d0d2f2962b946c506de20fd7b8d1a9b8c5b633944a584681c9994da9ff3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17859",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8669",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      }
+     }
+    },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
@@ -4304,6 +6233,225 @@
      "round": "F2",
      "gender": "W",
      "codex": "8359",
+     "src_type": "RLF2"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {
+     "M": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     },
+     "W": {
+      "Q": {
+       "to": "F1",
+       "n": 16
+      },
+      "F1": {
+       "to": "F2",
+       "n": 6
+      }
+     }
+    },
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-opn-hintertux-8393",
+   "season": "2025-26",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Hintertux",
+   "fis_event_id": "58324",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58324&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "OPN/2025-26/FIS2026_OPN_Hintertux_8393_M_MO_RLF.pdf",
+     "sha256": "5a9d9c34158b7adf17f418584088815970800f64c3381966f0341051c9ac43aa",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18702",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8393",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-opn-idrefjall-8491",
+   "season": "2025-26",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "58523",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58523&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "OPN/2025-26/FIS2026_OPN_Idrefjall_8491_M_MO_RLF.pdf",
+     "sha256": "bea18d7cd4536e53fcfb438eed06f8fcdced37e1fc572ee1006d447a489694c0",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18802",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8491",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2025-26/FIS2026_OPN_Idrefjall_8492_W_MO_RLF.pdf",
+     "sha256": "aa3cf45fb9ff92d9a1e7c681e34860a6a7624b6041b35d3e6ee9cf344b9bd907",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18801",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8492",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-idrefjall-8493",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "58523",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58523&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_Idrefjall_8493_M_MO_RLF.pdf",
+     "sha256": "6b1d9e65b420e83e57fa5f4aed6ca25773027d3992a1b84660e0d3ede07b2183",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18804",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8493",
+     "src_type": "RLF"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_Idrefjall_8494_W_MO_RLF.pdf",
+     "sha256": "2790bfa7563c63bf001252153c52d41be24e65e87fb6c06ca78c563421eb592b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18803",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8494",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-apexmountain-8685",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "59476",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59476&seasoncode=2026",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2025-26",
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8685_M_MO_RLQ.pdf",
+     "sha256": "e263e33b11f34ae0f075606863435fc46ad562c866d864def7e34e3292fb3d92",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19003",
+     "round": "Q",
+     "gender": "M",
+     "codex": "8685",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8685_M_MO_RLF1.pdf",
+     "sha256": "0d4579808f58bca69674ff1e012c4587693eff373de5fa922a013627d65a7b03",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19003",
+     "round": "F1",
+     "gender": "M",
+     "codex": "8685",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8685_M_MO_RLF2.pdf",
+     "sha256": "aecda26bec7f7bd72112445122cd51a212be4aab8c3bfcdbf021d51a234b35a3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19003",
+     "round": "F2",
+     "gender": "M",
+     "codex": "8685",
+     "src_type": "RLF2"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8686_W_MO_RLQ.pdf",
+     "sha256": "7fd4014872395661a9e6b7b2aeec256386f1e72c3fe90c2e74bfabbdeece205c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19004",
+     "round": "Q",
+     "gender": "W",
+     "codex": "8686",
+     "src_type": "RLQ"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8686_W_MO_RLF1.pdf",
+     "sha256": "0ad01598decc8f27ef2391b93faaea3caf2a7535f11495ce4a9ab5518b876732",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19004",
+     "round": "F1",
+     "gender": "W",
+     "codex": "8686",
+     "src_type": "RLF1"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8686_W_MO_RLF2.pdf",
+     "sha256": "a330c48e82bfee14bb61182182361582576851462c7b78a57e226d446765aff3",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19004",
+     "round": "F2",
+     "gender": "W",
+     "codex": "8686",
      "src_type": "RLF2"
     }
    ],

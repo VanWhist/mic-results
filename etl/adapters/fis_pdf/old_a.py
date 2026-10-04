@@ -71,8 +71,10 @@ def parse_meta(text):
     meta['codex'] = m.group(1) if m else None
     judges = []
     # 行の中だけで読む（審判の欄が空の行「Judge 4 (Turns):」がある。世界ジュニア 2015 は 3 人）
-    for m in re.finditer(r'^Judge (\d) \((Turns|Air)\):[ \t]*(\S.*?)[ \t]+([A-Z]{3})[ \t]*$', text, re.M):
-        judges.append({'judge_no': int(m.group(1)), 'role': m.group(2), 'name': m.group(3).strip(), 'noc': m.group(4)})
+    # 国名が「N/A」の審判がいる（2015 Winter Park）。国名不明（空）として読む
+    for m in re.finditer(r'^Judge (\d) \((Turns|Air)\):[ \t]*(\S.*?)[ \t]+([A-Z]{3}|N/A)[ \t]*$', text, re.M):
+        judges.append({'judge_no': int(m.group(1)), 'role': m.group(2), 'name': m.group(3).strip(),
+                       'noc': '' if m.group(4) == 'N/A' else m.group(4)})
     meta['judges'] = judges
     officials = []
     for lab in ('FIS Technical Delegate', 'Head Judge', 'Chief of Competition', 'FIS Race Director', 'Chief of Course'):

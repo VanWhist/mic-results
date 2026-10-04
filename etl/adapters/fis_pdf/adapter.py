@@ -157,6 +157,15 @@ def codes_for(section, runs):
     return base, base
 
 
+def labeled_codes(runs):
+    """区切りの無い総合の報告で、選手の走りすべてに印（F2: / F1: / Q1:）があるとき（2017 Winter Park）: (割り当て, 滑ったはずの
+    ラウンド)。最後の走りの印より下のラウンドはすべて滑ったはず。印が無い・重なるときは None"""
+    labels = [LABEL_CODE.get(r.get('run_label')) for r in runs]
+    if not all(labels) or len(set(labels)) != len(labels) or any(c not in LADDER for c in labels):
+        return None
+    return labels, LADDER[LADDER.index(labels[0]):]
+
+
 def split_overall(recs, meta, label):
     """総合の報告の記録（パーサ A または B）をラウンドごとに分ける。戻り値: ({code: [rec]}, [問題の文言])。
     区切りの無い報告（ANC 2025 は予選だけ、世界ジュニア 2019 の RLF は決勝 1 だけ）は 1 つのラウンド"""
@@ -167,7 +176,10 @@ def split_overall(recs, meta, label):
     groups, problems = collections.OrderedDict(), []
     for runs in athlete_runs(recs):
         sec = runs[0].get('section')
-        codes = (codes_for(sec, runs) or (None,))[0] if sec else [single]
+        if sec:
+            codes = (codes_for(sec, runs) or (None,))[0]
+        else:
+            codes = (labeled_codes(runs) or ([single],))[0]
         if codes is None:
             problems.append(f"{label}: 区切り「{sec}」を知らない（{runs[0].get('name')}）")
             continue
@@ -215,7 +227,8 @@ def partial_codes(recs):
     戻り値: {code: その区切りより上の区切りで終わった選手のうち、このラウンドの走りが無い人数}"""
     expected, got = collections.defaultdict(set), collections.defaultdict(set)
     for runs in athlete_runs(recs):
-        codes, should = codes_for(runs[0].get('section'), runs) or ([], [])
+        sec = runs[0].get('section')
+        codes, should = (codes_for(sec, runs) if sec else labeled_codes(runs)) or ([], [])
         for c in should:
             expected[c].add(runs[0]['bib'])
         for r, c in zip(runs, codes):
@@ -277,6 +290,63 @@ def drop_nonstarters(round_id, recs, meta):
     return [Finding('warning', round_id, 'layer0', f"進めなかった {len(dns)} 名が dns で並ぶ様式。進出人数の印字 Cutoff {n} と一致したので除いた")]
 
 
+def drop_carried(round_id, recs_a, recs_b, meta, lower):
+    """カナダの集計（GSS、Canada Classic 2026 など）の決勝の報告は、このラウンドの出場者（表頭の Number of Competitors 人、
+    順位 1〜N）の後に、前のラウンドで終わった選手の行（前のラウンドの順位・走り）を続けて載せる。
+    出場人数 N より後ろの行が、前のラウンドの報告書の同じ選手の行（ゼッケン・状態・走りの点・順位）とすべて一致し、
+    残りがちょうど N 人のときだけ除く。一致しない行があれば除かずに止める。
+    lower: 同じ性別の前のラウンドの記録（パーサ A）のリスト。戻り値: [Finding]"""
+    n = meta.get('num_competitors')
+    if not n or len(recs_a) <= n or not lower:
+        return []
+    seen = {}
+    for recs in lower:
+        for r in recs:
+            seen.setdefault(r['bib'], []).append(r)
+    head = recs_a[:n]
+    tail = recs_a[n:]
+    if sorted(r['rank'] for r in head if r.get('rank') is not None) != list(range(1, 1 + sum(1 for r in head if r.get('rank') is not None))):
+        return [Finding('error', round_id, 'layer0', f"出場人数の印字 {n} より行が多い（{len(recs_a)} 行）が、先頭 {n} 行の順位が 1 からの連番でない")]
+    same = lambda x, y: (x.get('status'), x.get('run_score'), x.get('rank')) == (y.get('status'), y.get('run_score'), y.get('rank'))
+    bad = [r for r in tail if not any(same(r, y) for y in seen.get(r['bib'], []))]
+    if bad or {r['bib'] for r in head} & {r['bib'] for r in tail}:
+        return [Finding('error', round_id, 'layer0',
+                        f"出場人数の印字 {n} より後ろの {len(tail)} 行のうち {len(bad)} 行が前のラウンドの行と一致しない（除けない）: "
+                        + ', '.join(f"{r.get('name')} {r.get('rank')}" for r in bad[:5]))]
+    keep = {r['bib'] for r in head}
+    recs_a[:] = head
+    if recs_b is not None:
+        recs_b[:] = [r for r in recs_b if r['bib'] in keep]
+    return [Finding('warning', round_id, 'layer0',
+                    f"前のラウンドで終わった {len(tail)} 名の行が続けて載る様式。出場人数の印字 {n} より後ろの行は前のラウンドの行と一致したので除いた")]
+
+
+def apply_status_fixes(round_id, recs_a, recs_b, fixes, used):
+    """registry の status_fixes [{round_id, bib, status, basis}]: 順位も状態も点も印字の無い行（2017 Winter Park の
+    予選は DNF・DNS の選手の行に「Q1:」しか印字が無い）の状態。FIS 公式サイトの結果を根拠に登録する。
+    印字の無い行にだけ当て、当たらない登録は止める。戻り値: [Finding]"""
+    f = []
+    for i, fx in enumerate(fixes):
+        if fx.get('round_id') != round_id:
+            continue
+        hit = False
+        for recs in (recs_a, recs_b or []):
+            for r in recs:
+                if str(r.get('bib')) == str(fx['bib']) and r.get('rank') is None and r.get('run_score') is None \
+                        and r.get('status') in (None, 'OK'):
+                    r['status'] = fx['status']
+                    # 途中棄権などの行と同じ形にする（パーサ A は審判の欄を空の点の並びで返す）
+                    for k in ('base_scores', 'ded_scores'):
+                        if all(v is None for v in r.get(k) or []):
+                            r[k] = []
+                    hit = True
+        if hit:
+            used.add(i)
+            f.append(Finding('warning', round_id, 'layer0',
+                             f"BIB {fx['bib']} は状態の印字が無い。{fx['status']} とした（例外。根拠: {fx['basis']}）"))
+    return f
+
+
 def load_event(ev, imported_at, log=print):
     """registry の 1 大会 → [ctx]。pdfs[] の各要素: path, sha256, url, page_url, round, gender, codex。
     round が 'overall' の PDF（総合の報告）からは、区切りと走りの並びでラウンドを組み立てる（同じ性別で別の報告書がある
@@ -293,6 +363,8 @@ def load_event(ev, imported_at, log=print):
                 for r in ev['page_rounds']]
     own = {(p.get('gender'), p['round']) for p in pdfs if p['round'] != 'overall'}
     ctxs = []
+    lower_of = collections.defaultdict(list)  # 性別 → [(ラウンド, パーサ A の記録)]（drop_carried の照合用）
+    fixes_used = set()
     for pdf in pdfs:
         path = pdf_path(pdf['path'])
         ascii_layout = pdf.get('layout') == 'ascii'
@@ -318,9 +390,9 @@ def load_event(ev, imported_at, log=print):
             code = pdf['round']
             if meta_a.get('q_layout') and code == 'Q':
                 code = 'Q2'  # 予選2 の報告書は Q1/Q2 二段で印字される
-            pre, rt = [], None
+            round_id = f"{ev['event_id']}-{gender}-{code}"
+            pre, rt = apply_status_fixes(round_id, recs_a, recs_b, ev.get('status_fixes') or [], fixes_used), None
             if pdf.get('layout') in ('ascii', 'fis_old', 'oneline', 'turns_first'):
-                round_id = f"{ev['event_id']}-{gender}-{code}"
                 if ascii_layout:
                     pre += drop_nonstarters(round_id, recs_a, meta_a)
                     if recs_b is not None:
@@ -331,6 +403,11 @@ def load_event(ev, imported_at, log=print):
                     pre.append(Finding('error', round_id, 'layer1', f"B が読めない行 p{p[0]}: {p[1]}"))
                 # 見出しのラウンド名は様式でまちまち（「Moguls Run 1」「Qualif+finale 16 Descente 1」）なので既定名にする
                 rt = config.ROUND_TEXT_DEFAULT.get(code, code)
+            elif code in config.ROUND_ORDER:
+                order = config.ROUND_ORDER.index(code)
+                lower = [recs for c, recs in lower_of[gender] if c in config.ROUND_ORDER and config.ROUND_ORDER.index(c) < order]
+                pre += drop_carried(round_id, recs_a, recs_b, meta_a, lower)
+                lower_of[gender].append((code, recs_a))
             ctxs.append(make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_error, rules, tier, pre, log,
                                  round_text=rt))
             continue
@@ -345,6 +422,8 @@ def load_event(ev, imported_at, log=print):
                 continue
             round_id = f"{ev['event_id']}-{gender}-{code}"
             extra = [Finding('error', round_id, 'layer1', p) for p in prob_a + prob_b]
+            extra += apply_status_fixes(round_id, grp, gb.get(code) if recs_b is not None else None,
+                                        ev.get('status_fixes') or [], fixes_used)
             ma, mb = dict(meta_a), (dict(meta_b) if meta_b is not None else None)
             partial = missing.get(code, 0)
             if code not in lowest or partial:
@@ -377,6 +456,10 @@ def load_event(ev, imported_at, log=print):
             else:
                 ctx['findings'] += fill_overall_ranks(round_id, ctx['records'], ctx['rules'])
             ctxs.append(ctx)
+    for i, fx in enumerate(ev.get('status_fixes') or []):
+        if i not in fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"status_fixes の {fx['round_id']} BIB {fx['bib']} に当たる行（印字の無い行）が無い（登録を見直す）"})
     return ctxs
 
 

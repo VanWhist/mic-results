@@ -13,7 +13,7 @@ import pdfplumber
 from ... import config
 from ...verify import Finding
 
-PARSER_VERSION = 'FIS-DM-1.1'
+PARSER_VERSION = 'FIS-DM-1.2'
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 # 1 行目: [順位] Bib FISコード 名前… 国 生年 [対戦経過]
 # 順位の後ろに点が付く様式がある（「1. 7 2529403 …」、2017-19 の NAC・世界ジュニア）。3 桁の Bib が「…」で切れて
@@ -23,8 +23,9 @@ MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 
 RE_ROW = re.compile(r'^(?:(DNS|DNF|DSQ)\s+)?(?:(\d+)(?:\.\s*|\s+))?(\d+)(…?)\s*(\d{7})\s*(.+?)\s*([A-Z]{3})\s+((?:19|20)\d\d)\b\s*(.*)$')
 RE_ROW_NOYB = re.compile(r'^(\d+)\s+(\d+)\s+(\d{7})\s+(.+?)\s+([A-Z]{3})(?:\s+(DNF|DNS|DSQ))?$')
 # 'QUARETERFINALS' は 2017 札幌アジア大会の印字の綴り誤り（Quarter Final として読む）
+# 'Group Phase' は組み分けの段（世界ジュニア 2024・Apex 2023-24 の女子）。見出しと読まないと前の選手の名前の折り返しになる
 RE_STAGE = re.compile(r'^(Big ?Final|Small ?Final|Semi ?Finals?|Quarter ?Finals?|Quareter ?Finals?|Eight ?Finals?|1/\d+ ?Finals?|Round ?of ?\d+'
-                      r'|Not ?Ranked|Qualification(?: ?Heat ?Round)?|Did ?Not ?(?:Start|Finish)|Disqualified)$', re.I)
+                      r'|Group ?Phase|Not ?Ranked|Qualification(?: ?Heat ?Round)?|Did ?Not ?(?:Start|Finish)|Disqualified)$', re.I)
 # 対戦経過の印（R32-1: / EF-3: / QF-2: / SF-1: / F: / SmF: / Big F: / BigF:）
 RE_PROG = re.compile(r'(?:\b(?:R\d+|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
 # 対戦経過が「Tot: 20.00, Rk 1」の途中で折り返した行（世界ジュニア 2021）
@@ -44,7 +45,7 @@ def stage_name(s):
     k = re.sub(r'\s+', '', s).lower()
     fixed = {'bigfinal': 'Big Final', 'smallfinal': 'Small Final', 'semifinal': 'Semi Final', 'semifinals': 'Semi Final',
              'quarterfinal': 'Quarter Final', 'quarterfinals': 'Quarter Final', 'quareterfinals': 'Quarter Final', 'eightfinal': 'Eight Final',
-             'eightfinals': 'Eight Final', 'notranked': 'Not Ranked', 'qualification': 'Qualification',
+             'eightfinals': 'Eight Final', 'groupphase': 'Group Phase', 'notranked': 'Not Ranked', 'qualification': 'Qualification',
              'qualificationheatround': 'Qualification Heat Round', 'didnotstart': 'Did Not Start',
              'didnotfinish': 'Did Not Finish', 'disqualified': 'Disqualified'}
     if k in fixed:

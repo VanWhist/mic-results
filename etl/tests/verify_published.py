@@ -485,8 +485,10 @@ def check_rank_only_fis(rnd_runs):
                 pos += len(p)
         if not pieces or pieces[0] not in norm(line) or pos < 0:
             issues.append((r, 'name_not_on_line', f"{r['name']} / {line[:60]} / {nxt[:30]}"))
-        # 国・生年は語として一致するか（名前と国名がくっつく「RiccardoSUI」は語の末尾で見る）
-        if r.get('noc') is not None and not any(t == r['noc'] or (t.endswith(r['noc']) and t[:-3].isalpha() and t[-4].islower()) for t in toks):
+        # 国・生年は語として一致するか（名前と国名がくっつく「RiccardoSUI」は語の末尾で見る。大文字の姓とくっつく
+        # 「GAGNON-DESHARNAISCAN」（Apex 2023-24 DM）は、国名の前がちょうど氏名の語のときだけ認める）
+        if r.get('noc') is not None and not any(t == r['noc'] or (t.endswith(r['noc']) and t[:-3].isalpha() and t[-4].islower())
+                                                or (t.endswith(r['noc']) and t[:-3] in r['name'].split()) for t in toks):
             issues.append((r, 'noc_not_on_line', f"noc={r['noc']} / {line[:60]}"))
         if r.get('yb') is not None and not any(t == str(r['yb']) for t in toks):
             issues.append((r, 'yb_not_on_line', f"yb={r['yb']} / {line[:60]}"))

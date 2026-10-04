@@ -240,7 +240,7 @@ def main(argv=None):
                 findings += verify.layer3_progression(ev['event_id'], rbc, advance_for(ev, gender))
     all_runs = [r for ctx in rounds_ctx for r in ctx['runs']]
     all_rounds = [ctx['round'] for ctx in rounds_ctx]
-    findings += verify.layer4(all_runs, all_rounds, merged_ids)
+    findings += verify.layer4(all_runs, all_rounds, merged_ids, master_yb(master))
 
     layer5_status = 'skipped'
     layer5_cache = load_json(config.LAYER5_CACHE, {})  # moguls-results から引き継いだ FIS 公式 Web との照合結果
@@ -362,6 +362,12 @@ def apply_athlete_merges(loaded, master):
     if n:
         print(f"  同一人物の統合（athlete_master.json）で athlete_id を移した記録: {n}")
     return {m['merge_into'] for m in merges.values()}
+
+
+def master_yb(master):
+    """athlete_master.json の yb: 主催者の PDF が生年を打ち間違えて印字が割れる選手の正しい生年（根拠は yb_basis。
+    FIS の選手登録）。{athlete_id: 生年}"""
+    return {aid: m['yb'] for aid, m in master.get('athletes', {}).items() if m.get('yb')}
 
 
 def strip_private(run):
@@ -561,7 +567,8 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         fis = aid if aid.isdigit() else next((x['fis_code'] for x in rs_sorted if x.get('fis_code')), None)
         saj = next((x['saj_no'] for x in (reversed(rs_sorted) if aid in merge_targets else rs_sorted) if is_saj_no(x.get('saj_no'), fis)), None)
         athletes.append({'athlete_id': aid, 'fis_code': fis, 'saj_no': saj, 'name': name, 'aliases': [a for a in alias_list if a],
-                         'noc': rs_sorted[-1].get('noc'), 'yb': next((x['yb'] for x in reversed(rs_sorted) if x.get('yb')), None),
+                         'noc': rs_sorted[-1].get('noc'),
+                         'yb': master_yb(master).get(aid) or next((x['yb'] for x in reversed(rs_sorted) if x.get('yb')), None),
                          # 所属は FIS 様式には印字されないので、最後に印字があった大会の値を使う
                          'affiliation': next((x['affiliation'] for x in reversed(rs_sorted) if x.get('affiliation')), None),
                          'club': next((x['club'] for x in reversed(rs_sorted) if x.get('club')), None),

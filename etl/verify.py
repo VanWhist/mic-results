@@ -318,16 +318,22 @@ def layer3_progression(event_id, rounds_by_code, advance):
 
 
 # ---------------------------------------------------------------- layer 4: cross-file consistency
-def layer4(all_runs, rounds, merged_ids=()):
-    """merged_ids: athlete_master.json で同一人物として統合した選手。印字の FIS コードが複数あるのは統合の結果なので警告に留める。"""
+def layer4(all_runs, rounds, merged_ids=(), master_yb=None):
+    """merged_ids: athlete_master.json で同一人物として統合した選手。印字の FIS コードが複数あるのは統合の結果なので警告に留める。
+    master_yb: athlete_master.json の yb（{athlete_id: 生年}）。印字の生年が割れていても、そのうちの 1 つが登録の生年なら警告に留める"""
     f = []
+    master_yb = master_yb or {}
     by_id = collections.defaultdict(list)
     for r in all_runs:
         by_id[r['athlete_id']].append(r)
     for aid, rs in by_id.items():
         ybs = {r['yb'] for r in rs if r['yb']}
         if len(ybs) > 1:
-            f.append(Finding('error', 'global', 'layer4', f"選手 {aid} の生年が複数 {sorted(ybs)}: {sorted({r['name'] for r in rs})}"))
+            if master_yb.get(aid) in ybs:
+                f.append(Finding('warning', 'global', 'layer4',
+                                 f"選手 {aid} の生年の印字が複数 {sorted(ybs)}。athlete_master.json の生年 {master_yb[aid]} を使う"))
+            else:
+                f.append(Finding('error', 'global', 'layer4', f"選手 {aid} の生年が複数 {sorted(ybs)}: {sorted({r['name'] for r in rs})}"))
         names = {r['name'] for r in rs}
         # 日本語表記（SAJ 様式）とローマ字表記（FIS 様式）が両方あるのは当然なので、同じ文字種の中で表記が割れたときだけ警告する
         for script in ('ja', 'latin'):

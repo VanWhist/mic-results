@@ -110,7 +110,8 @@ def _meta(text, words):
         parts = line.split()
         if len(parts) >= 4 and parts[0] == 'Judge' and parts[1].isdigit() and parts[2] in ('(Turns):', '(Air):'):
             noc = parts[-1] if re.fullmatch(r'[A-Z]{3}', parts[-1]) else ''
-            name = ' '.join(parts[3:-1] if noc else parts[3:])
+            # 国名が「N/A」の審判（2015 Winter Park）は国名不明（空）。名前に含めない
+            name = ' '.join(parts[3:-1] if noc or parts[-1] == 'N/A' else parts[3:])
             judges.append({'judge_no': int(parts[1]), 'role': parts[2][1:-2], 'name': name, 'noc': noc})
     meta['judges'] = judges
     officials = []

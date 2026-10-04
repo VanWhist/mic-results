@@ -437,6 +437,84 @@
    ]
   },
   {
+   "event_id": "2018-19-opn-winterpark-8873",
+   "season": "2018-19",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Winter Park, CO",
+   "fis_event_id": "44594",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=44594&seasoncode=2019",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8873_M_DM_RLF.pdf",
+     "sha256": "95fcfab91abd11345b29e85fc188f988265242aeeaaf190e89e7716dd421235c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11894",
+     "gender": "M",
+     "codex": "8873",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2018-19/FIS2019_OPN_WinterPark_8872_W_DM_RLF.pdf",
+     "sha256": "421297cb5488bf3e99c1aa2b554713bfb5341589170042a99c34a121de2a44b4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11893",
+     "gender": "W",
+     "codex": "8872",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2019-20-opn-steamboat-8447",
+   "season": "2019-20",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Steamboat",
+   "fis_event_id": "46543",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=46543&seasoncode=2020",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8447_M_DM_RLF.pdf",
+     "sha256": "6c72788a2f94962d518ece8ecc23c795043813a1b8d7ffaeaa3a4561e77dafcb",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12662",
+     "gender": "M",
+     "codex": "8447",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2019-20/FIS2020_OPN_Steamboat_8446_W_DM_RLF.pdf",
+     "sha256": "951e509004d6d2e7f347d40b92691f6fc365f10ba3b220509c870600556df3e8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=12661",
+     "gender": "W",
+     "codex": "8446",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2020-21-wjc-krasnoyarsk-8612",
    "season": "2020-21",
    "series": "WJC",
@@ -575,6 +653,45 @@
    "notes": ""
   },
   {
+   "event_id": "2022-23-fis-winterparkresort-8518",
+   "season": "2022-23",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Winter Park Resort",
+   "fis_event_id": "52738",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=52738&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8518_M_DM_RLF.pdf",
+     "sha256": "13dd771e193b9b849efaf8948f00ff653834f0648c358d6637705042a68b3c1d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15630",
+     "gender": "M",
+     "codex": "8518",
+     "src_type": "RLF"
+    },
+    {
+     "path": "FIS/2022-23/FIS2023_FIS_WinterParkResort_8519_W_DM_RLF.pdf",
+     "sha256": "00e572c391a32c0b332a6a1a394c327c8d335fbf5fcae95a918e1945d4087166",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15631",
+     "gender": "W",
+     "codex": "8519",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2022-23-nac-apexmountain-8586",
    "season": "2022-23",
    "series": "NAC",
@@ -604,6 +721,36 @@
      "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15698",
      "gender": "W",
      "codex": "8587",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-opn-snowbird-8899",
+   "season": "2022-23",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Snowbird",
+   "fis_event_id": "53295",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53295&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2022-23/FIS2023_OPN_Snowbird_8899_W_DM_RLF.pdf",
+     "sha256": "7ae2cb1e0a2f08b33edfaeadd362471251683e7f1d1b93b3ffcd95c4b8118135",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16020",
+     "gender": "W",
+     "codex": "8899",
      "src_type": "RLF"
     }
    ],
@@ -682,6 +829,75 @@
      "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16387",
      "gender": "W",
      "codex": "8218",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-opn-apexmountain-8607",
+   "season": "2023-24",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "55145",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55145&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8607_M_DM_RLF.pdf",
+     "sha256": "b784d7ecda2f5cb395f0ca647a26acd43f2b07eb7747ef8cc1f8c854cf29e38c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16710",
+     "gender": "M",
+     "codex": "8607",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_ApexMountain_8608_W_DM_RLF.pdf",
+     "sha256": "ddfd6f239aabbaf8f4b3dd67cb5e92baf0c0d8d0bd9c7fed13bd13824990c896",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16711",
+     "gender": "W",
+     "codex": "8608",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-opn-snowbird-8774",
+   "season": "2023-24",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Snowbird, UT",
+   "fis_event_id": "55299",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55299&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2023-24/FIS2024_OPN_Snowbird_8774_W_DM_RLF.pdf",
+     "sha256": "a86a6c6091a6a1739df6554e3ab824750fe4dd20670d743bf72e40af5d7eb12a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16869",
+     "gender": "W",
+     "codex": "8774",
      "src_type": "RLF"
     }
    ],
@@ -809,6 +1025,66 @@
    "notes": ""
   },
   {
+   "event_id": "2024-25-opn-apexmountain-8621",
+   "season": "2024-25",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "57278",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57278&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8621_W_DM_RLF.pdf",
+     "sha256": "17850d3de4d20140a8c4897644b4050a3a83dd2cc63861e53344d0fcde722388",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17816",
+     "gender": "W",
+     "codex": "8621",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-opn-apexmountain-8624",
+   "season": "2024-25",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "57278",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57278&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2024-25/FIS2025_OPN_ApexMountain_8624_M_DM_RLF.pdf",
+     "sha256": "fb6f89f48381970520220a8df51b47adf74e5ccd71ef39c745f39abbed70e7db",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17817",
+     "gender": "M",
+     "codex": "8624",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
    "event_id": "2024-25-nac-apexmountain-8631",
    "season": "2024-25",
    "series": "NAC",
@@ -877,6 +1153,75 @@
      "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18674",
      "gender": "W",
      "codex": "8364",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-opn-hintertux-8395",
+   "season": "2025-26",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Hintertux",
+   "fis_event_id": "58324",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=58324&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "OPN/2025-26/FIS2026_OPN_Hintertux_8395_M_DM_RLF.pdf",
+     "sha256": "3e3103248c308fb9edfc0d0442ea24940c3e55b80d736908f1e46bb2957e4c8b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18704",
+     "gender": "M",
+     "codex": "8395",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-fis-apexmountain-8687",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "59476",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59476&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8687_M_DM_RLF.pdf",
+     "sha256": "716a333754dcd295a74a0a3628bd281a1778e2750e9c67438b6bde3bb47b51b4",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19005",
+     "gender": "M",
+     "codex": "8687",
+     "src_type": "RLF"
+    },
+    {
+     "path": "FIS/2025-26/FIS2026_FIS_ApexMountain_8688_W_DM_RLF.pdf",
+     "sha256": "10abdac1a6dc985d48aa67fa9b1cf05df4ff2e5d4718168ddc78adba0696710d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19006",
+     "gender": "W",
+     "codex": "8688",
      "src_type": "RLF"
     }
    ],

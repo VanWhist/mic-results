@@ -24,7 +24,7 @@ SURVEY = os.path.join(INV, 'fis_overseas_survey.jsonl')
 OUT = os.path.join(config.REGISTRY_DIR, 'fis_overseas.json')
 PRESERVE = ('rules', 'notes', 'tier', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions',
             'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions', 'date_fallback',
-            'pace_exceptions')
+            'pace_exceptions', 'status_fixes')
 ROUND_OF = {'RLQ': 'Q', 'QRL': 'Q', 'RLQ1': 'Q1', 'RLQ2': 'Q2', 'RLF1': 'F1', 'F1RL': 'F1', 'RLF2': 'F2', 'F2RL': 'F2'}
 FINAL_ONLY = ('RLF', 'FRL')
 RACE_URL = 'https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid={}'
@@ -118,6 +118,23 @@ def frl_round(path):
     return f"F{m.group(1)}" if m else None
 
 
+def content_round(path, fam):
+    """報告書の中身から見たラウンド（ファイル名の種類と食い違う年がある）。
+    - 選手の行に複数のラウンドの印（F2: / F1: / Q1:）が並ぶ → 'overall'（2017 Winter Park の RLQ は総合の報告）
+    - 旧版の様式（fis_old）の見出し「Ladies' Moguls Final 1」 → 'F1'（2015 Winter Park の女子 QRL は決勝 1 の報告の写し）
+    分からなければ None"""
+    with pdfplumber.open(path) as pdf:
+        tx = pdf.pages[0].extract_text() or ''
+    labels = set(re.findall(r'^\d+ \d+ \d{7} .*?\b(Q1|Q2|F1|F2|F3):', tx, re.M))
+    if len(labels) > 1 and labels & {'F1', 'F2', 'F3'}:
+        return 'overall'
+    if fam == 'fis_old':
+        m = re.search(r"Moguls\s+(Final\s*(\d)|Qualification)\s*$", tx, re.M)
+        if m:
+            return f"F{m.group(2)}" if m.group(2) else 'Q'
+    return None
+
+
 def rules_versions():
     return set(load_json(os.path.join(config.RULES_DIR, 'rulesets.json'), {}).get('versions', {}))
 
@@ -169,16 +186,37 @@ def main():
             for c in sorted(grp):
                 fl = dict(items)[c]
                 types = {x['typ'] for x in fl}
+                mislabeled = []
                 for x in fl:
-                    if x['typ'] in FINAL_ONLY and layout_family(os.path.join(config.PDF_ROOT, x['rel'])) == 'fis_old':
-                        x['round_override'] = frl_round(os.path.join(config.PDF_ROOT, x['rel']))
-                per_round = [x for x in fl if x['typ'] in ROUND_OF or x.get('round_override')]
-                # 総合（RLF/FRL）: 決勝のラウンドごとの報告書が無いときだけ使う（ANC など。予選の報告書があればそれは別に使う）
-                overall = [x for x in fl if x['typ'] in FINAL_ONLY]
-                round_of = lambda x: x.get('round_override') or ROUND_OF.get(x['typ'], 'overall')
+                    xp = os.path.join(config.PDF_ROOT, x['rel'])
+                    if x['typ'] in FINAL_ONLY and layout_family(xp) == 'fis_old':
+                        x['round_override'] = frl_round(xp)
+                    elif ROUND_OF.get(x['typ'], '').startswith('Q'):
+                        # 予選の名前の報告書の中身が別のラウンド: 総合の報告なら総合として使い、別のラウンドの写しなら使わない。
+                        # どちらも、この予選は総合の報告から組み立てる（下の overall）
+                        cr = content_round(xp, layout_family(xp))
+                        if cr == 'overall':
+                            x['as_overall'] = True
+                            mislabeled.append(x)
+                        elif cr and cr != ROUND_OF[x['typ']] and not cr.startswith('Q'):
+                            x['dropped'] = f"{x['typ']} の中身は {cr} の報告"
+                            mislabeled.append(x)
+                per_round = [x for x in fl if (x['typ'] in ROUND_OF and x not in mislabeled) or x.get('round_override')]
+                # 総合（RLF/FRL）: 決勝のラウンドごとの報告書が無いときだけ使う（ANC など。予選の報告書があればそれは別に使う）。
+                # 予選の報告書が中身の違うものだったときも、その予選を組み立てるのに使う
+                overall = [x for x in fl if x.get('as_overall')] + [x for x in fl if x['typ'] in FINAL_ONLY]
+                round_of = lambda x: 'overall' if x.get('as_overall') else (x.get('round_override') or ROUND_OF.get(x['typ'], 'overall'))
                 overall = [x for x in overall if not x.get('round_override')]
                 has_final = any(round_of(x).startswith('F') for x in per_round)
-                use = per_round + ([] if has_final else overall[:1])
+                if has_final and mislabeled and overall and layout_family(os.path.join(config.PDF_ROOT, overall[0]['rel'])) != 'fis_std':
+                    # 総合の報告から予選を組み立てられるのは FIS 標準の様式だけ（2015 Winter Park の女子の総合は旧版の別の様式）。
+                    # その予選は載せない
+                    skipped['予選の報告書が無く、総合の報告も読めない様式（予選を載せない）'] += 1
+                    overall = []
+                use = per_round + ([] if has_final and not mislabeled else overall[:1])
+                for x in mislabeled:
+                    if x.get('dropped'):
+                        skipped[f"中身の違う報告書を使わない（{x['dropped']}）"] += 1
                 fams = {layout_family(os.path.join(config.PDF_ROOT, x['rel'])) for x in use}
                 fam = fams.pop() if len(fams) == 1 else (sorted(fams) or [None])[0]
                 if fam not in ('fis_std', 'ascii', 'fis_old', 'oneline') or fams:

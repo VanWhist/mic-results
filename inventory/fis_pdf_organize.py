@@ -17,8 +17,34 @@ for l in open(SURVEY, encoding='utf-8'):
     if ev.get('supplement'):
         continue
     for r in ev['races']:
-        races[(ev.get('season'), r['codex'])] = dict(event_id=ev['event_id'], place=ev.get('place'), cat=ev.get('cat') or PLAN_CAT.get(ev['event_id']),
+        cat = ev.get('cat') or PLAN_CAT.get(ev['event_id'])
+        # 区分が 'OPN/FIS'・'NC,FIS' の大会（FIS 格・Open の調査）は、レース名の末尾の区分（'… Moguls | OPN'）を使う
+        rc = re.search(r'\|\s*([A-Z]{2,4})\s*$', r.get('race', ''))
+        if cat and re.search(r'[/,]', cat) and rc:
+            cat = rc.group(1)
+        races[(ev.get('season'), r['codex'])] = dict(event_id=ev['event_id'], place=ev.get('place'), cat=cat,
                                                      season=ev.get('season'), race=r.get('race', ''), raceid=r['raceid'])
+
+# FIS の名前（<season>FS<codex><type>.pdf）でない保存済みの PDF（FIS 格・Open の調査の前に保存したもの）。
+# 名前 → (シーズン, codex, 報告書の種類)。中身の見出し（大会名・日付・性別・ラウンド）で確かめた（2026-10-04）
+LOCAL = {}
+for d, season, codex in (('2018-12-15', 2019, '8410'), ('2019-12-14', 2020, '8457'), ('2019-12-15', 2020, '8459'),
+                         ('2022-12-17', 2023, '8580'), ('2022-12-18', 2023, '8582')):
+    for kind, typ in (('Final', 'RLF'), ('Qualification', 'RLQ'), ('QualificationRun1', 'RLQ1'), ('QualificationRun2', 'RLQ2'),
+                      ('FinalRun1', 'RLF1')):
+        LOCAL[f'{d}_ApexMountainBC_FIS_MO_{kind}.pdf'] = (season, codex, typ)
+for d, codex in (('2020-11-21', '8387'), ('2020-11-22', '8389')):
+    LOCAL[f'{d}_IdreFjll_OPN_MO_FinalRun1.pdf'] = (2021, codex, 'RLF1')
+    LOCAL[f'{d}_IdreFjll_OPN_MO_Qualification.pdf'] = (2021, codex, 'RLQ')
+for kind, typ in (('Final', 'RLF'), ('FinalRun1', 'RLF1'), ('FinalRun2', 'RLF2'), ('Qualification', 'RLQ')):
+    LOCAL[f'2023-12-16_ApexMountainBC_OPN_MO_{kind}.pdf'] = (2024, '8605', typ)
+LOCAL['2023-12-17_ApexMountainBC_OPN_DM_Final.pdf'] = (2024, '8607', 'RLF')
+LOCAL['2023-12-17_ApexMountainBC_OPN_DM_Qualification.pdf'] = (2024, '8607', 'RLQ')
+LOCAL['2025-11-22_IdreFjall_OPN_MO_Final.pdf'] = (2026, '8491', 'RLF')
+LOCAL['MISE_17810_Final.pdf'] = (2025, '8622', 'RLF')
+LOCAL['MISE_17810_Qualification.pdf'] = (2025, '8622', 'RLQ')
+LOCAL['MISE_17816_Final.pdf'] = (2025, '8621', 'RLF')
+LOCAL['MISE_17816_BRFinal.pdf'] = (2025, '8621', 'RBLF')
 
 def slug(place):
     p = place.split(',')[0]
@@ -44,8 +70,12 @@ pat = re.compile(r'^(\d{4})FS(\d{4})([A-Z0-9]+)\.pdf$', re.I)
 rows = []
 for f in sorted(os.listdir(DL)):
     m = pat.match(f)
-    if not m: continue
-    season, codex, typ = int(m.group(1)), m.group(2), m.group(3).upper()
+    if m:
+        season, codex, typ = int(m.group(1)), m.group(2), m.group(3).upper()
+    elif f in LOCAL:
+        season, codex, typ = LOCAL[f]
+    else:
+        continue
     info = races.get((season, codex))
     if not info: continue
     g, d, head = pdf_gd(os.path.join(DL, f))
