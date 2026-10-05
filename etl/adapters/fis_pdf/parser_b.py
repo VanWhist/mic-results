@@ -193,6 +193,13 @@ def _parse_block_tail(rec, tail, warnings, page, line):
     if len(rest) < n + 2:
         warnings.append((page, "short B: line", line))
         return True
+    if all(RE_NUM.match(x) and float(x) == 0 for x in rest[:n]) and RE_NUM.match(rest[n]) and float(rest[n]) != 0:
+        # 審判の点が全部 0.0 で、ターンの合計の欄が空の行（Canadian Selections 2019 の予選 2 の報告で、予選 1 に滑らなかった
+        # 選手の行「B: 0.0 0.0 0.0 0.0 0.0 0.30 52.20」= 得点 0.30・Best Score 52.20）。合計が 0 なら 0.0 と印字されるはず
+        rec["base_scores"] = [_f(x) for x in rest[:n]]
+        rec["run_score"] = _f(rest[n])
+        _apply_extras(rec, rest[n + 1:], warnings, page, line)
+        return True
     rec["base_scores"] = [_f(x) for x in rest[:n]]
     rec["base_total"] = _f(rest[n])
     rec["run_score"] = _f(rest[n + 1])
@@ -367,6 +374,10 @@ def _parse_jury_line(l, meta):
         if len(rest) >= 2 and RE_NOC.fullmatch(rest[-1]):
             noc = rest[-1]
             rest = rest[:-1]
+        elif len(rest) >= 2 and rest[-1] == 'N/A':
+            # 国名「N/A」（カナダの選考会 2019・2022）は国名不明（空）。名前に含めない
+            noc = ''
+            rest = rest[:-1]
         meta["judges"].append({"judge_no": int(m.group("no")), "role": m.group("role"),
                                "name": " ".join(rest), "noc": noc})
         l = l[: m.start()].strip()
@@ -421,6 +432,9 @@ def parse_moguls_results(path, pages=None):
             or "ScoreScore" in hdr_line or "Score Score" in hdr_line
         _tie_col = " Tie" in hdr_line
         meta["n_turns_judges"] = _n_turns
+        # 文書の題（1 ページ目の 1 行目。「CANADIAN CLASSIC」など）。各ページの表頭より上に同じ行が出る。決まった言い回し
+        # （RE_HEADER）に当たらない題は、前のページの最後の選手の名前の折り返しと取り違えるので、表頭より上では読み飛ばす
+        doc_title = next((l.strip() for l in first.split("\n") if l.strip()), None)
         for page in pdf.pages:
             pno = page.page_number
             text = page.extract_text() or ""
@@ -435,6 +449,8 @@ def parse_moguls_results(path, pages=None):
                     continue
                 if l.startswith("Rank Bib"):
                     in_table = True
+                if not in_table and doc_title and l.strip() == doc_title and page is not pdf.pages[0]:
+                    continue
                 if RE_SECTION_LINE.match(l.strip()) and in_table:
                     close_block(pno)
                     section = re.sub(r"\s+", " ", l.strip()).title()

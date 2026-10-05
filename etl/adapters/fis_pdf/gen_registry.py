@@ -78,9 +78,34 @@ def advance_of(pdfs):
                 n = n_competitors(os.path.join(config.PDF_ROOT, rounds[to]['path']), rounds[to].get('layout')) if to in rounds else counts[to]
                 if n:
                     a[frm] = {'to': to, 'n': n}
+        if 'Q1' in rounds and 'Q2' in rounds and ('F1' in rounds or ov):
+            # 予選が 2 本の大会（カナダの選考会）: 予選 1 の上位 n1 名が決勝へ直行し、残りが予選 2 に回って上位 n2 名が決勝へ。
+            # 印字に n1・n2 が無い年があるので、決勝の出場者のうち予選 2 の報告に載っていない人数を n1、載っている人数を n2 とする
+            # （第 3 層は「予選 1 の上位 n1 名＋予選 2 の上位 n2 名＝決勝の出場者」を確かめる）
+            f1 = final1_bibs(rounds.get('F1'), ov)
+            q2 = {r['bib'] for r in parse_a(rounds['Q2']['path'])}
+            if f1:
+                a['Q1'] = {'to': 'F1', 'n': len(f1 - q2)}
+                a['Q2'] = {'to': 'F1', 'n': len(f1 & q2)}
         if a:
             adv[g] = a
     return adv
+
+
+def parse_a(rel):
+    from . import parser_a
+    return parser_a.parse_moguls_results(os.path.join(config.PDF_ROOT, rel))[1]
+
+
+def final1_bibs(f1_pdf, ov_pdf):
+    """決勝 1 の出場者のゼッケン（決勝 1 の報告書、無ければ総合の報告から組み立てた決勝 1）"""
+    if f1_pdf:
+        return {r['bib'] for r in parse_a(f1_pdf['path'])}
+    from .adapter import split_overall
+    from . import parser_a
+    meta, recs = parser_a.parse_moguls_results(os.path.join(config.PDF_ROOT, ov_pdf['path']))
+    groups, _ = split_overall(recs, meta, 'A')
+    return {r['bib'] for r in groups.get('F1', [])}
 
 
 def layout_family(path):
@@ -202,6 +227,10 @@ def main():
                             x['dropped'] = f"{x['typ']} の中身は {cr} の報告"
                             mislabeled.append(x)
                 per_round = [x for x in fl if (x['typ'] in ROUND_OF and x not in mislabeled) or x.get('round_override')]
+                if {'RLQ1', 'RLQ2'} <= types:
+                    # 予選 1・予選 2 の報告書がある大会の RLQ（Canadian Selections 2019 の「QUALIFICATION RESULTS」）は、2 本の予選を
+                    # 決勝への通過で並べ直した表。ラウンドの記録は予選 1・予選 2 の報告書にあるので使わない
+                    per_round = [x for x in per_round if x['typ'] not in ('RLQ', 'QRL')]
                 # 総合（RLF/FRL）: 決勝のラウンドごとの報告書が無いときだけ使う（ANC など。予選の報告書があればそれは別に使う）。
                 # 予選の報告書が中身の違うものだったときも、その予選を組み立てるのに使う
                 overall = [x for x in fl if x.get('as_overall')] + [x for x in fl if x['typ'] in FINAL_ONLY]

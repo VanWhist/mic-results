@@ -387,6 +387,26 @@ def ascii_page_carry(path, pg):
     return num_tokens(carry)  # 最初の選手の行の前まで（ターン合計の行と 2 本目のジャンプの行の 2 行が送られることもある）
 
 
+def q2_split_band(path, pg, r, fis_style):
+    """ページをまたいだ予選 2 の選手（check_pdf_round）の数値。前のページで選手の行が見つからなければ None"""
+    try:
+        prev = page_lines(path, pg - 1)
+        rows = page_lines(path, pg)
+    except Exception:  # noqa
+        return None
+    a = find_anchor(prev, r, fis_style)
+    if a is None:
+        return None
+    # 前のページからは選手の行の先頭（順位・Bib）だけを取り、走りの数値はこのページに送られた行（表頭の下、最初の選手の行の
+    # 前）だけから取る（前のページの Q1 のブロックの数値とたまたま一致して通ることがないように）
+    band = num_tokens([(prev[a][0], prev[a][1][:2])])
+    hdr = next((i for i, (_, toks) in enumerate(rows) if toks and toks[0][1] == 'Rank'), None)
+    if hdr is None:
+        return None
+    first = next((i for i, (_, toks) in enumerate(rows) if i > hdr and _athlete_start(toks)), len(rows))
+    return band + num_tokens(rows[hdr + 1:first])
+
+
 def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False, bd_totals=True):
     """ラウンドの run 群を印字と照合。戻り値: [(run, kind, detail)]"""
     issues = []
@@ -407,13 +427,29 @@ def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False, bd_to
         except Exception as e:  # noqa
             issues += [(r, 'pdf_read_error', repr(e)) for r in runs]
             continue
-        anchors = {}
+        anchors, carried = {}, {}
         for r in runs:
             a = find_anchor(rows, r, fis_style)
+            if a is None and r.get('q_block') == 'Q2' and pg > 1:
+                # 予選 2 の報告で、選手の行（Q1 のブロック）がページの最後にあり、Q2 のブロックが次のページの表頭の下に送られた
+                # （Canadian Selections 2019・2020）。前のページの選手の行からページの終わりまでと、このページの最初の選手の行の
+                # 前までの数値で照合する
+                band = q2_split_band(path, pg, r, fis_style)
+                if band is not None:
+                    carried[r['run_id']] = band
+                    continue
             if a is None:
                 issues.append((r, 'anchor_not_found', f'{os.path.basename(path)} p{pg}'))
             else:
                 anchors[r['run_id']] = a
+        for r in runs:
+            if r['run_id'] in carried:
+                band = carried[r['run_id']]
+                for k, v in expected_values(r, fis_style, bd_totals):
+                    if band[v] > 0:
+                        band[v] -= 1
+                    else:
+                        issues.append((r, 'value_not_printed', f'{k}={v}'))
         # 帯の終わり: 次の選手の行（公開 run のアンカー、または「数字 数字 …」で始まる行）
         starts = sorted(set(anchors.values()) | {i for i, (_, toks) in enumerate(rows)
                                                  if len(toks) >= 3 and INT.match(toks[0][1]) and INT.match(toks[1][1])})

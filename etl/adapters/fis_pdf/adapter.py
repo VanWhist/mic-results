@@ -128,6 +128,16 @@ LABEL_CODE = {'F3': 'F3', 'SF': 'F3', 'F2': 'F2', 'F1': 'F1', 'Q1': 'Q', 'Q': 'Q
 
 
 LADDER = ['F3', 'F2', 'F1', 'Q']
+# 予選が 2 本（Q1・Q2）の大会の総合の報告（Canadian Selections 2019）。印「Q1:」「Q2:」はそれぞれ予選 1・予選 2
+LABEL_CODE_Q2 = dict(LABEL_CODE, Q1='Q1', Q2='Q2')
+
+
+def q2_labeled_codes(runs):
+    """印 Q2 のある総合の報告: 選手の走りの印どおりのラウンド（全部に印があり重ならないとき）。(割り当て, 滑ったはずのラウンド)"""
+    labels = [LABEL_CODE_Q2.get(r.get('run_label')) for r in runs]
+    if not all(labels) or len(set(labels)) != len(labels):
+        return None
+    return labels, labels
 
 
 def athlete_runs(recs):
@@ -176,9 +186,12 @@ def split_overall(recs, meta, label):
     head = re.sub(r'qualified to final', ' ', head, flags=re.I)
     single ='F1' if re.search(r'\bfinal\b', head, re.I) and not re.search(r'overall', head, re.I) else 'Q'
     groups, problems = collections.OrderedDict(), []
+    q2doc = any(r.get('run_label') == 'Q2' for r in recs)
     for runs in athlete_runs(recs):
         sec = runs[0].get('section')
-        if sec:
+        if q2doc:
+            codes = (q2_labeled_codes(runs) or (None,))[0]
+        elif sec:
             codes = (codes_for(sec, runs) or (None,))[0]
         else:
             codes = (labeled_codes(runs) or ([single],))[0]
@@ -190,7 +203,7 @@ def split_overall(recs, meta, label):
             continue
         for r, code in zip(runs, codes):
             lab = r.get('run_label')
-            if lab in LABEL_CODE and LABEL_CODE[lab] != code:
+            if lab in LABEL_CODE and (LABEL_CODE_Q2 if q2doc else LABEL_CODE)[lab] != code:
                 problems.append(f"{label}: {r.get('name')} の走りの印 {lab} と区切りからの割り当て {code} が合わない")
             groups.setdefault(code, []).append(r)
     if best_of_check(recs, '')[0]:
@@ -228,9 +241,10 @@ def partial_codes(recs):
     """総合の報告に、先のラウンドへ進んだ選手の前の走りが載っていないラウンド（NAC 2019 Stratton は決勝 2 の 6 名の決勝 1・予選が無い）。
     戻り値: {code: その区切りより上の区切りで終わった選手のうち、このラウンドの走りが無い人数}"""
     expected, got = collections.defaultdict(set), collections.defaultdict(set)
+    q2doc = any(r.get('run_label') == 'Q2' for r in recs)
     for runs in athlete_runs(recs):
         sec = runs[0].get('section')
-        codes, should = (codes_for(sec, runs) if sec else labeled_codes(runs)) or ([], [])
+        codes, should = (q2_labeled_codes(runs) if q2doc else codes_for(sec, runs) if sec else labeled_codes(runs)) or ([], [])
         for c in should:
             expected[c].add(runs[0]['bib'])
         for r, c in zip(runs, codes):
@@ -292,6 +306,30 @@ def drop_nonstarters(round_id, recs, meta):
     return [Finding('warning', round_id, 'layer0', f"進めなかった {len(dns)} 名が dns で並ぶ様式。進出人数の印字 Cutoff {n} と一致したので除いた")]
 
 
+def pair_q2_blocks(recs):
+    """カナダの選考会（Canadian Selections 2019・2020、Canadian Classic 2022）の予選 2 の報告書は、予選 2 に回った選手ごとに
+    「Q1:」（予選 1 の走り）と「Q2:」の 2 行を並べ、Best Score（良い方）で順位を付ける。W杯の予選 2 の報告と同じ形
+    （q_block。予選 2 の走りを先に置き、そちらが採用・Best Score を持つ。予選 1 の走りは採用外）に並べ替える。
+    全員の走りが印 Q1・Q2 の 2 本のときだけ行う。戻り値: 並べ替えたか"""
+    if not recs or any(r.get('q_block') for r in recs):
+        return False
+    groups = athlete_runs(recs)
+    if not all([r.get('run_label') for r in g] == ['Q1', 'Q2'] for g in groups):
+        return False
+    out = []
+    for q1, q2 in groups:
+        for r, blk, first in ((q2, 'Q2', True), (q1, 'Q1', False)):
+            r['q_block'] = blk
+            r['rank'] = q1['rank']
+            r['best_score'] = q1.get('best_score') if first else None
+            r['tie'] = q1.get('tie') if first else None
+            r['counting'] = first
+            r['block_index'] = 0 if first else 1
+            out.append(r)
+    recs[:] = out
+    return True
+
+
 def drop_carried(round_id, recs_a, recs_b, meta, lower):
     """カナダの集計（GSS、Canada Classic 2026 など）の決勝の報告は、このラウンドの出場者（表頭の Number of Competitors 人、
     順位 1〜N）の後に、前のラウンドで終わった選手の行（前のラウンドの順位・走り）を続けて載せる。
@@ -299,8 +337,8 @@ def drop_carried(round_id, recs_a, recs_b, meta, lower):
     残りがちょうど N 人のときだけ除く。一致しない行があれば除かずに止める。
     lower: 同じ性別の前のラウンドの記録（パーサ A）のリスト。戻り値: [Finding]"""
     n = meta.get('num_competitors')
-    if not n or len(recs_a) <= n or not lower:
-        return []
+    if not n or len(recs_a) <= n or not lower or any(r.get('q_block') for r in recs_a):
+        return []  # 予選 2 の報告（1 人 2 ブロック）は行の数が出場人数の 2 倍になる
     seen = {}
     for recs in lower:
         for r in recs:
@@ -411,6 +449,10 @@ def load_event(ev, imported_at, log=print):
             elif code in config.ROUND_ORDER:
                 order = config.ROUND_ORDER.index(code)
                 lower = [recs for c, recs in lower_of[gender] if c in config.ROUND_ORDER and config.ROUND_ORDER.index(c) < order]
+                if code == 'Q2' and pair_q2_blocks(recs_a):
+                    meta_a['q_layout'] = True
+                    if recs_b is not None and not pair_q2_blocks(recs_b):
+                        pre.append(Finding('error', round_id, 'layer1', "予選 2 の報告の 2 本の並び（Q1:・Q2:）を A は読めたが B は読めない"))
                 pre += drop_carried(round_id, recs_a, recs_b, meta_a, lower)
                 lower_of[gender].append((code, recs_a))
             ctxs.append(make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_error, rules, tier, pre, log,
@@ -528,7 +570,9 @@ def make_ctx(ev, pdf, path, code, gender, recs_a, recs_b, meta_a, meta_b, b_erro
     for exc in ev.get('recompute_exceptions') or []:
         if exc.get('round_id') != round_id:
             continue
-        hit = [r for r in records if str(r.get('bib')) == str(exc.get('bib'))]
+        # 予選 2 の報告（1 人 2 ブロック）は q_block（Q1・Q2）でブロックを指す
+        hit = [r for r in records if str(r.get('bib')) == str(exc.get('bib'))
+               and (exc.get('q_block') is None or r.get('q_block') == exc['q_block'])]
         if len(hit) != 1:
             findings.append(Finding('error', round_id, 'layer2', f"recompute_exceptions の bib {exc.get('bib')} が見つからない（登録を見直す）"))
             continue

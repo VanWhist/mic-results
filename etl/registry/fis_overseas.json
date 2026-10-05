@@ -2884,16 +2884,6 @@
    "rules": "2018-19",
    "pdfs": [
     {
-     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLQ.pdf",
-     "sha256": "cd52301bb5660d877d25d3665c7948ce285d59b006eeb6153861284421115ad3",
-     "url": null,
-     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11851",
-     "round": "Q",
-     "gender": "W",
-     "codex": "8409",
-     "src_type": "RLQ"
-    },
-    {
      "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8409_W_MO_RLQ1.pdf",
      "sha256": "a6d65d9ce9bff4fb218edd142762e275d7eee917fad20e86f586a1e722b4f1ff",
      "url": null,
@@ -2922,16 +2912,6 @@
      "gender": "W",
      "codex": "8409",
      "src_type": "RLF"
-    },
-    {
-     "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLQ.pdf",
-     "sha256": "21cc4e847373ef876dd354caf5ba64b77de28f4d909cd440a71befe1fc9feb27",
-     "url": null,
-     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=11852",
-     "round": "Q",
-     "gender": "M",
-     "codex": "8410",
-     "src_type": "RLQ"
     },
     {
      "path": "FIS/2018-19/FIS2019_FIS_ApexMountain_8410_M_MO_RLQ1.pdf",
@@ -2968,30 +2948,22 @@
     "label": null,
     "advance": {
      "M": {
-      "Q": {
-       "to": "F1",
-       "n": 45
-      },
       "Q1": {
        "to": "F1",
-       "n": 45
+       "n": 10
       },
-      "F1": {
-       "to": "F2",
+      "Q2": {
+       "to": "F1",
        "n": 12
       }
      },
      "W": {
-      "Q": {
-       "to": "F1",
-       "n": 19
-      },
       "Q1": {
        "to": "F1",
-       "n": 19
+       "n": 7
       },
-      "F1": {
-       "to": "F2",
+      "Q2": {
+       "to": "F1",
        "n": 6
       }
      }
@@ -2999,7 +2971,74 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "recompute_exceptions": [
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-W-Q1",
+     "bib": 47,
+     "name": "MIYAMOTO Juri",
+     "field": "air_total",
+     "printed": 0.0,
+     "calc": -0.23,
+     "basis": "2 本目のジャンプの DD が -1.000（差し引くジャンプ）で、審判点 × DD の和は負になるが、主催者の集計はエア合計を 0.00 と印字（負にしない）。予選 1 の得点 35.74。FIS 公式サイトの最終結果（raceid 11851）は 12 位・49.94（決勝 1 の得点。決勝 1 もエア合計 0.00 と印字）（2026-10-05 確認）。印字が公式"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-W-Q2",
+     "bib": 47,
+     "name": "MIYAMOTO Juri",
+     "field": "air_total",
+     "printed": 0.0,
+     "calc": -0.23,
+     "basis": "2 本目のジャンプの DD が -1.000（差し引くジャンプ）で、審判点 × DD の和は負になるが、主催者の集計はエア合計を 0.00 と印字（負にしない）。予選 1 の得点 35.74。FIS 公式サイトの最終結果（raceid 11851）は 12 位・49.94（決勝 1 の得点。決勝 1 もエア合計 0.00 と印字）（2026-10-05 確認）。印字が公式",
+     "q_block": "Q1"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-W-F1",
+     "bib": 47,
+     "name": "MIYAMOTO Juri",
+     "field": "air_total",
+     "printed": 0.0,
+     "calc": -1.45,
+     "basis": "2 本目のジャンプの DD が -1.000（差し引くジャンプ）で、審判点 × DD の和は負になるが、主催者の集計はエア合計を 0.00 と印字（負にしない）。決勝 1 の得点 49.94。FIS 公式サイトの最終結果（raceid 11851）は 12 位・49.94 で印字と一致（2026-10-05 確認）。印字が公式"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-M-Q1",
+     "bib": 10,
+     "name": "GOODISON Samuel",
+     "field": "air_total",
+     "printed": 0.0,
+     "calc": -0.8,
+     "basis": "2 本目のジャンプの DD が -1.000（差し引くジャンプ）で、審判点 × DD の和は負になるが、主催者の集計はエア合計を 0.00 と印字（負にしない）。予選 1 の得点 21.94。FIS 公式サイトの最終結果（raceid 11852）は 37 位・52.85（予選 2 の良い方）（2026-10-05 確認）。印字が公式"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-M-Q2",
+     "bib": 10,
+     "name": "GOODISON Samuel",
+     "field": "air_total",
+     "printed": 0.0,
+     "calc": -0.8,
+     "basis": "2 本目のジャンプの DD が -1.000（差し引くジャンプ）で、審判点 × DD の和は負になるが、主催者の集計はエア合計を 0.00 と印字（負にしない）。予選 1 の得点 21.94。FIS 公式サイトの最終結果（raceid 11852）は 37 位・52.85（予選 2 の良い方）（2026-10-05 確認）。印字が公式",
+     "q_block": "Q1"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-W-Q1",
+     "bib": 71,
+     "name": "CAPICIK Chase",
+     "field": "time_points",
+     "printed": 0.0,
+     "calc": 20.0,
+     "basis": "予選 1 の行は秒数 0.00・審判の点がすべて 0.0（滑っていないか計時なし）で、タイム点 0.00・得点 0.30（ターン合計の下限）と印字。式どおりならタイム点 20.00。FIS 公式サイトの最終結果（raceid 11851）は 14 位・52.20（予選 2 の良い方）（2026-10-05 確認）。印字が公式（ユニバーシアード 2017 JONES と同じ扱い）"
+    },
+    {
+     "round_id": "2018-19-fis-apexmountain-8410-W-Q2",
+     "bib": 71,
+     "name": "CAPICIK Chase",
+     "field": "time_points",
+     "printed": 0.0,
+     "calc": 20.0,
+     "basis": "予選 1 の行は秒数 0.00・審判の点がすべて 0.0（滑っていないか計時なし）で、タイム点 0.00・得点 0.30（ターン合計の下限）と印字。式どおりならタイム点 20.00。FIS 公式サイトの最終結果（raceid 11851）は 14 位・52.20（予選 2 の良い方）（2026-10-05 確認）。印字が公式（ユニバーシアード 2017 JONES と同じ扱い）",
+     "q_block": "Q1"
+    }
+   ]
   },
   {
    "event_id": "2018-19-fis-apexmountain-8411",
@@ -3031,8 +3070,7 @@
     "advance": {},
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "notes": ""
   },
   {
    "event_id": "2018-19-nac-apexmountain-8450",
@@ -3746,20 +3784,27 @@
      "M": {
       "Q1": {
        "to": "F1",
-       "n": 20
+       "n": 10
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 10
       }
      },
      "W": {
       "Q1": {
        "to": "F1",
-       "n": 15
+       "n": 8
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 7
       }
      }
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "notes": ""
   },
   {
    "event_id": "2019-20-fis-apexmountain-8459",
@@ -3842,20 +3887,27 @@
      "M": {
       "Q1": {
        "to": "F1",
-       "n": 20
+       "n": 10
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 10
       }
      },
      "W": {
       "Q1": {
        "to": "F1",
-       "n": 15
+       "n": 8
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 7
       }
      }
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "notes": ""
   },
   {
    "event_id": "2020-21-opn-idrefjall-8387",
@@ -4798,20 +4850,27 @@
      "M": {
       "Q1": {
        "to": "F1",
-       "n": 22
+       "n": 10
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 12
       }
      },
      "W": {
       "Q1": {
        "to": "F1",
-       "n": 23
+       "n": 10
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 13
       }
      }
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "notes": ""
   },
   {
    "event_id": "2022-23-fis-apexmountain-8582",
@@ -4894,20 +4953,27 @@
      "M": {
       "Q1": {
        "to": "F1",
-       "n": 22
+       "n": 15
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 7
       }
      },
      "W": {
       "Q1": {
        "to": "F1",
-       "n": 22
+       "n": 14
+      },
+      "Q2": {
+       "to": "F1",
+       "n": 8
       }
      }
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "予選が 2 本（Q1・Q2）で良い方で順位が付く様式（カナダの選考会 Canadian Selections / Canadian Classic）。予選 2 の報告書は 2 本を並べて載せる。対応は次の段階（2026-10-04）"
+   "notes": ""
   },
   {
    "event_id": "2022-23-nac-apexmountain-8584",
