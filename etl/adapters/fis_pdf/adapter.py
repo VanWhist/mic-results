@@ -24,6 +24,8 @@ from . import old_a, old_b
 from . import oneline_a, oneline_b
 # ターンの列が先・エアの列が後で 1 人 3 行の様式（2017 札幌アジア大会）。layout: "turns_first"
 from . import tf_a, tf_b
+# ターン審判 8 人・エア審判 4 人の報告書（Idre 2020-21）。tier score（印字の合計点だけ）。registry の大会の layout: "panel8"
+from . import panel8
 
 MONTHS = {'JAN': 1, 'FEB': 2, 'MAR': 3, 'APR': 4, 'MAY': 5, 'JUN': 6, 'JUL': 7, 'AUG': 8, 'SEP': 9, 'OCT': 10, 'NOV': 11, 'DEC': 12}
 
@@ -366,10 +368,13 @@ def load_event(ev, imported_at, log=print):
     lower_of = collections.defaultdict(list)  # 性別 → [(ラウンド, パーサ A の記録)]（drop_carried の照合用）
     fixes_used = set()
     for pdf in pdfs:
+        if ev.get('layout') and not pdf.get('layout'):
+            pdf = dict(pdf, layout=ev['layout'])  # 大会全体の様式（registry の大会の layout。gen_registry が保持する）
         path = pdf_path(pdf['path'])
         ascii_layout = pdf.get('layout') == 'ascii'
         pa, pb = {'ascii': (ascii_a, ascii_b), 'fis_old': (old_a, old_b),
-                  'oneline': (oneline_a, oneline_b), 'turns_first': (tf_a, tf_b)}.get(pdf.get('layout'), (parser_a, parser_b))
+                  'oneline': (oneline_a, oneline_b), 'turns_first': (tf_a, tf_b),
+                  'panel8': (panel8, None)}.get(pdf.get('layout'), (parser_a, parser_b))
         page_kw = {'pages': pdf['pages']} if pdf.get('pages') else {}
         try:
             meta_a, recs_a = pa.parse_moguls_results(path, **page_kw)

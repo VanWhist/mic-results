@@ -1698,10 +1698,6 @@
     "label": null,
     "advance": {
      "M": {
-      "Q": {
-       "to": "F1",
-       "n": 16
-      },
       "F1": {
        "to": "F2",
        "n": 6
@@ -3871,7 +3867,7 @@
    "place": "Idre Fjall",
    "fis_event_id": "48170",
    "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48170&seasoncode=2021",
-   "tier": "detail",
+   "tier": "score",
    "adapter": "fis_pdf",
    "rules": "2020-21",
    "pdfs": [
@@ -3934,8 +3930,8 @@
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "ターン審判 8 人・エア審判 4 人の採点（規則の版に無い審判構成）。取り込み方は城さんの判断待ち（2026-10-04）"
+   "notes": "ターン審判 8 人（J1〜J8）・エア審判 4 人（J9〜J12）の採点で、規則の版に無い審判構成。印字の合計点だけを載せる（再計算しない。城さんの判断 2026-10-04、大阪のジュニア大会と同じ扱い）",
+   "layout": "panel8"
   },
   {
    "event_id": "2020-21-opn-idrefjall-8389",
@@ -3947,7 +3943,7 @@
    "place": "Idre Fjall",
    "fis_event_id": "48170",
    "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=48170&seasoncode=2021",
-   "tier": "detail",
+   "tier": "score",
    "adapter": "fis_pdf",
    "rules": "2020-21",
    "pdfs": [
@@ -4010,8 +4006,8 @@
     },
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
-   "notes": "",
-   "skip": "ターン審判 8 人・エア審判 4 人の採点（規則の版に無い審判構成）。取り込み方は城さんの判断待ち（2026-10-04）"
+   "notes": "ターン審判 8 人（J1〜J8）・エア審判 4 人（J9〜J12）の採点で、規則の版に無い審判構成。印字の合計点だけを載せる（再計算しない。城さんの判断 2026-10-04、大阪のジュニア大会と同じ扱い）",
+   "layout": "panel8"
   },
   {
    "event_id": "2020-21-wjc-krasnoyarsk-8606",

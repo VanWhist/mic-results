@@ -24,7 +24,7 @@ SURVEY = os.path.join(INV, 'fis_overseas_survey.jsonl')
 OUT = os.path.join(config.REGISTRY_DIR, 'fis_overseas.json')
 PRESERVE = ('rules', 'notes', 'tier', 'name_ja', 'skip', 'tie_break', 'exclude_pdfs', 'rank_exceptions',
             'recompute_exceptions', 'layer5_exceptions', 'layer5_skip', 'competitor_count_exceptions', 'date_fallback',
-            'pace_exceptions', 'status_fixes')
+            'pace_exceptions', 'status_fixes', 'layout')
 ROUND_OF = {'RLQ': 'Q', 'QRL': 'Q', 'RLQ1': 'Q1', 'RLQ2': 'Q2', 'RLF1': 'F1', 'F1RL': 'F1', 'RLF2': 'F2', 'F2RL': 'F2'}
 FINAL_ONLY = ('RLF', 'FRL')
 RACE_URL = 'https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid={}'
