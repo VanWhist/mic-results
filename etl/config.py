@@ -35,7 +35,7 @@ SERIES_LABELS = {
     'WJC': 'ジュニア世界選手権', 'YOG': 'ユースオリンピック', 'UVS': 'ユニバーシアード',
     'FIS': 'FISレース', 'NC': 'FIS NC', 'OPN': 'FISオープン',
     'SAJ_AJ': '全日本選手権', 'SAJ_AJJR': '全日本ジュニア', 'SAJ_KOKUSPO': '国スポ', 'SAJ_JOC': 'JOCジュニアオリンピックカップ',
-    'SAJ_A': 'A級公認大会', 'SAJ_B': 'B級公認大会', 'SAJ_SEL': '選考会',
+    'SAJ_A': 'A級公認大会', 'SAJ_B': 'B級公認大会', 'SAJ_SEL': '選考会', 'SAJ_KIDS': 'キッズ大会',
 }
 SERIES_GROUP = {  # 画面の絞り込み用の大分類。それ以外は「国内」
     'WC': 'W杯系', 'WSC': 'W杯系', 'OWG': 'W杯系',

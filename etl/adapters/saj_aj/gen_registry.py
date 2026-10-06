@@ -67,6 +67,10 @@ def main():
         disc, series, season, comp, race = key
         items.sort(key=lambda it: it['gender'])
         first = items[0]
+        kids = 'KIDS' in first['category']
+        if kids:
+            # SAJ 競技データバンクの区分「KIDS MO」は計画では SAJ_B（級は unknown）になっているので、区分「キッズ大会」に分ける（城さんの判断、2026-10-06）
+            series = 'SAJ_KIDS'
         event_id = f"{season}-{series.lower()}-{comp}-{race:04d}"
         pdfs = []
         for it in items:
@@ -76,7 +80,7 @@ def main():
                          'gender': it['gender'], 'codex': it['codex'], 'saved_at': datetime.date.fromtimestamp(os.path.getmtime(path)).isoformat(),
                          'src_name': it['src_name']})
         ev = {
-            'event_id': event_id, 'season': season, 'series': series, 'grade': first['grade'], 'discipline': disc,
+            'event_id': event_id, 'season': season, 'series': series, 'grade': None if kids else first['grade'], 'discipline': disc,
             'name_ja': first['comp_name'], 'date': first['date'].replace('/', '-'), 'saj_comp': comp, 'saj_category': first['category'],
             'tier': 'detail' if disc == 'MO' else 'rank', 'adapter': 'saj_aj' if disc == 'MO' else 'saj_dm',
             'pdfs': pdfs, 'rules': ensure_rules(season) if disc == 'MO' else None, 'sheet_prefix': event_id,
@@ -86,8 +90,10 @@ def main():
             # 2015-16 以前は審判ごとの列が現行と違う（DD を掛けた列など）ので、印字の合計だけを得点段階で持つ
             ev['layout'] = 'old'
             ev['tier'] = 'score'
-        if 'KIDS' in first['category']:
-            ev['skip'] = 'キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち'
+        if kids:
+            # キッズ大会（ターン審判 2 人・エア審判 1 人）は大阪府ジュニア・キッズ 2024・2025 と同じく、審判点からの再計算はせず
+            # 印字の合計を得点段階で持つ（城さんの判断、2026-10-06）
+            ev['tier'] = 'score'
         out[disc].append(ev)
     for disc, fn in (('MO', 'saj_db.json'), ('DM', 'saj_db_dm.json')):
         path = os.path.join(config.REGISTRY_DIR, fn)

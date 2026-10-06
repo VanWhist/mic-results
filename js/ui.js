@@ -62,7 +62,7 @@ export const SERIES_LABEL = {
   EC: 'ヨーロッパカップ', NAC: 'ノルアムカップ', ANC: 'ANC（豪・NZ）', AC: 'アジアカップ',
   WJC: 'ジュニア世界選手権', YOG: 'ユースオリンピック', UVS: 'ユニバーシアード', FIS: 'FISレース', NC: 'FIS NC', OPN: 'FISオープン',
   SAJ_AJ: '全日本選手権', SAJ_AJJR: '全日本ジュニア', SAJ_KOKUSPO: '国スポ', SAJ_JOC: 'JOCジュニアオリンピックカップ',
-  SAJ_A: 'A級公認大会', SAJ_B: 'B級公認大会', SAJ_SEL: '選考会',
+  SAJ_A: 'A級公認大会', SAJ_B: 'B級公認大会', SAJ_SEL: '選考会', SAJ_KIDS: 'キッズ大会',
 };
 export const ROUND_LABEL = { Q: '予選', Q1: '予選1', Q2: '予選2', F1: '決勝1', F2: '決勝2', F3: '決勝3' };
 export const TIER_LABEL = { detail: 'ジャッジ点まで照合済み', score: '得点まで照合済み', rank: '順位のみ' };

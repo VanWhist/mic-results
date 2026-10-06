@@ -589,7 +589,8 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     rules_out = {}
     for ctx in publish_ctx:
         rv = ctx['round']['source']['rules_version']
-        if rv and rv not in rules_out:
+        # 得点・順位の段階のラウンドは規則が空（{}）。同じ版に再計算したラウンドがあれば、そちらの規則を載せる
+        if rv and not rules_out.get(rv):
             rules_out[rv] = ctx['rules']
 
     files = {}

@@ -781,7 +781,30 @@
 "dd_table":null,
 "source":"SAJ 公認大会の汎用規則（2023-24）。全日本の規則ファイルと同じ式。大会ごとの例外は registry 側に書く"
 },
-"規則_SAJ_2024-25":{},
+"規則_SAJ_2024-25":{
+"judges":{
+"turns":3,
+"air":2
+},
+"discard_high_low":false,
+"truncate_decimals":2,
+"air_cap_per_judge":10.0,
+"turns_floor":0.3,
+"turns_min_per_judge":0.1,
+"time_a":48.0,
+"time_b":32.0,
+"time_formula":"48 - 32 * seconds / pace_time",
+"time_max":20.0,
+"time_min":0.0,
+"tie_break":[],
+"tie_break_if_marked":[
+"turns_total",
+"air_without_dd",
+"seconds_asc"
+],
+"dd_table":null,
+"source":"SAJ 公認大会の汎用規則（2024-25）。全日本の規則ファイルと同じ式。大会ごとの例外は registry 側に書く"
+},
 "規則_SAJ_2025-26":{
 "judges":{
 "turns":3,

@@ -15896,16 +15896,16 @@
    "notes": ""
   },
   {
-   "event_id": "2025-26-saj_b-4045-0092",
+   "event_id": "2025-26-saj_kids-4045-0092",
    "season": "2025-26",
-   "series": "SAJ_B",
-   "grade": "unknown",
+   "series": "SAJ_KIDS",
+   "grade": null,
    "discipline": "MO",
    "name_ja": "森下仁丹2026大阪府キッズモーグル大会",
    "date": "2026-01-17",
    "saj_comp": "4045",
    "saj_category": "KIDS MO",
-   "tier": "detail",
+   "tier": "score",
    "adapter": "saj_aj",
    "pdfs": [
     {
@@ -15930,25 +15930,24 @@
     }
    ],
    "rules": "規則_SAJ_2025-26",
-   "sheet_prefix": "2025-26-saj_b-4045-0092",
+   "sheet_prefix": "2025-26-saj_kids-4045-0092",
    "format": {
     "label": null,
     "advance": {}
    },
-   "notes": "",
-   "skip": "キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち"
+   "notes": "ターン審判 2 人（J1・J2 と平均 AVE）・エア審判 1 人のキッズ大会。大阪府ジュニア・キッズ 2024・2025 と同じく、審判点からの再計算はせず、印字の合計を得点の段階で持つ（城さんの判断、2026-10-06。委員会への確認はしない、2026-10-05）"
   },
   {
-   "event_id": "2025-26-saj_b-4045-0093",
+   "event_id": "2025-26-saj_kids-4045-0093",
    "season": "2025-26",
-   "series": "SAJ_B",
-   "grade": "unknown",
+   "series": "SAJ_KIDS",
+   "grade": null,
    "discipline": "MO",
    "name_ja": "森下仁丹2026大阪府キッズモーグル大会",
    "date": "2026-01-18",
    "saj_comp": "4045",
    "saj_category": "KIDS MO",
-   "tier": "detail",
+   "tier": "score",
    "adapter": "saj_aj",
    "pdfs": [
     {
@@ -15973,13 +15972,12 @@
     }
    ],
    "rules": "規則_SAJ_2025-26",
-   "sheet_prefix": "2025-26-saj_b-4045-0093",
+   "sheet_prefix": "2025-26-saj_kids-4045-0093",
    "format": {
     "label": null,
     "advance": {}
    },
-   "notes": "",
-   "skip": "キッズ大会（審判2名平均・エア1名の様式）。対象にするかは Van さんの判断待ち"
+   "notes": "ターン審判 2 人（J1・J2 と平均 AVE）・エア審判 1 人のキッズ大会。大阪府ジュニア・キッズ 2024・2025 と同じく、審判点からの再計算はせず、印字の合計を得点の段階で持つ（城さんの判断、2026-10-06。委員会への確認はしない、2026-10-05）"
   },
   {
    "event_id": "2025-26-saj_a-4046-0127",
