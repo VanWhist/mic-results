@@ -14632,7 +14632,11 @@
     "label": null,
     "advance": {}
    },
-   "notes": ""
+   "notes": "1 つの総合リザルト PDF に年齢区分ごとの表（中学生の部 CODEX 0431・高校生の部 0430・総合の部 0430&0431）が綴じてある。SAJ 競技データバンクでは 0430（高校生）・0431（中学生）・5430・5431 の 4 つに同じ PDF が登録されているので、この大会で全区分を読む。SAJ の順位表は区分ごとに別の CODEX のページなので category_pages で区分ごとに照合する（2026-10-06）",
+   "category_pages": {
+    "中学生の部": {"M": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0431/result", "W": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5431/result"},
+    "高校生の部": {"M": "https://sajdb.shikuminet.jp/freestyle/2024/competition/0430/result", "W": "https://sajdb.shikuminet.jp/freestyle/2024/competition/5430/result"}
+   }
   },
   {
    "event_id": "2023-24-saj_ajjr-3546-0431",
@@ -14675,7 +14679,7 @@
     "advance": {}
    },
    "notes": "",
-   "skip": "SAJ 競技データバンクで 0430 と同じ PDF（総合リザルト.pdf、SHA-256 も同じ）が登録されている。0431 の結果の中身を確かめられるまで公開しない（2026-09-27）"
+   "skip": "中学生の部（CODEX 0431・5431）の結果は 0430 と同じ総合リザルト PDF に入っていて、2023-24-saj_ajjr-3546-0430 の「中学生の部」のラウンドとして公開している。同じ記録が 2 回にならないよう、0431 は大会として載せない（2026-10-06。SAJ の大会ページの備考で 0430＝高校生・0431＝中学生を確認）"
   },
   {
    "event_id": "2024-25-saj_ajjr-3783-0465",

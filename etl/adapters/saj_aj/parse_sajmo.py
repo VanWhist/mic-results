@@ -263,6 +263,8 @@ def mixed_order(code):
     return ['女子', '男子']
 
 CATEGORY = re.compile(r'(中学生|高校生|小学生|総合|一般|シニア|マスターズ)の部')
+# ページごとの CODEX の印字（'CODEX : 0431'、総合の部は 'CODEX : 0430&0431'）
+PAGE_CODEX = re.compile(r'CODEX\s*[:：]\s*(\d+(?:\s*&\s*\d+)*)')
 
 
 def _interleaved(text):
@@ -317,6 +319,7 @@ def parse_pdf(path, glyph_font=None):
     with pdfplumber.open(path) as pdf:
         cur, prev_text = None, None
         doc_nturn = None  # この PDF で表頭から分かったターン審判の人数
+        page_codex = {}  # ページ番号 → そのページに印字された CODEX
         for pno, page in enumerate(pdf.pages, 1):
             glyph_font_mod.fix_page(page, glyph_font)
             page = glyph_font_mod.drop_stamps(page)
@@ -334,6 +337,9 @@ def parse_pdf(path, glyph_font=None):
                 continue
             prev_text = text
             lines = [l.strip() for l in text.split('\n') if l.strip()]
+            mcx = next((m for m in map(PAGE_CODEX.search, lines) if m), None)
+            if mcx:
+                page_codex[pno] = re.sub(r'\s+', '', mcx.group(1))
             code = None
             # ページ上部（大会名・審判・コース情報）は選手の行ではない。表の見出し行（'順位 … Total'）より上は読まない。
             # 以前はページ頭の大会名を、前ページ最後の選手の 2 行目（クラブ名）として取り込み、次ページ先頭に続く本物の
@@ -504,6 +510,12 @@ def parse_pdf(path, glyph_font=None):
     if len({sec.get('category') for sec in kept} - {None}) < 2:
         for sec in kept:
             sec['category'] = None
+    # 年齢区分ごとに CODEX の違う表が綴じてある PDF（2024 全日本ジュニア: 中学生の部 0431・高校生の部 0430・総合の部 0430&0431）は、
+    # 表の最初のページの CODEX をその表の CODEX にする。区分の無い PDF は従来どおり meta の CODEX（男女の表が同じページに載る
+    # PDF では、ページの CODEX が表の性別と合わないことがあるので使わない）
+    for sec in kept:
+        if sec.get('category'):
+            sec['codex'] = page_codex.get(sec['pages'][0])
     return meta, kept
 
 def check(meta, sections):

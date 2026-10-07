@@ -1,9 +1,9 @@
 {
-"dataVersion":"2026-10-06-1146",
-"builtAt":"2026-10-06T11:45:47",
+"dataVersion":"2026-10-06-1635",
+"builtAt":"2026-10-06T15:07:42",
 "buildVersion":"2026-09-25-1",
 "files":{
-"events":"events.a354c322.json",
+"events":"events.cc84ee3d.json",
 "athletes":"athletes.ccd7eac1.json",
 "lines":"lines.46082bb0.json",
 "judges":"judges.8afabcbf.json",
@@ -93,7 +93,7 @@
 "rounds_ranked":1934,
 "golden_runs":120
 },
-"warnings":15236,
+"warnings":15234,
 "reportPath":"docs/検証レポート.md"
 }
 }

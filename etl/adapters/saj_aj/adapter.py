@@ -511,10 +511,13 @@ def load_event(ev, imported_at, log=print):
                 'round_text': ((('決勝' if s['saj_code'] in ('F', 'SF') else '予選決勝') if s['round'] == 'リザルト' else s['round'])
                                + ('（総合順位）' if s.get('overall_groups') else '') + (f'（{cat}）' if cat else '')),
                 'category': cat,
-                'codex': meta.get('codex'), 'tier': 'score' if (old_layout or s.get('oneline')) else ev.get('tier', 'detail'),
+                'codex': s.get('codex') or meta.get('codex'), 'tier': 'score' if (old_layout or s.get('oneline')) else ev.get('tier', 'detail'),
                 'panel': {'turns': nturn, 'air': 2, 'air_judge_nos': [nturn + 1, nturn + 2]},
                 'rel': pdf['path'], 'path': path, 'pdf_sha256': pdf.get('sha256'), 'url': pdf.get('url'),
-                'page_url': (also.get(f"{g}-{code}") or {}).get('page_url') or (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
+                # registry の category_pages（{区分: {性別: 順位表}}）: 区分ごとに SAJ の順位表が別の CODEX のページにある大会
+                # （2024 全日本ジュニア: 高校生の部 0430・中学生の部 0431）
+                'page_url': (also.get(f"{g}-{code}") or {}).get('page_url') or ((ev.get('category_pages') or {}).get(cat) or {}).get(g)
+                            or (pdf.get('page_urls') or {}).get(g) or pdf.get('page_url'),
                 'pages': s['pages'], 'name_ja': ev.get('name_ja'), 'format': ev.get('format'), 'rules_version': ev['rules'],
                 'sheet': sheet,
             }

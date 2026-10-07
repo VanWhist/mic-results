@@ -238,11 +238,12 @@ def cross_check(rounds_ctx, events_by_id):
             status[r['round_id']] = 'skipped'
             continue
         groups[(r['event_id'], r['gender'], r.get('category'))][r['round']] = (r, ctx['runs'])
+    # 順位表のページごとにまとめる。区分ごとに別のページがある大会（registry の category_pages）は区分ごとに照合する
     by_eg = collections.defaultdict(list)
     for (event_id, gender, cat), rbc in groups.items():
-        by_eg[(event_id, gender)].append((cat, rbc))
-    for (event_id, gender), cands in by_eg.items():
-        page_url = next(iter(cands[0][1].values()))[0]['source']['page_url']
+        page_url = next(iter(rbc.values()))[0]['source']['page_url']
+        by_eg[(event_id, gender, page_url)].append((cat, rbc))
+    for (event_id, gender, page_url), cands in by_eg.items():
         cache = load_cache(page_url)
         if cache is None:
             for _, rbc in cands:
