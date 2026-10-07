@@ -1,9 +1,9 @@
 {
-"dataVersion":"2026-10-06-1635",
-"builtAt":"2026-10-06T15:07:42",
+"dataVersion":"2026-10-08-0130",
+"builtAt":"2026-10-08T01:29:29",
 "buildVersion":"2026-09-25-1",
 "files":{
-"events":"events.cc84ee3d.json",
+"events":"events.ec736081.json",
 "athletes":"athletes.ccd7eac1.json",
 "lines":"lines.46082bb0.json",
 "judges":"judges.8afabcbf.json",

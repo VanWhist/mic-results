@@ -294,6 +294,7 @@ def main(argv=None):
     publish_ctx = [ctx for ctx in rounds_ctx if ctx['round']['event_id'] not in bad_events]
     if global_errors:
         print(f"!! 全体エラー {len(global_errors)} 件のため公開データを更新しません")
+    findings += roster_findings(roster, [r for ctx in publish_ctx for r in ctx['runs']])
     write_report(findings, rounds_ctx, bad_events, n_golden, layer5_status)
     n_err = sum(1 for x in findings if x.level == 'error')
     n_warn = sum(1 for x in findings if x.level == 'warning')
@@ -489,14 +490,45 @@ def _name_key(name):
     return ''.join((name or '').split())
 
 
-def mic_status(roster, athlete_id, name, aliases=()):
-    """名簿は athlete_id か氏名（空白を無視、別名も含む）で照合する。"""
+def _saj_key(no):
+    """SAJ 番号の比較用（印字・順位表には先頭 0 の 8 桁もある）"""
+    return str(no or '').strip().lstrip('0')
+
+
+def mic_status(roster, athlete_id, name, aliases=(), saj_nos=()):
+    """名簿に SAJ 番号がある選手は SAJ 番号だけで照合する（同姓同名の別人を拾わない。FIS コードが付いて athlete_id が
+    変わっても外れない。城さんの判断、2026-10-08）。SAJ 番号の無い選手は athlete_id か氏名（空白を無視、別名も含む）で照合する。"""
     keys = {_name_key(name)} | {_name_key(a) for a in aliases}
     keys.discard('')
+    nos = {_saj_key(n) for n in saj_nos} - {''}
     for m in roster.get('members', []):
-        if (m.get('athlete_id') and m.get('athlete_id') == athlete_id) or _name_key(m.get('name')) in keys:
+        if m.get('saj_no'):
+            hit = _saj_key(m['saj_no']) in nos
+        else:
+            hit = (m.get('athlete_id') and m.get('athlete_id') == athlete_id) or _name_key(m.get('name')) in keys
+        if hit:
             return {'from': m.get('from'), 'to': m.get('to')}
     return None
+
+
+def roster_findings(roster, runs):
+    """名簿の SAJ 番号の点検（警告）: 番号の記録が公開データに無い／名簿と同じ氏名で SAJ 番号の違う選手がいる（別人か番号の誤り）"""
+    out = []
+    by_no = collections.defaultdict(set)
+    for r in runs:
+        if r.get('saj_no'):
+            by_no[_saj_key(r['saj_no'])].add(_name_key(r.get('name')))
+    for m in roster.get('members', []):
+        if not m.get('saj_no'):
+            continue
+        no, nk = _saj_key(m['saj_no']), _name_key(m.get('name'))
+        if no not in by_no:
+            out.append(verify.Finding('warning', 'mic_roster', 'roster', f"MIC 名簿の {m.get('name')}（SAJ {m['saj_no']}）の記録が公開データに無い"))
+        others = sorted({_saj_key(r.get('saj_no')) for r in runs if _name_key(r.get('name')) == nk and r.get('saj_no')} - {no})
+        if others:
+            out.append(verify.Finding('warning', 'mic_roster', 'roster',
+                                      f"MIC 名簿の {m.get('name')}（SAJ {m['saj_no']}）と同じ氏名で SAJ 番号の違う選手がいる: {', '.join(others)}（別人か番号の誤り。MIC には含めない）"))
+    return out
 
 
 def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, n_golden, layer5_status, findings, counts=None):
@@ -572,7 +604,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
                          # 所属は FIS 様式には印字されないので、最後に印字があった大会の値を使う
                          'affiliation': next((x['affiliation'] for x in reversed(rs_sorted) if x.get('affiliation')), None),
                          'club': next((x['club'] for x in reversed(rs_sorted) if x.get('club')), None),
-                         'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name, [a for a in alias_list if a]),
+                         'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name, [a for a in alias_list if a], [x.get('saj_no') for x in rs]),
                          'n_results': sum(1 for x in rs if x['counting']), 'seasons': sorted({x['season'] for x in rs}),
                          'series': sorted({x['series'] for x in rs}),
                          'best': {'run_score': best['run_score'], 'run_id': best['run_id']} if best else None})

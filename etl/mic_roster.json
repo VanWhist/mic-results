@@ -1,19 +1,19 @@
 {
- "_comment": "MIC の選手名簿。出典: https://mogul-mic.com/ の選手紹介（Van さんの指示 2026-09-25: 選手紹介に載っている 12 名）。athlete_id は記録が見つかった時点で入れる（氏名だけでも空白を無視して照合する）。在籍期間（from/to、シーズン表記）は未記入＝現役として扱う。Van さんが保守する。",
+ "_comment": "MIC の選手名簿。出典: https://mogul-mic.com/ の選手紹介（Van さんの指示 2026-09-25: 選手紹介に載っている 12 名）。saj_no（SAJ 番号）のある選手は SAJ 番号だけで照合する（同姓同名の別人を拾わない。Van さんの判断 2026-10-08。番号は公開データの記録と氏名・所属で確かめて Van さんが確認）。saj_no の無い選手は athlete_id か氏名（空白を無視）で照合する。在籍期間（from/to、シーズン表記）は未記入＝現役として扱う。Van さんが保守する。",
  "snapshot_at": "2026-09-25",
  "source": "https://mogul-mic.com/#athletes",
  "members": [
-  {"name": "勝田有美", "athlete_id": null, "from": null, "to": null},
+  {"name": "勝田有美", "saj_no": "5002452", "athlete_id": null, "from": null, "to": null},
   {"name": "藤原朋己", "athlete_id": null, "from": null, "to": null},
-  {"name": "鈴木佳英", "athlete_id": null, "from": null, "to": null},
-  {"name": "見瀬クレア", "athlete_id": null, "from": null, "to": null},
-  {"name": "鈴木伶菜", "athlete_id": null, "from": null, "to": null},
-  {"name": "有賀睦人", "athlete_id": null, "from": null, "to": null},
-  {"name": "馬路晴世", "athlete_id": null, "from": null, "to": null},
-  {"name": "七海快成", "athlete_id": null, "from": null, "to": null},
-  {"name": "浜田匠真", "athlete_id": null, "from": null, "to": null},
-  {"name": "浜田誠真", "athlete_id": null, "from": null, "to": null},
-  {"name": "松村聡美", "athlete_id": null, "from": null, "to": null},
-  {"name": "林遼真", "athlete_id": null, "from": null, "to": null}
+  {"name": "鈴木佳英", "saj_no": "5002440", "athlete_id": null, "from": null, "to": null},
+  {"name": "見瀬クレア", "saj_no": "5001737", "athlete_id": null, "from": null, "to": null},
+  {"name": "鈴木伶菜", "saj_no": "5002151", "athlete_id": null, "from": null, "to": null},
+  {"name": "有賀睦人", "saj_no": "5002208", "athlete_id": null, "from": null, "to": null},
+  {"name": "馬路晴世", "saj_no": "5001932", "athlete_id": null, "from": null, "to": null},
+  {"name": "七海快成", "saj_no": "5001891", "athlete_id": null, "from": null, "to": null},
+  {"name": "浜田匠真", "saj_no": "5002069", "athlete_id": null, "from": null, "to": null},
+  {"name": "浜田誠真", "saj_no": "5001957", "athlete_id": null, "from": null, "to": null},
+  {"name": "松村聡美", "saj_no": "5002322", "athlete_id": null, "from": null, "to": null},
+  {"name": "林遼真", "saj_no": "5001654", "athlete_id": null, "from": null, "to": null}
  ]
 }

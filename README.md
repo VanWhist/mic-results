@@ -133,4 +133,6 @@ python -m etl.adapters.moguls_results.sync_registry
 ## 4. 選手の ID
 
 `athlete_id` は FIS コード → `saj-<SAJ 番号>` → `x-<氏名>-<所属>` の順で決める。同姓同名は自動で統合しない。
-統合は `etl/athlete_master.json` に根拠つきで書く。MIC 選手は `etl/mic_roster.json` に `athlete_id`（または氏名）と在籍期間を書くと、画面に MIC バッジが付く。
+統合は `etl/athlete_master.json` に根拠つきで書く。MIC 選手は `etl/mic_roster.json` に `saj_no`（SAJ 番号）と在籍期間を書くと、画面に MIC バッジが付く。
+`saj_no` のある選手は SAJ 番号だけで照合する（同姓同名の別人を拾わず、FIS コードが付いて `athlete_id` が変わっても外れない）。
+`saj_no` の無い選手は `athlete_id` か氏名で照合する。名簿の番号の記録が無い・同じ氏名で番号の違う選手がいるときは、検証レポートに警告が出る。
