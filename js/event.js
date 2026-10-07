@@ -63,8 +63,9 @@ function renderChips() {
   const rounds = [...event.rounds];
   for (const r of rounds) {
     const b = el('button', { class: 'chip' + (current && current.round_id === r.round_id ? ' primary' : ''), type: 'button',
-      // 人数は採用の走り（1 人 1 本）で数える。Q2 報告の Q1 参考・2 本の良い方の決勝のもう 1 本は数えない
-      text: genderLabel(r.gender) + ' ' + roundLabel(r) + '（' + (runsByRound.get(r.round_id) || []).filter((x) => x.counting !== false).length + '名）',
+      // 人数は選手の数で数える（Q2 報告の Q1 参考・2 本の良い方の決勝のもう 1 本で 2 回数えない）。採用の走りの数で数えると、
+      // 全部が集計に数えない走りのラウンド（全日本ジュニアの総合の部）が 0 名になる
+      text: genderLabel(r.gender) + ' ' + roundLabel(r) + '（' + new Set((runsByRound.get(r.round_id) || []).map((x) => x.athlete_id || x.run_id)).size + '名）',
       onclick: () => {
         current = r; history.replaceState(null, '', '#' + encodeURIComponent(r.round_id)); renderChips(); renderRound();
         // スクロールの途中（チップが上に固定されている状態）で切り替えたら、新しいラウンドの頭へ戻す
