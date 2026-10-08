@@ -817,7 +817,7 @@ def main():
     exc = load_exceptions()
     for n, (r, k, d) in enumerate(issues):
         if k in EXC_ITEM:
-            key = next((kk for kk in ((r['event_id'], r['bib'], EXC_ITEM[k]), (r['date'][:4], r['bib'], EXC_ITEM[k]))
+            key = next((kk for kk in ((r['event_id'], r['bib'], EXC_ITEM[k]), ((r['date'] or '')[:4], r['bib'], EXC_ITEM[k]))  # 日付の印字が読めない旧様式の大会は date が空
                         if kk in exc and (kk[0] == r['event_id'] or r['series'] == 'SAJ_AJ')), None)
             if key:
                 issues[n] = (r, 'printed_as_is', f'{d}（登録済みの例外: {exc[key][:40]}…）')

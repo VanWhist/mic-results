@@ -14,8 +14,10 @@ import re
 import pdfplumber
 try:
     from . import glyph_font as glyph_font_mod
+    from . import cmap_usecmap  # noqa: F401  pdfminer の UniJIS-UCS2-HW-H に親の CMap を足す（2012 松之山）
 except ImportError:  # スクリプトとして直接使うとき
     import glyph_font as glyph_font_mod
+    import cmap_usecmap  # noqa: F401
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
@@ -140,6 +142,17 @@ def undouble_heading(line):
     return line
 
 
+def printed_date(line):
+    """行の中の日付の印字 → 'YYYY-MM-DD'。西暦（'2012年4月1日'）と和暦（'平成24年1月8日(日)'、2012 埼玉県松之山。saj_dm と同じ）"""
+    m = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
+    if m:
+        return '%s-%02d-%02d' % (m.group(1), int(m.group(2)), int(m.group(3)))
+    m = re.search(r'平成(\d{1,2})年(\d{1,2})月(\d{1,2})日', line)
+    if m:
+        return '%d-%02d-%02d' % (1988 + int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    return None
+
+
 def is_old_header(line, force=False):
     # 表頭が 2 行に割れる年（1 行目 '順位 SAJNO 氏 名 ターン エアー タイム'、2 行目 'SAC BIB FISNO … Pts …'）や
     # 英語版（'Rk BIB FIS Code Name YB … Pts Score Tie'）もある。force のときは 'Point' 表頭（2013〜2016 年の過渡期の様式）も
@@ -147,9 +160,10 @@ def is_old_header(line, force=False):
     if force and line.startswith('順位') and 'SAJ競技者No' in line:
         # 2012・2013 東海北陸 愛知県大会: '順位 BIB SAJ競技者No 氏名 所属 クラブ名 …'（2013 は J1 … Total が次の行に割れる）
         return True
-    if force and line.startswith('順位') and 'SAS' in line and 'Score' in line:
+    if force and line.startswith('順位') and ('SAS' in line or 'NSA' in line.split()) and 'Score' in line:
         # 表頭が 3 行に割れる年（2013 埼玉県松之山: 'SAJ競 Turns …' / '順位 SAS BIB 氏名 所属 クラブ名 Score Tie' /
-        # '技者№ J1 J2 J3 Turn 1st 2nd … Total Time Time'）。1 選手 1 行で、末尾 4 列は同じ並び
+        # '技者№ J1 J2 J3 Turn 1st 2nd … Total Time Time'）。1 選手 1 行で、末尾 4 列は同じ並び。
+        # 2012 埼玉県松之山は県内順位の欄の見出しが 'NSA'（'順位 NSA BIB 氏名 所属 クラブ名 Score'）
         return True
     if not ('Total' in line and (line.startswith(('順位', 'SAC', 'Rk', 'Rank')) or 'BIB' in line)):
         return False
@@ -191,7 +205,8 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
     k = 0
     while k < len(rest) and not (is_num(rest[k]) and k + nturn < len(rest) and all(is_num(x) for x in rest[k:k + nturn + 1])):
         k += 1
-    head = [t for t in rest[:k] if not is_num(t) and t not in STATUS]  # 完走していない行の '0.00 DNF' は名前・クラブに含めない
+    # 完走していない行の '0.00 DNF' は名前・クラブに含めない。'#####'（表計算の欄の幅に入らない値、2012 埼玉県松之山の DNS・DNF の行）も同じ
+    head = [t for t in rest[:k] if not is_num(t) and t not in STATUS and not re.fullmatch(r'#{3,}', t)]
     nums_tail = [x for x in rest[k:] if is_num(x)]
     # ローマ字の氏名に所属が空白なしで続く語（'William MAR海外 ｵｰｽﾄﾗﾘｱ'、2012 東京都）は氏名と所属に分ける（氏名は印字のまま）。
     # 氏名の位置（先頭 2 語）だけ。クラブ名（'AP山形'）は分けない
@@ -245,7 +260,7 @@ def parse_pdf(path, force=False, glyph_font=None):
     sections = []
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={}, old_layout=False)
     with pdfplumber.open(path) as pdf:
-        cur = None
+        cur, page_date = None, None
         for pno, page in enumerate(pdf.pages, 1):
             if glyph_font:
                 glyph_font_mod.fix_page(page, glyph_font)
@@ -257,6 +272,9 @@ def parse_pdf(path, force=False, glyph_font=None):
                 # 0.5pt で読み直す（saj_dm の英語版と同じ。2015 全日本）
                 text = page.dedupe_chars(tolerance=0.5).extract_text() or ''
             lines = [l.strip() for l in re.sub(r'\(cid:\d+\)', ' ', text).split('\n') if l.strip()]
+            # 表の日付は、表が始まるページに印字された日付（無ければ前のページの日付）。2 日にわたる大会で決勝のページが先に
+            # 綴じてある PDF がある（2012 愛知 A級 男子: 1 ページ目の決勝は 2 月 5 日、予選のページは 2 月 4 日）
+            page_date = next((d for d in map(printed_date, lines) if d), page_date)
             for li, line in enumerate(lines):
                 if li < 12:
                     line = undouble_heading(line)
@@ -282,7 +300,7 @@ def parse_pdf(path, force=False, glyph_font=None):
                             cur['pages'].append(pno)
                     else:
                         cur = dict(gender=gender, round=rnd, code=None, heading=line, pages=[pno], athletes=[], mixed=(gender == '男女'),
-                                   en_heading=bool(me))
+                                   en_heading=bool(me), date=page_date)
                         if mc:
                             cur['codex'] = re.search(r'Codex\s+(\d+)', line).group(1)  # 見出しの CODEX（'男子予選 Codex 0004'）
                         sections.append(cur)
@@ -296,13 +314,17 @@ def parse_pdf(path, force=False, glyph_font=None):
                     meta['title'] = line
                 if ('スキー場' in line or 'リゾート' in line) and meta['venue'] is None and li < 8:
                     meta['venue'] = line
-                mm = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
-                if mm and meta['date'] is None:
-                    meta['date'] = '%s-%02d-%02d' % (mm.group(1), int(mm.group(2)), int(mm.group(3)))
+                if meta['date'] is None:
+                    meta['date'] = printed_date(line)
                 mj = re.match(r'(J\d)\s*:?\s*\((ターン|エアー|エア|Turns|Air)\)\s*(.+)', line)
                 if mj and mj.group(1) not in meta['judges']:
                     role = 'Turns' if mj.group(2) in ('ターン', 'Turns') else 'Air'
                     meta['judges'][mj.group(1)] = (role, mj.group(3).strip())
+                # 審判員の欄が '1.(T) 池田 孝子 (埼玉)'・'4.(A) 石井 浩 （北海道)' の形で、競技役員・コースの欄と同じ行に並ぶ様式
+                # （2012 埼玉県松之山）
+                mj = re.search(r'(?:^|\s)([1-7])\.\((T|A)\)\s*(\S+\s\S+\s*[（(][^)）]*[)）])', line)
+                if mj and 'J' + mj.group(1) not in meta['judges']:
+                    meta['judges']['J' + mj.group(1)] = ('Turns' if mj.group(2) == 'T' else 'Air', mj.group(3).strip())
                 if cur is None:
                     continue
                 mg = re.fullmatch(r'【(男子|女子)】', line.strip())
@@ -310,7 +332,7 @@ def parse_pdf(path, force=False, glyph_font=None):
                     # 男女合同の表の性別の印字（'【女子】' … '【男子】'、2016 札幌 B級）。印字があれば SAJ 番号の照合より優先する
                     if cur['athletes']:
                         cur = dict(gender=None, round=cur['round'], code=None, heading=cur['heading'], pages=[pno], athletes=[],
-                                   mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1)
+                                   mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1, date=cur.get('date'))
                         sections.append(cur)
                     cur['gender_mark'] = mg.group(1)
                     continue
@@ -367,7 +389,7 @@ def parse_pdf(path, force=False, glyph_font=None):
                         if cur.get('mixed') and cur['athletes'] and a.get('rank') == 1 and any(x.get('rank') for x in cur['athletes']):
                             # 男女合同の表: 順位が 1 に戻ったら次の性別（女子→男子）
                             cur = dict(gender=None, round=cur['round'], code=None, heading=cur['heading'], pages=[pno], athletes=[],
-                                       mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1)
+                                       mixed=True, old=True, nturn=cur.get('nturn', 3), mixed_k=cur.get('mixed_k', 0) + 1, date=cur.get('date'))
                             sections.append(cur)
                         cur['athletes'].append(a)
                         continue

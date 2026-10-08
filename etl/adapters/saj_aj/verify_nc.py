@@ -15,8 +15,10 @@ import pdfplumber
 import openpyxl
 try:
     from . import glyph_font as glyph_font_mod
+    from . import cmap_usecmap  # noqa: F401  pdfminer の UniJIS-UCS2-HW-H に親の CMap を足す（2012 松之山）
 except ImportError:  # スクリプトとして直接使うとき
     import glyph_font as glyph_font_mod
+    import cmap_usecmap  # noqa: F401
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 ROUNDCODE = re.compile(r'^(SF|F|Q)-[a-z/]+$')

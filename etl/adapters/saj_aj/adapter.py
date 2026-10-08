@@ -542,7 +542,9 @@ def load_event(ev, imported_at, log=print):
                 pace_note = overrides[sheet]['basis']
             elif b_round is not None and b_round.get('pace') is not None:
                 pace = Decimal(str(b_round['pace']))
-            rmeta = {'date': meta.get('date'), 'date_text': meta.get('date'), 'venue': meta.get('venue'),
+            # 旧様式は表ごとの日付（表が始まるページの印字。2 日にわたる大会で決勝のページが先の PDF がある）。新様式は PDF の最初の日付
+            date = s.get('date') or meta.get('date')
+            rmeta = {'date': date, 'date_text': date, 'venue': meta.get('venue'),
                      'judges': judges, 'pace_time': float(pace) if pace is not None else None, 'pace_note': pace_note,
                      'num_competitors': None, 'parser_version': PARSER_VERSION, 'title': meta.get('title'),
                      'officials': []}
