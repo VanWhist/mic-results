@@ -531,6 +531,43 @@ def check_rank_only_fis(rnd_runs):
     return issues
 
 
+def check_web_round(rnd_runs):
+    """FIS 公式サイトの結果ページから取り込んだラウンド（fis_web、順位のみ。元データは保存したページの表の JSON）:
+    アダプタとは別に、表頭の語で欄を引き、FIS コードで行を探して、順位・Bib・氏名・国・生年・状態・得点（参考）が
+    公開データと一致するか、ページの行がちょうど 1 回ずつ公開されているかを見る"""
+    issues = []
+    path = pdf_path(rnd_runs[0]['provenance'])
+    if not os.path.exists(path):
+        return [(r, 'pdf_missing', path) for r in rnd_runs]
+    with open(path, encoding='utf-8') as fh:
+        page = json.load(fh)
+    heads = [c for c in page['cols'] if not c.lower().startswith(('did not', 'disqualif'))]
+    rows = {}
+    for row in page['rows']:
+        cell = dict(zip(heads, row[1:]))
+        st = {'did not start': 'DNS', 'did not finish': 'DNF', 'disqualified': 'DSQ'}.get(row[0].lower(), 'OK' if not row[0] else row[0])
+        rows[cell.get('FIS code')] = (st, cell)
+    seen = set()
+    for r in rnd_runs:
+        hit = rows.get(r['fis_code'])
+        if hit is None:
+            issues.append((r, 'code_not_on_page', f"{os.path.basename(path)} {r['fis_code']}"))
+            continue
+        seen.add(r['fis_code'])
+        st, c = hit
+        want = {'status': st, 'rank': int(c['Rank']) if c.get('Rank') else None, 'bib': int(c['Bib']) if c.get('Bib') else None,
+                'name': c.get('Athlete'), 'noc': c.get('Nation'), 'yb': int(c['Year']) if c.get('Year') else None}
+        for k, v in want.items():
+            if r.get(k) != v:
+                issues.append((r, 'web_diff', f'{k}: 公開 {r.get(k)} / ページ {v}'))
+        got = (r.get('components') or {}).get('web_result')
+        if (got or None) != (c.get('Result') or None):
+            issues.append((r, 'web_diff', f"得点（参考）: 公開 {got} / ページ {c.get('Result')}"))
+    for code in set(rows) - seen:
+        issues.append((rnd_runs[0], 'web_row_unpublished', f"{os.path.basename(path)} の {code} {rows[code][1].get('Athlete')} が公開データに無い"))
+    return issues
+
+
 def check_rank_only(rnd_runs):
     issues = []
     for r in rnd_runs:
@@ -750,6 +787,9 @@ def main():
         elif src.startswith('FIS-DM'):
             issues += check_rank_only_fis(rr)
             checked['D(fis-dm)'] += len(rr)
+        elif src.startswith('FIS-WEB'):
+            issues += check_web_round(rr)
+            checked['W(fis-web)'] += len(rr)
         elif rnd['tier'] == 'rank':
             issues += check_rank_only(rr)
             checked['D'] += len(rr)

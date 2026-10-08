@@ -510,6 +510,8 @@ function renderTable(r, runs) {
   }
   const hasProg = runs.some((x) => x.components && x.components.progression);  // デュアルモーグル: 最終段と対戦経過
   if (hasProg) heads.push(th('最終段'), th('対戦経過'));
+  const hasWeb = runs.some((x) => x.components && x.components.web_result);  // FIS 公式サイトの結果ページから取り込んだ得点（参考）
+  if (hasWeb) heads.push(th('得点（参考）', 'num'));
   const tbody = el('tbody');
   for (const run of runs) {
     const tds = [el('td', { class: 'num', text: run.rank ?? '—' }), el('td', { class: 'num', text: run.bib ?? '—' }), nameCell(run),
@@ -531,12 +533,24 @@ function renderTable(r, runs) {
       const c = run.components || {};
       tds.push(el('td', { text: c.stage || '' }), el('td', { class: 'prog', text: c.progression || '' }));
     }
+    if (hasWeb) tds.push(el('td', { class: 'num', text: (run.components && run.components.web_result) || '' }));
     tbody.append(el('tr', {}, tds));
   }
   const table = el('table', {}, [el('thead', {}, el('tr', {}, heads)), tbody]);
   const legend = tier === 'detail' ? el('p', { class: 'meta', text:
-    'B＝ベース点、D＝減点（マイナス）。' + (nT >= 5 ? '薄い字は最高・最低として除外された点。' : '3人制は除外なしで合計。') + 'ターンの下限は 0.3。' }) : null;
+    'B＝ベース点、D＝減点（マイナス）。' + (nT >= 5 ? '薄い字は最高・最低として除外された点。' : '3人制は除外なしで合計。') + 'ターンの下限は 0.3。' })
+    : (isWeb(runs) ? webNote() : null);
   return el('div', {}, [el('div', { class: 'table-wrap' }, table), legend]);
+}
+
+// FIS 公式サイトの結果ページから取り込んだラウンド（結果の PDF が無いレース。順位のみの段階）
+function isWeb(runs) {
+  return runs.some((x) => x.components && x.components.source === 'fis_web');
+}
+
+function webNote() {
+  return el('p', { class: 'meta', text: 'FIS サイトに結果の PDF が無いレースのため、FIS 公式サイトの結果ページの最終順位を載せています。'
+    + '得点は同じページの値（参考）で、審判の点からの検算はしていません。決勝に進んだ選手は決勝の得点、それ以外は予選の得点です。' });
 }
 
 function renderCards(r, runs) {
@@ -550,6 +564,7 @@ function renderCards(r, runs) {
     const sub = [run.affiliation, run.club].filter(Boolean).join(' ');
     const parts = [];
     if (run.components && run.components.progression) parts.push((run.components.stage ? run.components.stage + '　' : '') + run.components.progression);
+    if (run.components && run.components.web_result) parts.push('得点（参考）' + run.components.web_result);
     if (r.tier !== 'rank' && run.status === 'OK') {
       parts.push('タイム ' + num(run.seconds) + '秒（' + num(run.time_points) + '）');
       parts.push('エア ' + num(run.air_total) + (run.air && run.air.length ? '（' + run.air.map((x) => x.jump).join('・') + '）' : ''));
@@ -557,7 +572,7 @@ function renderCards(r, runs) {
     }
     box.append(el('div', { class: 'rec' }, [head, el('div', { class: 'rec-sub', text: sub }), el('div', { class: 'rec-meta', text: parts.join('　') })]));
   }
-  return box;
+  return isWeb(runs) ? el('div', {}, [box, webNote()]) : box;
 }
 
 async function main() {

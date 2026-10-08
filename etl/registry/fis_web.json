@@ -1,0 +1,944 @@
+{
+ "_comment": "gen_registry.py（etl/adapters/fis_web）が FIS_WEB/raw と inventory/fis_overseas_survey.jsonl から生成。notes・tier・name_ja・skip・format は手で編集してよい（再生成しても保持される）",
+ "generated_at": "2026-10-08T08:46:00",
+ "events": [
+  {
+   "event_id": "2016-17-fis-apexmountain-8189",
+   "season": "2016-17",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "40142",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40142&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/9852.json",
+     "sha256": "e0dd072d13d588d8cca29e3edbcc99f92a10cd95f9d363969162d4948193b025",
+     "raceid": "9852",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9852",
+     "gender": "M",
+     "codex": "8189",
+     "date": "2016-12-17",
+     "page_check": "174-070-167-187-026-147-071-238",
+     "survey": {
+      "n": 47,
+      "jpn": [
+       "3 20 2530672 SHIMAKAWA Takuya",
+       "12 27 2530684 MURATA Yutaro",
+       "20 107 2528017 MEGURO Misato",
+       "24 38 2530522 SASAKI Taiga",
+       "26 25 2532227 KIMOTO Masahiro",
+       "28 108 2528065 FUJII Masaori",
+       "39 103 2531559 INUI Takami",
+       "40 37 2531671 MATSUDA So",
+       "46 21 2481487 MORIYAMA Sunao"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/9851.json",
+     "sha256": "d0b1c3e4edf327c7599c9f2ce18d7d0d6814b15ead0a7eb9226707a199dcff1e",
+     "raceid": "9851",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9851",
+     "gender": "W",
+     "codex": "8188",
+     "date": "2016-12-17",
+     "page_check": "226-061-138-154-007-169-011-049",
+     "survey": {
+      "n": 26,
+      "jpn": [
+       "5 1 2532040 YANAGIMOTO Rino",
+       "8 40 2531670 FUKUSHIMA Shunka",
+       "11 110 2532032 NISHITA Reika",
+       "21 22 2530715 KONNO Izumi"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2016-17-fis-apexmountain-8191",
+   "season": "2016-17",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain",
+   "fis_event_id": "40142",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=40142&seasoncode=2017",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/9854.json",
+     "sha256": "048c480b8fad82a5d7a43598e7a5fad837c6dea2244d425067b2ea41edc18862",
+     "raceid": "9854",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9854",
+     "gender": "M",
+     "codex": "8191",
+     "date": "2016-12-18",
+     "page_check": "067-246-073-004-210-122-214-082",
+     "survey": {
+      "n": 44,
+      "jpn": [
+       "4 27 2530684 MURATA Yutaro",
+       "14 20 2530672 SHIMAKAWA Takuya",
+       "17 107 2528017 MEGURO Misato",
+       "24 37 2531671 MATSUDA So",
+       "26 108 2528065 FUJII Masaori",
+       "29 25 2532227 KIMOTO Masahiro",
+       "33 103 2531559 INUI Takami",
+       "42 38 2530522 SASAKI Taiga"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/9853.json",
+     "sha256": "1a67939c3d6624d0473f8aec8e6fc100dc6f2fd2b84dc8e3c931ad32c8050d29",
+     "raceid": "9853",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=9853",
+     "gender": "W",
+     "codex": "8190",
+     "date": "2016-12-18",
+     "page_check": "036-121-223-148-030-055-230-085",
+     "survey": {
+      "n": 26,
+      "jpn": [
+       "5 1 2532040 YANAGIMOTO Rino",
+       "8 40 2531670 FUKUSHIMA Shunka",
+       "12 110 2532032 NISHITA Reika",
+       "19 22 2530715 KONNO Izumi"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2017-18-fis-apexmountain-8410",
+   "season": "2017-18",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "42529",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42529&seasoncode=2018",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/10760.json",
+     "sha256": "1767bbe86cce587db3bc6e9777b50905cfcd3a3716aaae14b05132fb6b182d61",
+     "raceid": "10760",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10760",
+     "gender": "M",
+     "codex": "8410",
+     "date": "2017-12-16",
+     "page_check": "027-248-006-091-116-143-124-055",
+     "survey": {
+      "n": 44,
+      "jpn": [
+       "6 2 2530684 MURATA Yutaro",
+       "9 67 2530690 KOYAMA Takashi",
+       "10 91 2528069 SUGIMOTO Kosuke",
+       "19 1 2531352 NISHIZAWA Taketo",
+       "20 34 2532227 KIMOTO Masahiro",
+       "30 32 2527652 KOIWA Kai",
+       "37 36 2531908 HIRAYAMA Shota",
+       "39 4 2530646 AGATSUMA Sora"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/10759.json",
+     "sha256": "438a918f24f3a3a82aedad7ca2697a44471112df6261e2f5236004a2138cd003",
+     "raceid": "10759",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10759",
+     "gender": "W",
+     "codex": "8409",
+     "date": "2017-12-16",
+     "page_check": "139-012-163-036-010-110-238-075",
+     "survey": {
+      "n": 32,
+      "jpn": [
+       "3 10 2531368 IHARA Haruka",
+       "5 99 2532032 NISHITA Reika",
+       "7 68 2533769 KAJIWARA Yuki",
+       "13 93 2528668 TANIGUCHI Ayaho",
+       "15 33 2531670 FUKUSHIMA Shunka",
+       "19 37 2533488 NAKAO Haruka",
+       "20 40 2534310 OTSUKA Sachi",
+       "22 95 2530698 KAWATA Yuka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2017-18-fis-apexmountain-8412",
+   "season": "2017-18",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Apex Mountain, BC",
+   "fis_event_id": "42529",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=42529&seasoncode=2018",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/10762.json",
+     "sha256": "e8b9c29a1063a5eba797381715f3516fc3d11debcb07ff2d1bd87fea9325f4f7",
+     "raceid": "10762",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10762",
+     "gender": "M",
+     "codex": "8412",
+     "date": "2017-12-17",
+     "page_check": "102-211-111-187-034-224-165-150",
+     "survey": {
+      "n": 44,
+      "jpn": [
+       "5 2 2530684 MURATA Yutaro",
+       "6 91 2528069 SUGIMOTO Kosuke",
+       "7 67 2530690 KOYAMA Takashi",
+       "19 1 2531352 NISHIZAWA Taketo",
+       "20 36 2531908 HIRAYAMA Shota",
+       "23 32 2527652 KOIWA Kai",
+       "29 34 2532227 KIMOTO Masahiro",
+       "34 4 2530646 AGATSUMA Sora"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/10761.json",
+     "sha256": "83e4f675ccff4bea652d792709fef284f62b0b40055ec3ab3681971e85d7f61e",
+     "raceid": "10761",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=10761",
+     "gender": "W",
+     "codex": "8411",
+     "date": "2017-12-17",
+     "page_check": "061-038-182-144-112-137-076-214",
+     "survey": {
+      "n": 32,
+      "jpn": [
+       "4 99 2532032 NISHITA Reika",
+       "5 68 2533769 KAJIWARA Yuki",
+       "7 10 2531368 IHARA Haruka",
+       "11 93 2528668 TANIGUCHI Ayaho",
+       "15 95 2530698 KAWATA Yuka",
+       "16 33 2531670 FUKUSHIMA Shunka",
+       "18 40 2534310 OTSUKA Sachi",
+       "26 37 2533488 NAKAO Haruka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2021-22-fis-idrefjall-8437",
+   "season": "2021-22",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "49667",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49667&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/14448.json",
+     "sha256": "fac92d886a77f91e60512938e1986ae459825ebc13054a51548750764bf6f324",
+     "raceid": "14448",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14448",
+     "gender": "M",
+     "codex": "8437",
+     "date": "2021-12-13",
+     "page_check": "037-119-128-146-084-229-152-118",
+     "survey": {
+      "n": 31,
+      "jpn": [
+       "1 45 2530522 SASAKI Taiga",
+       "3 49 2531352 NISHIZAWA Taketo",
+       "5 46 2530672 SHIMAKAWA Takuya",
+       "6 74 2530690 KOYAMA Takashi",
+       "7 43 2529670 FUJIKI Goshin",
+       "8 53 2531908 HIRAYAMA Shota",
+       "10 41 2528065 FUJII Masaori",
+       "11 58 2533771 KAWAOKA Shima",
+       "12 54 2532177 KANNO Shugo",
+       "13 55 2532207 SHIMPO Ryuto",
+       "15 51 2531559 INUI Takami",
+       "19 56 2532227 KIMOTO Masahiro"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/14447.json",
+     "sha256": "aed9495c6318018183ea12038bb0b02122e0ba125b2ad15fc666087d9d8f9f10",
+     "raceid": "14447",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14447",
+     "gender": "W",
+     "codex": "8438",
+     "date": "2021-12-13",
+     "page_check": "222-006-250-140-220-096-073-079",
+     "survey": {
+      "n": 20,
+      "jpn": [
+       "1 50 2531368 IHARA Haruka",
+       "2 57 2533769 KAJIWARA Yuki",
+       "3 59 2534824 ITO Marin",
+       "4 73 2527317 ITO Satsuki",
+       "5 44 2530521 OGIHARA Nagi",
+       "6 52 2531670 FUKUSHIMA Shunka",
+       "10 42 2528668 TANIGUCHI Ayaho"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2021-22-opn-idrefjall-8427",
+   "season": "2021-22",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "49666",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49666&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/14444.json",
+     "sha256": "4eee98763002339833fa27dcb73ae3c87bc7bf259f9a77899ca20903255fcdca",
+     "raceid": "14444",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14444",
+     "gender": "M",
+     "codex": "8427",
+     "date": "2021-11-20",
+     "page_check": "093-181-167-096-008-042-011-182",
+     "survey": {
+      "n": 89,
+      "jpn": [
+       "1 1 2529645 HORISHIMA Ikuma",
+       "8 8 2529652 HARA Daichi",
+       "9 17 2531671 MATSUDA So",
+       "10 13 2528069 SUGIMOTO Kosuke",
+       "17 20 2529670 FUJIKI Goshin",
+       "21 19 2531352 NISHIZAWA Taketo",
+       "22 53 2532182 TAKAGISHI Gaku",
+       "23 32 2530672 SHIMAKAWA Takuya",
+       "25 29 2530690 KOYAMA Takashi",
+       "37 22 2532227 KIMOTO Masahiro",
+       "41 38 2532177 KANNO Shugo",
+       "50 41 2530522 SASAKI Taiga",
+       "53 36 2528065 FUJII Masaori",
+       "55 50 2531559 INUI Takami",
+       "63 37 2531908 HIRAYAMA Shota",
+       "77 24 2533771 KAWAOKA Shima"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/14443.json",
+     "sha256": "6ac499d8bcd8e45839f3c987a93600bc00a36e10b290c5c9c95b4c1b36b8ebb0",
+     "raceid": "14443",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14443",
+     "gender": "W",
+     "codex": "8428",
+     "date": "2021-11-20",
+     "page_check": "214-066-080-190-077-186-127-103",
+     "survey": {
+      "n": 75,
+      "jpn": [
+       "1 108 2532040 YANAGIMOTO Rino",
+       "2 116 2533488 NAKAO Haruka",
+       "4 105 2532204 SUMIYOSHI Kisara",
+       "5 104 2485108 HOSHINO Junko",
+       "6 111 2531368 IHARA Haruka",
+       "8 129 2534824 ITO Marin",
+       "11 115 2527317 ITO Satsuki",
+       "13 137 2528668 TANIGUCHI Ayaho",
+       "16 140 2533039 FUJIKI Hina",
+       "26 112 2533769 KAJIWARA Yuki",
+       "53 155 2537043 TAGUCHI Yuma",
+       "56 141 2530521 OGIHARA Nagi",
+       "DNF 128 2531670 FUKUSHIMA Shunka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2021-22-opn-idrefjall-8429",
+   "season": "2021-22",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "49666",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=49666&seasoncode=2022",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/14446.json",
+     "sha256": "aa71c359e9a84b3edb8d2542699cf420722da019f855d22f192b47ae963b184f",
+     "raceid": "14446",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14446",
+     "gender": "M",
+     "codex": "8429",
+     "date": "2021-11-21",
+     "page_check": "197-173-020-237-196-065-213-183",
+     "survey": {
+      "n": 86,
+      "jpn": [
+       "2 1 2529645 HORISHIMA Ikuma",
+       "4 17 2531671 MATSUDA So",
+       "6 13 2528069 SUGIMOTO Kosuke",
+       "9 37 2531908 HIRAYAMA Shota",
+       "17 53 2532182 TAKAGISHI Gaku",
+       "19 24 2533771 KAWAOKA Shima",
+       "20 8 2529652 HARA Daichi",
+       "26 19 2531352 NISHIZAWA Taketo",
+       "30 22 2532227 KIMOTO Masahiro",
+       "31 38 2532177 KANNO Shugo",
+       "32 32 2530672 SHIMAKAWA Takuya",
+       "35 29 2530690 KOYAMA Takashi",
+       "37 20 2529670 FUJIKI Goshin",
+       "47 50 2531559 INUI Takami",
+       "56 36 2528065 FUJII Masaori",
+       "58 41 2530522 SASAKI Taiga"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/14445.json",
+     "sha256": "78debb0314a30814e3b1ba9b0aabf9a6db2fa0824c6ce4e3b75987968991167f",
+     "raceid": "14445",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=14445",
+     "gender": "W",
+     "codex": "8430",
+     "date": "2021-11-21",
+     "page_check": "135-052-048-048-246-164-112-216",
+     "survey": {
+      "n": 71,
+      "jpn": [
+       "1 108 2532040 YANAGIMOTO Rino",
+       "3 112 2533769 KAJIWARA Yuki",
+       "4 104 2485108 HOSHINO Junko",
+       "11 115 2527317 ITO Satsuki",
+       "12 111 2531368 IHARA Haruka",
+       "15 141 2530521 OGIHARA Nagi",
+       "17 129 2534824 ITO Marin",
+       "21 155 2537043 TAGUCHI Yuma",
+       "22 128 2531670 FUKUSHIMA Shunka",
+       "23 140 2533039 FUJIKI Hina",
+       "49 116 2533488 NAKAO Haruka",
+       "61 137 2528668 TANIGUCHI Ayaho"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2023-24-fis-idrefjall-8414",
+   "season": "2023-24",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "54055",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=54055&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/16502.json",
+     "sha256": "399cb4929188ddb38e2b1253983035f45dcd73611cec9ebfd7b734f508d8031c",
+     "raceid": "16502",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16502",
+     "gender": "M",
+     "codex": "8414",
+     "date": "2023-11-19",
+     "page_check": "215-202-054-079-074-197-049-248",
+     "survey": {
+      "n": 51,
+      "jpn": [
+       "3 8 2538302 FUJIMURA Ikkei",
+       "6 11 2537016 OKADA Takuma",
+       "20 13 2531559 INUI Takami"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/16501.json",
+     "sha256": "8b3310c597fd89f9ad827fed2e2b35123dcb7341ff36e5c016f981469e0c68dc",
+     "raceid": "16501",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16501",
+     "gender": "W",
+     "codex": "8413",
+     "date": "2023-11-19",
+     "page_check": "215-197-064-192-018-138-072-104",
+     "survey": {
+      "n": 22,
+      "jpn": [
+       "1 102 2539150 TAGUCHI Rin",
+       "16 103 2537160 NAKAYAMA Yumena"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2023-24-opn-idrefjall-8412",
+   "season": "2023-24",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Idre Fjall",
+   "fis_event_id": "54055",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=54055&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/16500.json",
+     "sha256": "258672389524e0110356b001007d0c69d8c4b78deb4496a32e43855edb58a265",
+     "raceid": "16500",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16500",
+     "gender": "M",
+     "codex": "8412",
+     "date": "2023-11-18",
+     "page_check": "036-036-114-144-114-210-030-180",
+     "survey": {
+      "n": 52,
+      "jpn": [
+       "4 8 2538302 FUJIMURA Ikkei",
+       "9 11 2537016 OKADA Takuma",
+       "14 13 2531559 INUI Takami"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/16499.json",
+     "sha256": "43527a6ac725f181bd02157cc870f872770c9bf9aaa65b452c3d90afe4d3010a",
+     "raceid": "16499",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=16499",
+     "gender": "W",
+     "codex": "8411",
+     "date": "2023-11-18",
+     "page_check": "226-219-103-043-198-101-021-164",
+     "survey": {
+      "n": 22,
+      "jpn": [
+       "1 102 2539150 TAGUCHI Rin",
+       "16 103 2537160 NAKAYAMA Yumena"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2024-25-fis-harbinbonski-8766",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Harbin BONSKI",
+   "fis_event_id": "57402",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57402&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/17954.json",
+     "sha256": "77ba339ac93396c2ed07a99e4d0d627073368a03ef971350701cbd6e0f3ff555",
+     "raceid": "17954",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17954",
+     "gender": "W",
+     "codex": "8766",
+     "date": "2024-10-20",
+     "page_check": "182-232-081-147-130-080-050-183",
+     "survey": {
+      "n": 11,
+      "jpn": [
+       "3 - 2532040 YANAGIMOTO Rino",
+       "5 - 2533769 KAJIWARA Yuki",
+       "9 - 2533488 NAKAO Haruka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2024-25-fis-harbinbonski-8768",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Harbin BONSKI",
+   "fis_event_id": "57402",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57402&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/17956.json",
+     "sha256": "87eed8851060069099f92e36ee8989bbff26f3103fe7b86d978cdc306a50ab82",
+     "raceid": "17956",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17956",
+     "gender": "W",
+     "codex": "8768",
+     "date": "2024-10-21",
+     "page_check": "042-116-016-183-094-084-150-117",
+     "survey": {
+      "n": 11,
+      "jpn": [
+       "1 - 2532040 YANAGIMOTO Rino",
+       "3 - 2533769 KAJIWARA Yuki",
+       "7 - 2533488 NAKAO Haruka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2024-25-fis-idrefjall-8459",
+   "season": "2024-25",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "56310",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=56310&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/17649.json",
+     "sha256": "7c7d2717c2ae1fe8e1fc9c805b24c7b93e5390e6553ce36b1aac66868379f7a9",
+     "raceid": "17649",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17649",
+     "gender": "M",
+     "codex": "8459",
+     "date": "2024-11-17",
+     "page_check": "155-044-002-093-161-036-246-173",
+     "survey": {
+      "n": 54,
+      "jpn": [
+       "1 50 2538302 FUJIMURA Ikkei",
+       "3 49 2531352 NISHIZAWA Taketo",
+       "5 60 2539132 NAKAHARA Osuke",
+       "6 59 2537674 NAKAMURA Takuto",
+       "21 57 2537016 OKADA Takuma",
+       "28 88 2539055 HIRAOKA Byron"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/17648.json",
+     "sha256": "8b3d5ee46724555dc9c7826f814bed1294ac347f6baf30454df26919e70f9d82",
+     "raceid": "17648",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17648",
+     "gender": "W",
+     "codex": "8460",
+     "date": "2024-11-17",
+     "page_check": "005-078-064-206-209-223-218-047",
+     "survey": {
+      "n": 33,
+      "jpn": [
+       "2 11 2537041 KAJIWARA Hisako",
+       "4 10 2538185 MISE Kurea",
+       "6 6 2534377 ASANO Shiori",
+       "7 15 2539797 SAKAI Hikaru",
+       "10 21 2539131 TANI Mio",
+       "15 19 2537160 NAKAYAMA Yumena",
+       "DNS 4 2537043 TAGUCHI Yuma"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2024-25-opn-idrefjall-8457",
+   "season": "2024-25",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "56310",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=56310&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/17647.json",
+     "sha256": "02e2cb3ebb15f003e665a1af41829690c9f0cf039a05a4ab8e0c8ea65efd68d6",
+     "raceid": "17647",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17647",
+     "gender": "M",
+     "codex": "8457",
+     "date": "2024-11-16",
+     "page_check": "132-178-203-211-000-216-101-022",
+     "survey": {
+      "n": 58,
+      "jpn": [
+       "1 50 2538302 FUJIMURA Ikkei",
+       "3 49 2531352 NISHIZAWA Taketo",
+       "5 60 2539132 NAKAHARA Osuke",
+       "12 59 2537674 NAKAMURA Takuto",
+       "25 57 2537016 OKADA Takuma",
+       "43 88 2539055 HIRAOKA Byron",
+       "DNS 45 2530672 SHIMAKAWA Takuya",
+       "DNS 51 2533771 KAWAOKA Shima"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/17646.json",
+     "sha256": "88d7f0a237bf3f9d378e2c576392ade94b2fce528204a355544bb541a3eebb16",
+     "raceid": "17646",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=17646",
+     "gender": "W",
+     "codex": "8458",
+     "date": "2024-11-16",
+     "page_check": "040-207-182-094-133-084-212-206",
+     "survey": {
+      "n": 38,
+      "jpn": [
+       "1 11 2537041 KAJIWARA Hisako",
+       "4 21 2539131 TANI Mio",
+       "5 5 2533769 KAJIWARA Yuki",
+       "8 10 2538185 MISE Kurea",
+       "10 19 2537160 NAKAYAMA Yumena",
+       "12 15 2539797 SAKAI Hikaru",
+       "DNF 6 2534377 ASANO Shiori",
+       "DNS 1 2532040 YANAGIMOTO Rino",
+       "DNS 2 2532031 TOMITAKA Hinako",
+       "DNS 3 2533488 NAKAO Haruka",
+       "DNS 4 2537043 TAGUCHI Yuma",
+       "DNS 7 2533039 FUJIKI Hina"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2025-26-fis-harbinbonski-8643",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Harbin BONSKI",
+   "fis_event_id": "59426",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59426&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/18954.json",
+     "sha256": "7240c87f5120fb2d2ee0ec10ea4286fad5e6640574586b71fcb210f17702c5c3",
+     "raceid": "18954",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18954",
+     "gender": "M",
+     "codex": "8643",
+     "date": "2025-09-23",
+     "page_check": "080-042-082-206-107-100-064-016",
+     "survey": {
+      "n": 8,
+      "jpn": [
+       "2 - 2530672 SHIMAKAWA Takuya"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/18953.json",
+     "sha256": "bd3507f69c4e14074307d6afb31eedc9d4061d9b8268389f9753e3b819ba17ec",
+     "raceid": "18953",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18953",
+     "gender": "W",
+     "codex": "8645",
+     "date": "2025-09-23",
+     "page_check": "174-009-221-144-017-170-034-188",
+     "survey": {
+      "n": 10,
+      "jpn": [
+       "1 - 2532040 YANAGIMOTO Rino",
+       "2 - 2533039 FUJIKI Hina",
+       "5 - 2533488 NAKAO Haruka"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2025-26-fis-harbinbonski-8644",
+   "season": "2025-26",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Harbin BONSKI",
+   "fis_event_id": "59426",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=59426&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/18956.json",
+     "sha256": "d38331e08f1fff688f3eed979fe8c7c784ce8a7ea1f89a626f776b89c085fc8b",
+     "raceid": "18956",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18956",
+     "gender": "M",
+     "codex": "8644",
+     "date": "2025-09-23",
+     "page_check": "105-136-052-098-022-115-006-147",
+     "survey": {
+      "n": 8,
+      "jpn": [
+       "2 - 2530672 SHIMAKAWA Takuya"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/18955.json",
+     "sha256": "f48fc63d42e7c7a88ac7f50ecc7c3dec1a2f75a2c9a15398e17c624472072ccb",
+     "raceid": "18955",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=18955",
+     "gender": "W",
+     "codex": "8646",
+     "date": "2025-09-23",
+     "page_check": "229-230-021-146-144-251-206-109",
+     "survey": {
+      "n": 10,
+      "jpn": [
+       "1 - 2532040 YANAGIMOTO Rino",
+       "6 - 2533488 NAKAO Haruka",
+       "7 - 2533039 FUJIKI Hina"
+      ],
+      "checked_at": "2026-10-04"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  }
+ ]
+}
