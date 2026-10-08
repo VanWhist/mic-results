@@ -12,6 +12,10 @@
 """
 import re
 import pdfplumber
+try:
+    from . import glyph_font as glyph_font_mod
+except ImportError:  # スクリプトとして直接使うとき
+    import glyph_font as glyph_font_mod
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
@@ -234,14 +238,18 @@ def _finish_row(rank, st, bib, sajno, rest, nturn):
     return rec
 
 
-def parse_pdf(path, force=False):
+def parse_pdf(path, force=False, glyph_font=None):
     """戻り値: (meta, sections)。sections の要素は parse_sajmo と同じ形（gender / round / code / pages / athletes / nturn）。
-    旧様式の表頭が一つも無ければ sections は空。"""
+    旧様式の表頭が一つも無ければ sections は空。
+    glyph_font: 文字が字形の番号のままの PDF（registry の glyph_font。2014 NASPA）。parse_sajmo と同じく文字に戻してから読む"""
     sections = []
     meta = dict(path=path, title=None, venue=None, date=None, codex=None, judges={}, old_layout=False)
     with pdfplumber.open(path) as pdf:
         cur = None
         for pno, page in enumerate(pdf.pages, 1):
+            if glyph_font:
+                glyph_font_mod.fix_page(page, glyph_font)
+                page = glyph_font_mod.drop_stamps(page)
             # 区切りのタブが '(cid:9)' として出て数値にくっつく PDF がある（'(cid:9)(cid:9)29.77'）
             text = page.dedupe_chars().extract_text() or ''
             if re.search(r'^Rk BIB', text, re.M):

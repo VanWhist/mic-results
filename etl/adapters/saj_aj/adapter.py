@@ -468,7 +468,7 @@ def load_event(ev, imported_at, log=print):
         old_layout = False
         if ev.get('layout') == 'old':
             # 旧様式（2015-16 以前。registry の layout）: 審判点からの再計算はできないので、印字の合計を得点段階で持つ
-            meta, sections = parse_sajmo_old.parse_pdf(path, force=True)
+            meta, sections = parse_sajmo_old.parse_pdf(path, force=True, glyph_font=pdf.get('glyph_font'))
             old_layout = bool(meta.get('old_layout'))
             if not old_layout:
                 meta, sections = parse_sajmo.parse_pdf(path, pdf.get('glyph_font'))

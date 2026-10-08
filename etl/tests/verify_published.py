@@ -93,8 +93,21 @@ def _glyph_chars(tp, glyphs):
     """字形の番号のままの PDF: [(pdfium の文字の位置, 戻した文字)]。分解されて 2 文字で来た字形は 1 文字に戻し、位置は 1 文字目"""
     decomposed = _decomposed_glyphs(max(glyphs) + 1)
     out, i, n = [], 0, tp.count_chars()
+    # 英数字だけ ToUnicode で正しく読める PDF（2014 NASPA。漢字は字形の番号のまま）: ページの対象フォントの英数字の大半に
+    # 対応の誤り（HasUnicodeMapError）が無ければ、誤りの無い英数字は戻さない（戻すと '3' が 'Q' になる）。
+    # 2022 の 8 本は英数字も字形の番号で来て、印の付かない文字もあるので従来どおり全部戻す
+    ascii_flags = []
+    for k in range(n):
+        c = tp.get_text_range(k, 1)
+        if len(c) == 1 and c.isascii() and not c.isspace() and glyph_font.is_target_font(_font_name(tp, k)):
+            ascii_flags.append(pdfium_c.FPDFText_HasUnicodeMapError(tp.raw, k))
+    ascii_ok = bool(ascii_flags) and ascii_flags.count(0) > 0.9 * len(ascii_flags)
     while i < n:
         ch = tp.get_text_range(i, 1)
+        if ascii_ok and len(ch) == 1 and ch.isascii() and not pdfium_c.FPDFText_HasUnicodeMapError(tp.raw, i):
+            out.append((i, ch))
+            i += 1
+            continue
         # pdfium が補う空白（' '）は字形の番号ではないので戻さない（字形の空白は chr(2) で来る）
         if len(ch) == 1 and not ch.isspace() and glyph_font.is_target_font(_font_name(tp, i)):
             pair = tp.get_text_range(i, 2) if i + 1 < n else ''

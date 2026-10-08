@@ -35479,7 +35479,7 @@
 }
 ],
 "mic":null,
-"n_results":72,
+"n_results":73,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36272,7 +36272,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":43,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -36545,7 +36545,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37173,7 +37173,7 @@
 }
 ],
 "mic":null,
-"n_results":60,
+"n_results":61,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37449,7 +37449,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -37927,7 +37927,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":52,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -38356,7 +38356,7 @@
 }
 ],
 "mic":null,
-"n_results":63,
+"n_results":64,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -39229,7 +39229,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":35,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -40656,6 +40656,37 @@
 }
 },
 {
+"athlete_id":"saj-5001399",
+"fis_code":null,
+"saj_no":"5001399",
+"name":"佐藤 宏",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"新潟",
+"club":"ｴｷｯﾌﾟFSC",
+"affiliation_history":[
+{
+"affiliation":"新潟",
+"club":"ｴｷｯﾌﾟFSC",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":0.69,
+"run_id":"2013-14-saj_b-2008-0022-M-Q-saj-5001399"
+}
+},
+{
 "athlete_id":"saj-5000189",
 "fis_code":null,
 "saj_no":"5000189",
@@ -41966,7 +41997,7 @@
 }
 ],
 "mic":null,
-"n_results":23,
+"n_results":25,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -41980,8 +42011,8 @@
 "SAJ_B"
 ],
 "best":{
-"run_score":15.75,
-"run_id":"2013-14-saj_b-1998-0011-M-F1-2484482"
+"run_score":17.54,
+"run_id":"2013-14-saj_b-2008-0022-M-F1-2484482"
 }
 },
 {
@@ -42157,7 +42188,7 @@
 }
 ],
 "mic":null,
-"n_results":28,
+"n_results":29,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -42428,7 +42459,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":23,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -43665,13 +43696,13 @@
 "affiliation_history":[
 {
 "affiliation":"千葉",
-"club":"ﾁｰﾑｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
+"club":"ﾁｰﾑ ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "from":"2012-13",
 "to":"2014-15"
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":12,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -44142,7 +44173,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":40,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44415,7 +44446,7 @@
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -44863,7 +44894,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -46756,7 +46787,7 @@
 }
 ],
 "mic":null,
-"n_results":52,
+"n_results":53,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47392,6 +47423,37 @@
 }
 },
 {
+"athlete_id":"saj-5001379",
+"fis_code":null,
+"saj_no":"5001379",
+"name":"増田 亮平",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"群馬",
+"club":"前橋ｽｷｰ連盟",
+"affiliation_history":[
+{
+"affiliation":"群馬",
+"club":"前橋ｽｷｰ連盟",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":14.3,
+"run_id":"2013-14-saj_b-2008-0022-M-Q-saj-5001379"
+}
+},
+{
 "athlete_id":"saj-5000301",
 "fis_code":null,
 "saj_no":"5000301",
@@ -47430,7 +47492,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -47508,7 +47570,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":15,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -48060,7 +48122,7 @@
 }
 ],
 "mic":null,
-"n_results":46,
+"n_results":47,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -48587,7 +48649,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49136,7 +49198,7 @@
 }
 ],
 "mic":null,
-"n_results":90,
+"n_results":91,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -49605,7 +49667,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":76,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -50151,7 +50213,7 @@
 }
 ],
 "mic":null,
-"n_results":69,
+"n_results":70,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -50469,7 +50531,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":23,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -50570,7 +50632,7 @@
 }
 ],
 "mic":null,
-"n_results":41,
+"n_results":42,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -51132,7 +51194,7 @@
 }
 ],
 "mic":null,
-"n_results":22,
+"n_results":23,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -53587,7 +53649,7 @@
 }
 ],
 "mic":null,
-"n_results":82,
+"n_results":84,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -53632,7 +53694,7 @@
 }
 ],
 "mic":null,
-"n_results":27,
+"n_results":28,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56594,7 +56656,7 @@
 }
 ],
 "mic":null,
-"n_results":43,
+"n_results":44,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56849,7 +56911,7 @@
 }
 ],
 "mic":null,
-"n_results":142,
+"n_results":144,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -56961,7 +57023,7 @@
 }
 ],
 "mic":null,
-"n_results":149,
+"n_results":150,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -57830,7 +57892,7 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2012-13",
 "2013-14"
@@ -57870,7 +57932,7 @@
 }
 ],
 "mic":null,
-"n_results":29,
+"n_results":30,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -58461,7 +58523,7 @@
 }
 ],
 "mic":null,
-"n_results":64,
+"n_results":65,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59025,7 +59087,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":35,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59717,7 +59779,7 @@
 }
 ],
 "mic":null,
-"n_results":14,
+"n_results":15,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -59909,7 +59971,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60589,7 +60651,7 @@
 }
 ],
 "mic":null,
-"n_results":36,
+"n_results":37,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -60653,7 +60715,7 @@
 }
 ],
 "mic":null,
-"n_results":39,
+"n_results":41,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -61436,7 +61498,7 @@
 }
 ],
 "mic":null,
-"n_results":6,
+"n_results":7,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -62705,7 +62767,7 @@
 }
 ],
 "mic":null,
-"n_results":34,
+"n_results":36,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -63106,7 +63168,7 @@
 }
 ],
 "mic":null,
-"n_results":74,
+"n_results":76,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -64165,7 +64227,7 @@
 }
 ],
 "mic":null,
-"n_results":56,
+"n_results":57,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -64455,7 +64517,7 @@
 }
 ],
 "mic":null,
-"n_results":13,
+"n_results":14,
 "seasons":[
 "2011-12",
 "2013-14",
@@ -64863,7 +64925,7 @@
 }
 ],
 "mic":null,
-"n_results":50,
+"n_results":51,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -67324,7 +67386,7 @@
 }
 ],
 "mic":null,
-"n_results":19,
+"n_results":21,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -68226,7 +68288,7 @@
 }
 ],
 "mic":null,
-"n_results":162,
+"n_results":163,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -68710,6 +68772,37 @@
 "best":{
 "run_score":46.82,
 "run_id":"2014-15-saj_a-1988-0045-W-Q-saj-5001321"
+}
+},
+{
+"athlete_id":"saj-5001398",
+"fis_code":null,
+"saj_no":"5001398",
+"name":"池田 英樹",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"新潟",
+"club":"ｴｷｯﾌﾟFSC",
+"affiliation_history":[
+{
+"affiliation":"新潟",
+"club":"ｴｷｯﾌﾟFSC",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":1,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":7.5,
+"run_id":"2013-14-saj_b-2008-0022-M-Q-saj-5001398"
 }
 },
 {
@@ -69864,7 +69957,7 @@
 }
 ],
 "mic":null,
-"n_results":40,
+"n_results":41,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -70266,7 +70359,7 @@
 }
 ],
 "mic":null,
-"n_results":12,
+"n_results":13,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -70429,7 +70522,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -71481,7 +71574,7 @@
 }
 ],
 "mic":null,
-"n_results":56,
+"n_results":58,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -71681,7 +71774,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":25,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -72054,7 +72147,7 @@
 }
 ],
 "mic":null,
-"n_results":10,
+"n_results":11,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -75825,7 +75918,7 @@
 }
 ],
 "mic":null,
-"n_results":85,
+"n_results":87,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -75980,7 +76073,7 @@
 }
 ],
 "mic":null,
-"n_results":17,
+"n_results":18,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -76424,7 +76517,7 @@
 }
 ],
 "mic":null,
-"n_results":24,
+"n_results":25,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -76617,7 +76710,7 @@
 }
 ],
 "mic":null,
-"n_results":26,
+"n_results":27,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -76814,7 +76907,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":35,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -77333,7 +77426,7 @@
 }
 ],
 "mic":null,
-"n_results":31,
+"n_results":33,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -77904,7 +77997,7 @@
 }
 ],
 "mic":null,
-"n_results":181,
+"n_results":182,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -77967,7 +78060,7 @@
 }
 ],
 "mic":null,
-"n_results":30,
+"n_results":32,
 "seasons":[
 "2013-14",
 "2014-15",
@@ -78137,7 +78230,7 @@
 }
 ],
 "mic":null,
-"n_results":20,
+"n_results":21,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -82165,7 +82258,7 @@
 }
 ],
 "mic":null,
-"n_results":107,
+"n_results":109,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -82769,7 +82862,7 @@
 }
 ],
 "mic":null,
-"n_results":59,
+"n_results":60,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -84132,7 +84225,7 @@
 }
 ],
 "mic":null,
-"n_results":43,
+"n_results":45,
 "seasons":[
 "2011-12",
 "2012-13",
@@ -84674,7 +84767,7 @@
 }
 ],
 "mic":null,
-"n_results":21,
+"n_results":22,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -85892,6 +85985,37 @@
 }
 },
 {
+"athlete_id":"saj-5001378",
+"fis_code":null,
+"saj_no":"5001378",
+"name":"高都持 佑輔",
+"aliases":[],
+"noc":null,
+"yb":null,
+"affiliation":"群馬",
+"club":"前橋ｽｷｰ連盟",
+"affiliation_history":[
+{
+"affiliation":"群馬",
+"club":"前橋ｽｷｰ連盟",
+"from":"2013-14",
+"to":"2013-14"
+}
+],
+"mic":null,
+"n_results":2,
+"seasons":[
+"2013-14"
+],
+"series":[
+"SAJ_B"
+],
+"best":{
+"run_score":18.34,
+"run_id":"2013-14-saj_b-2008-0022-M-Q-saj-5001378"
+}
+},
+{
 "athlete_id":"saj-5002285",
 "fis_code":null,
 "saj_no":"5002285",
@@ -85998,7 +86122,7 @@
 }
 ],
 "mic":null,
-"n_results":33,
+"n_results":34,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -86541,7 +86665,7 @@
 }
 ],
 "mic":null,
-"n_results":58,
+"n_results":59,
 "seasons":[
 "2012-13",
 "2013-14",
@@ -87249,7 +87373,7 @@
 }
 ],
 "mic":null,
-"n_results":7,
+"n_results":8,
 "seasons":[
 "2013-14",
 "2014-15"
