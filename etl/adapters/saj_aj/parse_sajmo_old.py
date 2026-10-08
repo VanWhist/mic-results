@@ -43,6 +43,24 @@ def block_code(word):
     return 'Q' if word == 'Qualification' else 'F1'
 
 
+def table_codex(line):
+    """表の下に印字される CODEX（その表の CODEX）。CODEX の行でなければ、または番号が読めなければ None。
+    'CODEX : 0480 北海道, FIS CODEX : 8321'（2016-17 以降）・'CODEX : 斑尾 5004 (7123.019.91)'・'CODEX:白馬475018( )'
+    （旧様式は会場名の後。括弧の中はコースの公認番号）。英語版 'CODEX : 8974 Taira (JPN), SAJ CODEX : 0609' は先頭が FIS の
+    CODEX なので SAJ CODEX を取る。区分の総合の部は '0430&0431'、2 つの大会で共通の予選は '0451_0528'（印字のまま）"""
+    m = re.search(r'SAJ\s*CODEX\s*[:：]\s*(\d{4}(?:\s*[&_]\s*\d{4})*)', line)
+    if m:
+        return re.sub(r'\s', '', m.group(1))
+    m = re.match(r'CODEX\s*[:：](.*)', line)
+    if not m:
+        return None
+    rest = re.sub(r'\([^)]*\)', ' ', re.split(r'FIS\s*CODEX', m.group(1))[0])
+    m = re.search(r'(\d{4,})((?:\s*[&_]\s*\d{4})*)', rest)
+    if not m:
+        return None
+    return m.group(1)[-4:] + re.sub(r'\s', '', m.group(2))  # '白馬475018' は会場名の '白馬47' と 5018
+
+
 def en_heading(line):
     """英語版の見出し → (性別, ラウンドの見出し語)。英語版でなければ None"""
     m = SEC_EN.match(line)
@@ -257,8 +275,15 @@ def parse_pdf(path, force=False):
                     else:
                         cur = dict(gender=gender, round=rnd, code=None, heading=line, pages=[pno], athletes=[], mixed=(gender == '男女'),
                                    en_heading=bool(me))
+                        if mc:
+                            cur['codex'] = re.search(r'Codex\s+(\d+)', line).group(1)  # 見出しの CODEX（'男子予選 Codex 0004'）
                         sections.append(cur)
                     continue
+                cx = table_codex(line)
+                if cx and cur is not None and cur.get('codex') is None:
+                    # 表の下の CODEX は、表の始まり以降で最初に出るものがその表のもの（男女の表が同じページに続くと、
+                    # ページの最初の CODEX は前の表のもの）
+                    cur['codex'] = cx
                 if meta['title'] is None and li < 6 and ('大会' in line or '競技会' in line):
                     meta['title'] = line
                 if ('スキー場' in line or 'リゾート' in line) and meta['venue'] is None and li < 8:
