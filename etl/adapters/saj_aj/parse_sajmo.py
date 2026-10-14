@@ -320,6 +320,27 @@ def page_category(top_lines):
     return None
 
 
+def printed_date(line):
+    """行の中の日付の印字 → 'YYYY-MM-DD'（parse_sajmo_old も使う）。
+    西暦 '2012年4月1日'、和暦 '平成30年3月4日(日)'（2012 埼玉県松之山・2018 東京都）、英語版の数字だけの日付
+    （'21/3/2015' 日/月/年、2015 全日本。'2/18/2024' 月/日/年、2024 アジアカップ たいら）。数字だけの日付は、日と月がどちらも
+    12 以下で順序が決まらないときは読まない。年が先頭の 'Print Time : 2012/1/8' は印刷した日なので読まない"""
+    m = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
+    if m:
+        return '%s-%02d-%02d' % (m.group(1), int(m.group(2)), int(m.group(3)))
+    m = re.search(r'平成(\d{1,2})年(\d{1,2})月(\d{1,2})日', line)
+    if m:
+        return '%d-%02d-%02d' % (1988 + int(m.group(1)), int(m.group(2)), int(m.group(3)))
+    m = re.search(r'(?<![\d/])(\d{1,2})/(\d{1,2})/(\d{4})(?![\d/])', line)
+    if m:
+        a, b, year = int(m.group(1)), int(m.group(2)), int(m.group(3))
+        if a > 12 >= b:
+            return '%d-%02d-%02d' % (year, b, a)
+        if b > 12 >= a:
+            return '%d-%02d-%02d' % (year, a, b)
+    return None
+
+
 def parse_pdf(path, glyph_font=None):
     """glyph_font: 文字が字形の番号のままの PDF（registry の glyph_font）。glyph_font.fix_page で文字に戻してから読む"""
     sections = []
@@ -389,9 +410,8 @@ def parse_pdf(path, glyph_font=None):
                     meta['title'] = line
                 if 'スキー場' in line and meta['venue'] is None:
                     meta['venue'] = line
-                mm = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
-                if mm and meta['date'] is None:
-                    meta['date'] = '%s-%02d-%02d' % (mm.group(1), int(mm.group(2)), int(mm.group(3)))
+                if meta['date'] is None:
+                    meta['date'] = printed_date(line)
                 mm = re.search(r'CODEX\s*[:：]\s*(\d+)', line)
                 if mm and meta['codex'] is None:
                     meta['codex'] = mm.group(1)

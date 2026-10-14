@@ -15,9 +15,11 @@ import pdfplumber
 try:
     from . import glyph_font as glyph_font_mod
     from . import cmap_usecmap  # noqa: F401  pdfminer の UniJIS-UCS2-HW-H に親の CMap を足す（2012 松之山）
+    from .parse_sajmo import printed_date
 except ImportError:  # スクリプトとして直接使うとき
     import glyph_font as glyph_font_mod
     import cmap_usecmap  # noqa: F401
+    from parse_sajmo import printed_date
 
 NUM = re.compile(r'^-?\d+(?:\.\d+)?$')
 SAJNO = re.compile(r'^(?=.*\d)[0-9A-Z]{7}$')
@@ -140,17 +142,6 @@ def undouble_heading(line):
     if len(s) >= 8 and len(s) % 2 == 0 and s[0::2] == s[1::2]:
         return s[0::2]
     return line
-
-
-def printed_date(line):
-    """行の中の日付の印字 → 'YYYY-MM-DD'。西暦（'2012年4月1日'）と和暦（'平成24年1月8日(日)'、2012 埼玉県松之山。saj_dm と同じ）"""
-    m = re.search(r'(\d{4})年(\d{1,2})月(\d{1,2})日', line)
-    if m:
-        return '%s-%02d-%02d' % (m.group(1), int(m.group(2)), int(m.group(3)))
-    m = re.search(r'平成(\d{1,2})年(\d{1,2})月(\d{1,2})日', line)
-    if m:
-        return '%d-%02d-%02d' % (1988 + int(m.group(1)), int(m.group(2)), int(m.group(3)))
-    return None
 
 
 def is_old_header(line, force=False):

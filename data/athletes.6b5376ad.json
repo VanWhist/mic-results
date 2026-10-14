@@ -35663,7 +35663,7 @@
 {
 "affiliation":"山梨",
 "club":"E組",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2018-19"
 }
 ],
@@ -35994,7 +35994,7 @@
 {
 "affiliation":"長野",
 "club":"白馬村SC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2018-19"
 },
 {
@@ -36647,7 +36647,7 @@
 {
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2022-23"
 }
 ],
@@ -36891,7 +36891,7 @@
 {
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2019-20"
 },
 {
@@ -37125,12 +37125,6 @@
 "affiliation":"福井",
 "club":"福井MSC",
 "affiliation_history":[
-{
-"affiliation":"福井",
-"club":"福井MSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"福井",
 "club":"福井ﾓｰｸﾞﾙSC",
@@ -37428,7 +37422,7 @@
 {
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2025-26"
 }
 ],
@@ -38093,12 +38087,6 @@
 "affiliation":"山梨",
 "club":"E組",
 "affiliation_history":[
-{
-"affiliation":"長野",
-"club":"白馬高校",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"山梨",
 "club":"E組",
@@ -38978,7 +38966,7 @@
 {
 "affiliation":"長野",
 "club":"白馬村SC",
-"from":"2017-18",
+"from":"2013-14",
 "to":"2022-23"
 },
 {
@@ -39772,12 +39760,6 @@
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "affiliation_history":[
-{
-"affiliation":"千葉",
-"club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"千葉",
 "club":"ﾁｰﾑ ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
@@ -40722,7 +40704,7 @@
 {
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2017-18"
 }
 ],
@@ -41751,12 +41733,6 @@
 "affiliation_history":[
 {
 "affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛知",
 "club":"MARAGA",
 "from":"2011-12",
 "to":"2011-12"
@@ -41807,12 +41783,6 @@
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
-{
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"愛知",
 "club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
@@ -42092,7 +42062,7 @@
 {
 "affiliation":"富山",
 "club":"富山FSC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2021-22"
 }
 ],
@@ -43198,12 +43168,6 @@
 "club":"ﾁｰﾑ･ﾎｯﾄﾄﾞｯｸ!",
 "affiliation_history":[
 {
-"affiliation":"秋田",
-"club":"ﾁｰﾑ・ﾎｯﾄﾄﾞｯｸ!",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"岩手",
 "club":"ﾌﾘｰｽﾀｲﾙSC",
 "from":"2011-12",
@@ -43254,12 +43218,6 @@
 "affiliation":"富山",
 "club":"富山県立大学",
 "affiliation_history":[
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"富山",
 "club":"五福小学校",
@@ -43327,12 +43285,6 @@
 "affiliation":"富山",
 "club":"富山FSC",
 "affiliation_history":[
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"富山",
 "club":"五福小学校",
@@ -44095,12 +44047,6 @@
 "affiliation":"栃木",
 "club":"宇都宮SC",
 "affiliation_history":[
-{
-"affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"栃木",
 "club":"ｴｰﾃﾞﾙFSC",
@@ -47379,12 +47325,6 @@
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
 {
-"affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"神奈川ﾌﾞﾗｯｸﾀﾞｲﾔﾓﾝﾄﾞ",
 "club":"",
 "from":"2011-12",
@@ -47400,7 +47340,7 @@
 "affiliation":"神奈川",
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "from":"2013-14",
-"to":"2016-17"
+"to":"2017-18"
 }
 ],
 "mic":null,
@@ -47438,7 +47378,7 @@
 {
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2018-19"
 }
 ],
@@ -47477,7 +47417,7 @@
 {
 "affiliation":"神奈川",
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
+"from":"2013-14",
 "to":"2017-18"
 }
 ],
@@ -47511,7 +47451,7 @@
 {
 "affiliation":"長野",
 "club":"白馬村SC",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2018-19"
 }
 ],
@@ -48544,7 +48484,7 @@
 {
 "affiliation":"福島",
 "club":"喜多方SC",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2024-25"
 }
 ],
@@ -48735,7 +48675,7 @@
 {
 "affiliation":"宮城",
 "club":"(株)忍建設ｽｷｰ部",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2022-23"
 },
 {
@@ -50089,12 +50029,6 @@
 "affiliation_history":[
 {
 "affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"神奈川",
 "club":"ﾌﾞﾗｯｸﾀﾞｲﾔﾓﾝﾄﾞ",
 "from":"2011-12",
 "to":"2012-13"
@@ -50898,7 +50832,7 @@
 {
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2025-26"
 }
 ],
@@ -52185,12 +52119,6 @@
 "affiliation_history":[
 {
 "affiliation":"長野",
-"club":"信濃町立信濃小中学校",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"長野",
 "club":"信濃小中学校",
 "from":"2017-18",
 "to":"2017-18"
@@ -52444,12 +52372,6 @@
 "affiliation_history":[
 {
 "affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"栃木",
 "club":"壬生町立南犬飼中",
 "from":"2016-17",
 "to":"2016-17"
@@ -52644,12 +52566,6 @@
 "affiliation":"栃木",
 "club":"宇都宮ｽｷｰｸﾗﾌﾞ",
 "affiliation_history":[
-{
-"affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"栃木",
 "club":"ｴｰﾃﾞﾙFSC",
@@ -53463,12 +53379,6 @@
 "affiliation_history":[
 {
 "affiliation":"愛知",
-"club":"岡崎東高校",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"愛知",
 "club":"ｲﾏﾄｸﾒﾃﾞｨｯｸ",
 "from":"2014-15",
 "to":"2015-16"
@@ -53701,8 +53611,8 @@
 {
 "affiliation":"埼玉",
 "club":"ｱﾐｨSC",
-"from":"2017-18",
-"to":"2016-17"
+"from":"2013-14",
+"to":"2017-18"
 }
 ],
 "mic":null,
@@ -54404,7 +54314,7 @@
 {
 "affiliation":"富山",
 "club":"富山FSC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2021-22"
 },
 {
@@ -58330,7 +58240,7 @@
 {
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2025-26"
 }
 ],
@@ -58894,7 +58804,7 @@
 {
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2018-19"
 }
 ],
@@ -59759,12 +59669,6 @@
 "affiliation_history":[
 {
 "affiliation":"東京",
-"club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"東京",
 "club":"ﾀﾞｲﾜｽｷｰｸﾗﾌﾞ",
 "from":"2011-12",
 "to":"2011-12"
@@ -60492,7 +60396,7 @@
 {
 "affiliation":"群馬",
 "club":"水上SC",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2014-15"
 },
 {
@@ -61147,7 +61051,7 @@
 {
 "affiliation":"埼玉",
 "club":"ｴｸｽﾃｯｸさいたま",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2025-26"
 }
 ],
@@ -62677,12 +62581,6 @@
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
 {
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"岐阜",
 "club":"名古屋小学校",
 "from":"2014-15",
@@ -63877,7 +63775,7 @@
 {
 "affiliation":"富山",
 "club":"富山FSC",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2018-19"
 }
 ],
@@ -64301,7 +64199,7 @@
 {
 "affiliation":"宮城",
 "club":"(株)忍建設ｽｷｰ部",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2018-19"
 }
 ],
@@ -64696,12 +64594,6 @@
 "affiliation_history":[
 {
 "affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"群馬",
 "club":"群馬ﾌｫｰｳｲﾝｸﾞｽ",
 "from":"2011-12",
 "to":"2012-13"
@@ -64748,12 +64640,6 @@
 "affiliation":"富山",
 "club":"富山第一高校",
 "affiliation_history":[
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"富山",
 "club":"鵜坂小学校",
@@ -64805,12 +64691,6 @@
 "affiliation":"富山",
 "club":"富山FSC",
 "affiliation_history":[
-{
-"affiliation":"富山",
-"club":"富山FSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"富山",
 "club":"鵜坂小学校",
@@ -65003,7 +64883,7 @@
 {
 "affiliation":"長野",
 "club":"白馬村SC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2025-26"
 }
 ],
@@ -65968,12 +65848,6 @@
 "club":"ｲﾏﾄｸ",
 "affiliation_history":[
 {
-"affiliation":"大阪",
-"club":"イマトク",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"岐阜",
 "club":"星田小学校",
 "from":"2014-15",
@@ -66274,12 +66148,6 @@
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
-{
-"affiliation":"長野",
-"club":"白馬村SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"山梨",
 "club":"ｽｷｰﾁｰﾑ ｾﾞﾛ",
@@ -68295,12 +68163,6 @@
 "affiliation_history":[
 {
 "affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"栃木",
 "club":"ｴｰﾃﾞﾙFSC",
 "from":"2016-17",
 "to":"2016-17"
@@ -68732,12 +68594,6 @@
 "affiliation":"福島",
 "club":"本宮第二中学校",
 "affiliation_history":[
-{
-"affiliation":"福島",
-"club":"本宮第二中学校",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"福島",
 "club":"福島っ子SC",
@@ -70153,7 +70009,7 @@
 {
 "affiliation":"長野",
 "club":"白馬村SC",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2018-19"
 }
 ],
@@ -71827,7 +71683,7 @@
 {
 "affiliation":"愛知",
 "club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2020-21"
 }
 ],
@@ -72433,12 +72289,6 @@
 "affiliation":"学連",
 "club":"早稲田大学",
 "affiliation_history":[
-{
-"affiliation":"千葉",
-"club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"千葉",
 "club":"ﾁｰﾑ ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
@@ -73340,7 +73190,7 @@
 {
 "affiliation":"山梨",
 "club":"E組",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2022-23"
 }
 ],
@@ -74168,7 +74018,7 @@
 {
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
+"from":"2013-14",
 "to":"2025-26"
 }
 ],
@@ -74267,12 +74117,6 @@
 "club":"筑波大学",
 "affiliation_history":[
 {
-"affiliation":"学連",
-"club":"筑波大学",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"兵庫",
 "club":"D-RIDE",
 "from":"2011-12",
@@ -74335,7 +74179,7 @@
 {
 "affiliation":"千葉",
 "club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2024-25"
 }
 ],
@@ -74370,7 +74214,7 @@
 {
 "affiliation":"兵庫",
 "club":"D-RIDE",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2024-25"
 }
 ],
@@ -74411,12 +74255,6 @@
 "affiliation":"兵庫",
 "club":"D-RIDE",
 "affiliation_history":[
-{
-"affiliation":"茨城",
-"club":"水戸葵陵高校",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"兵庫",
 "club":"D-RIDE",
@@ -74471,12 +74309,6 @@
 "affiliation_history":[
 {
 "affiliation":"山梨",
-"club":"E組",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"山梨",
 "club":"韮崎SC",
 "from":"2011-12",
 "to":"2012-13"
@@ -74522,7 +74354,7 @@
 {
 "affiliation":"山梨",
 "club":"E組",
-"from":"2017-18",
+"from":"2014-15",
 "to":"2023-24"
 }
 ],
@@ -74793,12 +74625,6 @@
 "affiliation":"兵庫",
 "club":"WESTERN BUMPS",
 "affiliation_history":[
-{
-"affiliation":"大阪",
-"club":"イマトク",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"岐阜",
 "club":"西山小学校",
@@ -75654,7 +75480,7 @@
 {
 "affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2024-25"
 }
 ],
@@ -75997,12 +75823,6 @@
 "affiliation_history":[
 {
 "affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"群馬",
 "club":"水上SC",
 "from":"2016-17",
 "to":"2016-17"
@@ -76292,7 +76112,7 @@
 {
 "affiliation":"岐阜",
 "club":"岐阜ﾌﾘｰｽﾀｲﾙ",
-"from":"2017-18",
+"from":"2014-15",
 "to":"2018-19"
 }
 ],
@@ -76446,7 +76266,7 @@
 {
 "affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
-"from":"2017-18",
+"from":"2013-14",
 "to":"2017-18"
 }
 ],
@@ -76643,7 +76463,7 @@
 {
 "affiliation":"東京",
 "club":"ﾁｰﾑ ｼﾞｮｯｸｽ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2018-19"
 }
 ],
@@ -76823,12 +76643,6 @@
 "club":"岡崎高校",
 "affiliation_history":[
 {
-"affiliation":"愛知",
-"club":"東海ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"岐阜",
 "club":"平和小学校",
 "from":"2014-15",
@@ -76888,7 +76702,7 @@
 {
 "affiliation":"岐阜",
 "club":"平和小学校",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2017-18"
 },
 {
@@ -77055,12 +76869,6 @@
 "affiliation_history":[
 {
 "affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"群馬",
 "club":"群馬ﾌｫｰｳｲﾝｸﾞｽ",
 "from":"2011-12",
 "to":"2012-13"
@@ -77102,12 +76910,6 @@
 "affiliation":"群馬",
 "club":"前橋ｽｷｰ連盟",
 "affiliation_history":[
-{
-"affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"群馬",
 "club":"群馬ﾌｫｰｳｲﾝｸﾞｽ",
@@ -77156,7 +76958,7 @@
 {
 "affiliation":"福島",
 "club":"ﾁｰﾑﾘｽﾃﾙ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2018-19"
 }
 ],
@@ -77948,7 +77750,7 @@
 {
 "affiliation":"宮城",
 "club":"(株)忍建設ｽｷｰ部",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2017-18"
 }
 ],
@@ -78167,12 +77969,6 @@
 "affiliation_history":[
 {
 "affiliation":"千葉",
-"club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"千葉",
 "club":"ﾁｰﾑｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "from":"2011-12",
 "to":"2014-15"
@@ -78326,7 +78122,7 @@
 {
 "affiliation":"埼玉",
 "club":"ｱﾐｨSC",
-"from":"2017-18",
+"from":"2015-16",
 "to":"2017-18"
 },
 {
@@ -79898,7 +79694,7 @@
 {
 "affiliation":"群馬",
 "club":"水上SC",
-"from":"2017-18",
+"from":"2012-13",
 "to":"2022-23"
 },
 {
@@ -80365,12 +80161,6 @@
 "affiliation":"福島",
 "club":"猪苗代SC",
 "affiliation_history":[
-{
-"affiliation":"福島",
-"club":"猪苗代SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"福島県",
 "club":"猪苗代高校",
@@ -81109,12 +80899,6 @@
 "affiliation_history":[
 {
 "affiliation":"千葉",
-"club":"ｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
-"affiliation":"千葉",
 "club":"ﾁｰﾑｽﾉｰｱﾐｭｰｽﾞﾒﾝﾄ",
 "from":"2011-12",
 "to":"2014-15"
@@ -81457,12 +81241,6 @@
 "affiliation":"群馬",
 "club":"前橋スキー連盟",
 "affiliation_history":[
-{
-"affiliation":"群馬",
-"club":"前橋ｽｷｰ連盟",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"群馬",
 "club":"群馬ﾌｫｰｳｲﾝｸﾞｽ",
@@ -82314,7 +82092,7 @@
 {
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
-"from":"2017-18",
+"from":"2016-17",
 "to":"2018-19"
 }
 ],
@@ -82982,7 +82760,7 @@
 {
 "affiliation":"神奈川",
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2012-13"
 },
 {
@@ -83276,12 +83054,6 @@
 "affiliation":"神奈川",
 "club":"川崎ﾌﾘｰｽﾀｲﾙSC",
 "affiliation_history":[
-{
-"affiliation":"神奈川",
-"club":"川崎ﾌﾘｰｽﾀｲﾙSC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"神奈川県川崎ﾌﾘｰｽﾀｲﾙSC",
 "club":"",
@@ -84467,7 +84239,7 @@
 {
 "affiliation":"新潟",
 "club":"ｴｷｯﾌﾟFSC",
-"from":"2017-18",
+"from":"2012-13",
 "to":"2017-18"
 }
 ],
@@ -85273,7 +85045,7 @@
 {
 "affiliation":"東京",
 "club":"ﾎｯﾄｱﾝﾄﾞｸﾚｲｼﾞｰ",
-"from":"2017-18",
+"from":"2011-12",
 "to":"2025-26"
 }
 ],
@@ -85797,12 +85569,6 @@
 "affiliation":"栃木",
 "club":"宇都宮SC",
 "affiliation_history":[
-{
-"affiliation":"栃木",
-"club":"宇都宮SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"栃木",
 "club":"ｴｰﾃﾞﾙFSC",
@@ -86359,12 +86125,6 @@
 "club":"E組",
 "affiliation_history":[
 {
-"affiliation":"山梨",
-"club":"E組",
-"from":"2017-18",
-"to":"2017-18"
-},
-{
 "affiliation":"群馬",
 "club":"水上SC",
 "from":"2012-13",
@@ -86636,12 +86396,6 @@
 "affiliation":"長野",
 "club":"白馬村SC",
 "affiliation_history":[
-{
-"affiliation":"長野",
-"club":"白馬村SC",
-"from":"2017-18",
-"to":"2017-18"
-},
 {
 "affiliation":"山梨",
 "club":"ｽｷｰﾁｰﾑ ｾﾞﾛ",
