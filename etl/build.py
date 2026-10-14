@@ -371,6 +371,19 @@ def master_yb(master):
     return {aid: m['yb'] for aid, m in master.get('athletes', {}).items() if m.get('yb')}
 
 
+def meet_key(ev):
+    """同じ大会のキー（registry の event）。FIS の大会番号（fis_event_id）か SAJ 競技データバンクの大会番号（saj_comp）に、
+    区分（series。同じ大会番号の A級と B級は別）と registry の meet_label（同じ大会番号に年齢区分が 2 つある大会。
+    2025 全日本ジュニアの中学・高校）を足したもの。どちらの番号も無い大会（W杯系）は None"""
+    if ev.get('fis_event_id'):
+        base = 'fis-' + str(ev['fis_event_id'])
+    elif ev.get('saj_comp'):
+        base = 'saj-' + str(ev['saj_comp'])
+    else:
+        return None
+    return '-'.join(x for x in (base, ev['series'], ev.get('meet_label')) if x)
+
+
 RUNS_SHARDS = 64
 
 
@@ -584,6 +597,19 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         e['date_to'] = max((r['date'] for r in e['rounds'] if r['date']), default=None)
         e['tiers'] = sorted({r['tier'] for r in e['rounds']})
     events_list = sorted(ev_out.values(), key=lambda e: (e['date_from'] or '', e['event_id']), reverse=True)
+    # 同じ大会のモーグルとデュアルモーグルを、トップの大会一覧で 1 枚のカードにまとめる（城さんの判断、2026-10-14）。
+    # 同じ大会 = 同じ meet_key。モーグルとデュアルモーグルの両方がある組だけ meet を付ける（第 1 戦・第 2 戦だけの大会はまとめない）
+    meets = collections.defaultdict(list)
+    for e in events_list:
+        k = meet_key(events_by_id[e['event_id']])
+        if k:
+            meets[k].append(e)
+    for k, es in meets.items():
+        if {x['discipline'] for x in es} >= {'MO', 'DM'}:
+            members = sorted(es, key=lambda x: (x['discipline'] != 'MO', x['date_from'] or '', x['event_id']))
+            for x in es:
+                x['meet'] = {'id': k, 'label': events_by_id[x['event_id']].get('meet_label'),
+                             'events': [y['event_id'] for y in members]}
 
     runs_by_season = collections.defaultdict(list)
     all_runs = []

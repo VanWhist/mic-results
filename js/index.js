@@ -2,7 +2,7 @@
 import * as data from './data.js';
 import {
   el, clear, mountNav, errorBox, eventName, eventDates, seriesLabel, genderLabel, athleteMatches, athleteHref,
-  eventHref, tierBadge, TIER_SHORT,
+  eventHref, tierBadge, TIER_SHORT, gendersOf, meetButtonLabel,
 } from './ui.js';
 
 let events = [];
@@ -42,6 +42,42 @@ function meetCard(ev) {
   ]);
 }
 
+// 同じ大会のモーグルとデュアルモーグル（events の meet）を 1 枚のカードにまとめ、種目ごとのボタンで大会ページへ進む
+function meetGroupCard(members) {
+  const head = members[0];
+  const dates = members.flatMap((x) => [x.date_from, x.date_to]).filter(Boolean).sort();
+  const genders = [...new Set(members.flatMap(gendersOf))].sort().map(genderLabel).join('・');
+  const label = head.meet && head.meet.label ? '（' + head.meet.label + '）' : '';
+  const span = !dates.length ? '—' : dates[0] === dates[dates.length - 1] ? dates[0] : dates[0] + ' 〜 ' + dates[dates.length - 1];
+  return el('div', { class: 'meet-card meet-group' }, [
+    el('div', { class: 'meet-date', text: span }),
+    el('div', { class: 'meet-name', text: (head.series_label || seriesLabel(head.series)) + label }),
+    el('div', { class: 'meet-sub meet-official', text: head.name_ja || head.venue || '', title: head.name_ja || null }),
+    el('div', { class: 'meet-sub', text: [head.name_ja ? head.venue : null, genders].filter(Boolean).join('　') }),
+    el('div', { class: 'meet-links' }, members.map((x) => el('a', { class: 'meet-link', href: eventHref(x.event_id) }, [
+      el('span', { class: 'meet-link-name', text: meetButtonLabel(x, members) }),
+      el('span', { class: 'meet-link-tier', text: (x.tiers || []).map((t) => TIER_SHORT[t] || t).join('・') }),
+    ]))),
+  ]);
+}
+
+// 一覧の並び（新しい順）のまま、同じ meet の大会は最初に出た位置に 1 枚にまとめる。絞り込みで 1 つしか残らなければ通常のカード
+function listItems(list) {
+  const byMeet = new Map();
+  for (const ev of list) if (ev.meet) byMeet.set(ev.meet.id, [...(byMeet.get(ev.meet.id) || []), ev]);
+  const out = [];
+  const done = new Set();
+  for (const ev of list) {
+    const members = ev.meet ? byMeet.get(ev.meet.id) : null;
+    if (!members || members.length < 2) { out.push(meetCard(ev)); continue; }
+    if (done.has(ev.meet.id)) continue;
+    done.add(ev.meet.id);
+    const order = ev.meet.events;
+    out.push(meetGroupCard([...members].sort((a, b) => order.indexOf(a.event_id) - order.indexOf(b.event_id))));
+  }
+  return out;
+}
+
 // ---- よく使う絞り込み（シーズン・区分）。詳しい絞り込みの select / checkbox と同じ state を使う ----
 const GROUP_LABEL = { '国内': '国内', 'FIS系': 'FIS', 'W杯系': 'W杯・五輪' };
 
@@ -77,7 +113,7 @@ function renderList() {
     box.append(el('p', { class: 'meta', text: '該当する大会がありません。' }));
     return;
   }
-  for (const ev of list) box.append(meetCard(ev));
+  box.append(...listItems(list));
 }
 
 function renderSuggest(q) {

@@ -3,6 +3,7 @@
  "events": [
   {
    "event_id": "2016-17-saj_aj-2017",
+   "saj_comp": "1930",
    "season": "2016-17",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -65,6 +66,7 @@
   },
   {
    "event_id": "2017-18-saj_aj-2018",
+   "saj_comp": "1897",
    "season": "2017-18",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -127,6 +129,7 @@
   },
   {
    "event_id": "2018-19-saj_aj-2019",
+   "saj_comp": "1865",
    "season": "2018-19",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -189,6 +192,7 @@
   },
   {
    "event_id": "2019-20-saj_aj-2020",
+   "saj_comp": "214",
    "season": "2019-20",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -239,6 +243,7 @@
   },
   {
    "event_id": "2020-21-saj_aj-2021",
+   "saj_comp": "2765",
    "season": "2020-21",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -301,6 +306,7 @@
   },
   {
    "event_id": "2021-22-saj_aj-2022",
+   "saj_comp": "3023",
    "season": "2021-22",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -347,6 +353,7 @@
   },
   {
    "event_id": "2022-23-saj_aj-2023",
+   "saj_comp": "3288",
    "season": "2022-23",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -409,6 +416,7 @@
   },
   {
    "event_id": "2023-24-saj_aj-2024",
+   "saj_comp": "3547",
    "season": "2023-24",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -455,6 +463,7 @@
   },
   {
    "event_id": "2024-25-saj_aj-2025",
+   "saj_comp": "3806",
    "season": "2024-25",
    "series": "SAJ_AJ",
    "grade": "全日本",
@@ -513,6 +522,7 @@
   },
   {
    "event_id": "2025-26-saj_aj-2026",
+   "saj_comp": "4067",
    "season": "2025-26",
    "series": "SAJ_AJ",
    "grade": "全日本",

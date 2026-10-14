@@ -118,6 +118,24 @@ export function eventShortName(ev) {
   return (ev.series_label || seriesLabel(ev.series)) + ' ' + (ev.season || '');
 }
 
+// 同じ大会のモーグルとデュアルモーグル（events の meet）のボタンの名前。同じ種目が 2 つあるときは、性別か日付を添える
+// （Apex の DM 男子・女子、Winter Park のモーグル 2 レース）。トップの大会カードと大会ページの切り替えで使う
+const DISC_LABEL = { MO: 'モーグル', DM: 'デュアルモーグル' };
+export function gendersOf(ev) {
+  return [...new Set((ev.rounds || []).map((r) => r.gender))].sort();
+}
+export function meetButtonLabel(ev, members) {
+  const same = members.filter((x) => x.discipline === ev.discipline);
+  let extra = '';
+  if (same.length > 1) {
+    const gs = gendersOf(ev);
+    const genderDiffers = same.some((x) => gendersOf(x).join() !== gs.join());
+    const [, mo, d] = (ev.date_from || '--').split('-');
+    extra = genderDiffers && gs.length === 1 ? genderLabel(gs[0]) : (mo && d ? Number(mo) + '/' + Number(d) : '');
+  }
+  return (DISC_LABEL[ev.discipline] || ev.discipline) + (extra ? ' ' + extra : '');
+}
+
 export function eventDates(ev) {
   let from = ev.date_from, to = ev.date_to;
   if (!from || !to) {

@@ -4,11 +4,12 @@ import * as data from './data.js';
 import {
   el, clear, cell, num, mountNav, errorBox, eventName, eventDates, seriesLabel, genderLabel, roundLabel, tierBadge,
   tierHelp, verificationBadge, layerMark, layerStatusLabel, LAYER_LABEL, statusBadge, reportLink, athleteHref, isNarrow,
-  onWidthChange, queryParam, noteLayers,
+  onWidthChange, queryParam, noteLayers, eventHref, meetButtonLabel,
 } from './ui.js';
 
 let manifest = null;
 let event = null;
+let allEvents = [];
 let runsByRound = new Map();
 let lines = new Map();
 let current = null;   // 表示中の round
@@ -38,6 +39,13 @@ function renderHead() {
     '　' + (event.discipline === 'DM' ? 'デュアルモーグル' : 'モーグル') + '　',
     ...(event.tiers || []).map((t) => tierBadge(t)),
   ]));
+  // 同じ大会のモーグル・デュアルモーグルへの切り替え（events の meet。トップでは 1 枚のカードにまとめている）
+  const members = event.meet ? event.meet.events.map((id) => allEvents.find((e) => e.event_id === id)).filter(Boolean) : [];
+  if (members.length > 1) {
+    head.append(el('div', { class: 'meet-links meet-switch' }, members.map((x) => (x.event_id === event.event_id
+      ? el('span', { class: 'meet-link current', 'aria-current': 'page' }, el('span', { class: 'meet-link-name', text: meetButtonLabel(x, members) }))
+      : el('a', { class: 'meet-link', href: eventHref(x.event_id) }, el('span', { class: 'meet-link-name', text: meetButtonLabel(x, members) }))))));
+  }
   const more = [];
   if (event.format_label) more.push(el('p', { class: 'meta', text: '進行：' + event.format_label }));
   const srcs = (event.sources || []);
@@ -581,6 +589,7 @@ async function main() {
   try {
     manifest = await data.manifest();
     const [events, lineList] = await Promise.all([data.events(), data.lines()]);
+    allEvents = events;
     event = events.find((e) => e.event_id === id);
     if (!event) throw new Error('大会 ' + id + ' がありません');
     lines = new Map(lineList.map((l) => [l.round_id, l]));
