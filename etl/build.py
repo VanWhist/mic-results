@@ -597,15 +597,17 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
         e['date_to'] = max((r['date'] for r in e['rounds'] if r['date']), default=None)
         e['tiers'] = sorted({r['tier'] for r in e['rounds']})
     events_list = sorted(ev_out.values(), key=lambda e: (e['date_from'] or '', e['event_id']), reverse=True)
-    # 同じ大会のモーグルとデュアルモーグルを、トップの大会一覧で 1 枚のカードにまとめる（城さんの判断、2026-10-14）。
-    # 同じ大会 = 同じ meet_key。モーグルとデュアルモーグルの両方がある組だけ meet を付ける（第 1 戦・第 2 戦だけの大会はまとめない）
+    # 同じ大会（同じ meet_key）のモーグル・デュアルモーグル・連日のレース（第 1 戦・第 2 戦）を、トップの大会一覧で 1 枚のカードに
+    # まとめる（城さんの判断、2026-10-14。最初は MO と DM だけ、同じ日に広げた）。同じ日・同じ種目・同じ性別の大会が 2 つある組
+    # （全日本ジュニアの年齢区分、同じ日の 2 レース）はボタンの名前で区別できないのでまとめない（registry の meet_label で分けたものは別）
     meets = collections.defaultdict(list)
     for e in events_list:
         k = meet_key(events_by_id[e['event_id']])
         if k:
             meets[k].append(e)
     for k, es in meets.items():
-        if {x['discipline'] for x in es} >= {'MO', 'DM'}:
+        same_day = collections.Counter((x['discipline'], x['date_from'], tuple(sorted({r['gender'] for r in x['rounds']}))) for x in es)
+        if len(es) > 1 and max(same_day.values()) == 1:
             members = sorted(es, key=lambda x: (x['discipline'] != 'MO', x['date_from'] or '', x['event_id']))
             for x in es:
                 x['meet'] = {'id': k, 'label': events_by_id[x['event_id']].get('meet_label'),
