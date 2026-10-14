@@ -380,10 +380,23 @@ def check_overall_runs(rnd_runs, block_of):
             issues.append((r, 'anchor_not_found', f'{os.path.basename(path)} p{pg} 走り {k + 1} 本目'))
             continue
         band = num_tokens(blocks[k])
+        # 2 本の良い方で順位が付く予選（ANC Perisher 2026）は 1 本ごとの得点が印字されない。得点は内訳（タイム点＋エア＋ターン）の
+        # 和と照合し、採用の走りの得点は 1 行目（1 本目のブロック）の Best Score の印字と照合する
+        best_of_q = r['round'] == 'Q' and r.get('q_block') in ('R1', 'R2')
+        if best_of_q and r['run_score'] is not None:
+            parts = [r['time_points'], r['air_total'], r['turns_total']]
+            if None in parts or sum(dec(x) for x in parts) != dec(r['run_score']):
+                issues.append((r, 'value_mismatch', f"run_score={r['run_score']} が内訳の和 {parts} と合わない（走り {k + 1} 本目）"))
+            if r.get('counting'):
+                head = num_tokens(blocks[0])
+                if dec(r.get('best_score')) != dec(r['run_score']) or not head[abs(dec(r['run_score']))]:
+                    issues.append((r, 'value_not_printed', f"best_score={r.get('best_score')}（採用の走り {k + 1} 本目、1 行目に印字が無い）"))
         for key, v in expected_values(r, True):
             # 2 本目以降の走りの行に順位・ゼッケンは無い（下のラウンドの順位は得点から付けたもの、2 本の良い方の決勝は
             # 1 行目の最終順位を両方の走りに持たせたもの）
             if key in ('bib', 'rank') and k > 0:
+                continue
+            if key == 'run_score' and best_of_q:
                 continue
             if band[v] > 0:
                 band[v] -= 1
@@ -395,9 +408,10 @@ def check_overall_runs(rnd_runs, block_of):
 def overall_block_index(runs):
     """同じ PDF・同じ FIS コードで複数のラウンドがある run（総合の報告から組み立てたもの）の、選手の行の中での走りの位置。
     総合の報告は上のラウンドの走りから順に並ぶ（決勝 2 → 決勝 1 → 予選）。戻り値: {run_id: 0 始まりの位置}"""
-    # 2 本の良い方で順位が付く決勝（q_block R1・R2）は 2 本目（R2）→ 1 本目（R1）の順に載る
-    order = ['F3', 'F2', 'R2', 'F1', 'R1', 'Q']
-    key = lambda r: r['q_block'] if r.get('q_block') in ('R1', 'R2') else r['round']
+    # 2 本の良い方で順位が付く決勝（q_block R1・R2）は 2 本目（R2）→ 1 本目（R1）の順に載る。
+    # 2 本の良い方で順位が付く予選（ANC Perisher 2026）は 1 本目（QR1）→ 2 本目（QR2）の順に載る
+    order = ['F3', 'F2', 'R2', 'F1', 'R1', 'Q', 'QR1', 'QR2']
+    key = lambda r: (('Q' if r['round'] == 'Q' else '') + r['q_block']) if r.get('q_block') in ('R1', 'R2') else r['round']
     groups = collections.defaultdict(list)
     for r in runs:
         if r['provenance']['parser_version'].startswith('A-') and r.get('q_block') in (None, 'R1', 'R2') \

@@ -6544,6 +6544,90 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
+  },
+  {
+   "event_id": "2026-27-anc-perisher-8292",
+   "season": "2026-27",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "62912",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62912&seasoncode=2027",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2026-27",
+   "pdfs": [
+    {
+     "path": "ANC/2026-27/FIS2027_ANC_Perisher_8292_M_MO_RLF.pdf",
+     "sha256": "b8e0ed969af93d38988ced7827384ce55c83683ce6c69a75647fd16dbc7fc757",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19688",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8292",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2026-27/FIS2027_ANC_Perisher_8293_W_MO_RLF.pdf",
+     "sha256": "edb8e93a777a91e98be8daf5819d2e1b24f26b118c690ddffb08ec5a9b8a8634",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19687",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8293",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2026-27-anc-perisher-8294",
+   "season": "2026-27",
+   "series": "ANC",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Perisher",
+   "fis_event_id": "62912",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62912&seasoncode=2027",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2026-27",
+   "pdfs": [
+    {
+     "path": "ANC/2026-27/FIS2027_ANC_Perisher_8294_M_MO_RLF.pdf",
+     "sha256": "34ee1b259ee9252e019897a5c4a5a6727f90bd9bbf9f00fa8eb59ddec11ab58a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19690",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8294",
+     "src_type": "RLF"
+    },
+    {
+     "path": "ANC/2026-27/FIS2027_ANC_Perisher_8295_W_MO_RLF.pdf",
+     "sha256": "eb56cf45dd94bad7d74b98bd63763d23af5c2f12cbf8105fd7916e90200badc9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19689",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8295",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
   }
  ]
 }

@@ -6,6 +6,7 @@ registry の pdfs[] は1件＝1ラウンド（round・gender・codex を持つ�
 古い年の PDF に審判ごとの点が無いときは tier を "score" にする（A だけ読み、第1・2層は対象外）。
 """
 import collections, json, os, re
+from decimal import Decimal
 from ... import config, scoring
 from ...verify import Finding, layer1
 from . import parser_a
@@ -187,9 +188,15 @@ def split_overall(recs, meta, label):
     single ='F1' if re.search(r'\bfinal\b', head, re.I) and not re.search(r'overall', head, re.I) else 'Q'
     groups, problems = collections.OrderedDict(), []
     q2doc = any(r.get('run_label') == 'Q2' for r in recs)
-    for runs in athlete_runs(recs):
+    all_runs = list(athlete_runs(recs))
+    # 予選だけの報告で、区切りも走りの印も無く、1 人 2 本のブロックがある（ANC 2026 Perisher）: 予選は 2 本の良い方で順位が付く様式
+    best_of_q = (single == 'Q' and not q2doc and any(len(runs) == 2 for runs in all_runs)
+                 and all(len(runs) <= 2 and not runs[0].get('section') and not labeled_codes(runs) for runs in all_runs))
+    for runs in all_runs:
         sec = runs[0].get('section')
-        if q2doc:
+        if best_of_q:
+            codes = ['Q'] * len(runs)
+        elif q2doc:
             codes = (q2_labeled_codes(runs) or (None,))[0]
         elif sec:
             codes = (codes_for(sec, runs) or (None,))[0]
@@ -206,9 +213,52 @@ def split_overall(recs, meta, label):
             if lab in LABEL_CODE and (LABEL_CODE_Q2 if q2doc else LABEL_CODE)[lab] != code:
                 problems.append(f"{label}: {r.get('name')} の走りの印 {lab} と区切りからの割り当て {code} が合わない")
             groups.setdefault(code, []).append(r)
-    if best_of_check(recs, '')[0]:
+    if best_of_q:
+        problems += merge_best_of_q(all_runs, label)
+        # 1 本目の内訳も審判点も印字の無いブロック（1 行目に順位・氏名・Best Score だけ。2026 Perisher の WALKER George など。
+        # 1 本目の状態の印字も無い）は走りとして載せない。印字のある 2 本目だけを載せ、順位・Best Score は 1 行目の印字
+        empty = {id(r) for runs in all_runs for r in runs if is_empty_block(r)}
+        groups['Q'] = [r for r in groups.get('Q', []) if id(r) not in empty]
+    elif best_of_check(recs, '')[0]:
         merge_best_of(groups, recs)
     return groups, problems
+
+
+def is_empty_block(r):
+    """状態の印字が無いのに、タイム・内訳・審判点のどれも読めないブロック"""
+    return (r.get('status') == 'OK' and r.get('seconds') is None and r.get('air_total') is None and r.get('turns_total') is None
+            and not any(x is not None for x in (r.get('base_scores') or []) + (r.get('ded_scores') or [])))
+
+
+def merge_best_of_q(all_runs, label):
+    """予選が 2 本で良い方で順位が付く様式（ANC 2026 Perisher）。1 人 2 ブロックの 1 行目の最後の数字は良い方の得点（Best Score）で、
+    1 本ごとの得点は印字されない（1 本ごとの内訳のタイム点・エア・ターンと審判点は印字）。
+    1 本目に q_block 'R1'・2 本目に 'R2' を付け、1 本ごとの得点は印字なし（None。明細の段階は審判点からの再計算で出す）、順位と
+    Best Score は 1 行目の印字を両方の走りに持たせる。内訳の合計が高い方を採用（counting）。
+    戻り値: 問題の文言（印字の Best Score が、内訳の合計の良い方と合わない）"""
+    problems = []
+    for runs in all_runs:
+        head = runs[0]
+        best_printed = head.get('run_score')
+        sums = []
+        for i, r in enumerate(runs):
+            r['q_block'] = 'R1' if i == 0 else 'R2'
+            # 2 本目の B: の合計は得点の欄の位置に印字されていて、読み方 B は得点として読む。B: の点の和と同じときだけ合計に戻す
+            if (i > 0 and r.get('base_total') is None and r.get('run_score') is not None and r.get('base_scores')
+                    and None not in r['base_scores']
+                    and sum(Decimal(str(x)) for x in r['base_scores']) == Decimal(str(r['run_score']))):
+                r['base_total'] = r['run_score']
+            r['run_score'] = None
+            parts = [r.get('time_points'), r.get('air_total'), r.get('turns_total')]
+            sums.append(sum(Decimal(str(x)) for x in parts) if r.get('status') == 'OK' and None not in parts else None)
+        ok = [(s, r) for s, r in zip(sums, runs) if s is not None]
+        best = max(ok, key=lambda x: x[0]) if ok else (None, next((r for r in runs if not is_empty_block(r)), runs[0]))
+        for r in runs:
+            r['rank'], r['best_score'], r['counting'] = head.get('rank'), best_printed, r is best[1]
+        if best[0] is not None and best_printed is not None and Decimal(str(best_printed)) != best[0]:
+            problems.append(f"{label}: {head.get('name')} の印字の Best Score {best_printed} が、2 本の内訳（タイム点＋エア＋ターン）の"
+                            f"良い方 {best[0]} と合わない")
+    return problems
 
 
 def merge_best_of(groups, recs):
@@ -483,8 +533,9 @@ def load_event(ev, imported_at, log=print):
                 rt += f"（上位 {partial} 名を除く）"
             merged = any(r.get('q_block') in ('R1', 'R2') for r in grp)
             if merged:
-                # 決勝は同じ選手が 2 本滑り良い方で順位が付く（ANC 2019）。2 本を 1 ラウンドにまとめてある（merge_best_of）
-                rt = 'Final（2 本の良い方）'
+                # 同じ選手が 2 本滑り良い方で順位が付く（決勝: ANC 2019、予選: ANC 2026）。2 本を 1 ラウンドにまとめてある
+                # （merge_best_of・merge_best_of_q）
+                rt = ('Final' if code.startswith('F') else 'Qualification') + '（2 本の良い方）'
             ctx = make_ctx(ev, pdf, path, code, gender, grp, gb.get(code, []) if recs_b is not None else None,
                            ma, mb, b_error, rules, tier, extra, log, round_text=rt)
             if partial:
@@ -499,7 +550,8 @@ def load_event(ev, imported_at, log=print):
                 # 順位は印字の最終順位（良い方の順）。第 3 層が良い方の走りで並べ直して確かめる
                 ctx['findings'] += [Finding(x.level, round_id, x.layer, x.message) for x in bo_find]
                 ctx['findings'].append(Finding('warning', round_id, 'layer3',
-                                               '決勝は 2 本滑り良い方（Best Score）で順位が付く様式。2 本を 1 ラウンドにまとめ、良い方を採用の走りとした'))
+                                               ('決勝' if code.startswith('F') else '予選') + 'は 2 本滑り良い方（Best Score）で順位が付く様式。'
+                                               '2 本を 1 ラウンドにまとめ、良い方を採用の走りとした'))
             else:
                 ctx['findings'] += fill_overall_ranks(round_id, ctx['records'], ctx['rules'])
             ctxs.append(ctx)

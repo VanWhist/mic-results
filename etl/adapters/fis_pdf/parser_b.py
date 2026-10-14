@@ -530,6 +530,13 @@ def parse_moguls_results(path, pages=None):
                         warnings.append((pno, "athlete line without status or scores", l))
                         last_kind = "status"
                         continue
+                    if re.fullmatch(r"(?:\d+\.\d+ )*\d+\.\d\d", tail_txt) and not q2_doc:
+                        # 1 行目が数字だけ（最後が良い方の得点 Best Score）で、1 本目の内訳も審判点も無い（2 本の良い方の予選。2026
+                        # Perisher の WALKER George「57.86」、ENDO Natsuki「0.0 65.86」）。次の行からは同じ選手の次の走り
+                        # （総合の報告の続きの走りと同じ読み方）
+                        rec["run_score"] = float(tail_txt.split()[-1])
+                        cur, expect, last_kind = None, "L1", "status"
+                        continue
                     if _parse_block_tail(rec, tail_txt, warnings, pno, l):
                         cur, expect, last_kind = rec, "D", "scored"
                     else:
