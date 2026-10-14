@@ -118,6 +118,8 @@ function renderRound() {
   head.append(el('div', { class: 'round-title' }, [
     el('h3', { text: genderLabel(r.gender) + ' ' + roundLabel(r) + '　' + (r.date || '') }),
     tierBadge(r.tier),
+    // 誤りの連絡は「✓ 照合済み」の中にもあるが、見つけてもらえるようにラウンドの見出しにも出す
+    reportLink({ round_id: r.round_id, dataVersion: manifest.dataVersion, pdf: (r.source || {}).pdf }, { text: '✉ 誤りを連絡', cls: 'report-btn' }),
   ]));
   const kv = [];
   if (r.pace_time) kv.push('ペースタイム ' + num(r.pace_time) + ' 秒');
@@ -362,6 +364,8 @@ function renderFis(r, items) {
 // 2 本の良い方の決勝（PC の表）: もう 1 本の行は閉じておき、選手ごとの印（「1本目 ▸」）と「全員の 2 本を表示」で開く。
 // 開閉の状態はこのページを見ている間だけ持つ（showAlt）
 let showAlt = false;
+// 2 本の良い方で順位が付くのは決勝（ANC 2019）と予選（ANC 2026）。説明の文言をラウンドに合わせる
+const bestOfStage = () => (current && current.round === 'Q' ? '予選' : '決勝');
 
 function bestOfToggles(blocks) {
   const pairs = [];
@@ -389,7 +393,7 @@ function bestOfToggles(blocks) {
     pairs.forEach((set) => set(showAlt));
   });
   return el('div', { class: 'alt-bar' }, [
-    el('span', { class: 'meta', text: '決勝は 2 本滑り、良い方の得点で順位が付きます。表示しているのは良い方の走り（「1本目」「2本目」はどちらの走りか）。' }),
+    el('span', { class: 'meta', text: bestOfStage() + 'は 2 本滑り、良い方の得点で順位が付きます。表示しているのは良い方の走り（「1本目」「2本目」はどちらの走りか）。' }),
     all,
   ]);
 }
@@ -489,7 +493,7 @@ function renderFisCards(r, items) {
       list.querySelectorAll('details.fis-alt').forEach((d) => { d.open = showAlt; });
     });
     altAll = el('div', { class: 'alt-bar' }, [
-      el('span', { class: 'meta', text: '決勝は 2 本滑り、良い方の得点で順位。もう 1 本はカードの「もう 1 本」をタップ。' }), all]);
+      el('span', { class: 'meta', text: bestOfStage() + 'は 2 本滑り、良い方の得点で順位。もう 1 本はカードの「もう 1 本」をタップ。' }), all]);
   }
   // 見方の説明は折りたたむ（毎回読むものではないので、結果の1位を上に出す）
   return el('div', {}, [altAll, el('details', { class: 'meta small fis-legend' }, [el('summary', { text: 'カードの見方' }), legend]), list]);

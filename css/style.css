@@ -561,6 +561,13 @@ svg.chart .axis { font-size: 11px; fill: var(--muted); }
 svg.chart .line { fill: none; stroke: #9db4d8; stroke-width: 1.5; }
 .round-title { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .round-title h3 { margin: 0; }
+/* ラウンドの見出しの右端の「誤りを連絡」（押すと誤り報告のメールが開く） */
+.report-btn {
+  margin-left: auto; display: inline-flex; align-items: center; min-height: 36px;
+  padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; background: #fff;
+  color: var(--accent); font-size: 13px; text-decoration: none; white-space: nowrap;
+}
+.report-btn:hover { border-color: var(--accent); background: var(--accent-soft); }
 
 /* デュアルモーグルの対戦経過は長いので折り返す */
 td.prog { white-space: normal; font-size: 0.85em; max-width: 28em; }

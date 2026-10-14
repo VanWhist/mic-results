@@ -168,7 +168,8 @@ export function statusBadge(run) {
 }
 
 // ---- 誤り報告リンク ----------------------------------------------------------
-export function reportLink(ctx) {
+// opts.text・opts.cls：ラウンドの見出しのボタン（誤りを連絡）として使うときの文言とクラス
+export function reportLink(ctx, opts = {}) {
   const subject = '[mic-results] 誤り報告 ' + (ctx.round_id || ctx.run_id || '');
   const body = [
     'round_id: ' + (ctx.round_id || '—'),
@@ -186,7 +187,7 @@ export function reportLink(ctx) {
   } else {
     href = REPORT_ISSUES_URL + '?title=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   }
-  return el('a', { href, target: REPORT_EMAIL ? null : '_blank', rel: 'noopener', text: '誤りを報告' });
+  return el('a', { href, target: REPORT_EMAIL ? null : '_blank', rel: 'noopener', class: opts.cls || null, text: opts.text || '誤りを報告' });
 }
 
 // ---- ナビ -------------------------------------------------------------------
