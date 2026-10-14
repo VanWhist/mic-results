@@ -426,10 +426,12 @@ def _pref_glued(name, others):
     return False
 
 
-def display_name(names, foreign=False):
+def display_name(names, foreign=False, by_date=()):
     """表示名: 日本語表記（SAJ 様式の印字）があればそれを優先し、無ければ最も多い表記。他の表記は別名になる。
     外国籍の選手の日本語表記がカナだけ（読みを写したもの。'パク センヨン'）なら、ローマ字の表記を選ぶ（漢字の名前は日本語表記のまま）。
-    所属の文字が混ざった表記は、混ざっていない表記があればそちらを選ぶ。"""
+    所属の文字が混ざった表記は、混ざっていない表記があればそちらを選ぶ。
+    by_date: 印字の表記を大会の日付の順に並べたもの。結婚などで姓が変わった選手は新しい姓を出す（城さんの判断、2026-10-14）。
+    和文の名前で空白の有無だけが違うときは空白のある表記を出す（'島田 知弥' と '島田知弥'。同じ判断）。異体字（髙・﨑）は回数のまま"""
     ja = collections.Counter({n: c for n, c in names.items() if verify.is_cjk(n)})
     latin = collections.Counter({n: c for n, c in names.items() if n not in ja})
     # 所属の漢字が混ざっただけの表記（'パク センヨン韓国'）は漢字の名前に数えない
@@ -438,7 +440,24 @@ def display_name(names, foreign=False):
     else:
         pool = ja or names
     clean = collections.Counter({n: c for n, c in pool.items() if not _pref_glued(n, pool)})
-    return (clean or pool).most_common(1)[0][0]
+    name = (clean or pool).most_common(1)[0][0]
+    newest = next((n for n in reversed(by_date) if n in (clean or pool)), None)
+    if newest and _surname_changed(name, newest):
+        name = newest
+    if verify.is_cjk(name) and ' ' not in name:
+        spaced = collections.Counter({n: c for n, c in (clean or pool).items() if ' ' in n and n.replace(' ', '') == name})
+        if spaced:
+            name = spaced.most_common(1)[0][0]
+    return name
+
+
+def _surname_changed(old, new):
+    """old から new へ、名が同じで姓だけが変わったか（'新谷 奈津美' → '浅見 奈津美'、'SHIMKO Avital' → 'CARROLL Avital'）。
+    姓が 1 文字も重ならないときだけ変更とみなす（'山碕 彰子' と '山崎 彰子' のような 1 字違いは誤植・異体字なので対象にしない）"""
+    a, b = old.split(' ', 1), new.split(' ', 1)
+    if len(a) != 2 or len(b) != 2 or a[1] != b[1] or not a[0] or not b[0]:
+        return False
+    return not set(a[0].lower()) & set(b[0].lower())
 
 
 def _aff_key(pref, club):
@@ -590,7 +609,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     for aid, rs in by_id.items():
         rs_sorted = sorted(rs, key=lambda x: x['date'] or '')
         names = collections.Counter(x['name'] for x in rs)
-        name = display_name(names, foreign=any(x.get('noc') not in (None, 'JPN') for x in rs))
+        name = display_name(names, foreign=any(x.get('noc') not in (None, 'JPN') for x in rs), by_date=[x['name'] for x in rs_sorted])
         aff_hist = affiliation_history(rs_sorted)
         al = aliases.get(aid, {}) if isinstance(aliases, dict) else {}
         alias_list = [n for n in names if n != name] + ([al.get('kana')] if al.get('kana') else []) + list(al.get('kanji', []))
