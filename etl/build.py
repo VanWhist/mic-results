@@ -6,7 +6,7 @@ Every event comes from ``etl/registry/*.json``. Each registry entry names its ad
 (``etl/adapters/<name>/adapter.py`` with ``load_event(ev, imported_at, log)``), which returns round
 contexts in the shared shape (see normalize.py). Verification and publication are tier-aware.
 """
-import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys, unicodedata
+import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys, unicodedata, zlib
 
 from . import config, normalize, verify, layer5_saj
 from .adapters.saj_aj.parse_sajmo_old import PREFS
@@ -371,6 +371,14 @@ def master_yb(master):
     return {aid: m['yb'] for aid, m in master.get('athletes', {}).items() if m.get('yb')}
 
 
+RUNS_SHARDS = 64
+
+
+def runs_shard(athlete_id):
+    """選手ごとの記録のファイルの番号（athletes の runs_shard、data/athlete_runs.NN.*.json）"""
+    return zlib.crc32(athlete_id.encode('utf-8')) % RUNS_SHARDS
+
+
 def strip_private(run):
     return {k: v for k, v in run.items() if not k.startswith('_')}
 
@@ -626,8 +634,20 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
                          'affiliation_history': aff_hist, 'mic': mic_status(roster, aid, name, [a for a in alias_list if a], [x.get('saj_no') for x in rs]),
                          'n_results': sum(1 for x in rs if x['counting']), 'seasons': sorted({x['season'] for x in rs}),
                          'series': sorted({x['series'] for x in rs}),
-                         'best': {'run_score': best['run_score'], 'run_id': best['run_id']} if best else None})
+                         'best': {'run_score': best['run_score'], 'run_id': best['run_id']} if best else None,
+                         'runs_shard': runs_shard(aid)})
     athletes.sort(key=lambda a: a['name'])
+    # 選手ページ用に、選手ごとの記録を RUNS_SHARDS 個のファイルに分ける（選手ページは全シーズンの記録 約 60MB ではなく、その選手の
+    # ファイルだけを読む）。round_sizes は年表の「順位 / 人数」の人数（集計に数える走りの数。画面の従来の数え方と同じ）
+    round_size = collections.Counter(r['round_id'] for r in all_runs if r.get('counting') is not False)
+    # 記録の順は、シーズンのファイルをシーズン順につないだ順（従来の選手ページと同じ。同じ日付の行の並びが変わらないように）
+    shards = collections.defaultdict(list)
+    for season in sorted(runs_by_season):
+        for r in runs_by_season[season]:
+            shards[runs_shard(r['athlete_id'])].append(r)
+    shard_objs = {k: {'runs': rs,
+                      'round_sizes': {rid: round_size[rid] for rid in sorted({r['round_id'] for r in rs})}}
+                  for k, rs in shards.items()}
 
     judges = {}
     for ctx in publish_ctx:
@@ -657,6 +677,7 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     files['judges'] = emit('judges', judges_list)
     files['rules'] = emit('rules', rules_out)
     files['runs'] = {season: emit(f'runs.{season}', rs) for season, rs in sorted(runs_by_season.items())}
+    files['athlete_runs'] = {str(k): emit(f'athlete_runs.{k:02d}', obj) for k, obj in sorted(shard_objs.items())}
 
     manifest = {
         'dataVersion': datetime.datetime.now().strftime('%Y-%m-%d-%H%M'), 'builtAt': imported_at,

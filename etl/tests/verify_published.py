@@ -52,6 +52,35 @@ def load_published():
     return man, ev, runs
 
 
+def check_athlete_shards(man, runs):
+    """選手ページ用の選手ごとのファイル（athlete_runs）が、シーズンごとのファイルと同じ記録を持っているか。
+    どの記録も athletes の runs_shard のファイルに 1 回だけ、同じ中身で入り、round_sizes はラウンドの集計に数える走りの数と同じ"""
+    f = man['files']
+    out = []
+    if 'athlete_runs' not in f:
+        return [('athlete_runs', 'manifest.json に athlete_runs が無い')]
+    athletes = json.load(open(os.path.join(REPO, 'data', f['athletes']), encoding='utf-8'))
+    shard_of = {a['athlete_id']: str(a['runs_shard']) for a in athletes}
+    by_id = {r['run_id']: r for r in runs}
+    size = collections.Counter(r['round_id'] for r in runs if r.get('counting') is not False)
+    seen = collections.Counter()
+    for k, fn in f['athlete_runs'].items():
+        x = json.load(open(os.path.join(REPO, 'data', fn), encoding='utf-8'))
+        for r in x['runs']:
+            seen[r['run_id']] += 1
+            if shard_of.get(r['athlete_id']) != k:
+                out.append((r['run_id'], f'選手 {r["athlete_id"]} の記録がファイル {k} に入っている（athletes では {shard_of.get(r["athlete_id"])}）'))
+            if by_id.get(r['run_id']) != r:
+                out.append((r['run_id'], f'ファイル {k} の中身がシーズンのファイルと違う'))
+        for rid, n in x['round_sizes'].items():
+            if n != size[rid]:
+                out.append((rid, f'ファイル {k} の人数 {n} がシーズンのファイルの {size[rid]} と違う'))
+    for rid in by_id:
+        if seen[rid] != 1:
+            out.append((rid, f'選手ごとのファイルに {seen[rid]} 回入っている'))
+    return out
+
+
 # ---- A. PDF の行 ---------------------------------------------------------------
 
 _pdf_cache = {}
@@ -833,12 +862,15 @@ def main():
     kinds = collections.Counter(k for _, k, _ in issues)
     print('照合した run:', dict(checked), '合計', sum(checked.values()))
     print('不一致:', dict(kinds), '合計', len(issues))
+    shard_issues = [] if args.only else check_athlete_shards(man, runs)
+    print('選手ごとのファイル（選手ページ用）:', '一致' if not shard_issues else f'食い違い {len(shard_issues)} 件 {shard_issues[:3]}')
     rows = [{'run_id': r['run_id'], 'round_id': r['round_id'], 'series': r['series'], 'tier': r['tier'], 'round': r['round'],
              'rank': r['rank'], 'name': r['name'], 'kind': k, 'detail': d, 'pdf': r['provenance']['pdf'],
              'page': r['provenance'].get('page')} for r, k, d in issues]
     if args.out:
         with open(args.out, 'w', encoding='utf-8') as fh:
-            json.dump({'dataVersion': man['dataVersion'], 'checked': checked, 'kinds': kinds, 'issues': rows}, fh, ensure_ascii=False, indent=1)
+            json.dump({'dataVersion': man['dataVersion'], 'checked': checked, 'kinds': kinds, 'issues': rows,
+                       'shard_issues': shard_issues}, fh, ensure_ascii=False, indent=1)
     return 0
 
 

@@ -217,11 +217,10 @@ async function main() {
   if (!a) { document.getElementById('results').append(errorBox('選手 ' + id + ' がありません')); return; }
   document.getElementById('search-card').hidden = true;
   try {
-    const [events, all] = await Promise.all([data.events(), data.allRuns()]);
-    runs = all;
-    const sizes = new Map();
-    for (const r of runs) sizes.set(r.round_id, (sizes.get(r.round_id) || 0) + (r.counting === false ? 0 : 1));
-    for (const ev of events) for (const r of ev.rounds || []) rounds.set(r.round_id, { event: ev, round: r, roundSize: sizes.get(r.round_id) || 0 });
+    const [events, shard] = await Promise.all([data.events(), data.athleteRuns(a)]);
+    runs = shard.runs.filter((r) => r.athlete_id === a.athlete_id);
+    const sizes = shard.round_sizes || {};
+    for (const ev of events) for (const r of ev.rounds || []) rounds.set(r.round_id, { event: ev, round: r, roundSize: sizes[r.round_id] || 0 });
   } catch (e) {
     document.getElementById('profile').append(errorBox(e.message));
     return;

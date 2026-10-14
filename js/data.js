@@ -59,10 +59,13 @@ export async function runs(season) {
   return load(f);
 }
 
-// 全シーズンのランを1つの配列にする。件数は数千本なので一括で持てる。
-export async function allRuns() {
-  const list = await Promise.all((await seasons()).map((s) => runs(s)));
-  return list.flat();
+// 選手ページ用: その選手の記録が入ったファイルだけを読む（athletes の runs_shard。全シーズンの記録 約 60MB は読まない）。
+// 戻り値 { runs: 同じファイルに入った選手たちの記録, round_sizes: { round_id: 人数 } }
+export async function athleteRuns(athlete) {
+  const m = await manifest();
+  const f = m.files && m.files.athlete_runs && m.files.athlete_runs[athlete.runs_shard];
+  if (!f) throw new Error('選手 ' + athlete.athlete_id + ' の記録のファイルがありません');
+  return load(f);
 }
 
 // round_id → { event, round } の索引。ラン側からラウンド情報（ペースタイム・審判）を引く。
