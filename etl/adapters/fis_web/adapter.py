@@ -12,21 +12,26 @@
   - FIS ポイント: 順位が下がるほど減る（同順位は同じ値）
   - 得点: 決勝・予選などのまとまりごとに高い順（下がらない所で区切ったまとまりが 3 を超えたら警告）
 """
-import json, os
+import json, os, re
 from ... import config
 from ...verify import Finding
 
 PARSER_VERSION = 'FIS-WEB-1.0'
 STATUS = {'Did Not Start': 'DNS', 'Did Not Finish': 'DNF', 'Disqualified': 'DSQ', 'Did not start': 'DNS', 'Did not finish': 'DNF'}
-COLS = ('Rank', 'Bib', 'FIS code', 'Athlete', 'Year', 'Nation', 'Result', 'FIS Points')
+COLS = ('Rank', 'Bib', 'FIS code', 'Athlete', 'Year', 'Nation', 'Result', 'FIS Points', 'Cup Points')
+# デュアルモーグルの結果ページの段の見出し（表頭の欄ではない。保存したページの stages に行ごとに持つ）
+RE_STAGE = re.compile(r'^(Final|Small Final|Big Final|1/\d+ Final|Qualification|Round of \d+)$')
 
 
 def read_page(path):
     with open(path, encoding='utf-8') as fh:
         d = json.load(fh)
     cols = [c for c in d['cols'] if c in COLS]
-    unknown = [c for c in d['cols'] if c not in COLS and c not in STATUS]
+    stages = d.get('stages') or []
+    unknown = [c for c in d['cols'] if c not in COLS and c not in STATUS and not (stages and RE_STAGE.match(c))]
     rows, problems = [], []
+    if stages and len(stages) != len(d['rows']):
+        problems.append(f"段の数 {len(stages)} が行の数 {len(d['rows'])} と違う")
     for i, row in enumerate(d['rows'], 1):
         st, cells = row[0], row[1:]
         if len(cells) != len(cols):
@@ -34,6 +39,8 @@ def read_page(path):
             continue
         r = dict(zip(cols, cells))
         r['status'] = STATUS.get(st, 'OK' if not st else st)
+        if stages:
+            r['stage'] = stages[i - 1] if i <= len(stages) else None
         rows.append(r)
     if unknown:
         problems.append(f"知らない表頭 {unknown}")
@@ -80,8 +87,8 @@ def check_round(round_id, rows, survey):
         if (ra == rb and pa != pb) or (rb > ra and pb >= pa):
             f.append(Finding('error', round_id, 'layer0', f"FIS ポイントが順位と合わない（{ra} 位 {pa}・{rb} 位 {pb}）"))
             break
-    # 得点: まとまりごとに高い順
-    if 'Result' in (rows[0] if rows else {}):
+    # 得点: まとまりごとに高い順（デュアルモーグルの Result は載せないので見ない）
+    if 'Result' in (rows[0] if rows else {}) and 'stage' not in rows[0]:
         res = [float(r['Result']) for r in ok if r.get('Result')]
         groups = 1 + sum(1 for a, b in zip(res, res[1:]) if b > a)
         if res and groups > 3:
@@ -104,10 +111,12 @@ def load_event(ev, imported_at, log=print):
         if d.get('codex') != pg.get('codex'):
             findings.append(Finding('error', round_id, 'layer0', f"ページの CODEX {d.get('codex')} が registry の {pg.get('codex')} と違う"))
         findings += check_round(round_id, rows, pg.get('survey'))
-        has_result = any('Result' in r for r in rows)
+        # デュアルモーグルの Result は段によって対戦の合計・予選の得点が混ざるので、参考の得点としても載せない（順位のみ）
+        dm = ev.get('discipline') == 'DM'
+        has_result = not dm and any('Result' in r for r in rows)
         cls = {
             'event_id': ev['event_id'], 'season': ev['season'], 'series': ev['series'], 'grade': ev.get('grade'),
-            'discipline': 'MO', 'gender': g, 'round': 'F1',
+            'discipline': 'DM' if dm else 'MO', 'gender': g, 'round': 'F1',
             'round_text': 'Final Result（FIS 公式サイトの最終順位）', 'codex': pg.get('codex'),
             'tier': 'rank', 'panel': None, 'rel': pg['path'], 'path': path, 'pdf_sha256': pg.get('sha256'),
             'url': pg.get('page_url'), 'page_url': pg.get('page_url'), 'pages': None, 'name_ja': ev.get('name_ja'),
@@ -128,7 +137,7 @@ def load_event(ev, imported_at, log=print):
                 'base_total': None, 'ded_total': None, 'turns_total': None, 'run_score': None, 'tie': None, 'page': None,
                 # 得点は参考（FIS 公式サイトの値。審判の点からの検算はしていない）。FIS ポイントは検証用
                 'components': {'web_result': (r.get('Result') or None) if has_result else None, 'fis_points': r.get('FIS Points') or None,
-                               'source': 'fis_web'},
+                               'source': 'fis_web', **({'stage': r.get('stage')} if dm else {})},
             })
         ctxs.append({'cls': cls, 'meta': rmeta, 'records': records, 'findings': findings, 'ab_compared': False, 'rules': {}})
         log(f"  {round_id}: {len(records)} 名")

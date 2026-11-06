@@ -1,0 +1,953 @@
+{
+ "_about": "W杯・世界選手権・五輪のデュアルモーグル最終成績（etl/adapters/fis_dm_pdf/gen_registry_wc.py が生成。手書き項目は保持）",
+ "events": [
+  {
+   "event_id": "2022-23-wc-alpedhuez-8161",
+   "season": "2022-23",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Alpe d'Huez",
+   "fis_event_id": "51341",
+   "meet_event": "2022-23-alpe-d-huez-8159",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51341&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2022-23シーズン/Alpe d'Huez/Alpe d'Huez_男子デュアルモーグル決勝_8161.pdf",
+     "sha256": "9371de60210e460b933ec84a32861fbbfb88d74eb2da8541a43378a05b701e91",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51341&seasoncode=2023",
+     "gender": "M",
+     "codex": "8161",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2022-23シーズン/Alpe d'Huez/Alpe d'Huez_女子デュアルモーグル決勝_8162.pdf",
+     "sha256": "5acbda6a6aeac67b1a3adafce0d93060cd8ec79e94062c0c9c005a256d16859f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51341&seasoncode=2023",
+     "gender": "W",
+     "codex": "8162",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2022-23-wc-alpedhuez-8161-M-F1",
+     "printed": 56,
+     "actual": 54,
+     "basis": "FIS 公式サイトの結果ページ（raceid 15240、2026-11-07 確認）は 56 名で、順位のある 54 名と Did Not Start 2 名（WENDLER Landon・BELLUCCI Massimo）。PDF の最終成績の表は順位のある 54 名だけ"
+    },
+    {
+     "round_id": "2022-23-wc-alpedhuez-8161-W-F1",
+     "printed": 27,
+     "actual": 26,
+     "basis": "FIS 公式サイトの結果ページ（raceid 15239、2026-11-07 確認）は 27 名で、順位のある 26 名と Did Not Start 1 名（SAMANKOVA Dorota）。PDF の最終成績の表は順位のある 26 名だけ"
+    }
+   ]
+  },
+  {
+   "event_id": "2022-23-wc-deervalley-8316",
+   "season": "2022-23",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "51345",
+   "meet_event": "2022-23-deer-valley-8312",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51345&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2022-23シーズン/Deer Valley/Deer Valley_男子デュアルモーグル決勝_8316.pdf",
+     "sha256": "ecac5c94a5d78d4dd2cf892d1c2afbb9409240f852c39d5c5fcd350a08a6f0c6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51345&seasoncode=2023",
+     "gender": "M",
+     "codex": "8316",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2022-23シーズン/Deer Valley/Deer Valley_女子デュアルモーグル決勝_8317.pdf",
+     "sha256": "dce7f812754302f4b5a8916b9fb92a37cb37ae3acb178d345a720d78d1316aae",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51345&seasoncode=2023",
+     "gender": "W",
+     "codex": "8317",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-wc-idrefjall-8280",
+   "season": "2022-23",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Idre Fjäll",
+   "fis_event_id": "51340",
+   "meet_event": "2022-23-idre-fj-ll-8278",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51340&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2022-23シーズン/Idre Fjäll/Idre Fjäll_男子デュアルモーグル決勝_8280.pdf",
+     "sha256": "da9fa092a2e52e40300fcbc941050ec00e21f3ab46ea8ebfc28f1928e54edd63",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51340&seasoncode=2023",
+     "gender": "M",
+     "codex": "8280",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2022-23シーズン/Idre Fjäll/Idre Fjäll_女子デュアルモーグル決勝_8281.pdf",
+     "sha256": "d7e6b1f212e92019a1273ccdd3c2f329f4f37895e0a43c295c712f4aa8980099",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51340&seasoncode=2023",
+     "gender": "W",
+     "codex": "8281",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2022-23-wc-valstcome-8137",
+   "season": "2022-23",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Val St. Come",
+   "fis_event_id": "51344",
+   "meet_event": "2022-23-val-st-come-8135",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51344&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2022-23シーズン/Val St. Come/Val St. Come_男子デュアルモーグル決勝_8137.pdf",
+     "sha256": "f1dea7d1af2f32785abe9abb632595055250a10327c4754c3e10794c565a1adc",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51344&seasoncode=2023",
+     "gender": "M",
+     "codex": "8137",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2022-23シーズン/Val St. Come/Val St. Come_女子デュアルモーグル決勝_8138.pdf",
+     "sha256": "631149050ab6de99b89f3bbad47f52b139f69ce02b7a0bdb8c0794810c58e150",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51344&seasoncode=2023",
+     "gender": "W",
+     "codex": "8138",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "",
+   "competitor_count_exceptions": [
+    {
+     "round_id": "2022-23-wc-valstcome-8137-M-F1",
+     "printed": 53,
+     "actual": 52,
+     "basis": "FIS 公式サイトの結果ページ（raceid 15248、2026-11-07 確認）は 53 名で、順位のある 52 名と Did Not Finish 1 名（WANG Renda）。PDF の最終成績の表は順位のある 52 名だけ"
+    },
+    {
+     "round_id": "2022-23-wc-valstcome-8137-W-F1",
+     "printed": 30,
+     "actual": 27,
+     "basis": "FIS 公式サイトの結果ページ（raceid 15247、2026-11-07 確認）は 30 名で、順位のある 27 名と Did Not Finish 3 名（CABROL Camille・DESMARAIS-GILBERT Laurianne・LINTON Jessica）。PDF の最終成績の表は順位のある 27 名だけ"
+    }
+   ]
+  },
+  {
+   "event_id": "2022-23-wsc-bakuriani-8090",
+   "season": "2022-23",
+   "series": "WSC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Bakuriani",
+   "fis_event_id": "51249",
+   "meet_event": "2022-23-bakuriani-8084",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51249&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/世界選手権/Bakuriani/Bakuriani_男子デュアルモーグル決勝_8090.pdf",
+     "sha256": "3d89aaefa46ba2ba1f7d02ff3957e6835afb4408ecb79298d8e15704d1298149",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51249&seasoncode=2023",
+     "gender": "M",
+     "codex": "8090",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/世界選手権/Bakuriani/Bakuriani_女子デュアルモーグル決勝_8091.pdf",
+     "sha256": "dadb424130b93278737edae11a1074518b1aed2c1fa17c1996012946b7362622",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51249&seasoncode=2023",
+     "gender": "W",
+     "codex": "8091",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-almaty-8222",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Almaty",
+   "fis_event_id": "53414",
+   "meet_event": "2023-24-almaty-8220",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53414&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Almaty/Almaty_男子デュアルモーグル決勝_8222.pdf",
+     "sha256": "576882a238055df0c4681ac98b27d54f6b2042437cb8ef12f2382be8855b240c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53414&seasoncode=2024",
+     "gender": "M",
+     "codex": "8222",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Almaty/Almaty_女子デュアルモーグル決勝_8223.pdf",
+     "sha256": "a0376c7889627a35ab7ae374e7aada11d2747cc52c78d84573819bad6564c923",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53414&seasoncode=2024",
+     "gender": "W",
+     "codex": "8223",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-alpedhuez-8140",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Alpe d'Huez",
+   "fis_event_id": "53407",
+   "meet_event": "2023-24-alpe-d-huez-8138",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53407&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Alpe d'Huez/Alpe d'Huez_男子デュアルモーグル決勝_8140.pdf",
+     "sha256": "1427926bd16952b0e7b9586bd045e66897826d23686ec9f989e5e99ab2ae56a9",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53407&seasoncode=2024",
+     "gender": "M",
+     "codex": "8140",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Alpe d'Huez/Alpe d'Huez_女子デュアルモーグル決勝_8141.pdf",
+     "sha256": "6287a2c672d04f6fd99490c8da3728b493a08d08ea9f29f963728ffa8aa0c360",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53407&seasoncode=2024",
+     "gender": "W",
+     "codex": "8141",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-bakuriani-8174",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Bakuriani",
+   "fis_event_id": "53409",
+   "meet_event": "2023-24-bakuriani-8172",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53409&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Bakuriani/Bakuriani_男子デュアルモーグル決勝_8174.pdf",
+     "sha256": "7d9a6f08a27eb036b2214c244116a416d6f85a27731885fe58845a41920e3240",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53409&seasoncode=2024",
+     "gender": "M",
+     "codex": "8174",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Bakuriani/Bakuriani_女子デュアルモーグル決勝_8175.pdf",
+     "sha256": "7a82fc675c3e5576e4265b91c61dcde211c50561329c39bb9265733dcfaf5e13",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53409&seasoncode=2024",
+     "gender": "W",
+     "codex": "8175",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-deervalley-8327",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "53413",
+   "meet_event": "2023-24-deer-valley-8322",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53413&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Deer Valley/Deer Valley_男子デュアルモーグル決勝_8327.pdf",
+     "sha256": "922ce019f50ee9061b5dac10a2b291b15f7a7b9246153289afd9fcdb8870ae58",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53413&seasoncode=2024",
+     "gender": "M",
+     "codex": "8327",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Deer Valley/Deer Valley_女子デュアルモーグル決勝_8328.pdf",
+     "sha256": "d272e2816b5e3d343e43c041a41e65935ad7cee6952fb345c875f2c683bd40ec",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53413&seasoncode=2024",
+     "gender": "W",
+     "codex": "8328",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-idrefjall-8286",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Idre Fjäll",
+   "fis_event_id": "53406",
+   "meet_event": "2023-24-idre-fj-ll-8284",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53406&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Idre Fjäll/Idre Fjäll_男子デュアルモーグル決勝_8286.pdf",
+     "sha256": "9165b7b2fd92a23820b28fd0fdbdee3b79f1a4083cbaaca31df7fd26d6d4979a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53406&seasoncode=2024",
+     "gender": "M",
+     "codex": "8286",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Idre Fjäll/Idre Fjäll_女子デュアルモーグル決勝_8287.pdf",
+     "sha256": "c15ab60cccb3c48946aa2e8c85f01ba5102237446bbbc779f3f282a96c8bc389",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53406&seasoncode=2024",
+     "gender": "W",
+     "codex": "8287",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-valstcome-8090",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Val St. Come",
+   "fis_event_id": "53410",
+   "meet_event": "2023-24-val-st-come-8088",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53410&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Val St. Come/Val St. Come_男子デュアルモーグル決勝_8090.pdf",
+     "sha256": "26c3874b6d264d7271e27412dcc3e91ee0eb5c5e442ec2b1c63119b81279966e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53410&seasoncode=2024",
+     "gender": "M",
+     "codex": "8090",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Val St. Come/Val St. Come_女子デュアルモーグル決勝_8091.pdf",
+     "sha256": "3b3999fbe1f007b01bec4478128d98ecc1b9b10c3ac3dbac658a7ec503c5e3cf",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53410&seasoncode=2024",
+     "gender": "W",
+     "codex": "8091",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2023-24-wc-waterville-8312",
+   "season": "2023-24",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Waterville",
+   "fis_event_id": "53411",
+   "meet_event": "2023-24-waterville-8310",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53411&seasoncode=2024",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2023-24シーズン/Waterville/Waterville_男子デュアルモーグル決勝_8312.pdf",
+     "sha256": "381246cce3278fe5be34c89714c7298392a7a3d302bf00b616b3c79c4222265d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53411&seasoncode=2024",
+     "gender": "M",
+     "codex": "8312",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2023-24シーズン/Waterville/Waterville_女子デュアルモーグル決勝_8313.pdf",
+     "sha256": "53626f7098b3bcb76fd29a51e0c252a1c2ca26e98e9858cfdaf3099795272a4e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=53411&seasoncode=2024",
+     "gender": "W",
+     "codex": "8313",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-almaty-8173",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Almaty",
+   "fis_event_id": "55682",
+   "meet_event": "2024-25-almaty-8171",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55682&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Almaty/Almaty_男子デュアルモーグル決勝_8173.pdf",
+     "sha256": "41e5c1443599a67e27aafe67b02fa7117116c971ab87cf1078adf8cea450bcc6",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55682&seasoncode=2025",
+     "gender": "M",
+     "codex": "8173",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Almaty/Almaty_女子デュアルモーグル決勝_8174.pdf",
+     "sha256": "bc35b2e1196c96fa543134304f412de8dfab79b5658f32aaaf95e876b7668a83",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55682&seasoncode=2025",
+     "gender": "W",
+     "codex": "8174",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-bakuriani-8129",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Bakuriani",
+   "fis_event_id": "55675",
+   "meet_event": "2024-25-bakuriani-8127",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55675&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Bakuriani/Bakuriani_男子デュアルモーグル決勝_8129.pdf",
+     "sha256": "927356fcfceba91ef05eb4303d06380f3da2e89ec1ff7eee7dca27de30c6cb46",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55675&seasoncode=2025",
+     "gender": "M",
+     "codex": "8129",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Bakuriani/Bakuriani_女子デュアルモーグル決勝_8130.pdf",
+     "sha256": "81e81a5a339182de2d066eab057cab06552979d0407b7d557a30b90c30280872",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55675&seasoncode=2025",
+     "gender": "W",
+     "codex": "8130",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-beidahu-8100",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Beidahu",
+   "fis_event_id": "55681",
+   "meet_event": "2024-25-beidahu-8098",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55681&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Beidahu/Beidahu_男子デュアルモーグル決勝_8100.pdf",
+     "sha256": "7ac2ada797316894e0644fe2c15642b88eb6a76f8fb650183148eb05c380690c",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55681&seasoncode=2025",
+     "gender": "M",
+     "codex": "8100",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Beidahu/Beidahu_女子デュアルモーグル決勝_8101.pdf",
+     "sha256": "5f1717f33225fb79a1ace1800ef4e7b6901b6862e5551a947d7c8251b3ca4ca1",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55681&seasoncode=2025",
+     "gender": "W",
+     "codex": "8101",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-deervalley-8262",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Deer Valley",
+   "fis_event_id": "55680",
+   "meet_event": "2024-25-deer-valley-8258",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55680&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Deer Valley/Deer Valley_男子デュアルモーグル決勝_8262.pdf",
+     "sha256": "6c580c1adb55d9a782245db99bb340a3e09c2e80728b45d4907f496c368f168e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55680&seasoncode=2025",
+     "gender": "M",
+     "codex": "8262",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Deer Valley/Deer Valley_女子デュアルモーグル決勝_8263.pdf",
+     "sha256": "50c868a8a0e68c9920fb06646426049b9c455be72c52bbd86b525f48833c3465",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55680&seasoncode=2025",
+     "gender": "W",
+     "codex": "8263",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-livigno-8167",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Livigno",
+   "fis_event_id": "55684",
+   "meet_event": "2024-25-livigno-8165",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55684&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Livigno/Livigno_男子デュアルモーグル決勝_8167.pdf",
+     "sha256": "914f9ad1dc56ca7f54fad2136c8203a6108986a0f1658e9d463a740c976fcbb7",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55684&seasoncode=2025",
+     "gender": "M",
+     "codex": "8167",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Livigno/Livigno_女子デュアルモーグル決勝_8168.pdf",
+     "sha256": "1647e62cff0efb908f15a6316c3fab4be2df90188071bbad9bd4cf6274484d9d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55684&seasoncode=2025",
+     "gender": "W",
+     "codex": "8168",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-valstcome-8072",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Val St. Come",
+   "fis_event_id": "55679",
+   "meet_event": "2024-25-val-st-come-8070",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55679&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Val St. Come/Val St. Come_男子デュアルモーグル決勝_8072.pdf",
+     "sha256": "fdfa596da0f5be58544b52a261ab24932ddf5f7ad3ac1bea3578d53262b5eb3e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55679&seasoncode=2025",
+     "gender": "M",
+     "codex": "8072",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Val St. Come/Val St. Come_女子デュアルモーグル決勝_8073.pdf",
+     "sha256": "3a0e3fab5c4fd7713efe14a283c91d8302baeacb5d1ace4785123c4cd1163d47",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55679&seasoncode=2025",
+     "gender": "W",
+     "codex": "8073",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wc-waterville-8256",
+   "season": "2024-25",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Waterville",
+   "fis_event_id": "55676",
+   "meet_event": "2024-25-waterville-8254",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55676&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2024-25シーズン/Waterville/Waterville_男子デュアルモーグル決勝_8256.pdf",
+     "sha256": "deb738af4685f435bb215e67390ffea11c975a6853b7bc23a104656336b89bef",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55676&seasoncode=2025",
+     "gender": "M",
+     "codex": "8256",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2024-25シーズン/Waterville/Waterville_女子デュアルモーグル決勝_8257.pdf",
+     "sha256": "8e98fa5394772ef6f839556bcce48935d126a6e36c95b472f72b8d2f77bc482a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55676&seasoncode=2025",
+     "gender": "W",
+     "codex": "8257",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2024-25-wsc-engadin-8217",
+   "season": "2024-25",
+   "series": "WSC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Engadin",
+   "fis_event_id": "55615",
+   "meet_event": "2024-25-engadin-8209",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55615&seasoncode=2025",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/世界選手権/Engadin/Engadin_男子デュアルモーグル決勝_8217.pdf",
+     "sha256": "0d8cd7a567a8060b5fec826539f14540b01dab521c7968eff0155497f2966ab8",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55615&seasoncode=2025",
+     "gender": "M",
+     "codex": "8217",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/世界選手権/Engadin/Engadin_女子デュアルモーグル決勝_8218.pdf",
+     "sha256": "099f1cc7fa7b068117106dd5bd43e146447c16aa22938f6c4659d1fa7f8379af",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=55615&seasoncode=2025",
+     "gender": "W",
+     "codex": "8218",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-owg-milanocortina-8198",
+   "season": "2025-26",
+   "series": "OWG",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Milano Cortina",
+   "fis_event_id": "57903",
+   "meet_event": "2025-26-milano-cortina-8192",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57903&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/オリンピック/Milano Cortina/Milano Cortina_男子デュアルモーグル決勝_8198.pdf",
+     "sha256": "22e736ae97d348a9b54fa42d3962b5f08e3fad6043507c897ad78e730d23cd9a",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57903&seasoncode=2026",
+     "gender": "M",
+     "codex": "8198",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/オリンピック/Milano Cortina/Milano Cortina_女子デュアルモーグル決勝_8196.pdf",
+     "sha256": "3187bbb789c357b3a3d279a8bd1e685a6560ba80b2dbd5174238578bc9e3c42e",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57903&seasoncode=2026",
+     "gender": "W",
+     "codex": "8196",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-wc-nantotoyama-8215",
+   "season": "2025-26",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Nanto-Toyama",
+   "fis_event_id": "57921",
+   "meet_event": "2025-26-nanto-toyama-8213",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57921&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2025-26シーズン/Nanto-Toyama/Nanto-Toyama_男子デュアルモーグル決勝_8215.pdf",
+     "sha256": "3e797588e9e8924f121abb4f84a9598757c73c8247fdbe76932429948b623f7f",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57921&seasoncode=2026",
+     "gender": "M",
+     "codex": "8215",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2025-26シーズン/Nanto-Toyama/Nanto-Toyama_女子デュアルモーグル決勝_8216.pdf",
+     "sha256": "dbb3fa2cb68ef48ce2acfc3272b0c20e0a2c951b6dbcf3e3d591f507041f3b4b",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57921&seasoncode=2026",
+     "gender": "W",
+     "codex": "8216",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2025-26-wc-valstcome-8091",
+   "season": "2025-26",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Val St. Come",
+   "fis_event_id": "57918",
+   "meet_event": "2025-26-val-st-come-8089",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57918&seasoncode=2026",
+   "tier": "rank",
+   "adapter": "fis_dm_pdf",
+   "rules": null,
+   "pdfs": [
+    {
+     "path": "moguls-results/2025-26シーズン/Val St. Come/Val St. Come_男子デュアルモーグル決勝_8091.pdf",
+     "sha256": "8c429df2ed6266186b71bdada1115085bb29703db2788ee8778b255c89c8dc50",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57918&seasoncode=2026",
+     "gender": "M",
+     "codex": "8091",
+     "src_type": "RLF"
+    },
+    {
+     "path": "moguls-results/2025-26シーズン/Val St. Come/Val St. Come_女子デュアルモーグル決勝_8092.pdf",
+     "sha256": "02e0d2881ad489a0bf597403c8442eafd5e792e88eca0a409a51de379443ac3d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=57918&seasoncode=2026",
+     "gender": "W",
+     "codex": "8092",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": ""
+  }
+ ]
+}

@@ -84,6 +84,7 @@ etl/adapters/saj_aj/       SAJ 様式（全日本・A級・B級・ジュニア�
 etl/adapters/fis_pdf/      FIS 様式（moguls-results の parser_a / parser_b の複製。取り込みは Step 2 で接続）
 etl/adapters/moguls_results/ W杯・世界選手権・五輪を moguls-results の公開データから得点段階で流用。
                            registry・正解データ・第5層の結果は sync_registry.py が生成する（下記）
+etl/adapters/fis_dm_pdf/   デュアルモーグルの最終成績 PDF（順位のみ）。W杯系の registry（moguls_results_dm.json）は gen_registry_wc.py が生成
 etl/registry/*.json        大会の登録簿（出典 URL・SHA-256・規則・進出人数）
 etl/rules/events/          大会ごとの規則（印字からの全件再計算で確定）
 etl/expected_rounds.json   ラウンドごとの人数の基準（--accept-rounds で登録）
@@ -129,6 +130,10 @@ python -m etl.adapters.moguls_results.sync_registry
 `etl/registry/moguls_results.json`・`golden/golden_moguls_results.json`・`etl/layer5_status.json`（FIS 公式 Web との照合結果）・
 `etl/athlete_aliases.json`（確認済みの読み・漢字）が更新される。event_id と round_id は moguls-results と同じにしてあり、
 大会ページから moguls-results の同じラウンド（審判点あり）へリンクする。元 PDF は `全試合のリザルト\` を読み、SHA-256 だけ照合する。
+
+デュアルモーグル（2022-23 以降）は moguls-results に無いので、`全試合のリザルト\` の最終成績 PDF から順位のみで読む（adapter は fis_dm_pdf）。
+`python -m etl.adapters.fis_dm_pdf.gen_registry_wc` が `etl/registry/moguls_results_dm.json` を生成し、同じフォルダのモーグルを `meet_event` に持たせて
+大会一覧の 1 枚のカードにまとめる。最終成績の PDF が無い Almaty 2022-23 は FIS の結果ページから入れている（`etl/registry/fis_web.json`）。
 
 ## 4. 選手の ID
 

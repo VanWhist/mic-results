@@ -21,7 +21,7 @@ RAW_DIR = os.path.join(WEB_DIR, 'raw')
 CHECKS = os.path.join(WEB_DIR, 'page_checks.txt')
 SURVEY = os.path.join(config.REPO, 'inventory', 'fis_overseas_survey.jsonl')
 OUT = os.path.join(config.REGISTRY_DIR, 'fis_web.json')
-PRESERVE = ('notes', 'tier', 'name_ja', 'skip', 'format')
+PRESERVE = ('notes', 'tier', 'name_ja', 'skip', 'format', 'meet_event')
 RACE_URL = 'https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid={}'
 EVENT_URL = 'https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid={}&seasoncode={}'
 NOTE = ('FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から'
@@ -80,6 +80,7 @@ def main():
             if p['rid'] in used:
                 continue
             mate = next((q for q in items if q['rid'] not in used and q is not p and q['g'] != p['g']
+                         and ('Dual Moguls' in q['d']['head'][3]) == ('Dual Moguls' in p['d']['head'][3])
                          and abs(int(q['codex']) - int(p['codex'])) <= 2), None)
             grp = [p] + ([mate] if mate else [])
             used.update(x['rid'] for x in grp)
@@ -95,7 +96,8 @@ def main():
             place = re.sub(r'[^A-Za-z0-9]', '', p0['ev']['place'].split(',')[0])
             event_id = f"{season}-{cats.pop().lower()}-{place.lower()}-{rep['codex']}"
             ev = {
-                'event_id': event_id, 'season': season, 'series': p0['cat'], 'grade': None, 'discipline': 'MO', 'name_ja': None,
+                'event_id': event_id, 'season': season, 'series': p0['cat'], 'grade': None,
+                'discipline': 'DM' if 'Dual Moguls' in p0['d']['head'][3] else 'MO', 'name_ja': None,
                 'place': p0['ev']['place'], 'fis_event_id': fis_ev, 'page_url': EVENT_URL.format(fis_ev, season_end),
                 'tier': 'rank', 'adapter': 'fis_web',
                 'pages': [{'path': p['rel'], 'sha256': sha256_file(p['path']), 'raceid': p['rid'], 'page_url': RACE_URL.format(p['rid']),

@@ -46,7 +46,7 @@ def _code_fingerprint(adapter):
     # 登録を作り直すスクリプト（gen_registry.py・sync_registry.py）は読み取りに関わらないので除く
     adapters = [f for d in ADAPTER_DEPS.get(adapter, (adapter,))
                 for f in glob.glob(os.path.join(config.HERE, 'adapters', d, '**', '*.py'), recursive=True)
-                if os.path.basename(f) not in ('gen_registry.py', 'sync_registry.py')]
+                if os.path.basename(f) not in ('gen_registry.py', 'gen_registry_wc.py', 'sync_registry.py')]
     adapters += [os.path.join(config.HERE, 'adapters', '__init__.py')]
     files = sorted(core + adapters + glob.glob(os.path.join(config.RULES_DIR, '**', '*.json'), recursive=True))
     for f in files:
@@ -371,10 +371,14 @@ def master_yb(master):
     return {aid: m['yb'] for aid, m in master.get('athletes', {}).items() if m.get('yb')}
 
 
-def meet_key(ev):
+def meet_key(ev, meet_targets=()):
     """同じ大会のキー（registry の event）。FIS の大会番号（fis_event_id）か SAJ 競技データバンクの大会番号（saj_comp）に、
     区分（series。同じ大会番号の A級と B級は別）と registry の meet_label（同じ大会番号に年齢区分が 2 つある大会。
-    2025 全日本ジュニアの中学・高校）を足したもの。どちらの番号も無い大会（W杯系）は None"""
+    2025 全日本ジュニアの中学・高校）を足したもの。どちらの番号も無い大会は None。
+    W杯系のモーグル（moguls_results）は FIS の大会番号を持たないので、デュアルモーグルの registry の meet_event（同じ大会の
+    モーグルの event_id）で組にする。meet_targets は meet_event に指された event_id の集合"""
+    if ev.get('meet_event') or ev['event_id'] in meet_targets:
+        return 'mo-' + (ev.get('meet_event') or ev['event_id'])
     if ev.get('fis_event_id'):
         base = 'fis-' + str(ev['fis_event_id'])
     elif ev.get('saj_comp'):
@@ -601,8 +605,9 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     # まとめる（城さんの判断、2026-10-14。最初は MO と DM だけ、同じ日に広げた）。同じ日・同じ種目・同じ性別の大会が 2 つある組
     # （全日本ジュニアの年齢区分、同じ日の 2 レース）はボタンの名前で区別できないのでまとめない（registry の meet_label で分けたものは別）
     meets = collections.defaultdict(list)
+    meet_targets = {x['meet_event'] for x in events_by_id.values() if x.get('meet_event')}
     for e in events_list:
-        k = meet_key(events_by_id[e['event_id']])
+        k = meet_key(events_by_id[e['event_id']], meet_targets)
         if k:
             meets[k].append(e)
     for k, es in meets.items():

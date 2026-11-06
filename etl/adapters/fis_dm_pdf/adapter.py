@@ -27,15 +27,21 @@ RE_ROW_NOYB = re.compile(r'^(\d+)\s+(\d+)\s+(\d{7})\s+(.+?)\s+([A-Z]{3})(?:\s+(D
 RE_STAGE = re.compile(r'^(Big ?Final|Small ?Final|Semi ?Finals?|Quarter ?Finals?|Quareter ?Finals?|Eight ?Finals?|1/\d+ ?Finals?|Round ?of ?\d+'
                       r'|Group ?Phase|Not ?Ranked|Qualification(?: ?Heat ?Round)?|Did ?Not ?(?:Start|Finish)|Disqualified)$', re.I)
 # 対戦経過の印（R32-1: / EF-3: / QF-2: / SF-1: / F: / SmF: / Big F: / BigF:）
-RE_PROG = re.compile(r'(?:\b(?:R\d+|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
+RE_PROG = re.compile(r'(?:\b(?:R\d+|\d+F|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
 # 対戦経過が「Tot: 20.00, Rk 1」の途中で折り返した行（世界ジュニア 2021）
 RE_PROG_TAIL = re.compile(r'^(?:[RB],\s*)?(?:Tot:\s*)?(?:\d+(?:\.\d+)?,\s*)?Rk\s*\d+')
 # 表の中に出る表の外の行（天気・凡例・曜日つきの日付のフッタ）
-RE_SKIP = re.compile(r'^(Weather:|Legend:|Conditions on Course|[A-Z]{3} \d{1,2} [A-Z]{3} \d{4} /|\d{2}-\d{2}-\d{4}\s*/|Data Processing|\d{1,2}$'
+RE_SKIP = re.compile(r'^(Weather:|Legend:|Conditions on [Cc]ourse|.*Snow\s*(?:Condition|Temperature):|[A-Z]{3} \d{1,2} [A-Z]{3} \d{4} /|\d{2}-\d{2}-\d{4}\s*/|Data Processing|\d{1,2}$'
                      r'|F\d+ - |.*changed to follow rule'  # 天気の欄・凡例・フッタ・前走者・審判点の訂正の注記（ユニバーシアード 2017）
-                     r'|DNF\s*Did\s*Not\s*Finish'  # 「Legend:」の次の行の凡例（NAC 2025 Apex）。DNF・DNS の語を含むので対戦経過と取り違えないよう飛ばす
+                     r'|J\s+Judge\b|B\s+Base\s*Score\b|D\s+Deductions\b'  # 凡例（W杯 2022-23〜）。前の選手の名前の折り返しと取り違えないよう飛ばす
+                     r'|.*DN[FS]\s*Did\s*Not\s*(?:Finish|Start)'  # 凡例（「DNF DidNotFinish」「Ctry Country DNF DidNotFinish DNS DidNotStart」「DNS DidNotStart」）。DNF・DNS の語を含むので対戦経過と取り違えないよう飛ばす
                      r'|Forerunners?$)')  # 前走者の見出し。ページの頭に来ると前の選手の名前の折り返しと取り違える（ユニバーシアード 2017）
 STATUS_WORDS = ('DNF', 'DNS', 'DSQ', 'DQ')
+# 状態の語だけの行は段の見出し（W杯 2023-24 Almaty の「DNS」）。前の選手の対戦経過が結果（「Rk 2」「DNF」）で終わっていないときは経過の折り返し
+RE_PROG_DONE = re.compile(r'(?:Rk\s?\d|DNF|DNS|DSQ|DQ)$')
+STATUS_HEADINGS = {'DNF': 'Did Not Finish', 'DNS': 'Did Not Start', 'DSQ': 'Disqualified', 'DQ': 'Disqualified'}
+# 対戦経過の前に付いた名前の折り返し（「Oliver」）。後ろに前の行の「…Rk」の続きの数字が付くことがある（「Maia 2」）
+RE_NAME_HEAD = re.compile(r"((?!Rk\b)[A-Za-zÀ-ÿ'\-\. ]+?)(?:\s+(\d))?")
 # 「…,Rk1」の直後に空白なしで次の対戦の印（16F-10: / R64-3: / QF-2: / BigF: …）が続く所
 RE_PROG_GLUED = re.compile(r'(Rk\s?[12])(?=(?:R\d+|\d+F|EF|QF|SF|SmF|BigF|SmallF|Big F|Small F|F)-?\d*:)')
 
@@ -57,6 +63,11 @@ def stage_name(s):
     if m:
         return f'1/{m.group(1)} Final'
     return s.strip()
+
+
+def add_name_part(cur, part):
+    """名前の折り返しを足す。「Louis-」の次は空白を入れない"""
+    cur['name'] += part if cur['name'].endswith('-') else ' ' + part
 
 
 def parse_pdf(path):
@@ -91,6 +102,9 @@ def parse_pdf(path):
                     continue
                 if RE_SKIP.match(line) or 'Report Created' in line:
                     continue
+                if line in STATUS_HEADINGS and (cur is None or RE_PROG_DONE.search(cur['progression'])):
+                    stage = STATUS_HEADINGS[line]
+                    continue
                 if RE_STAGE.match(line):
                     stage = stage_name(line)
                     continue
@@ -116,20 +130,21 @@ def parse_pdf(path):
                 if RE_PROG_TAIL.match(mt.group(2)):
                     # 対戦経過の途中の折り返し。頭に名前の折り返しが付くことがある（「Cooper 16.00, Rk 2」）
                     if mt.group(1).strip():
-                        cur['name'] += ' ' + mt.group(1).strip()
+                        add_name_part(cur, mt.group(1).strip())
                     cur['progression'] = (cur['progression'] + ' ' + mt.group(2)).strip()
                     continue
                 if RE_PROG.search(line) or any(w in line.split() for w in STATUS_WORDS):
                     # 対戦経過の折り返し。頭に名前の折り返しが付くことがある（「Oliver」「Christophe」）
                     mp = RE_PROG.search(line)
                     head = line[:mp.start()].strip() if mp else ''
-                    if head and re.fullmatch(r"[A-Za-zÀ-ÿ'\-\. ]+", head):
-                        cur['name'] += ' ' + head
-                        line = line[mp.start():]
+                    mh = RE_NAME_HEAD.fullmatch(head) if head else None
+                    if mh:
+                        add_name_part(cur, mh.group(1))
+                        line = (mh.group(2) + ' ' if mh.group(2) else '') + line[mp.start():]
                     cur['progression'] = (cur['progression'] + ' ' + line).strip()
                     continue
                 if re.fullmatch(r"[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ'\-\. ]*", line):
-                    cur['name'] = (cur['name'] + ' ' + line) if not cur['name'].endswith('-') else cur['name'] + line
+                    add_name_part(cur, line)
                     continue
                 problems.append((pno, line))
     for a in athletes:
@@ -138,10 +153,17 @@ def parse_pdf(path):
     return meta, athletes, problems
 
 
+def pdf_abspath(rel):
+    """registry の PDF の場所。W杯系は moguls-results と同じフォルダ（'moguls-results/…'）に置いてある"""
+    if rel.startswith('moguls-results/'):
+        return os.path.join(config.MOGULS_PDF_ROOT, rel[len('moguls-results/'):])
+    return os.path.join(config.PDF_ROOT, rel)
+
+
 def load_event(ev, imported_at, log=print):
     ctxs = []
     for pdf in ev['pdfs']:
-        path = os.path.join(config.PDF_ROOT, pdf['path'])
+        path = pdf_abspath(pdf['path'])
         try:
             meta, athletes, problems = parse_pdf(path)
         except Exception as e:  # noqa

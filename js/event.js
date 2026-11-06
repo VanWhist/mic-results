@@ -520,8 +520,10 @@ function renderTable(r, runs) {
   } else if (tier === 'score') {
     heads.push(th('タイム', 'num'), th('タイム点', 'num'), th('エア', 'num'), th('ターン', 'num'), th('スコア', 'num'));
   }
-  const hasProg = runs.some((x) => x.components && x.components.progression);  // デュアルモーグル: 最終段と対戦経過
-  if (hasProg) heads.push(th('最終段'), th('対戦経過'));
+  const hasStage = runs.some((x) => showsStage(x.components));  // デュアルモーグル: 最終段
+  const hasProg = runs.some((x) => x.components && x.components.progression);  // 対戦経過（FIS の結果ページから取り込んだレースには無い）
+  if (hasStage) heads.push(th('最終段'));
+  if (hasProg) heads.push(th('対戦経過'));
   const hasWeb = runs.some((x) => x.components && x.components.web_result);  // FIS 公式サイトの結果ページから取り込んだ得点（参考）
   if (hasWeb) heads.push(th('得点（参考）', 'num'));
   const tbody = el('tbody');
@@ -541,18 +543,23 @@ function renderTable(r, runs) {
     } else if (tier === 'score') {
       tds.push(cell(run.seconds), cell(run.time_points), cell(run.air_total), cell(run.turns_total), cell(run.run_score));
     }
-    if (hasProg) {
-      const c = run.components || {};
-      tds.push(el('td', { text: c.stage || '' }), el('td', { class: 'prog', text: c.progression || '' }));
-    }
+    const c = run.components || {};
+    if (hasStage) tds.push(el('td', { text: c.stage || '' }));
+    if (hasProg) tds.push(el('td', { class: 'prog', text: c.progression || '' }));
     if (hasWeb) tds.push(el('td', { class: 'num', text: (run.components && run.components.web_result) || '' }));
     tbody.append(el('tr', {}, tds));
   }
   const table = el('table', {}, [el('thead', {}, el('tr', {}, heads)), tbody]);
   const legend = tier === 'detail' ? el('p', { class: 'meta', text:
     'B＝ベース点、D＝減点（マイナス）。' + (nT >= 5 ? '薄い字は最高・最低として除外された点。' : '3人制は除外なしで合計。') + 'ターンの下限は 0.3。' })
-    : (isWeb(runs) ? webNote() : null);
+    : (isWeb(runs) ? webNote(runs) : null);
   return el('div', {}, [el('div', { class: 'table-wrap' }, table), legend]);
+}
+
+// 最終段を出す記録: 対戦経過があるもの（FIS の最終成績 PDF）と、FIS の結果ページから入れたデュアルモーグル。
+// 古い SAJ の DM は段の表記がそろっていないので出さない
+function showsStage(c) {
+  return !!c && !!(c.progression || (c.source === 'fis_web' && c.stage));
 }
 
 // FIS 公式サイトの結果ページから取り込んだラウンド（結果の PDF が無いレース。順位のみの段階）
@@ -560,7 +567,10 @@ function isWeb(runs) {
   return runs.some((x) => x.components && x.components.source === 'fis_web');
 }
 
-function webNote() {
+function webNote(runs) {
+  if (runs.some((x) => x.discipline === 'DM')) {  // Result は載せない
+    return el('p', { class: 'meta', text: 'FIS サイトに結果の PDF が無いレースのため、FIS 公式サイトの結果ページの最終順位と最終段を載せています。対戦経過と対戦ごとの得点はありません。' });
+  }
   return el('p', { class: 'meta', text: 'FIS サイトに結果の PDF が無いレースのため、FIS 公式サイトの結果ページの最終順位を載せています。'
     + '得点は同じページの値（参考）で、審判の点からの検算はしていません。決勝に進んだ選手は決勝の得点、それ以外は予選の得点です。' });
 }
@@ -575,7 +585,7 @@ function renderCards(r, runs) {
     ]);
     const sub = [run.affiliation, run.club].filter(Boolean).join(' ');
     const parts = [];
-    if (run.components && run.components.progression) parts.push((run.components.stage ? run.components.stage + '　' : '') + run.components.progression);
+    if (showsStage(run.components)) parts.push([run.components.stage, run.components.progression].filter(Boolean).join('　'));
     if (run.components && run.components.web_result) parts.push('得点（参考）' + run.components.web_result);
     if (r.tier !== 'rank' && run.status === 'OK') {
       parts.push('タイム ' + num(run.seconds) + '秒（' + num(run.time_points) + '）');
@@ -584,7 +594,7 @@ function renderCards(r, runs) {
     }
     box.append(el('div', { class: 'rec' }, [head, el('div', { class: 'rec-sub', text: sub }), el('div', { class: 'rec-meta', text: parts.join('　') })]));
   }
-  return isWeb(runs) ? el('div', {}, [box, webNote()]) : box;
+  return isWeb(runs) ? el('div', {}, [box, webNote(runs)]) : box;
 }
 
 async function main() {

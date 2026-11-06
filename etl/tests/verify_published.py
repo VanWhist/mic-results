@@ -532,12 +532,43 @@ def check_pdf_round(rnd_runs, fis_style, block_of=None, ascii_carry=False, bd_to
     return issues
 
 
+def dm_stage_key(s):
+    """段の見出しの比べ方（空白と複数形を落とし、状態の語・印字の綴り誤りをそろえる）"""
+    k = re.sub(r'\s+', '', s or '').lower()
+    k = {'dns': 'didnotstart', 'dnf': 'didnotfinish', 'dsq': 'disqualified', 'dq': 'disqualified'}.get(k, k)
+    return re.sub(r'finals$', 'final', k).replace('quareter', 'quarter')
+
+
+RE_DM_HEADING = re.compile(r'(?:big|small|semi|quarter|eight)final|1/\d+final|roundof\d+|groupphase|notranked|qualification(?:heatround)?'
+                           r'|didnotstart|didnotfinish|disqualified')
+
+
+def dm_stages_on_pdf(path):
+    """最終成績 PDF の選手の行（FIS コード）→ その上にある直近の段の見出し。アダプタとは別に pdfium の行から読む"""
+    out, stage, prev = {}, None, ''
+    for pg in range(1, len(pdfium.PdfDocument(path)) + 1):
+        for _, toks in page_lines(path, pg):
+            line = ' '.join(t for _, t in toks)
+            key = dm_stage_key(line)
+            # 状態の語だけの行は、前の行が結果で終わっていないときは対戦経過の折り返し
+            if RE_DM_HEADING.fullmatch(key) and not (line.strip() in ('DNF', 'DNS', 'DSQ', 'DQ') and not re.search(r'(Rk\s?\d|DNF|DNS|DSQ|DQ)$', prev)):
+                stage = key
+            # 同じ選手が 2 回出るときは後ろの行（最終成績の前に予選の得点表がある様式。2017 札幌アジア大会）
+            for m in re.finditer(r'\d{7}', line):
+                out[m.group()] = stage
+            if re.search(r'\d|:', line):  # 名前の折り返しの行は見ない
+                prev = line.strip()
+    return out
+
+
 def check_rank_only_fis(rnd_runs):
     """FIS 海外大会のデュアルモーグル（fis_dm_pdf、順位のみ）: FIS コードで選手の行を探し、その行に順位・氏名・国・生年が
     印字されているかを見る。順位は「2.」のように点が付いたり、切れた Bib とくっついたり（「10.11…」）する。
     名は次の行に折り返すことがある（'GORLACHEV KAZ 1997 …' の次の行に 'Konstantin'。'Jean-Christophe' はハイフンの位置で
-    折り返し、ハイフンは U+FFFE で印字）ので、氏名を空白・ハイフンで分けた語が、選手の行と次の行に順に並んでいるかを見る"""
+    折り返し、ハイフンは U+FFFE で印字）ので、氏名を空白・ハイフンで分けた語が、選手の行と次の行に順に並んでいるかを見る。
+    最終段（画面に出す）も、選手の行の上の段の見出しと一致するかを見る"""
     issues = []
+    stages_by_pdf = {}
     for r in rnd_runs:
         path, pg = pdf_path(r['provenance']), r['provenance'].get('page') or 1
         if not os.path.exists(path):
@@ -584,12 +615,19 @@ def check_rank_only_fis(rnd_runs):
             issues.append((r, 'noc_not_on_line', f"noc={r['noc']} / {line[:60]}"))
         if r.get('yb') is not None and not any(t == str(r['yb']) for t in toks):
             issues.append((r, 'yb_not_on_line', f"yb={r['yb']} / {line[:60]}"))
+        # 最終段: 選手の行の上にある直近の段の見出し
+        if path not in stages_by_pdf:
+            stages_by_pdf[path] = dm_stages_on_pdf(path)
+        want_stage = stages_by_pdf[path].get(str(r['fis_code']))
+        got_stage = (r.get('components') or {}).get('stage')
+        if dm_stage_key(want_stage) != dm_stage_key(got_stage):
+            issues.append((r, 'stage_diff', f'公開 {got_stage} / PDF {want_stage}'))
     return issues
 
 
 def check_web_round(rnd_runs):
     """FIS 公式サイトの結果ページから取り込んだラウンド（fis_web、順位のみ。元データは保存したページの表の JSON）:
-    アダプタとは別に、表頭の語で欄を引き、FIS コードで行を探して、順位・Bib・氏名・国・生年・状態・得点（参考）が
+    アダプタとは別に、表頭の語で欄を引き、FIS コードで行を探して、順位・Bib・氏名・国・生年・状態・得点（参考）・最終段（DM）が
     公開データと一致するか、ページの行がちょうど 1 回ずつ公開されているかを見る"""
     issues = []
     path = pdf_path(rnd_runs[0]['provenance'])
@@ -599,10 +637,12 @@ def check_web_round(rnd_runs):
         page = json.load(fh)
     heads = [c for c in page['cols'] if not c.lower().startswith(('did not', 'disqualif'))]
     rows = {}
-    for row in page['rows']:
+    stages = {}
+    for i, row in enumerate(page['rows']):
         cell = dict(zip(heads, row[1:]))
         st = {'did not start': 'DNS', 'did not finish': 'DNF', 'disqualified': 'DSQ'}.get(row[0].lower(), 'OK' if not row[0] else row[0])
         rows[cell.get('FIS code')] = (st, cell)
+        stages[cell.get('FIS code')] = (page.get('stages') or [None] * (i + 1))[i]
     seen = set()
     for r in rnd_runs:
         hit = rows.get(r['fis_code'])
@@ -617,8 +657,11 @@ def check_web_round(rnd_runs):
             if r.get(k) != v:
                 issues.append((r, 'web_diff', f'{k}: 公開 {r.get(k)} / ページ {v}'))
         got = (r.get('components') or {}).get('web_result')
-        if (got or None) != (c.get('Result') or None):
+        # デュアルモーグルの Result（段によって対戦の合計・予選の得点）は参考の得点としても載せない
+        if r['discipline'] != 'DM' and (got or None) != (c.get('Result') or None):
             issues.append((r, 'web_diff', f"得点（参考）: 公開 {got} / ページ {c.get('Result')}"))
+        if r['discipline'] == 'DM' and (r.get('components') or {}).get('stage') != stages[r['fis_code']]:
+            issues.append((r, 'web_diff', f"最終段: 公開 {(r.get('components') or {}).get('stage')} / ページ {stages[r['fis_code']]}"))
     for code in set(rows) - seen:
         issues.append((rnd_runs[0], 'web_row_unpublished', f"{os.path.basename(path)} の {code} {rows[code][1].get('Athlete')} が公開データに無い"))
     return issues

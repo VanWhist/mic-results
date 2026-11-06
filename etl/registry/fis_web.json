@@ -1,6 +1,6 @@
 {
- "_comment": "gen_registry.py（etl/adapters/fis_web）が FIS_WEB/raw と inventory/fis_overseas_survey.jsonl から生成。notes・tier・name_ja・skip・format は手で編集してよい（再生成しても保持される）",
- "generated_at": "2026-10-08T08:46:00",
+ "_comment": "gen_registry.py（etl/adapters/fis_web）が FIS_WEB/raw と inventory/fis_overseas_survey.jsonl から生成。notes・tier・name_ja・skip・format・meet_event は手で編集してよい（再生成しても保持される）",
+ "generated_at": "2026-11-07T04:17:56",
  "events": [
   {
    "event_id": "2016-17-fis-apexmountain-8189",
@@ -498,6 +498,66 @@
     "advance": {}
    },
    "notes": "FIS サイトに結果の PDF が無いレース。FIS 公式サイトの結果ページ（順位・FIS コード・氏名・国・生年・得点・FIS ポイント）から取り込み、順位のみの段階で載せる。得点は参考（審判の点からの検算はしていない）（城さんの判断 ①、2026-10-08）"
+  },
+  {
+   "event_id": "2022-23-wc-almaty-8217",
+   "season": "2022-23",
+   "series": "WC",
+   "grade": null,
+   "discipline": "DM",
+   "name_ja": null,
+   "place": "Almaty",
+   "fis_event_id": "51347",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=51347&seasoncode=2023",
+   "tier": "rank",
+   "adapter": "fis_web",
+   "pages": [
+    {
+     "path": "FIS_WEB/raw/15260.json",
+     "sha256": "6dfbcb04c8bf749b22361b8543d6d7f556dae967a492cb626cc1323a6ddb6aae",
+     "raceid": "15260",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15260",
+     "gender": "M",
+     "codex": "8217",
+     "date": "2023-03-18",
+     "page_check": "088-134-211-021-045-096-122-195",
+     "survey": {
+      "n": 25,
+      "jpn": [
+       "4 3 2529645 HORISHIMA Ikuma",
+       "9 15 2528069 SUGIMOTO Kosuke",
+       "17 14 2530684 MURATA Yutaro",
+       "23 16 2529670 FUJIKI Goshin"
+      ],
+      "checked_at": "2026-11-07"
+     }
+    },
+    {
+     "path": "FIS_WEB/raw/15259.json",
+     "sha256": "0f586b23e4eef1865fdd7b31f0d5bd027a5a0fbc7f27b919057e09f08856eb3c",
+     "raceid": "15259",
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=15259",
+     "gender": "W",
+     "codex": "8218",
+     "date": "2023-03-18",
+     "page_check": "138-146-219-143-195-248-122-015",
+     "survey": {
+      "n": 18,
+      "jpn": [
+       "7 9 2533769 KAJIWARA Yuki",
+       "8 4 2532040 YANAGIMOTO Rino",
+       "9 6 2532031 TOMITAKA Hinako"
+      ],
+      "checked_at": "2026-11-07"
+     }
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {}
+   },
+   "notes": "W杯 Almaty 2022-23 のデュアルモーグル。FIS サイトの添付は対戦表（Results Bracket - Final）と予選の結果だけで最終成績の PDF が無いので、結果ページから順位のみで取り込む（城さんの判断 ①、2026-11-07）。Result は段によって対戦の合計・予選の得点が混ざるので載せない",
+   "meet_event": "2022-23-almaty-8215"
   },
   {
    "event_id": "2023-24-fis-idrefjall-8414",
