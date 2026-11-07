@@ -6557,7 +6557,7 @@
    "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62912&seasoncode=2027",
    "tier": "detail",
    "adapter": "fis_pdf",
-   "rules": "2026-27",
+   "rules": "2025-26",
    "pdfs": [
     {
      "path": "ANC/2026-27/FIS2027_ANC_Perisher_8292_M_MO_RLF.pdf",
@@ -6599,7 +6599,7 @@
    "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=62912&seasoncode=2027",
    "tier": "detail",
    "adapter": "fis_pdf",
-   "rules": "2026-27",
+   "rules": "2025-26",
    "pdfs": [
     {
      "path": "ANC/2026-27/FIS2027_ANC_Perisher_8294_M_MO_RLF.pdf",

@@ -8,7 +8,7 @@ contexts in the shared shape (see normalize.py). Verification and publication ar
 """
 import argparse, collections, datetime, glob, hashlib, importlib, json, os, pickle, re, sys, unicodedata, zlib
 
-from . import config, normalize, verify, layer5_saj
+from . import config, dd_rule, normalize, verify, layer5_saj
 from .adapters.saj_aj.parse_sajmo_old import PREFS
 
 BUILD_VERSION = '2026-09-25-1'
@@ -217,6 +217,12 @@ def main(argv=None):
             findings += c.get('findings', [])
             if rnd['tier'] == 'detail':
                 findings += verify.layer2(rnd['round_id'], runs, None, rnd['gender'], dd_seen)
+                # 新しい DD 表のラウンドは、印字の DD を表と低いほうの DD の規則で照らす（警告。計算は印字の DD を使う）
+                dd_name = c['rules'].get('dd_table')
+                if dd_name in dd_rule.LOWER_DD_TABLES:
+                    table = load_json(os.path.join(config.RULES_DIR, dd_name + '.json'), {}).get(rnd['gender'], {})
+                    findings += [verify.Finding('warning', rnd['round_id'], 'layer2', m)
+                                 for run in runs if run['status'] == 'OK' for m in dd_rule.dd_messages(run, table)]
             if rnd['tier'] in ('detail', 'score'):
                 findings += apply_rank_exceptions(verify.layer3_rank(rnd['round_id'], runs, c['rules']), rnd['round_id'], ev)
             rounds_ctx.append(ctx)

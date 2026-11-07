@@ -1,0 +1,23 @@
+{
+  "_comment": "FIS Mogul Basic Degree of Difficulty and Common Combinations, version 2026 (print date 14.10.2026, published on fis-ski.com SBFSFK Documents 2026-10-14). Codes as printed on FIS result PDFs. Adds basic grab 'g' (+0.05); advanced grab 'G' is +0.12 (was +0.14). Composite codes (e.g. 'TST', 'bpp') are not enumerated; the DD printed on the PDF is trusted and checked for within-season consistency.",
+  "version": "dd_2026-10",
+  "M": {
+    "S": 0.38, "T": 0.38, "D": 0.41, "X": 0.41, "Y": 0.41, "M": 0.41, "K": 0.41, "Z": 0.40, "3": 0.68, "3p": 0.71, "3g": 0.73, "3G": 0.80, "7": 0.85,
+    "7p": 0.88, "7g": 0.92, "7G": 0.99, "10": 1.02, "10p": 1.05, "10g": 1.11, "10G": 1.18, "3op": 0.71, "3og": 0.73, "3oG": 0.80, "7op": 0.88, "7og": 0.92, "7oG": 0.99,
+    "10op": 1.05, "10og": 1.11, "10oG": 1.18, "14o": 1.19, "14op": 1.22, "14og": 1.30, "14oG": 1.37, "bP": 0.68, "bT": 0.68, "bL": 0.71, "bp": 0.71, "bg": 0.73, "bG": 0.80,
+    "bF": 0.90, "bdF": 1.09, "btF": 1.28, "fT": 0.68, "fP": 0.68, "fp": 0.71, "fg": 0.73, "fG": 0.80, "fF": 0.90, "fdF": 1.09, "ftF": 1.28, "l": 0.68, "lp": 0.71,
+    "lg": 0.73, "lG": 0.80, "lF": 0.85, "lpF": 0.88, "lgF": 0.92, "lGF": 0.99
+  },
+  "W": {
+    "S": 0.48, "T": 0.48, "D": 0.51, "X": 0.51, "Y": 0.51, "M": 0.51, "K": 0.51, "Z": 0.50, "3": 0.78, "3p": 0.81, "3g": 0.83, "3G": 0.90, "7": 0.95,
+    "7p": 0.98, "7g": 1.02, "7G": 1.09, "10": 1.12, "10p": 1.15, "10g": 1.21, "10G": 1.28, "3op": 0.81, "3og": 0.83, "3oG": 0.90, "7op": 0.98, "7og": 1.02, "7oG": 1.09,
+    "10op": 1.15, "10og": 1.21, "10oG": 1.28, "14o": 1.29, "14op": 1.32, "14og": 1.40, "14oG": 1.47, "bP": 0.78, "bT": 0.78, "bL": 0.81, "bp": 0.81, "bg": 0.83, "bG": 0.90,
+    "bF": 1.00, "bdF": 1.19, "btF": 1.38, "fT": 0.78, "fP": 0.78, "fp": 0.81, "fg": 0.83, "fG": 0.90, "fF": 1.00, "fdF": 1.19, "ftF": 1.38, "l": 0.78, "lp": 0.81,
+    "lg": 0.83, "lG": 0.90, "lF": 0.95, "lpF": 0.98, "lgF": 1.02, "lGF": 1.09
+  },
+  "notes": [
+    "Straight jumps: Single/Double/Triple/Quad/Quint base 0.40/0.53/0.65/0.76/0.86 (M) and +0.10 (W); upright modifiers T -0.02, S -0.02, D/X/Y/M/K +0.01, Z 0.00 — printed codes like 'TST' are sums that this table does not enumerate.",
+    "Jump multipliers: position p +0.03, layout L +0.03, basic grab g +0.05, advanced grab G +0.12, grab rotation multiplier +0.02 per additional full rotation (e.g. 10g = 1.02 + 0.05 + 0.02x2 = 1.11). Women = men + 0.10 for every jump.",
+    "Off-axis jumps are listed only with a position or grab modifier, plus 14o (1.19)."
+  ]
+}
