@@ -43,6 +43,18 @@ async function fileOf(key) {
 }
 
 export const events = async () => load(await fileOf('events'));
+// 一覧用の軽い大会データ（出典・進行・ラウンドの審判などを除いたもの）。トップ・選手ページ・大会ページの最初の読み込みに使う。
+// events（約 5MB）はどのページも全部読んでいた。古い manifest（events_index が無い）では events を読む
+export async function eventsIndex() {
+  const m = await manifest();
+  return load((m.files && m.files.events_index) || await fileOf('events'));
+}
+// その大会のシーズンの大会データ（events と同じ中身をシーズンごとに分けたもの）。大会ページが使う
+export async function eventsOfSeason(season) {
+  const m = await manifest();
+  const f = m.files && m.files.events_season && m.files.events_season[season];
+  return load(f || await fileOf('events'));
+}
 export const athletes = async () => load(await fileOf('athletes'));
 export const lines = async () => load(await fileOf('lines'));
 export const rules = async () => load(await fileOf('rules'));

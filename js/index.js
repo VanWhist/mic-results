@@ -9,7 +9,22 @@ let events = [];
 let athletes = [];
 let manifest = null;
 
-const state = { q: '', season: '', group: '', series: '', gender: '', discipline: '' };
+const PAGE_SIZE = 30;   // 一覧に最初に出すカードの数（「さらに表示」で足す。全部で約 390 枚あり、スマホでは非常に長かった）
+const FILTER_KEYS = ['q', 'season', 'group', 'series', 'gender', 'discipline'];
+const state = { q: '', season: '', group: '', series: '', gender: '', discipline: '', shown: PAGE_SIZE };
+
+// 絞り込み・表示枚数・スクロール位置を、同じタブの中で覚える（大会を開いて戻ると初期状態に戻っていた）。
+// sessionStorage が使えない環境では覚えないだけで、表示はできる
+const STORE_KEY = 'mic-results.top';
+function saveState() {
+  try {
+    const filters = document.getElementById('filters');
+    sessionStorage.setItem(STORE_KEY, JSON.stringify({ ...state, scrollY: window.scrollY, filtersOpen: !!filters && !filters.hidden }));
+  } catch (e) { /* 覚えられなくても表示は続ける */ }
+}
+function loadState() {
+  try { return JSON.parse(sessionStorage.getItem(STORE_KEY) || 'null'); } catch (e) { return null; }
+}
 
 function eventMatches(ev, q) {
   const s = q.toLowerCase().replace(/\s+/g, '');
@@ -100,20 +115,40 @@ function renderQuick() {
 
 function setFilter(key, value) {
   state[key] = value;
+  state.shown = PAGE_SIZE;
   document.getElementById({ season: 'f-season', group: 'f-group' }[key]).value = value;
   renderQuick(); renderList(); updateReset();
 }
 
 function renderList() {
   const box = clear(document.getElementById('recent'));
+  const moreBox = document.getElementById('recent-more');
+  if (moreBox) clear(moreBox);
   const list = filteredEvents();
-  document.getElementById('recent-title').textContent = state.q || state.season || state.group || state.series || state.gender
+  document.getElementById('recent-title').textContent = FILTER_KEYS.some((k) => state[k])
     ? '大会（' + list.length + ' 件）' : '最近の大会';
   if (!list.length) {
     box.append(el('p', { class: 'meta', text: '該当する大会がありません。' }));
+    saveState();
     return;
   }
-  box.append(...listItems(list));
+  const items = listItems(list);
+  box.append(...items.slice(0, state.shown));
+  // 残りはカードの枚数（同じ大会のモーグル・デュアルモーグルは 1 枚にまとめるので、見出しの大会の件数より少ない）
+  const rest = items.length - state.shown;
+  if (rest > 0 && moreBox) {
+    moreBox.append(el('button', { class: 'chip more-btn', type: 'button', text: 'さらに表示（あと ' + rest + ' 枚）',
+      onclick: () => {
+        const from = state.shown;
+        state.shown += PAGE_SIZE;
+        renderList();
+        // 作り直した一覧の、足した最初のカードへフォーカスを移す（キーボード・読み上げで先頭からやり直しにならないように）
+        const first = document.getElementById('recent').children[from];
+        const link = first && (first.matches('a') ? first : first.querySelector('a'));
+        if (link) link.focus({ preventScroll: true });
+      } }));
+  }
+  saveState();
 }
 
 function renderSuggest(q) {
@@ -151,7 +186,7 @@ async function main() {
   mountNav('index.html');
   try {
     manifest = await data.manifest();
-    [events, athletes] = await Promise.all([data.events(), data.athletes()]);
+    [events, athletes] = await Promise.all([data.eventsIndex(), data.athletes()]);
   } catch (e) {
     document.getElementById('note-slot').append(errorBox(e.message));
     return;
@@ -163,11 +198,11 @@ async function main() {
   fillSelect('f-discipline', [...new Set(events.map((e) => e.discipline))].sort(), (d) => (d === 'DM' ? 'デュアル' : 'モーグル'), 'すべて');
 
   const q = document.getElementById('q');
-  q.addEventListener('input', () => { state.q = q.value.trim(); renderSuggest(state.q); renderList(); updateReset(); });
-  q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; state.q = ''; renderSuggest(''); renderList(); } });
+  q.addEventListener('input', () => { state.q = q.value.trim(); state.shown = PAGE_SIZE; renderSuggest(state.q); renderList(); updateReset(); });
+  q.addEventListener('keydown', (e) => { if (e.key === 'Escape') { q.value = ''; state.q = ''; state.shown = PAGE_SIZE; renderSuggest(''); renderList(); updateReset(); } });
   document.addEventListener('click', (e) => { if (!e.target.closest('.hero-search') && !e.target.closest('#suggest')) document.getElementById('suggest').hidden = true; });
   for (const [id, key] of [['f-season', 'season'], ['f-group', 'group'], ['f-series', 'series'], ['f-gender', 'gender'], ['f-discipline', 'discipline']]) {
-    document.getElementById(id).addEventListener('change', (e) => { state[key] = e.target.value; renderQuick(); renderList(); updateReset(); });
+    document.getElementById(id).addEventListener('change', (e) => { state[key] = e.target.value; state.shown = PAGE_SIZE; renderQuick(); renderList(); updateReset(); });
   }
   const filters = document.getElementById('filters');
   const toggle = document.getElementById('toggle-filters');
@@ -177,15 +212,43 @@ async function main() {
     toggle.textContent = filters.hidden ? '詳しく絞り込む ▼' : '絞り込みを閉じる ▲';
   });
   document.getElementById('reset').addEventListener('click', () => {
-    Object.assign(state, { q: '', season: '', group: '', series: '', gender: '', discipline: '' });
+    Object.assign(state, { q: '', season: '', group: '', series: '', gender: '', discipline: '', shown: PAGE_SIZE });
     q.value = '';
     for (const id of ['f-season', 'f-group', 'f-series', 'f-gender', 'f-discipline']) document.getElementById(id).value = '';
     renderSuggest(''); renderQuick(); renderList(); updateReset();
   });
   document.getElementById('note-slot').append(el('p', { class: 'meta', text:
     'データ版 ' + manifest.dataVersion + '　大会 ' + manifest.counts.events + ' 件 / ラウンド ' + manifest.counts.rounds + ' 件 / 記録 ' + manifest.counts.runs + ' 本 / 選手 ' + manifest.counts.athletes + ' 名' }));
+  // 戻ってきたときだけ、前に見ていた絞り込み・検索語・表示枚数・位置を戻す（同じタブの中だけ）。
+  // 「戻ってきた」＝ブラウザの「戻る／進む」か、大会ページの「← 大会一覧に戻る」（index.html#back）。
+  // ヘッダーの「リザルト」やほかのページからのリンクでは最初の状態で開く（検索語が残って一覧が 0 件になるのを避ける）
+  const nav = performance.getEntriesByType ? performance.getEntriesByType('navigation')[0] : null;
+  const cameBack = (nav && nav.type === 'back_forward') || location.hash === '#back';
+  if (location.hash === '#back') history.replaceState(null, '', location.pathname + location.search);
+  const saved = cameBack ? loadState() : null;
+  if (saved) {
+    for (const [id, key] of [['f-season', 'season'], ['f-group', 'group'], ['f-series', 'series'], ['f-gender', 'gender'], ['f-discipline', 'discipline']]) {
+      const sel = document.getElementById(id);
+      sel.value = typeof saved[key] === 'string' ? saved[key] : '';
+      if (sel.selectedIndex < 0) sel.value = '';   // 選べなくなった値（無くなったシーズンなど）は「すべて」に戻す
+      state[key] = sel.value;
+    }
+    state.q = typeof saved.q === 'string' ? saved.q : '';
+    q.value = state.q;
+    state.shown = Math.max(PAGE_SIZE, Math.floor(Number(saved.shown)) || 0);
+    if (saved.filtersOpen || state.series || state.gender || state.discipline) toggle.click();
+  }
   renderQuick();
   renderList();
+  updateReset();
+  if (saved && saved.scrollY > 0) {
+    window.scrollTo(0, saved.scrollY);
+    saveState();   // renderList の中の保存は位置が 0 のままなので、戻した位置で保存し直す
+  }
+  // 位置は、ページを離れるときと、スクロールが止まったときに保存する（スマホではタブが破棄されて pagehide が出ないことがある）
+  window.addEventListener('pagehide', saveState);
+  let scrollTimer = null;
+  window.addEventListener('scroll', () => { clearTimeout(scrollTimer); scrollTimer = setTimeout(saveState, 250); }, { passive: true });
 }
 
 function updateReset() {

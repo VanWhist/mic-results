@@ -715,6 +715,14 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     files['lines'] = emit('lines', lines)
     files['judges'] = emit('judges', judges_list)
     files['rules'] = emit('rules', rules_out)
+    # 一覧用の軽い大会データ（events_index）と、シーズンごとの大会データ（events_season。events と同じ中身を分けたもの）。
+    # events は 5MB あり、どのページも全部読んでいた。トップ・選手ページは events_index だけ、大会ページは events_index と
+    # その大会のシーズンの events_season を読む。events（全体）は「データについて」と検算の道具が使う
+    files['events_index'] = emit('events_index', [events_index_entry(e) for e in events_list])
+    events_by_season = collections.defaultdict(list)
+    for e in events_list:
+        events_by_season[e['season']].append(e)
+    files['events_season'] = {season: emit(f'events.{season}', es) for season, es in sorted(events_by_season.items())}
     files['runs'] = {season: emit(f'runs.{season}', rs) for season, rs in sorted(runs_by_season.items())}
     files['athlete_runs'] = {str(k): emit(f'athlete_runs.{k:02d}', obj) for k, obj in sorted(shard_objs.items())}
 
@@ -735,6 +743,17 @@ def write_data(publish_ctx, events_by_id, aliases, master, roster, imported_at, 
     }
     dump_json(os.path.join(config.DATA_DIR, 'manifest.json'), manifest)
     print(f"data/ を書き出しました: events {len(events_list)} / rounds {len(publish_ctx)} / runs {len(all_runs)} / athletes {len(athletes)} / dataVersion {manifest['dataVersion']}")
+
+
+# 一覧用の軽い大会データに入れない大会の欄（出典・進行）と、ラウンドの欄のうち一覧・年表・ラウンドの切り替えに要るもの
+EVENT_INDEX_DROP = ('sources', 'format', 'rounds')
+ROUND_INDEX_KEYS = ('round_id', 'gender', 'round', 'round_text', 'tier', 'date')
+
+
+def events_index_entry(e):
+    out = {k: v for k, v in e.items() if k not in EVENT_INDEX_DROP}
+    out['rounds'] = [{k: r.get(k) for k in ROUND_INDEX_KEYS} for r in e['rounds']]
+    return out
 
 
 def run_summary(run):

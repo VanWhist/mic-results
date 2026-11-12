@@ -81,6 +81,58 @@ def check_athlete_shards(man, runs):
     return out
 
 
+# 一覧用の軽い大会データのラウンドが持つ欄（js の一覧・年表・ラウンドの切り替えが読むもの）。build.py の定義は見ずに、ここに書く
+INDEX_ROUND_KEYS = ('round_id', 'gender', 'round', 'round_text', 'tier', 'date')
+
+
+def check_event_files(man, events):
+    """一覧用の軽い大会データ（events_index）とシーズンごとの大会データ（events_season）が、events と同じ中身か。
+    events_index は大会の並びが同じで、持っている欄はどれも events の値と同じ。events_season はどの大会もそのシーズンの
+    ファイルに 1 回だけ、同じ中身で入る"""
+    f = man['files']
+    if 'events_index' not in f or 'events_season' not in f:
+        return [('events', 'manifest.json に events_index・events_season が無い')]
+    out = []
+    full = {e['event_id']: e for e in events}
+    index = json.load(open(os.path.join(REPO, 'data', f['events_index']), encoding='utf-8'))
+    if [e['event_id'] for e in index] != [e['event_id'] for e in events]:
+        out.append(('events_index', '大会の並び・集合が events と違う'))
+    for e in index:
+        src = full.get(e['event_id'])
+        if src is None:
+            continue
+        # 大会の欄: 出典（sources）・進行（format）のほかは events と同じ欄・同じ値（欠けても余っても食い違い）
+        want = {k: v for k, v in src.items() if k not in ('sources', 'format', 'rounds')}
+        got = {k: v for k, v in e.items() if k != 'rounds'}
+        for k in sorted(set(want) | set(got)):
+            if k not in got:
+                out.append((e['event_id'], f'events_index に {k} が無い'))
+            elif k not in want:
+                out.append((e['event_id'], f'events_index に events に無い欄 {k} がある'))
+            elif want[k] != got[k]:
+                out.append((e['event_id'], f'events_index の {k} が events と違う'))
+        # ラウンドの欄: 一覧・年表・ラウンドの切り替えが読む 6 欄がちょうどそろい、値が同じ
+        rounds = e.get('rounds')
+        if not isinstance(rounds, list) or len(rounds) != len(src['rounds']):
+            out.append((e['event_id'], 'events_index のラウンドの数が events と違う'))
+            continue
+        for r, s in zip(rounds, src['rounds']):
+            if {k: s.get(k) for k in INDEX_ROUND_KEYS} != r:
+                out.append((e['event_id'], f"events_index のラウンド {s.get('round_id')} が events と違う（欄の欠け・余り・値の違い）"))
+    seen = collections.Counter()
+    for season, fn in f['events_season'].items():
+        for e in json.load(open(os.path.join(REPO, 'data', fn), encoding='utf-8')):
+            seen[e['event_id']] += 1
+            if e.get('season') != season:
+                out.append((e['event_id'], f'シーズン {season} のファイルに入っている'))
+            if full.get(e['event_id']) != e:
+                out.append((e['event_id'], f'events_season（{season}）の中身が events と違う'))
+    for eid in full:
+        if seen[eid] != 1:
+            out.append((eid, f'events_season に {seen[eid]} 回入っている'))
+    return out
+
+
 # ---- A. PDF の行 ---------------------------------------------------------------
 
 _pdf_cache = {}
@@ -921,13 +973,15 @@ def main():
     print('不一致:', dict(kinds), '合計', len(issues))
     shard_issues = [] if args.only else check_athlete_shards(man, runs)
     print('選手ごとのファイル（選手ページ用）:', '一致' if not shard_issues else f'食い違い {len(shard_issues)} 件 {shard_issues[:3]}')
+    event_issues = [] if args.only else check_event_files(man, events)
+    print('大会の軽いファイル（一覧・大会ページ用）:', '一致' if not event_issues else f'食い違い {len(event_issues)} 件 {event_issues[:3]}')
     rows = [{'run_id': r['run_id'], 'round_id': r['round_id'], 'series': r['series'], 'tier': r['tier'], 'round': r['round'],
              'rank': r['rank'], 'name': r['name'], 'kind': k, 'detail': d, 'pdf': r['provenance']['pdf'],
              'page': r['provenance'].get('page')} for r, k, d in issues]
     if args.out:
         with open(args.out, 'w', encoding='utf-8') as fh:
             json.dump({'dataVersion': man['dataVersion'], 'checked': checked, 'kinds': kinds, 'issues': rows,
-                       'shard_issues': shard_issues}, fh, ensure_ascii=False, indent=1)
+                       'shard_issues': shard_issues, 'event_issues': event_issues}, fh, ensure_ascii=False, indent=1)
     return 0
 
 

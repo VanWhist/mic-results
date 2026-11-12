@@ -18,7 +18,8 @@ async function main() {
     '大会 ' + m.counts.events + ' 件 / ラウンド ' + m.counts.rounds + ' 件 / 記録 ' + m.counts.runs + ' 本 / 選手 ' + m.counts.athletes + ' 名',
   ]));
   st.append(el('p', { class: m.verification.allGreen ? 'verify-ok' : 'verify-ng',
-    text: m.verification.allGreen ? '✓ 公開中の全ラウンドが検証を通っています（正解データ ' + m.verification.goldenRuns + ' 本、警告 ' + m.verification.warnings + ' 件）'
+    // 警告の件数（印字どおり載せた例外の注記など、作業用の記録の数）は出さない。読む人には誤りの数に見える
+    text: m.verification.allGreen ? '✓ 公開中の全ラウンドが検証を通っています（PDF を目視して作った正解データ ' + m.verification.goldenRuns + ' 本とも一致）'
       : '⚠ 検証に未確認の層があるラウンドがあります' }));
 
   const tiers = clear(document.getElementById('tiers'));
@@ -32,9 +33,13 @@ async function main() {
     if (!bySeries.has(ev.series)) bySeries.set(ev.series, []);
     bySeries.get(ev.series).push(ev);
   }
-  for (const [s, evs] of [...bySeries.entries()].sort()) {
+  // 国内 → FIS 系 → W杯系の順（記号の ABC 順では並びの意味が分からなかった）
+  const ORDER = ['SAJ_AJ', 'SAJ_AJJR', 'SAJ_A', 'SAJ_B', 'SAJ_KIDS', 'FIS', 'AC', 'ANC', 'NAC', 'EC', 'OPN', 'WJC', 'UVS', 'WC', 'WSC', 'OWG'];
+  const rank = (s) => (ORDER.indexOf(s) < 0 ? ORDER.length : ORDER.indexOf(s));
+  for (const [s, evs] of [...bySeries.entries()].sort((a, b) => rank(a[0]) - rank(b[0]) || a[0].localeCompare(b[0]))) {
     const seasons = [...new Set(evs.map((e) => e.season))].sort();
-    series.append(el('li', {}, [el('strong', { text: seriesLabel(s) }), '：' + evs.length + ' 大会（' + seasons[0] + '〜' + seasons[seasons.length - 1] + '）']));
+    const span = seasons[0] === seasons[seasons.length - 1] ? seasons[0] : seasons[0] + '〜' + seasons[seasons.length - 1];
+    series.append(el('li', {}, [el('strong', { text: seriesLabel(s) }), '：' + evs.length + ' 大会（' + span + '）']));
   }
 
   const layers = clear(document.getElementById('layers'));
@@ -49,10 +54,16 @@ async function main() {
     ruleBox.append(el('li', {}, [el('strong', { text: name + '：' }), desc, r && r.source ? el('span', { class: 'meta', text: '　根拠：' + r.source }) : null]));
   }
 
+  // 古い about.html（折りたたみの見出しが無い）がキャッシュに残っていても、出典の一覧は出す
+  const setText = (id, text) => { const n = document.getElementById(id); if (n) n.textContent = text; };
+  setText('rules-summary', '規則の一覧を見る（' + Object.keys(rules || {}).length + ' 版）');
+  setText('sources-summary', '出典の一覧を見る（' + events.length + ' 大会）');
   const src = clear(document.getElementById('sources'));
   for (const ev of events) {
     src.append(el('li', {}, [
       eventName(ev) + '（' + eventDates(ev) + '）：',
+      // 結果の PDF が無く、FIS 公式サイトの結果ページから載せた大会は出典の PDF が無い
+      (ev.sources || []).length ? null : 'FIS 公式サイトの結果ページ（結果の PDF なし）',
       ...(ev.sources || []).flatMap((s, i) => [i ? '、' : null,
         s.url ? el('a', { href: s.url, target: '_blank', rel: 'noopener', text: s.path }) : s.path,
         s.sha256 ? el('span', { class: 'meta', text: '　SHA-256 ' + s.sha256.slice(0, 12) + '…' }) : null]),

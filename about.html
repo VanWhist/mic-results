@@ -39,7 +39,7 @@
 
   <div class="card">
     <h2>欠場・途中棄権の表し方</h2>
-    <p>DNF＝途中棄権、DNS＝欠場（スタートしていない）、DSQ＝失格。これらの行は順位・点が空欄になります。ターン点の「下限 0.3」は、減点がベース点を上回ったときに規則で決められた最低点です。</p>
+    <p>DNF＝途中棄権、DNS＝欠場（スタートしていない）、DSQ＝失格。これらの行は、公式リザルトに順位・点の印字が無ければ空欄になります。ターン点の「下限 0.3」は、減点がベース点を上回ったときに規則で決められた最低点です。</p>
   </div>
 
   <div class="card">
@@ -52,13 +52,20 @@
   <div class="card">
     <h2>採点の規則（大会ごと）</h2>
     <p>国内大会は大会ごとに、印字された全員の点から規則を確定しています。</p>
-    <ul id="rules"></ul>
+    <details class="about-more">
+      <summary id="rules-summary">規則の一覧を見る</summary>
+      <p class="meta">「根拠」は、規則を確かめたときの作業の記録です。</p>
+      <ul id="rules"></ul>
+    </details>
   </div>
 
   <div class="card">
     <h2>出典</h2>
-    <p>それぞれの大会の公式リザルト PDF。保存時の SHA-256（ファイルの指紋）を記録し、元が差し替わったら分かるようにしています。</p>
-    <ul id="sources"></ul>
+    <p>それぞれの大会の公式リザルト PDF。保存時の SHA-256（ファイルの指紋）を記録し、元が差し替わったら分かるようにしています。結果の PDF が無い一部の海外レースは、FIS 公式サイトの結果ページから順位を載せています。</p>
+    <details class="about-more">
+      <summary id="sources-summary">出典の一覧を見る</summary>
+      <ul id="sources"></ul>
+    </details>
   </div>
 
   <div class="card">

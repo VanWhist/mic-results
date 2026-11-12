@@ -15,7 +15,9 @@ function renderSearch(query) {
   const box = clear(document.getElementById('results'));
   const list = query ? athletes.filter((a) => athleteMatches(a, query)) : athletes.filter((a) => a.mic);
   if (!query) box.append(el('p', { class: 'meta', text: list.length ? 'MIC の選手' : '選手名を入力してください（部分一致）。' }));
-  if (query && !list.length) { box.append(el('p', { class: 'meta', text: '該当する選手がいません。' })); return; }
+  // かな・ローマ字の別名は、その表記で印字された大会に出た選手にしか無い（ローマ字は FIS 様式の大会、かなはごく一部）。
+  // 見つからないときは漢字を案内する
+  if (query && !list.length) { box.append(el('p', { class: 'meta', text: '該当する選手がいません。漢字で試してください（かな・ローマ字では見つからない選手がいます）。' })); return; }
   if (query) box.append(el('p', { class: 'meta', text: list.length + ' 名' }));
   const tbody = el('tbody');
   for (const a of list.slice(0, 200)) {
@@ -57,6 +59,9 @@ function renderProfile(a) {
   box.append(kv);
 }
 
+// 年表に出す場所。会場の印字が無い大会（国内の旧様式など）は大会名を出す（「B級公認大会 2012-13」だけではどの大会か分からない）
+const placeOf = (ev) => ev.venue || ev.name_ja || '';
+
 // 年表・推移は 1 ラウンド 1 本（採用の走り）。allRuns: true なら、2 本の良い方の決勝のもう 1 本（q_block R1・R2 の採用外。
 // 正式な走り）も含める（Q2 報告の Q1 参考は Q1 のラウンドと同じ走りなので含めない）
 function myRuns(a, allRuns = false) {
@@ -84,7 +89,7 @@ function renderHistory(a) {
     tbody.append(el('tr', {}, [
       el('td', { text: run.date || '' }),
       el('td', {}, el('a', { href: eventHref(ctx.event.event_id, run.round_id), text: eventShortName(ctx.event) + (ctx.event.name_ja ? '' : '') })),
-      el('td', { text: ctx.event.venue || '' }),
+      el('td', { class: 'place', text: placeOf(ctx.event), title: placeOf(ctx.event) || null }),
       el('td', { text: genderLabel(run.gender) + ' ' + roundLabel(ctx.round) }),
       el('td', { class: 'num' }, [run.rank ? run.rank + ' / ' + n : '—', ...statusBadge(run)]),
       el('td', { class: 'num', text: run.run_score !== null && run.run_score !== undefined ? num(run.run_score) : '—' }),
@@ -94,7 +99,7 @@ function renderHistory(a) {
     ]));
   }
   box.append(el('div', { class: 'table-wrap' }, el('table', { class: 'timeline' }, [
-    el('thead', {}, el('tr', {}, ['日付', '大会', '会場', 'ラウンド', '順位 / 人数', '得点', 'ターン / エア / タイム点', 'ジャンプ', '記録'].map((t) => el('th', { class: 'no-sort', text: t })))),
+    el('thead', {}, el('tr', {}, ['日付', '大会', '会場・大会名', 'ラウンド', '順位 / 人数', '得点', 'ターン / エア / タイム点', 'ジャンプ', '記録'].map((t) => el('th', { class: 'no-sort', text: t })))),
     tbody,
   ])));
 }
@@ -110,6 +115,7 @@ function historyCard(run, ctx) {
       el('span', { class: 'hc-event', text: eventShortName(ctx.event) }),
       el('span', { class: 'badge tier tier-' + run.tier + ' hc-tier', text: TIER_SHORT[run.tier] || run.tier }),
     ]),
+    placeOf(ctx.event) ? el('div', { class: 'hc-place', text: placeOf(ctx.event) }) : null,
     el('div', { class: 'hc-main' }, [
       el('span', { class: 'hc-round', text: genderLabel(run.gender) + ' ' + roundLabel(ctx.round) }),
       el('span', { class: 'hc-rank' }, [run.rank ? run.rank + '位' : '', el('small', { text: run.rank ? ' / ' + (ctx.roundSize || '') + '人' : '' }), ...statusBadge(run)]),
@@ -184,12 +190,13 @@ function renderJumps(a) {
   const box = clear(document.getElementById('jumps'));
   const list = myRuns(a, true).filter(({ run }) => run.tier === 'detail' && run.status === 'OK' && (run.air || []).length);
   if (!list.length) { box.append(el('p', { class: 'meta', text: 'ジャッジ明細のある記録がまだありません。' })); return; }
+  if (isNarrow()) { box.append(jumpCards(list)); return; }
   const tbody = el('tbody');
   for (const { run, ctx } of list) {
     tbody.append(el('tr', {}, [
       el('td', { text: run.date || '' }),
-      el('td', {}, el('a', { href: eventHref(ctx.event.event_id, run.round_id), text: eventShortName(ctx.event) + ' ' + roundLabel(ctx.round) })),
-      ...[0, 1].flatMap((k) => { const j = run.air[k]; return [el('td', { text: j ? j.jump : '' }), el('td', { class: 'num', text: j ? num(j.dd, 2) : '' }), el('td', { class: 'num', text: j ? num((j.J6 + j.J7) / 2, 2) : '' })]; }),
+      el('td', {}, el('a', { href: eventHref(ctx.event.event_id, run.round_id), text: eventShortName(ctx.event) + ' ' + roundLabel(ctx.round) + slideLabel(run) })),
+      ...[0, 1].flatMap((k) => { const j = run.air[k]; return [el('td', { text: j ? j.jump : '' }), el('td', { class: 'num', text: j ? num(j.dd, 2) : '' }), el('td', { class: 'num', text: j ? execScore(j) : '' })]; }),
       el('td', { class: 'num', text: num(run.air_total) }),
     ]));
   }
@@ -198,6 +205,41 @@ function renderJumps(a) {
     tbody,
   ])));
   box.append(el('p', { class: 'meta', text: '実施点はエアジャッジ2人の平均（DD を掛ける前）。' }));
+}
+
+// ---- スマホ：ジャンプ構成を 1 本 1 枚のカードにする（9 列の表は、肝心のジャンプが横スクロールの先になるため） ----
+// 新しい 8 本を出し、それより前は折りたたむ
+// 実施点＝エアジャッジ 2 人の平均（DD を掛ける前）。表とカードで同じ式を使う
+const execScore = (j) => num((j.J6 + j.J7) / 2, 2);
+// 2 本の良い方で順位が付くラウンドは、同じラウンドに 2 本の滑走が並ぶ。どちらの滑走かを添える
+const slideLabel = (run) => (run.q_block === 'R1' ? '（滑走 1 本目）' : run.q_block === 'R2' ? '（滑走 2 本目）' : '');
+function jumpCard(run, ctx) {
+  return el('a', { class: 'hist-card jump-card', href: eventHref(ctx.event.event_id, run.round_id) }, [
+    el('div', { class: 'hc-top' }, [
+      el('span', { class: 'hc-date', text: run.date || '' }),
+      el('span', { class: 'hc-event', text: eventShortName(ctx.event) + ' ' + roundLabel(ctx.round) }),
+    ]),
+    el('div', { class: 'jc-jumps' }, [0, 1].map((k) => {
+      const j = run.air[k];
+      return j ? el('div', { class: 'jc-jump' }, [
+        el('span', { class: 'jc-no', text: (k + 1) + '本目' }), el('b', { text: j.jump }),
+        el('span', { class: 'jc-num', text: 'DD ' + num(j.dd, 2) + '　実施点 ' + execScore(j) }),
+      ]) : null;
+    })),
+    el('div', { class: 'hc-sub', text: 'エア合計 ' + num(run.air_total) + slideLabel(run) }),
+  ]);
+}
+function jumpCards(list) {
+  const FIRST = 8;
+  const cards = list.map(({ run, ctx }) => jumpCard(run, ctx));
+  return el('div', {}, [
+    el('div', { class: 'hist-list' }, cards.slice(0, FIRST)),
+    cards.length > FIRST ? el('details', { class: 'jump-more' }, [
+      el('summary', { text: 'それより前の ' + (cards.length - FIRST) + ' 本を表示' }),
+      el('div', { class: 'hist-list' }, cards.slice(FIRST)),
+    ]) : null,
+    el('p', { class: 'meta', text: '実施点はエアジャッジ2人の平均（DD を掛ける前）。' }),
+  ]);
 }
 
 async function main() {
@@ -220,7 +262,7 @@ async function main() {
   if (!a) { document.getElementById('results').append(errorBox('選手 ' + id + ' がありません')); return; }
   document.getElementById('search-card').hidden = true;
   try {
-    const [events, shard] = await Promise.all([data.events(), data.athleteRuns(a)]);
+    const [events, shard] = await Promise.all([data.eventsIndex(), data.athleteRuns(a)]);
     runs = shard.runs.filter((r) => r.athlete_id === a.athlete_id);
     const sizes = shard.round_sizes || {};
     for (const ev of events) for (const r of ev.rounds || []) rounds.set(r.round_id, { event: ev, round: r, roundSize: sizes[r.round_id] || 0 });
@@ -234,7 +276,7 @@ async function main() {
   renderHistory(a);
   renderChart(a);
   renderJumps(a);
-  onWidthChange(() => renderHistory(a));
+  onWidthChange(() => { renderHistory(a); renderJumps(a); });
 }
 
 main();

@@ -610,12 +610,15 @@ async function main() {
   const id = queryParam('id');
   try {
     manifest = await data.manifest();
-    const [events, lineList] = await Promise.all([data.events(), data.lines()]);
-    allEvents = events;
-    event = events.find((e) => e.event_id === id);
+    // 一覧用の軽い大会データで大会のシーズンを引き、そのシーズンの大会データ（審判・出典つき）と記録を並べて読む
+    const [index, lineList] = await Promise.all([data.eventsIndex(), data.lines()]);
+    allEvents = index;
+    const brief = index.find((e) => e.event_id === id);
+    if (!brief) throw new Error('大会 ' + id + ' がありません');
+    const [seasonEvents, runs] = await Promise.all([data.eventsOfSeason(brief.season), data.runs(brief.season)]);
+    event = seasonEvents.find((e) => e.event_id === id);
     if (!event) throw new Error('大会 ' + id + ' がありません');
     lines = new Map(lineList.map((l) => [l.round_id, l]));
-    const runs = await data.runs(event.season);
     for (const run of runs) {
       if (run.event_id !== event.event_id) continue;
       if (!runsByRound.has(run.round_id)) runsByRound.set(run.round_id, []);
