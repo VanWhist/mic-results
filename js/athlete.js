@@ -46,7 +46,10 @@ function renderProfile(a) {
   add('生年', a.yb ? String(a.yb) : null);
   add('出場シーズン', (a.seasons || []).join('、'));
   if (a.best) {
-    const ctx = rounds.get(a.best.run_id.replace(/-[^-]+$/, ''));
+    // 自己ベストの走りからラウンドを引く。run_id の末尾を削って round_id を作ると、選手 ID に '-' がある選手（saj-…・x-…）と
+    // 2 本の良い方の走り（…-R1）で大会名が出なかった
+    const bestRun = runs.find((r) => r.run_id === a.best.run_id);
+    const ctx = bestRun ? rounds.get(bestRun.round_id) : null;
     add('自己ベスト', num(a.best.run_score) + ' 点' + (ctx ? '（' + eventShortName(ctx.event) + ' ' + genderLabel(ctx.round.gender) + ' ' + roundLabel(ctx.round) + '）' : ''));
   }
   const hist = (a.affiliation_history || []);

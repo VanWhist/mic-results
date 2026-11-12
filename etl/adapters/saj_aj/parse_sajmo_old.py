@@ -369,11 +369,16 @@ def parse_pdf(path, force=False, glyph_font=None):
                         if cur.get('from_block'):
                             a['from_block'] = cur['from_block']
                         if cur.get('fis_header') and re.fullmatch(r'\d{7}', a['sajno'] or ''):
-                            a['fisno'], a['sajno'] = a['sajno'], None
                             # 英語版の氏名と国（'HARADaichi JPN'）。以前は 'HARADaichi JPN' が氏名になっていた。
                             # 末尾が国（3 文字の大文字）の行だけ（'Rk' の表頭でも和名・県名の年がある。2012 宮様）
                             parts = ' '.join(x for x in (a['name'], a['pref'], a['club']) if x).split()
-                            if parts and re.fullmatch(r'[A-Z]{3}', parts[-1]):
+                            en_row = bool(parts) and re.fullmatch(r'[A-Z]{3}', parts[-1]) is not None
+                            # 'Rk BIB FISNO Nation 所属' の表頭で和名の行（2012 宮様 女子予選）は、1 行目の番号が SAJ 番号
+                            # （5 で始まる）で、FIS コードは 2 行目に印字される。以前は SAJ 番号を FIS コードとして読み、
+                            # 13 人が別の選手 ID に分かれていた。SAJ 番号のまま持ち、2 行目の FIS コードを読む
+                            if en_row or not a['sajno'].startswith('5'):
+                                a['fisno'], a['sajno'] = a['sajno'], None
+                            if en_row:
                                 a['name'], a['pref'] = split_en_name(parts)
                                 a['club'] = ''
                                 a['en'] = True

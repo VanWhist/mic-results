@@ -82,6 +82,12 @@ function renderChips() {
       } });
     box.append(b);
   }
+  // 選んだラウンドのボタンを見える位置へ（スマホの横スクロール。選手ページから女子の決勝に来ても男子の予選の側が見えていた）
+  const cur = box.querySelector('.chip.primary');
+  if (cur && box.scrollWidth > box.clientWidth) {
+    const left = cur.getBoundingClientRect().left - box.getBoundingClientRect().left + box.scrollLeft;
+    box.scrollLeft = Math.max(0, left - (box.clientWidth - cur.offsetWidth) / 2);
+  }
 }
 
 function verificationBlock(r) {
@@ -509,7 +515,9 @@ function renderTable(r, runs) {
   const airNos = (r.panel && r.panel.air_judge_nos) || [6, 7];
   const nJ = Math.max(1, ...runs.map((x) => (x.air || []).length));
   const th = (text, cls) => el('th', { class: cls || '', text });
-  const heads = [th('順位'), th('Bib'), th('選手'), th('所属'), th('クラブ')];
+  // 海外の大会（所属の印字が無く国だけ）は「国」の 1 列。国内の大会に出た外国籍選手は所属の欄に国を出す
+  const intl = runs.some((x) => x.noc) && !runs.some((x) => x.affiliation || x.club);
+  const heads = [th('順位'), th('Bib'), th('選手'), ...(intl ? [th('国')] : [th('所属'), th('クラブ')])];
   if (tier === 'detail') {
     heads.push(th('タイム', 'num'), th('タイム点', 'num'));
     for (let k = 0; k < nJ; k++) heads.push(th('ジャンプ' + (k + 1)), th('DD', 'num'), th('J' + airNos[0], 'num'), th('J' + airNos[1], 'num'));
@@ -529,7 +537,7 @@ function renderTable(r, runs) {
   const tbody = el('tbody');
   for (const run of runs) {
     const tds = [el('td', { class: 'num', text: run.rank ?? '—' }), el('td', { class: 'num', text: run.bib ?? '—' }), nameCell(run),
-      el('td', { text: run.affiliation || '' }), el('td', { text: run.club || '' })];
+      ...(intl ? [el('td', { text: run.noc || '' })] : [el('td', { text: run.affiliation || run.noc || '' }), el('td', { text: run.club || '' })])];
     if (tier === 'detail') {
       tds.push(cell(run.seconds), cell(run.time_points));
       for (let k = 0; k < nJ; k++) {
@@ -583,7 +591,7 @@ function renderCards(r, runs) {
       el('a', { class: 'rec-name', href: athleteHref(run.athlete_id), text: run.name }),
       el('span', { class: 'rec-total', text: run.run_score !== null && run.run_score !== undefined ? num(run.run_score) : '' }),
     ]);
-    const sub = [run.affiliation, run.club].filter(Boolean).join(' ');
+    const sub = [run.affiliation || run.noc, run.club].filter(Boolean).join(' ');
     const parts = [];
     if (showsStage(run.components)) parts.push([run.components.stage, run.components.progression].filter(Boolean).join('　'));
     if (run.components && run.components.web_result) parts.push('得点（参考）' + run.components.web_result);

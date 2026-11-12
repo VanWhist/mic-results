@@ -47,6 +47,7 @@ DD = re.compile(r'^\d\.\d{3}$')
 EN_ROW = re.compile(r'^(?:(\d+)\s+)?(\d+)\s+(\d{7})\s+(\S+)\s+([A-Z]{3})\b\s*(.*)$')
 EN_STAGE = {'BIGFINAL': 'BIG FINAL', 'SMALLFINAL': 'SMALL FINAL', 'QuarterFinal': 'Quarter Final', 'EightFinal': 'Eight Final'}
 KANA = re.compile(r'[゠-ヿ･-ﾟ]+')
+NAME_HEAD = re.compile(r'[A-Za-zァ-ヶ]')  # SAJ 番号の無い行の氏名の先頭（ローマ字かカタカナ）
 PARSER_VERSION = 'SAJ-DM-1.4'
 
 
@@ -257,11 +258,13 @@ def parse_pdf(path, gender=None):
                             and PROG.search(line) is not None)
                 # SAJ 番号の欄が空の外国籍選手（'4 24 MIN-JI JUN KOR Phoenix park R32-2: …'、2016 北海道選手権 女子。
                 # 順位の無い DNF の行 '102 WANG Wenxi中an国g China Jr. Moguls R64-26: B, Tot:0, DNF,'、2020 全日本）。
-                # 以前は読み落とし、公開済みの大会からも抜けていた（2020 全日本・2020 猪苗代の中国の選手など）
+                # 以前は読み落とし、公開済みの大会からも抜けていた（2020 全日本・2020 猪苗代の中国の選手など）。
+                # 名前がカタカナの行もある（'9 20 バク ヒュンミ韓国 R32-6: …'・'22 54 フ ジュンイ 中国 China Jr. Moguls R64-6: …'、
+                # 2020 北海道選手権 男子。ローマ字の名前だけを見ていて 9 人を読み落としていた）
                 no_saj = no_saj_unranked = False
                 if in_table is True and not ranked and not unranked and PROG.search(line) is not None and toks[0].isdigit():
-                    no_saj = len(toks) >= 4 and toks[1].isdigit() and re.match(r'[A-Za-z]', toks[2]) is not None
-                    no_saj_unranked = (not no_saj and len(toks) >= 3 and re.match(r'[A-Za-z]', toks[1]) is not None
+                    no_saj = len(toks) >= 4 and toks[1].isdigit() and NAME_HEAD.match(toks[2]) is not None
+                    no_saj_unranked = (not no_saj and len(toks) >= 3 and NAME_HEAD.match(toks[1]) is not None
                                        and re.search(r'\bDN[FS]\b', line) is not None)
                 if ranked or unranked or no_saj or no_saj_unranked:
                     mp = PROG.search(line)
@@ -331,7 +334,12 @@ def athlete_id_of(a):
     # 外国籍選手の仮の SAJ 番号（'9999999'。2019 田沢湖では韓国の 2 人が同じ番号）は選手を区別しないので、名前で ID を作る
     if a.get('sajno') and not config.is_placeholder_saj(a['sajno']):
         return 'saj-' + str(a['sajno'])
-    return 'x-' + config.slug(a['name']) + '-' + config.slug(a.get('pref', ''))
+    name = config.slug(a['name'])
+    if name == 'x' and (a['name'] or '').strip():
+        # ローマ字の無い氏名（カタカナの外国籍選手）は slug が全員 'x' になり、別の人が 1 つの ID にまとまってしまう。
+        # 印字の氏名をそのまま ID にする（同じ人の FIS コードへの統合は athlete_master.json の merge_into）
+        name = '-'.join(a['name'].split())
+    return 'x-' + name + '-' + config.slug(a.get('pref', ''))
 
 
 def load_event(ev, imported_at, log=print):

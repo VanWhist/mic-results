@@ -43,11 +43,20 @@ def load_event_rules(name):
     return out, raw
 
 
+# 審判の欄が空の行に、同じ行の右のコースの欄だけが残ったもの（'J4 (Turns) AH 68.0 cm'・'J5 (Turns) 決勝開始時刻 TA 30.0 °'、
+# 2018 B級 1905-0044）。審判名ではない
+NOT_A_JUDGE = re.compile(r'^(?:\d|AH\b|TA\b|AP\b|1st\b|2nd\b|予選開始時刻|決勝開始時刻|(?:男子|女子)?ペースタイム)')
+
+
 def clean_judge(name):
-    """'橋場 一枝 (北海道) 2nd Air AP 196.0 m' → ('橋場 一枝', '北海道')"""
-    m = re.match(r'^(.+?)\s*\(([^)]*)\)', name)
+    """'橋場 一枝 (北海道) 2nd Air AP 196.0 m' → ('橋場 一枝', '北海道')。県名の括弧は全角のこともある
+    （'伊藤強（北海道） 2nd Air AP 178.4 m'、2022 B級 3013-0300。以前は右のコースの欄まで審判名になっていた）。
+    審判の欄が空の行は (None, None)"""
+    m = re.match(r'^(.+?)\s*[(（]([^)）]*)[)）]', name)
     if m:
         return m.group(1).strip(), m.group(2).strip()
+    if NOT_A_JUDGE.match(name.strip()):
+        return None, None
     return name.strip(), None
 
 
@@ -452,6 +461,10 @@ def load_event(ev, imported_at, log=print):
     # ラウンド・BIB・項目・印字の値が合う行だけを直す
     value_fixes = ev.get('value_fixes') or []
     value_fixes_used = set()
+    # 日付の印字の誤り（同じ大会の男子の PDF は 2013 年、女子の PDF だけ 2012 年。registry の date_fixes、根拠は basis）。
+    # PDF（path）と印字の日付が合う表だけを直す
+    date_fixes = ev.get('date_fixes') or []
+    date_fixes_used = set()
     # 決勝の上位だけが別の滑走の得点で並ぶラウンド（registry の overall_rounds、根拠は basis）。キーは 'M-F1' など
     overall_rounds = {e['round_id'][len(ev['event_id']) + 1:]: e for e in ev.get('overall_rounds') or []}
     overall_rounds_used = set()
@@ -494,7 +507,8 @@ def load_event(ev, imported_at, log=print):
         judges = []
         for jno, (role, name) in sorted(meta['judges'].items()):
             nm, pref = clean_judge(name)
-            judges.append({'judge_no': int(jno[1:]), 'role': role, 'name': nm, 'noc': pref})
+            if nm:
+                judges.append({'judge_no': int(jno[1:]), 'role': role, 'name': nm, 'noc': pref})
         want_g = pdf.get('gender')  # SAJ データバンクの PDF は性別ごとに登録される。同じファイルが男女両方に登録されていることがあるので、
         for s in sections:            # 登録された性別のセクションだけを取る（重複した run_id を作らない）
             if not s.get('saj_code'):
@@ -543,8 +557,14 @@ def load_event(ev, imported_at, log=print):
             elif b_round is not None and b_round.get('pace') is not None:
                 pace = Decimal(str(b_round['pace']))
             # 旧様式は表ごとの日付（表が始まるページの印字。2 日にわたる大会で決勝のページが先の PDF がある）。新様式は PDF の最初の日付
-            date = s.get('date') or meta.get('date')
-            rmeta = {'date': date, 'date_text': date, 'venue': meta.get('venue'),
+            date = date_text = s.get('date') or meta.get('date')
+            date_note = None
+            for i, fx in enumerate(date_fixes):
+                if fx['path'] == pdf['path'] and date == fx['printed']:
+                    date = fx['date']
+                    date_fixes_used.add(i)
+                    date_note = f"日付の印字 {fx['printed']} を {fx['date']} に直した。根拠: {fx['basis']}"
+            rmeta = {'date': date, 'date_text': date_text, 'venue': meta.get('venue'),
                      'judges': judges, 'pace_time': float(pace) if pace is not None else None, 'pace_note': pace_note,
                      'num_competitors': None, 'parser_version': PARSER_VERSION, 'title': meta.get('title'),
                      'officials': []}
@@ -560,6 +580,8 @@ def load_event(ev, imported_at, log=print):
             round_id = f"{cls['event_id']}-{g}-{code}" + (f"-{cat_slug}" if cat else '')
             if content_note:
                 findings.append(Finding('warning', round_id, 'layer0', content_note))
+            if date_note:
+                findings.append(Finding('warning', round_id, 'layer0', date_note))
             for rec in records:
                 for i, fx in enumerate(fis_fixes):
                     if str(rec.get('saj_no')) == fx['saj_no'] and str(rec.get('fis_code')) == fx['printed']:
@@ -651,6 +673,10 @@ def load_event(ev, imported_at, log=print):
         if key not in overall_rounds_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],
                          'message': f"overall_rounds の {e['round_id']}（境目 {e['boundary']} 位）に当たるラウンドが無い（登録を見直す）"})
+    for i, fx in enumerate(date_fixes):
+        if i not in date_fixes_used:
+            ctxs.append({'error_only': True, 'event_id': ev['event_id'],
+                         'message': f"date_fixes の {fx['path']}・印字 {fx['printed']} に当たる表が無い（登録を見直す）"})
     for i, fx in enumerate(value_fixes):
         if i not in value_fixes_used:
             ctxs.append({'error_only': True, 'event_id': ev['event_id'],

@@ -147,7 +147,8 @@ def _extract_meta(first_page_words, first_page_text, jury_page_words, jury_page_
         noc_w = [w for w in words if 522 <= w['x0'] < 545 and abs(w['top'] - top) < 2]
         if num_w and name_w:
             judges.append({'judge_no': int(num_w[0]['text']),
-                            'role': role_w[0]['text'].strip('()') if role_w else '',
+                            # '(Turns):' と印字する年がある（2016-17。以前は役割が 'Turns):' になっていた）
+                            'role': role_w[0]['text'].strip('():') if role_w else '',
                             'name': ' '.join(w['text'] for w in name_w),
                             # 国名「N/A」（カナダの選考会 2019・2022）は国名不明（空）。旧版の様式と同じ扱い
                             'noc': noc_w[0]['text'] if noc_w and noc_w[0]['text'] != 'N/A' else ''})

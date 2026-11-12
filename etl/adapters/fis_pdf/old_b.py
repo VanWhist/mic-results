@@ -109,6 +109,11 @@ def _meta(text, words):
     for line in text.split('\n'):
         parts = line.split()
         if len(parts) >= 4 and parts[0] == 'Judge' and parts[1].isdigit() and parts[2] in ('(Turns):', '(Air):'):
+            # 同じ行の右に続く前走者の欄（'… CAN 2 - CORDELL Sam CAN'・'… CAN F4 - BEAURAGAURD Ian USA'）は審判の欄ではない
+            for k in range(4, len(parts) - 2):
+                if re.fullmatch(r'[A-Z]{3}|N/A', parts[k]) and len(parts[k + 1]) <= 3 and parts[k + 2] == '-':
+                    parts = parts[:k + 1]
+                    break
             noc = parts[-1] if re.fullmatch(r'[A-Z]{3}', parts[-1]) else ''
             # 国名が「N/A」の審判（2015 Winter Park）は国名不明（空）。名前に含めない
             name = ' '.join(parts[3:-1] if noc or parts[-1] == 'N/A' else parts[3:])

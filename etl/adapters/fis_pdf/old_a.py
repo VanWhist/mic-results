@@ -72,7 +72,9 @@ def parse_meta(text):
     judges = []
     # 行の中だけで読む（審判の欄が空の行「Judge 4 (Turns):」がある。世界ジュニア 2015 は 3 人）
     # 国名が「N/A」の審判がいる（2015 Winter Park）。国名不明（空）として読む
-    for m in re.finditer(r'^Judge (\d) \((Turns|Air)\):[ \t]*(\S.*?)[ \t]+([A-Z]{3}|N/A)[ \t]*$', text, re.M):
+    # 同じ行の右に前走者の欄が続く PDF がある（'Judge 1 (Turns): HATELEY Donna CAN 2 - CORDELL Sam CAN'・
+    # '… JENOURE Anne CAN F4 - BEAURAGAURD Ian USA'、NAC 2015 Apex・2016 Killington）。以前は前走者まで審判名になっていた
+    for m in re.finditer(r'^Judge (\d) \((Turns|Air)\):[ \t]*(\S.*?)[ \t]+([A-Z]{3}|N/A)(?:[ \t]+\S{1,3}[ \t]+-[ \t]+\S.*)?[ \t]*$', text, re.M):
         judges.append({'judge_no': int(m.group(1)), 'role': m.group(2), 'name': m.group(3).strip(),
                        'noc': '' if m.group(4) == 'N/A' else m.group(4)})
     meta['judges'] = judges
