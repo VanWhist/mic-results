@@ -145,6 +145,13 @@ def _extract_meta(first_page_words, first_page_text, jury_page_words, jury_page_
         role_w = [w for w in words if 332 <= w['x0'] < 390 and abs(w['top'] - top) < 2]
         name_w = sorted([w for w in words if 396 <= w['x0'] < 522 and abs(w['top'] - top) < 2], key=lambda w: w['x0'])
         noc_w = [w for w in words if 522 <= w['x0'] < 545 and abs(w['top'] - top) < 2]
+        if not name_w:
+            # 名前が長くて 2 行に折り返し、行の上下に分かれて印字される（Hintertux 2026-27 の審判 3「SABINE KRIEGER」/「ALEXANDRA」）。
+            # 名前の欄で上下 6pt 以内、ほかの審判の行よりこの行に近い語を、上の行から順に読む（印字のとおり。並べ替えない）。
+            # 隣の審判の名前の折り返し（行の間隔は約 10pt なので 5pt 余り離れる）を取らないように、いちばん近い行の語だけにする
+            name_w = sorted([w for w in words if 396 <= w['x0'] < 522 and abs(w['top'] - top) < 6
+                             and not any(abs(w['top'] - t) <= abs(w['top'] - top) for t in judge_rows if t != top)],
+                            key=lambda w: (round(w['top'], 1), w['x0']))
         if num_w and name_w:
             judges.append({'judge_no': int(num_w[0]['text']),
                             # '(Turns):' と印字する年がある（2016-17。以前は役割が 'Turns):' になっていた）

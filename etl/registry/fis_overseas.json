@@ -6628,6 +6628,132 @@
     "advance_basis": "次のラウンドの報告書に印字された出場人数"
    },
    "notes": ""
+  },
+  {
+   "event_id": "2026-27-opn-hintertux-8467",
+   "season": "2026-27",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "Hintertux",
+   "fis_event_id": "63246",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=63246&seasoncode=2027",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2026-27",
+   "pdfs": [
+    {
+     "path": "OPN/2026-27/FIS2027_OPN_Hintertux_8467_M_MO_RLF.pdf",
+     "sha256": "a88acc4ef4110b09b6cb9d8d489cab553ab001f7aca70d8cbb4b82a400d6f878",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19893",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8467",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2026-27/FIS2027_OPN_Hintertux_8468_W_MO_RLF.pdf",
+     "sha256": "0ff978b7c32684127c93443f9f4cd0a7d3f838a3481d8498b048ba3f1565bcad",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19892",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8468",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2026-27-opn-idrefjall-8564",
+   "season": "2026-27",
+   "series": "OPN",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "63782",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=63782&seasoncode=2027",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2026-27",
+   "pdfs": [
+    {
+     "path": "OPN/2026-27/FIS2027_OPN_Idrefjall_8564_M_MO_RLF.pdf",
+     "sha256": "063092d25f7ae790b29764d48f06818404c37d4460f057d78c77909951d81046",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19993",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8564",
+     "src_type": "RLF"
+    },
+    {
+     "path": "OPN/2026-27/FIS2027_OPN_Idrefjall_8565_W_MO_RLF.pdf",
+     "sha256": "75ca844021faa9bb188cea8f78cfbddbbb76832854739ec927916201c8aff31d",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19992",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8565",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
+  },
+  {
+   "event_id": "2026-27-fis-idrefjall-8566",
+   "season": "2026-27",
+   "series": "FIS",
+   "grade": null,
+   "discipline": "MO",
+   "name_ja": null,
+   "place": "IdreFjall",
+   "fis_event_id": "63782",
+   "page_url": "https://www.fis-ski.com/DB/general/event-details.html?sectorcode=FS&eventid=63782&seasoncode=2027",
+   "tier": "detail",
+   "adapter": "fis_pdf",
+   "rules": "2026-27",
+   "pdfs": [
+    {
+     "path": "FIS/2026-27/FIS2027_FIS_Idrefjall_8566_M_MO_RLF.pdf",
+     "sha256": "e856f0d71eb35fe95683e378ad80ade7fccec5636f61c80bddec2c57bcdde533",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19995",
+     "round": "overall",
+     "gender": "M",
+     "codex": "8566",
+     "src_type": "RLF"
+    },
+    {
+     "path": "FIS/2026-27/FIS2027_FIS_Idrefjall_8567_W_MO_RLF.pdf",
+     "sha256": "e453e9da4e88d8ca55508b7829c80c7279e74ffba4446279c97bb8eab8b47a21",
+     "url": null,
+     "page_url": "https://www.fis-ski.com/DB/general/results.html?sectorcode=FS&raceid=19994",
+     "round": "overall",
+     "gender": "W",
+     "codex": "8567",
+     "src_type": "RLF"
+    }
+   ],
+   "format": {
+    "label": null,
+    "advance": {},
+    "advance_basis": "次のラウンドの報告書に印字された出場人数"
+   },
+   "notes": ""
   }
  ]
 }

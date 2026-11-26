@@ -103,6 +103,25 @@ RE_TECH = [
 RE_JUDGE = re.compile(r"(?:^| )Judge (?P<no>\d) \((?P<role>[^)]+)\):? (?P<rest>.+)$")
 RE_UPPER_TOKEN = re.compile(r"[A-ZÀ-Ý][A-ZÀ-Ý'\-]+")
 RE_NOC = re.compile(r"[A-Z]{3}")
+RE_JUDGE_NOC_ONLY = re.compile(r"(?:^| )Judge \d \([^)]+\):? [A-Z]{3}$")
+RE_NAME_ONLY = re.compile(r"[A-ZÀ-Ý][A-ZÀ-Ý'\-]+(?: [A-ZÀ-Ý][A-ZÀ-Ý'\-]+)*")
+
+
+def _merge_wrapped_judge_names(lines):
+    """審判の名前が長くて 2 行に折り返し、審判の行の上と下に分かれて印字される様式（Hintertux 2026-27 の審判 3）。
+    文字の行では「SABINE KRIEGER」/「Judge 3 (Turns) GER」/「ALEXANDRA」と並ぶので、名前だけの行が上下にそろうときだけ
+    1 行「Judge 3 (Turns) SABINE KRIEGER ALEXANDRA GER」にまとめる（印字の順のまま。片側だけのときはまとめない）"""
+    out, i = [], 0
+    while i < len(lines):
+        if (i + 2 < len(lines) and RE_NAME_ONLY.fullmatch(lines[i].strip())
+                and RE_JUDGE_NOC_ONLY.search(lines[i + 1]) and RE_NAME_ONLY.fullmatch(lines[i + 2].strip())):
+            head, noc = lines[i + 1].rsplit(" ", 1)
+            out.append(f"{head} {lines[i].strip()} {lines[i + 2].strip()} {noc}")
+            i += 3
+            continue
+        out.append(lines[i])
+        i += 1
+    return out
 
 
 def _f(s):
@@ -438,7 +457,7 @@ def parse_moguls_results(path, pages=None):
         for page in pdf.pages:
             pno = page.page_number
             text = page.extract_text() or ""
-            lines = [l.rstrip() for l in text.split("\n") if l.strip()]
+            lines = _merge_wrapped_judge_names([l.rstrip() for l in text.split("\n") if l.strip()])
             skip_rest = False      # after Forerunners/Conditions/Legend until footer
             in_table = False       # このページで表頭（Rank Bib）より下に来たか
 
